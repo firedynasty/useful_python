@@ -1,0 +1,43 @@
+get_ls_r_like_for_gdrive
+========================
+
+Get a recursive tree view of Google Drive folders (like ls -R) and copy to clipboard.
+Useful for pasting into Claude chat to ask where to file something or find existing notes.
+
+Functions added to cloudsync.sh
+-------------------------------
+
+  gdtreetoclip    Copy Google Drive folder tree to clipboard
+  dbtreetoclip    Copy Dropbox folder tree to clipboard
+  treetoclip      Copy local folder tree to clipboard
+
+Usage
+-----
+
+  # By path
+  gdtreetoclip "Documents/reading"
+
+  # By Google Drive URL
+  gdtreetoclip "https://drive.google.com/drive/folders/1liVfat8dGSsqHMsQGOTlvu0ACrWtmbCn"
+
+  # Dropbox
+  dbtreetoclip "chess"
+
+  # Local folder
+  treetoclip ~/notes/basketball/_presorted
+
+All commands copy the output to clipboard via pbcopy, ready to paste into Claude chat.
+
+Changes made to cloudsync.sh
+----------------------------
+
+1. Added three new functions: treetoclip, gdtreetoclip, dbtreetoclip
+   - Uses rclone tree to get recursive folder structure
+   - Pipes output to pbcopy for clipboard
+   - gdtreetoclip supports both paths and Google Drive URLs
+   - dbtreetoclip supports both paths and Dropbox URLs
+
+2. Fixed all rclone and pbcopy calls to use full paths
+   - rclone  -> /opt/homebrew/bin/rclone  (all functions, not just new ones)
+   - pbcopy  -> /usr/bin/pbcopy
+   - Fixes "command not found" errors when sourced from .zshrc

@@ -1,0 +1,59 @@
+ running python gcalendar.py I get Traceback (most recent call last):
+    File 
+  "/Users/stanleytan/Documents/46-python/automate_email/gcalendar.py", line
+   136, in <module>
+      get_upcoming_events(args.events)
+    File 
+  "/Users/stanleytan/Documents/46-python/automate_email/gcalendar.py", line
+   96, in get_upcoming_events
+      ).execute()
+        ^^^^^^^^^
+    File "/Users/stanleytan/anaconda3/lib/python3.11/site-packages/googleap
+  iclient/_helpers.py", line 130, in positional_wrapper
+      return wrapped(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    File "/Users/stanleytan/anaconda3/lib/python3.11/site-packages/googleap
+  iclient/http.py", line 938, in execute
+      raise HttpError(resp, content, uri=self.uri)
+  googleapiclient.errors.HttpError: <HttpError 403 when requesting 
+  https://www.googleapis.com/calendar/v3/calendars/primary/events?timeMin=2
+  025-04-29T16%3A48%3A01.763310Z&maxResults=10&singleEvents=true&orderBy=st
+  artTime&alt=json returned "Request had insufficient authentication 
+  scopes.". Details: "[{'message': 'Insufficient Permission', 'domain': 
+  'global', 'reason': 'insufficientPermissions'}]"> however script_5.py 
+  works
+
+⏺ Let me check both files to understand the difference in authentication
+  scopes.
+
+⏺ Read(gcalendar.py)…
+  ⎿  Read 136 lines (ctrl+r to expand)
+
+⏺ Read(script_5.py)…
+  ⎿  Read 210 lines (ctrl+r to expand)
+
+⏺ List(.)…
+  ⎿  Listed 13 paths (ctrl+r to expand)
+
+⏺ Update(gcalendar.py)…
+  ⎿  Updated gcalendar.py with 2 additions and 1 removal
+     16  # If modifying these scopes, delete the token.json file
+     17  # Use both Gmail and Calendar scopes to work with existing token.json
+     18  SCOPES = ['https://www.googleapis.com/auth/gmail.modify',
+     19            'https://www.googleapis.com/auth/calendar.readonly']
+     19            'https://www.googleapis.com/auth/calendar.readonly',
+     20            'https://www.googleapis.com/auth/calendar']
+     21 
+     22  def get_calendar_service():
+     23      """
+
+⏺ Bash(rm -f token.json)…
+  ⎿  (No content)
+
+⏺ The error is due to insufficient authentication scopes. I've made two changes:
+
+  1. Added https://www.googleapis.com/auth/calendar scope to gcalendar.py
+  2. Deleted token.json to force reauthentication
+
+  Now run gcalendar.py again. You'll need to re-authenticate through the browser
+  when prompted, which will create a new token.json with the proper permissions

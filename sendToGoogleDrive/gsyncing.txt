@@ -1,0 +1,86 @@
+Cloud Sync Functions - Google Drive & Dropbox
+==============================================
+
+Setup
+-----
+All functions are defined in:
+  ~/Documents/technical/46-python/sendToGoogleDrive/cloudsync.sh
+
+Loaded in .zshrc via:
+  source ~/Documents/technical/46-python/sendToGoogleDrive/cloudsync.sh
+
+Both services use rclone under the hood:
+  - Google Drive remote: gdrive:
+  - Dropbox remote: dropbox:
+
+
+Commands
+--------
+  Direction                                    Google Drive   Dropbox
+  -------------------------------------------  -----------    --------
+  copy up (local -> remote)                    togdrive       todbx
+  copy down (remote -> local)                  fromgdrive     fromdbx
+  sync up (local -> remote, deletes extras)    gdsync         dbsync
+  sync down (remote -> local, deletes extras)  gdsyncdown     dbsyncdown
+  list contents                                gdls           dbls
+
+
+Google Drive Examples
+---------------------
+  # Download a folder to current directory
+  fromgdrive "basketball/drills" .
+  fromgdrive "basketball/drills"                (same thing, defaults to .)
+
+  # Download using a Google Drive URL
+  fromgdrive "https://drive.google.com/drive/folders/ABC123" .
+
+  # Upload local folder to Google Drive
+  togdrive ./folder "basketball/drills"
+  togdrive . "https://drive.google.com/drive/folders/ABC123"
+
+  # Sync local to Drive (deletes files on Drive not present locally)
+  gdsync ./folder "basketball/drills"
+
+  # Sync Drive down to local (deletes local files not on Drive)
+  gdsyncdown "basketball/drills" .
+  gdsyncdown "https://drive.google.com/drive/folders/ABC123" .
+
+  # List folder contents
+  gdls                          (lists root)
+  gdls "basketball"
+  gdls "https://drive.google.com/drive/folders/ABC123"
+
+
+Dropbox Examples
+----------------
+  # Download a folder to current directory
+  fromdbx "chess" .
+  fromdbx "chess"                               (same thing, defaults to .)
+
+  # Download using a Dropbox URL
+  fromdbx "https://www.dropbox.com/home/chess" .
+
+  # Upload local folder to Dropbox
+  todbx ./folder "chess"
+  todbx . "https://www.dropbox.com/home/chess"
+
+  # Sync local to Dropbox (deletes files on Dropbox not present locally)
+  dbsync ./folder "chess"
+
+  # Sync Dropbox down to local (deletes local files not on Dropbox)
+  dbsyncdown "chess" .
+  dbsyncdown "https://www.dropbox.com/home/chess" .
+
+  # List folder contents
+  dbls                          (lists root)
+  dbls "chess"
+  dbls "https://www.dropbox.com/home/chess"
+
+
+Notes
+-----
+- copy (fromgdrive/togdrive/fromdbx/todbx) is safe: only adds/updates files, never deletes
+- sync (gdsync/dbsync/gdsyncdown/dbsyncdown) mirrors exactly: deletes files at destination not in source
+- All commands accept either paths or URLs
+- All download commands default to current directory (.) if no destination given
+- Existing Python-based commands (search, preview, download, toclipboard) still work for Google Drive API features
