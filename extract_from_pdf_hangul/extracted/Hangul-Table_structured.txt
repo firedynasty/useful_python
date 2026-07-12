@@ -1,0 +1,177 @@
+Hangul Table
+★Basic vowels / consonants (incl. aspirated sounds)
+Vowels→	ㅏ	ㅑ	ㅓ	ㅕ	ㅗ	ㅛ	ㅜ	ㅠ	ㅡ	ㅣ
+Consonants↓	a	ya	eo	yeo	o	yo	u	yu	eu	i
+가	갸	거	겨	고	교	구	규	그	기	ㄱ
+ka	kya	keo	kyeo	ko	kyo	ku	kyu	keu	ki	k/g
+나	냐	너	녀	노	뇨	누	뉴	느	니	ㄴ
+na	nya	neo	nyeo	no	nyo	nu	nyu	neu	ni	n
+다	댜	더	뎌	도	됴	두	듀	드	디	ㄷ
+ta	tya	teo	tyeo	to	tyo	tu	tyu	teu	ti	t/d
+라	랴	러	려	로	료	루	류	르	리	ㄹ
+ra	rya	reo	ryeo	ro	ryo	ru	ryu	reu	ri	r
+마	먀	머	며	모	묘	무	뮤	므	미	ㅁ
+ma	mya	meo myeo mo	myo	mu	myu meu	mi	m
+바	뱌	버	벼	보	뵤	부	뷰	브	비	ㅂ
+pa	pya	peo	pyeo	po	pyo	pu	pyu	peu	pi	p/b
+사	샤	서	셔	소	쇼	수	슈	스	시	ㅅ
+sa	sya	seo	syeo	so	syo	su	syu	seu	si	s
+아	야	어	여	오	요	우	유	으	이	ㅇ
+a	ya	eo	yeo	o	yo	u	yu	eu	i	ng/null
+자	쟈	저	져	조	죠	주	쥬	즈	지	ㅈ
+cha	chya	cheo	chyeo	cho	chyo	chu	chyu	cheu	chi	ch/j
+차	챠	처	쳐	초	쵸	추	츄	츠	치	ㅊ
+★	cha	chya	cheo	chyeo	cho	chyo	chu	chyu	cheu	chi	ch
+A
+s
+카	캬	커	켜	코	쿄	쿠	큐	크	키	ㅋ	p	i
+r
+a	ka	kya	keo	kyeo	ko	kyo	ku	kyu	keu	ki	k	t
+e
+d	타	탸	터	텨	토	툐	투	튜	트	티	ㅌ
+s
+o
+u	ta	tya	teo	tyeo	to	tyo	tu	tyu	teu	ti	t
+n
+d
+s	파	퍄	퍼	펴	포	표	푸	퓨	프	피	ㅍ
+pa	pya	peo	pyeo	po	pyo	pu	pyu	peu	pi	p
+하	햐	허	혀	호	효	후	휴	흐	히	ㅎ
+ha	hya	heo	hyeo	ho	hyo	hu	hyu	heu	hi	h
+1
+Hangul Table
+★ Diphthongs (Combined Vowels)
+Vowels→	ㅐ	ㅒ	ㅔ	ㅖ	ㅘ	ㅙ	ㅚ	ㅝ	ㅞ	ㅟ	ㅢ
+Consonants↓ ae	yae	e	ye	wa	wae	oe	wo	we	wi	ui
+개	걔	게	계	과	괘	괴	궈	궤	귀	긔	ㄱ
+kae	kyae	ke	kye	kwa	kwae	koe	kwo	kwe	kwi	kui	k/g
+내	냬	네	녜	놔	놰	뇌	눠	눼	뉘	늬	ㄴ
+nae	nyae	ne	nye	nwa	nwae	noe	nwo	nwe	nwi	nui	n
+대	댸	데	뎨	돠	돼	되	둬	뒈	뒤	듸	ㄷ
+tae	tyae	te	tye	twa	twae	toe	two	twe	twi	tui	t/d
+래	럐	레	례	롸	뢔	뢰	뤄	뤠	뤼	릐	ㄹ
+rae	ryae	re	rye	rwa	rwae	roe	rwo	rwe	rwi	rui	r
+매	먜	메	몌	뫄	뫠	뫼	뭐	뭬	뮈	믜	ㅁ
+mae myae	me	mye mwa mwae moe mwo mwe mwi	mui	m
+배	뱨	베	볘	봐	봬	뵈	붜	붸	뷔	븨	ㅂ
+pae	pyae	pe	pye	pwa	pwae	poe	pwo	pwe	pwi	pui	p/b
+새	섀	세	셰	솨	쇄	쇠	숴	쉐	쉬	싀	ㅅ
+sae	syae	se	sye	swa	swae	soe	swo	swe	swi	sui	s
+애	얘	에	예	와	왜	외	워	웨	위	의	ㅇ
+ae	yae	e	ye	wa	wae	oe	wo	we	wi	ui	ng/null
+재	쟤	제	졔	좌	좨	죄	줘	줴	쥐	즤	ㅈ
+chae	chyae	che	chye	chwa	chwae	choe	chwo	chwe	chwi	chui	ch/j
+채	챼	체	쳬	촤	쵀	최	춰	췌	취	츼	ㅊ
+chae	chyae	che	chye	chwa	chwae	choe	chwo	chwe	chwi	chui	ch
+캐	컈	케	켸	콰	쾌	쾨	쿼	퀘	퀴	킈	ㅋ
+kae	kyae	ke	kye	kwa	kwae	koe	kwo	kwe	kwi	kui	k
+태	턔	테	톄	톼	퇘	퇴	퉈	퉤	튀	틔	ㅌ
+tae	tyae	te	tye	twa	twae	toe	two	twe	twi	tui	t
+패	퍠	페	폐	퐈	퐤	푀	풔	풰	퓌	픠	ㅍ
+pae	pyae	pe	pye	pwa	pwae	poe	pwo	pwe	pwi	pui	p
+해	햬	헤	혜	화	홰	회	훠	훼	휘	희	ㅎ
+hae	hyae	he	hye	hwa	hwae	hoe	hwo	hwe	hwi	hui	h
+2
+Hangul Table
+★Tense sounds (basic vowels)
+Vowels→	ㅏ	ㅑ	ㅓ	ㅕ	ㅗ	ㅛ	ㅜ	ㅠ	ㅡ	ㅣ
+Consonants↓	a	ya	eo	yeo	o	yo	u	yu	eu	i
+까	꺄	꺼	껴	꼬	꾜	꾸	뀨	끄	끼	ㄲ
+kka	kkya	kkeo	kkyeo	kko	kkyo	kku	kkyu	kkeu	kki	kk
+따	땨	떠	뗘	또	뚀	뚜	뜌	뜨	띠	ㄸ
+tta	ttya	tteo	ttyeo	tto	ttyo	ttu	ttyu	tteu	tti	tt
+빠	뺘	뻐	뼈	뽀	뾰	뿌	쀼	쁘	삐	ㅃ
+ppa	ppya	ppeo	ppyeo	ppo	ppyo	ppu	ppyu	ppeu	ppi	pp
+싸	쌰	써	쎠	쏘	쑈	쑤	쓔	쓰	씨	ㅆ
+ssa	ssya	sseo	ssyeo	sso	ssyo	ssu	ssyu	sseu	ssi	ss
+짜	쨔	쩌	쪄	쪼	쬬	쭈	쮸	쯔	찌	ㅉ
+jja	jjya	jjeo	jjyeo	jjo	jjyo	jju	jjyu	jjeu	jji	jj
+★Tense sounds (diphthongs)
+Vowels→	ㅐ	ㅒ	ㅔ	ㅖ	ㅘ	ㅙ	ㅚ	ㅝ	ㅞ	ㅟ	ㅢ
+Consonants↓ ae	yae	e	ye	wa	wae	oe	wo	we	wi	ui
+깨	꺠	께	꼐	꽈	꽤	꾀	꿔	꿰	뀌	끠	ㄲ
+kkae	kkyae	kke	kkye	kkwa kkwae	kkoe	kkwo	kkwe	kkwi	kkui	kk
+때	떄	떼	뗴	똬	뙈	뙤	뚸	뛔	뛰	띄	ㄸ
+ttae	ttyae	tte	ttye	ttwa	ttwae	ttoe	ttwo	ttwe	ttwi	ttui	tt
+빼	뺴	뻬	뼤	뽜	뽸	뾔	뿨	쀄	쀠	쁴	ㅃ
+ppae	ppyae	ppe	ppye	ppwa ppwae	ppoe	ppwo	ppwe	ppwi	ppui	pp
+쌔	썌	쎄	쎼	쏴	쐬	쒀	쒜	쒸	씌	ㅆ	쐐
+ssae	ssyae	sse	ssye	sswa	sswae	ssoe	sswo	sswe	sswi	ssui	ss
+째	쨰	쩨	쪠	쫘	쫴	쬐	쭤	쮀	쮜	쯰	ㅉ
+jjae	jjyae	jje	jjye	jjwa	jjwae	jjoe	jjwo	jjwe	jjwi	jjui	jj
+3
+Hangul Table
+★Batchim (Final Consonant)
+Inside [ ] is the pronunciation notation
+Types（The red letters are double final consonants）
+Pronunciation	Type	Tips for Pronunciation
+The tongue remains still and it feels like stuffing the
+ㄱ, ㅋ, ㄲ,ㄳ,ㄺ	k [ㄱ]
+throat.
+The tongue touches the upper teeth or the upper part
+ㄴ,ㄵ,ㄶ	n [ㄴ]
+of the mouth.
+ㄷ, ㅌ, ㅅ, ㅆ, ㅈ, ㅊ,
+The tongue touches the back of the upper teeth.	t [ㄷ]
+ㅎ
+The tongues touches the upper teeth or the upper
+ㄹ,ㄼ,ㄽ,ㄾ,ㅀ	l [ㄹ]
+part of the mouth.
+The mouth remains closed.	ㅁ,ㄻ	m [ㅁ]
+The mouth remains closed.	ㅂ, ㅍ,ㅄ,ㄿ	p [ㅂ]
+Make a cave inside the mouth and keep the tongue
+ㅇ	ng [ㅇ]
+still.
+The Rules of  Double Final Consonants
+Consonant
+Type	Exceptions
+pronounced
+The right batchim is pronunced for 밟다   Ex: 밟다	ㄳ,ㄵ,ㄶ,ㄼ,ㄽ,ㄾ,ㅀ,
+On the left
+ㅄ	(Step on)→[밥따]
+Pronounce the left batchim when ㄱconsonant is
+followed after ㄺ  Ex: 읽고(Read)→[일꼬]
+On the right	ㄺ,ㄻ,ㄿ
+However, if ㄺ is in a noun, the right consonant is
+pronunced  Ex: 닭고기(Chicken meat)→[닥꼬기]
+4
+Hangul Table
+Changes in Pronunciation
+Rules	Type
+If a batchim other than ㅎ is followed by ㅇ, the consonant of batchim will be combined with the
+vowel following.
+Ex：먹어 (eat) →[머거]、이것은 (This is ) →[이거슨]
+If ㅇ follows after double consonants, both consonats are pronunced.
+Ex：젊어요(young)→[절머요]、앉아(sit)→［안자]
+Soft
+Consonants
+If ㄷ, ㅌ, ㄾ are followed by 이, they will be pronunced as ㅈ,ㅊ,ㄹㅊ, respectively.
+Ex：굳이 (dare) →[구지]、같이 (together) →[가치]、핥이다 (lick) →[할치다]
+If ㅎ batchim is followed by  ㅇ, ㅎ will not be pronunced.
+Ex：좋아 (like→[조아]、싫어 (dislike) →[시러]
+If the consonants ㄱ,ㄷ,ㅂ,ㅅ,ㅈ come after ㄱ,ㄷ,ㅂ batchims, their pronunciation will become
+double consonants like ㄲ,ㄸ,ㅃ,ㅆ,ㅉ, respectively.	Nasalization
+Ex：없고 (without) →[업꼬]、책상 (desk) →[책쌍]、꽃밭 (flower field) →[꼳빧]
+If the consonants ㄱ,ㄷ,ㅂ,ㅈ come before or after the batchim ㅎ, their pronunciation will
+become strong consonants like ㅋ,ㅌ,ㅍ,ㅊ.
+Aspirated	Ex：축하해(congratulations)→[추카해]、입학 (enrollment) →[이팍]、맞히다(hit)→[마치다]
+Consonant
+If the 4 consonants  above mentioned (ㄱ,ㄷ,ㅂ,ㅈ) come after ㄶ or ㅀ, their pronunciation	Phenomenon
+becomes strong consonants as well.
+Ex：많다 (many) →[만타]、잃지 않다(not lose) →[일치 안타]
+If ㄱ,ㄷ,ㅂ batchim is followed by the consonants ㄴ or ㅁ, the batchim is pronunced ㅇ,ㄴ or
+ㅁ, respectively.
+Ex：박물관 (museum) →[방물관]、감사합니다 (Thank you) →[감사함니다]
+If ㅁ or ㅇ batchim is followed by the consonant ㄹ, ㄹ becomes ㄴ.
+Nasalization
+Ex：심리학 (psychology) →[심니학]、종류 (type) →[종뉴]
+If ㄱ or ㅂ batchim is followed by the consonant ㄹ, the batchim becomes ㅇ or ㅁ respectively,
+and ㄹ becomes ㄴ.
+Ex：학력 (educational background) →[항녁]、합리적 (rational) →[함니적]
+If ㄴ batchim is followed by the consonant ㄹ, or ㄹ batchim is followed by the consonant ㄴ,
+ㄴ becomes ㄹ.
+Ex：관리 (management) →[괄리]、잃는 (lose) →[일른]	Fortis
+Phenomenon	However in some cases, the batchim does not become ㄹ and instead the following consonant
+becomes ㄴ (often in words originating from Chinese characters).
+Ex：결단력(decisiveness)→[결딴녁]、횡단로(cross road)→[횡단노]
+5

@@ -1,0 +1,11 @@
+  
+
+# Generate lessons
+
+
+# Examples:
+#   ./run_topik.sh A          # TOPIK A (beginner), all lessons (~44 lessons of 20 words)
+#   ./run_topik.sh B 5        # TOPIK B (intermediate), lesson 5 only
+#   ./run_topik.sh A 1-10     # TOPIK A, lessons 1 through 10
+
+then in output will get those files

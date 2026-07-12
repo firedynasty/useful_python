@@ -1,0 +1,42 @@
+This code is a utility script that extracts code from multiple files and combines them into a single output file. Here's a breakdown of how it works:
+
+## Key Functions
+
+### `extract_code_file` Function
+This function takes source code files and appends them to a specified output file with appropriate headers:
+
+1. It verifies the input file exists
+2. Gets the absolute path of the file for better identification
+3. Reads the content of the input file
+4. Creates a file-type specific header (using comments appropriate for that language)
+5. Appends the header and content to the output file
+
+### `main` Function
+This is the entry point that:
+
+1. Sets up command-line argument parsing
+2. Handles existing output files by asking if you want to clear or append to them
+3. Processes each specified input file
+4. Prints a summary of the results
+
+## Usage
+
+The script is meant to be used from the command line like this:
+
+```
+python script_name.py file1.py file2.js file3.html -o output_file.txt
+```
+
+This would extract code from the three specified files and combine them into `output_file.txt` (or default to `askAI1.txt` if no output file is specified).
+
+## Purpose
+
+This tool is particularly useful when you want to:
+- Collect multiple code files into a single document
+- Preserve proper attribution by including file paths
+- Format comments appropriately based on file type
+- Ask an AI assistant to analyze multiple code files at once
+
+The script is well-structured with error handling to ensure robust operation when processing multiple files.
+
+Note: There appears to be a typo in the last line. It should be `if __name__ == "__main__":` (with double underscores) rather than `if **name** == "__main__":`.

@@ -1,0 +1,9 @@
+XMIND_PY="/Users/stanleytan/Documents/technical/python/xmind/md_to_xmind.py"
+
+xmind() {
+    if [[ -z "$1" ]]; then
+        echo "Usage: xmind <file.md>"
+        return 1
+    fi
+    python3 "$XMIND_PY" "$1"
+}

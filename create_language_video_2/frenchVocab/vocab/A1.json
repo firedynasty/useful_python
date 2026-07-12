@@ -1,0 +1,2102 @@
+[
+  {
+    "french": "de",
+    "english": "of; from",
+    "pos": "preposition",
+    "gender": null,
+    "frequency": 8435682
+  },
+  {
+    "french": "je",
+    "english": "I",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 8308698
+  },
+  {
+    "french": "est",
+    "english": "is",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 6942248
+  },
+  {
+    "french": "pas",
+    "english": "not",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 5833676
+  },
+  {
+    "french": "le",
+    "english": "the",
+    "pos": "determiner",
+    "gender": "m",
+    "frequency": 5305591
+  },
+  {
+    "french": "que",
+    "english": "that; than",
+    "pos": "conjunction",
+    "gender": null,
+    "frequency": 5083052
+  },
+  {
+    "french": "la",
+    "english": "the",
+    "pos": "determiner",
+    "gender": "f",
+    "frequency": 4825603
+  },
+  {
+    "french": "vous",
+    "english": "you",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 4500162
+  },
+  {
+    "french": "tu",
+    "english": "you",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 4434920
+  },
+  {
+    "french": "un",
+    "english": "a; an",
+    "pos": "determiner",
+    "gender": "m",
+    "frequency": 4360896
+  },
+  {
+    "french": "et",
+    "english": "and",
+    "pos": "conjunction",
+    "gender": null,
+    "frequency": 4110855
+  },
+  {
+    "french": "il",
+    "english": "he; it",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 4025241
+  },
+  {
+    "french": "ne",
+    "english": "not",
+    "pos": "particle",
+    "gender": null,
+    "frequency": 3343288
+  },
+  {
+    "french": "les",
+    "english": "the",
+    "pos": "determiner",
+    "gender": null,
+    "frequency": 3046663
+  },
+  {
+    "french": "en",
+    "english": "in; into",
+    "pos": "preposition",
+    "gender": null,
+    "frequency": 2925411
+  },
+  {
+    "french": "on",
+    "english": "one; we",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 2756346
+  },
+  {
+    "french": "ça",
+    "english": "that; it",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 2742676
+  },
+  {
+    "french": "une",
+    "english": "a; an",
+    "pos": "determiner",
+    "gender": "f",
+    "frequency": 2717481
+  },
+  {
+    "french": "ce",
+    "english": "this; that",
+    "pos": "determiner",
+    "gender": "m",
+    "frequency": 2533544
+  },
+  {
+    "french": "qu'",
+    "english": "that; than",
+    "pos": "conjunction",
+    "gender": null,
+    "frequency": 2520219
+  },
+  {
+    "french": "pour",
+    "english": "for; to",
+    "pos": "preposition",
+    "gender": null,
+    "frequency": 2475533
+  },
+  {
+    "french": "ai",
+    "english": "have",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 2437065
+  },
+  {
+    "french": "des",
+    "english": "some",
+    "pos": "determiner",
+    "gender": null,
+    "frequency": 1902327
+  },
+  {
+    "french": "qui",
+    "english": "who; that",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 1665879
+  },
+  {
+    "french": "mais",
+    "english": "but",
+    "pos": "conjunction",
+    "gender": null,
+    "frequency": 1641141
+  },
+  {
+    "french": "dans",
+    "english": "in; into",
+    "pos": "preposition",
+    "gender": null,
+    "frequency": 1508883
+  },
+  {
+    "french": "nous",
+    "english": "we; us",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 1504467
+  },
+  {
+    "french": "elle",
+    "english": "she; it",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 1476885
+  },
+  {
+    "french": "me",
+    "english": "me; myself",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 1446772
+  },
+  {
+    "french": "bien",
+    "english": "well; good",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 1438129
+  },
+  {
+    "french": "si",
+    "english": "if; so",
+    "pos": "conjunction",
+    "gender": null,
+    "frequency": 1409401
+  },
+  {
+    "french": "du",
+    "english": "of the; some",
+    "pos": "determiner",
+    "gender": "m",
+    "frequency": 1337227
+  },
+  {
+    "french": "suis",
+    "english": "am",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 1303070
+  },
+  {
+    "french": "non",
+    "english": "no",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 1290498
+  },
+  {
+    "french": "avec",
+    "english": "with",
+    "pos": "preposition",
+    "gender": null,
+    "frequency": 1256800
+  },
+  {
+    "french": "tout",
+    "english": "all; everything",
+    "pos": "adjective",
+    "gender": "m",
+    "frequency": 1243107
+  },
+  {
+    "french": "plus",
+    "english": "more; plus",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 1214520
+  },
+  {
+    "french": "mon",
+    "english": "my",
+    "pos": "determiner",
+    "gender": "m",
+    "frequency": 1195613
+  },
+  {
+    "french": "te",
+    "english": "you; yourself",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 1127735
+  },
+  {
+    "french": "au",
+    "english": "to the; at the",
+    "pos": "preposition",
+    "gender": "m",
+    "frequency": 1109359
+  },
+  {
+    "french": "fait",
+    "english": "done; fact",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 1054966
+  },
+  {
+    "french": "moi",
+    "english": "me; I",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 1048758
+  },
+  {
+    "french": "oui",
+    "english": "yes",
+    "pos": "interjection",
+    "gender": null,
+    "frequency": 1001703
+  },
+  {
+    "french": "va",
+    "english": "goes; is going",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 989526
+  },
+  {
+    "french": "était",
+    "english": "was",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 985841
+  },
+  {
+    "french": "as",
+    "english": "have",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 974673
+  },
+  {
+    "french": "faire",
+    "english": "to do; to make",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 966573
+  },
+  {
+    "french": "ils",
+    "english": "they",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 945659
+  },
+  {
+    "french": "sur",
+    "english": "on; over",
+    "pos": "preposition",
+    "gender": null,
+    "frequency": 939169
+  },
+  {
+    "french": "quoi",
+    "english": "what",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 894291
+  },
+  {
+    "french": "se",
+    "english": "oneself; itself",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 867737
+  },
+  {
+    "french": "comme",
+    "english": "like; as",
+    "pos": "conjunction",
+    "gender": null,
+    "frequency": 864987
+  },
+  {
+    "french": "sais",
+    "english": "know",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 851748
+  },
+  {
+    "french": "être",
+    "english": "to be",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 743252
+  },
+  {
+    "french": "veux",
+    "english": "want",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 738917
+  },
+  {
+    "french": "ici",
+    "english": "here",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 725494
+  },
+  {
+    "french": "ma",
+    "english": "my",
+    "pos": "determiner",
+    "gender": "f",
+    "frequency": 716527
+  },
+  {
+    "french": "toi",
+    "english": "you",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 707904
+  },
+  {
+    "french": "est-ce",
+    "english": "is it",
+    "pos": "particle",
+    "gender": null,
+    "frequency": 707256
+  },
+  {
+    "french": "dit",
+    "english": "says; said",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 701414
+  },
+  {
+    "french": "lui",
+    "english": "him; her",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 689708
+  },
+  {
+    "french": "votre",
+    "english": "your",
+    "pos": "determiner",
+    "gender": null,
+    "frequency": 677006
+  },
+  {
+    "french": "es",
+    "english": "are",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 662531
+  },
+  {
+    "french": "pourquoi",
+    "english": "why",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 657070
+  },
+  {
+    "french": "où",
+    "english": "where",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 643564
+  },
+  {
+    "french": "là",
+    "english": "there",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 643024
+  },
+  {
+    "french": "rien",
+    "english": "nothing",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 638070
+  },
+  {
+    "french": "cette",
+    "english": "this",
+    "pos": "determiner",
+    "gender": "f",
+    "frequency": 626319
+  },
+  {
+    "french": "sont",
+    "english": "are",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 609102
+  },
+  {
+    "french": "quand",
+    "english": "when",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 598113
+  },
+  {
+    "french": "peux",
+    "english": "can",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 594578
+  },
+  {
+    "french": "dire",
+    "english": "to say; to tell",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 586553
+  },
+  {
+    "french": "son",
+    "english": "his; her",
+    "pos": "determiner",
+    "gender": "m",
+    "frequency": 585229
+  },
+  {
+    "french": "avez",
+    "english": "have",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 552796
+  },
+  {
+    "french": "vais",
+    "english": "go",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 542593
+  },
+  {
+    "french": "alors",
+    "english": "then; so",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 542173
+  },
+  {
+    "french": "ton",
+    "english": "your",
+    "pos": "determiner",
+    "gender": "m",
+    "frequency": 540446
+  },
+  {
+    "french": "comment",
+    "english": "how",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 528569
+  },
+  {
+    "french": "par",
+    "english": "by; through",
+    "pos": "preposition",
+    "gender": null,
+    "frequency": 519463
+  },
+  {
+    "french": "ou",
+    "english": "or",
+    "pos": "conjunction",
+    "gender": null,
+    "frequency": 497358
+  },
+  {
+    "french": "chose",
+    "english": "thing",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 490339
+  },
+  {
+    "french": "bon",
+    "english": "good",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 483364
+  },
+  {
+    "french": "ont",
+    "english": "have",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 471659
+  },
+  {
+    "french": "merci",
+    "english": "thank you",
+    "pos": "interjection",
+    "gender": null,
+    "frequency": 471415
+  },
+  {
+    "french": "juste",
+    "english": "just; fair",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 465932
+  },
+  {
+    "french": "très",
+    "english": "very",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 462324
+  },
+  {
+    "french": "jamais",
+    "english": "never",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 436873
+  },
+  {
+    "french": "été",
+    "english": "been",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 432574
+  },
+  {
+    "french": "aussi",
+    "english": "also; too",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 427827
+  },
+  {
+    "french": "avoir",
+    "english": "to have",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 427178
+  },
+  {
+    "french": "vraiment",
+    "english": "really",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 423339
+  },
+  {
+    "french": "voir",
+    "english": "to see",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 419803
+  },
+  {
+    "french": "même",
+    "english": "same; even",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 411247
+  },
+  {
+    "french": "sa",
+    "english": "his; her",
+    "pos": "determiner",
+    "gender": "f",
+    "frequency": 408233
+  },
+  {
+    "french": "oh",
+    "english": "oh",
+    "pos": "interjection",
+    "gender": null,
+    "frequency": 408070
+  },
+  {
+    "french": "maintenant",
+    "english": "now",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 402585
+  },
+  {
+    "french": "tous",
+    "english": "all; everyone",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 399645
+  },
+  {
+    "french": "peut",
+    "english": "can",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 393199
+  },
+  {
+    "french": "deux",
+    "english": "two",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 388269
+  },
+  {
+    "french": "ces",
+    "english": "these; those",
+    "pos": "determiner",
+    "gender": null,
+    "frequency": 388071
+  },
+  {
+    "french": "êtes",
+    "english": "are",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 376665
+  },
+  {
+    "french": "allez",
+    "english": "go",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 374660
+  },
+  {
+    "french": "ta",
+    "english": "your",
+    "pos": "determiner",
+    "gender": "f",
+    "frequency": 373455
+  },
+  {
+    "french": "autre",
+    "english": "other; another",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 370961
+  },
+  {
+    "french": "peu",
+    "english": "little; few",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 354756
+  },
+  {
+    "french": "temps",
+    "english": "time; weather",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 354330
+  },
+  {
+    "french": "quelque",
+    "english": "some; a few",
+    "pos": "determiner",
+    "gender": null,
+    "frequency": 353553
+  },
+  {
+    "french": "fais",
+    "english": "do; make",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 353373
+  },
+  {
+    "french": "toujours",
+    "english": "always; still",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 345760
+  },
+  {
+    "french": "encore",
+    "english": "again; still",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 342386
+  },
+  {
+    "french": "notre",
+    "english": "our",
+    "pos": "determiner",
+    "gender": null,
+    "frequency": 339810
+  },
+  {
+    "french": "mes",
+    "english": "my",
+    "pos": "determiner",
+    "gender": null,
+    "frequency": 332672
+  },
+  {
+    "french": "besoin",
+    "english": "need",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 329446
+  },
+  {
+    "french": "avait",
+    "english": "had",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 320073
+  },
+  {
+    "french": "accord",
+    "english": "agreement; accord",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 315183
+  },
+  {
+    "french": "faut",
+    "english": "must; need",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 313023
+  },
+  {
+    "french": "dois",
+    "english": "must; have to",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 310780
+  },
+  {
+    "french": "vie",
+    "english": "life",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 310140
+  },
+  {
+    "french": "peut-être",
+    "english": "maybe; perhaps",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 306785
+  },
+  {
+    "french": "aller",
+    "english": "to go",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 303502
+  },
+  {
+    "french": "fois",
+    "english": "time; occasion",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 297685
+  },
+  {
+    "french": "vu",
+    "english": "seen",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 290541
+  },
+  {
+    "french": "donc",
+    "english": "so; therefore",
+    "pos": "conjunction",
+    "gender": null,
+    "frequency": 281973
+  },
+  {
+    "french": "sans",
+    "english": "without",
+    "pos": "preposition",
+    "gender": null,
+    "frequency": 281163
+  },
+  {
+    "french": "monde",
+    "english": "world; people",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 277005
+  },
+  {
+    "french": "étais",
+    "english": "was",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 276408
+  },
+  {
+    "french": "parce",
+    "english": "because",
+    "pos": "conjunction",
+    "gender": null,
+    "frequency": 273723
+  },
+  {
+    "french": "avant",
+    "english": "before",
+    "pos": "preposition",
+    "gender": null,
+    "frequency": 272706
+  },
+  {
+    "french": "sûr",
+    "english": "sure; certain",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 271047
+  },
+  {
+    "french": "trop",
+    "english": "too; too much",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 265575
+  },
+  {
+    "french": "quelqu'",
+    "english": "some; any",
+    "pos": "determiner",
+    "gender": null,
+    "frequency": 265286
+  },
+  {
+    "french": "parler",
+    "english": "to speak; to talk",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 262709
+  },
+  {
+    "french": "personne",
+    "english": "person; nobody",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 260005
+  },
+  {
+    "french": "avais",
+    "english": "had",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 257602
+  },
+  {
+    "french": "père",
+    "english": "father",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 257456
+  },
+  {
+    "french": "crois",
+    "english": "believe; think",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 251561
+  },
+  {
+    "french": "après",
+    "english": "after",
+    "pos": "preposition",
+    "gender": null,
+    "frequency": 250383
+  },
+  {
+    "french": "aux",
+    "english": "to the; at the",
+    "pos": "preposition",
+    "gender": null,
+    "frequency": 244896
+  },
+  {
+    "french": "dieu",
+    "english": "god",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 242078
+  },
+  {
+    "french": "ouais",
+    "english": "yeah",
+    "pos": "interjection",
+    "gender": null,
+    "frequency": 241407
+  },
+  {
+    "french": "ses",
+    "english": "his; her; its",
+    "pos": "determiner",
+    "gender": null,
+    "frequency": 240780
+  },
+  {
+    "french": "pense",
+    "english": "think",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 240390
+  },
+  {
+    "french": "eu",
+    "english": "had",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 238206
+  },
+  {
+    "french": "aime",
+    "english": "love; like",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 237696
+  },
+  {
+    "french": "leur",
+    "english": "their",
+    "pos": "determiner",
+    "gender": null,
+    "frequency": 236536
+  },
+  {
+    "french": "homme",
+    "english": "man",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 236357
+  },
+  {
+    "french": "viens",
+    "english": "come",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 233234
+  },
+  {
+    "french": "vrai",
+    "english": "true; real",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 233001
+  },
+  {
+    "french": "femme",
+    "english": "woman; wife",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 232974
+  },
+  {
+    "french": "ok",
+    "english": "ok",
+    "pos": "interjection",
+    "gender": null,
+    "frequency": 228115
+  },
+  {
+    "french": "doit",
+    "english": "must; has to",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 227951
+  },
+  {
+    "french": "veut",
+    "english": "wants",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 227166
+  },
+  {
+    "french": "ans",
+    "english": "years",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 225795
+  },
+  {
+    "french": "m.",
+    "english": "Mr.; mister",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 223793
+  },
+  {
+    "french": "mal",
+    "english": "badly; pain",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 219886
+  },
+  {
+    "french": "chez",
+    "english": "at; with",
+    "pos": "preposition",
+    "gender": null,
+    "frequency": 218436
+  },
+  {
+    "french": "déjà",
+    "english": "already; ever",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 214718
+  },
+  {
+    "french": "depuis",
+    "english": "since; from",
+    "pos": "preposition",
+    "gender": null,
+    "frequency": 214022
+  },
+  {
+    "french": "beaucoup",
+    "english": "a lot; much",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 211787
+  },
+  {
+    "french": "vos",
+    "english": "your",
+    "pos": "determiner",
+    "gender": null,
+    "frequency": 211081
+  },
+  {
+    "french": "bonne",
+    "english": "good",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 209592
+  },
+  {
+    "french": "mort",
+    "english": "death",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 208796
+  },
+  {
+    "french": "mieux",
+    "english": "better",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 205274
+  },
+  {
+    "french": "vas",
+    "english": "go",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 203968
+  },
+  {
+    "french": "mère",
+    "english": "mother",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 202937
+  },
+  {
+    "french": "sera",
+    "english": "will be",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 202795
+  },
+  {
+    "french": "dis",
+    "english": "say; tell",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 201949
+  },
+  {
+    "french": "fille",
+    "english": "girl; daughter",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 201540
+  },
+  {
+    "french": "tes",
+    "english": "your",
+    "pos": "determiner",
+    "gender": null,
+    "frequency": 199689
+  },
+  {
+    "french": "gens",
+    "english": "people",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 198558
+  },
+  {
+    "french": "quel",
+    "english": "which; what",
+    "pos": "determiner",
+    "gender": null,
+    "frequency": 193928
+  },
+  {
+    "french": "vois",
+    "english": "see",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 193613
+  },
+  {
+    "french": "désolé",
+    "english": "sorry",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 191841
+  },
+  {
+    "french": "ca",
+    "english": "that; it",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 189898
+  },
+  {
+    "french": "voilà",
+    "english": "there is; here is",
+    "pos": "interjection",
+    "gender": null,
+    "frequency": 189677
+  },
+  {
+    "french": "avons",
+    "english": "have",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 186788
+  },
+  {
+    "french": "petit",
+    "english": "small; little",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 186600
+  },
+  {
+    "french": "maison",
+    "english": "house; home",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 185035
+  },
+  {
+    "french": "soit",
+    "english": "either; be",
+    "pos": "conjunction",
+    "gender": null,
+    "frequency": 179962
+  },
+  {
+    "french": "cela",
+    "english": "that",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 177397
+  },
+  {
+    "french": "autres",
+    "english": "others",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 175480
+  },
+  {
+    "french": "toute",
+    "english": "all; whole",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 174066
+  },
+  {
+    "french": "soir",
+    "english": "evening",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 172574
+  },
+  {
+    "french": "passé",
+    "english": "past",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 172214
+  },
+  {
+    "french": "prendre",
+    "english": "to take",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 170367
+  },
+  {
+    "french": "jour",
+    "english": "day",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 170304
+  },
+  {
+    "french": "monsieur",
+    "english": "sir; gentleman",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 164959
+  },
+  {
+    "french": "nos",
+    "english": "our",
+    "pos": "determiner",
+    "gender": null,
+    "frequency": 164465
+  },
+  {
+    "french": "savoir",
+    "english": "to know",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 163428
+  },
+  {
+    "french": "choses",
+    "english": "things",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 163193
+  },
+  {
+    "french": "salut",
+    "english": "hi; bye",
+    "pos": "interjection",
+    "gender": null,
+    "frequency": 160990
+  },
+  {
+    "french": "cet",
+    "english": "this; that",
+    "pos": "determiner",
+    "gender": null,
+    "frequency": 160783
+  },
+  {
+    "french": "nom",
+    "english": "name",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 160549
+  },
+  {
+    "french": "argent",
+    "english": "money; silver",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 159413
+  },
+  {
+    "french": "bonjour",
+    "english": "hello; good morning",
+    "pos": "interjection",
+    "gender": null,
+    "frequency": 156301
+  },
+  {
+    "french": "nuit",
+    "english": "night",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 155789
+  },
+  {
+    "french": "raison",
+    "english": "reason",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 153137
+  },
+  {
+    "french": "moins",
+    "english": "less",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 153102
+  },
+  {
+    "french": "arrive",
+    "english": "arrives",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 152291
+  },
+  {
+    "french": "maman",
+    "english": "mom",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 151089
+  },
+  {
+    "french": "reste",
+    "english": "rest; remainder",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 150311
+  },
+  {
+    "french": "moment",
+    "english": "moment; time",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 149622
+  },
+  {
+    "french": "voulais",
+    "english": "wanted",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 149394
+  },
+  {
+    "french": "seul",
+    "english": "alone; only",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 149265
+  },
+  {
+    "french": "aider",
+    "english": "to help",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 148607
+  },
+  {
+    "french": "air",
+    "english": "air; appearance",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 148370
+  },
+  {
+    "french": "entre",
+    "english": "between; among",
+    "pos": "preposition",
+    "gender": null,
+    "frequency": 147420
+  },
+  {
+    "french": "papa",
+    "english": "dad; daddy",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 146818
+  },
+  {
+    "french": "passe",
+    "english": "pass; past",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 144680
+  },
+  {
+    "french": "aurais",
+    "english": "would have",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 143292
+  },
+  {
+    "french": "problème",
+    "english": "problem; issue",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 141208
+  },
+  {
+    "french": "ah",
+    "english": "ah",
+    "pos": "interjection",
+    "gender": null,
+    "frequency": 140158
+  },
+  {
+    "french": "peur",
+    "english": "fear",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 139829
+  },
+  {
+    "french": "regarde",
+    "english": "look; watch",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 138016
+  },
+  {
+    "french": "voulez",
+    "english": "want",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 137416
+  },
+  {
+    "french": "gars",
+    "english": "guy; lad",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 136154
+  },
+  {
+    "french": "trouvé",
+    "english": "found",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 135198
+  },
+  {
+    "french": "fils",
+    "english": "son",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 134600
+  },
+  {
+    "french": "attends",
+    "english": "wait",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 134144
+  },
+  {
+    "french": "savez",
+    "english": "know",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 133759
+  },
+  {
+    "french": "jusqu'",
+    "english": "until; up to",
+    "pos": "preposition",
+    "gender": null,
+    "frequency": 133102
+  },
+  {
+    "french": "trouver",
+    "english": "to find",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 132646
+  },
+  {
+    "french": "trois",
+    "english": "three",
+    "pos": "determiner",
+    "gender": null,
+    "frequency": 132625
+  },
+  {
+    "french": "assez",
+    "english": "enough; quite",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 132619
+  },
+  {
+    "french": "famille",
+    "english": "family",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 132352
+  },
+  {
+    "french": "dû",
+    "english": "due; owed",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 132063
+  },
+  {
+    "french": "eh",
+    "english": "eh",
+    "pos": "interjection",
+    "gender": null,
+    "frequency": 131788
+  },
+  {
+    "french": "toutes",
+    "english": "all; every",
+    "pos": "determiner",
+    "gender": null,
+    "frequency": 131387
+  },
+  {
+    "french": "plaît",
+    "english": "pleases",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 131162
+  },
+  {
+    "french": "pourrait",
+    "english": "could",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 130894
+  },
+  {
+    "french": "travail",
+    "english": "work; job",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 130261
+  },
+  {
+    "french": "pris",
+    "english": "taken",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 129066
+  },
+  {
+    "french": "pu",
+    "english": "could",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 128934
+  },
+  {
+    "french": "tête",
+    "english": "head",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 128754
+  },
+  {
+    "french": "quelle",
+    "english": "which; what",
+    "pos": "determiner",
+    "gender": null,
+    "frequency": 128659
+  },
+  {
+    "french": "sait",
+    "english": "knows",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 128125
+  },
+  {
+    "french": "sommes",
+    "english": "are",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 127717
+  },
+  {
+    "french": "appelle",
+    "english": "call",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 127367
+  },
+  {
+    "french": "quelques",
+    "english": "some; a few",
+    "pos": "determiner",
+    "gender": null,
+    "frequency": 127034
+  },
+  {
+    "french": "faites",
+    "english": "do; make",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 125636
+  },
+  {
+    "french": "partir",
+    "english": "to leave",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 125282
+  },
+  {
+    "french": "vite",
+    "english": "quickly; fast",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 125063
+  },
+  {
+    "french": "arrête",
+    "english": "stop",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 124854
+  },
+  {
+    "french": "seule",
+    "english": "alone; only",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 124521
+  },
+  {
+    "french": "serait",
+    "english": "would be",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 123944
+  },
+  {
+    "french": "voiture",
+    "english": "car",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 123524
+  },
+  {
+    "french": "enfants",
+    "english": "children",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 123384
+  },
+  {
+    "french": "tuer",
+    "english": "to kill",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 121829
+  },
+  {
+    "french": "merde",
+    "english": "shit; damn",
+    "pos": "interjection",
+    "gender": null,
+    "frequency": 121318
+  },
+  {
+    "french": "hé",
+    "english": "hey",
+    "pos": "interjection",
+    "gender": null,
+    "frequency": 121065
+  },
+  {
+    "french": "pendant",
+    "english": "during; while",
+    "pos": "preposition",
+    "gender": null,
+    "frequency": 121060
+  },
+  {
+    "french": "idée",
+    "english": "idea",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 120671
+  },
+  {
+    "french": "chance",
+    "english": "luck; chance",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 120655
+  },
+  {
+    "french": "parle",
+    "english": "speak; talk",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 120341
+  },
+  {
+    "french": "aurait",
+    "english": "would have",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 120181
+  },
+  {
+    "french": "part",
+    "english": "part; share",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 119964
+  },
+  {
+    "french": "elles",
+    "english": "they",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 118978
+  },
+  {
+    "french": "jours",
+    "english": "days",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 118455
+  },
+  {
+    "french": "grand",
+    "english": "big; tall; great",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 117213
+  },
+  {
+    "french": "aujourd'hui",
+    "english": "today",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 117159
+  },
+  {
+    "french": "venir",
+    "english": "to come",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 116762
+  },
+  {
+    "french": "ami",
+    "english": "friend",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 116639
+  },
+  {
+    "french": "demain",
+    "english": "tomorrow",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 116541
+  },
+  {
+    "french": "hein",
+    "english": "huh; eh",
+    "pos": "interjection",
+    "gender": null,
+    "frequency": 116301
+  },
+  {
+    "french": "tard",
+    "english": "late",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 115148
+  },
+  {
+    "french": "puis",
+    "english": "then; next",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 115038
+  },
+  {
+    "french": "truc",
+    "english": "thing; stuff",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 114959
+  },
+  {
+    "french": "passer",
+    "english": "to pass; to spend",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 114718
+  },
+  {
+    "french": "petite",
+    "english": "small; little",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 114295
+  },
+  {
+    "french": "tant",
+    "english": "so much; so many",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 113917
+  },
+  {
+    "french": "connais",
+    "english": "know",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 113815
+  },
+  {
+    "french": "combien",
+    "english": "how much; how many",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 113220
+  },
+  {
+    "french": "mec",
+    "english": "guy; dude",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 113219
+  },
+  {
+    "french": "sens",
+    "english": "sense; meaning",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 112925
+  },
+  {
+    "french": "pouvez",
+    "english": "can; be able to",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 112615
+  },
+  {
+    "french": "porte",
+    "english": "door",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 110258
+  },
+  {
+    "french": "sortir",
+    "english": "to go out; to exit",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 109313
+  },
+  {
+    "french": "super",
+    "english": "great; super",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 108980
+  },
+  {
+    "french": "heure",
+    "english": "hour; time",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 108452
+  },
+  {
+    "french": "contre",
+    "english": "against",
+    "pos": "preposition",
+    "gender": null,
+    "frequency": 108451
+  },
+  {
+    "french": "coup",
+    "english": "blow; stroke",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 108065
+  },
+  {
+    "french": "comprends",
+    "english": "understand",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 107885
+  },
+  {
+    "french": "entendu",
+    "english": "heard; agreed",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 107777
+  },
+  {
+    "french": "vient",
+    "english": "comes",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 107616
+  },
+  {
+    "french": "allons",
+    "english": "let's go",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 106551
+  },
+  {
+    "french": "ensemble",
+    "english": "together",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 106057
+  },
+  {
+    "french": "nouveau",
+    "english": "new",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 105566
+  },
+  {
+    "french": "amour",
+    "english": "love",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 104503
+  },
+  {
+    "french": "importe",
+    "english": "matter; import",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 104429
+  },
+  {
+    "french": "sang",
+    "english": "blood",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 103824
+  },
+  {
+    "french": "désolée",
+    "english": "sorry",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 102105
+  },
+  {
+    "french": "cas",
+    "english": "case; instance",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 100615
+  },
+  {
+    "french": "sous",
+    "english": "under; below",
+    "pos": "preposition",
+    "gender": null,
+    "frequency": 100518
+  },
+  {
+    "french": "rester",
+    "english": "to stay; to remain",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 99983
+  },
+  {
+    "french": "amis",
+    "english": "friends",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 99948
+  },
+  {
+    "french": "prends",
+    "english": "take",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 99491
+  },
+  {
+    "french": "fini",
+    "english": "finished; done",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 98823
+  },
+  {
+    "french": "hommes",
+    "english": "men",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 98230
+  },
+  {
+    "french": "tué",
+    "english": "killed",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 98218
+  },
+  {
+    "french": "question",
+    "english": "question",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 97869
+  }
+]

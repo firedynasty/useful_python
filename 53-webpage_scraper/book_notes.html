@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Notes Collector</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #1a1a2e;
+    color: #e0e0e0;
+    min-height: 100vh;
+  }
+
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #16213e;
+    border-bottom: 1px solid #0f3460;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .toolbar h1 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #e94560;
+    margin-right: auto;
+  }
+
+  .stats {
+    font-size: 13px;
+    color: #888;
+  }
+
+  .stats span {
+    color: #e94560;
+    font-weight: 600;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .btn:hover { transform: translateY(-1px); }
+
+  .btn-append {
+    background: #e94560;
+    color: #fff;
+  }
+  .btn-append:hover { background: #c73650; }
+
+  .btn-copy {
+    background: #0f3460;
+    color: #e0e0e0;
+  }
+  .btn-copy:hover { background: #1a4a8a; }
+
+  .btn-clear {
+    background: transparent;
+    color: #666;
+    border: 1px solid #333;
+  }
+  .btn-clear:hover { background: #2a2a3e; color: #e94560; border-color: #e94560; }
+
+  .btn-paste {
+    background: #0f3460;
+    color: #e0e0e0;
+    white-space: nowrap;
+  }
+  .btn-paste:hover { background: #1a4a8a; }
+
+  .action-row {
+    margin-top: 10px;
+    display: flex;
+  }
+
+  .btn-append-main {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .input-area {
+    padding: 16px 24px;
+    background: #16213e;
+    border-bottom: 1px solid #0f3460;
+  }
+
+  .source-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+
+  .source-row input {
+    flex: 1;
+    padding: 8px 12px;
+    background: #1a1a2e;
+    border: 1px solid #333;
+    border-radius: 6px;
+    color: #e0e0e0;
+    font-size: 13px;
+  }
+
+  .source-row input:focus {
+    outline: none;
+    border-color: #e94560;
+  }
+
+  textarea {
+    width: 100%;
+    height: 200px;
+    padding: 12px;
+    background: #1a1a2e;
+    border: 1px solid #333;
+    border-radius: 6px;
+    color: #e0e0e0;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.6;
+    resize: vertical;
+  }
+
+  textarea:focus {
+    outline: none;
+    border-color: #e94560;
+  }
+
+  textarea::placeholder { color: #555; }
+
+  /* This is the container the scraper reads from */
+  #book-notes-content {
+    padding: 16px 24px;
+  }
+
+  .note-card {
+    background: #16213e;
+    border: 1px solid #0f3460;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+
+  .note-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    background: #0f3460;
+    font-size: 12px;
+    color: #888;
+  }
+
+  .note-header .note-source {
+    color: #e94560;
+    font-weight: 600;
+  }
+
+  .note-header .note-meta {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .note-body {
+    padding: 16px;
+    font-size: 14px;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .btn-remove {
+    background: none;
+    border: none;
+    color: #555;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .btn-remove:hover { color: #e94560; background: rgba(233,69,96,0.1); }
+
+  .empty-state {
+    text-align: center;
+    padding: 60px 24px;
+    color: #444;
+  }
+
+  .empty-state p { font-size: 14px; margin-top: 8px; }
+
+  .toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #0f3460;
+    color: #e0e0e0;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+
+  .toast.show { opacity: 1; }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <h1>Book Notes Collector</h1>
+  <div class="stats">
+    <span id="note-count">0</span> notes &middot;
+    <span id="char-count">0</span> chars
+  </div>
+  <button class="btn btn-append" onclick="appendNote()">Append</button>
+  <button class="btn btn-copy" onclick="copyAll()">Copy All</button>
+  <button class="btn btn-clear" onclick="clearAll()">Clear All</button>
+</div>
+
+<div class="input-area">
+  <div class="source-row">
+    <input type="text" id="source-label" placeholder="Source label (optional) — e.g. 'Goodreads review', 'Chapter 3 summary'">
+    <button class="btn btn-paste" onclick="pasteFromClipboard()">Paste from Clipboard</button>
+  </div>
+  <textarea id="note-input" placeholder="Paste content here, then click Append..."></textarea>
+  <div class="action-row">
+    <button class="btn btn-append btn-append-main" onclick="appendNote()">Append Note</button>
+  </div>
+</div>
+
+<!-- The scraper reads from this container -->
+<div id="book-notes-content">
+  <div class="empty-state" id="empty-state">
+    <p>Paste text above and click Append to start collecting notes.</p>
+    <p>The scraper will read all notes from this page.</p>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  const noteInput = document.getElementById('note-input');
+  const sourceInput = document.getElementById('source-label');
+  const container = document.getElementById('book-notes-content');
+  const emptyState = document.getElementById('empty-state');
+  let noteCounter = 0;
+
+  function updateStats() {
+    const notes = container.querySelectorAll('.note-card');
+    const count = notes.length;
+    let chars = 0;
+    notes.forEach(n => {
+      const body = n.querySelector('.note-body');
+      if (body) chars += body.textContent.length;
+    });
+    document.getElementById('note-count').textContent = count;
+    document.getElementById('char-count').textContent = chars.toLocaleString();
+    emptyState.style.display = count > 0 ? 'none' : 'block';
+  }
+
+  function showToast(msg) {
+    const toast = document.getElementById('toast');
+    toast.textContent = msg;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2000);
+  }
+
+  function appendNote() {
+    const text = noteInput.value.trim();
+    if (!text) return;
+
+    noteCounter++;
+    const source = sourceInput.value.trim() || `Note ${noteCounter}`;
+    const time = new Date().toLocaleTimeString();
+    const chars = text.length;
+
+    const card = document.createElement('div');
+    card.className = 'note-card';
+    card.innerHTML = `
+      <div class="note-header">
+        <span class="note-source">${escapeHtml(source)}</span>
+        <div class="note-meta">
+          <span>${chars.toLocaleString()} chars</span>
+          <span>${time}</span>
+          <button class="btn-remove" onclick="removeNote(this)" title="Remove">&times;</button>
+        </div>
+      </div>
+      <div class="note-body">${escapeHtml(text)}</div>
+    `;
+
+    container.appendChild(card);
+    noteInput.value = '';
+    sourceInput.value = '';
+    noteInput.focus();
+    updateStats();
+    showToast(`Appended: ${source} (${chars.toLocaleString()} chars)`);
+  }
+
+  function removeNote(btn) {
+    const card = btn.closest('.note-card');
+    card.remove();
+    updateStats();
+    showToast('Note removed');
+  }
+
+  function copyAll() {
+    const notes = container.querySelectorAll('.note-card');
+    if (notes.length === 0) return;
+
+    let output = '';
+    notes.forEach((card, i) => {
+      const source = card.querySelector('.note-source').textContent;
+      const body = card.querySelector('.note-body').textContent;
+      output += `== Source ${i + 1}: ${source} ==\n\n${body}\n\n`;
+    });
+
+    navigator.clipboard.writeText(output).then(() => {
+      showToast(`Copied ${output.length.toLocaleString()} chars to clipboard`);
+    });
+  }
+
+  function clearAll() {
+    const notes = container.querySelectorAll('.note-card');
+    if (notes.length === 0) return;
+    if (!confirm(`Remove all ${notes.length} notes?`)) return;
+    notes.forEach(n => n.remove());
+    noteCounter = 0;
+    updateStats();
+    showToast('All notes cleared');
+  }
+
+  function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  async function pasteFromClipboard() {
+    try {
+      const text = await navigator.clipboard.readText();
+      if (text) {
+        noteInput.value = noteInput.value + text;
+        noteInput.focus();
+        showToast(`Pasted ${text.length.toLocaleString()} chars`);
+      } else {
+        showToast('Clipboard is empty');
+      }
+    } catch (err) {
+      showToast('Clipboard access denied — paste manually with Cmd+V');
+    }
+  }
+
+  // Keyboard shortcut: Ctrl/Cmd + Enter to append
+  noteInput.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+      e.preventDefault();
+      appendNote();
+    }
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Journal</title>
+  <!-- <link rel="stylesheet" href="./style.css"> -->
+  <style>
+      
+      /*
+Skeleton v1.2
+Copyright: Dave Gamache
+www.getskeleton.com
+Free to use under the MIT license.
+https://www.opensource.org/licenses/mit-license.php
+Modifications by Mark Hillard
+*/
+
+
+/* Font Family
+================================================== */
+@import url("https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300,400");
+
+
+/* Desktop (960px)
+================================================== */
+.container { position:relative; width:960px; margin:0 auto; padding:0; }
+.container .columns { float:left; display:inline; margin-left:10px; margin-right:10px; }
+.container .twelve.columns { width:700px; }
+.container .offset-by-two { padding-left:120px; }
+
+
+/* Tablet (Portrait)
+================================================== */
+/* Note: Design for a width of 768px */
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+.container { width:768px; }
+.container .columns { margin-left:10px; margin-right:10px; }
+.container .twelve.columns { width:556px; }
+.container .offset-by-two { padding-left:96px; }
+}
+
+
+/* Mobile (Portrait)
+================================================== */
+/* Note: Design for a width of 320px */
+
+@media only screen and (max-width: 767px) {
+.container { width:300px; }
+.container .columns { margin:0; }
+.container .twelve.columns { width:300px; }
+.container .offset-by-two { padding-left:0; }
+}
+
+
+/* Mobile (Landscape)
+================================================== */
+/* Note: Design for a width of 480px */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.container { width:420px; }
+.container .columns { margin:0; }
+.container .twelve.columns { width:420px; }
+}
+
+
+/* Self Clearing Goodness
+================================================== */
+.container:after {
+clear:both;
+content:"\0020";
+display:block;
+height:0;
+visibility:hidden;
+}
+
+
+/* CSS Reset
+================================================== */
+html,body,div,span,h1,h6,p,a,ul,li,audio {
+border:0;
+font:inherit;
+font-size:100%;
+margin:0;
+padding:0;
+vertical-align:baseline;
+}
+
+body { line-height:1; }
+ul { list-style:none; }
+
+
+/* Basic Styles
+================================================== */
+html,body {
+-webkit-font-smoothing:antialiased;
+-webkit-text-size-adjust:100%;
+background-color:#111;
+color:#C8C7C8;
+font:20px/24px "Yanone Kaffeesatz", HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-weight:300;
+padding:5px 0;
+}
+
+
+/* Typography
+================================================== */
+h1,h6,p { color:#808080; font-weight:400; }
+h1 { font-size:42px; line-height:44px; margin:20px 0 0; }
+h6 { font-size:18px; line-height:20px; margin:4px 0 20px; }
+p { font-size:18px; line-height:20px; margin:0 0 2px; }
+
+
+/* Links
+================================================== */
+a,a:visited { color:#ddd; outline:0; text-decoration:underline; }
+a:hover,a:focus { color:#bbb; }
+p a,p a:visited { line-height:inherit; }
+
+
+/* Misc.
+================================================== */
+.add-bottom { margin-bottom:20px !important; }
+.left { float:left; }
+.right { float:right; }
+.center { text-align:center; }
+
+
+/* Custom Styles
+================================================== */
+
+/* CSS Transitions */
+* {
+-moz-transition:all 100ms ease;
+-o-transition:all 100ms ease;
+-webkit-transition:all 100ms ease;
+transition:all 100ms ease;
+}
+
+/* Highlight Styles */
+::selection { background-color:#262223; color:#444; }
+::-moz-selection { background-color:#262223; color:#444; }
+
+
+
+
+/* Audio Player Styles
+================================================== */
+
+/* Default - Firefox */
+audio { margin:0 15px 0 14px; width:670px; }
+#mainwrap { /* add box-shadow or other styles here */ }
+#audiowrap { background-color:#231F20; margin:0 auto; }
+#plwrap { margin:0 auto; }
+#tracks { min-height:65px; position:relative; text-align:center; text-decoration:none; top:13px; }
+#nowPlay { display:inline; }
+#npTitle { margin:0; padding:21px; text-align:right; }
+#npAction { padding:21px; position:absolute; }
+#plList { margin:0; }
+#plList li { background-color:#231F20; cursor:pointer; margin:0; padding:21px 0; }
+#plList li:hover { background-color:#262223; }
+.plItem { position:relative; }
+.plTitle { left:50px; overflow:hidden; position:absolute; right:65px; text-overflow:ellipsis; top:0; white-space:nowrap; }
+.plNum { padding-left:21px; width:25px; }
+.plLength { padding-left:21px; position:absolute; right:21px; top:0; }
+.plSel,.plSel:hover { background-color:#262223!important; cursor:default!important; }
+a[id^="btn"] { background-color:#231F20; color:#C8C7C8; cursor:pointer; font-size:50px; margin:0; padding:0 27px 11px; text-decoration:none; }
+a[id^="btn"]:last-child { margin-left:-4px; }
+a[id^="btn"]:hover,a[id^=btn]:active { background-color:#262223; }
+a[id^="btn"]::-moz-focus-inner { border:0; padding:0; }
+
+/* IE 9 */
+html[data-useragent*="MSIE 9.0"] audio { margin-left:9px; outline:none; width:680px; }
+html[data-useragent*="MSIE 9.0"] #audiowrap { background-color:#000; }
+html[data-useragent*="MSIE 9.0"] #tracks { min-height:57px; top:5px; }
+html[data-useragent*="MSIE 9.0"] a[id^="btn"] { background-color:#000; }
+html[data-useragent*="MSIE 9.0"] a[id^="btn"]:hover { background-color:#080808; }
+html[data-useragent*="MSIE 9.0"] #plList li { background-color:#000; }
+html[data-useragent*="MSIE 9.0"] #plList li:hover { background-color:#080808; }
+html[data-useragent*="MSIE 9.0"] .plSel,
+html[data-useragent*="MSIE 9.0"] .plSel:hover { background-color:#080808!important; }
+
+/* IE 10 */
+html[data-useragent*="MSIE 10.0"] audio { margin-left:6px; width:687px; }
+html[data-useragent*="MSIE 10.0"] #audiowrap { background-color:#000; }
+html[data-useragent*="MSIE 10.0"] #tracks { min-height:60px; top:8px; }
+html[data-useragent*="MSIE 10.0"] a[id^="btn"] { background-color:#000; }
+html[data-useragent*="MSIE 10.0"] a[id^="btn"]:hover { background-color:#080808; }
+html[data-useragent*="MSIE 10.0"] #plList li { background-color:#000; }
+html[data-useragent*="MSIE 10.0"] #plList li:hover { background-color:#080808; }
+html[data-useragent*="MSIE 10.0"] .plSel,
+html[data-useragent*="MSIE 10.0"] .plSel:hover { background-color:#080808!important; }
+
+/* IE 11 */
+html[data-useragent*="rv:11.0"] audio { margin-left:2px; width:695px; }
+html[data-useragent*="rv:11.0"] #audiowrap { background-color:#000; }
+html[data-useragent*="rv:11.0"] #tracks { min-height:60px; top:8px; }
+html[data-useragent*="rv:11.0"] a[id^="btn"] { background-color:#000; }
+html[data-useragent*="rv:11.0"] a[id^="btn"]:hover { background-color:#080808; }
+html[data-useragent*="rv:11.0"] #plList li { background-color:#000; }
+html[data-useragent*="rv:11.0"] #plList li:hover { background-color:#080808; }
+html[data-useragent*="rv:11.0"] .plSel,
+html[data-useragent*="rv:11.0"] .plSel:hover { background-color:#080808!important; }
+
+/* All Apple Products */
+html[data-useragent*="Apple"] audio { margin:0; width:100%; }
+html[data-useragent*="Apple"] #audiowrap { background-color:#000; }
+html[data-useragent*="Apple"] #tracks { min-height:64px; top:12px; }
+html[data-useragent*="Apple"] a[id^="btn"] { background-color:#000; }
+html[data-useragent*="Apple"] a[id^="btn"]:hover { background-color:#080808; }
+html[data-useragent*="Apple"] #plList li { background-color:#000; }
+html[data-useragent*="Apple"] #plList li:hover { background-color:#080808; }
+html[data-useragent*="Apple"] .plSel,
+html[data-useragent*="Apple"] .plSel:hover { background-color:#080808!important; }
+
+/* IOS 7 */
+html[data-useragent*="OS 7"] body { color:#373837; }
+html[data-useragent*="OS 7"] audio { margin-left:3px; width:690px; }
+html[data-useragent*="OS 7"] #audiowrap { background-color:#e6e6e6; }
+html[data-useragent*="OS 7"] #tracks { min-height:75px; top:23px; }
+html[data-useragent*="OS 7"] a[id^="btn"] { background-color:#e6e6e6; color:#373837; }
+html[data-useragent*="OS 7"] a[id^="btn"]:hover { background-color:#eee; }
+html[data-useragent*="OS 7"] #plList li { background-color:#e6e6e6; }
+html[data-useragent*="OS 7"] #plList li:hover { background-color:#eee; }
+html[data-useragent*="OS 7"] .plSel,
+html[data-useragent*="OS 7"] .plSel:hover { background-color:#eee!important; }
+
+/* Chrome */
+html[data-useragent*="Chrome"] audio { margin-left:6px; width:687px; }
+html[data-useragent*="Chrome"] #tracks { min-height:64px; top:12px; }
+html[data-useragent*="Chrome"] #audiowrap { background-color:#131313; }
+html[data-useragent*="Chrome"] a[id^="btn"] { background-color:#131313; }
+html[data-useragent*="Chrome"] a[id^="btn"]:hover { background-color:#161616; }
+html[data-useragent*="Chrome"] #plList li { background-color:#131313; }
+html[data-useragent*="Chrome"] #plList li:hover { background-color:#161616; }
+html[data-useragent*="Chrome"] .plSel,
+html[data-useragent*="Chrome"] .plSel:hover { background-color:#161616!important; }
+
+/* Chrome / Android / Tablet */
+html[data-useragent*="Chrome"][data-useragent*="Android"] audio { margin-left:5px; width:682px; }
+
+
+/* Media Queries (Screen Width)
+================================================== */
+
+/* Tablet Portrait to Desktop (960px) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+audio { width:526px; }
+html[data-useragent*="MSIE 9.0"] audio { width:536px; }
+html[data-useragent*="MSIE 10.0"] audio { width:543px; }
+html[data-useragent*="rv:11.0"] audio { width:551px; }
+html[data-useragent*="OS 7"] audio { width:546px; }
+html[data-useragent*="Chrome"] audio { width:543px; }
+html[data-useragent*="Chrome"][data-useragent*="Android"] audio { margin-left:5px; width:538px; }
+}
+
+/* Mobile Landscape to Tablet Portrait */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+audio { width:390px; }
+html[data-useragent*="MSIE 9.0"] audio { width:400px; }
+html[data-useragent*="MSIE 10.0"] audio { width:407px; }
+html[data-useragent*="rv:11.0"] audio { width:415px; }
+html[data-useragent*="OS 7"] audio { width:410px; }
+html[data-useragent*="Chrome"] audio { width:407px; }
+html[data-useragent*="Chrome"][data-useragent*="Mobile"] audio { margin-left:5px; width:403px; }
+#npTitle { width:245px; }
+}
+
+/* Mobile Portrait to Mobile Landscape */
+@media only screen and (max-width: 479px) {
+audio { width:270px; }
+html[data-useragent*="MSIE 9.0"] audio { width:280px; }
+html[data-useragent*="MSIE 10.0"] audio { width:287px; }
+html[data-useragent*="rv:11.0"] audio { width:295px; }
+html[data-useragent*="OS 7"] audio { width:290px; }
+html[data-useragent*="Chrome"] audio { width:287px; }
+html[data-useragent*="Chrome"][data-useragent*="Mobile"] audio { margin-left:5px; width:283px; }
+#npTitle { width:167px; }
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    background: var(--background-color-alt);
+    border-bottom: 1px solid var(--trim-color);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.header__logo {
+    height: 100%;
+}
+
+.header__button {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.header > *:not(:last-child) {
+    margin-right: 10px;
+}
+
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+select option {
+  margin: 40px;
+   color: var(--text-color);
+    font-family: var(--font-family);
+    background: var(--background-color);
+}
+
+select {
+   color: var(--text-color);
+    font-family: var(--font-family);
+    background: var(--background-color);
+  
+}
+
+.select {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 8px;
+    border-radius: 10px;
+}
+
+.select__input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 7px 14px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    font-weight: 500;
+    font-family: var(--font-family);
+}
+
+.select__input option {
+    color: #000000;
+}
+
+/* Drag Drop Zone Styles */
+.drag-drop-zone {
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    margin: 1rem 0;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+    cursor: pointer;
+}
+
+.drag-drop-zone.drag-over {
+    border-color: #3B82F6;
+    background-color: #f0f9ff;
+}
+
+.drag-drop-zone p {
+    margin: 0 0 1rem 0;
+    color: #666;
+}
+
+.drag-drop-button {
+    background-color: #3B82F6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+.drag-drop-button:hover {
+    background-color: #2563EB;
+}
+
+/* Timer buttons */
+.timer-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.timer-button {
+    background-color: #3B82F6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    min-width: 70px;
+}
+
+.timer-button:hover {
+    background-color: #2563EB;
+}
+
+.timer-button.active {
+    background-color: #EF4444;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.timer-status {
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: #666;
+    background-color: #fff3cd;
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin: 0.5rem 0;
+    text-align: center;
+    display: none;
+    white-space: pre-line;
+}
+
+/* Loop Switch */
+.loop-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 1rem 0;
+}
+
+.loop-label {
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ddd;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+input:checked + .slider {
+    background-color: #4CAF50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Keycode display */
+.keycode-display {
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: #666;
+    background-color: #f5f5f5;
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    text-align: center;
+}
+  </style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!--begin main layout-->
+<header class="header">
+  <p></p>
+  <div class="select">
+    <i class="material-icons">palette</i>
+    <select class="select__input" id="selTheme">
+      <option value="auto">#'s</option>
+    </select>
+  </div>
+</header>
+<div class="container"></div>
+<div class="container">
+  <div class="twelve columns offset-by-two">
+    <h6 class="center">HTML5 Audio Player w/ responsive playlist 
+      <a href="https://codepen.io/jlquaccia/pen/regyxZ" target="_blank">https://codepen.io/jlquaccia/pen/regyxZ</a>
+    </h6>
+    <div id="tracks">
+      <button id="btnPrev">&laquo;</button>
+      <button id="btnNext">&raquo;</button>
+    </div>
+    <div class="drag-drop-zone" id="dragDropZone">
+      <p>🎵 Drag and drop .mp3 files here or click to select</p>
+      <input type="file" id="audio_file" accept="audio/*" multiple style="display: none;" />
+      <button class="drag-drop-button" onclick="document.getElementById('audio_file').click()">Select Audio Files</button>
+    </div>
+    <p class="center">
+      <input type="text" id="text" style="color:black"/>
+      <input type="button" id="btn_3" value="Submit(or reset with 0)" />
+    </p>
+    
+    <!-- Timer Buttons -->
+    <div class="timer-buttons">
+      <button class="timer-button" data-minutes="5">5 min</button>
+      <button class="timer-button" data-minutes="10">10 min</button>
+      <button class="timer-button" data-minutes="15">15 min</button>
+      <button class="timer-button" data-minutes="20">20 min</button>
+      <button class="timer-button" data-minutes="25">25 min</button>
+    </div>
+    
+    <!-- Loop Control -->
+    <div class="loop-control">
+      <span class="loop-label">Loop Current Track:</span>
+      <label class="switch">
+        <input type="checkbox" id="loopToggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="timer-status" id="timerStatus">
+      Timer will pause music in: 00:00
+    </div>
+    
+    <div class="keycode-display" id="keyCodeDisplay">
+      Press 0-9 to play track number, arrows to navigate, tilde (~) to toggle play/pause
+    </div>
+  </div>
+  <div class="twelve columns offset-by-two add-bottom">
+    <div id="mainwrap">
+      <div id="nowPlay">
+        <span class="left" id="npAction">Paused... - Tilde to Toggle</span>
+        <span class="right" id="npTitle"></span>
+      </div>
+      <div id="audiowrap">
+        <div id="audio0">
+          <audio preload id="audio1" controls="controls">Your browser does not support HTML5 Audio!</audio>
+        </div>
+      </div>
+      <div id="plwrap">
+        <ul id="plList"></ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end main layout-->
+<!-- partial -->
+<script src='https://api.html5media.info/1.1.6/html5media.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+<script>
+  var b = document.documentElement;
+  b.setAttribute('data-useragent', navigator.userAgent);
+  b.setAttribute('data-platform', navigator.platform);
+
+  // State for row number input with timeout
+  var trackNumberInput = '';
+  var trackInputTimeoutRef = null;
+  
+  // Timer functionality variables
+  var timerInterval = null;
+  var timerTimeout = null;
+  var timerEndTime = null;
+  var currentTimerButton = null;
+  
+  // Loop functionality
+  var isLoopEnabled = false;
+  
+  var supportsAudio = !!document.createElement('audio').canPlayType;
+  if (supportsAudio) {
+    var index = 0,
+        playing = false,
+        extension = '',
+        tracks = [],
+        npAction = $('#npAction'),
+        npTitle = $('#npTitle'),
+        audio = $('#audio1').bind('play', function () {
+          playing = true;
+          npAction.text('Now Playing... - Tilde to Toggle');
+        }).bind('pause', function () {
+          playing = false;
+          npAction.text('Paused... - Tilde to Toggle');
+        }).bind('ended', function () {
+          npAction.text('Paused... - Tilde to Toggle');
+          if (isLoopEnabled) {
+            // If loop is enabled, replay the current track
+            audio.currentTime = 0;
+            audio.play();
+          } else if ((index + 1) < tracks.length) {
+            index++;
+            loadTrack(index);
+            audio.play();
+          } else {
+            audio.pause();
+            index = 0;
+            loadTrack(index);
+          }
+        }).get(0),
+        btnPrev = $('#btnPrev').click(function () {
+          if ((index - 1) > -1) {
+            index--;
+            loadTrack(index);
+            if (playing) {
+              audio.play();
+            }
+          } else {
+            audio.pause();
+            index = 0;
+            loadTrack(index);
+          }
+        }),
+        btnNext = $('#btnNext').click(function () {
+          if ((index + 1) < tracks.length) {
+            index++;
+            loadTrack(index);
+            if (playing) {
+              audio.play();
+            }
+          } else {
+            audio.pause();
+            index = 0;
+            loadTrack(index);
+          }
+        }),
+        li = $('#plList').on('click', 'li', function () {
+          var id = parseInt($(this).index());
+          if (id !== index) {
+            playTrack(id);
+          }
+        }),
+        loadTrack = function (id) {
+          $('.plSel').removeClass('plSel');
+          $('#plList li:eq(' + id + ')').addClass('plSel');
+          npTitle.text(tracks[id].name);
+          index = id;
+          audio.src = tracks[id].website;
+        },
+        playTrack = function (id) {
+          loadTrack(id);
+          audio.play();
+        };
+    
+    extension = audio.canPlayType('audio/mpeg') ? '.mp3' : audio.canPlayType('audio/ogg') ? '.ogg' : '';
+
+    // Initialize drag and drop functionality
+    initializeDragDrop();
+    
+    // Initialize timer functionality
+    initializeTimerButtons();
+    
+    // Initialize loop functionality
+    initializeLoopToggle();
+    
+    // Load initial message
+    if (tracks.length === 0) {
+      npTitle.text('No audio files loaded - drag and drop MP3 files above');
+      npAction.text('Waiting for files...');
+    }
+  }
+
+  var increment_ = 0;
+
+  $(document).on("keydown", function (e) {
+    // Update keycode display
+    const keyCodeDisplay = document.getElementById('keyCodeDisplay');
+    if (keyCodeDisplay) {
+      keyCodeDisplay.textContent = `Key: ${e.key} (${e.keyCode}) | 0-9: play track (multi-digit), arrows: navigate, ~ toggle play/pause`;
+    }
+    
+    if (e.keyCode == 37) { // Left arrow key
+      $("#btnPrev").click();
+      audio.volume = 0.4;
+    } else if (e.keyCode == 39) { // Right arrow key
+      $("#btnNext").click();
+      audio.volume = 0.4;
+    } else if (e.keyCode == 38) { // Up arrow key
+      let thirty_seconds_array = Array.from({ length: Math.ceil(audio1.duration / 30) }, (_, i) => i * 30);
+      increment_ = (increment_ + 1) % parseInt(audio1.duration / 30);
+      audio1.currentTime = thirty_seconds_array[increment_];
+    } else if (e.keyCode == 40) { // Down arrow key
+      let thirty_seconds_array = Array.from({ length: Math.ceil(audio1.duration / 30) }, (_, i) => i * 30);
+      if (increment_ < 0) {
+        increment_ = increment_ + 1;
+      } else {
+        increment_ = (increment_ - 1);
+      }
+      audio1.currentTime = thirty_seconds_array[increment_];
+    } else if (e.keyCode == 192) { // Tilde key (~)
+      if (playing) {
+        audio.pause();
+      } else {
+        audio.play();
+      }
+    } else if (e.key >= '0' && e.key <= '9' && !['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) {
+      e.preventDefault();
+      handleTrackNumberInput(e.key);
+    }
+  });
+
+  document.getElementById('selTheme').addEventListener('change', function () {
+    let val = $("#selTheme").val();
+    if (val === 'bible1') {
+      window.open('https://cdpn.io/Groundedelectron/debug/JjrrQvx', '_blank');
+    }
+    if (val === 'bible2') {
+      window.open('https://cdpn.io/Groundedelectron/debug/NWawMQL', '_blank');
+    }
+    if (val === 'bible3') {
+      window.open('https://cdpn.io/Groundedelectron/debug/poWdZoy', '_blank');
+    } else {
+      console.log('in between');
+    }
+  });
+  
+  // Reset keycode display on page load
+  $(document).ready(function() {
+    const keyCodeDisplay = document.getElementById('keyCodeDisplay');
+    if (keyCodeDisplay) {
+      keyCodeDisplay.textContent = 'Press 0-9 to play track number, arrows to navigate, tilde (~) to toggle play/pause';
+    }
+  });
+
+  var element1 = document.getElementById("mainwrap"); // Grab the element
+  element1.onclick = function () { // Assign a function
+    audio.volume = 0.4;
+  }
+
+  var audio1 = document.querySelector('audio');
+  audio1.addEventListener('play', function () {
+    audio.volume = 0.4;
+  });
+
+  function initializeDragDrop() {
+    const dragDropZone = document.getElementById('dragDropZone');
+    const fileInput = document.getElementById('audio_file');
+    
+    // Click to select files
+    dragDropZone.addEventListener('click', (e) => {
+      if (e.target !== dragDropZone.querySelector('button')) {
+        fileInput.click();
+      }
+    });
+    
+    // File input change - handle multiple files
+    fileInput.addEventListener('change', (e) => {
+      const files = e.target.files;
+      if (files.length > 0) {
+        handleMultipleAudioFiles(files);
+      }
+    });
+    
+    // Drag and drop events
+    dragDropZone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      dragDropZone.classList.add('drag-over');
+    });
+    
+    dragDropZone.addEventListener('dragleave', (e) => {
+      e.preventDefault();
+      dragDropZone.classList.remove('drag-over');
+    });
+    
+    dragDropZone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dragDropZone.classList.remove('drag-over');
+      
+      const files = e.dataTransfer.files;
+      if (files.length > 0) {
+        handleMultipleAudioFiles(files);
+      }
+    });
+  }
+  
+  function handleMultipleAudioFiles(files) {
+    const audioFiles = Array.from(files).filter(file => 
+      file.type.includes('audio') || file.name.toLowerCase().endsWith('.mp3')
+    );
+    
+    if (audioFiles.length === 0) {
+      alert('Please select audio files only (.mp3, .wav, .ogg, etc.)');
+      return;
+    }
+    
+    // Clear existing tracks
+    tracks = [];
+    $('#plList').empty();
+    
+    // Process each audio file
+    audioFiles.forEach((file, index) => {
+      const fileName = file.name.replace(/\.[^/.]+$/, ''); // Remove extension
+      const fileUrl = URL.createObjectURL(file);
+      
+      tracks.push({
+        "track": (index + 1).toString(),
+        "name": fileName,
+        "website": fileUrl,
+        "file": file
+      });
+      
+      $('#plList').append(`
+        <li>
+          <div class="plItem">
+            <div class="plNum">${index + 1}.</div>
+            <div class="plTitle">${fileName}</div>
+          </div>
+        </li>
+      `);
+    });
+    
+    // Load the first track and update the display
+    if (tracks.length > 0) {
+      index = 0;
+      loadTrack(index);
+      npAction.text('Ready to play - click controls or press space');
+      console.log(`Loaded ${tracks.length} audio files`);
+    }
+  }
+  
+  // Function to handle track number selection
+  function handleTrackNumberInput(digit) {
+    // Clear existing timeout first
+    if (trackInputTimeoutRef) {
+      clearTimeout(trackInputTimeoutRef);
+    }
+    
+    // Update the input string
+    trackNumberInput += digit;
+    console.log(`Track input: "${trackNumberInput}" (added digit: ${digit})`);
+    
+    // Update keycode display to show current input
+    const keyCodeDisplay = document.getElementById('keyCodeDisplay');
+    if (keyCodeDisplay) {
+      keyCodeDisplay.textContent = `Entering track number: ${trackNumberInput} (will play in 1.5s)`;
+    }
+    
+    // Set new timeout for 1.5 seconds
+    trackInputTimeoutRef = setTimeout(() => {
+      const trackNumber = parseInt(trackNumberInput);
+      if (trackNumber > 0 && trackNumber <= tracks.length) {
+        const trackIndex = trackNumber - 1; // Convert to 0-based index
+        console.log(`Playing track ${trackNumber}: ${tracks[trackIndex].name}`);
+        playTrack(trackIndex);
+        
+        // Update keycode display
+        if (keyCodeDisplay) {
+          keyCodeDisplay.textContent = `Playing track ${trackNumber}: ${tracks[trackIndex].name}`;
+        }
+      } else {
+        console.warn(`Invalid track number: ${trackNumber}. Valid range: 1-${tracks.length}`);
+        if (keyCodeDisplay) {
+          keyCodeDisplay.textContent = `Invalid track number: ${trackNumber}. Valid range: 1-${tracks.length}`;
+        }
+      }
+      // Reset the input after processing
+      trackNumberInput = '';
+      
+      // Reset display after 3 seconds
+      setTimeout(() => {
+        if (keyCodeDisplay) {
+          keyCodeDisplay.textContent = 'Press 0-9 to play track number, arrows to navigate, tilde (~) to toggle play/pause';
+        }
+      }, 3000);
+    }, 1500);
+  }
+  
+  // Timer functionality
+  function initializeTimerButtons() {
+    const timerButtons = document.querySelectorAll('.timer-button');
+    const timerStatus = document.getElementById('timerStatus');
+    
+    timerButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const minutes = parseInt(this.dataset.minutes);
+        
+        // If this timer is already active, cancel it
+        if (this.classList.contains('active')) {
+          cancelTimer();
+          return;
+        }
+        
+        // Cancel any existing timer
+        cancelTimer();
+        
+        // Start new timer
+        startTimer(minutes, this);
+      });
+    });
+  }
+  
+  function startTimer(minutes, buttonElement) {
+    const milliseconds = minutes * 60 * 1000;
+    const timerStatus = document.getElementById('timerStatus');
+    const audio1Element = document.getElementById('audio1');
+    
+    // Set the end time
+    timerEndTime = Date.now() + milliseconds;
+    currentTimerButton = buttonElement;
+    
+    // Mark button as active
+    buttonElement.classList.add('active');
+    buttonElement.textContent = `${minutes}min (Active)`;
+    
+    // Show and update timer status
+    timerStatus.style.display = 'block';
+    
+    // Update countdown every second
+    timerInterval = setInterval(updateTimerDisplay, 1000);
+    
+    // Start the pause/play cycle immediately
+    startPausePlayCycle(audio1Element);
+    
+    // Set timeout to stop the timer when duration expires
+    timerTimeout = setTimeout(() => {
+      console.log(`Timer expired after ${minutes} minutes`);
+      cancelTimer();
+    }, milliseconds);
+    
+    console.log(`Timer started for ${minutes} minutes, will mute/unmute audio1 element every 7 seconds`);
+  }
+  
+  // Variable to track the pause/play cycle
+  var pausePlayCycleInterval = null;
+  
+  function startPausePlayCycle(audio1Element) {
+    // Stop any existing cycle
+    if (pausePlayCycleInterval) {
+      clearInterval(pausePlayCycleInterval);
+    }
+    
+    // Start the cycle: mute for 7 seconds, then unmute for 7 seconds, repeat
+    pausePlayCycleInterval = setInterval(() => {
+      if (audio1Element) {
+        if (audio1Element.muted) {
+          // If muted, unmute it
+          audio1Element.muted = false;
+          console.log('Audio unmuted');
+          updateTimerStatusWithCycle('Playing');
+        } else {
+          // If unmuted, mute it
+          audio1Element.muted = true;
+          console.log('Audio muted');
+          updateTimerStatusWithCycle('Muted');
+        }
+      }
+    }, 7000); // Every 7 seconds
+  }
+  
+  function updateTimerStatusWithCycle(state) {
+    const timerStatus = document.getElementById('timerStatus');
+    if (timerStatus && timerEndTime) {
+      const remainingTime = timerEndTime - Date.now();
+      if (remainingTime > 0) {
+        const minutes = Math.floor(remainingTime / 60000);
+        const seconds = Math.floor((remainingTime % 60000) / 1000);
+        timerStatus.textContent = `Timer: ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')} - ${state} (cycles every 7s)`;
+        timerStatus.style.backgroundColor = state === 'Muted' ? '#f8d7da' : '#d4edda';
+      }
+    }
+  }
+  
+  function updateTimerDisplay() {
+    const timerStatus = document.getElementById('timerStatus');
+    const remainingTime = timerEndTime - Date.now();
+    
+    if (remainingTime <= 0) {
+      return; // Let the timeout handler deal with expiration
+    }
+    
+    const minutes = Math.floor(remainingTime / 60000);
+    const seconds = Math.floor((remainingTime % 60000) / 1000);
+    
+    // Calculate end time
+    const endTime = new Date(timerEndTime);
+    const endTimeString = endTime.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+    
+    timerStatus.textContent = `Timer will pause music in: ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}\nTimer will go until: ${endTimeString}`;
+  }
+  
+  function cancelTimer() {
+    // Clear intervals and timeouts
+    if (timerInterval) {
+      clearInterval(timerInterval);
+      timerInterval = null;
+    }
+    
+    if (timerTimeout) {
+      clearTimeout(timerTimeout);
+      timerTimeout = null;
+    }
+    
+    // Stop the pause/play cycle
+    if (pausePlayCycleInterval) {
+      clearInterval(pausePlayCycleInterval);
+      pausePlayCycleInterval = null;
+    }
+    
+    // Reset button state
+    if (currentTimerButton) {
+      currentTimerButton.classList.remove('active');
+      const minutes = currentTimerButton.dataset.minutes;
+      currentTimerButton.textContent = `${minutes} min`;
+      currentTimerButton = null;
+    }
+    
+    // Hide timer status
+    const timerStatus = document.getElementById('timerStatus');
+    timerStatus.style.display = 'none';
+    timerStatus.style.backgroundColor = '#fff3cd'; // Reset background color
+    
+    timerEndTime = null;
+    
+    console.log('Timer cancelled');
+  }
+  
+  // Loop functionality
+  function initializeLoopToggle() {
+    const loopToggle = document.getElementById('loopToggle');
+    
+    loopToggle.addEventListener('change', function() {
+      isLoopEnabled = this.checked;
+      console.log('Loop is:', isLoopEnabled ? 'ON' : 'OFF');
+      
+      // Update the audio element's loop property as well
+      const audio1Element = document.getElementById('audio1');
+      if (audio1Element) {
+        audio1Element.loop = isLoopEnabled;
+      }
+    });
+  }
+</script>
+</body>
+</html>

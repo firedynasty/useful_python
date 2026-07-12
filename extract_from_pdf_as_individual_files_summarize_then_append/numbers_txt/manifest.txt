@@ -1,0 +1,40 @@
+# MHC Extraction Manifest
+# Use this to track summarization progress
+
+Numbers Ch.0: ./numbers_txt/04_Numbers/ch000.txt
+Numbers Ch.1: ./numbers_txt/04_Numbers/ch001.txt
+Numbers Ch.2: ./numbers_txt/04_Numbers/ch002.txt
+Numbers Ch.3: ./numbers_txt/04_Numbers/ch003.txt
+Numbers Ch.4: ./numbers_txt/04_Numbers/ch004.txt
+Numbers Ch.5: ./numbers_txt/04_Numbers/ch005.txt
+Numbers Ch.6: ./numbers_txt/04_Numbers/ch006.txt
+Numbers Ch.7: ./numbers_txt/04_Numbers/ch007.txt
+Numbers Ch.8: ./numbers_txt/04_Numbers/ch008.txt
+Numbers Ch.9: ./numbers_txt/04_Numbers/ch009.txt
+Numbers Ch.10: ./numbers_txt/04_Numbers/ch010.txt
+Numbers Ch.11: ./numbers_txt/04_Numbers/ch011.txt
+Numbers Ch.12: ./numbers_txt/04_Numbers/ch012.txt
+Numbers Ch.13: ./numbers_txt/04_Numbers/ch013.txt
+Numbers Ch.14: ./numbers_txt/04_Numbers/ch014.txt
+Numbers Ch.15: ./numbers_txt/04_Numbers/ch015.txt
+Numbers Ch.16: ./numbers_txt/04_Numbers/ch016.txt
+Numbers Ch.17: ./numbers_txt/04_Numbers/ch017.txt
+Numbers Ch.18: ./numbers_txt/04_Numbers/ch018.txt
+Numbers Ch.19: ./numbers_txt/04_Numbers/ch019.txt
+Numbers Ch.20: ./numbers_txt/04_Numbers/ch020.txt
+Numbers Ch.21: ./numbers_txt/04_Numbers/ch021.txt
+Numbers Ch.22: ./numbers_txt/04_Numbers/ch022.txt
+Numbers Ch.23: ./numbers_txt/04_Numbers/ch023.txt
+Numbers Ch.24: ./numbers_txt/04_Numbers/ch024.txt
+Numbers Ch.25: ./numbers_txt/04_Numbers/ch025.txt
+Numbers Ch.26: ./numbers_txt/04_Numbers/ch026.txt
+Numbers Ch.27: ./numbers_txt/04_Numbers/ch027.txt
+Numbers Ch.28: ./numbers_txt/04_Numbers/ch028.txt
+Numbers Ch.29: ./numbers_txt/04_Numbers/ch029.txt
+Numbers Ch.30: ./numbers_txt/04_Numbers/ch030.txt
+Numbers Ch.31: ./numbers_txt/04_Numbers/ch031.txt
+Numbers Ch.32: ./numbers_txt/04_Numbers/ch032.txt
+Numbers Ch.33: ./numbers_txt/04_Numbers/ch033.txt
+Numbers Ch.34: ./numbers_txt/04_Numbers/ch034.txt
+Numbers Ch.35: ./numbers_txt/04_Numbers/ch035.txt
+Numbers Ch.36: ./numbers_txt/04_Numbers/ch036.txt

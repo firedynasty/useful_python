@@ -1,0 +1,29 @@
+How to Convert an Outline to XMind
+====================================
+
+1. Write your outline in a .md or .txt file using numbered indentation:
+
+   Example (use 3 spaces per indent level):
+
+   1. getting a job
+      1. requires patience
+   2. get your resume ready
+      1. use resume.io
+   3. talk to people go to events
+      1. that will expand network
+         1. networking get people's business card
+
+2. Run the converter:
+
+   python md_to_xmind.py your_outline.md
+
+3. Optional flags:
+
+   -t "Title"    Set the central topic title (default: filename)
+   -o out.xmind  Set custom output filename (default: same as input)
+
+   Examples:
+   python md_to_xmind.py sample_outline.md -t "Career Planning"
+   python md_to_xmind.py notes.txt -o my_mindmap.xmind
+
+4. Open the generated .xmind file in XMind software.

@@ -1,0 +1,41 @@
+summarize this Business Insider article:
+
+Title: The gray area at the center of Microsoft's battle with OpenAI
+URL: https://www.businessinsider.com/inside-the-battle-over-microsofts-access-to-openais-technology-2025-7
+Author: Ashley Stewart
+Published: July 01, 2025 at 05:49 PM UTC
+Type: EXCLUSIVE
+Description: Insiders say Microsoft's access to OpenAI's tech is central to ongoing talks because what OpenAI is required to share, and when, can be a gray area.
+
+==================================================
+
+The future of the most important partnership in technology depends on 's access to the artificial intelligence powering .
+When OpenAI in May 2024, allowing users to talk to its AI just like a person, it looked as if the company did so in lock-step with its partner and investor, Microsoft. Soon after OpenAI demoed this voice capability for its new GPT-4o model, Microsoft CEO Satya Nadella included it in developer conference.
+Behind the scenes, Microsoft had little knowledge of the feature until days before the demo, people involved in the matter told Business Insider.
+While gives Microsoft access to OpenAI's technology, exactly what OpenAI has to share — and when — is sometimes a gray area.
+In this case, Microsoft had access to frequent updates of the core model at the time, but not the voice technology OpenAI built on top of it. Microsoft found out about the demo, and pressured OpenAI executives, including then-technology boss to get access to the code so Microsoft could do its own announcement, the people said. The company did not want to appear flat-footed to investors, to whom the company has to justify its in OpenAI, they said.
+The example illustrates the ongoing complexity of Microsoft's relationship with OpenAI, and why access to the AI startup's technology is a core issue as the companies renegotiate their agreement.
+OpenAI needs Microsoft's blessing for a . To get that, OpenAI may need to convince Microsoft to change or give up some pretty sweet terms: Microsoft has access to much of OpenAI's technology, exclusive rights to sell it on Azure, first right of refusal to provide computing resources, and a revenue-sharing agreement worth billions of dollars.
+Lots of thorny details about points of contention in the negotiations have made recent headlines — a looming, existential clause OpenAI could activate to cut off Microsoft's access, a "nuclear option" reportedly considered by , and .
+In response to those reports, Microsoft and OpenAI released a joint statement saying, "Talks are ongoing and we are optimistic we will continue to build together for years to come."
+People close to Microsoft's side of the negotiating talks tell BI the software giant is unlikely to walk away because it is deeply reliant on OpenAI's intellectual property, and the negotiations are an opportunity to improve and expand its access to this technology.
+##  Related stories 
+###  Business Insider tells the innovative stories you want to know
+###  Business Insider tells the innovative stories you want to know
+## It's all about IP
+Microsoft has significantly benefited from its arrangement to access the rights to OpenAI's intellectual property, both by selling it to customers and creating its own products using OpenAI's technology, . There are limits, however, to what the companies consider "IP."
+For example, Microsoft gets access to important aspects of OpenAI's models, like model weights that help determine AI outputs and inference codes that instruct the models on how to use data, the people said. Some things are excluded from what the companies consider IP, like product and user interface information, they said, and the point at which OpenAI must share any technology is up to interpretation.
+One person with knowledge of OpenAI's operations said the company doesn't have to share what it's developing until it's finished, which can be subjective.
+"You can make sure you share something with Microsoft as late as possible, so they can still simultaneously announce, but make it really difficult to build the same product on top of it," the person said.
+Plus, having access to the IP isn't the same as knowing how to use it. This has been harder than expected, several people told BI. OpenAI has grown frustrated with Microsoft's request to spell out the technology to its employees, people with knowledge of both companies said. Sometimes, Microsoft doesn't know what questions to ask of OpenAI.
+Microsoft and hired Mustafa Suleyman, the former Inflection CEO who cofounded the AI pioneer DeepMind, to run it. The hiring was meant as a hedge against OpenAI, after Nadella following instability at its partner startup and CEO Sam Altman's However, little has come of that in terms of replacing Microsoft's need for its partnership with OpenAI, the people said.
+Suleyman has completely rebuilt Microsoft's Copilot app. That effort has yet to achieve much growth for Copilot. His team is focused on building smaller models and has seen success with post-training existing models for new purposes, one of the people said. Overall, Microsoft isn't trying to build frontier models like those that would compete with GPT, and is instead putting resources toward OpenAI, they said.
+## Microsoft is less worried about AGI, antitrust, Windsurf, or SoftBank
+Other points of contention that have made recent headlines are of less concern to Microsoft, the people with knowledge of Microsoft's position said.
+Included in the agreement is a clause that would allow OpenAI to declare what's called artificial general intelligence or "AGI," and cut off Microsoft's access to OpenAI's IP and profits. as "a highly autonomous system that outperforms humans at most economically valuable works."
+While OpenAI could declare AGI, the concept is so open to interpretation that Microsoft could sue and easily tie the company up in a legal battle for years, the people said. There's another version of the clause, "sufficient AGI," that OpenAI could declare when it builds a technology capable of achieving a certain level of profits, but Microsoft has to sign off on that.
+Another apparent sticking point in the negotiations has centered on OpenAI's desire to acquire AI coding assistant startup Windsurf. Under the current agreement, that would . Microsoft has said it would agree to the acquisition, but Windsurf's CEO doesn't want the company's technology to be shared with Microsoft, one of the people said.
+While GitHub Copilot faces increasing competition from other AI coding assistants, access to Windsurf's technology is not a big desire for Microsoft, and the company might consider a carve-out of Windsurf IP in a new deal, the person said.
+OpenAI executives have . Microsoft is largely unconcerned about this, two of the people said. The existing deal was investigated by antitrust regulators, including the European Union and the United Kingdom's Competition and Markets Authority.
+OpenAI's desire to restructure is in part motivated by a deadline from investor SoftBank that risks a percentage of funding if OpenAI can't close such a deal by the end of the year. OpenAI has . SoftBank has a reputation for taking risks with its funding, and its CEO is keen on OpenAI, so some observers doubt SoftBank will follow through on its deadline to revoke funding if a new deal isn't reached.
+_Have a tip? Contact this reporter via email at_ _or Signal at +1-425-344-8242. Use a personal email address and a nonwork device;._

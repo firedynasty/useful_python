@@ -1,0 +1,25 @@
+# MHC Extraction Manifest
+# Use this to track summarization progress
+
+Judges Ch.0: ./judges_txt/07_Judges/ch000.txt
+Judges Ch.1: ./judges_txt/07_Judges/ch001.txt
+Judges Ch.2: ./judges_txt/07_Judges/ch002.txt
+Judges Ch.3: ./judges_txt/07_Judges/ch003.txt
+Judges Ch.4: ./judges_txt/07_Judges/ch004.txt
+Judges Ch.5: ./judges_txt/07_Judges/ch005.txt
+Judges Ch.6: ./judges_txt/07_Judges/ch006.txt
+Judges Ch.7: ./judges_txt/07_Judges/ch007.txt
+Judges Ch.8: ./judges_txt/07_Judges/ch008.txt
+Judges Ch.9: ./judges_txt/07_Judges/ch009.txt
+Judges Ch.10: ./judges_txt/07_Judges/ch010.txt
+Judges Ch.11: ./judges_txt/07_Judges/ch011.txt
+Judges Ch.12: ./judges_txt/07_Judges/ch012.txt
+Judges Ch.13: ./judges_txt/07_Judges/ch013.txt
+Judges Ch.14: ./judges_txt/07_Judges/ch014.txt
+Judges Ch.15: ./judges_txt/07_Judges/ch015.txt
+Judges Ch.16: ./judges_txt/07_Judges/ch016.txt
+Judges Ch.17: ./judges_txt/07_Judges/ch017.txt
+Judges Ch.18: ./judges_txt/07_Judges/ch018.txt
+Judges Ch.19: ./judges_txt/07_Judges/ch019.txt
+Judges Ch.20: ./judges_txt/07_Judges/ch020.txt
+Judges Ch.21: ./judges_txt/07_Judges/ch021.txt

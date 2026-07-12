@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmap-content xmlns="urn:xmind:xmap:xmlns:content:2.0" version="2.0">
+    <sheet id="sheet1" theme="theme1">
+        <topic id="root" structure-class="org.xmind.ui.map">
+            <title>Development & Testing</title>
+            <children>
+                <topics type="attached">
+                    <topic id="topic1">
+                        <title>Frontend & Backend</title>
+                        <children>
+                            <topics type="attached">
+                                <topic id="topic1-1">
+                                    <title>HTML & CSS</title>
+                                </topic>
+                                <topic id="topic1-2">
+                                    <title>JavaScript & TypeScript</title>
+                                </topic>
+                            </topics>
+                        </children>
+                    </topic>
+                    <topic id="topic2">
+                        <title>Testing & QA</title>
+                        <children>
+                            <topics type="attached">
+                                <topic id="topic2-1">
+                                    <title>Unit & Integration Tests</title>
+                                </topic>
+                            </topics>
+                        </children>
+                    </topic>
+                </topics>
+            </children>
+        </topic>
+    </sheet>
+</xmap-content>

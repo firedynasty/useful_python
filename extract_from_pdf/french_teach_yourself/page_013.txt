@@ -1,0 +1,5 @@
+I can see this is a table of contents page from what appears to be a French learning textbook. However, this page only contains English chapter titles and page numbers - there are no French vocabulary words or phrases with English translations provided on this contents page.
+
+The page mentions French authors like Zola, Flaubert, Balzac, Victor Hugo, Voltaire, and Rousseau, but these are proper names, not vocabulary with translations.
+
+Since there are no French vocabulary words with English translations on this table of contents page, I will output nothing as per the rules.

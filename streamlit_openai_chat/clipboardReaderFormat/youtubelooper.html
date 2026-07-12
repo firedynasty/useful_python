@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>YouTube Video Player with Keycode Navigation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 280px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px 0 0 20px;
+            padding: 0;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar-header {
+            position: sticky;
+            top: 0;
+            background: #ffffff;
+            padding: 20px;
+            border-bottom: 2px solid #e0e0e0;
+            border-radius: 20px 0 0 0;
+            z-index: 10;
+        }
+
+        .sidebar-content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .video-item {
+            padding: 12px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            font-size: 13px;
+            background: rgba(102, 126, 234, 0.1);
+            border: 1px solid rgba(102, 126, 234, 0.2);
+        }
+
+        .video-item:hover {
+            background: rgba(102, 126, 234, 0.2);
+            transform: translateX(5px);
+        }
+
+        .video-item.active {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .video-title {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .video-notes {
+            font-size: 11px;
+            opacity: 0.7;
+        }
+
+        .main-container {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 0 20px 20px 0;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2.2rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .video-selector {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 15px;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+        }
+
+        .video-selector label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        .video-selector select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            background: white;
+            color: #333;
+        }
+
+        .video-selector select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 10px rgba(102, 126, 234, 0.2);
+        }
+
+        .youtube-section {
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .video-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .video-title-display {
+            margin: 0;
+            color: #333;
+            font-size: 1.3rem;
+        }
+
+        .control-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .control-btn {
+            padding: 8px 16px;
+            background: linear-gradient(45deg, #4CAF50, #45a049);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .control-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+        }
+
+        .time-jump-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .time-btn {
+            padding: 6px 12px;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            font-size: 11px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .time-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+        }
+
+        .youtube-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .youtube-container iframe,
+        .youtube-container #youtube-player {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .no-video-message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #666;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .keycode-enhanced {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 1.5rem 0;
+        }
+
+        .keycode-enhanced h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            text-align: center;
+        }
+
+        .keycode-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .keycode-section {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            padding: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .keycode-section h4 {
+            color: #FFC107;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .keycode-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .keycode-item:last-child {
+            border-bottom: none;
+        }
+
+        .keycode-key {
+            background: rgba(102, 126, 234, 0.6);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+
+        .keycode-desc {
+            flex: 1;
+            margin-left: 10px;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        .status-display {
+            text-align: center;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+            font-weight: 600;
+            display: none;
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            color: #4CAF50;
+        }
+
+        /* Time Offset Control */
+        .time-offset-control {
+            background: linear-gradient(135deg, rgba(255, 193, 7, 0.1), rgba(255, 152, 0, 0.1));
+            border: 1px solid rgba(255, 193, 7, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 1rem 0;
+            text-align: center;
+        }
+
+        .time-offset-control h4 {
+            color: #FFC107;
+            margin: 0 0 10px 0;
+            font-size: 1.1rem;
+        }
+
+        .time-offset-control select {
+            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            border: 2px solid rgba(255, 193, 7, 0.5);
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .time-input {
+            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            border: 2px solid rgba(255, 193, 7, 0.5);
+            border-radius: 8px;
+            font-size: 1rem;
+            width: 80px;
+            text-align: center;
+            font-family: monospace;
+        }
+
+        .time-input:focus {
+            outline: none;
+            border-color: #FFC107;
+            box-shadow: 0 0 5px rgba(255, 193, 7, 0.3);
+        }
+
+        .jump-btn {
+            padding: 8px 16px;
+            background: linear-gradient(45deg, #FF5722, #E64A19);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-left: 10px;
+        }
+
+        .jump-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 87, 34, 0.4);
+        }
+
+        /* Current Time Display */
+        .current-time-display {
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(67, 160, 71, 0.1));
+            border: 1px solid rgba(76, 175, 80, 0.3);
+            border-radius: 10px;
+            padding: 12px 20px;
+            margin-top: 15px;
+            text-align: center;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: none;
+        }
+
+        .time-label {
+            color: #4CAF50;
+            margin-right: 8px;
+        }
+
+        .time-value {
+            color: #333;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 4px 12px;
+            border-radius: 15px;
+            border: 1px solid rgba(76, 175, 80, 0.3);
+            min-width: 60px;
+            display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                border-radius: 0;
+                height: 200px;
+            }
+
+            .main-container {
+                padding: 10px;
+            }
+
+            .container {
+                border-radius: 0;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h3 style="margin: 0; color: #333; margin-bottom: 15px;">🎬 Video Library</h3>
+            <div style="font-size: 12px; color: #666; font-style: italic;">
+                Click any video to load and use keyboard shortcuts for navigation
+            </div>
+        </div>
+        <div class="sidebar-content" id="videoList">
+            <!-- Video items will be populated here -->
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="container">
+            <h1>🎬 YouTube Video Player</h1>
+
+            <!-- Audio Element -->
+            <audio controls id="metronomeAudio">
+                <source src="https://www.dropbox.com/scl/fi/ohfl7sm9o4a48h8yz4o5t/60-BPM-4-4-Wood-Metronome-HD.mp3?rlkey=svjl21kp7xi4edq2jb9qtofw5&st=q6w90tzv&raw=1" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <span style="display: block; text-align: center; margin-top: 8px; color: #667eea; font-size: 0.9rem; font-weight: 600;">🎵 Metronome - Press <kbd style="background: rgba(102, 126, 234, 0.6); color: white; padding: 2px 6px; border-radius: 4px; font-family: monospace; font-size: 0.8rem;">ESC</kbd> to toggle</span>
+            <script>
+                document.getElementById('metronomeAudio').volume = 0.435;
+            </script>
+
+            <!-- Video Selector -->
+            <div class="video-selector">
+                <label for="videoSelect">Select Video:</label>
+                <select id="videoSelect">
+                    <option value="">Choose a video...</option>
+                </select>
+                <div style="text-align: center; margin-top: 15px;">
+                    <button id="loadYouTubeClipboardBtn" class="jump-btn" style="background: linear-gradient(45deg, #FF9800, #F57C00);">📋 Load YouTube from Clipboard</button>
+                </div>
+            </div>
+
+            <!-- Time Offset Control -->
+            <div class="time-offset-control">
+                <h4>⏰ Time Controls</h4>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 15px;">
+                    <label for="hourOffset" style="color: #FFC107; font-weight: 600;">Add Hours:</label>
+                    <select id="hourOffset" style="padding: 8px 12px; background: rgba(255, 255, 255, 0.9); color: #333; border: 2px solid rgba(255, 193, 7, 0.5); border-radius: 8px; font-size: 1rem; width: 90px;">
+                        <option value="0">+0 hr</option>
+                        <option value="1">+1 hr</option>
+                        <option value="2">+2 hr</option>
+                        <option value="3">+3 hr</option>
+                        <option value="4">+4 hr</option>
+                        <option value="5">+5 hr</option>
+                    </select>
+                    <label for="minuteOffset" style="color: #FFC107; font-weight: 600;">Add Minutes:</label>
+                    <select id="minuteOffset">
+                        <option value="0">+0 min</option>
+                        <option value="1">+1 min</option>
+                        <option value="2">+2 min</option>
+                        <option value="3">+3 min</option>
+                        <option value="4">+4 min</option>
+                        <option value="5">+5 min</option>
+                        <option value="10">+10 min</option>
+                        <option value="15">+15 min</option>
+                        <option value="20">+20 min</option>
+                        <option value="30">+30 min</option>
+                    </select>
+                    <span style="color: #666; font-size: 0.9rem; font-style: italic;">Example: Key "1" = 0:00 → with +1hr +5min = 1:05:00</span>
+                </div>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap;">
+                    <label for="quickTimeSelect" style="color: #FFC107; font-weight: 600;">Quick Times:</label>
+                    <select id="quickTimeSelect" style="padding: 8px 12px; background: rgba(255, 255, 255, 0.9); color: #333; border: 2px solid rgba(255, 193, 7, 0.5); border-radius: 8px; font-size: 1rem;">
+                        <option value="">Select a time...</option>
+                    </select>
+                    <label for="startTime" style="color: #FFC107; font-weight: 600;">Jump to Time:</label>
+                    <input type="text" id="startTime" class="time-input" placeholder="0:00">
+                    <button id="jumpToTimeBtn" class="jump-btn">🎯 Go</button>
+                    <span style="color: #666; font-size: 0.9rem; font-style: italic;">Format: 1:23 or 83 (seconds)</span>
+                </div>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(255, 193, 7, 0.3);">
+                    <label style="color: #FFC107; font-weight: 600;">🔄 Loop Timer:</label>
+                    <input type="number" id="loopIntervalInput" class="time-input" placeholder="13" min="1" style="width: 60px;">
+                    <span style="color: #666; font-size: 0.9rem;">seconds</span>
+                    <button id="loopTimer5minBtn" class="jump-btn" style="background: linear-gradient(45deg, #4CAF50, #45a049);">▶️ 5 min Loop</button>
+                    <button id="loopTimer25minBtn" class="jump-btn" style="background: linear-gradient(45deg, #9C27B0, #7B1FA2);">▶️ 25 min Loop</button>
+                    <span style="color: #666; font-size: 0.9rem; font-style: italic;">Returns to custom time (includes 1s reload delay)</span>
+                </div>
+                <div id="loopTimerStatus" style="display: none; text-align: center; margin-top: 10px; padding: 10px; background: rgba(76, 175, 80, 0.1); border: 1px solid #4CAF50; border-radius: 8px; color: #4CAF50; font-family: monospace; font-weight: 600;">
+                    Loop Timer: 00:00 remaining | Next reset in: 12s
+                </div>
+            </div>
+
+            <!-- YouTube Video Section -->
+            <div class="youtube-section">
+                <div class="video-controls">
+                    <h2 class="video-title-display" id="currentVideoTitle">No video selected</h2>
+                    <div class="control-buttons">
+                        <button class="control-btn" onclick="reloadVideo()">🔄 Reload</button>
+                        <button class="control-btn" onclick="clearVideo()">❌ Clear</button>
+                    </div>
+                </div>
+
+                <!-- Time Jump Buttons -->
+                <div class="time-jump-buttons">
+                    <button class="time-btn" data-time="0" style="background: linear-gradient(45deg, #ff4444, #cc0000);">0:00</button>
+                    <button class="time-btn" data-time="30" style="background: linear-gradient(45deg, #4CAF50, #45a049);">0:30</button>
+                    <button class="time-btn" data-time="60" style="background: linear-gradient(45deg, #2196F3, #1976D2);">1:00</button>
+                    <button class="time-btn" data-time="120" style="background: linear-gradient(45deg, #FF9800, #F57C00);">2:00</button>
+                    <button class="time-btn" data-time="180" style="background: linear-gradient(45deg, #9C27B0, #7B1FA2);">3:00</button>
+                    <button class="time-btn" data-time="240" style="background: linear-gradient(45deg, #607D8B, #455A64);">4:00</button>
+                    <button class="time-btn" data-time="300" style="background: linear-gradient(45deg, #795548, #5D4037);">5:00</button>
+                    <button class="time-btn" data-time="360" style="background: linear-gradient(45deg, #E91E63, #C2185B);">6:00</button>
+                </div>
+
+                <div class="youtube-container" id="youtubeContainer">
+                    <div class="no-video-message">Select a video from the dropdown to start</div>
+                </div>
+
+                <!-- Current Time Display -->
+                <div class="current-time-display" id="currentTimeDisplay">
+                    <span class="time-label">Current Time:</span>
+                    <span class="time-value" id="currentTimeValue">--:--</span>
+                </div>
+            </div>
+
+            <!-- Status Display -->
+            <div class="status-display" id="statusDisplay"></div>
+
+            <!-- Dropbox Video Player -->
+            <div class="youtube-section">
+                <div class="video-controls">
+                    <h2 class="video-title-display">External Video Player</h2>
+                    <div class="control-buttons">
+                        <button class="control-btn" onclick="document.getElementById('dropboxVideo').load()">🔄 Reload</button>
+                    </div>
+                </div>
+                <div class="youtube-container" style="padding-bottom: 56.25%;">
+                    <video id="dropboxVideo" controls style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 10px;">
+                        <source src="https://www.dropbox.com/scl/fi/rdnbn2id47786c9enla2o/Shylock.mp4?rlkey=4pluvspopyzuryi75dmsic088&st=8rzlc4sc&raw=1" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <br>
+                 <div class="youtube-container" style="padding-bottom: 56.25%;">
+                    <video id="dropboxVideo" controls style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 10px;">
+                        <source src="https://www.dropbox.com/scl/fi/dm88i450vyoc885yp3owf/shakespeare_1.mp4?rlkey=9u4cd1r5ynygsgi9jgafmr81h&st=39gmc9v2&raw=1" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>  
+            </div>
+
+            <!-- Enhanced Keycode Display -->
+            <div class="keycode-enhanced">
+                <h3>⌨️ Enhanced Keyboard Navigation</h3>
+
+                <div class="keycode-grid">
+                    <div class="keycode-section">
+                        <h4>🎬 Video Control</h4>
+                        <div class="keycode-item">
+                            <span class="keycode-key">Space</span>
+                            <span class="keycode-desc">Play/Pause Toggle</span>
+                        </div>
+                        <div class="keycode-item">
+                            <span class="keycode-key">Esc</span>
+                            <span class="keycode-desc">Metronome Play/Pause</span>
+                        </div>
+                        <div class="keycode-item">
+                            <span class="keycode-key">R</span>
+                            <span class="keycode-desc">Reload Video</span>
+                        </div>
+                        <div class="keycode-item">
+                            <span class="keycode-key">C</span>
+                            <span class="keycode-desc">Clear Video</span>
+                        </div>
+                    </div>
+
+                    <div class="keycode-section">
+                        <h4>⏱️ Time Navigation</h4>
+                        <div class="keycode-item">
+                            <span class="keycode-key">1-7</span>
+                            <span class="keycode-desc">Jump: 0:00, 10s-60s (Shift: -5s)</span>
+                        </div>
+                        <div class="keycode-item">
+                            <span class="keycode-key">Q,W,E,R,T,Y,U</span>
+                            <span class="keycode-desc">Jump: 1:00, 1m10s-2m (Shift: -5s)</span>
+                        </div>
+                        <div class="keycode-item">
+                            <span class="keycode-key">A,S,D,F,G,H,J</span>
+                            <span class="keycode-desc">Jump: 2:00, 2m10s-3m (Shift: -5s)</span>
+                        </div>
+                        <div class="keycode-item">
+                            <span class="keycode-key">Z,X,C,V,B,N,M</span>
+                            <span class="keycode-desc">Jump: 3:00, 3m10s-4m (Shift: -5s)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- YouTube IFrame Player API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+        // YouTube Video Database
+        let redirectDatabase = {
+            'basketballhighlights3': {
+                url: 'https://www.youtube.com/watch?v=pkECNBsubI0',
+                notes: 'Basketball highlights compilation video, 1:15, 1:20',
+                times: '1:15,1:20'
+            },
+            'v3': {
+                url: 'https://www.youtube.com/watch?v=bSpcxCOP5YI',
+                notes: 'Version 3 content',
+                times: ''
+            },
+            'basketballpostplay': {
+                url: 'https://www.youtube.com/watch?v=zKXYMpfaaV4',
+                notes: 'Basketball post play techniques and strategies',
+                times: ''
+            },
+            'basketballshooting2': {
+                url: 'https://www.youtube.com/shorts/1-uRpqp9PDQ',
+                notes: 'Basketball shooting tips - Short format video',
+                times: ''
+            },
+            'basketballshooting3': {
+                url: 'https://www.youtube.com/shorts/9BBvE3Jom5w',
+                notes: 'Advanced basketball shooting techniques - Short format video',
+                times: ''
+            },
+            'koreanPianst' : {
+                url: 'https://www.youtube.com/watch?v=IocXZk8aw-g',
+                notes: 'Pianst',
+                times: ''
+            },
+            'calmMusic' : {
+                url: 'https://www.youtube.com/watch?v=f-i_nJLG2Is',
+                notes: 'Calm Music',
+                times: ''
+            },
+            'codingMusic' : {
+                url : 'https://www.youtube.com/watch?v=xAR6N9N8e6U',
+                notes : 'Coding Music',
+                times: '19:20(15),31:00(20)'
+            },
+            'Shedeur': {
+                url: 'https://www.youtube.com/watch?v=cKBpf3Sz-8U',
+                notes: 'Shedeur mime-ing',
+                times: ''
+            },
+            'CamOnSheduer' : {
+                url: 'https://www.youtube.com/watch?v=XeDuDqFI2c0',
+                notes: 'Cam says Browns dont want Sheduer to succeed',
+                times: ''
+            },
+            'PatrickOnShedeur' : {
+                url : 'https://www.youtube.com/watch?v=ZV3jB6bVS54',
+                notes: 'Dont speak about Shedeur unless he plays',
+                times: ''
+            }
+        };
+
+        // Create sorted version of the database
+        let redirectDatabaseSorted = Object.keys(redirectDatabase)
+            .sort()
+            .reduce((sorted, key) => {
+                sorted[key] = redirectDatabase[key];
+                return sorted;
+            }, {});
+
+        let currentVideoId = null;
+        let currentVideoKey = null;
+
+        // Loop Timer variables
+        let loopTimerActive = false;
+        let loopTimerInterval = null;
+        let loopResetInterval = null;
+        let loopTimerEndTime = null;
+        let loopBaseTime = null; // The time to return to
+        let loopNextResetTime = null;
+        let loopIntervalSeconds = 13; // Default to 13s (12s + 1s delay)
+        let currentLoopButton = null; // Track which button is active
+        let originalPageTitle = '🎬 YouTube Video Player'; // Store original title
+
+        // YouTube Player API variables
+        let youtubePlayer = null;
+        let playerReady = false;
+        let timeUpdateInterval = null;
+        let isPlayerAPIReady = false;
+
+        // YouTube API ready callback
+        function onYouTubeIframeAPIReady() {
+            console.log('🎬 YouTube IFrame API ready');
+            isPlayerAPIReady = true;
+        }
+
+        // YouTube player ready callback
+        function onPlayerReady(event) {
+            console.log('🎬 YouTube Player ready');
+            playerReady = true;
+            youtubePlayer = event.target;
+            startTimeUpdates();
+            document.getElementById('currentTimeDisplay').style.display = 'block';
+        }
+
+        // YouTube player state change callback
+        function onPlayerStateChange(event) {
+            console.log('🎬 YouTube Player state changed:', event.data);
+
+            if (event.data === YT.PlayerState.PLAYING) {
+                startTimeUpdates();
+            } else if (event.data === YT.PlayerState.PAUSED || event.data === YT.PlayerState.ENDED) {
+                stopTimeUpdates();
+            }
+        }
+
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', function() {
+            populateVideoList();
+            populateVideoSelector();
+            setupEventListeners();
+            setupKeyboardNavigation();
+        });
+
+        // Populate video list in sidebar
+        function populateVideoList() {
+            const videoList = document.getElementById('videoList');
+            videoList.innerHTML = '';
+
+            Object.entries(redirectDatabaseSorted).forEach(([key, video]) => {
+                const videoItem = document.createElement('div');
+                videoItem.className = 'video-item';
+                videoItem.dataset.videoKey = key;
+
+                videoItem.innerHTML = `
+                    <div class="video-title">${key}</div>
+                    <div class="video-notes">${video.notes}</div>
+                `;
+
+                videoItem.addEventListener('click', () => {
+                    loadVideo(key);
+                });
+
+                videoList.appendChild(videoItem);
+            });
+        }
+
+        // Populate video selector dropdown
+        function populateVideoSelector() {
+            const videoSelect = document.getElementById('videoSelect');
+
+            Object.entries(redirectDatabaseSorted).forEach(([key, video]) => {
+                const option = document.createElement('option');
+                option.value = key;
+                option.textContent = `${key} - ${video.notes}`;
+                videoSelect.appendChild(option);
+            });
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
+            // Video selector change
+            document.getElementById('videoSelect').addEventListener('change', function() {
+                if (this.value) {
+                    loadVideo(this.value);
+                }
+            });
+
+            // Time jump buttons
+            document.querySelectorAll('.time-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const time = parseInt(this.dataset.time);
+                    jumpToYouTubeTime(time);
+                });
+            });
+
+            // Custom time jump button
+            document.getElementById('jumpToTimeBtn').addEventListener('click', function() {
+                jumpToCustomTime();
+            });
+
+            // Enter key support for time input
+            document.getElementById('startTime').addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    jumpToCustomTime();
+                }
+            });
+
+            // Loop timer buttons
+            document.getElementById('loopTimer5minBtn').addEventListener('click', function() {
+                const intervalSeconds = getLoopInterval();
+                toggleLoopTimer(intervalSeconds, this, 5);
+            });
+
+            document.getElementById('loopTimer25minBtn').addEventListener('click', function() {
+                const intervalSeconds = getLoopInterval();
+                toggleLoopTimer(intervalSeconds, this, 25);
+            });
+
+            // YouTube clipboard button
+            document.getElementById('loadYouTubeClipboardBtn').addEventListener('click', function() {
+                loadYouTubeFromClipboard();
+            });
+
+            // Quick time select dropdown
+            document.getElementById('quickTimeSelect').addEventListener('change', function() {
+                const selectedTime = this.value;
+                if (selectedTime) {
+                    document.getElementById('startTime').value = selectedTime;
+                    // Optionally auto-jump to the selected time
+                    // jumpToCustomTime();
+                }
+            });
+        }
+
+        // Populate quick times dropdown based on current video
+        function populateQuickTimes(videoKey) {
+            const quickTimeSelect = document.getElementById('quickTimeSelect');
+
+            // Clear existing options except the first placeholder
+            quickTimeSelect.innerHTML = '<option value="">Select a time...</option>';
+
+            if (!redirectDatabase[videoKey] || !redirectDatabase[videoKey].times) {
+                return;
+            }
+
+            const timesString = redirectDatabase[videoKey].times.trim();
+            if (!timesString) {
+                return;
+            }
+
+            // Split by comma and process each time
+            const times = timesString.split(',').map(t => t.trim()).filter(t => t);
+
+            times.forEach(timeEntry => {
+                // Strip content in parentheses for the value: "19:20(15)" -> "19:20"
+                const cleanTime = timeEntry.replace(/\([^)]*\)/g, '').trim();
+
+                if (cleanTime) {
+                    const option = document.createElement('option');
+                    option.value = cleanTime; // Value used when selected (without parentheses)
+                    option.textContent = timeEntry; // Display shows full content with parentheses
+                    quickTimeSelect.appendChild(option);
+                }
+            });
+
+            console.log(`🕐 DEBUG: Populated ${times.length} quick times for ${videoKey}`);
+        }
+
+        // Load and embed video
+        function loadVideo(videoKey) {
+            if (!redirectDatabase[videoKey]) {
+                showStatus('Video not found', 'error');
+                return;
+            }
+
+            const video = redirectDatabase[videoKey];
+            const videoId = extractVideoId(video.url);
+
+            if (!videoId) {
+                showStatus('Invalid YouTube URL', 'error');
+                return;
+            }
+
+            currentVideoId = videoId;
+            currentVideoKey = videoKey;
+
+            // Update UI
+            document.getElementById('currentVideoTitle').textContent = videoKey;
+            document.getElementById('videoSelect').value = videoKey;
+
+            // Update sidebar highlighting
+            document.querySelectorAll('.video-item').forEach(item => {
+                item.classList.toggle('active', item.dataset.videoKey === videoKey);
+            });
+
+            // Clear the container and create player div
+            const container = document.getElementById('youtubeContainer');
+            container.innerHTML = '<div id="youtube-player"></div>';
+
+            // Wait for API to be ready then create player
+            const initPlayer = () => {
+                if (typeof YT !== 'undefined' && YT.Player) {
+                    youtubePlayer = new YT.Player('youtube-player', {
+                        height: '100%',
+                        width: '100%',
+                        videoId: videoId,
+                        playerVars: {
+                            'enablejsapi': 1,
+                            'rel': 0,
+                            'modestbranding': 1,
+                            'iv_load_policy': 3
+                        },
+                        events: {
+                            'onReady': onPlayerReady,
+                            'onStateChange': onPlayerStateChange
+                        }
+                    });
+                } else {
+                    setTimeout(initPlayer, 500);
+                }
+            };
+
+            initPlayer();
+
+            // Populate quick times dropdown
+            populateQuickTimes(videoKey);
+
+            showStatus(`Loaded: ${videoKey}`, 'success');
+        }
+
+        // Extract YouTube video ID from URL
+        function extractVideoId(url) {
+            const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+            const match = url.match(regExp);
+            return (match && match[2].length === 11) ? match[2] : null;
+        }
+
+        // Jump to specific time in YouTube video
+        function jumpToYouTubeTime(seconds) {
+            if (!currentVideoId) {
+                showStatus('No video loaded', 'error');
+                return;
+            }
+
+            // Add minute offset
+            const minuteOffset = parseInt(document.getElementById('minuteOffset').value) || 0;
+            const finalTime = seconds + (minuteOffset * 60);
+
+            // Reload iframe with new start time
+            const newUrl = `https://www.youtube.com/embed/${currentVideoId}?enablejsapi=1&start=${finalTime}&autoplay=1`;
+            const iframe = document.querySelector('#youtubeContainer iframe');
+
+            if (iframe) {
+                iframe.src = newUrl;
+            }
+
+            const minutes = Math.floor(finalTime / 60);
+            const remainingSeconds = finalTime % 60;
+            const timeStr = minutes > 0 ? `${minutes}:${remainingSeconds.toString().padStart(2, '0')}` : `${finalTime}s`;
+
+            let statusMessage = `Jumped to ${timeStr}`;
+            if (minuteOffset > 0) {
+                statusMessage += ` (+${minuteOffset}min offset)`;
+            }
+
+            showStatus(statusMessage, 'success');
+
+            // Visual feedback for button
+            const clickedBtn = document.querySelector(`.time-btn[data-time="${seconds}"]`);
+            if (clickedBtn) {
+                clickedBtn.style.transform = 'scale(1.1)';
+                clickedBtn.style.boxShadow = '0 0 10px rgba(255,255,255,0.5)';
+                setTimeout(() => {
+                    clickedBtn.style.transform = '';
+                    clickedBtn.style.boxShadow = '';
+                }, 300);
+            }
+        }
+
+        // Setup keyboard navigation
+        function setupKeyboardNavigation() {
+            document.addEventListener('keydown', function(e) {
+                // Ignore if typing in input fields
+                if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA') {
+                    return;
+                }
+
+                // Basic controls
+                switch(e.code) {
+                    case 'Space':
+                        e.preventDefault();
+                        // YouTube iframe doesn't support direct play/pause control from parent
+                        showStatus('Use YouTube player controls for play/pause', 'info');
+                        break;
+
+                    case 'Escape':
+                        e.preventDefault();
+                        toggleMetronomePlayPause();
+                        break;
+
+                    case 'KeyR':
+                        e.preventDefault();
+                        reloadVideo();
+                        break;
+
+                    case 'KeyC':
+                        e.preventDefault();
+                        clearVideo();
+                        break;
+                }
+
+                // Time jump functionality with shift modifier and minute offset
+                const timeJumpKeys = {
+                    // 1-7: First minute base times (0:00, 0:10, 0:20, 0:30, 0:40, 0:50, 1:00)
+                    'Digit1': 0, 'Digit2': 10, 'Digit3': 20, 'Digit4': 30, 'Digit5': 40, 'Digit6': 50, 'Digit7': 60,
+                    // Q,W,E,R,T,Y,U: Second minute base times (1:00, 1:10, 1:20, 1:30, 1:40, 1:50, 2:00)
+                    'KeyQ': 60, 'KeyW': 70, 'KeyE': 80, 'KeyR': 90, 'KeyT': 100, 'KeyY': 110, 'KeyU': 120,
+                    // A,S,D,F,G,H,J: Third minute base times (2:00, 2:10, 2:20, 2:30, 2:40, 2:50, 3:00)
+                    'KeyA': 120, 'KeyS': 130, 'KeyD': 140, 'KeyF': 150, 'KeyG': 160, 'KeyH': 170, 'KeyJ': 180,
+                    // Z,X,C,V,B,N,M: Fourth minute base times (3:00, 3:10, 3:20, 3:30, 3:40, 3:50, 4:00)
+                    'KeyZ': 180, 'KeyX': 190, 'KeyC': 200, 'KeyV': 210, 'KeyB': 220, 'KeyN': 230, 'KeyM': 240
+                };
+
+                if (timeJumpKeys[e.code] !== undefined) {
+                    e.preventDefault();
+
+                    let targetTime = timeJumpKeys[e.code];
+                    console.log(`🐛 DEBUG: Initial targetTime = ${targetTime} (key: ${e.code})`);
+
+                    // Add hour and minute offsets from dropdowns
+                    const hourOffset = parseInt(document.getElementById('hourOffset').value) || 0;
+                    const minuteOffset = parseInt(document.getElementById('minuteOffset').value) || 0;
+                    const totalOffsetSeconds = (hourOffset * 3600) + (minuteOffset * 60);
+                    targetTime += totalOffsetSeconds;
+                    console.log(`🐛 DEBUG: After offsets (+${hourOffset}hr +${minuteOffset}min = ${totalOffsetSeconds}s): targetTime = ${targetTime}`);
+
+                    // Apply -5s offset with shift, but skip keys that would be negative
+                    if (e.shiftKey) {
+                        const potentialTime = targetTime - 5;
+                        console.log(`🐛 DEBUG: Shift pressed - potentialTime would be ${potentialTime}`);
+                        if (potentialTime >= 0) {
+                            targetTime = potentialTime;
+                            console.log(`🐛 DEBUG: Applied shift offset: targetTime = ${targetTime}`);
+                        } else {
+                            console.log(`🐛 DEBUG: Shift offset skipped (would be negative)`);
+                        }
+                    }
+
+                    console.log(`🐛 DEBUG: Final targetTime before jumpToYouTubeTime = ${targetTime}`);
+                    console.log(`🐛 DEBUG: Calling jumpToYouTubeTime with: baseSeconds=${targetTime - totalOffsetSeconds}, hourOffset=${hourOffset}, minuteOffset=${minuteOffset}`);
+
+                    // Don't pass withShift=true since we already applied the shift offset above
+                    jumpToYouTubeTime(targetTime - totalOffsetSeconds, false, totalOffsetSeconds, e.shiftKey, hourOffset, minuteOffset);
+                    return;
+                }
+            });
+        }
+
+        // Jump to custom time function
+        function jumpToCustomTime() {
+            const timeInput = document.getElementById('startTime');
+            const timeStr = timeInput.value.trim();
+
+            if (!timeStr) {
+                showStatus('Please enter a time', 'error');
+                return;
+            }
+
+            let seconds = parseTimeToSeconds(timeStr);
+
+            if (seconds === null) {
+                showStatus('Invalid time format. Use 1:23 or 83', 'error');
+                return;
+            }
+
+            // Get hour and minute offsets from dropdowns
+            const hourOffset = parseInt(document.getElementById('hourOffset').value) || 0;
+            const minuteOffset = parseInt(document.getElementById('minuteOffset').value) || 0;
+            const totalOffsetSeconds = (hourOffset * 3600) + (minuteOffset * 60);
+
+            console.log(`🐛 DEBUG jumpToCustomTime: Parsed "${timeStr}" to ${seconds} seconds`);
+            console.log(`🐛 DEBUG jumpToCustomTime: Hour offset = ${hourOffset}, Minute offset = ${minuteOffset}, Total offset = ${totalOffsetSeconds}s`);
+
+            jumpToYouTubeTime(seconds, false, totalOffsetSeconds, false, hourOffset, minuteOffset);
+
+            // Visual feedback
+            const btn = document.getElementById('jumpToTimeBtn');
+            const originalText = btn.textContent;
+            btn.textContent = '✅ Jumped!';
+            btn.style.transform = 'scale(1.1)';
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.style.transform = '';
+            }, 1000);
+        }
+
+        // Parse time string to seconds (supports "1:23" or "83")
+        function parseTimeToSeconds(timeStr) {
+            // Remove any whitespace
+            timeStr = timeStr.trim();
+
+            // If it's just numbers, treat as seconds
+            if (/^\d+$/.test(timeStr)) {
+                return parseInt(timeStr);
+            }
+
+            // If it's in MM:SS format
+            const timeMatch = timeStr.match(/^(\d+):(\d+)$/);
+            if (timeMatch) {
+                const minutes = parseInt(timeMatch[1]);
+                const seconds = parseInt(timeMatch[2]);
+
+                if (seconds >= 60) {
+                    return null; // Invalid - seconds should be < 60
+                }
+
+                return (minutes * 60) + seconds;
+            }
+
+            // If it's in H:MM:SS format
+            const longTimeMatch = timeStr.match(/^(\d+):(\d+):(\d+)$/);
+            if (longTimeMatch) {
+                const hours = parseInt(longTimeMatch[1]);
+                const minutes = parseInt(longTimeMatch[2]);
+                const seconds = parseInt(longTimeMatch[3]);
+
+                if (minutes >= 60 || seconds >= 60) {
+                    return null; // Invalid
+                }
+
+                return (hours * 3600) + (minutes * 60) + seconds;
+            }
+
+            return null; // Invalid format
+        }
+
+        // Control functions
+        function toggleMetronomePlayPause() {
+            const audio = document.getElementById('metronomeAudio');
+
+            if (audio.paused || audio.ended) {
+                audio.play()
+                    .then(() => {
+                        showStatus('Metronome playing', 'success');
+                    })
+                    .catch(error => {
+                        console.error('Error playing metronome:', error);
+                        showStatus('Error playing metronome', 'error');
+                    });
+            } else {
+                audio.pause();
+                showStatus('Metronome paused', 'info');
+            }
+        }
+
+        function reloadVideo() {
+            if (currentVideoKey) {
+                loadVideo(currentVideoKey);
+                showStatus('Video reloaded', 'success');
+            } else {
+                showStatus('No video to reload', 'error');
+            }
+        }
+
+        function clearVideo() {
+            currentVideoId = null;
+            currentVideoKey = null;
+
+            // Stop time updates and clear player
+            stopTimeUpdates();
+            if (youtubePlayer && typeof youtubePlayer.destroy === 'function') {
+                youtubePlayer.destroy();
+            }
+            youtubePlayer = null;
+            playerReady = false;
+
+            document.getElementById('currentVideoTitle').textContent = 'No video selected';
+            document.getElementById('videoSelect').value = '';
+            document.getElementById('youtubeContainer').innerHTML = '<div class="no-video-message">Select a video from the dropdown to start</div>';
+
+            // Hide and reset time display
+            document.getElementById('currentTimeDisplay').style.display = 'none';
+            document.getElementById('currentTimeValue').textContent = '--:--';
+
+            // Remove sidebar highlighting
+            document.querySelectorAll('.video-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Clear quick times dropdown
+            document.getElementById('quickTimeSelect').innerHTML = '<option value="">Select a time...</option>';
+
+            showStatus('Video cleared', 'info');
+        }
+
+        // Show status message
+        function showStatus(message, type = 'info') {
+            const statusDisplay = document.getElementById('statusDisplay');
+            statusDisplay.textContent = message;
+            statusDisplay.className = `status-display ${type}`;
+            statusDisplay.style.display = 'block';
+
+            // Auto-hide after 3 seconds
+            setTimeout(() => {
+                statusDisplay.style.display = 'none';
+            }, 3000);
+        }
+
+        // Modified jump function to handle offset correctly
+        function jumpToYouTubeTime(baseSeconds, withShift = false, totalOffset = 0, shiftWasPressed = false, hourOffset = 0, minuteOffset = 0) {
+            console.log(`🐛 DEBUG jumpToYouTubeTime: baseSeconds=${baseSeconds}, withShift=${withShift}, totalOffset=${totalOffset}, shiftWasPressed=${shiftWasPressed}, hourOffset=${hourOffset}, minuteOffset=${minuteOffset}`);
+
+            if (!currentVideoId) {
+                showStatus('No video loaded', 'error');
+                return;
+            }
+
+            let finalTime = baseSeconds;
+            console.log(`🐛 DEBUG jumpToYouTubeTime: Initial finalTime = ${finalTime}`);
+
+            // Add total offset (hours + minutes)
+            finalTime += totalOffset;
+            console.log(`🐛 DEBUG jumpToYouTubeTime: After adding total offset: finalTime = ${finalTime}`);
+
+            // Note: Shift modifier is now handled in the keyboard event handler, not here
+            if (withShift && finalTime >= 5) {
+                console.log(`🐛 DEBUG jumpToYouTubeTime: Applying shift -5s (this should not happen anymore!)`);
+                finalTime -= 5;
+                console.log(`🐛 DEBUG jumpToYouTubeTime: After shift modifier: finalTime = ${finalTime}`);
+            }
+
+            console.log(`🐛 DEBUG jumpToYouTubeTime: FINAL TIME SENT TO YOUTUBE = ${finalTime}`);
+
+            // Use YouTube Player API to seek to time
+            if (youtubePlayer && playerReady && typeof youtubePlayer.seekTo === 'function') {
+                youtubePlayer.seekTo(finalTime, true);
+                console.log(`🐛 DEBUG jumpToYouTubeTime: Used API seekTo(${finalTime})`);
+            } else {
+                // Fallback to iframe reload method
+                const newUrl = `https://www.youtube.com/embed/${currentVideoId}?enablejsapi=1&start=${finalTime}&autoplay=1`;
+                console.log(`🐛 DEBUG jumpToYouTubeTime: Fallback to iframe reload = ${newUrl}`);
+
+                const iframe = document.querySelector('#youtubeContainer iframe');
+                if (iframe) {
+                    iframe.src = newUrl;
+                }
+            }
+
+            // Format time for display (handle hours)
+            const hours = Math.floor(finalTime / 3600);
+            const minutes = Math.floor((finalTime % 3600) / 60);
+            const seconds = finalTime % 60;
+
+            let timeStr;
+            if (hours > 0) {
+                timeStr = `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            } else if (minutes > 0) {
+                timeStr = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            } else {
+                timeStr = `${seconds}s`;
+            }
+
+            let statusMessage = `Jumped to ${timeStr}`;
+            if (hourOffset > 0 || minuteOffset > 0) {
+                let offsetParts = [];
+                if (hourOffset > 0) offsetParts.push(`+${hourOffset}hr`);
+                if (minuteOffset > 0) offsetParts.push(`+${minuteOffset}min`);
+                statusMessage += ` (${offsetParts.join(' ')})`;
+            }
+            if (shiftWasPressed) {
+                statusMessage += ' (Shift -5s)';
+            }
+
+            console.log(`🐛 DEBUG jumpToYouTubeTime: Status message = "${statusMessage}"`);
+            showStatus(statusMessage, 'success');
+        }
+
+        // YouTube Clipboard Loading Function
+        async function loadYouTubeFromClipboard() {
+            try {
+                const text = await navigator.clipboard.readText();
+                console.log('🎬 DEBUG: Clipboard text:', text);
+
+                if (!text.trim()) {
+                    showStatus('Clipboard is empty', 'error');
+                    return;
+                }
+
+                const url = text.trim();
+                console.log('🎬 DEBUG: Trimmed URL:', url);
+
+                // Check if it's a YouTube URL
+                if (!isYouTubeURL(url)) {
+                    showStatus('Not a valid YouTube URL', 'error');
+                    return;
+                }
+
+                const videoId = extractVideoId(url);
+                if (!videoId) {
+                    showStatus('Could not extract YouTube video ID', 'error');
+                    return;
+                }
+
+                // Create a temporary entry for clipboard video
+                const clipboardKey = 'clipboard_video';
+                currentVideoId = videoId;
+                currentVideoKey = clipboardKey;
+
+                // Update UI
+                document.getElementById('currentVideoTitle').textContent = `Clipboard: ${clipboardKey}`;
+                document.getElementById('videoSelect').value = ''; // Clear dropdown selection
+
+                // Update sidebar highlighting (clear all)
+                document.querySelectorAll('.video-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                // Clear quick times dropdown (clipboard videos don't have times)
+                document.getElementById('quickTimeSelect').innerHTML = '<option value="">Select a time...</option>';
+
+                // Clear the container and create player div
+                const container = document.getElementById('youtubeContainer');
+                container.innerHTML = '<div id="youtube-player"></div>';
+
+                // Wait for API to be ready then create player
+                const initPlayer = () => {
+                    if (typeof YT !== 'undefined' && YT.Player) {
+                        youtubePlayer = new YT.Player('youtube-player', {
+                            height: '100%',
+                            width: '100%',
+                            videoId: videoId,
+                            playerVars: {
+                                'enablejsapi': 1,
+                                'rel': 0,
+                                'modestbranding': 1,
+                                'iv_load_policy': 3
+                            },
+                            events: {
+                                'onReady': onPlayerReady,
+                                'onStateChange': onPlayerStateChange
+                            }
+                        });
+                    } else {
+                        setTimeout(initPlayer, 500);
+                    }
+                };
+
+                initPlayer();
+
+                console.log('🎬 DEBUG: Loaded YouTube video from clipboard:', url);
+                showStatus('YouTube video loaded from clipboard!', 'success');
+
+                // Visual feedback
+                const btn = document.getElementById('loadYouTubeClipboardBtn');
+                const originalText = btn.textContent;
+                btn.textContent = '✅ Loaded!';
+                btn.style.transform = 'scale(1.05)';
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.transform = '';
+                }, 2000);
+
+            } catch (err) {
+                console.error('🎬 DEBUG: Failed to read clipboard:', err);
+                showStatus('Failed to read clipboard. Please paste manually or grant permission.', 'error');
+            }
+        }
+
+        // Helper function to check if URL is YouTube
+        function isYouTubeURL(url) {
+            const youtubePatterns = [
+                /(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?v=([a-zA-Z0-9_-]+)/,
+                /(?:https?:\/\/)?(?:www\.)?youtube\.com\/embed\/([a-zA-Z0-9_-]+)/,
+                /(?:https?:\/\/)?youtu\.be\/([a-zA-Z0-9_-]+)/,
+                /(?:https?:\/\/)?(?:www\.)?youtube\.com\/shorts\/([a-zA-Z0-9_-]+)/
+            ];
+
+            return youtubePatterns.some(pattern => pattern.test(url));
+        }
+
+        // Loop Timer Functions
+        function getLoopInterval() {
+            const inputValue = document.getElementById('loopIntervalInput').value.trim();
+            if (inputValue === '' || isNaN(inputValue) || parseInt(inputValue) < 1) {
+                return 13; // Default to 13 seconds
+            }
+            return parseInt(inputValue) + 1; // Add 1 second for reload delay
+        }
+
+        function toggleLoopTimer(intervalSeconds, buttonElement, durationMinutes = 5) {
+            if (loopTimerActive) {
+                stopLoopTimer();
+            } else {
+                startLoopTimer(intervalSeconds, buttonElement, durationMinutes);
+            }
+        }
+
+        function startLoopTimer(intervalSeconds, buttonElement, durationMinutes = 5) {
+            // Get the current time from the input field
+            const timeInput = document.getElementById('startTime');
+            const timeStr = timeInput.value.trim();
+
+            if (!timeStr) {
+                showStatus('Please enter a time to loop to', 'error');
+                return;
+            }
+
+            if (!currentVideoId) {
+                showStatus('Please load a video first', 'error');
+                return;
+            }
+
+            let baseSeconds = parseTimeToSeconds(timeStr);
+            if (baseSeconds === null) {
+                showStatus('Invalid time format. Use 1:23 or 83', 'error');
+                return;
+            }
+
+            // Add hour and minute offsets
+            const hourOffset = parseInt(document.getElementById('hourOffset').value) || 0;
+            const minuteOffset = parseInt(document.getElementById('minuteOffset').value) || 0;
+            const totalOffsetSeconds = (hourOffset * 3600) + (minuteOffset * 60);
+
+            loopBaseTime = baseSeconds + totalOffsetSeconds;
+            loopIntervalSeconds = intervalSeconds;
+            currentLoopButton = buttonElement;
+
+            // Start the timer (5 or 25 minutes)
+            loopTimerActive = true;
+            loopTimerEndTime = Date.now() + (durationMinutes * 60 * 1000); // Duration from now
+            loopNextResetTime = Date.now() + (intervalSeconds * 1000);
+
+            // Update UI
+            buttonElement.textContent = '⏹️ Stop Loop';
+            buttonElement.style.background = 'linear-gradient(45deg, #f44336, #d32f2f)';
+
+            const statusDiv = document.getElementById('loopTimerStatus');
+            statusDiv.style.display = 'block';
+
+            // Set up intervals
+            loopTimerInterval = setInterval(updateLoopTimerDisplay, 1000);
+            loopResetInterval = setInterval(resetToLoopTime, intervalSeconds * 1000);
+
+            // Jump to the base time immediately
+            jumpToYouTubeTime(baseSeconds, false, totalOffsetSeconds, false, hourOffset, minuteOffset);
+
+            const playTime = intervalSeconds - 1; // Subtract 1s for reload delay
+            console.log(`🔄 DEBUG: Loop timer started - will return to ${loopBaseTime}s every ${intervalSeconds} seconds (${playTime}s play + 1s reload delay) for ${durationMinutes} minutes`);
+            showStatus(`Loop timer started! Returns to ${timeStr} every ${playTime}s for ${durationMinutes} min`, 'success');
+        }
+
+        function stopLoopTimer() {
+            loopTimerActive = false;
+
+            // Clear intervals
+            if (loopTimerInterval) {
+                clearInterval(loopTimerInterval);
+                loopTimerInterval = null;
+            }
+            if (loopResetInterval) {
+                clearInterval(loopResetInterval);
+                loopResetInterval = null;
+            }
+
+            // Update UI - Reset all buttons to original state
+            const loop5minBtn = document.getElementById('loopTimer5minBtn');
+            const loop25minBtn = document.getElementById('loopTimer25minBtn');
+
+            loop5minBtn.textContent = '▶️ 5 min Loop';
+            loop5minBtn.style.background = 'linear-gradient(45deg, #4CAF50, #45a049)';
+
+            loop25minBtn.textContent = '▶️ 25 min Loop';
+            loop25minBtn.style.background = 'linear-gradient(45deg, #9C27B0, #7B1FA2)';
+
+            const statusDiv = document.getElementById('loopTimerStatus');
+            statusDiv.style.display = 'none';
+
+            // Reset variables
+            loopTimerEndTime = null;
+            loopBaseTime = null;
+            loopNextResetTime = null;
+            loopIntervalSeconds = 13;
+            currentLoopButton = null;
+
+            // Reset page title
+            document.title = originalPageTitle;
+
+            console.log('🔄 DEBUG: Loop timer stopped');
+            showStatus('Loop timer stopped', 'info');
+        }
+
+        function resetToLoopTime() {
+            if (!loopTimerActive || !currentVideoId || loopBaseTime === null) {
+                return;
+            }
+
+            // Check if the main timer is still running
+            if (Date.now() >= loopTimerEndTime) {
+                showStatus('Loop timer completed!', 'success');
+                stopLoopTimer();
+                return;
+            }
+
+            // Jump back to the loop time using API
+            if (youtubePlayer && playerReady && typeof youtubePlayer.seekTo === 'function') {
+                youtubePlayer.seekTo(loopBaseTime, true);
+                console.log(`🔄 DEBUG: Loop reset using API seekTo(${loopBaseTime})`);
+            } else {
+                // Fallback to iframe reload method
+                const newUrl = `https://www.youtube.com/embed/${currentVideoId}?enablejsapi=1&start=${loopBaseTime}&autoplay=1`;
+                const iframe = document.querySelector('#youtubeContainer iframe');
+
+                if (iframe) {
+                    iframe.src = newUrl;
+                }
+                console.log(`🔄 DEBUG: Loop reset using iframe reload`);
+            }
+
+            // Set next reset time (account for 1s reload delay)
+            loopNextResetTime = Date.now() + (loopIntervalSeconds * 1000);
+
+            console.log(`🔄 DEBUG: Reset to loop time ${loopBaseTime}s`);
+        }
+
+        function updateLoopTimerDisplay() {
+            if (!loopTimerActive) return;
+
+            const statusDiv = document.getElementById('loopTimerStatus');
+            const remainingTime = loopTimerEndTime - Date.now();
+            const nextResetTime = loopNextResetTime - Date.now();
+
+            if (remainingTime <= 0) {
+                // Reset title before stopping (since stopLoopTimer will reset it anyway)
+                document.title = `✅ Timer Complete! | ${originalPageTitle}`;
+                setTimeout(() => {
+                    document.title = originalPageTitle;
+                }, 3000); // Show completion message for 3 seconds
+
+                stopLoopTimer();
+                showStatus('Loop timer completed!', 'success');
+                return;
+            }
+
+            const minutes = Math.floor(remainingTime / 60000);
+            const seconds = Math.floor((remainingTime % 60000) / 1000);
+            const nextResetSeconds = Math.max(0, Math.floor(nextResetTime / 1000));
+
+            const timeRemaining = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+            // Update status display
+            statusDiv.textContent = `Loop Timer: ${timeRemaining} remaining | Next reset in: ${nextResetSeconds}s`;
+
+            // Update page title with remaining time and next reset
+            document.title = `🔄 ${timeRemaining} left | Next: ${nextResetSeconds}s | ${originalPageTitle}`;
+        }
+
+        // Time tracking functions
+        function startTimeUpdates() {
+            if (timeUpdateInterval) {
+                clearInterval(timeUpdateInterval);
+            }
+
+            timeUpdateInterval = setInterval(() => {
+                if (youtubePlayer && playerReady && typeof youtubePlayer.getCurrentTime === 'function') {
+                    try {
+                        const currentTime = youtubePlayer.getCurrentTime();
+                        updateTimeDisplay(currentTime);
+                    } catch (error) {
+                        console.log('🎬 DEBUG: Error getting current time:', error);
+                    }
+                }
+            }, 1000);
+        }
+
+        function stopTimeUpdates() {
+            if (timeUpdateInterval) {
+                clearInterval(timeUpdateInterval);
+                timeUpdateInterval = null;
+            }
+        }
+
+        function updateTimeDisplay(currentTimeSeconds) {
+            const timeValue = document.getElementById('currentTimeValue');
+
+            if (currentTimeSeconds !== undefined && currentTimeSeconds !== null) {
+                const hours = Math.floor(currentTimeSeconds / 3600);
+                const minutes = Math.floor((currentTimeSeconds % 3600) / 60);
+                const seconds = Math.floor(currentTimeSeconds % 60);
+
+                let timeStr;
+                if (hours > 0) {
+                    timeStr = `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                } else {
+                    timeStr = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+                }
+
+                timeValue.textContent = timeStr;
+            } else {
+                timeValue.textContent = '--:--';
+            }
+        }
+    </script>
+</body>
+</html>

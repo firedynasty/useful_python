@@ -1,0 +1,303 @@
+⏺ How the Section Splitting and Sidebar System Works
+
+  Section Splitting Logic
+
+  var sections = content.split('\n###\n###\n')
+      .map(section => section.trim())
+      .filter(section => section.length > 0);
+
+  This line does three things:
+
+  1. .split('\n###\n###\n') - Splits the content string into an array
+  wherever it finds the delimiter \n###\n###\n (newline + three hashes +
+  newline + three hashes + newline)
+  2. .map(section => section.trim()) - Removes leading/trailing whitespace
+  from each section
+  3. .filter(section => section.length > 0) - Removes any empty sections
+
+  Example:
+  Content 1
+  ###
+  ###
+  Content 2
+  ###
+  ###
+  Content 3
+  Results in: ["Content 1", "Content 2", "Content 3"]
+
+  How It Connects to the Sidebar
+
+  The function stores sections in window.tempDictionaryDatabase as an object
+   where:
+  - Keys = section names (from @ symbol or sanitized first line)
+  - Values = HTML table rows for that section
+
+  Then calls updateSidebarWithGoogleDocsContent() which reads from
+  tempDictionaryDatabase and creates clickable sidebar buttons.
+
+  ---
+  Reusable Sidebar Code Template
+
+  Here's the complete sidebar system you can use in other projects:
+
+  // ============================================
+  // REUSABLE SIDEBAR SYSTEM
+  // ============================================
+
+  /**
+   * Process content with custom delimiter and @ symbol naming
+   * @param {string} content - Raw text content to process
+   * @param {string} delimiter - Section delimiter (default: '\n###\n###\n')
+   */
+  function processContentToSidebar(content, delimiter = '\n###\n###\n') {
+      // Split content by delimiter
+      var sections = content.split(delimiter)
+          .map(section => section.trim())
+          .filter(section => section.length > 0);
+
+      if (sections.length === 0) {
+          showStatus('No sections found in content', false);
+          return;
+      }
+
+      console.log('Found', sections.length, 'sections');
+
+      // Clear existing sidebar and temporary database
+      window.tempDictionaryDatabase = {};
+      const sidebarContent = document.getElementById('sidebarContent');
+      if (sidebarContent) {
+          sidebarContent.innerHTML = '';
+      }
+
+      // Process each section
+      sections.forEach((section, index) => {
+          const lines = section.split('\n');
+          let tableRows = [];
+          let sectionKey = `section_${index + 1}`;
+          let customName = null;
+
+          // Look for @ symbol in any line to use as section name
+          for (let line of lines) {
+              line = line.trim();
+
+              // Check for custom naming symbol (@)
+              if (line.startsWith('@')) {
+                  customName = line.substring(1).trim(); // Remove @ and 
+  trim
+                  sectionKey = customName.replace(/[^a-zA-Z0-9_]/g, '_') ||
+  `section_${index + 1}`;
+                  continue; // Skip adding the @name line to table rows
+              }
+
+              // Add non-empty lines as table rows
+              if (line) {
+                  const tableRow = `<tr><td style="border: 1px solid 
+  black;">${line}</td><td style="border: 1px solid black;">section_${index +
+   1}</td></tr>`;
+                  tableRows.push(tableRow);
+              }
+          }
+
+          // Fallback: use first line as name if no @ symbol found
+          if (!customName && lines.length > 0 && lines[0].length > 0 &&
+  lines[0].length < 50) {
+              customName = lines[0].trim();
+              sectionKey = customName.replace(/[^a-zA-Z0-9_]/g, '_') ||
+  `section_${index + 1}`;
+          }
+
+          // Store in temporary database
+          window.tempDictionaryDatabase[sectionKey] = tableRows.join('');
+
+          console.log(`Created section: "${customName || sectionKey}" with 
+  ${tableRows.length} rows`);
+      });
+
+      // Populate sidebar with buttons
+      populateSidebar();
+
+      showStatus(`Created ${sections.length} sections`, true);
+  }
+
+  /**
+   * Populate sidebar with clickable buttons for each section
+   */
+  function populateSidebar() {
+      const sidebarContent = document.getElementById('sidebarContent');
+      if (!sidebarContent) {
+          console.error('Sidebar element #sidebarContent not found');
+          return;
+      }
+
+      sidebarContent.innerHTML = ''; // Clear existing content
+
+      // Create a button for each section in the database
+      Object.keys(window.tempDictionaryDatabase).forEach((key) => {
+          const button = document.createElement('button');
+
+          // Use human-readable name (convert underscores back to spaces)
+          const displayName = key.replace(/_/g, ' ');
+          button.textContent = displayName;
+          button.className = 'sidebar-button';
+
+          // Click handler to load section content
+          button.onclick = function() {
+              loadSectionContent(key);
+              highlightActiveButton(button);
+          };
+
+          sidebarContent.appendChild(button);
+      });
+
+      console.log(`Sidebar populated with 
+  ${Object.keys(window.tempDictionaryDatabase).length} buttons`);
+  }
+
+  /**
+   * Load content for a specific section
+   * @param {string} sectionKey - Key of the section to load
+   */
+  function loadSectionContent(sectionKey) {
+      const contentArea = document.getElementById('my-table'); // Or your 
+  content display element
+
+      if (!contentArea) {
+          console.error('Content area not found');
+          return;
+      }
+
+      const sectionContent = window.tempDictionaryDatabase[sectionKey];
+
+      if (!sectionContent) {
+          console.error(`Section "${sectionKey}" not found in database`);
+          return;
+      }
+
+      // Display the content (adjust based on your needs)
+      contentArea.innerHTML = `
+          <table style="border-collapse: collapse; width: 100%;">
+              <tbody>
+                  ${sectionContent}
+              </tbody>
+          </table>
+      `;
+
+      console.log(`Loaded section: ${sectionKey}`);
+  }
+
+  /**
+   * Highlight the active sidebar button
+   * @param {HTMLElement} activeButton - The button to highlight
+   */
+  function highlightActiveButton(activeButton) {
+      // Remove highlight from all buttons
+      document.querySelectorAll('.sidebar-button').forEach(btn => {
+          btn.classList.remove('active');
+      });
+
+      // Add highlight to active button
+      activeButton.classList.add('active');
+  }
+
+  /**
+   * Show status message to user
+   * @param {string} message - Message to display
+   * @param {boolean} isSuccess - Whether this is a success message
+   */
+  function showStatus(message, isSuccess) {
+      console.log(`[${isSuccess ? 'SUCCESS' : 'ERROR'}] ${message}`);
+      // Add your own status display logic here (toast, alert, status bar, 
+  etc.)
+  }
+
+  // ============================================
+  // USAGE EXAMPLE
+  // ============================================
+
+  // Example 1: Load from file input
+  document.getElementById('fileInput').addEventListener('change',
+  function(e) {
+      const file = e.target.files[0];
+      if (file) {
+          const reader = new FileReader();
+          reader.onload = function(event) {
+              const content = event.target.result;
+              processContentToSidebar(content);
+          };
+          reader.readAsText(file);
+      }
+  });
+
+  // Example 2: Load from textarea
+  function loadFromTextarea() {
+      const content = document.getElementById('myTextarea').value;
+      processContentToSidebar(content);
+  }
+
+  // Example 3: Load with custom delimiter
+  function loadWithCustomDelimiter() {
+      const content = document.getElementById('myTextarea').value;
+      const delimiter = '\n---\n'; // Custom delimiter
+      processContentToSidebar(content, delimiter);
+  }
+
+  Required CSS
+
+  /* Sidebar container */
+  #sidebarContent {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 10px;
+      max-height: 80vh;
+      overflow-y: auto;
+  }
+
+  /* Sidebar buttons */
+  .sidebar-button {
+      padding: 10px 15px;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+      text-align: left;
+      font-size: 14px;
+      transition: all 0.2s;
+  }
+
+  .sidebar-button:hover {
+      background-color: #e0e0e0;
+      border-color: #999;
+  }
+
+  .sidebar-button.active {
+      background-color: #4CAF50;
+      color: white;
+      border-color: #45a049;
+  }
+
+  Required HTML Structure
+
+  <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+          <div id="sidebarContent"></div>
+      </div>
+
+      <!-- Main content area -->
+      <div class="main-content">
+          <div id="my-table"></div>
+      </div>
+  </div>
+
+  ---
+  Key Features
+
+  ✅ @ Symbol Naming - Use @Section Name to name sections✅ Custom 
+  Delimiters - Change \n###\n###\n to any delimiter✅ Automatic Fallback -
+  Uses first line if no @ symbol found✅ Active Highlighting - Shows which
+  section is currently loaded✅ Flexible Content Display - Adapt
+  loadSectionContent() for your needs
+
+  You can now drop this code into any project and customize the
+  loadSectionContent() function to display data however you need!

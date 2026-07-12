@@ -1,0 +1,4 @@
+- For God’s Word to be our light
+- For our sister Lutheran churches and all churches
+- For the CROWN basketball outreach and all teams
+- For upcoming SDC Core leaders retreat

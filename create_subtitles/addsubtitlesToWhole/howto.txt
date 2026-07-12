@@ -1,0 +1,22 @@
+How to burn subtitles onto a video
+===================================
+
+1. Edit add_titles.md with your bullet points (one per line):
+
+   * first subtitle text
+   * second subtitle text
+   * third subtitle text
+
+   Each bullet is shown for 5 seconds, starting from the beginning of the video.
+
+2. Run the script:
+
+   bash add_titles.sh "your video.mp4"
+
+3. Output: *_subtitled.mp4 in the same directory as the input video.
+
+Notes
+-----
+- Only the subtitle portion (5s per bullet) is re-encoded; the rest is stream-copied for speed.
+- Subtitles appear in a black bar padded below the video.
+- Requires: ffmpeg, python3

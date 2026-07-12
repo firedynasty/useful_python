@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmap-content xmlns="urn:xmind:xmap:xmlns:content:2.0" version="2.0">
+  <sheet id="sheet1" theme="theme1">
+    <topic id="root" structure-class="org.xmind.ui.map">
+      <title>Georges St-Pierre: The Psychology of Elite Performance</title>
+      <children>
+        <topics type="attached">
+          <topic id="topic1">
+            <title>Evolution of Fear</title>
+            <children>
+              <topics type="attached">
+                <topic id="topic1-1">
+                  <title>Early Career Fear</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="topic1-1-1">
+                        <title>Fear of being humiliated</title>
+                      </topic>
+                      <topic id="topic1-1-2">
+                        <title>Primary motivator for most of career</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="topic1-2">
+                  <title>Later Career Fear</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="topic1-2-1">
+                        <title>Long-term brain damage consequences</title>
+                      </topic>
+                      <topic id="topic1-2-2">
+                        <title>Becoming &quot;smarter&quot; - not always good for fighter</title>
+                      </topic>
+                      <topic id="topic1-2-3">
+                        <title>Daily head trauma in practice</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="topic1-3">
+                  <title>Constant Threat State</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="topic1-3-1">
+                        <title>Always someone who might kill you</title>
+                      </topic>
+                      <topic id="topic1-3-2">
+                        <title>After beating one, another appears</title>
+                      </topic>
+                      <topic id="topic1-3-3">
+                        <title>Fighter&apos;s flight stress mode</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+          <topic id="topic2">
+            <title>Mental Transformation Rituals</title>
+            <children>
+              <topics type="attached">
+                <topic id="topic2-1">
+                  <title>Pre-Fight Terror</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="topic2-1-1">
+                        <title>Extremely uncomfortable &amp; scared</title>
+                      </topic>
+                      <topic id="topic2-1-2">
+                        <title>Poor sleep from running scenarios</title>
+                      </topic>
+                      <topic id="topic2-1-3">
+                        <title>&quot;What the hell am I doing here?&quot;</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="topic2-2">
+                  <title>The Superhero Mask</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="topic2-2-1">
+                        <title>Playing role of fearless fighter</title>
+                      </topic>
+                      <topic id="topic2-2-2">
+                        <title>&quot;I feel great, ready to kick ass&quot;</title>
+                      </topic>
+                      <topic id="topic2-2-3">
+                        <title>Trainers know it&apos;s an act</title>
+                      </topic>
+                      <topic id="topic2-2-4">
+                        <title>Same routine every fight</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="topic2-3">
+                  <title>Bathroom Mirror Ritual</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="topic2-3-1">
+                        <title>List reasons why he&apos;ll win</title>
+                      </topic>
+                      <topic id="topic2-3-2">
+                        <title>Even if not true - as long as he believes</title>
+                      </topic>
+                      <topic id="topic2-3-3">
+                        <title>Transforms self-perception</title>
+                      </topic>
+                      <topic id="topic2-3-4">
+                        <title>Emerges as different person - &quot;Showtime&quot;</title>
+                      </topic>
+                      <topic id="topic2-3-5">
+                        <title>&quot;Cruise control&quot; mode activated</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+          <topic id="topic3">
+            <title>The Obsession with Being Best</title>
+            <children>
+              <topics type="attached">
+                <topic id="topic3-1">
+                  <title>Performance Driver</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="topic3-1-1">
+                        <title>Obsessed with being champion</title>
+                      </topic>
+                      <topic id="topic3-1-2">
+                        <title>Rose Namajunas example: &quot;I&apos;m the best&quot;</title>
+                      </topic>
+                      <topic id="topic3-1-3">
+                        <title>Repetition creates belief</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="topic3-2">
+                  <title>Selfish Fighter Life</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="topic3-2-1">
+                        <title>Everything oriented toward self-improvement</title>
+                      </topic>
+                      <topic id="topic3-2-2">
+                        <title>&quot;Me, me, me, me&quot;</title>
+                      </topic>
+                      <topic id="topic3-2-3">
+                        <title>&quot;Completely insane&quot; dedication</title>
+                      </topic>
+                      <topic id="topic3-2-4">
+                        <title>Everything to become better fighter</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+          <topic id="topic4">
+            <title>OCD Behaviors &amp; Compulsions</title>
+            <children>
+              <topics type="attached">
+                <topic id="topic4-1">
+                  <title>Self-Recognition</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="topic4-1-1">
+                        <title>Never diagnosed but believes he has OCD</title>
+                      </topic>
+                      <topic id="topic4-1-2">
+                        <title>Good for athlete, bad for society</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="topic4-2">
+                  <title>Breathing Game Example</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="topic4-2-1">
+                        <title>Hold breath for 500 meters while driving</title>
+                      </topic>
+                      <topic id="topic4-2-2">
+                        <title>Hits traffic at 450m - goes to side</title>
+                      </topic>
+                      <topic id="topic4-2-3">
+                        <title>Must complete extra 50m</title>
+                      </topic>
+                      <topic id="topic4-2-4">
+                        <title>&quot;This is not normal&quot;</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="topic4-3">
+                  <title>Door Holding Standoff</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="topic4-3-1">
+                        <title>8-year-old kid holds door</title>
+                      </topic>
+                      <topic id="topic4-3-2">
+                        <title>Internal battle over who goes first</title>
+                      </topic>
+                      <topic id="topic4-3-3">
+                        <title>&quot;Hell no, I&apos;m not moving until you go first&quot;</title>
+                      </topic>
+                      <topic id="topic4-3-4">
+                        <title>Eventually gives in - &quot;I lost&quot;</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="topic4-4">
+                  <title>Table Organization</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="topic4-4-1">
+                        <title>Everything must be lined up</title>
+                      </topic>
+                      <topic id="topic4-4-2">
+                        <title>Friends mess with configuration</title>
+                      </topic>
+                      <topic id="topic4-4-3">
+                        <title>Automatically fixes it when returning</title>
+                      </topic>
+                      <topic id="topic4-4-4">
+                        <title>Friends laugh knowing he&apos;ll do it</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="topic4-5">
+                  <title>Prefontaine Comparison</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="topic4-5-1">
+                        <title>Wouldn&apos;t let 12-year-old run ahead</title>
+                      </topic>
+                      <topic id="topic4-5-2">
+                        <title>Psychological need to always be first</title>
+                      </topic>
+                      <topic id="topic4-5-3">
+                        <title>&quot;Little quirks of the GOATs&quot;</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+          <topic id="topic5">
+            <title>Mental Warfare &amp; Protection</title>
+            <children>
+              <topics type="attached">
+                <topic id="topic5-1">
+                  <title>No Line to Cross</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="topic5-1-1">
+                        <title>Outcome can change your life</title>
+                      </topic>
+                      <topic id="topic5-1-2">
+                        <title>Money &amp; opportunities at stake</title>
+                      </topic>
+                      <topic id="topic5-1-3">
+                        <title>Fighters will cross any line</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="topic5-2">
+                  <title>Family Protection Strategy</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="topic5-2-1">
+                        <title>Never talks about family</title>
+                      </topic>
+                      <topic id="topic5-2-2">
+                        <title>Family is his &quot;treasure&quot;</title>
+                      </topic>
+                      <topic id="topic5-2-3">
+                        <title>Most proud of family, not career</title>
+                      </topic>
+                      <topic id="topic5-2-4">
+                        <title>Always deflects family questions</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="topic5-3">
+                  <title>Examples of Emotional Derailment</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="topic5-3-1">
+                        <title>Sugar Ray Leonard vs Roberto Duran</title>
+                      </topic>
+                      <topic id="topic5-3-2">
+                        <title>McGregor vs Jose Aldo (12 seconds)</title>
+                      </topic>
+                      <topic id="topic5-3-3">
+                        <title>McGregor trying same on Khabib</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+          <topic id="topic6">
+            <title>Transition Challenge</title>
+            <children>
+              <topics type="attached">
+                <topic id="topic6-1">
+                  <title>Need to Let Go</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="topic6-1-1">
+                        <title>Life perspective has changed</title>
+                      </topic>
+                      <topic id="topic6-1-2">
+                        <title>Not about being best fighter anymore</title>
+                      </topic>
+                      <topic id="topic6-1-3">
+                        <title>Need to blend in with other people</title>
+                      </topic>
+                      <topic id="topic6-1-4">
+                        <title>Otherwise could be &quot;dysfunctional&quot;</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="topic6-2">
+                  <title>Difficulty of Change</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="topic6-2-1">
+                        <title>Behaviors were addiction-like</title>
+                      </topic>
+                      <topic id="topic6-2-2">
+                        <title>Needed in past to perform</title>
+                      </topic>
+                      <topic id="topic6-2-3">
+                        <title>&quot;Very hard to let go&quot;</title>
+                      </topic>
+                      <topic id="topic6-2-4">
+                        <title>Won&apos;t happen overnight</title>
+                      </topic>
+                      <topic id="topic6-2-5">
+                        <title>Slow adaptation process needed</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+          <topic id="topic7">
+            <title>James-Lange Theory Application</title>
+            <children>
+              <topics type="attached">
+                <topic id="topic7-1">
+                  <title>Mind-Body Connection</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="topic7-1-1">
+                        <title>Mind can dictate body actions</title>
+                      </topic>
+                      <topic id="topic7-1-2">
+                        <title>BUT actions can change self-perception</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="topic7-2">
+                  <title>Practical Application</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="topic7-2-1">
+                        <title>Acting confident creates confidence</title>
+                      </topic>
+                      <topic id="topic7-2-2">
+                        <title>Physical actions transform mental state</title>
+                      </topic>
+                      <topic id="topic7-2-3">
+                        <title>Used before every single fight</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+        </topics>
+      </children>
+    </topic>
+  </sheet>
+</xmap-content>

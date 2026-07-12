@@ -1,0 +1,36 @@
+             
+  ---                                                                           
+  scrape_prospect_grades.py Ñ Interactive tool that builds a combined 2025 NFL  
+  Draft dataset by merging data from three sources:                             
+                                                                                
+  Data Sources:                                                                 
+  - Pro Football Reference Ñ Full draft pick list (rounds 1-3): player name,    
+  team, position, age, college                                                  
+  - NFL Combine xlsx (~/Downloads/NFL Combine 2025 @JordanSportGuy Twitter.xlsx)
+   Ñ Physical measurements: height, weight, hand size, arm length, wingspan,    
+  40-yard dash, 10-yard split, vertical, broad jump, 3-cone, shuttle, bench     
+  press                                                                       
+  - NFL.com prospect pages Ñ Prospect grade (scraped interactively)             
+                  
+  How It Works:                                                                 
+  1. Automatically scrapes the draft table from Pro Football Reference (rounds
+  1-3, ~100 players)                                                            
+  2. Loads combine measurements from the xlsx file and matches players by name
+  3. Walks you through each player interactively Ñ shows the name, you Google it
+   in Chrome, navigate to their NFL.com prospect page, press Enter, and the     
+  script reads the grade from the open page                                     
+  4. Merges everything into a single CSV                                        
+                                                                                
+  Controls during interactive scraping:                                       
+  - Enter Ñ read grade from current Chrome page                                 
+  - s Ñ skip player                            
+  - q Ñ save progress and quit                                                  
+                              
+  Resume support: Saves progress to grade_progress.csv after each player, so you
+   can quit and pick up where you left off.                                     
+                                                                                
+  Output: 2025_nfl_draft_with_combine.csv with 20 columns (draft info + prospect
+   grade + combine measurements). Height and body measurements are converted to
+  readable format (e.g. 6'1 5/8", 31 4/8").                                     
+                  
+  Requires: Chrome running with --remote-debugging-port=9222     

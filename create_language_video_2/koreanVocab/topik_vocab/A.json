@@ -1,0 +1,7154 @@
+[
+  {
+    "korean": "것",
+    "english": "thing; object",
+    "romanization": "geot",
+    "pos": "bound noun",
+    "hanja": "",
+    "frequency": 1
+  },
+  {
+    "korean": "하다",
+    "english": "to do",
+    "romanization": "hada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 2
+  },
+  {
+    "korean": "되다",
+    "english": "to become; to be",
+    "romanization": "doeda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 5
+  },
+  {
+    "korean": "수",
+    "english": "way; means",
+    "romanization": "su",
+    "pos": "bound noun",
+    "hanja": "",
+    "frequency": 6
+  },
+  {
+    "korean": "나",
+    "english": "I; me",
+    "romanization": "na",
+    "pos": "pronoun",
+    "hanja": "",
+    "frequency": 8
+  },
+  {
+    "korean": "그",
+    "english": "he; that",
+    "romanization": "geu",
+    "pos": "determiner",
+    "hanja": "",
+    "frequency": 9
+  },
+  {
+    "korean": "없다",
+    "english": "to not exist; to lack",
+    "romanization": "eopda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 10
+  },
+  {
+    "korean": "사람",
+    "english": "person; people",
+    "romanization": "saram",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 12
+  },
+  {
+    "korean": "우리",
+    "english": "we; us",
+    "romanization": "uri",
+    "pos": "pronoun",
+    "hanja": "",
+    "frequency": 13
+  },
+  {
+    "korean": "아니다",
+    "english": "to not be",
+    "romanization": "anida",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 16
+  },
+  {
+    "korean": "보다",
+    "english": "to see; to look",
+    "romanization": "boda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 17
+  },
+  {
+    "korean": "때",
+    "english": "time; when",
+    "romanization": "ttae",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 19
+  },
+  {
+    "korean": "같다",
+    "english": "to be similar; to be like",
+    "romanization": "gatda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 22
+  },
+  {
+    "korean": "가다",
+    "english": "to go; to leave",
+    "romanization": "gada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 25
+  },
+  {
+    "korean": "년",
+    "english": "year",
+    "romanization": "nyeon",
+    "pos": "bound noun",
+    "hanja": "年",
+    "frequency": 26
+  },
+  {
+    "korean": "한",
+    "english": "one; a",
+    "romanization": "han",
+    "pos": "determiner",
+    "hanja": "",
+    "frequency": 27
+  },
+  {
+    "korean": "말",
+    "english": "word; speech",
+    "romanization": "mal",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 28
+  },
+  {
+    "korean": "일",
+    "english": "day; work",
+    "romanization": "il",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 29
+  },
+  {
+    "korean": "때문",
+    "english": "because of; due to",
+    "romanization": "ttaemun",
+    "pos": "bound noun",
+    "hanja": "",
+    "frequency": 31
+  },
+  {
+    "korean": "말하다",
+    "english": "to speak; to talk",
+    "romanization": "malhada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 32
+  },
+  {
+    "korean": "그러나",
+    "english": "but; however",
+    "romanization": "geureona",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 34
+  },
+  {
+    "korean": "오다",
+    "english": "to come",
+    "romanization": "oda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 35
+  },
+  {
+    "korean": "알다",
+    "english": "to know",
+    "romanization": "alda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 36
+  },
+  {
+    "korean": "씨",
+    "english": "Mr.; Ms.",
+    "romanization": "ssi",
+    "pos": "bound noun",
+    "hanja": "氏",
+    "frequency": 37
+  },
+  {
+    "korean": "그렇다",
+    "english": "to be so; to be like that",
+    "romanization": "geureota",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 38
+  },
+  {
+    "korean": "또",
+    "english": "again; also",
+    "romanization": "tto",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 40
+  },
+  {
+    "korean": "많다",
+    "english": "to be many; to be much",
+    "romanization": "manta",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 43
+  },
+  {
+    "korean": "좋다",
+    "english": "to be good; to like",
+    "romanization": "jota",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 45
+  },
+  {
+    "korean": "더",
+    "english": "more",
+    "romanization": "deo",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 46
+  },
+  {
+    "korean": "받다",
+    "english": "to receive; to get",
+    "romanization": "batda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 47
+  },
+  {
+    "korean": "그것",
+    "english": "that thing",
+    "romanization": "geugeot",
+    "pos": "pronoun",
+    "hanja": "",
+    "frequency": 48
+  },
+  {
+    "korean": "집",
+    "english": "house; home",
+    "romanization": "jip",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 49
+  },
+  {
+    "korean": "나오다",
+    "english": "to come out; to appear",
+    "romanization": "naoda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 50
+  },
+  {
+    "korean": "그리고",
+    "english": "and; also",
+    "romanization": "geurigo",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 52
+  },
+  {
+    "korean": "문제",
+    "english": "problem; question",
+    "romanization": "munje",
+    "pos": "noun",
+    "hanja": "問題",
+    "frequency": 53
+  },
+  {
+    "korean": "살다",
+    "english": "to live",
+    "romanization": "salda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 55
+  },
+  {
+    "korean": "저",
+    "english": "I; me (formal)",
+    "romanization": "jeo",
+    "pos": "pronoun",
+    "hanja": "",
+    "frequency": 56
+  },
+  {
+    "korean": "생각하다",
+    "english": "to think",
+    "romanization": "saenggakhada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 58
+  },
+  {
+    "korean": "모르다",
+    "english": "to not know",
+    "romanization": "moreuda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 59
+  },
+  {
+    "korean": "속",
+    "english": "inside; within",
+    "romanization": "sok",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 60
+  },
+  {
+    "korean": "만들다",
+    "english": "to make; to create",
+    "romanization": "mandeulda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 61
+  },
+  {
+    "korean": "두",
+    "english": "two",
+    "romanization": "du",
+    "pos": "determiner",
+    "hanja": "",
+    "frequency": 63
+  },
+  {
+    "korean": "앞",
+    "english": "front; before",
+    "romanization": "ap",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 64
+  },
+  {
+    "korean": "어떤",
+    "english": "some; certain",
+    "romanization": "eotteon",
+    "pos": "determiner",
+    "hanja": "",
+    "frequency": 67
+  },
+  {
+    "korean": "잘",
+    "english": "well",
+    "romanization": "jal",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 68
+  },
+  {
+    "korean": "먹다",
+    "english": "to eat",
+    "romanization": "meokda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 70
+  },
+  {
+    "korean": "원",
+    "english": "won (currency); circle",
+    "romanization": "won",
+    "pos": "bound noun",
+    "hanja": "",
+    "frequency": 74
+  },
+  {
+    "korean": "생각",
+    "english": "thought; idea",
+    "romanization": "saenggak",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 75
+  },
+  {
+    "korean": "어떻다",
+    "english": "to be how; to be like",
+    "romanization": "eotteota",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 76
+  },
+  {
+    "korean": "명",
+    "english": "person; counter for people",
+    "romanization": "myeong",
+    "pos": "bound noun",
+    "hanja": "名",
+    "frequency": 77
+  },
+  {
+    "korean": "다시",
+    "english": "again; once more",
+    "romanization": "dasi",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 81
+  },
+  {
+    "korean": "다른",
+    "english": "different; other",
+    "romanization": "dareun",
+    "pos": "determiner",
+    "hanja": "",
+    "frequency": 82
+  },
+  {
+    "korean": "이런",
+    "english": "such; like this",
+    "romanization": "ireon",
+    "pos": "determiner",
+    "hanja": "",
+    "frequency": 83
+  },
+  {
+    "korean": "여자",
+    "english": "woman; female",
+    "romanization": "yeoja",
+    "pos": "noun",
+    "hanja": "女子",
+    "frequency": 84
+  },
+  {
+    "korean": "뒤",
+    "english": "behind; back",
+    "romanization": "dwi",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 87
+  },
+  {
+    "korean": "듣다",
+    "english": "to listen; to hear",
+    "romanization": "deutda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 88
+  },
+  {
+    "korean": "좀",
+    "english": "a little; somewhat",
+    "romanization": "jom",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 90
+  },
+  {
+    "korean": "들다",
+    "english": "to lift; to hold",
+    "romanization": "deulda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 91
+  },
+  {
+    "korean": "싶다",
+    "english": "to want; to wish",
+    "romanization": "sipda",
+    "pos": "auxiliary",
+    "hanja": "",
+    "frequency": 92
+  },
+  {
+    "korean": "가지다",
+    "english": "to have; to possess",
+    "romanization": "gajida",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 94
+  },
+  {
+    "korean": "함께",
+    "english": "together; with",
+    "romanization": "hamkke",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 95
+  },
+  {
+    "korean": "아이",
+    "english": "child; kid",
+    "romanization": "ai",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 96
+  },
+  {
+    "korean": "많이",
+    "english": "a lot; much",
+    "romanization": "manhi",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 98
+  },
+  {
+    "korean": "시간",
+    "english": "time; hour",
+    "romanization": "sigan",
+    "pos": "noun",
+    "hanja": "時間",
+    "frequency": 99
+  },
+  {
+    "korean": "너",
+    "english": "you",
+    "romanization": "neo",
+    "pos": "pronoun",
+    "hanja": "",
+    "frequency": 100
+  },
+  {
+    "korean": "주다",
+    "english": "to give; to offer",
+    "romanization": "juda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 101
+  },
+  {
+    "korean": "나다",
+    "english": "to occur; to happen",
+    "romanization": "nada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 104
+  },
+  {
+    "korean": "이렇다",
+    "english": "to be like this",
+    "romanization": "ireota",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 105
+  },
+  {
+    "korean": "어머니",
+    "english": "mother",
+    "romanization": "eomeoni",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 106
+  },
+  {
+    "korean": "눈",
+    "english": "eye; snow",
+    "romanization": "nun",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 107
+  },
+  {
+    "korean": "다음",
+    "english": "next; following",
+    "romanization": "daeum",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 112
+  },
+  {
+    "korean": "누구",
+    "english": "who",
+    "romanization": "nugu",
+    "pos": "pronoun",
+    "hanja": "",
+    "frequency": 114
+  },
+  {
+    "korean": "곳",
+    "english": "place; spot",
+    "romanization": "got",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 116
+  },
+  {
+    "korean": "여러",
+    "english": "several; various",
+    "romanization": "yeoreo",
+    "pos": "determiner",
+    "hanja": "",
+    "frequency": 117
+  },
+  {
+    "korean": "안",
+    "english": "inside; not",
+    "romanization": "an",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 118
+  },
+  {
+    "korean": "버리다",
+    "english": "to throw away; to discard",
+    "romanization": "beorida",
+    "pos": "auxiliary",
+    "hanja": "",
+    "frequency": 121
+  },
+  {
+    "korean": "위",
+    "english": "above; top",
+    "romanization": "wi",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 122
+  },
+  {
+    "korean": "운동",
+    "english": "exercise; movement",
+    "romanization": "undong",
+    "pos": "noun",
+    "hanja": "運動",
+    "frequency": 123
+  },
+  {
+    "korean": "퍼센트",
+    "english": "percent",
+    "romanization": "peosenteu",
+    "pos": "bound noun",
+    "hanja": "",
+    "frequency": 124
+  },
+  {
+    "korean": "학교",
+    "english": "school",
+    "romanization": "hakgyo",
+    "pos": "noun",
+    "hanja": "學校",
+    "frequency": 125
+  },
+  {
+    "korean": "가장",
+    "english": "most; best",
+    "romanization": "gajang",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 127
+  },
+  {
+    "korean": "시작하다",
+    "english": "to start; to begin",
+    "romanization": "sijakada",
+    "pos": "verb",
+    "hanja": "始作-",
+    "frequency": 131
+  },
+  {
+    "korean": "바로",
+    "english": "immediately; directly",
+    "romanization": "baro",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 132
+  },
+  {
+    "korean": "어느",
+    "english": "which; some",
+    "romanization": "eoneu",
+    "pos": "determiner",
+    "hanja": "",
+    "frequency": 133
+  },
+  {
+    "korean": "그래서",
+    "english": "so; therefore",
+    "romanization": "geuraeseo",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 134
+  },
+  {
+    "korean": "무엇",
+    "english": "what",
+    "romanization": "mueot",
+    "pos": "pronoun",
+    "hanja": "",
+    "frequency": 135
+  },
+  {
+    "korean": "모든",
+    "english": "all; every",
+    "romanization": "modeun",
+    "pos": "determiner",
+    "hanja": "",
+    "frequency": 137
+  },
+  {
+    "korean": "번",
+    "english": "time; instance",
+    "romanization": "beon",
+    "pos": "bound noun",
+    "hanja": "番",
+    "frequency": 138
+  },
+  {
+    "korean": "그거",
+    "english": "that thing",
+    "romanization": "geugeo",
+    "pos": "pronoun",
+    "hanja": "",
+    "frequency": 139
+  },
+  {
+    "korean": "돈",
+    "english": "money",
+    "romanization": "don",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 140
+  },
+  {
+    "korean": "그런데",
+    "english": "but; however",
+    "romanization": "geureonde",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 142
+  },
+  {
+    "korean": "날",
+    "english": "day",
+    "romanization": "nal",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 143
+  },
+  {
+    "korean": "여기",
+    "english": "here",
+    "romanization": "yeogi",
+    "pos": "pronoun",
+    "hanja": "",
+    "frequency": 144
+  },
+  {
+    "korean": "친구",
+    "english": "friend",
+    "romanization": "chingu",
+    "pos": "noun",
+    "hanja": "親舊",
+    "frequency": 147
+  },
+  {
+    "korean": "마음",
+    "english": "mind; heart",
+    "romanization": "maeum",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 148
+  },
+  {
+    "korean": "후",
+    "english": "after; later",
+    "romanization": "hu",
+    "pos": "noun",
+    "hanja": "後",
+    "frequency": 149
+  },
+  {
+    "korean": "아버지",
+    "english": "father",
+    "romanization": "abeoji",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 153
+  },
+  {
+    "korean": "남자",
+    "english": "man; male",
+    "romanization": "namja",
+    "pos": "noun",
+    "hanja": "男子",
+    "frequency": 154
+  },
+  {
+    "korean": "몸",
+    "english": "body",
+    "romanization": "mom",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 156
+  },
+  {
+    "korean": "얼굴",
+    "english": "face",
+    "romanization": "eolgul",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 157
+  },
+  {
+    "korean": "들어가다",
+    "english": "to enter; to go in",
+    "romanization": "deureogada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 158
+  },
+  {
+    "korean": "왜",
+    "english": "why",
+    "romanization": "wae",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 159
+  },
+  {
+    "korean": "다르다",
+    "english": "to be different",
+    "romanization": "dareuda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 163
+  },
+  {
+    "korean": "물",
+    "english": "water",
+    "romanization": "mul",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 165
+  },
+  {
+    "korean": "만나다",
+    "english": "to meet",
+    "romanization": "mannada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 166
+  },
+  {
+    "korean": "내다",
+    "english": "to pay; to submit",
+    "romanization": "naeda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 167
+  },
+  {
+    "korean": "쓰다",
+    "english": "to write; to use",
+    "romanization": "sseuda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 169
+  },
+  {
+    "korean": "이것",
+    "english": "this",
+    "romanization": "igeot",
+    "pos": "pronoun",
+    "hanja": "",
+    "frequency": 170
+  },
+  {
+    "korean": "이번",
+    "english": "this time",
+    "romanization": "ibeon",
+    "pos": "noun",
+    "hanja": "-番",
+    "frequency": 172
+  },
+  {
+    "korean": "길",
+    "english": "road; way",
+    "romanization": "gil",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 173
+  },
+  {
+    "korean": "생활",
+    "english": "life; living",
+    "romanization": "saenghwal",
+    "pos": "noun",
+    "hanja": "生活",
+    "frequency": 174
+  },
+  {
+    "korean": "지금",
+    "english": "now",
+    "romanization": "jigeum",
+    "pos": "noun",
+    "hanja": "只今",
+    "frequency": 176
+  },
+  {
+    "korean": "사이",
+    "english": "between; relationship",
+    "romanization": "sai",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 178
+  },
+  {
+    "korean": "우리나라",
+    "english": "our country; Korea",
+    "romanization": "urinara",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 181
+  },
+  {
+    "korean": "앉다",
+    "english": "to sit",
+    "romanization": "anjda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 183
+  },
+  {
+    "korean": "처음",
+    "english": "first; beginning",
+    "romanization": "cheoeum",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 184
+  },
+  {
+    "korean": "손",
+    "english": "hand",
+    "romanization": "son",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 185
+  },
+  {
+    "korean": "몇",
+    "english": "how many; several",
+    "romanization": "myeot",
+    "pos": "determiner",
+    "hanja": "",
+    "frequency": 186
+  },
+  {
+    "korean": "그때",
+    "english": "at that time; then",
+    "romanization": "geuttae",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 187
+  },
+  {
+    "korean": "찾다",
+    "english": "to find; to look for",
+    "romanization": "chajda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 191
+  },
+  {
+    "korean": "나가다",
+    "english": "to go out; to leave",
+    "romanization": "nagada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 196
+  },
+  {
+    "korean": "이야기",
+    "english": "story; talk",
+    "romanization": "iyagi",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 197
+  },
+  {
+    "korean": "사다",
+    "english": "to buy",
+    "romanization": "sada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 199
+  },
+  {
+    "korean": "아직",
+    "english": "still; yet",
+    "romanization": "ajik",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 201
+  },
+  {
+    "korean": "잡다",
+    "english": "to catch; to hold",
+    "romanization": "japda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 202
+  },
+  {
+    "korean": "같이",
+    "english": "together; with",
+    "romanization": "gachi",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 203
+  },
+  {
+    "korean": "선생님",
+    "english": "teacher",
+    "romanization": "seonsaengnim",
+    "pos": "noun",
+    "hanja": "先生-",
+    "frequency": 204
+  },
+  {
+    "korean": "서다",
+    "english": "to stand",
+    "romanization": "seoda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 206
+  },
+  {
+    "korean": "못",
+    "english": "cannot; nail",
+    "romanization": "mot",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 207
+  },
+  {
+    "korean": "역사",
+    "english": "history",
+    "romanization": "yeoksa",
+    "pos": "noun",
+    "hanja": "歷史",
+    "frequency": 208
+  },
+  {
+    "korean": "읽다",
+    "english": "to read",
+    "romanization": "ilgda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 209
+  },
+  {
+    "korean": "물론",
+    "english": "of course",
+    "romanization": "mullon",
+    "pos": "adverb",
+    "hanja": "勿論",
+    "frequency": 213
+  },
+  {
+    "korean": "동안",
+    "english": "during; while",
+    "romanization": "dongan",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 214
+  },
+  {
+    "korean": "책",
+    "english": "book",
+    "romanization": "chaek",
+    "pos": "noun",
+    "hanja": "冊",
+    "frequency": 215
+  },
+  {
+    "korean": "일어나다",
+    "english": "to get up; to rise",
+    "romanization": "ireonada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 216
+  },
+  {
+    "korean": "시장",
+    "english": "market",
+    "romanization": "sijang",
+    "pos": "noun",
+    "hanja": "市場",
+    "frequency": 218
+  },
+  {
+    "korean": "넣다",
+    "english": "to put in; to insert",
+    "romanization": "neota",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 219
+  },
+  {
+    "korean": "중요하다",
+    "english": "to be important",
+    "romanization": "jung-yohada",
+    "pos": "adjective",
+    "hanja": "重要-",
+    "frequency": 220
+  },
+  {
+    "korean": "무슨",
+    "english": "what; which",
+    "romanization": "museun",
+    "pos": "determiner",
+    "hanja": "",
+    "frequency": 221
+  },
+  {
+    "korean": "어렵다",
+    "english": "to be difficult",
+    "romanization": "eoryeopda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 223
+  },
+  {
+    "korean": "힘",
+    "english": "strength; power",
+    "romanization": "him",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 224
+  },
+  {
+    "korean": "너무",
+    "english": "too; very",
+    "romanization": "neomu",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 225
+  },
+  {
+    "korean": "나라",
+    "english": "country",
+    "romanization": "nara",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 226
+  },
+  {
+    "korean": "부르다",
+    "english": "to call; to sing",
+    "romanization": "bureuda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 227
+  },
+  {
+    "korean": "자리",
+    "english": "seat; place",
+    "romanization": "jari",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 229
+  },
+  {
+    "korean": "죽다",
+    "english": "to die",
+    "romanization": "jukda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 231
+  },
+  {
+    "korean": "쪽",
+    "english": "side; page",
+    "romanization": "jjok",
+    "pos": "bound noun",
+    "hanja": "",
+    "frequency": 233
+  },
+  {
+    "korean": "얘기",
+    "english": "story; talk",
+    "romanization": "yaegi",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 237
+  },
+  {
+    "korean": "학생",
+    "english": "student",
+    "romanization": "haksaeng",
+    "pos": "noun",
+    "hanja": "學生",
+    "frequency": 238
+  },
+  {
+    "korean": "엄마",
+    "english": "mom; mother",
+    "romanization": "eomma",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 240
+  },
+  {
+    "korean": "이름",
+    "english": "name",
+    "romanization": "ireum",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 241
+  },
+  {
+    "korean": "하나",
+    "english": "one",
+    "romanization": "hana",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 242
+  },
+  {
+    "korean": "내리다",
+    "english": "to descend; to lower",
+    "romanization": "naerida",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 243
+  },
+  {
+    "korean": "쉽다",
+    "english": "easy",
+    "romanization": "swipda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 246
+  },
+  {
+    "korean": "필요하다",
+    "english": "to need; to require",
+    "romanization": "piryohada",
+    "pos": "adjective",
+    "hanja": "必要-",
+    "frequency": 251
+  },
+  {
+    "korean": "생기다",
+    "english": "to occur; to happen",
+    "romanization": "saenggida",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 253
+  },
+  {
+    "korean": "사용하다",
+    "english": "to use; to employ",
+    "romanization": "sayonghada",
+    "pos": "verb",
+    "hanja": "使用-",
+    "frequency": 254
+  },
+  {
+    "korean": "남편",
+    "english": "husband",
+    "romanization": "nampyeon",
+    "pos": "noun",
+    "hanja": "男便",
+    "frequency": 255
+  },
+  {
+    "korean": "들어오다",
+    "english": "to enter; to come in",
+    "romanization": "deureooda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 256
+  },
+  {
+    "korean": "밖",
+    "english": "outside",
+    "romanization": "bakk",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 257
+  },
+  {
+    "korean": "작다",
+    "english": "small; little",
+    "romanization": "jakda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 259
+  },
+  {
+    "korean": "타다",
+    "english": "to ride; to burn",
+    "romanization": "tada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 260
+  },
+  {
+    "korean": "대학",
+    "english": "university; college",
+    "romanization": "daehak",
+    "pos": "noun",
+    "hanja": "大學",
+    "frequency": 261
+  },
+  {
+    "korean": "가운데",
+    "english": "middle; center",
+    "romanization": "gaunde",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 264
+  },
+  {
+    "korean": "보내다",
+    "english": "to send; to spend",
+    "romanization": "bonaeda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 265
+  },
+  {
+    "korean": "아주",
+    "english": "very; extremely",
+    "romanization": "aju",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 274
+  },
+  {
+    "korean": "밤",
+    "english": "night",
+    "romanization": "bam",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 276
+  },
+  {
+    "korean": "높다",
+    "english": "high; tall",
+    "romanization": "nopda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 277
+  },
+  {
+    "korean": "컴퓨터",
+    "english": "computer",
+    "romanization": "keompyuteo",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 282
+  },
+  {
+    "korean": "먼저",
+    "english": "first; beforehand",
+    "romanization": "meonjeo",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 283
+  },
+  {
+    "korean": "다니다",
+    "english": "to attend; to go",
+    "romanization": "danida",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 284
+  },
+  {
+    "korean": "얼마나",
+    "english": "how much; how many",
+    "romanization": "eolmana",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 285
+  },
+  {
+    "korean": "열다",
+    "english": "to open",
+    "romanization": "yeolda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 287
+  },
+  {
+    "korean": "머리",
+    "english": "head; hair",
+    "romanization": "meori",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 288
+  },
+  {
+    "korean": "묻다",
+    "english": "to ask; to bury",
+    "romanization": "mutda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 289
+  },
+  {
+    "korean": "거기",
+    "english": "there",
+    "romanization": "geogi",
+    "pos": "pronoun",
+    "hanja": "",
+    "frequency": 293
+  },
+  {
+    "korean": "아들",
+    "english": "son",
+    "romanization": "adeul",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 295
+  },
+  {
+    "korean": "아",
+    "english": "ah; oh",
+    "romanization": "a",
+    "pos": "interjection",
+    "hanja": "",
+    "frequency": 297
+  },
+  {
+    "korean": "기다리다",
+    "english": "to wait",
+    "romanization": "gidalida",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 298
+  },
+  {
+    "korean": "곧",
+    "english": "soon; immediately",
+    "romanization": "got",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 307
+  },
+  {
+    "korean": "오늘",
+    "english": "today",
+    "romanization": "oneul",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 310
+  },
+  {
+    "korean": "서로",
+    "english": "each other; mutually",
+    "romanization": "seoro",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 311
+  },
+  {
+    "korean": "이거",
+    "english": "this",
+    "romanization": "igeo",
+    "pos": "pronoun",
+    "hanja": "",
+    "frequency": 314
+  },
+  {
+    "korean": "방",
+    "english": "room",
+    "romanization": "bang",
+    "pos": "noun",
+    "hanja": "房",
+    "frequency": 318
+  },
+  {
+    "korean": "아침",
+    "english": "morning; breakfast",
+    "romanization": "achim",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 323
+  },
+  {
+    "korean": "웃다",
+    "english": "to laugh; to smile",
+    "romanization": "utda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 324
+  },
+  {
+    "korean": "떠나다",
+    "english": "to leave; to depart",
+    "romanization": "tteonada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 327
+  },
+  {
+    "korean": "그래",
+    "english": "yes; okay",
+    "romanization": "geurae",
+    "pos": "interjection",
+    "hanja": "",
+    "frequency": 330
+  },
+  {
+    "korean": "아름답다",
+    "english": "beautiful",
+    "romanization": "areumdapda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 332
+  },
+  {
+    "korean": "끝",
+    "english": "end; finish",
+    "romanization": "kkeut",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 333
+  },
+  {
+    "korean": "입",
+    "english": "mouth",
+    "romanization": "ip",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 338
+  },
+  {
+    "korean": "뭐",
+    "english": "what",
+    "romanization": "mwo",
+    "pos": "interjection",
+    "hanja": "",
+    "frequency": 339
+  },
+  {
+    "korean": "영화",
+    "english": "movie; film",
+    "romanization": "yeonghwa",
+    "pos": "noun",
+    "hanja": "映畵",
+    "frequency": 341
+  },
+  {
+    "korean": "필요",
+    "english": "need; necessity",
+    "romanization": "piryo",
+    "pos": "noun",
+    "hanja": "必要",
+    "frequency": 342
+  },
+  {
+    "korean": "하늘",
+    "english": "sky; heaven",
+    "romanization": "haneul",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 344
+  },
+  {
+    "korean": "정말",
+    "english": "really; truly",
+    "romanization": "jeongmal",
+    "pos": "adverb",
+    "hanja": "正-",
+    "frequency": 349
+  },
+  {
+    "korean": "밥",
+    "english": "rice; meal",
+    "romanization": "bap",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 353
+  },
+  {
+    "korean": "입다",
+    "english": "to wear; to put on",
+    "romanization": "ipda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 354
+  },
+  {
+    "korean": "그림",
+    "english": "picture; painting",
+    "romanization": "geurim",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 362
+  },
+  {
+    "korean": "마시다",
+    "english": "to drink",
+    "romanization": "masida",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 365
+  },
+  {
+    "korean": "치다",
+    "english": "to hit; to play",
+    "romanization": "chida",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 366
+  },
+  {
+    "korean": "혼자",
+    "english": "alone; by oneself",
+    "romanization": "honja",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 367
+  },
+  {
+    "korean": "이제",
+    "english": "now; from now on",
+    "romanization": "ije",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 370
+  },
+  {
+    "korean": "교수",
+    "english": "professor; teaching",
+    "romanization": "gyosu",
+    "pos": "noun",
+    "hanja": "敎授",
+    "frequency": 371
+  },
+  {
+    "korean": "술",
+    "english": "alcohol; liquor",
+    "romanization": "sul",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 372
+  },
+  {
+    "korean": "사랑",
+    "english": "love; affection",
+    "romanization": "sarang",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 373
+  },
+  {
+    "korean": "전화",
+    "english": "telephone; phone call",
+    "romanization": "jeonhwa",
+    "pos": "noun",
+    "hanja": "電話",
+    "frequency": 375
+  },
+  {
+    "korean": "끝나다",
+    "english": "to end; to finish",
+    "romanization": "kkeutnada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 376
+  },
+  {
+    "korean": "돌아오다",
+    "english": "to return; to come back",
+    "romanization": "doraoda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 377
+  },
+  {
+    "korean": "아빠",
+    "english": "dad; father",
+    "romanization": "appa",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 379
+  },
+  {
+    "korean": "한번",
+    "english": "once; one time",
+    "romanization": "hanbeon",
+    "pos": "noun",
+    "hanja": "-番",
+    "frequency": 382
+  },
+  {
+    "korean": "커피",
+    "english": "coffee",
+    "romanization": "keopi",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 383
+  },
+  {
+    "korean": "가슴",
+    "english": "chest; heart",
+    "romanization": "gaseum",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 384
+  },
+  {
+    "korean": "길다",
+    "english": "to be long",
+    "romanization": "gilda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 386
+  },
+  {
+    "korean": "회사",
+    "english": "company; office",
+    "romanization": "hoesa",
+    "pos": "noun",
+    "hanja": "會社",
+    "frequency": 389
+  },
+  {
+    "korean": "맛",
+    "english": "taste; flavor",
+    "romanization": "mat",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 390
+  },
+  {
+    "korean": "매우",
+    "english": "very; extremely",
+    "romanization": "maeu",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 393
+  },
+  {
+    "korean": "오르다",
+    "english": "to rise; to climb",
+    "romanization": "oreuda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 394
+  },
+  {
+    "korean": "음식",
+    "english": "food; meal",
+    "romanization": "eumsik",
+    "pos": "noun",
+    "hanja": "飮食",
+    "frequency": 395
+  },
+  {
+    "korean": "꼭",
+    "english": "surely; certainly",
+    "romanization": "kkok",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 397
+  },
+  {
+    "korean": "요즘",
+    "english": "these days; recently",
+    "romanization": "yojeum",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 399
+  },
+  {
+    "korean": "계획",
+    "english": "plan; project",
+    "romanization": "gyehoek",
+    "pos": "noun",
+    "hanja": "計劃",
+    "frequency": 400
+  },
+  {
+    "korean": "얼마",
+    "english": "how much; how many",
+    "romanization": "eolma",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 402
+  },
+  {
+    "korean": "계속",
+    "english": "continuously; keep",
+    "romanization": "gyesok",
+    "pos": "adverb",
+    "hanja": "繼續",
+    "frequency": 405
+  },
+  {
+    "korean": "아내",
+    "english": "wife",
+    "romanization": "anae",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 408
+  },
+  {
+    "korean": "가족",
+    "english": "family",
+    "romanization": "gajok",
+    "pos": "noun",
+    "hanja": "家族",
+    "frequency": 409
+  },
+  {
+    "korean": "세",
+    "english": "three; age",
+    "romanization": "se",
+    "pos": "determiner",
+    "hanja": "",
+    "frequency": 413
+  },
+  {
+    "korean": "놓다",
+    "english": "to put; to place",
+    "romanization": "nohda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 415
+  },
+  {
+    "korean": "차",
+    "english": "car; tea",
+    "romanization": "cha",
+    "pos": "noun",
+    "hanja": "車",
+    "frequency": 417
+  },
+  {
+    "korean": "놀다",
+    "english": "to play; to hang out",
+    "romanization": "nolda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 418
+  },
+  {
+    "korean": "도시",
+    "english": "city; town",
+    "romanization": "dosi",
+    "pos": "noun",
+    "hanja": "都市",
+    "frequency": 423
+  },
+  {
+    "korean": "나이",
+    "english": "age",
+    "romanization": "nai",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 429
+  },
+  {
+    "korean": "바꾸다",
+    "english": "to change; to exchange",
+    "romanization": "bakkuda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 432
+  },
+  {
+    "korean": "좋아하다",
+    "english": "to like; to enjoy",
+    "romanization": "joahada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 438
+  },
+  {
+    "korean": "그리다",
+    "english": "to draw; to paint",
+    "romanization": "geurida",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 439
+  },
+  {
+    "korean": "배우다",
+    "english": "to learn; to study",
+    "romanization": "baeuda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 441
+  },
+  {
+    "korean": "옆",
+    "english": "side; beside",
+    "romanization": "yeop",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 444
+  },
+  {
+    "korean": "어",
+    "english": "uh; oh",
+    "romanization": "eo",
+    "pos": "interjection",
+    "hanja": "",
+    "frequency": 446
+  },
+  {
+    "korean": "아래",
+    "english": "below; under",
+    "romanization": "arae",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 453
+  },
+  {
+    "korean": "그럼",
+    "english": "then; in that case",
+    "romanization": "geureom",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 457
+  },
+  {
+    "korean": "산",
+    "english": "mountain",
+    "romanization": "san",
+    "pos": "noun",
+    "hanja": "山",
+    "frequency": 465
+  },
+  {
+    "korean": "하지만",
+    "english": "but; however",
+    "romanization": "hajiman",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 467
+  },
+  {
+    "korean": "문",
+    "english": "door; gate",
+    "romanization": "mun",
+    "pos": "noun",
+    "hanja": "門",
+    "frequency": 469
+  },
+  {
+    "korean": "꽃",
+    "english": "flower",
+    "romanization": "kkot",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 470
+  },
+  {
+    "korean": "그동안",
+    "english": "in the meantime; during",
+    "romanization": "geudongan",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 473
+  },
+  {
+    "korean": "갑자기",
+    "english": "suddenly; abruptly",
+    "romanization": "gapjagi",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 475
+  },
+  {
+    "korean": "바람",
+    "english": "wind; wish",
+    "romanization": "baram",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 478
+  },
+  {
+    "korean": "잘하다",
+    "english": "to do well; to be good at",
+    "romanization": "jalhada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 479
+  },
+  {
+    "korean": "노래",
+    "english": "song; singing",
+    "romanization": "norae",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 487
+  },
+  {
+    "korean": "바다",
+    "english": "sea; ocean",
+    "romanization": "bada",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 488
+  },
+  {
+    "korean": "힘들다",
+    "english": "to be difficult; to be hard",
+    "romanization": "himdeulda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 489
+  },
+  {
+    "korean": "공부",
+    "english": "study",
+    "romanization": "gongbu",
+    "pos": "noun",
+    "hanja": "工夫",
+    "frequency": 490
+  },
+  {
+    "korean": "못하다",
+    "english": "to be unable; to be bad at",
+    "romanization": "mothada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 495
+  },
+  {
+    "korean": "언니",
+    "english": "older sister",
+    "romanization": "eonni",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 497
+  },
+  {
+    "korean": "분",
+    "english": "minute; person",
+    "romanization": "bun",
+    "pos": "bound noun",
+    "hanja": "",
+    "frequency": 499
+  },
+  {
+    "korean": "불",
+    "english": "fire; light",
+    "romanization": "bul",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 506
+  },
+  {
+    "korean": "학년",
+    "english": "school year; grade",
+    "romanization": "hangnyeon",
+    "pos": "noun",
+    "hanja": "學年",
+    "frequency": 512
+  },
+  {
+    "korean": "신문",
+    "english": "newspaper",
+    "romanization": "sinmun",
+    "pos": "noun",
+    "hanja": "新聞",
+    "frequency": 513
+  },
+  {
+    "korean": "이해하다",
+    "english": "to understand",
+    "romanization": "ihaehada",
+    "pos": "verb",
+    "hanja": "理解-",
+    "frequency": 515
+  },
+  {
+    "korean": "선생",
+    "english": "teacher",
+    "romanization": "seonsaeng",
+    "pos": "noun",
+    "hanja": "先生",
+    "frequency": 518
+  },
+  {
+    "korean": "돌아가다",
+    "english": "to return; to go back",
+    "romanization": "doragada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 519
+  },
+  {
+    "korean": "기분",
+    "english": "feeling; mood",
+    "romanization": "gibun",
+    "pos": "noun",
+    "hanja": "氣分",
+    "frequency": 525
+  },
+  {
+    "korean": "옷",
+    "english": "clothes",
+    "romanization": "ot",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 530
+  },
+  {
+    "korean": "전",
+    "english": "before; ago",
+    "romanization": "jeon",
+    "pos": "determiner",
+    "hanja": "前",
+    "frequency": 534
+  },
+  {
+    "korean": "꿈",
+    "english": "dream",
+    "romanization": "kkum",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 535
+  },
+  {
+    "korean": "할머니",
+    "english": "grandmother",
+    "romanization": "halmeoni",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 536
+  },
+  {
+    "korean": "회의",
+    "english": "meeting; conference",
+    "romanization": "hoeui",
+    "pos": "noun",
+    "hanja": "會議",
+    "frequency": 537
+  },
+  {
+    "korean": "이야기하다",
+    "english": "to talk; to converse",
+    "romanization": "iyagihada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 539
+  },
+  {
+    "korean": "나무",
+    "english": "tree; wood",
+    "romanization": "namu",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 540
+  },
+  {
+    "korean": "자다",
+    "english": "to sleep",
+    "romanization": "jada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 541
+  },
+  {
+    "korean": "걷다",
+    "english": "to walk",
+    "romanization": "geotda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 546
+  },
+  {
+    "korean": "이때",
+    "english": "at this time; now",
+    "romanization": "itte",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 548
+  },
+  {
+    "korean": "물건",
+    "english": "thing; object",
+    "romanization": "mulgeon",
+    "pos": "noun",
+    "hanja": "物件",
+    "frequency": 560
+  },
+  {
+    "korean": "발",
+    "english": "foot",
+    "romanization": "bal",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 564
+  },
+  {
+    "korean": "빨리",
+    "english": "quickly; fast",
+    "romanization": "ppalli",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 572
+  },
+  {
+    "korean": "시작되다",
+    "english": "to begin; to start",
+    "romanization": "sijakdoeda",
+    "pos": "verb",
+    "hanja": "始作-",
+    "frequency": 573
+  },
+  {
+    "korean": "둘",
+    "english": "two",
+    "romanization": "dul",
+    "pos": "numeral",
+    "hanja": "",
+    "frequency": 575
+  },
+  {
+    "korean": "말다",
+    "english": "to stop; to cease",
+    "romanization": "malda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 576
+  },
+  {
+    "korean": "설명하다",
+    "english": "to explain",
+    "romanization": "seolmyeonghada",
+    "pos": "verb",
+    "hanja": "說明-",
+    "frequency": 577
+  },
+  {
+    "korean": "살",
+    "english": "flesh; age",
+    "romanization": "sal",
+    "pos": "bound noun",
+    "hanja": "",
+    "frequency": 581
+  },
+  {
+    "korean": "음악",
+    "english": "music",
+    "romanization": "eumak",
+    "pos": "noun",
+    "hanja": "音樂",
+    "frequency": 586
+  },
+  {
+    "korean": "아프다",
+    "english": "to be sick; to hurt",
+    "romanization": "apeuda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 589
+  },
+  {
+    "korean": "비",
+    "english": "rain",
+    "romanization": "bi",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 592
+  },
+  {
+    "korean": "고향",
+    "english": "hometown",
+    "romanization": "gohyang",
+    "pos": "noun",
+    "hanja": "故鄕",
+    "frequency": 593
+  },
+  {
+    "korean": "놀라다",
+    "english": "to be surprised",
+    "romanization": "nollada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 594
+  },
+  {
+    "korean": "울다",
+    "english": "to cry",
+    "romanization": "ulda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 596
+  },
+  {
+    "korean": "은행",
+    "english": "bank",
+    "romanization": "eunhaeng",
+    "pos": "noun",
+    "hanja": "銀行",
+    "frequency": 599
+  },
+  {
+    "korean": "지내다",
+    "english": "to spend time; to live",
+    "romanization": "jinaeda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 600
+  },
+  {
+    "korean": "결혼",
+    "english": "marriage",
+    "romanization": "gyeolhon",
+    "pos": "noun",
+    "hanja": "結婚",
+    "frequency": 601
+  },
+  {
+    "korean": "동생",
+    "english": "younger sibling",
+    "romanization": "dongsaeng",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 602
+  },
+  {
+    "korean": "예",
+    "english": "yes; example",
+    "romanization": "ye",
+    "pos": "interjection",
+    "hanja": "",
+    "frequency": 605
+  },
+  {
+    "korean": "오후",
+    "english": "afternoon",
+    "romanization": "ohu",
+    "pos": "noun",
+    "hanja": "午後",
+    "frequency": 606
+  },
+  {
+    "korean": "빠르다",
+    "english": "to be fast; to be quick",
+    "romanization": "ppareuda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 613
+  },
+  {
+    "korean": "아기",
+    "english": "baby",
+    "romanization": "agi",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 615
+  },
+  {
+    "korean": "아저씨",
+    "english": "mister; uncle",
+    "romanization": "ajeossi",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 616
+  },
+  {
+    "korean": "옛날",
+    "english": "old days; past",
+    "romanization": "yennal",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 617
+  },
+  {
+    "korean": "참",
+    "english": "really; truly",
+    "romanization": "cham",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 622
+  },
+  {
+    "korean": "이곳",
+    "english": "this place; here",
+    "romanization": "igot",
+    "pos": "pronoun",
+    "hanja": "",
+    "frequency": 624
+  },
+  {
+    "korean": "딸",
+    "english": "daughter",
+    "romanization": "ttal",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 625
+  },
+  {
+    "korean": "마지막",
+    "english": "last; final",
+    "romanization": "majimak",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 626
+  },
+  {
+    "korean": "병원",
+    "english": "hospital",
+    "romanization": "byeongwon",
+    "pos": "noun",
+    "hanja": "病院",
+    "frequency": 628
+  },
+  {
+    "korean": "경찰",
+    "english": "police",
+    "romanization": "gyeongchal",
+    "pos": "noun",
+    "hanja": "警察",
+    "frequency": 632
+  },
+  {
+    "korean": "저녁",
+    "english": "evening; dinner",
+    "romanization": "jeonyeok",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 634
+  },
+  {
+    "korean": "그러면",
+    "english": "then; in that case",
+    "romanization": "geureomyeon",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 636
+  },
+  {
+    "korean": "넓다",
+    "english": "wide; broad",
+    "romanization": "neolda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 638
+  },
+  {
+    "korean": "시험",
+    "english": "exam; test",
+    "romanization": "siheom",
+    "pos": "noun",
+    "hanja": "試驗",
+    "frequency": 639
+  },
+  {
+    "korean": "잠",
+    "english": "sleep",
+    "romanization": "jam",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 640
+  },
+  {
+    "korean": "건강",
+    "english": "health",
+    "romanization": "geongang",
+    "pos": "noun",
+    "hanja": "健康",
+    "frequency": 647
+  },
+  {
+    "korean": "가깝다",
+    "english": "close; near",
+    "romanization": "gakkapda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 648
+  },
+  {
+    "korean": "건물",
+    "english": "building",
+    "romanization": "geonmul",
+    "pos": "noun",
+    "hanja": "建物",
+    "frequency": 649
+  },
+  {
+    "korean": "외국",
+    "english": "foreign country",
+    "romanization": "oeguk",
+    "pos": "noun",
+    "hanja": "外國",
+    "frequency": 651
+  },
+  {
+    "korean": "밑",
+    "english": "bottom; below",
+    "romanization": "mit",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 652
+  },
+  {
+    "korean": "어른",
+    "english": "adult",
+    "romanization": "eoreun",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 653
+  },
+  {
+    "korean": "팔다",
+    "english": "to sell",
+    "romanization": "palda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 657
+  },
+  {
+    "korean": "열심히",
+    "english": "diligently; hard",
+    "romanization": "yeolsimhi",
+    "pos": "adverb",
+    "hanja": "熱心-",
+    "frequency": 660
+  },
+  {
+    "korean": "일하다",
+    "english": "to work",
+    "romanization": "ilhada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 661
+  },
+  {
+    "korean": "조금",
+    "english": "a little; a bit",
+    "romanization": "jogeum",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 663
+  },
+  {
+    "korean": "팀",
+    "english": "team",
+    "romanization": "tim",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 664
+  },
+  {
+    "korean": "부모",
+    "english": "parents",
+    "romanization": "bumo",
+    "pos": "noun",
+    "hanja": "父母",
+    "frequency": 665
+  },
+  {
+    "korean": "올라가다",
+    "english": "to go up; to ascend",
+    "romanization": "ollagada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 669
+  },
+  {
+    "korean": "그날",
+    "english": "that day",
+    "romanization": "geunal",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 672
+  },
+  {
+    "korean": "자주",
+    "english": "often; frequently",
+    "romanization": "jaju",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 674
+  },
+  {
+    "korean": "담배",
+    "english": "cigarette; tobacco",
+    "romanization": "dambae",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 679
+  },
+  {
+    "korean": "할아버지",
+    "english": "grandfather",
+    "romanization": "harabeoji",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 682
+  },
+  {
+    "korean": "태어나다",
+    "english": "to be born",
+    "romanization": "taeeonada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 684
+  },
+  {
+    "korean": "벌써",
+    "english": "already",
+    "romanization": "beolsseo",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 686
+  },
+  {
+    "korean": "환자",
+    "english": "patient",
+    "romanization": "hwanja",
+    "pos": "noun",
+    "hanja": "患者",
+    "frequency": 689
+  },
+  {
+    "korean": "재미있다",
+    "english": "to be fun; to be interesting",
+    "romanization": "jaemiitda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 697
+  },
+  {
+    "korean": "가르치다",
+    "english": "to teach",
+    "romanization": "gareuchida",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 698
+  },
+  {
+    "korean": "대화",
+    "english": "conversation; dialogue",
+    "romanization": "daehwa",
+    "pos": "noun",
+    "hanja": "對話",
+    "frequency": 699
+  },
+  {
+    "korean": "올해",
+    "english": "this year",
+    "romanization": "olhae",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 701
+  },
+  {
+    "korean": "형",
+    "english": "older brother",
+    "romanization": "hyeong",
+    "pos": "noun",
+    "hanja": "兄",
+    "frequency": 702
+  },
+  {
+    "korean": "모두",
+    "english": "all; everyone",
+    "romanization": "modu",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 708
+  },
+  {
+    "korean": "걸다",
+    "english": "to hang; to call",
+    "romanization": "geolda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 716
+  },
+  {
+    "korean": "멀다",
+    "english": "far; distant",
+    "romanization": "meolda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 718
+  },
+  {
+    "korean": "버스",
+    "english": "bus",
+    "romanization": "beoseu",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 719
+  },
+  {
+    "korean": "잠시",
+    "english": "a moment; briefly",
+    "romanization": "jamsi",
+    "pos": "adverb",
+    "hanja": "暫時",
+    "frequency": 722
+  },
+  {
+    "korean": "사진",
+    "english": "photo; picture",
+    "romanization": "sajin",
+    "pos": "noun",
+    "hanja": "寫眞",
+    "frequency": 728
+  },
+  {
+    "korean": "제일",
+    "english": "most; best",
+    "romanization": "jeil",
+    "pos": "noun",
+    "hanja": "第一",
+    "frequency": 733
+  },
+  {
+    "korean": "아마",
+    "english": "probably; maybe",
+    "romanization": "ama",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 735
+  },
+  {
+    "korean": "얘기하다",
+    "english": "to talk; to chat",
+    "romanization": "yaegihada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 736
+  },
+  {
+    "korean": "다리",
+    "english": "leg; bridge",
+    "romanization": "dari",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 747
+  },
+  {
+    "korean": "아무",
+    "english": "any; anyone",
+    "romanization": "amu",
+    "pos": "determiner",
+    "hanja": "",
+    "frequency": 748
+  },
+  {
+    "korean": "항상",
+    "english": "always",
+    "romanization": "hangsang",
+    "pos": "adverb",
+    "hanja": "恒常",
+    "frequency": 754
+  },
+  {
+    "korean": "해",
+    "english": "sun; year",
+    "romanization": "hae",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 755
+  },
+  {
+    "korean": "잃다",
+    "english": "to lose",
+    "romanization": "ilta",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 756
+  },
+  {
+    "korean": "비슷하다",
+    "english": "to be similar",
+    "romanization": "biseuthada",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 760
+  },
+  {
+    "korean": "사랑하다",
+    "english": "to love",
+    "romanization": "saranghada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 764
+  },
+  {
+    "korean": "여름",
+    "english": "summer",
+    "romanization": "yeoreum",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 766
+  },
+  {
+    "korean": "싫다",
+    "english": "to dislike; to hate",
+    "romanization": "silta",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 776
+  },
+  {
+    "korean": "그러니까",
+    "english": "so; therefore",
+    "romanization": "geureonikka",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 785
+  },
+  {
+    "korean": "값",
+    "english": "price; value",
+    "romanization": "gap",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 788
+  },
+  {
+    "korean": "언제나",
+    "english": "always; all the time",
+    "romanization": "eonjena",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 794
+  },
+  {
+    "korean": "자동차",
+    "english": "car; automobile",
+    "romanization": "jadongcha",
+    "pos": "noun",
+    "hanja": "自動車",
+    "frequency": 796
+  },
+  {
+    "korean": "개월",
+    "english": "month",
+    "romanization": "gaewol",
+    "pos": "bound noun",
+    "hanja": "個月",
+    "frequency": 799
+  },
+  {
+    "korean": "어린이",
+    "english": "child; kid",
+    "romanization": "eorini",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 802
+  },
+  {
+    "korean": "공부하다",
+    "english": "to study",
+    "romanization": "gongbuhada",
+    "pos": "verb",
+    "hanja": "工夫-",
+    "frequency": 807
+  },
+  {
+    "korean": "닦다",
+    "english": "to clean; to wipe",
+    "romanization": "dakda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 810
+  },
+  {
+    "korean": "말씀",
+    "english": "speech; words",
+    "romanization": "malsseum",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 812
+  },
+  {
+    "korean": "괜찮다",
+    "english": "to be okay; to be fine",
+    "romanization": "gwaenchanhda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 813
+  },
+  {
+    "korean": "눈물",
+    "english": "tear; tears",
+    "romanization": "nunmul",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 814
+  },
+  {
+    "korean": "아니",
+    "english": "no; not",
+    "romanization": "ani",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 817
+  },
+  {
+    "korean": "주인",
+    "english": "owner; master",
+    "romanization": "juin",
+    "pos": "noun",
+    "hanja": "主人",
+    "frequency": 825
+  },
+  {
+    "korean": "반",
+    "english": "half; class",
+    "romanization": "ban",
+    "pos": "noun",
+    "hanja": "半",
+    "frequency": 834
+  },
+  {
+    "korean": "귀",
+    "english": "ear",
+    "romanization": "gwi",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 840
+  },
+  {
+    "korean": "미터",
+    "english": "meter",
+    "romanization": "miteo",
+    "pos": "bound noun",
+    "hanja": "",
+    "frequency": 843
+  },
+  {
+    "korean": "어떠하다",
+    "english": "to be how; to be like",
+    "romanization": "eotteohada",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 845
+  },
+  {
+    "korean": "배",
+    "english": "stomach; boat; pear",
+    "romanization": "bae",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 850
+  },
+  {
+    "korean": "아파트",
+    "english": "apartment",
+    "romanization": "apateu",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 851
+  },
+  {
+    "korean": "가끔",
+    "english": "sometimes; occasionally",
+    "romanization": "gakkeum",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 852
+  },
+  {
+    "korean": "짧다",
+    "english": "to be short",
+    "romanization": "jjalbda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 856
+  },
+  {
+    "korean": "고맙다",
+    "english": "to be thankful; to be grateful",
+    "romanization": "gomapda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 857
+  },
+  {
+    "korean": "그곳",
+    "english": "there; that place",
+    "romanization": "geugeot",
+    "pos": "pronoun",
+    "hanja": "",
+    "frequency": 860
+  },
+  {
+    "korean": "바쁘다",
+    "english": "to be busy",
+    "romanization": "bappeuda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 868
+  },
+  {
+    "korean": "나쁘다",
+    "english": "to be bad",
+    "romanization": "nappeuda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 873
+  },
+  {
+    "korean": "게임",
+    "english": "game",
+    "romanization": "geim",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 877
+  },
+  {
+    "korean": "잔",
+    "english": "cup; glass",
+    "romanization": "jan",
+    "pos": "noun",
+    "hanja": "盞",
+    "frequency": 884
+  },
+  {
+    "korean": "있다",
+    "english": "to exist; to have",
+    "romanization": "itda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 888
+  },
+  {
+    "korean": "내려오다",
+    "english": "to come down",
+    "romanization": "naeryeooda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 894
+  },
+  {
+    "korean": "손님",
+    "english": "guest; customer",
+    "romanization": "sonnim",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 902
+  },
+  {
+    "korean": "뉴스",
+    "english": "news",
+    "romanization": "nyuseu",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 914
+  },
+  {
+    "korean": "수업",
+    "english": "class; lesson",
+    "romanization": "sueop",
+    "pos": "noun",
+    "hanja": "授業",
+    "frequency": 919
+  },
+  {
+    "korean": "겨울",
+    "english": "winter",
+    "romanization": "gyeoul",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 920
+  },
+  {
+    "korean": "층",
+    "english": "floor; layer",
+    "romanization": "cheung",
+    "pos": "noun",
+    "hanja": "層",
+    "frequency": 922
+  },
+  {
+    "korean": "장",
+    "english": "sheet; chapter",
+    "romanization": "jang",
+    "pos": "bound noun",
+    "hanja": "張",
+    "frequency": 925
+  },
+  {
+    "korean": "식사",
+    "english": "meal; dining",
+    "romanization": "siksa",
+    "pos": "noun",
+    "hanja": "食事",
+    "frequency": 928
+  },
+  {
+    "korean": "안다",
+    "english": "to hug; to embrace",
+    "romanization": "anda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 929
+  },
+  {
+    "korean": "잊다",
+    "english": "to forget",
+    "romanization": "itda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 931
+  },
+  {
+    "korean": "텔레비전",
+    "english": "television",
+    "romanization": "tellebijeon",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 940
+  },
+  {
+    "korean": "씻다",
+    "english": "to wash",
+    "romanization": "ssitda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 947
+  },
+  {
+    "korean": "편지",
+    "english": "letter",
+    "romanization": "pyeonji",
+    "pos": "noun",
+    "hanja": "便紙",
+    "frequency": 952
+  },
+  {
+    "korean": "센티미터",
+    "english": "centimeter",
+    "romanization": "sentimiteo",
+    "pos": "bound noun",
+    "hanja": "",
+    "frequency": 956
+  },
+  {
+    "korean": "팔",
+    "english": "arm; eight",
+    "romanization": "pal",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 957
+  },
+  {
+    "korean": "설명",
+    "english": "explanation",
+    "romanization": "seolmyeong",
+    "pos": "noun",
+    "hanja": "說明",
+    "frequency": 965
+  },
+  {
+    "korean": "티브이",
+    "english": "TV",
+    "romanization": "tibeui",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 971
+  },
+  {
+    "korean": "봄",
+    "english": "spring",
+    "romanization": "bom",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 972
+  },
+  {
+    "korean": "낮다",
+    "english": "to be low",
+    "romanization": "natda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 974
+  },
+  {
+    "korean": "어깨",
+    "english": "shoulder",
+    "romanization": "eokkae",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 975
+  },
+  {
+    "korean": "부부",
+    "english": "married couple",
+    "romanization": "bubu",
+    "pos": "noun",
+    "hanja": "夫婦",
+    "frequency": 977
+  },
+  {
+    "korean": "오래",
+    "english": "long time",
+    "romanization": "orae",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 978
+  },
+  {
+    "korean": "여행",
+    "english": "travel; trip",
+    "romanization": "yeohaeng",
+    "pos": "noun",
+    "hanja": "旅行",
+    "frequency": 984
+  },
+  {
+    "korean": "공",
+    "english": "ball; zero",
+    "romanization": "gong",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 988
+  },
+  {
+    "korean": "오월",
+    "english": "May",
+    "romanization": "owol",
+    "pos": "noun",
+    "hanja": "五月",
+    "frequency": 991
+  },
+  {
+    "korean": "쉬다",
+    "english": "to rest; to relax",
+    "romanization": "swida",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 992
+  },
+  {
+    "korean": "과",
+    "english": "lesson; chapter",
+    "romanization": "gwa",
+    "pos": "noun",
+    "hanja": "課",
+    "frequency": 996
+  },
+  {
+    "korean": "오빠",
+    "english": "older brother (for females)",
+    "romanization": "oppa",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1000
+  },
+  {
+    "korean": "즐겁다",
+    "english": "to be pleasant; to be enjoyable",
+    "romanization": "jeulgeopda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 1002
+  },
+  {
+    "korean": "사월",
+    "english": "April",
+    "romanization": "sawol",
+    "pos": "noun",
+    "hanja": "四月",
+    "frequency": 1006
+  },
+  {
+    "korean": "싸우다",
+    "english": "to fight; to argue",
+    "romanization": "ssauda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 1007
+  },
+  {
+    "korean": "언제",
+    "english": "when",
+    "romanization": "eonje",
+    "pos": "pronoun",
+    "hanja": "",
+    "frequency": 1008
+  },
+  {
+    "korean": "예쁘다",
+    "english": "to be pretty; to be beautiful",
+    "romanization": "yeppeuda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 1009
+  },
+  {
+    "korean": "나중",
+    "english": "later",
+    "romanization": "najung",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1018
+  },
+  {
+    "korean": "맛있다",
+    "english": "to be delicious; to be tasty",
+    "romanization": "masitda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 1020
+  },
+  {
+    "korean": "며칠",
+    "english": "a few days; several days",
+    "romanization": "myeochil",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1021
+  },
+  {
+    "korean": "작년",
+    "english": "last year",
+    "romanization": "jangnyeon",
+    "pos": "noun",
+    "hanja": "昨年",
+    "frequency": 1040
+  },
+  {
+    "korean": "내려가다",
+    "english": "to go down; to descend",
+    "romanization": "naeryeogada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 1041
+  },
+  {
+    "korean": "쓰레기",
+    "english": "trash; garbage",
+    "romanization": "sseuregi",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1046
+  },
+  {
+    "korean": "고기",
+    "english": "meat",
+    "romanization": "gogi",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1055
+  },
+  {
+    "korean": "가져오다",
+    "english": "to bring",
+    "romanization": "gajyeooda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 1060
+  },
+  {
+    "korean": "남녀",
+    "english": "men and women",
+    "romanization": "namnyeo",
+    "pos": "noun",
+    "hanja": "男女",
+    "frequency": 1068
+  },
+  {
+    "korean": "준비",
+    "english": "preparation",
+    "romanization": "junbi",
+    "pos": "noun",
+    "hanja": "準備",
+    "frequency": 1074
+  },
+  {
+    "korean": "구월",
+    "english": "September",
+    "romanization": "guwol",
+    "pos": "noun",
+    "hanja": "九月",
+    "frequency": 1076
+  },
+  {
+    "korean": "맑다",
+    "english": "to be clear; to be clean",
+    "romanization": "makda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 1077
+  },
+  {
+    "korean": "유월",
+    "english": "June",
+    "romanization": "yuwol",
+    "pos": "noun",
+    "hanja": "六月",
+    "frequency": 1080
+  },
+  {
+    "korean": "허리",
+    "english": "waist",
+    "romanization": "heori",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1082
+  },
+  {
+    "korean": "새",
+    "english": "bird; new",
+    "romanization": "sae",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1089
+  },
+  {
+    "korean": "영어",
+    "english": "English (language)",
+    "romanization": "yeongeo",
+    "pos": "noun",
+    "hanja": "英語",
+    "frequency": 1090
+  },
+  {
+    "korean": "대답하다",
+    "english": "to answer; to reply",
+    "romanization": "daedapada",
+    "pos": "verb",
+    "hanja": "對答-",
+    "frequency": 1096
+  },
+  {
+    "korean": "벗다",
+    "english": "to take off; to undress",
+    "romanization": "beotda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 1104
+  },
+  {
+    "korean": "준비하다",
+    "english": "to prepare",
+    "romanization": "junbihada",
+    "pos": "verb",
+    "hanja": "準備-",
+    "frequency": 1107
+  },
+  {
+    "korean": "돕다",
+    "english": "to help; to assist",
+    "romanization": "dopda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 1109
+  },
+  {
+    "korean": "달",
+    "english": "moon; month",
+    "romanization": "dal",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1115
+  },
+  {
+    "korean": "사장",
+    "english": "boss; president",
+    "romanization": "sajang",
+    "pos": "noun",
+    "hanja": "社長",
+    "frequency": 1116
+  },
+  {
+    "korean": "삼월",
+    "english": "March",
+    "romanization": "samwol",
+    "pos": "noun",
+    "hanja": "三月",
+    "frequency": 1117
+  },
+  {
+    "korean": "그렇지만",
+    "english": "but; however",
+    "romanization": "geureochiman",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 1120
+  },
+  {
+    "korean": "키",
+    "english": "height; key",
+    "romanization": "ki",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1124
+  },
+  {
+    "korean": "걱정",
+    "english": "worry; concern",
+    "romanization": "geokjeong",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1129
+  },
+  {
+    "korean": "결혼하다",
+    "english": "to marry",
+    "romanization": "gyeolhonhada",
+    "pos": "verb",
+    "hanja": "結婚-",
+    "frequency": 1130
+  },
+  {
+    "korean": "누나",
+    "english": "older sister (for males)",
+    "romanization": "nuna",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1140
+  },
+  {
+    "korean": "질문",
+    "english": "question",
+    "romanization": "jilmun",
+    "pos": "noun",
+    "hanja": "質問",
+    "frequency": 1144
+  },
+  {
+    "korean": "근처",
+    "english": "nearby; vicinity",
+    "romanization": "geuncheo",
+    "pos": "noun",
+    "hanja": "近處",
+    "frequency": 1151
+  },
+  {
+    "korean": "부모님",
+    "english": "parents",
+    "romanization": "bumonim",
+    "pos": "noun",
+    "hanja": "父母-",
+    "frequency": 1160
+  },
+  {
+    "korean": "계시다",
+    "english": "to be (honorific)",
+    "romanization": "gyesida",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 1163
+  },
+  {
+    "korean": "마리",
+    "english": "counter for animals",
+    "romanization": "mari",
+    "pos": "bound noun",
+    "hanja": "",
+    "frequency": 1168
+  },
+  {
+    "korean": "비행기",
+    "english": "airplane",
+    "romanization": "bihaenggi",
+    "pos": "noun",
+    "hanja": "飛行機",
+    "frequency": 1171
+  },
+  {
+    "korean": "뜨겁다",
+    "english": "to be hot (to touch)",
+    "romanization": "tteugeopda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 1178
+  },
+  {
+    "korean": "낮",
+    "english": "daytime; noon",
+    "romanization": "nat",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1184
+  },
+  {
+    "korean": "일찍",
+    "english": "early",
+    "romanization": "iljjik",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 1186
+  },
+  {
+    "korean": "찍다",
+    "english": "to take (a photo); to stamp",
+    "romanization": "jjikda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 1188
+  },
+  {
+    "korean": "가볍다",
+    "english": "to be light (weight)",
+    "romanization": "gabyeopda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 1189
+  },
+  {
+    "korean": "오전",
+    "english": "morning; a.m.",
+    "romanization": "ojeon",
+    "pos": "noun",
+    "hanja": "午前",
+    "frequency": 1193
+  },
+  {
+    "korean": "가게",
+    "english": "store; shop",
+    "romanization": "gage",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1195
+  },
+  {
+    "korean": "약속",
+    "english": "promise; appointment",
+    "romanization": "yaksok",
+    "pos": "noun",
+    "hanja": "約束",
+    "frequency": 1203
+  },
+  {
+    "korean": "소금",
+    "english": "salt",
+    "romanization": "sogeum",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1221
+  },
+  {
+    "korean": "자전거",
+    "english": "bicycle",
+    "romanization": "jajeongeo",
+    "pos": "noun",
+    "hanja": "自轉車",
+    "frequency": 1224
+  },
+  {
+    "korean": "목",
+    "english": "neck; throat",
+    "romanization": "mok",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1230
+  },
+  {
+    "korean": "피우다",
+    "english": "to smoke; to light",
+    "romanization": "piuda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 1239
+  },
+  {
+    "korean": "교통",
+    "english": "traffic; transportation",
+    "romanization": "gyotong",
+    "pos": "noun",
+    "hanja": "交通",
+    "frequency": 1249
+  },
+  {
+    "korean": "거리",
+    "english": "street; distance",
+    "romanization": "geori",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1258
+  },
+  {
+    "korean": "불다",
+    "english": "to blow",
+    "romanization": "bulda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 1263
+  },
+  {
+    "korean": "한글",
+    "english": "Hangeul; Korean alphabet",
+    "romanization": "hangeul",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1267
+  },
+  {
+    "korean": "가을",
+    "english": "autumn; fall",
+    "romanization": "gaeul",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1268
+  },
+  {
+    "korean": "내일",
+    "english": "tomorrow",
+    "romanization": "naeil",
+    "pos": "noun",
+    "hanja": "來日",
+    "frequency": 1270
+  },
+  {
+    "korean": "손가락",
+    "english": "finger",
+    "romanization": "sonkarak",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1273
+  },
+  {
+    "korean": "급",
+    "english": "level; grade",
+    "romanization": "geup",
+    "pos": "noun",
+    "hanja": "級",
+    "frequency": 1289
+  },
+  {
+    "korean": "날씨",
+    "english": "weather",
+    "romanization": "nalssi",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1291
+  },
+  {
+    "korean": "동물",
+    "english": "animal",
+    "romanization": "dongmul",
+    "pos": "noun",
+    "hanja": "動物",
+    "frequency": 1294
+  },
+  {
+    "korean": "의사",
+    "english": "doctor",
+    "romanization": "uisa",
+    "pos": "noun",
+    "hanja": "醫師",
+    "frequency": 1295
+  },
+  {
+    "korean": "건강하다",
+    "english": "to be healthy",
+    "romanization": "geonganghada",
+    "pos": "adjective",
+    "hanja": "健康-",
+    "frequency": 1297
+  },
+  {
+    "korean": "여러분",
+    "english": "everyone; you all",
+    "romanization": "yeoreobun",
+    "pos": "pronoun",
+    "hanja": "",
+    "frequency": 1300
+  },
+  {
+    "korean": "왜냐하면",
+    "english": "because",
+    "romanization": "waenyahamyeon",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 1301
+  },
+  {
+    "korean": "네",
+    "english": "yes",
+    "romanization": "ne",
+    "pos": "determiner",
+    "hanja": "",
+    "frequency": 1304
+  },
+  {
+    "korean": "도착하다",
+    "english": "to arrive",
+    "romanization": "dochakhada",
+    "pos": "verb",
+    "hanja": "到着-",
+    "frequency": 1305
+  },
+  {
+    "korean": "병",
+    "english": "disease; illness",
+    "romanization": "byeong",
+    "pos": "noun",
+    "hanja": "病",
+    "frequency": 1306
+  },
+  {
+    "korean": "따뜻하다",
+    "english": "to be warm",
+    "romanization": "ttatteuthada",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 1312
+  },
+  {
+    "korean": "축구",
+    "english": "soccer; football",
+    "romanization": "chukgu",
+    "pos": "noun",
+    "hanja": "蹴球",
+    "frequency": 1317
+  },
+  {
+    "korean": "밝다",
+    "english": "to be bright",
+    "romanization": "balgda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 1322
+  },
+  {
+    "korean": "장소",
+    "english": "place; location",
+    "romanization": "jangso",
+    "pos": "noun",
+    "hanja": "場所",
+    "frequency": 1325
+  },
+  {
+    "korean": "적다",
+    "english": "to write down; to be few",
+    "romanization": "jeokda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 1334
+  },
+  {
+    "korean": "코",
+    "english": "nose",
+    "romanization": "ko",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1335
+  },
+  {
+    "korean": "고등학교",
+    "english": "high school",
+    "romanization": "godeunghakgyo",
+    "pos": "noun",
+    "hanja": "高等學校",
+    "frequency": 1337
+  },
+  {
+    "korean": "교실",
+    "english": "classroom",
+    "romanization": "gyosil",
+    "pos": "noun",
+    "hanja": "敎室",
+    "frequency": 1339
+  },
+  {
+    "korean": "별",
+    "english": "star",
+    "romanization": "byeol",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1346
+  },
+  {
+    "korean": "복잡하다",
+    "english": "to be complicated; to be crowded",
+    "romanization": "bokjaphada",
+    "pos": "adjective",
+    "hanja": "複雜-",
+    "frequency": 1347
+  },
+  {
+    "korean": "색",
+    "english": "color",
+    "romanization": "saek",
+    "pos": "noun",
+    "hanja": "色",
+    "frequency": 1358
+  },
+  {
+    "korean": "똑같다",
+    "english": "to be the same",
+    "romanization": "ttokgatda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 1376
+  },
+  {
+    "korean": "말씀하다",
+    "english": "to speak (honorific)",
+    "romanization": "malsseumhada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 1381
+  },
+  {
+    "korean": "보통",
+    "english": "usually; normally",
+    "romanization": "botong",
+    "pos": "noun",
+    "hanja": "普通",
+    "frequency": 1392
+  },
+  {
+    "korean": "식당",
+    "english": "restaurant",
+    "romanization": "sikdang",
+    "pos": "noun",
+    "hanja": "食堂",
+    "frequency": 1393
+  },
+  {
+    "korean": "소개하다",
+    "english": "to introduce",
+    "romanization": "sogaehada",
+    "pos": "verb",
+    "hanja": "紹介-",
+    "frequency": 1401
+  },
+  {
+    "korean": "칠월",
+    "english": "July",
+    "romanization": "chirwol",
+    "pos": "noun",
+    "hanja": "七月",
+    "frequency": 1404
+  },
+  {
+    "korean": "십이월",
+    "english": "December",
+    "romanization": "sibiwol",
+    "pos": "noun",
+    "hanja": "十二月",
+    "frequency": 1410
+  },
+  {
+    "korean": "컵",
+    "english": "cup",
+    "romanization": "keop",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1414
+  },
+  {
+    "korean": "종이",
+    "english": "paper",
+    "romanization": "jongi",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1423
+  },
+  {
+    "korean": "재미",
+    "english": "fun; interest",
+    "romanization": "jaemi",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1439
+  },
+  {
+    "korean": "떡",
+    "english": "rice cake",
+    "romanization": "tteok",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1443
+  },
+  {
+    "korean": "끝내다",
+    "english": "to finish; to end",
+    "romanization": "kkeutnaeda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 1452
+  },
+  {
+    "korean": "대답",
+    "english": "answer; reply",
+    "romanization": "daedap",
+    "pos": "noun",
+    "hanja": "對答",
+    "frequency": 1453
+  },
+  {
+    "korean": "시작",
+    "english": "start; beginning",
+    "romanization": "sijak",
+    "pos": "noun",
+    "hanja": "始作",
+    "frequency": 1454
+  },
+  {
+    "korean": "일주일",
+    "english": "one week",
+    "romanization": "ilju-il",
+    "pos": "noun",
+    "hanja": "一週日",
+    "frequency": 1456
+  },
+  {
+    "korean": "춤",
+    "english": "dance",
+    "romanization": "chum",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1458
+  },
+  {
+    "korean": "드리다",
+    "english": "to give; to offer",
+    "romanization": "deurida",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 1460
+  },
+  {
+    "korean": "깨끗하다",
+    "english": "to be clean; to be pure",
+    "romanization": "kkaekkeuthada",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 1471
+  },
+  {
+    "korean": "물어보다",
+    "english": "to ask; to inquire",
+    "romanization": "mureoboda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 1483
+  },
+  {
+    "korean": "미안하다",
+    "english": "to be sorry; to apologize",
+    "romanization": "mianhada",
+    "pos": "adjective",
+    "hanja": "未安-",
+    "frequency": 1484
+  },
+  {
+    "korean": "스트레스",
+    "english": "stress",
+    "romanization": "seuteureseu",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1486
+  },
+  {
+    "korean": "인사",
+    "english": "greeting; salutation",
+    "romanization": "insa",
+    "pos": "noun",
+    "hanja": "人士",
+    "frequency": 1488
+  },
+  {
+    "korean": "과일",
+    "english": "fruit",
+    "romanization": "gwail",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1491
+  },
+  {
+    "korean": "시월",
+    "english": "October",
+    "romanization": "siwol",
+    "pos": "noun",
+    "hanja": "十月",
+    "frequency": 1509
+  },
+  {
+    "korean": "박물관",
+    "english": "museum",
+    "romanization": "bangmulgwan",
+    "pos": "noun",
+    "hanja": "博物館",
+    "frequency": 1517
+  },
+  {
+    "korean": "어서",
+    "english": "quickly; promptly",
+    "romanization": "eoseo",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 1522
+  },
+  {
+    "korean": "팔월",
+    "english": "August",
+    "romanization": "palwol",
+    "pos": "noun",
+    "hanja": "八月",
+    "frequency": 1527
+  },
+  {
+    "korean": "가방",
+    "english": "bag; backpack",
+    "romanization": "gabang",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1530
+  },
+  {
+    "korean": "호",
+    "english": "number; call sign",
+    "romanization": "ho",
+    "pos": "bound noun",
+    "hanja": "號",
+    "frequency": 1544
+  },
+  {
+    "korean": "그릇",
+    "english": "bowl; dish",
+    "romanization": "geureut",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1563
+  },
+  {
+    "korean": "개",
+    "english": "dog",
+    "romanization": "gae",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1569
+  },
+  {
+    "korean": "라디오",
+    "english": "radio",
+    "romanization": "radio",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1571
+  },
+  {
+    "korean": "방학",
+    "english": "vacation; school break",
+    "romanization": "banghak",
+    "pos": "noun",
+    "hanja": "放學",
+    "frequency": 1581
+  },
+  {
+    "korean": "남쪽",
+    "english": "south",
+    "romanization": "namjjok",
+    "pos": "noun",
+    "hanja": "南-",
+    "frequency": 1598
+  },
+  {
+    "korean": "색깔",
+    "english": "color",
+    "romanization": "saekkkal",
+    "pos": "noun",
+    "hanja": "色-",
+    "frequency": 1603
+  },
+  {
+    "korean": "요리",
+    "english": "cooking; cuisine",
+    "romanization": "yori",
+    "pos": "noun",
+    "hanja": "料理",
+    "frequency": 1604
+  },
+  {
+    "korean": "유명하다",
+    "english": "to be famous; to be well-known",
+    "romanization": "yumyeonghada",
+    "pos": "adjective",
+    "hanja": "有名-",
+    "frequency": 1605
+  },
+  {
+    "korean": "외국인",
+    "english": "foreigner",
+    "romanization": "oegugin",
+    "pos": "noun",
+    "hanja": "外國人",
+    "frequency": 1611
+  },
+  {
+    "korean": "부인",
+    "english": "wife; madam",
+    "romanization": "buin",
+    "pos": "noun",
+    "hanja": "夫人",
+    "frequency": 1619
+  },
+  {
+    "korean": "숙제",
+    "english": "homework; assignment",
+    "romanization": "sukje",
+    "pos": "noun",
+    "hanja": "宿題",
+    "frequency": 1627
+  },
+  {
+    "korean": "우산",
+    "english": "umbrella",
+    "romanization": "usan",
+    "pos": "noun",
+    "hanja": "雨傘",
+    "frequency": 1632
+  },
+  {
+    "korean": "지난달",
+    "english": "last month",
+    "romanization": "jinandal",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1643
+  },
+  {
+    "korean": "책상",
+    "english": "desk",
+    "romanization": "chaeksang",
+    "pos": "noun",
+    "hanja": "冊床",
+    "frequency": 1653
+  },
+  {
+    "korean": "춥다",
+    "english": "to be cold",
+    "romanization": "chupda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 1654
+  },
+  {
+    "korean": "무겁다",
+    "english": "to be heavy",
+    "romanization": "mugeopda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 1662
+  },
+  {
+    "korean": "침대",
+    "english": "bed",
+    "romanization": "chimdae",
+    "pos": "noun",
+    "hanja": "寢臺",
+    "frequency": 1670
+  },
+  {
+    "korean": "권",
+    "english": "volume; book",
+    "romanization": "gwon",
+    "pos": "bound noun",
+    "hanja": "卷",
+    "frequency": 1672
+  },
+  {
+    "korean": "시계",
+    "english": "clock; watch",
+    "romanization": "sigye",
+    "pos": "noun",
+    "hanja": "時計",
+    "frequency": 1677
+  },
+  {
+    "korean": "잎",
+    "english": "leaf",
+    "romanization": "ip",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1680
+  },
+  {
+    "korean": "천천히",
+    "english": "slowly",
+    "romanization": "cheoncheonhi",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 1683
+  },
+  {
+    "korean": "스포츠",
+    "english": "sports",
+    "romanization": "seupocheu",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1689
+  },
+  {
+    "korean": "저기",
+    "english": "there; over there",
+    "romanization": "jeogi",
+    "pos": "pronoun",
+    "hanja": "",
+    "frequency": 1692
+  },
+  {
+    "korean": "교회",
+    "english": "church",
+    "romanization": "gyohoe",
+    "pos": "noun",
+    "hanja": "敎會",
+    "frequency": 1708
+  },
+  {
+    "korean": "화",
+    "english": "anger; fire",
+    "romanization": "hwa",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1714
+  },
+  {
+    "korean": "일월",
+    "english": "January",
+    "romanization": "irwol",
+    "pos": "noun",
+    "hanja": "一月",
+    "frequency": 1725
+  },
+  {
+    "korean": "도서관",
+    "english": "library",
+    "romanization": "doseogwan",
+    "pos": "noun",
+    "hanja": "圖書館",
+    "frequency": 1732
+  },
+  {
+    "korean": "선물",
+    "english": "gift; present",
+    "romanization": "seonmul",
+    "pos": "noun",
+    "hanja": "膳物",
+    "frequency": 1741
+  },
+  {
+    "korean": "아주머니",
+    "english": "aunt; madam",
+    "romanization": "ajumeoni",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1743
+  },
+  {
+    "korean": "위험",
+    "english": "danger; risk",
+    "romanization": "wiheom",
+    "pos": "noun",
+    "hanja": "危險",
+    "frequency": 1744
+  },
+  {
+    "korean": "지하",
+    "english": "underground; basement",
+    "romanization": "jiha",
+    "pos": "noun",
+    "hanja": "地下",
+    "frequency": 1745
+  },
+  {
+    "korean": "지하철",
+    "english": "subway",
+    "romanization": "jihacheol",
+    "pos": "noun",
+    "hanja": "地下鐵",
+    "frequency": 1755
+  },
+  {
+    "korean": "사무실",
+    "english": "office",
+    "romanization": "samusil",
+    "pos": "noun",
+    "hanja": "事務室",
+    "frequency": 1781
+  },
+  {
+    "korean": "이월",
+    "english": "February",
+    "romanization": "iwol",
+    "pos": "noun",
+    "hanja": "二月",
+    "frequency": 1783
+  },
+  {
+    "korean": "일요일",
+    "english": "Sunday",
+    "romanization": "iryoil",
+    "pos": "noun",
+    "hanja": "日曜日",
+    "frequency": 1784
+  },
+  {
+    "korean": "강",
+    "english": "river",
+    "romanization": "gang",
+    "pos": "noun",
+    "hanja": "江",
+    "frequency": 1812
+  },
+  {
+    "korean": "비싸다",
+    "english": "to be expensive",
+    "romanization": "bissada",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 1819
+  },
+  {
+    "korean": "왼쪽",
+    "english": "left side",
+    "romanization": "oenjjok",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1822
+  },
+  {
+    "korean": "택시",
+    "english": "taxi",
+    "romanization": "taegsi",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1824
+  },
+  {
+    "korean": "시원하다",
+    "english": "to be cool; to be refreshing",
+    "romanization": "siwonhada",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 1844
+  },
+  {
+    "korean": "어디",
+    "english": "where",
+    "romanization": "eodi",
+    "pos": "interjection",
+    "hanja": "",
+    "frequency": 1846
+  },
+  {
+    "korean": "뛰다",
+    "english": "to run; to jump",
+    "romanization": "ttwida",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 1852
+  },
+  {
+    "korean": "않다",
+    "english": "to not do",
+    "romanization": "anta",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 1859
+  },
+  {
+    "korean": "잡지",
+    "english": "magazine",
+    "romanization": "japji",
+    "pos": "noun",
+    "hanja": "雜誌",
+    "frequency": 1862
+  },
+  {
+    "korean": "댁",
+    "english": "house; home (honorific)",
+    "romanization": "daek",
+    "pos": "noun",
+    "hanja": "宅",
+    "frequency": 1867
+  },
+  {
+    "korean": "반갑다",
+    "english": "to be glad; to be pleased",
+    "romanization": "bangapda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 1868
+  },
+  {
+    "korean": "다녀오다",
+    "english": "to go and return",
+    "romanization": "danyeooda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 1876
+  },
+  {
+    "korean": "비디오",
+    "english": "video",
+    "romanization": "bidio",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1882
+  },
+  {
+    "korean": "이쪽",
+    "english": "this side",
+    "romanization": "ijjok",
+    "pos": "pronoun",
+    "hanja": "",
+    "frequency": 1885
+  },
+  {
+    "korean": "연습",
+    "english": "practice; exercise",
+    "romanization": "yeonseup",
+    "pos": "noun",
+    "hanja": "練習",
+    "frequency": 1896
+  },
+  {
+    "korean": "오른쪽",
+    "english": "right side",
+    "romanization": "oreunjjok",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1897
+  },
+  {
+    "korean": "지도",
+    "english": "map",
+    "romanization": "jido",
+    "pos": "noun",
+    "hanja": "地圖",
+    "frequency": 1901
+  },
+  {
+    "korean": "화장실",
+    "english": "bathroom; restroom",
+    "romanization": "hwajangsil",
+    "pos": "noun",
+    "hanja": "化粧室",
+    "frequency": 1904
+  },
+  {
+    "korean": "주말",
+    "english": "weekend",
+    "romanization": "jumal",
+    "pos": "noun",
+    "hanja": "週末",
+    "frequency": 1933
+  },
+  {
+    "korean": "내년",
+    "english": "next year",
+    "romanization": "naenyeon",
+    "pos": "noun",
+    "hanja": "來年",
+    "frequency": 1941
+  },
+  {
+    "korean": "대학생",
+    "english": "university student",
+    "romanization": "daehaksaeng",
+    "pos": "noun",
+    "hanja": "大學生",
+    "frequency": 1944
+  },
+  {
+    "korean": "닫다",
+    "english": "to close",
+    "romanization": "datda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 1959
+  },
+  {
+    "korean": "생일",
+    "english": "birthday",
+    "romanization": "saengil",
+    "pos": "noun",
+    "hanja": "生日",
+    "frequency": 1963
+  },
+  {
+    "korean": "걸어가다",
+    "english": "to walk",
+    "romanization": "georeogada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 1970
+  },
+  {
+    "korean": "백화점",
+    "english": "department store",
+    "romanization": "baekhwajeom",
+    "pos": "noun",
+    "hanja": "百貨店",
+    "frequency": 1974
+  },
+  {
+    "korean": "안녕하다",
+    "english": "to be well; to be peaceful",
+    "romanization": "annyeonghada",
+    "pos": "adjective",
+    "hanja": "安寧-",
+    "frequency": 1978
+  },
+  {
+    "korean": "출발하다",
+    "english": "to depart; to leave",
+    "romanization": "chulbalhada",
+    "pos": "verb",
+    "hanja": "出發-",
+    "frequency": 1982
+  },
+  {
+    "korean": "고양이",
+    "english": "cat",
+    "romanization": "goyangi",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 1987
+  },
+  {
+    "korean": "중학교",
+    "english": "middle school",
+    "romanization": "junghakgyo",
+    "pos": "noun",
+    "hanja": "中學校",
+    "frequency": 1996
+  },
+  {
+    "korean": "흰색",
+    "english": "white",
+    "romanization": "huinsaek",
+    "pos": "noun",
+    "hanja": "-色",
+    "frequency": 1999
+  },
+  {
+    "korean": "가수",
+    "english": "singer",
+    "romanization": "gasu",
+    "pos": "noun",
+    "hanja": "歌手",
+    "frequency": 2000
+  },
+  {
+    "korean": "약",
+    "english": "medicine; drug",
+    "romanization": "yak",
+    "pos": "noun",
+    "hanja": "藥",
+    "frequency": 2027
+  },
+  {
+    "korean": "저쪽",
+    "english": "that side",
+    "romanization": "jeojjok",
+    "pos": "pronoun",
+    "hanja": "",
+    "frequency": 2031
+  },
+  {
+    "korean": "창문",
+    "english": "window",
+    "romanization": "changmun",
+    "pos": "noun",
+    "hanja": "窓門",
+    "frequency": 2033
+  },
+  {
+    "korean": "우유",
+    "english": "milk",
+    "romanization": "uyu",
+    "pos": "noun",
+    "hanja": "牛乳",
+    "frequency": 2065
+  },
+  {
+    "korean": "표",
+    "english": "ticket",
+    "romanization": "pyo",
+    "pos": "noun",
+    "hanja": "票",
+    "frequency": 2090
+  },
+  {
+    "korean": "십일월",
+    "english": "November",
+    "romanization": "sibirwol",
+    "pos": "noun",
+    "hanja": "十一月",
+    "frequency": 2099
+  },
+  {
+    "korean": "거울",
+    "english": "mirror",
+    "romanization": "geoul",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 2109
+  },
+  {
+    "korean": "빵",
+    "english": "bread",
+    "romanization": "ppang",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 2130
+  },
+  {
+    "korean": "위험하다",
+    "english": "to be dangerous",
+    "romanization": "wiheomhada",
+    "pos": "adjective",
+    "hanja": "危險-",
+    "frequency": 2141
+  },
+  {
+    "korean": "졸업하다",
+    "english": "to graduate",
+    "romanization": "joreophada",
+    "pos": "verb",
+    "hanja": "卒業-",
+    "frequency": 2145
+  },
+  {
+    "korean": "부엌",
+    "english": "kitchen",
+    "romanization": "bueok",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 2159
+  },
+  {
+    "korean": "북쪽",
+    "english": "north",
+    "romanization": "bukjjok",
+    "pos": "noun",
+    "hanja": "北-",
+    "frequency": 2179
+  },
+  {
+    "korean": "쇠고기",
+    "english": "beef",
+    "romanization": "soegogi",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 2181
+  },
+  {
+    "korean": "주",
+    "english": "week",
+    "romanization": "ju",
+    "pos": "noun",
+    "hanja": "週",
+    "frequency": 2183
+  },
+  {
+    "korean": "카드",
+    "english": "card",
+    "romanization": "kadeu",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 2184
+  },
+  {
+    "korean": "단어",
+    "english": "word; vocabulary",
+    "romanization": "daneo",
+    "pos": "noun",
+    "hanja": "單語",
+    "frequency": 2192
+  },
+  {
+    "korean": "도와주다",
+    "english": "to help",
+    "romanization": "dowajuda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 2194
+  },
+  {
+    "korean": "신발",
+    "english": "shoes",
+    "romanization": "sinbal",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 2199
+  },
+  {
+    "korean": "김치",
+    "english": "kimchi",
+    "romanization": "gimchi",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 2207
+  },
+  {
+    "korean": "날다",
+    "english": "to fly",
+    "romanization": "nalda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 2230
+  },
+  {
+    "korean": "설탕",
+    "english": "sugar",
+    "romanization": "seoltang",
+    "pos": "noun",
+    "hanja": "雪糖",
+    "frequency": 2236
+  },
+  {
+    "korean": "싸다",
+    "english": "to be cheap",
+    "romanization": "ssada",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 2240
+  },
+  {
+    "korean": "어제",
+    "english": "yesterday",
+    "romanization": "eoje",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 2252
+  },
+  {
+    "korean": "점심",
+    "english": "lunch",
+    "romanization": "jeomsim",
+    "pos": "noun",
+    "hanja": "點心",
+    "frequency": 2256
+  },
+  {
+    "korean": "칼",
+    "english": "knife",
+    "romanization": "kal",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 2273
+  },
+  {
+    "korean": "슬프다",
+    "english": "to be sad",
+    "romanization": "seulpeuda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 2284
+  },
+  {
+    "korean": "의자",
+    "english": "chair",
+    "romanization": "uija",
+    "pos": "noun",
+    "hanja": "椅子",
+    "frequency": 2292
+  },
+  {
+    "korean": "카메라",
+    "english": "camera",
+    "romanization": "kamera",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 2298
+  },
+  {
+    "korean": "토요일",
+    "english": "Saturday",
+    "romanization": "toyoil",
+    "pos": "noun",
+    "hanja": "土曜日",
+    "frequency": 2327
+  },
+  {
+    "korean": "경찰관",
+    "english": "police officer",
+    "romanization": "gyeongchalgwan",
+    "pos": "noun",
+    "hanja": "警察官",
+    "frequency": 2329
+  },
+  {
+    "korean": "극장",
+    "english": "theater",
+    "romanization": "geukjang",
+    "pos": "noun",
+    "hanja": "劇場",
+    "frequency": 2331
+  },
+  {
+    "korean": "오랜만",
+    "english": "after a long time",
+    "romanization": "oraenman",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 2390
+  },
+  {
+    "korean": "백",
+    "english": "hundred",
+    "romanization": "baek",
+    "pos": "determiner",
+    "hanja": "百",
+    "frequency": 2410
+  },
+  {
+    "korean": "아줌마",
+    "english": "aunt; middle-aged woman",
+    "romanization": "ajumma",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 2419
+  },
+  {
+    "korean": "추다",
+    "english": "to dance",
+    "romanization": "chuda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 2426
+  },
+  {
+    "korean": "켜다",
+    "english": "to turn on",
+    "romanization": "kyeoda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 2427
+  },
+  {
+    "korean": "공항",
+    "english": "airport",
+    "romanization": "gonghang",
+    "pos": "noun",
+    "hanja": "空港",
+    "frequency": 2433
+  },
+  {
+    "korean": "군인",
+    "english": "soldier",
+    "romanization": "gunin",
+    "pos": "noun",
+    "hanja": "軍人",
+    "frequency": 2434
+  },
+  {
+    "korean": "아니요",
+    "english": "no",
+    "romanization": "aniyo",
+    "pos": "interjection",
+    "hanja": "",
+    "frequency": 2447
+  },
+  {
+    "korean": "치마",
+    "english": "skirt",
+    "romanization": "chima",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 2457
+  },
+  {
+    "korean": "호텔",
+    "english": "hotel",
+    "romanization": "hotel",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 2460
+  },
+  {
+    "korean": "깎다",
+    "english": "to cut; to trim",
+    "romanization": "kkakda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 2465
+  },
+  {
+    "korean": "청소",
+    "english": "cleaning",
+    "romanization": "cheongso",
+    "pos": "noun",
+    "hanja": "淸掃",
+    "frequency": 2484
+  },
+  {
+    "korean": "걱정하다",
+    "english": "to worry",
+    "romanization": "geokjeonghada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 2491
+  },
+  {
+    "korean": "구름",
+    "english": "cloud",
+    "romanization": "gureum",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 2493
+  },
+  {
+    "korean": "끄다",
+    "english": "to turn off",
+    "romanization": "kkeuda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 2495
+  },
+  {
+    "korean": "계절",
+    "english": "season",
+    "romanization": "gyejeol",
+    "pos": "noun",
+    "hanja": "季節",
+    "frequency": 2520
+  },
+  {
+    "korean": "운동장",
+    "english": "playground; sports field",
+    "romanization": "undongjang",
+    "pos": "noun",
+    "hanja": "運動場",
+    "frequency": 2534
+  },
+  {
+    "korean": "동쪽",
+    "english": "east",
+    "romanization": "dongjjok",
+    "pos": "noun",
+    "hanja": "東-",
+    "frequency": 2569
+  },
+  {
+    "korean": "잠깐",
+    "english": "a moment; briefly",
+    "romanization": "jamkkan",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 2582
+  },
+  {
+    "korean": "요즈음",
+    "english": "these days",
+    "romanization": "yojeum",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 2603
+  },
+  {
+    "korean": "잃어버리다",
+    "english": "to lose",
+    "romanization": "ilheobeorida",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 2606
+  },
+  {
+    "korean": "조용하다",
+    "english": "to be quiet",
+    "romanization": "joyonghada",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 2610
+  },
+  {
+    "korean": "한복",
+    "english": "traditional Korean clothing",
+    "romanization": "hanbok",
+    "pos": "noun",
+    "hanja": "韓服",
+    "frequency": 2614
+  },
+  {
+    "korean": "라면",
+    "english": "ramen",
+    "romanization": "ramyeon",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 2623
+  },
+  {
+    "korean": "바지",
+    "english": "pants",
+    "romanization": "baji",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 2627
+  },
+  {
+    "korean": "싫어하다",
+    "english": "to dislike",
+    "romanization": "silheohada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 2636
+  },
+  {
+    "korean": "테이블",
+    "english": "table",
+    "romanization": "teibeul",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 2639
+  },
+  {
+    "korean": "피곤하다",
+    "english": "to be tired",
+    "romanization": "pigonhada",
+    "pos": "adjective",
+    "hanja": "疲困-",
+    "frequency": 2641
+  },
+  {
+    "korean": "한국어",
+    "english": "Korean language",
+    "romanization": "hangugeo",
+    "pos": "noun",
+    "hanja": "韓國語",
+    "frequency": 2642
+  },
+  {
+    "korean": "한자",
+    "english": "Chinese character",
+    "romanization": "hanja",
+    "pos": "noun",
+    "hanja": "漢字",
+    "frequency": 2643
+  },
+  {
+    "korean": "시",
+    "english": "city",
+    "romanization": "si",
+    "pos": "noun",
+    "hanja": "市",
+    "frequency": 2657
+  },
+  {
+    "korean": "안경",
+    "english": "glasses",
+    "romanization": "angyeong",
+    "pos": "noun",
+    "hanja": "眼鏡",
+    "frequency": 2659
+  },
+  {
+    "korean": "약속하다",
+    "english": "to promise",
+    "romanization": "yaksokhada",
+    "pos": "verb",
+    "hanja": "約束-",
+    "frequency": 2660
+  },
+  {
+    "korean": "취미",
+    "english": "hobby",
+    "romanization": "chwimi",
+    "pos": "noun",
+    "hanja": "趣味",
+    "frequency": 2671
+  },
+  {
+    "korean": "덥다",
+    "english": "to be hot",
+    "romanization": "deopda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 2678
+  },
+  {
+    "korean": "둘째",
+    "english": "second",
+    "romanization": "duljjae",
+    "pos": "determiner",
+    "hanja": "",
+    "frequency": 2679
+  },
+  {
+    "korean": "야구",
+    "english": "baseball",
+    "romanization": "yagu",
+    "pos": "noun",
+    "hanja": "野球",
+    "frequency": 2688
+  },
+  {
+    "korean": "이",
+    "english": "tooth; this",
+    "romanization": "i",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 2692
+  },
+  {
+    "korean": "구경",
+    "english": "sightseeing",
+    "romanization": "gugyeong",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 2705
+  },
+  {
+    "korean": "그분",
+    "english": "that person; he; she",
+    "romanization": "geubun",
+    "pos": "pronoun",
+    "hanja": "",
+    "frequency": 2706
+  },
+  {
+    "korean": "신다",
+    "english": "to wear (shoes)",
+    "romanization": "sinda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 2715
+  },
+  {
+    "korean": "죄송하다",
+    "english": "to be sorry; to apologize",
+    "romanization": "joesonghada",
+    "pos": "adjective",
+    "hanja": "罪悚-",
+    "frequency": 2724
+  },
+  {
+    "korean": "크다",
+    "english": "to be big; to be large",
+    "romanization": "keuda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 2726
+  },
+  {
+    "korean": "셋",
+    "english": "three",
+    "romanization": "set",
+    "pos": "numeral",
+    "hanja": "",
+    "frequency": 2771
+  },
+  {
+    "korean": "생선",
+    "english": "fish",
+    "romanization": "saengseon",
+    "pos": "noun",
+    "hanja": "生鮮",
+    "frequency": 2803
+  },
+  {
+    "korean": "지우다",
+    "english": "to erase; to delete",
+    "romanization": "jiuda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 2812
+  },
+  {
+    "korean": "졸업",
+    "english": "graduation",
+    "romanization": "joreop",
+    "pos": "noun",
+    "hanja": "卒業",
+    "frequency": 2845
+  },
+  {
+    "korean": "닭",
+    "english": "chicken",
+    "romanization": "dak",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 2857
+  },
+  {
+    "korean": "맥주",
+    "english": "beer",
+    "romanization": "maekju",
+    "pos": "noun",
+    "hanja": "麥酒",
+    "frequency": 2861
+  },
+  {
+    "korean": "교과서",
+    "english": "textbook",
+    "romanization": "gyogwaseo",
+    "pos": "noun",
+    "hanja": "敎科書",
+    "frequency": 2887
+  },
+  {
+    "korean": "돼지",
+    "english": "pig",
+    "romanization": "dwaeji",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 2893
+  },
+  {
+    "korean": "수영",
+    "english": "swimming",
+    "romanization": "suyeong",
+    "pos": "noun",
+    "hanja": "水泳",
+    "frequency": 2899
+  },
+  {
+    "korean": "잊어버리다",
+    "english": "to forget",
+    "romanization": "ijeobeorida",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 2905
+  },
+  {
+    "korean": "기차",
+    "english": "train",
+    "romanization": "gicha",
+    "pos": "noun",
+    "hanja": "汽車",
+    "frequency": 2919
+  },
+  {
+    "korean": "식탁",
+    "english": "dining table",
+    "romanization": "siktak",
+    "pos": "noun",
+    "hanja": "食卓",
+    "frequency": 2932
+  },
+  {
+    "korean": "공원",
+    "english": "park",
+    "romanization": "gongwon",
+    "pos": "noun",
+    "hanja": "公園",
+    "frequency": 2950
+  },
+  {
+    "korean": "안되다",
+    "english": "to not work; to fail",
+    "romanization": "andoeda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 2970
+  },
+  {
+    "korean": "날짜",
+    "english": "date",
+    "romanization": "naljja",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 2994
+  },
+  {
+    "korean": "샌드위치",
+    "english": "sandwich",
+    "romanization": "saendeuwichi",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 3005
+  },
+  {
+    "korean": "그쪽",
+    "english": "that side; that way",
+    "romanization": "geujjok",
+    "pos": "pronoun",
+    "hanja": "",
+    "frequency": 3027
+  },
+  {
+    "korean": "검은색",
+    "english": "black",
+    "romanization": "geomeunsaek",
+    "pos": "noun",
+    "hanja": "-色",
+    "frequency": 3064
+  },
+  {
+    "korean": "여보세요",
+    "english": "hello (on the phone)",
+    "romanization": "yeoboseyo",
+    "pos": "interjection",
+    "hanja": "",
+    "frequency": 3081
+  },
+  {
+    "korean": "천",
+    "english": "thousand",
+    "romanization": "cheon",
+    "pos": "determiner",
+    "hanja": "千",
+    "frequency": 3090
+  },
+  {
+    "korean": "거",
+    "english": "thing; object",
+    "romanization": "geo",
+    "pos": "pronoun",
+    "hanja": "",
+    "frequency": 3102
+  },
+  {
+    "korean": "서쪽",
+    "english": "west",
+    "romanization": "seojjok",
+    "pos": "noun",
+    "hanja": "西-",
+    "frequency": 3152
+  },
+  {
+    "korean": "경찰서",
+    "english": "police station",
+    "romanization": "gyeongchalseo",
+    "pos": "noun",
+    "hanja": "警察署",
+    "frequency": 3214
+  },
+  {
+    "korean": "구두",
+    "english": "shoes",
+    "romanization": "gudu",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 3217
+  },
+  {
+    "korean": "사과",
+    "english": "apple",
+    "romanization": "sagwa",
+    "pos": "noun",
+    "hanja": "沙果",
+    "frequency": 3237
+  },
+  {
+    "korean": "여학생",
+    "english": "female student",
+    "romanization": "yeohaksaeng",
+    "pos": "noun",
+    "hanja": "女學生",
+    "frequency": 3287
+  },
+  {
+    "korean": "냉장고",
+    "english": "refrigerator",
+    "romanization": "naengjanggo",
+    "pos": "noun",
+    "hanja": "冷藏庫",
+    "frequency": 3311
+  },
+  {
+    "korean": "감기",
+    "english": "cold (illness)",
+    "romanization": "gamgi",
+    "pos": "noun",
+    "hanja": "感氣",
+    "frequency": 3343
+  },
+  {
+    "korean": "결혼식",
+    "english": "wedding",
+    "romanization": "gyeolhonsik",
+    "pos": "noun",
+    "hanja": "結婚式",
+    "frequency": 3389
+  },
+  {
+    "korean": "노래하다",
+    "english": "to sing",
+    "romanization": "noraehada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 3398
+  },
+  {
+    "korean": "늦다",
+    "english": "to be late",
+    "romanization": "neutda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 3630
+  },
+  {
+    "korean": "연필",
+    "english": "pencil",
+    "romanization": "yeonpil",
+    "pos": "noun",
+    "hanja": "鉛筆",
+    "frequency": 3703
+  },
+  {
+    "korean": "운전",
+    "english": "driving",
+    "romanization": "unjeon",
+    "pos": "noun",
+    "hanja": "運轉",
+    "frequency": 3707
+  },
+  {
+    "korean": "불고기",
+    "english": "bulgogi",
+    "romanization": "bulgogi",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 3754
+  },
+  {
+    "korean": "목욕",
+    "english": "bath",
+    "romanization": "mogyok",
+    "pos": "noun",
+    "hanja": "沐浴",
+    "frequency": 3808
+  },
+  {
+    "korean": "전화번호",
+    "english": "phone number",
+    "romanization": "jeonhwabeonho",
+    "pos": "noun",
+    "hanja": "電話番號",
+    "frequency": 3836
+  },
+  {
+    "korean": "만",
+    "english": "ten thousand",
+    "romanization": "man",
+    "pos": "determiner",
+    "hanja": "萬",
+    "frequency": 3865
+  },
+  {
+    "korean": "지갑",
+    "english": "wallet",
+    "romanization": "jigap",
+    "pos": "noun",
+    "hanja": "紙匣",
+    "frequency": 3888
+  },
+  {
+    "korean": "친절하다",
+    "english": "to be kind; to be friendly",
+    "romanization": "chinjeolhada",
+    "pos": "adjective",
+    "hanja": "親切-",
+    "frequency": 3894
+  },
+  {
+    "korean": "저거",
+    "english": "that thing",
+    "romanization": "jeogeo",
+    "pos": "pronoun",
+    "hanja": "",
+    "frequency": 4015
+  },
+  {
+    "korean": "걸어오다",
+    "english": "to come on foot",
+    "romanization": "georeooda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 4041
+  },
+  {
+    "korean": "모자",
+    "english": "hat; cap",
+    "romanization": "moja",
+    "pos": "noun",
+    "hanja": "帽子",
+    "frequency": 4059
+  },
+  {
+    "korean": "소파",
+    "english": "sofa",
+    "romanization": "sopa",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 4073
+  },
+  {
+    "korean": "스무",
+    "english": "twenty",
+    "romanization": "seumu",
+    "pos": "determiner",
+    "hanja": "",
+    "frequency": 4078
+  },
+  {
+    "korean": "역",
+    "english": "station",
+    "romanization": "yeok",
+    "pos": "noun",
+    "hanja": "驛",
+    "frequency": 4087
+  },
+  {
+    "korean": "인사하다",
+    "english": "to greet",
+    "romanization": "insahada",
+    "pos": "verb",
+    "hanja": "人事-",
+    "frequency": 4096
+  },
+  {
+    "korean": "여권",
+    "english": "passport",
+    "romanization": "yeogwon",
+    "pos": "noun",
+    "hanja": "旅券",
+    "frequency": 4142
+  },
+  {
+    "korean": "열쇠",
+    "english": "key",
+    "romanization": "yeolsoe",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 4143
+  },
+  {
+    "korean": "오렌지",
+    "english": "orange",
+    "romanization": "orenji",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 4145
+  },
+  {
+    "korean": "다",
+    "english": "all; everything",
+    "romanization": "da",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 4266
+  },
+  {
+    "korean": "번호",
+    "english": "number",
+    "romanization": "beonho",
+    "pos": "noun",
+    "hanja": "番號",
+    "frequency": 4276
+  },
+  {
+    "korean": "저것",
+    "english": "that thing",
+    "romanization": "jeogeot",
+    "pos": "pronoun",
+    "hanja": "",
+    "frequency": 4304
+  },
+  {
+    "korean": "수박",
+    "english": "watermelon",
+    "romanization": "subak",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 4353
+  },
+  {
+    "korean": "첫째",
+    "english": "first",
+    "romanization": "cheotjae",
+    "pos": "determiner",
+    "hanja": "",
+    "frequency": 4386
+  },
+  {
+    "korean": "과자",
+    "english": "snack; cookie",
+    "romanization": "gwaja",
+    "pos": "noun",
+    "hanja": "菓子",
+    "frequency": 4402
+  },
+  {
+    "korean": "대학교",
+    "english": "university",
+    "romanization": "daehakgyo",
+    "pos": "noun",
+    "hanja": "大學校",
+    "frequency": 4416
+  },
+  {
+    "korean": "돼지고기",
+    "english": "pork",
+    "romanization": "dwaejigogi",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 4418
+  },
+  {
+    "korean": "안녕히",
+    "english": "peacefully; safely",
+    "romanization": "annyeonghi",
+    "pos": "adverb",
+    "hanja": "安寧-",
+    "frequency": 4444
+  },
+  {
+    "korean": "전화하다",
+    "english": "to call; to phone",
+    "romanization": "jeonhwahada",
+    "pos": "verb",
+    "hanja": "電話-",
+    "frequency": 4461
+  },
+  {
+    "korean": "수건",
+    "english": "towel",
+    "romanization": "sugeon",
+    "pos": "noun",
+    "hanja": "手巾",
+    "frequency": 4527
+  },
+  {
+    "korean": "양복",
+    "english": "suit",
+    "romanization": "yangbok",
+    "pos": "noun",
+    "hanja": "洋服",
+    "frequency": 4535
+  },
+  {
+    "korean": "잠자다",
+    "english": "to sleep",
+    "romanization": "jamjada",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 4547
+  },
+  {
+    "korean": "젓가락",
+    "english": "chopsticks",
+    "romanization": "jeotgarak",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 4550
+  },
+  {
+    "korean": "피아노",
+    "english": "piano",
+    "romanization": "piano",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 4572
+  },
+  {
+    "korean": "축하하다",
+    "english": "to congratulate",
+    "romanization": "chukhahada",
+    "pos": "verb",
+    "hanja": "祝賀-",
+    "frequency": 4656
+  },
+  {
+    "korean": "기숙사",
+    "english": "dormitory",
+    "romanization": "gisuksa",
+    "pos": "noun",
+    "hanja": "寄宿舍",
+    "frequency": 4776
+  },
+  {
+    "korean": "산책",
+    "english": "walk; stroll",
+    "romanization": "sanchaek",
+    "pos": "noun",
+    "hanja": "散策",
+    "frequency": 4802
+  },
+  {
+    "korean": "운동하다",
+    "english": "to exercise; to work out",
+    "romanization": "undonghada",
+    "pos": "verb",
+    "hanja": "運動-",
+    "frequency": 4822
+  },
+  {
+    "korean": "월요일",
+    "english": "Monday",
+    "romanization": "woryoil",
+    "pos": "noun",
+    "hanja": "月曜日",
+    "frequency": 4823
+  },
+  {
+    "korean": "주소",
+    "english": "address",
+    "romanization": "juso",
+    "pos": "noun",
+    "hanja": "住所",
+    "frequency": 4836
+  },
+  {
+    "korean": "파티",
+    "english": "party",
+    "romanization": "pati",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 4849
+  },
+  {
+    "korean": "달다",
+    "english": "to be sweet",
+    "romanization": "dalda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 4881
+  },
+  {
+    "korean": "청소하다",
+    "english": "to clean",
+    "romanization": "cheongsohada",
+    "pos": "verb",
+    "hanja": "淸掃-",
+    "frequency": 4946
+  },
+  {
+    "korean": "감사하다",
+    "english": "to thank",
+    "romanization": "gamsahada",
+    "pos": "verb",
+    "hanja": "感謝-",
+    "frequency": 4966
+  },
+  {
+    "korean": "등산",
+    "english": "hiking; mountain climbing",
+    "romanization": "deungsan",
+    "pos": "noun",
+    "hanja": "登山",
+    "frequency": 4996
+  },
+  {
+    "korean": "메뉴",
+    "english": "menu",
+    "romanization": "menyu",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 5002
+  },
+  {
+    "korean": "셋째",
+    "english": "third",
+    "romanization": "setjae",
+    "pos": "determiner",
+    "hanja": "",
+    "frequency": 5023
+  },
+  {
+    "korean": "외국어",
+    "english": "foreign language",
+    "romanization": "oegugeo",
+    "pos": "noun",
+    "hanja": "外國語",
+    "frequency": 5040
+  },
+  {
+    "korean": "자장면",
+    "english": "jajangmyeon; black bean noodles",
+    "romanization": "jajangmyeon",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 5048
+  },
+  {
+    "korean": "중학생",
+    "english": "middle school student",
+    "romanization": "junghaksaeng",
+    "pos": "noun",
+    "hanja": "中學生",
+    "frequency": 5053
+  },
+  {
+    "korean": "휴일",
+    "english": "holiday; day off",
+    "romanization": "hyuil",
+    "pos": "noun",
+    "hanja": "休日",
+    "frequency": 5070
+  },
+  {
+    "korean": "달력",
+    "english": "calendar",
+    "romanization": "dallyeok",
+    "pos": "noun",
+    "hanja": "-曆",
+    "frequency": 5088
+  },
+  {
+    "korean": "소풍",
+    "english": "picnic",
+    "romanization": "sopung",
+    "pos": "noun",
+    "hanja": "逍風",
+    "frequency": 5121
+  },
+  {
+    "korean": "춤추다",
+    "english": "to dance",
+    "romanization": "chumchuda",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 5154
+  },
+  {
+    "korean": "테니스",
+    "english": "tennis",
+    "romanization": "teniseu",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 5157
+  },
+  {
+    "korean": "공책",
+    "english": "notebook",
+    "romanization": "gongchaek",
+    "pos": "noun",
+    "hanja": "空冊",
+    "frequency": 5179
+  },
+  {
+    "korean": "똑바로",
+    "english": "straight; directly",
+    "romanization": "ttokbaro",
+    "pos": "adverb",
+    "hanja": "",
+    "frequency": 5201
+  },
+  {
+    "korean": "서점",
+    "english": "bookstore",
+    "romanization": "seojeom",
+    "pos": "noun",
+    "hanja": "書店",
+    "frequency": 5229
+  },
+  {
+    "korean": "양말",
+    "english": "socks",
+    "romanization": "yangmal",
+    "pos": "noun",
+    "hanja": "洋襪",
+    "frequency": 5248
+  },
+  {
+    "korean": "초대하다",
+    "english": "to invite",
+    "romanization": "chodaehada",
+    "pos": "verb",
+    "hanja": "招待-",
+    "frequency": 5293
+  },
+  {
+    "korean": "연습하다",
+    "english": "to practice",
+    "romanization": "yeonseuphada",
+    "pos": "verb",
+    "hanja": "練習-",
+    "frequency": 5382
+  },
+  {
+    "korean": "경치",
+    "english": "scenery; view",
+    "romanization": "gyeongchi",
+    "pos": "noun",
+    "hanja": "景致",
+    "frequency": 5452
+  },
+  {
+    "korean": "발음",
+    "english": "pronunciation",
+    "romanization": "bareum",
+    "pos": "noun",
+    "hanja": "發音",
+    "frequency": 5491
+  },
+  {
+    "korean": "재미없다",
+    "english": "to be boring; to be uninteresting",
+    "romanization": "jaemieopda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 5538
+  },
+  {
+    "korean": "주스",
+    "english": "juice",
+    "romanization": "juseu",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 5553
+  },
+  {
+    "korean": "콜라",
+    "english": "cola",
+    "romanization": "kolla",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 5567
+  },
+  {
+    "korean": "남학생",
+    "english": "male student",
+    "romanization": "namhaksaeng",
+    "pos": "noun",
+    "hanja": "男學生",
+    "frequency": 5594
+  },
+  {
+    "korean": "식사하다",
+    "english": "to have a meal",
+    "romanization": "siksahada",
+    "pos": "verb",
+    "hanja": "食事-",
+    "frequency": 5777
+  },
+  {
+    "korean": "우체국",
+    "english": "post office",
+    "romanization": "ucheguk",
+    "pos": "noun",
+    "hanja": "郵遞局",
+    "frequency": 5791
+  },
+  {
+    "korean": "고프다",
+    "english": "to be hungry",
+    "romanization": "gopeuda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 5860
+  },
+  {
+    "korean": "대사관",
+    "english": "embassy",
+    "romanization": "daesagwan",
+    "pos": "noun",
+    "hanja": "大使館",
+    "frequency": 5883
+  },
+  {
+    "korean": "배고프다",
+    "english": "to be hungry",
+    "romanization": "baegopeuda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 5905
+  },
+  {
+    "korean": "삼",
+    "english": "three",
+    "romanization": "sam",
+    "pos": "numeral",
+    "hanja": "三",
+    "frequency": 5923
+  },
+  {
+    "korean": "여행하다",
+    "english": "to travel",
+    "romanization": "yeohaenghada",
+    "pos": "verb",
+    "hanja": "旅行-",
+    "frequency": 5949
+  },
+  {
+    "korean": "정류장",
+    "english": "bus stop",
+    "romanization": "jeongnyujang",
+    "pos": "noun",
+    "hanja": "停留場",
+    "frequency": 5966
+  },
+  {
+    "korean": "맵다",
+    "english": "to be spicy",
+    "romanization": "maepda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 6050
+  },
+  {
+    "korean": "여동생",
+    "english": "younger sister",
+    "romanization": "yeodongsaeng",
+    "pos": "noun",
+    "hanja": "女同生",
+    "frequency": 6102
+  },
+  {
+    "korean": "오래간만",
+    "english": "after a long time",
+    "romanization": "oraeganman",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 6108
+  },
+  {
+    "korean": "점심시간",
+    "english": "lunchtime",
+    "romanization": "jeomsimsigan",
+    "pos": "noun",
+    "hanja": "點心時間",
+    "frequency": 6132
+  },
+  {
+    "korean": "휴지",
+    "english": "tissue; toilet paper",
+    "romanization": "hyuji",
+    "pos": "noun",
+    "hanja": "休紙",
+    "frequency": 6169
+  },
+  {
+    "korean": "태권도",
+    "english": "taekwondo",
+    "romanization": "taegwondo",
+    "pos": "noun",
+    "hanja": "跆拳道",
+    "frequency": 6321
+  },
+  {
+    "korean": "햄버거",
+    "english": "hamburger",
+    "romanization": "haembeogeo",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 6340
+  },
+  {
+    "korean": "감사",
+    "english": "thanks; gratitude",
+    "romanization": "gamsa",
+    "pos": "noun",
+    "hanja": "感謝",
+    "frequency": 6352
+  },
+  {
+    "korean": "슈퍼마켓",
+    "english": "supermarket",
+    "romanization": "syupeomaket",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 6447
+  },
+  {
+    "korean": "비누",
+    "english": "soap",
+    "romanization": "binu",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 6608
+  },
+  {
+    "korean": "세수",
+    "english": "washing face",
+    "romanization": "sesu",
+    "pos": "noun",
+    "hanja": "洗手",
+    "frequency": 6621
+  },
+  {
+    "korean": "찌개",
+    "english": "stew",
+    "romanization": "jjigae",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 6693
+  },
+  {
+    "korean": "넥타이",
+    "english": "necktie",
+    "romanization": "nektai",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 6766
+  },
+  {
+    "korean": "매일",
+    "english": "every day",
+    "romanization": "maeil",
+    "pos": "noun",
+    "hanja": "每日",
+    "frequency": 6784
+  },
+  {
+    "korean": "월",
+    "english": "month",
+    "romanization": "wol",
+    "pos": "bound noun",
+    "hanja": "月",
+    "frequency": 6854
+  },
+  {
+    "korean": "잡수시다",
+    "english": "to eat (honorific)",
+    "romanization": "japsusida",
+    "pos": "verb",
+    "hanja": "",
+    "frequency": 6878
+  },
+  {
+    "korean": "한국말",
+    "english": "Korean language",
+    "romanization": "hangungmal",
+    "pos": "noun",
+    "hanja": "韓國-",
+    "frequency": 6930
+  },
+  {
+    "korean": "계란",
+    "english": "egg",
+    "romanization": "gyeran",
+    "pos": "noun",
+    "hanja": "鷄卵",
+    "frequency": 6951
+  },
+  {
+    "korean": "넷",
+    "english": "four",
+    "romanization": "net",
+    "pos": "numeral",
+    "hanja": "",
+    "frequency": 6980
+  },
+  {
+    "korean": "에어컨",
+    "english": "air conditioner",
+    "romanization": "eeokeon",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 7071
+  },
+  {
+    "korean": "초대",
+    "english": "invitation",
+    "romanization": "chodae",
+    "pos": "noun",
+    "hanja": "招待",
+    "frequency": 7129
+  },
+  {
+    "korean": "사전",
+    "english": "dictionary",
+    "romanization": "sajeon",
+    "pos": "noun",
+    "hanja": "辭典",
+    "frequency": 7270
+  },
+  {
+    "korean": "실례",
+    "english": "excuse; discourtesy",
+    "romanization": "sillye",
+    "pos": "noun",
+    "hanja": "失禮",
+    "frequency": 7291
+  },
+  {
+    "korean": "안녕",
+    "english": "hello; goodbye",
+    "romanization": "annyeong",
+    "pos": "interjection",
+    "hanja": "安寧",
+    "frequency": 7294
+  },
+  {
+    "korean": "약국",
+    "english": "pharmacy",
+    "romanization": "yakguk",
+    "pos": "noun",
+    "hanja": "藥局",
+    "frequency": 7298
+  },
+  {
+    "korean": "지난주",
+    "english": "last week",
+    "romanization": "jinanju",
+    "pos": "noun",
+    "hanja": "-週",
+    "frequency": 7371
+  },
+  {
+    "korean": "간호사",
+    "english": "nurse",
+    "romanization": "ganhosa",
+    "pos": "noun",
+    "hanja": "看護師",
+    "frequency": 7438
+  },
+  {
+    "korean": "고등학생",
+    "english": "high school student",
+    "romanization": "godeunghaksaeng",
+    "pos": "noun",
+    "hanja": "高等學生",
+    "frequency": 7445
+  },
+  {
+    "korean": "다섯",
+    "english": "five",
+    "romanization": "daseot",
+    "pos": "numeral",
+    "hanja": "",
+    "frequency": 7476
+  },
+  {
+    "korean": "닭고기",
+    "english": "chicken (meat)",
+    "romanization": "dalg-gogi",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 7478
+  },
+  {
+    "korean": "숟가락",
+    "english": "spoon",
+    "romanization": "sutgarak",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 7561
+  },
+  {
+    "korean": "요일",
+    "english": "day of the week",
+    "romanization": "yoil",
+    "pos": "noun",
+    "hanja": "曜日",
+    "frequency": 7586
+  },
+  {
+    "korean": "질문하다",
+    "english": "to ask a question",
+    "romanization": "jilmunhada",
+    "pos": "verb",
+    "hanja": "質問-",
+    "frequency": 7634
+  },
+  {
+    "korean": "치약",
+    "english": "toothpaste",
+    "romanization": "chiyag",
+    "pos": "noun",
+    "hanja": "齒藥",
+    "frequency": 7649
+  },
+  {
+    "korean": "금요일",
+    "english": "Friday",
+    "romanization": "geumyoil",
+    "pos": "noun",
+    "hanja": "金曜日",
+    "frequency": 7714
+  },
+  {
+    "korean": "김밥",
+    "english": "gimbap",
+    "romanization": "gimbap",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 7720
+  },
+  {
+    "korean": "바나나",
+    "english": "banana",
+    "romanization": "banana",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 7773
+  },
+  {
+    "korean": "수요일",
+    "english": "Wednesday",
+    "romanization": "suyoil",
+    "pos": "noun",
+    "hanja": "水曜日",
+    "frequency": 7818
+  },
+  {
+    "korean": "운전하다",
+    "english": "to drive",
+    "romanization": "unjeonhada",
+    "pos": "verb",
+    "hanja": "運轉-",
+    "frequency": 7864
+  },
+  {
+    "korean": "노트",
+    "english": "notebook",
+    "romanization": "noteu",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 8031
+  },
+  {
+    "korean": "딸기",
+    "english": "strawberry",
+    "romanization": "ttalgi",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 8053
+  },
+  {
+    "korean": "초콜릿",
+    "english": "chocolate",
+    "romanization": "chokollit",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 8235
+  },
+  {
+    "korean": "피자",
+    "english": "pizza",
+    "romanization": "pija",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 8264
+  },
+  {
+    "korean": "노란색",
+    "english": "yellow",
+    "romanization": "noransaek",
+    "pos": "noun",
+    "hanja": "-色",
+    "frequency": 8329
+  },
+  {
+    "korean": "달러",
+    "english": "dollar",
+    "romanization": "dalleo",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 8336
+  },
+  {
+    "korean": "이분",
+    "english": "this person; this gentleman",
+    "romanization": "ibun",
+    "pos": "pronoun",
+    "hanja": "",
+    "frequency": 8505
+  },
+  {
+    "korean": "칫솔",
+    "english": "toothbrush",
+    "romanization": "chitsol",
+    "pos": "noun",
+    "hanja": "齒-",
+    "frequency": 8589
+  },
+  {
+    "korean": "포도",
+    "english": "grape",
+    "romanization": "podo",
+    "pos": "noun",
+    "hanja": "葡萄",
+    "frequency": 8603
+  },
+  {
+    "korean": "공중전화",
+    "english": "public phone",
+    "romanization": "gongjungjeonhwa",
+    "pos": "noun",
+    "hanja": "公衆電話",
+    "frequency": 8672
+  },
+  {
+    "korean": "배부르다",
+    "english": "to be full; to be satisfied",
+    "romanization": "baebureuda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 8757
+  },
+  {
+    "korean": "샤워",
+    "english": "shower",
+    "romanization": "syawo",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 8795
+  },
+  {
+    "korean": "세탁기",
+    "english": "washing machine",
+    "romanization": "setakgi",
+    "pos": "noun",
+    "hanja": "洗濯機",
+    "frequency": 8809
+  },
+  {
+    "korean": "남동생",
+    "english": "younger brother",
+    "romanization": "namdongsaeng",
+    "pos": "noun",
+    "hanja": "男-",
+    "frequency": 9077
+  },
+  {
+    "korean": "도착",
+    "english": "arrival",
+    "romanization": "dochag",
+    "pos": "noun",
+    "hanja": "到着",
+    "frequency": 9103
+  },
+  {
+    "korean": "쇼핑",
+    "english": "shopping",
+    "romanization": "syoping",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 9202
+  },
+  {
+    "korean": "스키",
+    "english": "ski",
+    "romanization": "seuki",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 9214
+  },
+  {
+    "korean": "열",
+    "english": "ten",
+    "romanization": "yeol",
+    "pos": "numeral",
+    "hanja": "",
+    "frequency": 9266
+  },
+  {
+    "korean": "운동화",
+    "english": "sneakers; sports shoes",
+    "romanization": "undonghwa",
+    "pos": "noun",
+    "hanja": "運動靴",
+    "frequency": 9285
+  },
+  {
+    "korean": "짜다",
+    "english": "to squeeze; to be salty",
+    "romanization": "jjada",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 9356
+  },
+  {
+    "korean": "초등학교",
+    "english": "elementary school",
+    "romanization": "chodeunghakgyo",
+    "pos": "noun",
+    "hanja": "初等學校",
+    "frequency": 9369
+  },
+  {
+    "korean": "공휴일",
+    "english": "public holiday",
+    "romanization": "gonghyuil",
+    "pos": "noun",
+    "hanja": "公休日",
+    "frequency": 9466
+  },
+  {
+    "korean": "마흔",
+    "english": "forty",
+    "romanization": "maheun",
+    "pos": "numeral",
+    "hanja": "",
+    "frequency": 9548
+  },
+  {
+    "korean": "볼펜",
+    "english": "ballpoint pen",
+    "romanization": "bolpen",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 9583
+  },
+  {
+    "korean": "빨간색",
+    "english": "red",
+    "romanization": "ppalgansaek",
+    "pos": "noun",
+    "hanja": "-色",
+    "frequency": 9605
+  },
+  {
+    "korean": "스물",
+    "english": "twenty",
+    "romanization": "seumul",
+    "pos": "numeral",
+    "hanja": "",
+    "frequency": 10126
+  },
+  {
+    "korean": "청바지",
+    "english": "jeans",
+    "romanization": "cheongbaji",
+    "pos": "noun",
+    "hanja": "靑-",
+    "frequency": 10274
+  },
+  {
+    "korean": "핸드폰",
+    "english": "cell phone; mobile phone",
+    "romanization": "haendeupon",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 10334
+  },
+  {
+    "korean": "휴지통",
+    "english": "trash can; wastebasket",
+    "romanization": "hyujitong",
+    "pos": "noun",
+    "hanja": "休紙桶",
+    "frequency": 10353
+  },
+  {
+    "korean": "넷째",
+    "english": "fourth",
+    "romanization": "netjjae",
+    "pos": "determiner",
+    "hanja": "",
+    "frequency": 10452
+  },
+  {
+    "korean": "칠판",
+    "english": "blackboard; chalkboard",
+    "romanization": "chilpan",
+    "pos": "noun",
+    "hanja": "漆板",
+    "frequency": 10833
+  },
+  {
+    "korean": "크리스마스",
+    "english": "Christmas",
+    "romanization": "keuriseumaseu",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 10839
+  },
+  {
+    "korean": "구",
+    "english": "nine",
+    "romanization": "gu",
+    "pos": "numeral",
+    "hanja": "九",
+    "frequency": 10999
+  },
+  {
+    "korean": "목요일",
+    "english": "Thursday",
+    "romanization": "mogyoil",
+    "pos": "noun",
+    "hanja": "木曜日",
+    "frequency": 11099
+  },
+  {
+    "korean": "지우개",
+    "english": "eraser",
+    "romanization": "jiugae",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 11421
+  },
+  {
+    "korean": "사",
+    "english": "four",
+    "romanization": "sa",
+    "pos": "numeral",
+    "hanja": "四",
+    "frequency": 11837
+  },
+  {
+    "korean": "수영장",
+    "english": "swimming pool",
+    "romanization": "suyeongjang",
+    "pos": "noun",
+    "hanja": "水泳場",
+    "frequency": 11896
+  },
+  {
+    "korean": "일본어",
+    "english": "Japanese language",
+    "romanization": "ilboneo",
+    "pos": "noun",
+    "hanja": "日本語",
+    "frequency": 12030
+  },
+  {
+    "korean": "갈비",
+    "english": "ribs; galbi",
+    "romanization": "galbi",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 12246
+  },
+  {
+    "korean": "서른",
+    "english": "thirty",
+    "romanization": "seoreun",
+    "pos": "numeral",
+    "hanja": "",
+    "frequency": 12580
+  },
+  {
+    "korean": "아홉",
+    "english": "nine",
+    "romanization": "ahop",
+    "pos": "numeral",
+    "hanja": "",
+    "frequency": 12669
+  },
+  {
+    "korean": "장미",
+    "english": "rose",
+    "romanization": "jangmi",
+    "pos": "noun",
+    "hanja": "薔薇",
+    "frequency": 12818
+  },
+  {
+    "korean": "파란색",
+    "english": "blue",
+    "romanization": "paransaek",
+    "pos": "noun",
+    "hanja": "-色",
+    "frequency": 12965
+  },
+  {
+    "korean": "냉면",
+    "english": "cold noodles",
+    "romanization": "naengmyeon",
+    "pos": "noun",
+    "hanja": "冷麵",
+    "frequency": 13192
+  },
+  {
+    "korean": "비빔밥",
+    "english": "bibimbap",
+    "romanization": "bibimbap",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 13411
+  },
+  {
+    "korean": "여든",
+    "english": "eighty",
+    "romanization": "yeodeun",
+    "pos": "numeral",
+    "hanja": "",
+    "frequency": 13584
+  },
+  {
+    "korean": "일흔",
+    "english": "seventy",
+    "romanization": "ilheun",
+    "pos": "numeral",
+    "hanja": "",
+    "frequency": 13695
+  },
+  {
+    "korean": "화요일",
+    "english": "Tuesday",
+    "romanization": "hwayoil",
+    "pos": "noun",
+    "hanja": "火曜日",
+    "frequency": 13987
+  },
+  {
+    "korean": "선물하다",
+    "english": "to gift; to present",
+    "romanization": "seonmulhada",
+    "pos": "verb",
+    "hanja": "膳物-",
+    "frequency": 14518
+  },
+  {
+    "korean": "아이스크림",
+    "english": "ice cream",
+    "romanization": "aiseukeurim",
+    "pos": "noun",
+    "hanja": "",
+    "frequency": 14611
+  },
+  {
+    "korean": "요리하다",
+    "english": "to cook",
+    "romanization": "yorihada",
+    "pos": "verb",
+    "hanja": "料理-",
+    "frequency": 14695
+  },
+  {
+    "korean": "칠",
+    "english": "seven",
+    "romanization": "chil",
+    "pos": "numeral",
+    "hanja": "七",
+    "frequency": 14947
+  },
+  {
+    "korean": "맛없다",
+    "english": "tasteless; not delicious",
+    "romanization": "mateopda",
+    "pos": "adjective",
+    "hanja": "",
+    "frequency": 15475
+  },
+  {
+    "korean": "사십",
+    "english": "forty",
+    "romanization": "sasip",
+    "pos": "numeral",
+    "hanja": "四十",
+    "frequency": 15648
+  },
+  {
+    "korean": "실례하다",
+    "english": "to be rude; to excuse",
+    "romanization": "sillyehada",
+    "pos": "verb",
+    "hanja": "失禮-",
+    "frequency": 17194
+  },
+  {
+    "korean": "여섯",
+    "english": "six",
+    "romanization": "yeoseot",
+    "pos": "numeral",
+    "hanja": "",
+    "frequency": 17283
+  },
+  {
+    "korean": "육",
+    "english": "six",
+    "romanization": "yuk",
+    "pos": "numeral",
+    "hanja": "六",
+    "frequency": 17406
+  },
+  {
+    "korean": "일곱",
+    "english": "seven",
+    "romanization": "ilgop",
+    "pos": "numeral",
+    "hanja": "",
+    "frequency": 17461
+  },
+  {
+    "korean": "삼십",
+    "english": "thirty",
+    "romanization": "samsip",
+    "pos": "numeral",
+    "hanja": "三十",
+    "frequency": 18764
+  },
+  {
+    "korean": "오십",
+    "english": "fifty",
+    "romanization": "osip",
+    "pos": "numeral",
+    "hanja": "五十",
+    "frequency": 19100
+  },
+  {
+    "korean": "중국어",
+    "english": "Chinese language",
+    "romanization": "junggugeo",
+    "pos": "noun",
+    "hanja": "中國語",
+    "frequency": 19454
+  },
+  {
+    "korean": "칠십",
+    "english": "seventy",
+    "romanization": "chilsip",
+    "pos": "numeral",
+    "hanja": "七十",
+    "frequency": 19607
+  },
+  {
+    "korean": "다섯째",
+    "english": "fifth",
+    "romanization": "daseotjjae",
+    "pos": "determiner",
+    "hanja": "",
+    "frequency": 20314
+  },
+  {
+    "korean": "사탕",
+    "english": "candy",
+    "romanization": "satang",
+    "pos": "noun",
+    "hanja": "沙糖",
+    "frequency": 20886
+  },
+  {
+    "korean": "예순",
+    "english": "sixty",
+    "romanization": "yesun",
+    "pos": "numeral",
+    "hanja": "",
+    "frequency": 21340
+  },
+  {
+    "korean": "오",
+    "english": "five",
+    "romanization": "o",
+    "pos": "numeral",
+    "hanja": "五",
+    "frequency": 21348
+  },
+  {
+    "korean": "십",
+    "english": "ten",
+    "romanization": "sip",
+    "pos": "numeral",
+    "hanja": "十",
+    "frequency": 24036
+  },
+  {
+    "korean": "쉰",
+    "english": "fifty",
+    "romanization": "swin",
+    "pos": "numeral",
+    "hanja": "",
+    "frequency": 27846
+  },
+  {
+    "korean": "육십",
+    "english": "sixty",
+    "romanization": "yuksip",
+    "pos": "numeral",
+    "hanja": "六十",
+    "frequency": 28580
+  },
+  {
+    "korean": "팔십",
+    "english": "eighty",
+    "romanization": "palsip",
+    "pos": "numeral",
+    "hanja": "八十",
+    "frequency": 29719
+  },
+  {
+    "korean": "여덟",
+    "english": "eight",
+    "romanization": "yeodeol",
+    "pos": "numeral",
+    "hanja": "",
+    "frequency": 34841
+  },
+  {
+    "korean": "아흔",
+    "english": "ninety",
+    "romanization": "aheun",
+    "pos": "numeral",
+    "hanja": "",
+    "frequency": 49265
+  },
+  {
+    "korean": "이십",
+    "english": "twenty",
+    "romanization": "isip",
+    "pos": "numeral",
+    "hanja": "二十",
+    "frequency": 51771
+  },
+  {
+    "korean": "저곳",
+    "english": "that place",
+    "romanization": "jeogot",
+    "pos": "pronoun",
+    "hanja": "",
+    "frequency": 52763
+  },
+  {
+    "korean": "경복궁",
+    "english": "Gyeongbokgung Palace",
+    "romanization": "Gyeongbokgung",
+    "pos": "proper noun",
+    "hanja": "景福宮",
+    "frequency": 99999
+  },
+  {
+    "korean": "경주",
+    "english": "Gyeongju",
+    "romanization": "Gyeongju",
+    "pos": "proper noun",
+    "hanja": "慶州",
+    "frequency": 99999
+  },
+  {
+    "korean": "구십",
+    "english": "ninety",
+    "romanization": "gusip",
+    "pos": "numeral",
+    "hanja": "九十",
+    "frequency": 99999
+  },
+  {
+    "korean": "남대문",
+    "english": "Namdaemun",
+    "romanization": "Namdaemun",
+    "pos": "proper noun",
+    "hanja": "南大門",
+    "frequency": 99999
+  },
+  {
+    "korean": "남대문시장",
+    "english": "Namdaemun Market",
+    "romanization": "Namdaemun Sijang",
+    "pos": "proper noun",
+    "hanja": "南大門市場",
+    "frequency": 99999
+  },
+  {
+    "korean": "독일",
+    "english": "Germany",
+    "romanization": "Dogil",
+    "pos": "proper noun",
+    "hanja": "獨逸",
+    "frequency": 99999
+  },
+  {
+    "korean": "러시아",
+    "english": "Russia",
+    "romanization": "Reosia",
+    "pos": "proper noun",
+    "hanja": "",
+    "frequency": 99999
+  },
+  {
+    "korean": "미국",
+    "english": "United States",
+    "romanization": "Miguk",
+    "pos": "proper noun",
+    "hanja": "美國",
+    "frequency": 99999
+  },
+  {
+    "korean": "부산",
+    "english": "Busan",
+    "romanization": "Busan",
+    "pos": "proper noun",
+    "hanja": "釜山",
+    "frequency": 99999
+  },
+  {
+    "korean": "서울",
+    "english": "Seoul",
+    "romanization": "Seoul",
+    "pos": "proper noun",
+    "hanja": "",
+    "frequency": 99999
+  },
+  {
+    "korean": "서울역",
+    "english": "Seoul Station",
+    "romanization": "Seoul-yeok",
+    "pos": "proper noun",
+    "hanja": "-驛",
+    "frequency": 99999
+  },
+  {
+    "korean": "설악산",
+    "english": "Seoraksan Mountain",
+    "romanization": "Seoraksan",
+    "pos": "proper noun",
+    "hanja": "雪嶽山",
+    "frequency": 99999
+  },
+  {
+    "korean": "영국",
+    "english": "United Kingdom",
+    "romanization": "Yeongguk",
+    "pos": "proper noun",
+    "hanja": "英國",
+    "frequency": 99999
+  },
+  {
+    "korean": "인천",
+    "english": "Incheon",
+    "romanization": "Incheon",
+    "pos": "proper noun",
+    "hanja": "仁川",
+    "frequency": 99999
+  },
+  {
+    "korean": "일본",
+    "english": "Japan",
+    "romanization": "Ilbon",
+    "pos": "proper noun",
+    "hanja": "日本",
+    "frequency": 99999
+  },
+  {
+    "korean": "제주도",
+    "english": "Jeju Island",
+    "romanization": "Jejudo",
+    "pos": "proper noun",
+    "hanja": "濟州島",
+    "frequency": 99999
+  },
+  {
+    "korean": "중국",
+    "english": "China",
+    "romanization": "Jungguk",
+    "pos": "proper noun",
+    "hanja": "中國",
+    "frequency": 99999
+  },
+  {
+    "korean": "캐나다",
+    "english": "Canada",
+    "romanization": "Kaenada",
+    "pos": "proper noun",
+    "hanja": "",
+    "frequency": 99999
+  },
+  {
+    "korean": "프랑스",
+    "english": "France",
+    "romanization": "Peurangseu",
+    "pos": "proper noun",
+    "hanja": "",
+    "frequency": 99999
+  },
+  {
+    "korean": "한강",
+    "english": "Han River",
+    "romanization": "Hangang",
+    "pos": "proper noun",
+    "hanja": "漢江",
+    "frequency": 99999
+  },
+  {
+    "korean": "한국",
+    "english": "Korea",
+    "romanization": "Hanguk",
+    "pos": "proper noun",
+    "hanja": "韓國",
+    "frequency": 99999
+  },
+  {
+    "korean": "호주",
+    "english": "Australia",
+    "romanization": "Hoju",
+    "pos": "proper noun",
+    "hanja": "濠洲",
+    "frequency": 99999
+  }
+]

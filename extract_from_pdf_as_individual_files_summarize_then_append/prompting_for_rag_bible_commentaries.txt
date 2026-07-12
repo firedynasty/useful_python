@@ -1,0 +1,191 @@
+# Prompting Guide: Creating RAG from Bible Commentaries (Matthew Henry)
+
+## Overview
+This guide documents how to convert Matthew Henry Commentary HTML files into a
+summarized text file suitable for RAG (Retrieval Augmented Generation) with
+anthropic_chat_cli.py.
+
+## File Naming Convention
+MHC files follow this pattern: MHC{book_num}{chapter_padded}.HTM
+- Book numbers: 01=Genesis, 02=Exodus, 03=Leviticus... 66=Revelation
+- Chapter: 3 digits, zero-padded (001, 002, ... 050)
+
+Example: MHC01001.HTM = Genesis Chapter 1
+
+
+================================================================================
+STEP 1: Convert HTML to Plain Text
+================================================================================
+
+First, convert each MHC HTML file to plain text (strips HTML, reduces file size).
+
+PROMPT TO CLAUDE CODE:
+---
+I have Matthew Henry Commentary HTML files in ./matthew_henry folder.
+File pattern: MHC{book_num}{chapter}.HTM (e.g., MHC01001.HTM = Genesis Ch 1)
+
+Please convert all [BOOK_NAME] chapters to plain text files in ./[book]_txt/
+
+Book numbers:
+- Genesis = 01 (50 chapters)
+- Exodus = 02 (40 chapters)
+- Leviticus = 03 (27 chapters)
+- Numbers = 04 (36 chapters)
+- Deuteronomy = 05 (34 chapters)
+- [etc.]
+---
+
+Claude Code will run something like:
+```bash
+mkdir -p ./exodus_txt
+for i in $(seq -w 1 40); do
+  input="./matthew_henry/MHC020${i}.HTM"
+  output="./exodus_txt/Exodus_ch${i}.txt"
+  if [ -f "$input" ]; then
+    python /path/to/convert_html_to_txt.py "$input" "$output"
+  fi
+done
+```
+
+
+================================================================================
+STEP 2: Summarize Each Chapter (Claude Code does this)
+================================================================================
+
+PROMPT TO CLAUDE CODE:
+---
+Please summarize Matthew Henry Commentary on [BOOK_NAME] for RAG.
+
+Read each chapter from ./[book]_txt/ and create summaries (300-500 words each).
+
+Output format (save to [book]_mhc_summarized.txt):
+
+================================================================================
+BOOK: [Book Name] - Matthew Henry Commentary (Summarized)
+================================================================================
+
+Chapter 1: [Title]
+----------------------------------------
+[Summary of main themes, interpretations, practical applications]
+
+Chapter 2: [Title]
+----------------------------------------
+[Summary...]
+
+[Continue for all chapters]
+
+Focus on:
+1. Main theological themes
+2. Key verse-by-verse insights
+3. Practical applications
+4. Notable quotes or phrases
+5. Cross-references to other scripture
+---
+
+Claude Code will:
+1. Read each chapter file (batch by batch: 1-10, 11-20, etc.)
+2. Create concise summaries
+3. Write to a single output file with proper demarcations
+
+
+================================================================================
+STEP 3: Create RAG Database
+================================================================================
+
+PROMPT TO CLAUDE CODE:
+---
+Create RAG database from the summarized file:
+
+python /Users/stanleytan/Documents/25-technical/46-python/extract_from_pdf/create_rag_from_text.py ./[book]_mhc_summarized.txt -o ./rag_[book]
+---
+
+This creates the RAG folder structure that works with anthropic_chat_cli.py.
+
+
+================================================================================
+STEP 4: Use the RAG
+================================================================================
+
+```bash
+python /Users/stanleytan/Documents/25-technical/01-github/streamlit_apps/anthropic_chat_cli.py --rag ./rag_[book]
+```
+
+
+================================================================================
+QUICK REFERENCE: Book Numbers
+================================================================================
+
+OLD TESTAMENT:
+01 Genesis (50)      02 Exodus (40)       03 Leviticus (27)
+04 Numbers (36)      05 Deuteronomy (34)  06 Joshua (24)
+07 Judges (21)       08 Ruth (4)          09 1 Samuel (31)
+10 2 Samuel (24)     11 1 Kings (22)      12 2 Kings (25)
+13 1 Chronicles (29) 14 2 Chronicles (36) 15 Ezra (10)
+16 Nehemiah (13)     17 Esther (10)       18 Job (42)
+19 Psalms (150)      20 Proverbs (31)     21 Ecclesiastes (12)
+22 Song of Solomon (8) 23 Isaiah (66)     24 Jeremiah (52)
+25 Lamentations (5)  26 Ezekiel (48)      27 Daniel (12)
+28 Hosea (14)        29 Joel (3)          30 Amos (9)
+31 Obadiah (1)       32 Jonah (4)         33 Micah (7)
+34 Nahum (3)         35 Habakkuk (3)      36 Zephaniah (3)
+37 Haggai (2)        38 Zechariah (14)    39 Malachi (4)
+
+NEW TESTAMENT:
+40 Matthew (28)      41 Mark (16)         42 Luke (24)
+43 John (21)         44 Acts (28)         45 Romans (16)
+46 1 Corinthians (16) 47 2 Corinthians (13) 48 Galatians (6)
+49 Ephesians (6)     50 Philippians (4)   51 Colossians (4)
+52 1 Thessalonians (5) 53 2 Thessalonians (3) 54 1 Timothy (6)
+55 2 Timothy (4)     56 Titus (3)         57 Philemon (1)
+58 Hebrews (13)      59 James (5)         60 1 Peter (5)
+61 2 Peter (3)       62 1 John (5)        63 2 John (1)
+64 3 John (1)        65 Jude (1)          66 Revelation (22)
+
+
+================================================================================
+EXAMPLE: Creating RAG for Exodus
+================================================================================
+
+PROMPT 1:
+"Convert all Exodus MHC files (MHC02001.HTM to MHC02040.HTM) from ./matthew_henry
+to plain text in ./exodus_txt/"
+
+PROMPT 2:
+"Summarize Matthew Henry Commentary on Exodus for RAG. Read each chapter from
+./exodus_txt/ and create exodus_mhc_summarized.txt with proper Chapter demarcations."
+
+PROMPT 3:
+"Create RAG: python create_rag_from_text.py ./exodus_mhc_summarized.txt -o ./rag_exodus"
+
+
+================================================================================
+NOTES
+================================================================================
+
+1. DEMARCATION FORMAT
+   The create_rag_from_text.py script automatically detects "Chapter X:" patterns.
+   Each chapter becomes one retrievable chunk.
+
+2. SUMMARY LENGTH
+   ~300-500 words per chapter keeps file manageable while retaining key insights.
+   Genesis 50 chapters = ~56KB summarized (down from 1.5MB raw)
+
+3. BATCH PROCESSING
+   For books with many chapters, Claude Code processes in batches (10 chapters
+   at a time) to manage context.
+
+4. OUTPUT STRUCTURE
+   ./rag_[book]/
+   ├── rag_config.toml
+   ├── src/
+   │   ├── __init__.py
+   │   ├── constants.py
+   │   └── retrieval.py
+   ├── databases/
+   │   └── lancedb/
+   └── requirements.txt
+
+5. COMBINING BOOKS
+   You can concatenate multiple summarized files and create one RAG:
+   cat genesis_mhc_summarized.txt exodus_mhc_summarized.txt > pentateuch.txt
+   python create_rag_from_text.py pentateuch.txt -o ./rag_pentateuch

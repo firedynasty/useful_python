@@ -1,0 +1,4 @@
+elevenlabs
+moviepy
+Pillow
+numpy

@@ -1,0 +1,27 @@
+Write a natural Filipino/Tagalog conversation between two people
+about ordering food at a carinderia.
+
+Format: A: is always the Filipino line, B: is always the English translation.
+Each A line is immediately followed by its B translation.
+
+[Scene 1]
+A: Ate, ano po ang ulam ngayon?
+B: Ate, what are the dishes today?
+
+A: Meron tayong adobo, sinigang, at pinakbet.
+B: We have adobo, sinigang, and pinakbet.
+
+[Scene 2]
+A: Pabili po ng isang adobo.
+B: I'd like one adobo please.
+
+Rules:
+- A: is ALWAYS Filipino, B: is ALWAYS the English translation of the line above
+- Natural spoken Filipino, include contractions ('di, 'yung, 'ko, pa'no)
+- Group into [Scene 1], [Scene 2], etc.
+- 15-20 exchanges total
+- Keep lines short and conversational
+
+
+
+-- introduction 0:15 welcome to 0:16 filipinopod101.com filipino 0:19 minuto the fastest easiest and most fun 0:22 way to learn 0:28 filipino hi i'm erica nice to meet you 0:33 in this series we're going to learn 0:35 basic filipino expressions it's super 0:37 easy and it only takes three minutes 0:40 in this lesson you're going to learn how 0:42 to introduce yourself and filipino 0:45 are you ready 0:46 here we go 0:53 hi 0:54 i'm erica it's nice to meet you 1:09 did you get it 1:11 let's take it step by step 1:13 start by saying 1:16 this means 1:18 how are you 1:19 but it's commonly used to say hi 1:22 in filipino 1:23 next 1:24 say akosi 1:27 i am and then your name 1:29 my name is erica so i'll say 1:32 erica 1:34 finally say 1:38 this means it's nice to meet you 1:53 next we're going to learn how to 1:55 introduce ourselves in formal filipino 1:58 but first i'll teach you two words that 2:01 turns any filipino sentence formal 2:04 they are po 2:05 and opo 2:11 all filipinos learn these two words when 2:13 they are young because they are a must 2:15 when speaking politely to those who are 2:17 older 2:19 now here's how to introduce yourself 2:21 informal filipino 2:29 how are you 2:30 i'm erica 2:31 it's nice to meet you 2:34 camo 2:44 did you notice the word po in this 2:46 introduction 2:47 let's compare it with the informal 2:49 introduction we learned earlier 2:51 first we have kamusta 2:54 instead of just kamusta 2:56 as we've said before kamusta means how 3:00 are you 3:01 and has essentially the same used as hai 3:04 in english 3:05 it comes from the spanish phrase 3:07 como esta 3:09 we add the word po to this to make it 3:11 polite 3:12 for the next sentence there is no need 3:15 to change akosi or i am however saying 3:19 your full name is considered more formal 3:22 in the philippines we say our first 3:24 names first and last names last 3:27 finally 3:28 

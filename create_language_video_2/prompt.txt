@@ -1,0 +1,29 @@
+Write a natural Chinese conversation between two people
+about ordering food at a carinderia.
+
+Format: A: is always the Chinese line, P: is the pinyin, B: is always the English translation
+Each A line is immediately followed by its P pinyin, then its B translation.
+
+[Scene 1]
+A: 姐姐，今天有什么菜？
+P: Jiějie, jīntiān yǒu shénme cài?
+B: Ate, what are the dishes today?
+
+A: 我们有adobo、sinigang和pinakbet。
+P: Wǒmen yǒu adobo, sinigang hé pinakbet.
+B: We have adobo, sinigang, and pinakbet.
+
+[Scene 2]
+A: 请给我一份adobo。
+P: Qǐng gěi wǒ yī fèn adobo.
+B: I'd like one adobo please.
+
+Rules:
+- A: is ALWAYS Chinese characters, P: is ALWAYS the pinyin of the A line, B: is ALWAYS the English translation
+- Natural spoken Mandarin Chinese
+- Group into [Scene 1], [Scene 2], etc.
+- 15-20 exchanges total
+- Keep lines short and conversational
+- Pinyin must use tone marks (e.g. māmá, not mama)
+
+

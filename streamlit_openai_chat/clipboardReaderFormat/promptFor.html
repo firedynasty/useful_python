@@ -1,0 +1,790 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clipboard Template Appender</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 2rem;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 0.75rem 1.5rem;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.2s;
+        }
+
+        .primary-button {
+            background-color: #3B82F6;
+        }
+
+        .primary-button:hover {
+            background-color: #2563EB;
+        }
+
+        .secondary-button {
+            background-color: #6B7280;
+        }
+
+        .secondary-button:hover {
+            background-color: #4B5563;
+        }
+
+        .success-button {
+            background-color: #10B981;
+        }
+
+        .success-button:hover {
+            background-color: #059669;
+        }
+
+        .danger-button {
+            background-color: #EF4444;
+        }
+
+        .danger-button:hover {
+            background-color: #DC2626;
+        }
+
+        .control-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #333;
+        }
+
+        select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            background-color: white;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 200px;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            resize: vertical;
+            margin-bottom: 1.5rem;
+        }
+
+        #lineInputArea, #lineOutputArea {
+            min-height: 75px;
+        }
+
+        #processLines, #pasteLineNumbers, #clearLines, #clearButton, #toggleDebugButton, #pasteButton {
+            display: none;
+        }
+
+        .template-inline {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .template-inline select {
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .status {
+            text-align: center;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 6px;
+            margin: 1rem 0;
+            font-weight: 500;
+        }
+
+        .info-box {
+            background-color: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border-radius: 4px;
+        }
+
+        .info-box h3 {
+            margin-top: 0;
+            color: #1976d2;
+        }
+
+        .info-box ul {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .debug-panel {
+            background-color: #f8f9fa;
+            border: 2px solid #6c757d;
+            border-radius: 6px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+        }
+
+        .debug-panel h4 {
+            margin: 0 0 0.5rem 0;
+            color: #495057;
+        }
+
+        .debug-item {
+            padding: 0.5rem;
+            background-color: white;
+            border-left: 3px solid #6c757d;
+            margin-bottom: 0.5rem;
+        }
+
+        .debug-label {
+            font-weight: bold;
+            color: #495057;
+        }
+
+        .debug-value {
+            color: #212529;
+            margin-top: 0.25rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+
+        <div class="button-group">
+            <button class="primary-button" id="pasteLineNumbers">📋 Paste Text with Line Numbers</button>
+            <button class="primary-button" id="pasteIntoTextArea1">📝 Paste into TextArea 1</button>
+            <label style="margin-left: auto; margin-right: 0.5rem;">From line:</label>
+            <input type="number" id="startLine" placeholder="1" min="1" style="width: 80px; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+            <label style="margin-left: 0.5rem; margin-right: 0.5rem;">To line:</label>
+            <input type="number" id="endLine" placeholder="end" min="1" style="width: 80px; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+            <label style="margin-left: 0.5rem; margin-right: 0.5rem;">Time:</label>
+            <input type="text" id="timeSearch" placeholder="3:30" style="width: 80px; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+            <button class="success-button" id="processLines">✨ Process</button>
+            <button class="secondary-button" id="clearLines">🗑️ Clear</button>
+        </div>
+
+        <div class="status" id="lineStatus">Ready. Paste text with line numbers.</div>
+
+        <textarea id="lineInputArea" placeholder="Paste your text with line numbers here..."></textarea>
+        <textarea id="lineOutputArea" placeholder="Processed text without line numbers will appear here..."></textarea>
+    </div>
+
+    <div class="container" style="margin-top: 2rem;">
+
+
+        <div class="button-group">
+            <button class="primary-button" id="pasteButton">📋 Paste from Clipboard</button>
+            <button class="secondary-button" id="clearButton">🗑️ Clear</button>
+            <button class="secondary-button" id="toggleDebugButton">🐛 Toggle Debug</button>
+        </div>
+
+        <div class="debug-panel" id="debugPanel" style="display: none;">
+            <h4>🐛 Debug Information</h4>
+            <div class="debug-item">
+                <div class="debug-label">Clipboard Content Length:</div>
+                <div class="debug-value" id="debugClipboardLength">0 characters</div>
+            </div>
+            <div class="debug-item">
+                <div class="debug-label">Selected Template:</div>
+                <div class="debug-value" id="debugSelectedTemplate">None</div>
+            </div>
+            <div class="debug-item">
+                <div class="debug-label">Template Content Length:</div>
+                <div class="debug-value" id="debugTemplateLength">0 characters</div>
+            </div>
+            <div class="debug-item">
+                <div class="debug-label">Final Output Length:</div>
+                <div class="debug-value" id="debugOutputLength">0 characters</div>
+            </div>
+            <div class="debug-item">
+                <div class="debug-label">Instruction Text:</div>
+                <div class="debug-value" id="debugInstruction">Not generated yet</div>
+            </div>
+            <div class="debug-item">
+                <div class="debug-label">Current Template Variable:</div>
+                <div class="debug-value" id="debugCurrentTemplate">None</div>
+            </div>
+            <div class="debug-item">
+                <div class="debug-label">Base Content (Original Clipboard):</div>
+                <div class="debug-value" id="debugBaseContent">0 characters</div>
+            </div>
+        </div>
+
+        <div class="template-inline">
+            <button class="primary-button" id="pasteButton2">📋 Paste</button>
+            <select id="templateSelect">
+                <!-- Options populated dynamically from templateNames -->
+            </select>
+        </div>
+
+        <div class="template-inline">
+            <select id="quickPromptSelect">
+                <!-- Options populated dynamically from quickPromptDatabase -->
+            </select>
+            <label style="margin-left: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                <input type="checkbox" id="showAlertCheckbox" checked>
+                Show Alert
+            </label>
+        </div>
+
+        <div class="button-group">
+            <button class="success-button" id="appendButton">✨ Append Template & Instruction</button>
+            <button class="primary-button" id="copyButton">📄 Copy to Clipboard</button>
+        </div>
+
+        <div class="status" id="statusDisplay">Ready. Paste your content and select a template.</div>
+
+        <textarea id="outputArea" placeholder="Your combined content will appear here..."></textarea>
+    </div>
+
+    <script>
+        // Quick Prompts Database
+        const prompt_kjv_definitions = `Gloss this KJV Bible passage with brief definitions in parentheses after archaic or unclear words:`;
+        const prompt_chinese = `Given this Chinese text [paste text], please show the original Chinese and then provide a detailed breakdown with pinyin and English translations for each word/phrase.`;
+
+        const quickPromptDatabase = {
+            'Gloss KJV Definitions': prompt_kjv_definitions,
+            'Chinese Translation': prompt_chinese
+        };
+
+        // Template literals
+        const templates = {
+            super_size_me: `
+And it worked. When my parents were young, everybody smoked. Doctors smoked. Athletes smoked. Pregnant women smoked. Their kids came out of the womb looking around the delivery room for an ashtray to ash their Lucky Strikes. Everyone smoked. The change began in 1964, when the first surgeon general's warning about smoking and cancer scared the bejesus out of everybody. In 1971, cigarette ads were banned from TV, and much later they disappeared from billboards. Little by little, smoking was restricted in airplanes and airports, in public and private workplaces, in restaurants and bars. Tobacco sponsorship of sporting events decreased. Tighter controls were placed on selling cigarettes to minors. Everyone didn't quit overnight, but overall rates of smoking began to decrease—from 42 percent of adults in 1965 to 23 percent in 2000, and from 36 percent of high school kids in 1997 to 29 percent in 2001. The number of adults who have never smoked more than doubled from 1965 to 2000. Big tobacco companies knew it was a war they couldn't win, but they didn't give up without a fight. They threw billions and billions of more dollars into making smoking look cool, hip, sexy—and safe. They targeted new markets, like women, who increased their rate of smoking 400 percent after the surgeon general's report. Yeah, you've come a long way, baby—all the way from the kitchen to the cancer ward. They expanded their markets in the Third World and undeveloped nations, getting hundreds of millions of people hooked; it's estimated that more than four out of five current smokers are in developing countries. As if people without a regular source of drinking water didn't have enough to worry about already. Big Tobacco denied the health risks of smoking, lied about what they were putting into cigarettes and lobbied like hell against every government agency or legislative act aimed at curbing their deadly impact. Which brings me back to those "frivolous" lawsuits. Back when people were first suing the tobacco companies for giving them cancer, a lot of folks scoffed. (And coughed. But they still scoffed.) Smokers knew the dangers of smoking, everyone said. If they decided to keep smoking for thirty, forty years and then got lung cancer, they couldn't blame the tobacco companies.
+
+From the book Super Size Me`,
+
+            democracies_and_death_cults: `
+Once again it was noticeable that a considerable amount of "projection" was going on, as well as a deliberate attempt to wound Jews as deeply as possible with this claim. Anti-Israel politicians and activists in Europe seemed especially keen to use the concentration-camp smear against Israel. For instance, the movement of far-left French politician Jean-Luc Mélenchon particularly embraced these claims. Two weeks after October 7 there was an anti-Israel protest in Paris. In an X post, Mélenchon wrote "This is France" alongside a picture of the demonstrators. He then alleged that the president of the national assembly, Yaël Braun-Pivet, who happens to be Jewish, was "camping" out in Tel Aviv in order to "encourage a massacre" in Gaza.52 That is the language of the French far left but it is interesting that it comes from people who agree with the old far right on one aspect of history. In 2017 Emmanuel Macron gave a speech in which he acknowledged that France had been complicit in the Nazi Holocaust of the Jews. Mélenchon was one of the figures who lambasted Macron for this acknowledgment. He made similar arguments that those on the French far right had long made. Disputing the legitimacy of the Vichy regime, Mélenchon claimed that it was "totally unacceptable" to say that "France, as a people, as a nation, is responsible for this crime."53 As though 75,000 French Jews had been deported to the concentration camps in the 1940s by some error in no way connected with anyone French. But Mélenchon was not alone among European politicians in trying this move. Similar efforts were made by politicians in the Netherlands, Italy, and many other countries. The same people who claimed that their own countries had no involvement in the Holocaust or who tried to downplay their own involvement in the concentration camps were strangely eager to accuse the Jews of carrying out just such atrocities in the here and now. It is as though if the Jews can be accused of running concentration camps and carrying out "ethnic cleansing" today, then it is easier to say first, "You see, we all do it," then to move on to say, "But the Jews actually do it more."
+
+On Democracies and Death Cults`,
+
+            money_lies_and_god: `
+INTRODUCTION The man in the MAGA cap and the SIZE MATTERS T-shirt allowed me to take his picture. The "size" in question had to do with bullets, which were represented on the shirt in a line from what looked like pistol- to bazooka-grade. He warned me not to use the picture to humiliate my husband and exhorted me to "serve him well." It sounded like a joke, but the expression on his face was hard and angry. Not far from us stood a man in a T-shirt that read MAKE MEN MEN AGAIN. He glared at the crowd like he wanted to punch someone in the face. Women walked past us in red-white-and-blue outfits. Many had Bible verse numbers or slogans on their T-shirts, though quite a few sported images of guns, some of them aimed at "RINOs." At one of the booths nearby a group of women was raising money for the "patriots" of January 6, now incarcerated in "the DC gulag." It was a hot summer day in 2023, and there was little new for me at this gathering
+Yet as I took in the January 6 memorabilia, I couldn't help thinking back on another, very different event four years earlier. In 2019, I found myself in a seventeenth-century palazzo in Verona, Italy, for a gathering of the World Congress of Families, where I sat in on speeches and discussions with American, Russian, and European political activists on "the LGBT totalitarians" and the evils of "global liberalism." The message was in some sense the same as the one in Las Vegas, but it is safe to say that among the well-heeled, stylishly dressed, highly educated, and well-traveled participants there, members of the Nevada T-shirt crowd would have stuck out like a platter of corn dogs at a fine Italian trattoria. The last of the speakers in Verona was a diminutive white-haired academic in a nondescript jacket and tie,
+
+Money, Lies, and God`,
+
+            life_of_henrietta: `
+that if you could pile all HeLa cells ever grown onto a scale, they'd weigh more than 50 million metric tons—an inconceivable number, given that an individual cell weighs almost nothing. Another scientist calculated that if you could lay all HeLa cells ever grown end-to-end, they'd wrap around the Earth at least three times, spanning more than 350 million feet. In her prime, Henrietta herself stood only a bit over five feet tall. I first learned about HeLa cells and the woman behind them in 1988, thirty-seven years after her death, when I was sixteen and sitting in a community college biology class. My instructor, Donald Defler, a gnomish balding man, paced at the front of the lecture hall and flipped on an overhead projector. He pointed to two diagrams that appeared on the wall behind him. They were schematics of the cell reproduction cycle, but to me they just looked like a neon-colored mess of arrows, squares, and circles with words I didn't understand, like "MPF Triggering a Chain Reaction of Protein Activations." I was a kid who'd failed freshman year at the regular public high school because she never showed up. I'd transferred to an alternative school that offered dream studies instead of biology, so I was taking Defler's class for high-school credit, which meant that I was sitting in a college lecture hall at sixteen with words like mitosis and kinase inhibitors flying around. I was completely lost. "Do we have to memorize everything on those diagrams?" one student yelled. Yes, Defler said, we had to memorize the diagrams, and yes, they'd be on the test, but that didn't matter right then. What he wanted us to understand was that cells are amazing things: There are about one hundred trillion of them in our bodies, each so small that several thousand could fit on the period at the end of this sentence. They make up all our tissues—muscle, bone, blood—which in turn make up our organs. Under the microscope, a cell looks a lot like a fried egg: It has a white (the cytoplasm) that's full of water and proteins to keep it fed, and a yolk (the nucleus) that holds all the genetic information that makes you you. The cytoplasm buzzes like a New York City street. It's crammed full of molecules and vessels endlessly shuttling enzymes and sugars from one part of the cell to another, pumping water, nutrients, and oxygen in and
+
+from Immortal Life of Henrietta Lacks`,
+
+            feynman: `
+This two-year course in physics is presented from the point of view that you, the reader, are going to be a physicist. This is not necessarily the case of course, but that is what every professor in every subject assumes! If you are going to be a physicist, you will have a lot to study: two hundred years of the most rapidly developing field of knowledge that there is. So much knowledge, in fact, that you might think that you cannot learn all of it in four years, and truly you cannot; you will have to go to graduate school too!
+
+Surprisingly enough, in spite of the tremendous amount of work that has been done for all this time it is possible to condense the enormous mass of results to a large extent—that is, to find laws which summarize all our knowledge. Even so, the laws are so hard to grasp that it is unfair to you to start exploring this tremendous subject without some kind of map or outline of the relationship of one part of the subject of science to another. Following these preliminary remarks, the first three chapters will therefore outline the relation of physics to the rest of the sciences, the relations of the sciences to each other, and the meaning of science, to help us develop a "feel" for the subject.
+
+You might ask why we cannot teach physics by just giving the basic laws on page one and then showing how they work in all possible circumstances, as we do in Euclidean geometry, where we state the axioms and then make all sorts of deductions. (So, not satisfied to learn physics in four years, you want to learn it in four minutes?) We cannot do it in this way for two reasons. First, we do not yet know all the basic laws: there is an expanding frontier of ignorance. Second, the correct statement of the laws of physics involves some very unfamiliar ideas which require advanced mathematics for their description. Therefore, one needs a considerable amount of preparatory training even to learn what the words mean. No, it is not possible to do it that way. We can only do it piece by piece.
+
+Each piece, or part, of the whole of nature is always merely an approximation to the complete truth, or the complete truth so far as we know it. In fact, everything we know is only some kind of approximation, because we know that we do not know all the laws as yet. Therefore, things must be learned only to be unlearned again or, more likely, to be corrected.
+
+The principle of science, the definition, almost, is the following: The test of all knowledge is experiment. Experiment is the sole judge of scientific "truth." But what is the source of knowledge? Where do the laws that are to be tested come from? Experiment, itself, helps to produce these laws, in the sense that it gives us hints. But also needed is imagination to create from these hints the great generalizations—to guess at the wonderful, simple, but very strange patterns beneath them all, and then to experiment to check again whether we have made the right guess. This imagining process is so difficult that there is a division of labor in physics: there are theoretical physicists who imagine, deduce, and guess at new laws, but do not experiment; and then there are experimental physicists who experiment, imagine, deduce, and guess.
+
+We said that the laws of nature are approximate: that we first find the "wrong" ones, and then we find the "right" ones. Now, how can an experiment be "wrong"? First, in a trivial way: if something is wrong with the apparatus that you did not notice. But these things are easily fixed, and checked back and forth. So without snatching at such minor things, how can the results of an experiment be wrong? Only by being inaccurate. For example, the mass of an object never seems to change: a spinning top has the same weight as a still one. So a "law" was invented: mass is constant, independent of speed. That "law" is now found to be incorrect. Mass is found to increase with velocity, but appreciable increases require velocities near that of light. A true law is: if an object moves with a speed of less than one hundred miles a second the mass is constant to within one part in a million. In some such approximate form this is a correct law. So in practice one might think that the new law makes no significant difference. Well, yes and no. For ordinary speeds we can certainly forget it and use the simple constant-mass law as a good approximation. But for high speeds we are wrong, and the higher the speed, the more wrong we are.
+
+Finally, and most interesting, philosophically we are completely wrong with the approximate law. Our entire picture of the world has to be altered even though the mass changes only by a little bit. This is a very peculiar thing about the philosophy, or the ideas, behind the laws. Even a very small effect sometimes requires profound changes in our ideas.
+
+Now, what should we teach first? Should we teach the correct but unfamiliar law with its strange and difficult conceptual ideas, for example the theory of relativity, four-dimensional space-time, and so on? Or should we first teach the simple "constant-mass" law, which is only approximate, but does not involve such difficult ideas? The first is more exciting, more wonderful, and more fun, but the second is easier to get at first, and is a first step to a real understanding of the first idea. This point arises again and again in teaching physics. At different times we shall have to resolve it in different ways, but at each stage it is worth learning what is now known, how accurate it is, how it fits into everything else, and how it may be changed when we learn more.
+
+Let us now proceed with our outline, or general map, of our understanding of science today (in particular, physics, but also of other sciences on the periphery), so that when we later concentrate on some particular point we will have some idea of the background, why that particular point is interesting, and how it fits into the big structure. So, what is our overall picture of the world?
+
+If, in some cataclysm, all of scientific knowledge were to be destroyed, and only one sentence passed on to the next generations of creatures, what statement would contain the most information in the fewest words? I believe it is the atomic hypothesis (or the atomic fact, or whatever you wish to call it) that all things are made of atoms—little particles that move around in perpetual motion, attracting each other when they are a little distance apart, but repelling upon being squeezed into one another. In that one sentence, you will see, there is an enormous amount of information about the world, if just a little imagination and thinking are applied.
+
+From Richard Feynman's Lectures on Physics`,
+          sports : `ore than 23 years ago, a pair of low-profile junior college basketball teams played a forgotten game on a neutral floor in southeast North Dakota. The favored team was a school best known for its two-year forestry program; the underdog was a miniscule all-Native American college whose campus is located outside the Bismarck, N.D., airport. You’ve (probably) never heard of either school, and — in all likelihood — you will (probably) never hear of either one again. And if you remember this game, you (probably) played in it.
+
+Games described as forgotten typically earn that classification because they deserve to disappear; traditionally, it’s a modifier historians use to marginalize or dismiss a given event. But this game is “forgotten” in an actual sense: There’s almost no record of its existence. Fewer than 500 people watched it happen. It was not televised and there’s no videotape. It wasn’t broadcast on the radio. Only a couple of small-circulation newspapers made mention of what transpired, and — because it happened before the Internet — Googling the contest’s details is like searching for a glossy photograph of Genghis Khan. The game has disappeared from the world’s consciousness, buried by time and devoid of nostalgia. And this, of course, is not abnormal. Junior college basketball games from 1988 are not historic landmarks. We are conditioned to forget who won (or lost) the opening round of the North Dakota state juco tournament because those are moments society does not need to remember. They don’t even qualify as trivia.
+
+But something crazy happened in this particular game.
+
+In this particular game, a team won with only three players on the floor. And this was not a “metaphorical” victory or a “moral” victory: They literally won the game, 84-81, finishing the final 66 seconds by playing three-on-five. To refer to this as a David and Goliath battle devalues the impact of that cliché; it was more like a blind, one-armed David fighting Goliath without a rock. Yet there was no trick to this win and there was no deception — the team won by playing precisely how you’d expect. The crazy part is that it worked.`,
+          chinese : `Given this Chinese text [paste text], please show the original Chinese and then provide a detailed breakdown with pinyin and English translations for each word/phrase.`
+        };
+
+        class ClipboardTemplateAppender {
+            constructor() {
+                this.outputArea = document.getElementById('outputArea');
+                this.statusDisplay = document.getElementById('statusDisplay');
+                this.templateSelect = document.getElementById('templateSelect');
+                this.quickPromptSelect = document.getElementById('quickPromptSelect');
+ 
+                this.clipboardContent = '';
+                this.currentTemplate = '';
+                this.baseContentOnly = ''; // Store just the clipboard content without template
+                this.populateTemplateDropdown();
+                this.populateQuickPromptDropdown();
+                this.initializeEventListeners();
+            }
+
+            populateTemplateDropdown() {
+                const templateNames = {
+                    super_size_me: 'Super Size Me',
+                    democracies_and_death_cults: 'Democracies and Death Cults',
+                    money_lies_and_god: 'Money, Lies, and God',
+                    life_of_henrietta: 'Immortal Life of Henrietta Lacks',
+                    feynman: 'Richard Feynman lecture',
+                    sports: 'Sports',
+                    chinese : "Ask for Chinese"
+                };
+
+                // Clear existing options
+                this.templateSelect.innerHTML = '<option value="">-- Select a template --</option>';
+
+                // Generate options from templateNames
+                Object.keys(templateNames).forEach(key => {
+                    const option = document.createElement('option');
+                    option.value = key;
+                    option.textContent = templateNames[key];
+                    this.templateSelect.appendChild(option);
+                });
+            }
+
+            populateQuickPromptDropdown() {
+                // Clear existing options
+                this.quickPromptSelect.innerHTML = '<option value="">-- Select a quick prompt --</option>';
+
+                // Generate options from quickPromptDatabase
+                Object.keys(quickPromptDatabase).forEach(key => {
+                    const option = document.createElement('option');
+                    option.value = key;
+                    option.textContent = key;
+                    this.quickPromptSelect.appendChild(option);
+                });
+            }
+
+            initializeEventListeners() {
+                document.getElementById('pasteButton').addEventListener('click', () => this.pasteFromClipboard());
+                document.getElementById('pasteButton2').addEventListener('click', () => this.pasteFromClipboard());
+                document.getElementById('clearButton').addEventListener('click', () => this.clear());
+                document.getElementById('appendButton').addEventListener('click', () => this.appendTemplate());
+                document.getElementById('copyButton').addEventListener('click', () => this.copyToClipboard());
+                document.getElementById('toggleDebugButton').addEventListener('click', () => this.toggleDebug());
+
+                // Update debug info when template selection changes
+                this.templateSelect.addEventListener('change', () => {
+                    this.updateDebugInfo();
+                    // Auto-append with a small delay when template changes
+                    if (this.baseContentOnly || this.clipboardContent) {
+                        setTimeout(() => {
+                            this.appendTemplate();
+                        }, 300);
+                    }
+                });
+
+                // Quick prompt selection change - auto-copy and alert
+                this.quickPromptSelect.addEventListener('change', async () => {
+                    const selectedKey = this.quickPromptSelect.value;
+                    if (selectedKey) {
+                        const promptText = quickPromptDatabase[selectedKey];
+                        try {
+                            // Read current clipboard and append to prompt
+                            const clipboardText = await navigator.clipboard.readText();
+                            const fullPrompt = clipboardText ? `${promptText} ${clipboardText}` : promptText;
+
+                            await navigator.clipboard.writeText(fullPrompt);
+
+                            // Check if alert should be shown
+                            const showAlert = document.getElementById('showAlertCheckbox').checked;
+                            if (showAlert) {
+                                alert(fullPrompt);
+                            }
+
+                            // Reset selection after copying
+                            this.quickPromptSelect.value = '';
+                        } catch (err) {
+                            console.error('Failed to copy prompt:', err);
+                            alert('Failed to copy to clipboard: ' + promptText);
+                        }
+                    }
+                });
+
+                // Escape key to paste
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        e.preventDefault();
+                        this.pasteFromClipboard();
+                    }
+                });
+            }
+
+            toggleDebug() {
+                const debugPanel = document.getElementById('debugPanel');
+                if (debugPanel.style.display === 'none') {
+                    debugPanel.style.display = 'block';
+                    this.updateDebugInfo();
+                } else {
+                    debugPanel.style.display = 'none';
+                }
+            }
+
+            updateDebugInfo() {
+                document.getElementById('debugClipboardLength').textContent =
+                    `${this.clipboardContent.length} characters`;
+
+                const selectedTemplate = this.templateSelect.value;
+                document.getElementById('debugSelectedTemplate').textContent =
+                    selectedTemplate || 'None';
+
+                const templateLength = selectedTemplate ? templates[selectedTemplate].length : 0;
+                document.getElementById('debugTemplateLength').textContent =
+                    `${templateLength} characters`;
+
+                document.getElementById('debugOutputLength').textContent =
+                    `${this.outputArea.value.length} characters`;
+
+                const templateNames = {
+                    super_size_me: 'Super Size Me',
+                    democracies_and_death_cults: 'Democracies and Death Cults',
+                    money_lies_and_god: 'Money, Lies, and God',
+                    life_of_henrietta: 'Immortal Life of Henrietta Lacks',
+                    feynman: 'Richard Feynman lecture',
+                    sports : 'Sports',
+                    chinese: 'Ask for Chinese'
+                };
+                const templateName = templateNames[selectedTemplate] || 'N/A';
+                document.getElementById('debugInstruction').textContent =
+                    selectedTemplate
+                        ? `"Please write this in a nonfiction format like ${templateName} using the transcript."`
+                        : 'Not generated yet';
+
+                document.getElementById('debugCurrentTemplate').textContent =
+                    this.currentTemplate || 'None';
+
+                document.getElementById('debugBaseContent').textContent =
+                    `${this.baseContentOnly.length} characters`;
+            }
+
+            async pasteFromClipboard() {
+                try {
+                    const text = await navigator.clipboard.readText();
+                    this.clipboardContent = text;
+                    this.baseContentOnly = text;
+
+                    // Clear the textarea first
+                    this.outputArea.value = '';
+
+                    // If a template is already selected, automatically append and copy
+                    if (this.templateSelect.value) {
+                        await this.appendTemplate();
+                        await this.copyToClipboard();
+                    } else {
+                        // Otherwise just show the pasted content
+                        this.outputArea.value = text;
+                        this.updateStatus(`Pasted ${text.length} characters from clipboard. Select a template to auto-append and copy.`);
+                    }
+
+                    this.updateDebugInfo();
+                } catch (err) {
+                    console.error('Failed to read clipboard:', err);
+                    this.updateStatus('Failed to access clipboard. Please paste manually.');
+                }
+            }
+
+            async appendTemplate() {
+                const selectedTemplate = this.templateSelect.value;
+
+                if (!selectedTemplate) {
+                    this.updateStatus('Please select a template first!');
+                    return;
+                }
+
+                if (!this.baseContentOnly && !this.clipboardContent) {
+                    this.updateStatus('Please paste content first!');
+                    return;
+                }
+
+                // Always use the base content (original clipboard without previous template)
+                const baseContent = this.baseContentOnly || this.clipboardContent;
+
+                // Get template content
+                const templateContent = templates[selectedTemplate];
+
+                // Get template name for the instruction
+                const templateNames = {
+                    super_size_me: 'Super Size Me',
+                    democracies_and_death_cults: 'Democracies and Death Cults',
+                    money_lies_and_god: 'Money, Lies, and God',
+                    life_of_henrietta: 'Immortal Life of Henrietta Lacks',
+                    feynman: 'Richard Feynman lecture',
+                    sports: "Sports Writing"
+                };
+                const templateName = templateNames[selectedTemplate];
+
+                // Combine: clipboard content + template + instruction
+                const finalContent = `${baseContent}
+
+${templateContent}
+
+Please write this in a nonfiction format like ${templateName} using the transcript.`;
+
+                this.outputArea.value = finalContent;
+                this.currentTemplate = selectedTemplate;
+                this.updateStatus(`Template "${templateName}" appended! Auto-copying to clipboard...`);
+                this.updateDebugInfo();
+
+                // Automatically copy to clipboard
+                await this.copyToClipboard();
+            }
+
+            async copyToClipboard() {
+                const content = this.outputArea.value;
+
+                if (!content.trim()) {
+                    this.updateStatus('Nothing to copy!');
+                    return;
+                }
+
+                try {
+                    await navigator.clipboard.writeText(content);
+                    this.updateStatus(`Copied ${content.length} characters to clipboard!`);
+                } catch (err) {
+                    console.error('Failed to copy:', err);
+                    this.updateStatus('Failed to copy to clipboard.');
+                }
+            }
+
+            clear() {
+                this.outputArea.value = '';
+                this.clipboardContent = '';
+                this.baseContentOnly = '';
+                this.currentTemplate = '';
+                this.templateSelect.value = '';
+                this.updateStatus('Cleared. Ready for new content.');
+                this.updateDebugInfo();
+            }
+
+            updateStatus(message) {
+                this.statusDisplay.textContent = message;
+            }
+        }
+
+        // Line Number Stripper Class
+        class LineNumberStripper {
+            constructor() {
+                this.inputArea = document.getElementById('lineInputArea');
+                this.outputArea = document.getElementById('lineOutputArea');
+                this.statusDisplay = document.getElementById('lineStatus');
+                this.startLineInput = document.getElementById('startLine');
+                this.endLineInput = document.getElementById('endLine');
+                this.timeSearchInput = document.getElementById('timeSearch');
+
+                this.initializeEventListeners();
+            }
+
+            initializeEventListeners() {
+                document.getElementById('pasteLineNumbers').addEventListener('click', () => this.pasteFromClipboard());
+                document.getElementById('pasteIntoTextArea1').addEventListener('click', () => this.pasteIntoTextArea1());
+                document.getElementById('processLines').addEventListener('click', () => this.processLines());
+                document.getElementById('clearLines').addEventListener('click', () => this.clear());
+
+                // Auto-process when range inputs change
+                this.startLineInput.addEventListener('input', () => {
+                    if (this.inputArea.value.trim()) {
+                        this.processLines();
+                    }
+                });
+
+                this.endLineInput.addEventListener('input', () => {
+                    if (this.inputArea.value.trim()) {
+                        this.processLines();
+                    }
+                });
+
+                // Auto-process when time search changes
+                this.timeSearchInput.addEventListener('input', () => {
+                    if (this.inputArea.value.trim()) {
+                        this.processLines();
+                    }
+                });
+            }
+
+            async pasteIntoTextArea1() {
+                try {
+                    const text = await navigator.clipboard.readText();
+                    this.inputArea.value = text;
+                    this.updateStatus(`Pasted ${text.length} characters into TextArea 1.`);
+
+                    // Auto-process if line numbers are filled
+                    if (this.startLineInput.value || this.endLineInput.value) {
+                        this.processLines();
+                    }
+                } catch (err) {
+                    console.error('Failed to read clipboard:', err);
+                    this.updateStatus('Failed to access clipboard. Please paste manually.');
+                }
+            }
+
+            async pasteFromClipboard() {
+                try {
+                    // Clear both textareas first
+                    this.inputArea.value = '';
+                    this.outputArea.value = '';
+
+                    const text = await navigator.clipboard.readText();
+                    this.inputArea.value = text;
+                    this.updateStatus(`Pasted ${text.length} characters. Ready to process.`);
+
+                    // Auto-process if line numbers are filled
+                    if (this.startLineInput.value || this.endLineInput.value) {
+                        this.processLines();
+                    }
+                } catch (err) {
+                    console.error('Failed to read clipboard:', err);
+                    this.updateStatus('Failed to access clipboard. Please paste manually.');
+                }
+            }
+
+            processLines() {
+                const text = this.inputArea.value;
+
+                if (!text.trim()) {
+                    this.updateStatus('Please paste text first!');
+                    return;
+                }
+
+                // Split text into lines
+                const lines = text.split('\n');
+
+                // Check if time search is being used
+                const timeSearchValue = this.timeSearchInput.value.trim();
+
+                if (timeSearchValue) {
+                    // Parse the search time into seconds
+                    const parseTime = (timeStr) => {
+                        const parts = timeStr.split(':');
+                        if (parts.length === 2) {
+                            return parseInt(parts[0]) * 60 + parseInt(parts[1]);
+                        }
+                        return -1;
+                    };
+
+                    const searchSeconds = parseTime(timeSearchValue);
+                    if (searchSeconds === -1) {
+                        this.updateStatus(`Invalid time format. Use M:SS format (e.g., 3:30)`);
+                        return;
+                    }
+
+                    // Find the first timestamp from the beginning that is >= search time
+                    let timeLineIndex = -1;
+
+                    for (let i = 0; i < lines.length; i++) {
+                        const line = lines[i];
+                        const timeMatch = line.match(/(\d+):(\d+)/);
+                        if (timeMatch) {
+                            const lineSeconds = parseInt(timeMatch[1]) * 60 + parseInt(timeMatch[2]);
+                            if (lineSeconds >= searchSeconds) {
+                                timeLineIndex = i;
+                                break; // Stop at the first match
+                            }
+                        }
+                    }
+
+                    if (timeLineIndex === -1) {
+                        this.updateStatus(`No timestamp >= "${timeSearchValue}" found in text!`);
+                        return;
+                    }
+
+                    // Get last 8 lines before the time (not including the time line itself)
+                    const startIndex = Math.max(0, timeLineIndex - 8);
+                    const endIndex = timeLineIndex;
+                    const selectedLines = lines.slice(startIndex, endIndex);
+
+                    const result = selectedLines.join('\n');
+                    this.outputArea.value = result;
+
+                    // Auto-copy to clipboard
+                    this.copyToClipboard(result);
+
+                    this.updateStatus(`Found "${timeSearchValue}" at line ${timeLineIndex + 1}. Extracted last 8 lines before it (${selectedLines.length} lines). Copied to clipboard!`);
+                } else {
+                    // Original line range logic
+                    const startLine = parseInt(this.startLineInput.value) || 1;
+                    const endLine = parseInt(this.endLineInput.value) || lines.length;
+
+                    // Extract lines in the specified range (1-indexed)
+                    const selectedLines = lines.slice(startLine - 1, endLine);
+
+                    const result = selectedLines.join('\n');
+                    this.outputArea.value = result;
+
+                    // Auto-copy to clipboard
+                    this.copyToClipboard(result);
+
+                    this.updateStatus(`Extracted lines ${startLine} to ${endLine} (${selectedLines.length} lines). Copied to clipboard!`);
+                }
+            }
+
+            async copyToClipboard(text) {
+                try {
+                    await navigator.clipboard.writeText(text);
+                } catch (err) {
+                    console.error('Failed to copy:', err);
+                }
+            }
+
+            clear() {
+                this.inputArea.value = '';
+                this.outputArea.value = '';
+                this.startLineInput.value = '';
+                this.endLineInput.value = '';
+                this.timeSearchInput.value = '';
+                this.updateStatus('Cleared. Ready for new content.');
+            }
+
+            updateStatus(message) {
+                this.statusDisplay.textContent = message;
+            }
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            new LineNumberStripper();
+            new ClipboardTemplateAppender();
+        });
+    </script>
+</body>
+</html>
+

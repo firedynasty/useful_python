@@ -1,0 +1,44 @@
+# Chapter 2: Medicine - Summary
+
+## Main Concepts
+
+**The Hamstring Problem**
+- Hamstring injuries are complex: the muscles straighten the hip, bend the knee, AND catch landing forces
+- The popular 0.6 ratio (hamstring should be 60% as strong as quadriceps) has been debunked - longitudinal studies found no correlation with injury risk
+- Hamstrings operate within the "posterior chain" - assessing them in isolation misses crucial context
+- Most hamstring injuries occur at full sprint when muscles are stretched and vulnerable
+
+**Pelvic Tilt Discovery**
+- Marcus discovered "posterior pelvic tilt" (pelvis tilted backward like a cereal bowl spilling milk behind you) is a major injury predictor
+- Players with posterior tilt tend to overstride when sprinting, putting excessive stretch on hamstrings
+- In powerful athletes, hamstring injuries correlate with this biomechanical pattern
+- In less athletic people, poor pelvic control is almost always the cause
+
+**NFL Research Findings**
+- 51.3% of NFL hamstring strains occur during 7-week preseason
+- Highest risk positions: defensive secondary (23.1%), wide receivers (20.8%), special teams (13%)
+- Four vulnerability factors: weak hamstrings, asymmetrical strength, poor sprint mechanics, prior injury
+- Second hamstring injuries are worse due to scar tissue, adhesion, and protective nervous system responses
+
+## Key Outcomes
+
+**Patriots Success**
+- Marcus reduced Patriots hamstring injuries from 23 per year to 3 through:
+  - Individual risk assessments (strength, biomechanics, position, history)
+  - Personalized prevention programs for high-risk players
+  - Video analysis of sprinting form
+- Patriots refused to let Marcus publish results (wanted competitive advantage)
+
+**Cultural Resistance**
+- Bill Belichick's model was "get him out there" - conflicting with injury prevention
+- Trainer Ron O'Neil was pushed out after Super Bowl victory
+- At the NFL Combine, scouts valued "gunshot sounds" from hitting bags over biomechanical analysis
+- Marcus left the NFL disillusioned by the "Dunkin' Donuts chew spit guys" who lacked curiosity
+
+## Key Takeaways
+
+1. **Prior injury is the biggest risk factor** - it signals biomechanical issues AND leaves scar tissue/adhesion
+2. **Timing matters** - preseason is the danger zone
+3. **Position-specific training is essential** - open-field sprinters need different preparation
+4. **Biomechanics trump simple strength ratios** - the 0.6 rule persists because it "papers over confusing reality"
+5. **Organizational culture limits innovation** - even with proven results, change is hard

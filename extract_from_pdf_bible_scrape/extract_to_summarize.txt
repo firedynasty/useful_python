@@ -1,0 +1,29 @@
+# Extract from RAG then Summarize — 2 scripts
+# ================================================
+
+# Step 1: Extract text from RAG folder -> .txt file
+python extract_text_from_rag.py rag_galatians -o galatians_from_rag.txt
+
+# Step 2: Summarize the extracted text using Anthropic API
+ANTHROPIC_API_KEY=sk-... python summarize_rag_text.py galatians_from_rag.txt -o rag_summary_galatians.txt --target 150000
+
+# ================================================
+# Other examples:
+# ================================================
+
+# 2 Corinthians
+python extract_text_from_rag.py rag_2corinthians -o 2corinthians_from_rag.txt
+ANTHROPIC_API_KEY=sk-... python summarize_rag_text.py 2corinthians_from_rag.txt -o rag_summary_2corinthians.txt --target 150000
+
+# Any RAG folder
+python extract_text_from_rag.py <rag_folder> -o <name>_from_rag.txt
+ANTHROPIC_API_KEY=sk-... python summarize_rag_text.py <name>_from_rag.txt -o rag_summary_<name>.txt --target 150000
+
+# Options:
+#   extract_text_from_rag.py
+#     --list-sections     Preview sections without extracting
+#
+#   summarize_rag_text.py
+#     --target 80000      Set character target (default: 150000)
+#     --model claude-sonnet-4-5-20241022   Use a different model
+#     --chunk-size 30000  Adjust API chunk size

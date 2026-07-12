@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Audio JSON Generator</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .input-section, .output-section {
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #34495e;
+            font-size: 1.1em;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 1em;
+            margin-bottom: 15px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 300px;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+            resize: vertical;
+            transition: border-color 0.3s;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .copy-btn {
+            background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+        }
+
+        .output {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 6px;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .instructions {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .instructions h3 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+
+        .instructions ol {
+            margin-left: 20px;
+            color: #856404;
+        }
+
+        .instructions li {
+            margin-bottom: 5px;
+        }
+
+        .button-group {
+            margin-top: 15px;
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 10px 15px;
+            border-radius: 4px;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📖 Bible Audio JSON Generator</h1>
+        <div class="subtitle">Convert your MP3 links into bible_audio.json format</div>
+
+        <div class="instructions">
+            <h3>📝 Instructions:</h3>
+            <ol>
+                <li>Enter the book name (e.g., "Leviticus")</li>
+                <li>Enter the book abbreviation (e.g., "lv")</li>
+                <li>Paste your list of MP3 URLs (one per line) in the textarea below</li>
+                <li>Click "Generate JSON" to create the formatted output</li>
+                <li>Copy the output and paste it into your bible_audio.json file</li>
+            </ol>
+        </div>
+
+        <div class="input-section">
+            <label for="bookName">Book Name:</label>
+            <input type="text" id="bookName" placeholder="e.g., Leviticus" />
+
+            <label for="bookAbbrev">Book Abbreviation:</label>
+            <input type="text" id="bookAbbrev" placeholder="e.g., lv" />
+
+            <label for="urlInput">Paste MP3 URLs (one per line):</label>
+            <textarea id="urlInput" placeholder="https://www.dropbox.com/scl/fi/...exodus01.mp3?rlkey=...&raw=1
+https://www.dropbox.com/scl/fi/...exodus02.mp3?rlkey=...&raw=1
+https://www.dropbox.com/scl/fi/...exodus03.mp3?rlkey=...&raw=1"></textarea>
+
+            <div class="button-group">
+                <button onclick="generateJSON()">🔄 Generate JSON</button>
+                <button class="copy-btn" onclick="copyToClipboard()">📋 Copy Output</button>
+            </div>
+            <div id="successMessage" class="success-message">✅ Copied to clipboard!</div>
+        </div>
+
+        <div class="output-section">
+            <label>Generated JSON:</label>
+            <div id="output" class="output">Your JSON output will appear here...</div>
+        </div>
+    </div>
+
+    <script>
+        function generateJSON() {
+            const bookName = document.getElementById('bookName').value.trim();
+            const bookAbbrev = document.getElementById('bookAbbrev').value.trim();
+            const urlInput = document.getElementById('urlInput').value.trim();
+
+            // Validation
+            if (!bookName) {
+                alert('Please enter a book name');
+                return;
+            }
+
+            if (!bookAbbrev) {
+                alert('Please enter a book abbreviation');
+                return;
+            }
+
+            if (!urlInput) {
+                alert('Please paste some MP3 URLs');
+                return;
+            }
+
+            // Split URLs by line and filter out empty lines
+            const urls = urlInput.split('\n').filter(url => url.trim() !== '');
+
+            if (urls.length === 0) {
+                alert('No valid URLs found');
+                return;
+            }
+
+            // Generate the JSON structure
+            let jsonOutput = '  {\n';
+            jsonOutput += `    "book": "${bookName}",\n`;
+            jsonOutput += `    "abbrev": "${bookAbbrev}",\n`;
+            jsonOutput += '    "chapters": [\n';
+
+            // Create chapter entries
+            urls.forEach((url, index) => {
+                const chapterNum = index + 1;
+                const isLast = index === urls.length - 1;
+                jsonOutput += `      {"chapter": ${chapterNum}, "audioUrl": "${url.trim()}"}`;
+                if (!isLast) {
+                    jsonOutput += ',';
+                }
+                jsonOutput += '\n';
+            });
+
+            jsonOutput += '    ]\n';
+            jsonOutput += '  }';
+
+            // Display the output
+            document.getElementById('output').textContent = jsonOutput;
+        }
+
+        function copyToClipboard() {
+            const output = document.getElementById('output').textContent;
+
+            if (output === 'Your JSON output will appear here...') {
+                alert('Please generate JSON first');
+                return;
+            }
+
+            // Copy to clipboard
+            navigator.clipboard.writeText(output).then(() => {
+                // Show success message
+                const successMsg = document.getElementById('successMessage');
+                successMsg.style.display = 'block';
+                setTimeout(() => {
+                    successMsg.style.display = 'none';
+                }, 2000);
+            }).catch(err => {
+                alert('Failed to copy to clipboard');
+                console.error('Copy error:', err);
+            });
+        }
+
+        // Allow Enter key in textarea without triggering form submission
+        document.getElementById('urlInput').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                // Allow normal Enter behavior in textarea
+                return;
+            }
+        });
+
+        // Generate on Ctrl+Enter or Cmd+Enter
+        document.getElementById('urlInput').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
+                e.preventDefault();
+                generateJSON();
+            }
+        });
+    </script>
+</body>
+</html>

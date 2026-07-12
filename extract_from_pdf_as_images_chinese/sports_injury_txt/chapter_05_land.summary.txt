@@ -1,0 +1,66 @@
+# Chapter 5: Land - Summary
+
+## Main Concepts
+
+**The P3 Assessment Process**
+- No whiteboard with one workout for everyone - each athlete gets individualized programming
+- Physical screening: range of motion tests, hip rotation measurements, ankle mobility (knee-to-wall test)
+- Performance tests: lateral hopping (32 hops in 8 seconds for Katie vs. 43 for record holder)
+- Motion capture: 22 reflective markers tracking feet, shins, knees, thighs, hips, torso
+- Force plates: "really precise, complex scales" measuring force in all dimensions
+- Extensive jumping assessments: two-leg, one-leg, drop jumps, stabilization tests, lateral skaters
+
+**The Physics of Landing**
+- Katie Spieler (5'5" pro beach volleyball player) landed with 3,100 newtons of force
+- Context: 25 newtons to spike volleyball, 50 to throw 90 mph, 1,000 from a pro boxer's punch
+- 3,100 newtons = force of two 300-pound bighorn sheep colliding head-on at 40 mph
+- P3's record: 11,000 newtons
+
+**The Egg Drop Analogy**
+- Like the physics class egg drop competition, humans need to cushion falls
+- Our tools: legs that bend at ankle, knee, and hip
+- Each joint is a hinge supported by tissues (Achilles, calves, quads, glutes)
+- When working together, these tissues absorb devastating forces
+
+**Katie's Landing Problem**
+- Grew up playing on soft sand, learned to land toes-first
+- Red flag: after toes absorb initial force, the midfoot (connected to strongest tissues) barely participates
+- Force crashes down on bony, hard heel - "P3's biggest impact numbers always come from heels"
+- This toe-heel "slap" bypasses the protective soft tissue chain
+- Forces zip through tibias directly to the knee - putting her on track for major knee injury
+
+**The Clock Face Model for Knee Position**
+- Imagine a clock painted on the ground with foot in center
+- Ideal: knee hovers over ball of foot at center
+- 3 o'clock: tests fifth metatarsal (Jones fracture - Durant, Lopez, McCollum)
+- 9 o'clock: tests ACL on inside of knee
+- "Asymptote of doom": point where foot gives up and rolls into ankle sprain
+
+## Katie Spieler's Story
+
+**Background**
+- Grew up in Santa Barbara, spent childhood on Channel Islands, snorkeling, surfing, climbing
+- Competed in beach volleyball tournaments AND junior lifeguard Ironman on same day
+- At 5'5", a foot shorter than some competitors - became a defender rather than blocker
+- Joined AVP Pro Tour after graduating from University of Hawaii (2016)
+- Self-described "self-made athlete" who relied on grit and willingness to learn
+
+**P3 Discovery**
+- Found P3 while distributing flyers for her struggling volleyball academy
+- Initially thought "I do my own thing" - bike rides, swims, hill sprints
+- Entered the unmarked facility (former nightclub) during a workout
+- Saw unfamiliar training: lateral medicine ball throws, lunges with heel off ledge, cable chop marches
+
+**Assessment Experience**
+- Felt the stakes were high: "biomechanists in black T-shirts... might know more about her athletic future than she did"
+- P3 staff had "the whiff of worry" - her landing sounded "like a sack of bricks"
+- Unlike normal gym tests, these couldn't be "studied for" - they revealed ingrained movement patterns
+
+## Key Takeaways
+
+1. **Landing mechanics are trainable** - P3 gives bodies "tools to land differently"
+2. **Force plate data reveals hidden risk** - you can't see 3,100 newtons with your eyes
+3. **Soft tissue chains protect joints** - bypassing them (toe-heel landing) creates injury risk
+4. **Sport background shapes movement** - sand volleyball created Katie's toe-first pattern
+5. **We lose movement capacity over time** - "without practice, we lose range of motion, fast-twitch muscles"
+6. **Individualized assessment is essential** - no two athletes have the same movement profile

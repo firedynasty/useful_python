@@ -1,0 +1,22 @@
+  Usage:                                                                        
+  python make_from_images.py <image_directory> <output.pptx>                    
+                                                                                
+  Flow:                                                                         
+                                                                                
+  1. Collect images — Scans the given directory for supported image files (png, 
+  jpg, jpeg, gif, bmp, tiff, webp), sorted alphabetically.                      
+  2. Create presentation — Initializes a blank PowerPoint with default slide    
+  dimensions (10" × 7.5").                                                      
+  3. One image per slide — For each image:                                    
+    - Adds a blank slide (layout index 6 = no placeholders)                     
+    - Opens the image with PIL to get its pixel dimensions                      
+    - Calculates a "fill" scale — uses max(scale_w, scale_h) so the image covers
+   the entire slide with no letterboxing (may crop edges if aspect ratios       
+  differ)                                                                       
+    - Centers the scaled image on the slide                                     
+  4. Save — Writes the .pptx file.                                              
+                                                                              
+  Key design choice: It uses "cover" scaling (like CSS background-size: cover)  
+  rather than "contain", so every slide is fully filled with the image — no
+  white bars, but parts of the image may extend beyond slide edges if the aspect
+   ratio doesn't match.       

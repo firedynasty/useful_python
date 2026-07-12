@@ -1,0 +1,13 @@
+now you want to get the data with each new scrape...
+
+python script_7.py nba_schedule_1.csv
+
+however, before doing that, you are required to parse down 
+
+the parsedown script ins05-.py takes two arguments, two files, and then will
+
+required to take nba_schedule.csv to be the first argumetn
+
+because nba_report.csv is the final that I will get after grabbing the four_factors data.
+
+

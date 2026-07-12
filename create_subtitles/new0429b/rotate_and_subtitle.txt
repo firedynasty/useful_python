@@ -1,0 +1,7 @@
+cd /Users/stanleytan/documents/technical/python/create_subtitles/new0429b
+
+ffmpeg -y -i "《婚既鐘情，春山可望》💕 汪海敏&王奕然 第一集 丨替嫁豪门，假婚成真。她避他装单身，他却步步逼近——从陌生到唯一的爱。 [Mg1fDxLlafg].mp4" \
+  -filter_complex \
+  "[0:v]transpose=1,pad=iw:ih+100:0:0:black[padded];[padded]subtitles=filename=english.srt:fontsdir=/Library/Fonts:force_style='FontName=Arial Unicode MS,FontSize=20,PrimaryColour=&HFFFFFF,Alignment=2,MarginV=15'[v2]" \
+  -map "[v2]" -map 0:a -c:a copy \
+  output_subtitled.mp4

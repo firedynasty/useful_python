@@ -1,0 +1,3 @@
+  python extract_word_groups.py                                                 
+  ./run_cefr.sh A1 2       # all 10 lessons, or ./run_cefr.sh A1 1 for just      
+  lesson 1                                                                      

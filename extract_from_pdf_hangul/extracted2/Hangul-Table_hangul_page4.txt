@@ -1,0 +1,27 @@
+Hangul Table
+★Batchim (Final Consonant)
+Inside [ ] is the pronunciation notation
+Types（The red letters are double final consonants）
+Pronunciation	Type	Tips for Pronunciation
+k [ㄱ]	ㄱ, ㅋ, ㄲ,ㄳ,ㄺ	The tongue remains still and it feels like stuffing the
+throat.
+n [ㄴ]	ㄴ,ㄵ,ㄶ	The tongue touches the upper teeth or the upper part
+of the mouth.
+t [ㄷ]	ㄷ, ㅌ, ㅅ, ㅆ, ㅈ, ㅊ,	The tongue touches the back of the upper teeth.
+ㅎ
+l [ㄹ]	ㄹ,ㄼ,ㄽ,ㄾ,ㅀ	The tongues touches the upper teeth or the upper
+part of the mouth.
+m [ㅁ]	ㅁ,ㄻ	The mouth remains closed.
+p [ㅂ]	ㅂ, ㅍ,ㅄ,ㄿ	The mouth remains closed.
+ng [ㅇ]	ㅇ	Make a cave inside the mouth and keep the tongue
+still.
+The Rules of  Double Final Consonants
+Consonant	Type	Exceptions
+pronounced
+On the left	ㄳ,ㄵ,ㄶ,ㄼ,ㄽ,ㄾ,ㅀ,	The right batchim is pronunced for 밟다   Ex: 밟다
+ㅄ	(Step on)→[밥따]
+Pronounce the left batchim when ㄱconsonant is
+On the right	ㄺ,ㄻ,ㄿ	followed after ㄺ  Ex: 읽고(Read)→[일꼬]
+However, if ㄺ is in a noun, the right consonant is
+pronunced  Ex: 닭고기(Chicken meat)→[닥꼬기]
+4

@@ -1,0 +1,17 @@
+.garamond {
+font-family: Garamond, serif;
+font-size:250%;
+margin-left:30px;
+width:60%;
+}
+
+#targeted {
+  opacity: 0;
+}
+
+.timer-container {
+  display: flex;
+  flex-direction: row;
+  gap: 7px; 
+  margin-bottom: 20px;
+}

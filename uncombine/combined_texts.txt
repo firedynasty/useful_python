@@ -1,0 +1,941 @@
+1main_links (txt)
+https://codepen.io/Groundedelectron/pen/RwdZzNE/df4ad16309ab274b85db2e7261a09383; Pen Link
+###
+###
+2_links (txt)
+https://stanleysjourney.com/image_gallery/basketball/spin_move1/; spin move(image_gallery/basketball/spin_move1/)
+https://stanleysjourney.com/video_gallery/basketball/players_at_gym; players_at_gym / video gallery (/basketball/players..)
+###
+###
+4_out_basketball (txt)
+basketball
+
+so what it is, is this that you keep low and stay low with your hands out you can control the ball better move the ball behind your palm 
+
+so pretty much it's this, and then get pressure you can pass it out behind you always, 
+
+
+https://www.youtube.com/watch?v=BSjpPg7qJvY; 4 Out motion offense
+###
+###
+achilles (txt)
+Absolutely! Here’s your updated summary with key preventative tips included:
+
+---
+
+## Notes: Upright Positioning & Achilles Injury Prevention in Basketball
+
+### **Positioning and Movement**
+- **Stay More Upright:**  
+  Keep your torso upright and hips back when preparing to rebound or move, rather than leaning your chest far forward over your toes.
+- **Reduce Deep Squats:**  
+  Avoid deep knee bends and extreme ankle dorsiflexion (foot close to shin) unless absolutely necessary for the play.
+- **Balance Weight:**  
+  Center your weight over the balls of your feet—avoid shifting too far forward or back.
+- **Controlled Movements:**  
+  Jump and push off with smooth, controlled motions. Avoid explosive movements from a deeply flexed, forward-leaning position.
+- **Protect the Achilles:**  
+  Upright, balanced posture allows your calf muscles to absorb force and reduces excessive strain on the Achilles tendon.
+
+### **Preventative Tips**
+- **Calf Strengthening:**  
+  Do regular calf raises and eccentric heel drops to build tendon and muscle resilience.
+- **Ankle Mobility:**  
+  Stretch your calves and work on ankle flexibility to allow safe movement without overstressing the tendon.
+- **Proper Warm-Up:**  
+  Always warm up thoroughly before playing, focusing on dynamic stretches for the calves and ankles.
+- **Gradual Load Increase:**  
+  Increase intensity and playing time gradually to avoid sudden overload on your tendons.
+- **Listen to Your Body:**  
+  Rest and address any calf tightness, soreness, or minor strains before they become bigger issues.
+- **Supportive Footwear:**  
+  Wear basketball shoes that provide good heel and ankle support.
+
+---
+
+**Key Point:**  
+**Staying upright, using controlled movements, and following preventative strategies greatly reduce your risk of Achilles injury during basketball.**
+###
+###
+basketball_commentary (txt)
+"One stop!" Coach yells as the defense sets up.
+"Come on Miles!" The crowd encourages as he brings the ball up court.
+"Do it again, atta boy!" Teammates cheer after a perfect pick and roll.
+"No threes!" The defensive call echoes as they protect their lead.
+"Crash the boards!" Veterans remind as the shot goes up.
+"Hands up!" Assistant coaches gesture from the sideline.
+"Switch!" Players communicate through the defensive screen.
+"Get big!" The center establishes position in the paint.
+"Run the floor!" Transition offense begins after the rebound.
+"Find a body!" Rebounding fundamentals take priority.
+"Move your feet!" Defensive discipline remains essential.
+
+
+Here's how you could organize a basketball fundamentals folder structure with links and images:
+
+## Folder Structure
+
+**📁 DRIBBLING**
+- Images: Hand positions, ball control drills, crossover sequences
+- Videos: Ball handling routines, cone drills, stationary vs moving dribbles
+- Links: YouTube tutorials, drill progressions, common mistakes
+
+**📁 SHOOTING**
+- Images: Proper form breakdown (feet, knees, elbow, follow-through), shot arc diagrams
+- Videos: Shooting mechanics, free throw routine, different shot types
+- Links: Form shooting drills, percentage tracking apps, shooting coach resources
+
+**📁 PASSING**
+- Images: Chest pass, bounce pass, overhead pass form, target zones
+- Videos: Passing drills, decision-making scenarios, no-look passes
+- Links: Passing drill libraries, court vision training, passing accuracy tips
+
+**📁 REBOUNDING**
+- Images: Boxing out technique, positioning diagrams, hands placement
+- Videos: Rebounding drills, timing jumps, outlet passes
+- Links: Rebounding fundamentals, stat tracking, strength training for rebounds
+
+**📁 DEFENSE**
+- Images: Defensive stance, hand positioning, help defense rotations
+- Videos: 1-on-1 defense, team defensive concepts, closeout techniques
+- Links: Defensive drills, communication tips, advanced defensive schemes
+
+**📁 FOOTWORK**
+- Images: Pivot foot diagrams, cutting patterns, triple threat position
+- Videos: Agility ladder drills, pivot moves, explosive first steps
+- Links: Footwork exercises, balance training, quickness development
+
+**📁 SCREENING**
+- Images: Screen angles, pick and roll diagrams, legal vs illegal screens
+- Videos: Screen setting technique, using screens effectively, timing
+- Links: Screen plays, practice drills, reading defenses
+
+Each folder could have subfolders like "Beginner," "Intermediate," and "Advanced" to organize content by skill level.
+###
+###
+basketball_dribble_to_shot (txt)
+https://www.youtube.com/watch?v=5dZHXwOCxH4; yuki
+here in this video if you go will see him dribble into a shot.
+###
+###
+basketball_driving (txt)
+you got snatchback 
+
+
+{url}/content/driving/index.html; driving
+image 1 is snatchback
+
+
+bumping in other images
+###
+###
+basketball_galleries (txt)
+{url}/content/dribbling/spin_move1_img/index.html; Spin
+{url}/content/player_videos/index.html; Player videos
+{url}/index.html
+###
+###
+basketball_handles (txt)
+https://www.youtube.com/watch?v=Mao53nH5IF0; hodges get shifty like irving
+here in this video, 1:53, right right between the legs then back between
+float dribble cross to other hand then in and out then between the legs, then
+
+
+{url}/content/dribbling/counter_cross1/index.html; counter cross
+{url}/content/dribbling/spin_move1_img/index.html; spin move
+###
+###
+basketball_top_of_key (txt)
+{url}/content/top_of_key/index.html; top of key
+###
+###
+boxing_out (txt)
+what to do, 
+
+when I am down low use your forarm hi your meat there to get him off, and look at where the ball is so you can box out.  find the other persons' stomach and 
+
+
+
+
+Absolutely—if you’re a shorter player, the **stomach or midsection** is the ideal target when initiating contact for a box out. Here’s why and how to do it:
+
+
+https://www.basketballforcoaches.com/box-out-basketball/; boxing out
+
+
+---
+
+## Why Aim for the Stomach/Midsection?
+
+- **Leverage:** As a shorter player, you naturally have a lower center of gravity. Targeting the opponent’s midsection (between the sternum and opposite shoulder) lets you use your body weight and strength more effectively.
+- **Balance:** Making contact lower on their body helps you stay balanced and makes it harder for taller players to reach over you without fouling.
+- **Legal Positioning:** Contact at the midsection is less likely to be called a foul than contact higher up (like the back or shoulders).
+
+---
+
+## How to Execute the Technique
+
+1. **Get Low:** Bend your knees and keep your hips down. This makes you strong and stable.
+2. **Forearm Contact:** Use your forearm (below the elbow, above the wrist) to “find” your opponent. Don’t swing or shove—just make solid, controlled contact.
+3. **Aim for the Stomach/Opposite Shoulder:** Your forearm should make contact between the opponent’s sternum and their opposite shoulder. This gives you maximum leverage without risking a foul.
+4. **Seal and Pivot:** After contact, pivot so your back and hips are between your opponent and the basket. Use your hips and backside to “push out” and move them away from the rim.
+5. **Keep Arms Up:** Once you’ve established position, keep your arms up and wide to be ready for the rebound.
+
+---
+
+## Quick Tips
+
+- **Stay Low:** The lower you are, the harder you are to move.
+- **Don’t Overextend:** Keep your elbows in and avoid pushing, which can draw a foul.
+- **Use Your Legs:** The power comes from your legs and hips, not your arms.
+
+---
+
+### Summary Table
+
+| Step                | Action                                    | Why It Works                        |
+|---------------------|-------------------------------------------|-------------------------------------|
+| Get Low             | Bend knees, hips down                     | Improves balance and leverage       |
+| Forearm Contact     | Find opponent’s midsection                | Legal, strong point of contact      |
+| Seal and Pivot      | Turn, use hips/backside to push out       | Moves opponent, maintains position  |
+| Arms Up             | Ready for rebound                         | Increases rebounding chances        |
+
+---
+
+**Bottom Line:**  
+If you’re shorter, targeting the stomach/midsection with your forearm gives you the best shot at winning the box out—using your natural leverage and keeping the play legal and effective. Practice this technique, and you’ll become a tough rebounder no matter your height!
+
+
+
+
+https://www.youtube.com/watch?v=4egAwsE38ik&t=275s; low-post nudge him out, Kyle Lowry
+
+
+As a shorter basketball player, when your opponent plants and posts up, fronting them can be an effective strategy—but it depends on the situation and your team’s defensive awareness.
+
+Fronting the Post: Pros and Cons
+
+Pros:
+
+Denies Easy Entry Passes: By standing between the offensive player and the ball, you make it much harder for your opponent to receive the ball in the post, especially if they have a size advantage.
+
+Reduces Scoring Opportunities: If you’re active and make the pass look difficult, the offense may be reluctant to risk a turnover by attempting a lob or skip pass.
+
+Encourages Team Help: Fronting works best when your teammates are ready to help if the offense tries a lob over the top. This “sandwich” defense can trap the post player if executed well.
+
+Cons:
+
+Requires Help Defense: If your teammates don’t provide help, a lob pass over you can lead to an easy basket for the post player.
+
+Risk of Getting Sealed: If you’re not balanced or don’t have good footwork, a savvy post player might seal you off or get deep position for a lob.
+
+Other Effective Strategies for Shorter Defenders
+
+Use Leverage and Positioning: Plant yourself low, use your hips and legs for leverage, and try to force the post player away from their preferred spot.
+
+Deny Deep Position: Don’t let them get too close to the basket. Meet them higher up and bump them off their path.
+
+Be Physical and Scrappy: Make them uncomfortable, keep your hands active to disrupt dribbles and passes, and be ready to swipe at the ball if they bring it low.
+
+Take Charges: If you’re quick and can anticipate, taking a charge when the post player backs you down is a sneaky way to get a stop.
+
+Summary Table: Post Defense Options for Shorter Players
+
+Strategy	When to Use	Key Points
+Front the Post	Opponent is strong scorer	Deny entry pass, needs help defense
+Play Behind	Opponent is less skilled	Use leverage, keep them off the block
+Bump the Cutter	Before post-up occurs	Meet early, redirect their path
+Take a Charge	Aggressive post play	Sell the foul, stay balanced
+Conclusion
+
+Fronting is often the best option for a shorter player if you have help defense and can deny the entry pass. However, if you’re on your own or not confident in your team’s help, focus on using leverage, staying low, and making the post player’s life difficult with physical play and active hands. Always communicate with your teammates to ensure help is available if you choose to front the post.
+###
+###
+chinese_test (txt)
+副總統萬斯談論聯邦政府在加州移民執法行動時，將民主黨籍聯邦參議員帕迪拉（左）說成另一個同姓但不同名的罪犯，引發民主黨人批評。 美聯社合併圖片
+本報訊
+
+副總統萬斯（JD Vance）談論聯邦政府在加州移民執法行動時，將民主黨籍聯邦參議員帕迪拉（Alex Padilla）說成另一個同姓但不同名的罪犯，引發民主黨人一連串批評。當事人帕迪拉指責，事件反映特朗普政府「心胸狹窄」，拒絕以嚴肅的態度處理國家大事，加州其他民主黨官員也質疑，萬斯故意混淆姓名旨在中傷。
+###
+###
+coaching (txt)
+[link to pdf]({url}/pdf_content/coaching_five_motion/coaching_five_motion.pdf)
+###
+###
+contact_sport (txt)
+# Basketball as a Contact Sport - Key Notes
+
+## Contact vs. Collision Sports
+
+**Basketball = Contact Sport**
+- Physical contact happens regularly but is incidental to the main objectives
+- Primary goals: shooting, passing, dribbling, defending
+- Contact is NOT the objective of the game
+
+**Collision Sports (Football, Rugby)**
+- Rules encourage/require physical domination
+- Tackling and bringing opponents to the ground is part of strategy
+- Contact is a primary objective
+
+## Basketball's Approach to Contact
+
+### Rule Structure
+- Fouls called for excessive contact (pushing, holding, hitting)
+- Technical fouls for unsportsmanlike conduct
+- Rules designed to limit excessive contact
+- Game flows better when players stay upright and mobile
+
+### Legitimate Physical Play
+- **Screens**: Creating stationary obstacles, not delivering hits
+- **Boxing out**: Using body position for rebounding advantage
+- **Post play**: Gradual backing down using body weight and leverage
+- **Paint positioning**: Controlled pressure to establish/maintain position
+
+## Key Principle: Leverage Over Force
+
+### Strategic Positioning
+- Using body positioning, footwork, and leverage for tactical advantages
+- Reading opponent's momentum and using proper technique
+- Focus on timing, balance, and body control rather than raw physicality
+
+### Controlled Physicality
+- Gradual, sustained pressure rather than violent impacts
+- Making opponents uncomfortable through steady positioning
+- Chess match of body positioning within the rules
+- Goal is positional advantage, not physical domination
+
+## Summary
+Basketball physicality is about **strategic positioning and controlled leverage**, not about knocking opponents down or overpowering them through collision.
+###
+###
+create_shot (txt)
+{url}/content/create_shot/index.html; create shot videos
+###
+###
+cross_over_w_defense (txt)
+The Crossover Step Into a Shot: Footwork Breakdown
+The crossover step in basketball is a fundamental move used to change direction quickly, create separation from a defender, and set up for a shot or drive. The footwork involved is crucial for both deception and balance as you transition from the dribble to your shooting motion.
+Typical Sequence of the Crossover Step:
+1.	Initiate With the Outside Step (Jab Step):
+o	As you approach your defender while dribbling, you first make a wide step with your outside foot (the foot on the same side as your dribbling hand). This step acts as a fake or jab, selling the idea that you might drive in that direction[1][2].
+o	For example, if you’re dribbling with your right hand, your right foot steps out wide to the right.
+2.	Crossover Dribble and Inside Step:
+o	As your defender reacts to the jab, you quickly switch the ball to your opposite hand (left hand in this example) with a crossover dribble in front of your body[1][3][2].
+o	Simultaneously, you shift your weight and push off the outside foot, stepping across your body with your inside foot (left foot in this example), which now becomes your lead foot in the new direction.
+3.	Exploding Into the Shot:
+o	After the inside step, you’re now balanced and squared up, ready to either drive further, pull up for a jump shot, or continue your move[4][5].
+o	If going directly into a shot, you plant your inside foot (now your lead foot after the crossover), gather the ball, and rise up for the jumper.
+How It Looks in Motion:
+•	Dribble right → jab step right (outside foot) → crossover dribble left → step left (inside foot crosses over) → gather and shoot.
+This movement allows you to deceive the defender with your body and eyes, forcing them to react to your initial outside step. The quick switch to the inside step after the crossover creates separation, giving you space for a clean shot or drive[1][3][2].
+Key Points to Remember:
+•	The outside (jab) step sells the fake.
+•	The inside step after the crossover is the attacking step, used to gain ground or set your shooting base.
+•	Keep your dribble low and your body balanced throughout the move.
+•	The sequence is: outside step (fake), crossover dribble, inside step (attack), then gather for the shot.
+Visual Example:
+•	NBA players like Allen Iverson and Kyrie Irving are known for their effective use of this footwork, often using the outside step to freeze defenders before exploding with the inside step into a shot or layup[1][6].
+This move, when done fluidly, is both deceptive and efficient for creating scoring opportunities.
+⁂
+ 
+why would putting your hand out as someone is dribbling up the court discourage his shot
+Putting your hand out as someone is dribbling up the court can discourage their shot for several reasons:
+•	Visual Distraction and Shot Obstruction: Extending a hand toward the ball handler, especially when they are in shooting range, puts something in their line of sight and can partially obscure their view of the basket. This makes it harder for them to focus on their shooting motion and can force them to adjust their shot trajectory, lowering their accuracy[7].
+•	Signal of Defensive Readiness: When you have a hand up near the ball or in front of the shooter's face, it signals to the offensive player that you are prepared to contest or block their shot. This psychological pressure can make them hesitate or rethink taking the shot, sometimes leading them to pass or attempt a more difficult move[7].
+•	Physical Barrier: A well-placed hand can physically interfere with the shooter's upward motion or shooting pocket. Even if you don't block the shot, your presence makes it riskier for the offensive player to shoot over you, especially if you are close enough to reach the ball as they bring it up[7].
+•	Discourages Quick Pull-Ups: If the ball handler is considering a quick pull-up jumper, seeing a defender's hand already up and in position can make them less likely to attempt the shot, knowing it will be closely contested[7].
+•	Maintains Defensive Balance: Keeping one hand out (usually matching your forward foot) helps you stay balanced and ready to react, whether the offensive player tries to shoot, pass, or drive. This readiness further discourages easy shot attempts[7].
+In summary, putting your hand out is a fundamental defensive tactic that combines visual deterrence, physical presence, and psychological pressure to make shooting more difficult for the offensive player.
+⁂
+ 
+how much contact can you make as a defender on the ball handler
+As a defender, the amount of contact you can make with the ball handler is strictly limited by basketball rules. Here’s a clear breakdown:
+•	Hands and Arms: You cannot place two hands on the ball handler, keep a hand on them, use an extended arm bar, or make repeated contact with hands (even if alternating hands). Any of these actions are considered personal fouls against the ball handler or dribbler[8][9][10].
+•	Body Contact: Using your chest to maintain position is generally legal, as long as you are not displacing or impeding the ball handler’s movement. Incidental contact with your torso is allowed if you have established legal guarding position and are not moving into the offensive player’s path[11][12][13]. However, using your body to reroute, push, or dislodge the ball handler is a foul[14][9].
+•	Moving Your Feet: Legal defense involves moving your feet to stay in front of the ball handler and using your body to establish position. You must avoid initiating contact with your hands or arms. If you beat the offensive player to a spot and maintain verticality, contact may be considered incidental and not a foul[11][13][12].
+•	Exceptions in the Post: In the post area, some forearm contact is allowed for maintaining position, but this is only within certain boundaries and cannot be used to displace or control the offensive player[14].
+Summary Table: Legal vs. Illegal Contact
+Hands on the defender, not legal, however chest on chest defender with no displacement is legal , incidental -- legal
+
+Key Principle:
+You can use your body to establish and maintain legal guarding position, but you cannot use your hands, arms, or excessive body contact to control, impede, or displace the ball handler. Most defensive contact should be with your torso, not your hands or arms[8][11][14][9].
+⁂
+ 
+what is a good weighted vest for basketball players
+⁂
+ 
+in terms of weight
+For basketball players, the ideal weight for a weighted vest is generally 5–10% of your body weight when starting out. This range provides enough resistance to challenge your muscles and improve performance without putting excessive strain on your joints or risking injury[16][17][18]. For example, if you weigh 180 lbs (about 82 kg), a vest between 9 and 18 lbs (4–8 kg) is recommended for initial training.
+As you gain experience and your body adapts, you can gradually increase the vest’s weight, but it’s important not to exceed 20% of your body weight. Going heavier than this can lead to poor posture, muscle strain, and increased risk of injury, especially during high-impact basketball movements like jumping and sprinting[16][17][18].
+Summary Table: Recommended Weighted Vest Loads
+
+Key Points for Basketball Players:
+•	Start with 5–10% of body weight for safe adaptation[16][17][18].
+•	Gradually increase, but do not exceed 20% of body weight[16][17][18].
+•	Lighter vests (closer to 5–10%) are best for explosive, athletic basketball training to avoid loss of speed and joint stress[17].
+•	Choose a vest that fits snugly and does not restrict overhead movement for shooting and rebounding[19].
+Product Examples:
+•	V-MAX and V-FORCE vests allow you to adjust weight in small increments, making them suitable for progressive basketball training[20][21][22].
+Always prioritize proper form and listen to your body when training with added weight.
+⁂
+ 
+similar to this? WOLF TACTICAL Adjustable Weighted Vest – WODs, Strength and Endurance Training, Fitness Workouts, Running
+⁂
+ 
+is this one size fits all? WOLF TACTICAL Adjustable Weighted Vest – WODs, Strength and Endurance Training, Fitness Workouts, Running
+Visit the WOLF TACTICAL Store
+⁂
+ 
+weighted vest for lateral drills and latter drills
+For lateral drills and ladder (agility) drills, the best weighted vests are those that fit snugly, distribute weight evenly, and do not shift or restrict your movement. Here are top options and guidelines based on your needs:
+Key Features to Look For
+•	Secure, Adjustable Fit: Prevents vest from bouncing or sliding during quick side-to-side or footwork movements.
+•	Even Weight Distribution: Ensures natural biomechanics and reduces injury risk.
+•	Moderate Weight: Use a vest that is 4–10% of your body weight; avoid exceeding 10% unless supervised by a coach. Lighter vests (under 6% of body weight) are best for agility and ladder drills to maintain speed and proper form[23].
+
+Why These Vests Work for Lateral and Ladder Drills
+•	Ringside Weighted Vest: Specifically mentioned for use in lateral drills and ladder/agility work. Its secure fit and ability to adjust the load in small increments make it ideal for quick, multidirectional movements without compromising biomechanics[24][25].
+•	V-FORCE Basketball Weight Vest: Designed for basketball, this vest is narrow and padded, allowing for full range of motion during lateral and agility drills. The snug fit keeps it stable even during explosive movements[27].
+•	Titan Fitness Elite Series & miR Pro: Both offer adjustable weights and secure fits, making them suitable for a variety of speed and agility workouts[26][28].
+Training Tips
+•	Start Light: Begin with a vest weighing 4–6% of your body weight for agility drills, and increase gradually as you adapt[23].
+•	Focus on Form: Keep reps low and prioritize movement quality over speed when using a weighted vest for agility or ladder drills[23].
+•	Avoid Heavy Loads: Using too much weight can slow you down and increase injury risk during high-speed footwork drills[23].
+Summary
+For lateral and ladder drills, the Ringside Weighted Vest and V-FORCE Basketball Weight Vest are top choices due to their secure fit and design for dynamic movement[24][27][25]. Always choose a vest that fits snugly, allows for adjustable resistance, and does not hinder your natural movement patterns. Keep the weight moderate to maximize speed and agility benefits while minimizing injury risk[23].
+⁂
+ 
+why use a weighted vest for training
+Using a weighted vest for training offers several scientifically supported benefits that can enhance athletic performance, general fitness, and health:
+Key Benefits of Weighted Vest Training
+•	Increases Strength and Power: By adding extra resistance to bodyweight movements (like squats, lunges, push-ups, and sprints), your muscles are forced to work harder. This leads to greater strength gains and improved muscle power, especially in the lower body and core[29][30][31][32][33].
+•	Boosts Cardiovascular Endurance: Wearing a weighted vest elevates your heart rate and oxygen consumption during aerobic activities such as running, walking, or agility drills. Over time, this improves cardiovascular fitness and stamina[30][34][31][35].
+•	Enhances Calorie Burn and Fat Loss: The added weight increases the intensity of your workouts, causing you to burn more calories both during and after exercise. This makes weighted vests an effective tool for weight management and fat loss[30][34][31][32].
+•	Improves Bone Density: The extra load from a weighted vest stimulates bone growth and helps maintain or improve bone mineral density, which is crucial for long-term bone health and reducing the risk of osteoporosis[30][31][35][36].
+•	Strengthens Core and Improves Posture: The need to stabilize the extra weight engages your core muscles more intensely, leading to better posture and a stronger midsection[34][31][33].
+•	Enhances Balance, Coordination, and Agility: Training with a weighted vest challenges your balance and coordination, helping improve these skills. It also prepares athletes for the demands of sports that require quick changes of direction, such as basketball or soccer[34][31][37].
+•	Supports Functional and Athletic Performance: The resistance from a vest can make everyday movements and sports-specific drills more challenging, leading to better functional strength and athleticism[31][38].
+Why Athletes Use Weighted Vests
+Athletes, including basketball players, use weighted vests to:
+•	Simulate game-like resistance, making actual play feel easier after training[29][31].
+•	Improve vertical jump, speed, and lateral quickness by increasing the load during plyometrics and agility drills[31][32].
+•	Build endurance and strength simultaneously, which is vital for high-intensity sports[30][31].
+Summary Table: Weighted Vest Benefits
+Benefit	How It Helps
+Strength & Power	Forces muscles to adapt, leading to greater gains
+Cardio Endurance	Raises heart rate and oxygen use
+Calorie Burn & Fat Loss	Increases workout intensity and energy expenditure
+Bone Density	Stimulates bone growth and strength
+Core Strength & Posture	Engages stabilizers for better balance and alignment
+Agility & Coordination	Improves movement skills and quickness
+Functional Performance	Transfers gains to daily and sports activities
+
+In summary: Weighted vests are a versatile, effective way to boost strength, endurance, calorie burn, bone health, and athletic performance, making them a valuable addition to many training routines[29][30][34][31][32][33].
+⁂
+ 
+in legal guarding position why would hands up not disrupt or get a foul * give an example
+When a defender is in legal guarding position with their hands up, they are allowed to extend their arms vertically within their "cylinder"—the space directly above their body—without committing a foul, as long as they do not reach forward or outward to initiate contact[39][40][41]. This is known as the principle of verticality.
+Why Hands Up Does Not Disrupt or Get a Foul:
+•	If the defender keeps their arms straight up within their vertical plane (the imaginary cylinder from the floor to the ceiling above their body), they are simply occupying their entitled space. In this scenario, if the offensive player jumps into the defender's vertical arms, any contact is generally not considered a defensive foul, because the defender did not initiate the contact or leave their cylinder[42][39][40][41].
+•	The hands-up position is a legal way to contest shots and passes without reaching in or making illegal contact.
+Example:
+A defender is guarding a shooter. The defender establishes legal guarding position by facing the opponent with both feet on the floor. As the shooter goes up for a jump shot, the defender jumps straight up with arms extended vertically. If the shooter jumps into the defender's vertical arms and contact occurs, the defender is not at fault—this is not a foul, because the defender maintained verticality and did not invade the shooter's space[39][40][41].
+However:
+If the defender reaches forward or angles their arms out of their vertical cylinder (for example, arms at a 45-degree angle toward the shooter), and contact occurs, the defender is likely to be called for a foul because they have left their vertical plane and initiated the contact[42].
+Summary:
+Hands up in a legal guarding position is not a foul as long as the defender maintains verticality and does not reach forward or outward to initiate contact. This allows defenders to contest shots effectively and legally[39][40][41].
+###
+###
+dribbling_methodology (txt)
+https://www.youtube.com/watch?v=bi3TsT2ZAsc; not just cone drills
+
+
+![dribbling1]({url}/videos/dribbling/dribbling1.mp4)
+![dribbling2](videos/dribbling/dribbling2.mp4)
+![dribbling3](videos/dribbling/dribbling3.mp4)
+![dribbling4](videos/dribbling/dribbling4.mp4)
+![dribbling5](videos/dribbling/dribbling5.mp4)
+![dribbling6](videos/dribbling/dribbling6.mp4)
+![dribbling7](videos/dribbling/dribbling7.mp4)
+![dribbling8](videos/dribbling/dribbling8.mp4)
+![dribbling9](videos/dribbling/dribbling9.mp4)
+![dribbling10](videos/dribbling/dribbling10.mp4)
+
+![pull jump jumper](videos/dribbling/pull_up_jumper2.mp4)
+![pick up pound](videos/dribbling/pickup_pound.mp4)
+![pick up dribble](videos/dribbling/pickup_dribble.mp4)
+
+
+Dribbling low and fast is a fundamental skill in basketball that offers several key advantages, particularly when you’re trying to maintain control, break down defenses, or prevent turnovers. Here’s a breakdown of why dribbling low and fast is important, along with the specific advantages it gives you on the court:
+
+1. Better Ball Control
+
+	•	Closer to Your Body: Dribbling low keeps the ball closer to your body, making it harder for defenders to poke it away. When the ball is low, it’s less exposed, which reduces the risk of a steal. The higher you dribble, the more time the ball spends away from your hand, making it easier for a defender to disrupt.
+	•	Quick Reactions: When you dribble low, the ball spends less time traveling between the floor and your hand, which allows you to react faster. If a defender tries to reach in or pressure you, you can quickly change directions or protect the ball by using a crossover or other move.
+
+2. Increased Speed and Agility
+
+	•	Quicker Direction Changes: A low dribble helps you change directions more quickly. When the ball is low, you don’t need to wait for it to rise up high before changing directions. This allows for faster cuts, crossovers, and moves like a hesitation dribble or a spin move, which makes you harder to guard.
+	•	Better Body Control: Dribbling low naturally keeps your center of gravity lower, making you more balanced and in control of your movements. A low center of gravity helps you stay stable when making quick cuts or trying to avoid defenders, and it also makes it harder for the defender to knock you off balance.
+
+3. Protection Against Defenders
+
+	•	Tougher to Steal: Defenders find it much harder to steal the ball from a low dribble. When the ball is high, it’s more exposed, and the defender has a larger window of time to poke it away. But when it’s low and tight to your body, there’s less opportunity for the defender to make a clean steal without fouling.
+	•	Shields the Ball: When dribbling low, you can use your body more effectively to shield the ball from your defender. For example, if you’re being closely guarded, you can turn your body so that your shoulder or off-hand is between the defender and the ball, making it nearly impossible for them to swipe at it without risking a foul.
+
+4. Improves Offensive Moves
+
+	•	Quicker Moves: Many offensive moves rely on a low, fast dribble for execution. For example:
+	•	Crossover: A low crossover is much harder to defend than a high one. The ball stays below the defender’s hand level, making it harder for them to anticipate and steal it. A fast, low crossover allows you to blow by defenders.
+	•	Hesitation Dribble: In a hesitation dribble, you momentarily pause to freeze the defender. A low, controlled dribble keeps the ball protected while giving you the ability to explode out of the hesitation and attack the basket.
+	•	Spin Move: A low dribble allows for a tight spin move that’s quick and difficult to defend. When you dribble low and tight to your body during a spin, you maintain better control and speed, making it harder for the defender to recover.
+
+5. Defensive Pressure
+
+	•	Breaks Down Defenses: A low, fast dribble can put constant pressure on the defense. By dribbling quickly and maintaining control, you can push the pace, forcing defenders to react to your moves instead of dictating the flow. This keeps defenders on their heels and opens up opportunities for you to either drive to the basket, pass to open teammates, or pull up for a shot.
+	•	Easier to Beat Press Defense: When facing intense defensive pressure, such as a full-court press, a low and fast dribble allows you to advance the ball more safely. Defenders are likely to be aggressive in these situations, and a low dribble minimizes the chance of turnovers while allowing you to maneuver past defenders more effectively.
+
+6. Reduces the Risk of Turnovers
+
+	•	Less Time for the Ball to be Stolen: Dribbling fast and low means the ball spends less time in the air and away from your hand, reducing the risk of a defender stealing it. A high dribble or slow dribble is easier for defenders to attack since they have more time to anticipate where the ball will be.
+	•	More Control in Tight Spaces: In tight situations, like navigating through traffic in the paint or when double-teamed, a low dribble gives you better control and minimizes the risk of losing the ball.
+
+7. Creating Offensive Opportunities
+
+	•	Opens Up Passing Lanes: A low, controlled dribble allows you to keep your head up and scan the court for passing opportunities. When you’re dribbling too high or losing control, your focus shifts to managing the ball, and you might miss open teammates. Dribbling low helps you maintain control while keeping your vision open.
+	•	Attacking the Rim: When driving toward the basket, a low, fast dribble helps you protect the ball and explode past defenders. It allows you to be more aggressive and attack the rim with speed, making it difficult for defenders to stay in front of you.
+
+8. Handling Double Teams
+
+	•	Escaping Pressure: A low, fast dribble is especially useful when you’re being double-teamed. By keeping the ball low, you make it more difficult for defenders to trap you. You can use quick, low crossovers or spin moves to split the defenders or escape to a better position.
+	•	Drawing Fouls: When you’re dribbling low, defenders may be more likely to reach in or commit a foul while trying to steal the ball. By maintaining a low dribble and positioning your body between the ball and the defender, you can draw fouls and force them into a bad defensive position.
+
+9. Dictating the Pace
+
+	•	Controlling the Tempo of the Game: Dribbling low and fast allows you to control the pace of the game. If your team is running a fast break, you need to be able to push the ball up the floor quickly while maintaining control. Conversely, in a half-court offense, a low dribble lets you control the flow of the play, patiently waiting for a good opportunity to attack or pass.
+
+Conclusion:
+
+Dribbling low and fast is a key to maintaining control, protecting the ball from defenders, and making quicker offensive moves. It improves your agility and allows you to react faster to defensive pressure, break down defenses, and create opportunities for both yourself and your teammates. Whether you’re navigating through tight spaces, trying to beat a defender, or pushing the pace, mastering a low and fast dribble will give you a significant edge on the court.
+
+dribble low need to pound the ball. 
+
+practice in and out, cross, tween, behind the legs, 1, 2, 3, 4
+
+switch hands 
+
+but stay low here
+
+
+videos/dribbling/getHandles.mp4
+###
+###
+grab_a_steal (txt)
+grab_a_steal.txt
+
+![grab a steal](videos/grab_a_steal/grab_a_steal.mp4)
+###
+###
+highlights (txt)
+![highlights](videos/highlights/big_3_game.mp4)
+
+big 3 with Michael beasley
+###
+###
+jump-shot (txt)
+![jumpShot.mp4](videos/jump_shot/jumpshot.mp4)
+
+![jumpShot2.mp4](videos/jump_shot/jumpshot2.mp4)
+
+![jumpShot2.mp4](videos/jump_shot/dribble_shot.mp4)
+###
+###
+lanes (txt)
+when someone is driving from the side go to the middle 
+
+say bail me out
+- Vincent
+
+
+Don't get in other people's driving lanes.
+###
+###
+layups (txt)
+https://www.youtube.com/watch?v=Ax22L-vH9H4&t=93s; youtube video
+
+don't go overhand because that hits the backboard too hard go underhand. 
+
+and can do the reverse.
+
+you have the eurostep that you can apply when running down there. 
+
+
+![layup](videos/layups/gather_then_layup.mp4)
+###
+###
+make_the_game_easier (txt)
+https://www.youtube.com/watch?v=Uuq-Y_kI0Kw&t=538s, I trained with Jeremy Lin
+###
+###
+oneOnOne (txt)
+![OneOnOne1](videos/oneOnOne/oneOnOne.mp4)
+
+link 2 : 
+
+![OneOnOne2](videos/oneOnOne/oneOnOne2.mp4)
+
+https://www.youtube.com/shorts/IevpBe7PZnQ
+
+https://www.youtube.com/shorts/7wCO_VkfHYc
+
+https://www.youtube.com/shorts/TSBq7bxCblQ
+###
+###
+playing_one_on_one (txt)
+too many dribbles
+
+three dribbles, how do get my shot, 
+
+those guys were good
+
+I'm only playing basketball to train hard to learn how to train 
+
+got the jump hook
+
+be able to create my own shot.
+###
+###
+plays (txt)
+horns the top of the free throw is to screen and then to get the person to score,
+
+{url}/content/plays/index.html; plays images
+
+5 goes and sets two screens and then 3 can get open because 4 will set a pick and roll and don't wait go
+
+
+## 4-Out 1-In Offense: Plays and Concepts for 4 Perimeter, 1 Post Player
+
+The 4-out 1-in offense is a widely used basketball system where four players are spaced around the perimeter and one player operates as a post presence, typically near the low block or high post. This setup is praised for its spacing, driving lanes, and versatility, and is effective at all levels of basketball[1][2][3][4].
+
+### **Key Concepts and Actions**
+
+- **Spacing:** Four players are positioned outside the three-point line—usually two in the slots (just above the free-throw line extended) and two on the wings—with the post player inside, often on the weak side to keep the lane open for drives and cuts[1][5][3].
+- **Post Player Role:** The post player (often the “5”) can stay on the weak side block, flash to the high post, or set screens for perimeter players. Their main jobs are to be available for dump-down passes, clean up offensive rebounds, and serve as a scoring option if they have a mismatch[1][6].
+- **Perimeter Movement:** The four outside players engage in ball movement, drive-and-kick actions, basket cuts, and off-ball screens to create scoring opportunities and shift the defense[2][4].
+- **Ball Screens:** The post player can set ball screens for perimeter players, leading to pick-and-roll or pick-and-pop situations[2][3].
+- **Cutting and Screening:** After passing, perimeter players often cut to the basket or set screens for each other, keeping the defense moving and creating open looks[2][4].
+
+### **Sample Play: 4-Out 1-High**
+
+A specific play designed for a 4-out 1-in setup with the post at the high post (free-throw line) is as follows[7]:
+
+- Set up with two wings at the free-throw line extended, two guards at the top, and the post player at the nail (center of the free-throw line).
+- Guard 1 dribbles to a side and looks for a backdoor cut from 4.
+- If the backdoor isn’t open, 1 passes and uses a screen from 5 (the post), then basket cuts looking for a lob.
+- The play continues with a series of cuts, screens, and ball reversals, always keeping the post player involved as a screener and potential scoring option.
+- The post player can also set a down screen for a shooter coming to the top, or roll to the block for a post-up opportunity[7].
+
+### **Villanova’s 4-Out 1-In Motion Offense**
+
+Jay Wright’s Villanova teams are a modern example of 4-out 1-in success. Their version involves:
+
+- 4 perimeter players filling the two slots and two wings, with the post player in the weak side “dunker spot” or mid-post.
+- Perimeter players pass, cut, and fill, while the post player shifts with the ball to maintain spacing and be available for dump-downs or offensive rebounds.
+- Ball screens and weak side exchanges are used to remove help defenders and create driving lanes[8][3].
+
+### **Playbook and Video Resources**
+
+- **The Hoops Geek** and **Coach’s Clipboard** provide detailed breakdowns and diagrams for running the 4-out 1-in offense, including motion rules and set plays[1][4].
+- **YouTube tutorials** visually demonstrate the spacing, movement, and post player actions in the 4-out 1-in offense[5][9].
+- **Breakthrough Basketball** offers a “4 out 1 high” play with step-by-step actions for maximizing the post player’s involvement at the high post[7].
+
+### **Summary Table: 4-Out 1-In Structure**
+
+| Positioning         | Action Types                     | Post Player Role                | Example Play/Action           |
+|---------------------|----------------------------------|---------------------------------|-------------------------------|
+| 4 perimeter, 1 post | Ball movement, cuts, screens     | Weak side, high post, screener  | Backdoor cut, pick-and-roll   |
+| Slots, wings, block | Dribble penetration, kick-outs   | Post-up, offensive rebounding   | Ball reversal to post-up      |
+|                     | Off-ball screens, basket cuts    | Flash to high/low post          | Down screen for shooter       |
+
+### **Conclusion**
+
+There are numerous plays and motion principles available for a 4-out 1-in spread offense with a single post player. The system is highly adaptable, allowing coaches to tailor actions for their personnel, whether emphasizing post-ups, perimeter shooting, or dribble penetration. For detailed play diagrams and video breakdowns, resources like The Hoops Geek, Coach’s Clipboard, and YouTube tutorials are excellent starting points[1][5][4][7][6].
+
+
+Ball reversal is key.
+
+Score everytime: https://www.youtube.com/watch?v=cPxDn5fMfpA
+
+
+[1] https://www.thehoopsgeek.com/4-out-basketball-offense/
+[2] https://www.basketball.com.au/news/basketball-explainer-how-to-run-a-4-out-1-in-motion-offense
+[3] https://www.hooperuniversity.com/breakdowns/villanovas-4-out-motion-offense
+[4] https://www.coachesclipboard.net/4Out1InMotionOffense.html
+[5] https://www.youtube.com/watch?v=z7qquK4djos
+[6] https://cdn.revolutionise.com.au/cups/kkbc/files/wi4njdbnw9gbwaar.pdf
+[7] https://www.breakthroughbasketball.com/playcreator/view.asp?ID=45&type=play
+[8] https://go.gale.com/ps/i.do?id=GALE%7CA250827106&sid=sitemap&v=2.1&it=r&p=EAIM&sw=w&userGroupName=anon~635ab65d&aty=open-web-entry
+[9] https://www.youtube.com/watch?v=Gj2RvrBFm6U
+[10] https://www.coachesclipboard.net/14Stack.html
+###
+###
+post (txt)
+videos/post/zac_randolph.mp4
+
+sky hook: Kareem, turn then go up with the knee and straight arm extension
+https://www.youtube.com/watch?v=wB6Gr8YmEII
+
+videos/post/celtics.mp4
+###
+###
+proprioception (txt)
+How Can Proprioception Be Improved?
+Proprioceptive abilities can be enhanced through training. Exercises often involve balance challenges, such as:
+
+Standing on one leg (with eyes open or closed).
+
+Balancing on uneven or unstable surfaces (like foam pads or balance boards).
+
+Performing sport-specific drills that require quick changes in direction and dynamic balance.
+
+These exercises force your body to rely on proprioceptive feedback rather than vision, strengthening the neural pathways that control joint stability and muscle coordination.
+###
+###
+punch_drag (txt)
+https://www.youtube.com/watch?v=TppGKuZqOeY;punch drag with your eyes
+###
+###
+shake_and_bake (txt)
+Jamal Crawford
+
+that's not a travel
+###
+###
+shooting_a_bball (txt)
+videos/shooting/shooting1.mp4
+
+Shooting a basketball
+Shot line, instead of going at a 45 degree angle away from the body, what you want to do is, find the line.
+Have the release point lower and to the right of your head.
+Watch the way Gary shot the ball into the basketball, it’s more of a push from the top let the ball go in. 
+Basketball Myth: Use Your Legs! | Technique Tip | Shooting Episode 1
+https://youtu.be/HbZtcszPZnI?si=Ws0nJ9aTL8LCdnmp
+Move the ball faster up don’t need to bend so much your knees. 
+
+What’s this Coach Fui?
+
+https://www.youtube.com/watch?v=EqzPTjCIlpE
+
+
+
+![shooting1](videos/shooting/shooting1.mp4)
+![shooting2](videos/shooting/shooting2.mp4)
+![shooting3](videos/shooting/shooting3.mp4)
+![shooting4](videos/shooting/shooting4.mp4)
+###
+###
+soccer_alternative (txt)
+with soccer you can use some of those concepts into basketball
+
+attack the top foot if the right foot is up then you need to go right
+
+
+
+https://www.youtube.com/shorts/wR13YM3O9kg
+
+![videos](videos/soccer/drive_done.mp4)
+
+like going left, left left with the ball
+
+you can throw it
+
+
+![football dropstep](videos/soccer/drop_step.mp4)
+
+videos/soccer/fighter.mp4
+###
+###
+specific (txt)
+cutting
+
+![cutting1](videos/specificskills/cutting1.mp4)
+![cutting2](videos/specificskills/cutting2.mp4)
+
+
+Hope all is well with everyone.  From the 7 minute mark is gold.  
+
+https://www.youtube.com/watch?v=Uuq-Y_kI0Kw&t=1072s
+
+And for a breakdown of where this is coming from, Tracy Mcgrady did a version of that when he played (but I think NBA  
+
+https://www.youtube.com/shorts/1hZj5nOrXRg
+
+And this drill with a cone I think would help a lot to get into the float dribble mindset, and different ways to float :  
+youtube.com/watch?v=-N2tkn62dvg&t=88s&pp=0gcJCcYJAYcqIYzv f
+
+and to break down even further: 
+
+https://www.youtube.com/watch?v=28GErFvuC-4 
+
+cause I can't visualize how to do the hesi
+###
+###
+spin_move (txt)
+ometimes called the "zero step" or "gather step")
+3. Second step
+
+If the player takes a third step before shooting or passing, it's a traveling violation. This rule was formally adopted by the NBA in 2009 to match what was already being called on the court, and FIBA adopted similar rules to standardize interpretation globally.
+
+The key to understanding this rule is recognizing when the gather actually occurs. A common misconception is counting steps from when the player's last dribble hits the ground, but it's really from when they gain full control of the ball.
+
+so key is to spin and gather with the opposite hand
+
+![spin move](videos/spin_move/spin_move.mp4)
+###
+###
+steal_a_ball (txt)
+steal_a_ball.txt
+
+
+reach for the basketball when it is low to the ground
+###
+###
+step_back (txt)
+https://www.youtube.com/watch?v=RAiBYYfOU7M&t=3s
+
+add the bump to it too..
+
+f you see he still has his dribble.
+
+
+![step_back1](videos/step-back/step_back1.mp4)
+![step_back2](videos/step-back/step_back2.mp4)
+![mike_james_step_back](videos/step-back/mike_james_step_back.mp4)
+![mike_james_step_back2](videos/step-back/mike_james_step_back2.mp4)
+
+use the opposite hand to step back into a shot, so for Jack he is left handed so he drives right and then steps back to the right. 
+
+
+videos/step-back/contact.mp4
+###
+###
+team_concepts (txt)
+team_concepts.txt
+
+
+![curl_move](videos/teamConcepts/curlmove_basketball.mp4)
+###
+###
+test_syntax_highlighting (txt)
+Test file for syntax highlighting functionality
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>flashcards_with_firebase</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <button id="convertTextAreaFrColumns" class="express1">Convert TextArea (from columns/Google Sheets)</button>
+  <button id="makeTableFromSemicolon">Make Table</button>
+</body>
+</html>
+```
+
+```javascript
+function greet(name) {
+  console.log(`Hello, ${name}!`);
+  return `Welcome to the basketball app, ${name}`;
+}
+
+const players = ['LeBron', 'Curry', 'Durant'];
+players.forEach(player => greet(player));
+```
+
+```css
+.highlight {
+  background-color: yellow;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.code-block {
+  font-family: 'Monaco', 'Consolas', monospace;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+}
+```
+
+```python
+def calculate_shooting_percentage(made_shots, total_shots):
+    if total_shots == 0:
+        return 0
+    return (made_shots / total_shots) * 100
+
+# Example usage
+percentage = calculate_shooting_percentage(8, 10)
+print(f"Shooting percentage: {percentage}%")
+```
+
+This is regular text that should not be highlighted.
+
+concatenate mp4 files
+```bash
+# Create the file list correctly
+ls -v *.mp4 | sed "s/.*/'&'/" | sed "s/^/file /" > filelist.txt
+
+# Check what the file list looks like
+cat filelist.txt
+
+# Then concatenate
+ffmpeg -f concat -safe 0 -i filelist.txt -c:v libx264 -c:a aac -preset fast concatenated.mp4
+
+# Clean up
+rm filelist.txt
+
+```
+or convert mov to mp4
+
+```bash
+
+for file in *.mov; do HandBrakeCLI -i "$file" -o "${file%.*}.mp4" --preset="Fast 1080p30"; done
+```
+###
+###
+transiton (txt)
+transiton.txt
+
+![transition1](videos/transition/transition1.mp4)
+![transition2](videos/transition/transition2.mp4)
+![transition3](videos/transition/transition3.mp4)
+![transition4](videos/transition/transition4.mp4)
+###
+###
+turnovers (txt)
+after Haliburton got hurt, 
+
+Pacers had 21 turnovers compared to OKC's 7, which hurt their chances
+
+thus, you need to risk it more to withus, you need to risk it more to win
+
+when you do not have a star player.
+###
+###
+warm-up (txt)
+![warmup](videos/warmup_1.mp4)
+###
+###
+watching (txt)
+basketball
+
+so what it is, is this that you keep low and stay low with your hands out you can control the ball better move the ball behind your palm 
+
+so pretty much it's this, and then get pressure you can pass it out behind you always, 
+
+
+https://www.youtube.com/watch?v=BSjpPg7qJvY; 4 Out motion offense
+
+testing

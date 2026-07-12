@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Image Gallery with Thumbnail Carousel</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Open Sans", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #gallery {
+            position: relative;
+            background: url('https://cdn.pixabay.com/photo/2013/11/03/08/05/cheers-204742_1280.jpg');
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: background-image 0.5s linear;
+            padding: 0;
+        }
+
+        #gallery::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.75);
+            z-index: 0;
+        }
+
+        .gallery-section-headline,
+        .gallery-preview-container,
+        .gallery-btn,
+        .thumbnails-section {
+            position: relative;
+            z-index: 1;
+        }
+
+        .gallery-section-headline {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 15vh;
+            font-size: 40px;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .gallery-section-headline::after {
+            content: "";
+            width: 80px;
+            height: 3px;
+            background: orange;
+            margin-top: 5px;
+        }
+
+        .gallery-preview-container {
+            position: relative;
+            max-width: 100%;
+            height: 55vh;
+            text-align: center;
+            margin-bottom: 5vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-preview-image,
+        .gallery-preview-video {
+            max-width: 90%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: opacity 0.3s linear;
+        }
+
+        .gallery-preview-video {
+            display: none;
+        }
+
+        .gallery-preview-image {
+            display: block;
+        }
+
+        .gallery-btn {
+            width: 64px;
+            height: 64px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .gallery-btn:active {
+            transform: translateY(-50%) scale(0.9);
+        }
+
+        .prev-btn {
+            left: 10px;
+        }
+
+        .next-btn {
+            right: 10px;
+        }
+
+        /* Thumbnail Section */
+        .thumbnails-section {
+            position: absolute;
+            width: 100%;
+            height: 20vh;
+            bottom: 5vh;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .thumbnails-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .thumbnails-slider {
+            display: flex;
+            gap: 10px;
+            padding: 10px 60px;
+            align-items: center;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .thumbnail {
+            flex: 0 0 auto;
+            width: 120px;
+            cursor: pointer;
+            transition: transform 0.2s, border 0.2s, opacity 0.2s;
+            border: 3px solid transparent;
+            opacity: 0.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        .thumbnail.active {
+            border-color: orange;
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        .thumbnail-image-wrapper {
+            width: 100%;
+            height: 80px;
+            overflow: hidden;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .thumbnail-caption {
+            font-size: 10px;
+            color: white;
+            text-align: center;
+            margin-top: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+            padding: 0 4px;
+        }
+
+        /* Thumbnail Navigation Arrows */
+        .thumbnail-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 0, 0, 0.7);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .thumbnail-nav-btn:hover {
+            background: rgba(0, 0, 0, 0.9);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .thumbnail-nav-btn:active {
+            transform: translateY(-50%) scale(0.9);
+        }
+
+        .thumbnail-nav-btn.disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .thumbnail-prev-btn {
+            left: 10px;
+        }
+
+        .thumbnail-next-btn {
+            right: 10px;
+        }
+
+        /* URL Instructions */
+        .url-instructions {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid #007acc;
+            border-radius: 8px;
+            padding: 15px;
+            max-width: 300px;
+            font-size: 12px;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .url-instructions h4 {
+            margin: 0 0 10px 0;
+            color: #007acc;
+            font-size: 14px;
+        }
+
+        .url-instructions code {
+            background: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+
+        .url-instructions ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        .url-instructions li {
+            margin: 5px 0;
+        }
+
+        /* Reference Button */
+        .reference-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 165, 0, 0.9);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .reference-btn:hover {
+            background: rgba(255, 140, 0, 1);
+            transform: scale(1.05);
+        }
+
+        /* Drag-Drop Button */
+        .drag-drop-btn {
+            position: absolute;
+            top: 70px;
+            left: 20px;
+            background: rgba(76, 175, 80, 0.9);
+            color: white;
+            border: 3px dashed rgba(255, 255, 255, 0.5);
+            border-radius: 8px;
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .drag-drop-btn:hover {
+            background: rgba(67, 160, 71, 1);
+            transform: scale(1.05);
+        }
+
+        .drag-drop-btn.drag-over {
+            background: rgba(33, 150, 243, 0.9);
+            border-color: rgba(255, 255, 255, 0.9);
+            transform: scale(1.1);
+        }
+
+        /* Hidden file input */
+        #file_input {
+            display: none;
+        }
+
+        /* Navigation Input */
+        .nav-input-container {
+            position: absolute;
+            top: 120px;
+            left: 20px;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .nav-input {
+            width: 80px;
+            padding: 10px 12px;
+            font-size: 14px;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 6px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .nav-input:focus {
+            outline: none;
+            border-color: rgba(255, 165, 0, 0.9);
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .nav-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .nav-input.typing {
+            border-color: rgba(0, 255, 0, 0.7);
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+        }
+
+        .nav-go-btn {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 165, 0, 0.9);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-go-btn:hover {
+            background: rgba(255, 140, 0, 1);
+            transform: scale(1.1);
+        }
+
+        .nav-go-btn:active {
+            transform: scale(0.95);
+        }
+
+        .nav-go-btn svg {
+            color: white;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            position: relative;
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 15px;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            color: #007acc;
+            font-size: 24px;
+        }
+
+        .close-btn {
+            background: #ff4444;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .close-btn:hover {
+            background: #cc0000;
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            max-height: 60vh;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+
+        .reference-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .reference-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #007acc;
+            transition: all 0.3s ease;
+        }
+
+        .reference-item:hover {
+            background: #e3f2fd;
+            transform: translateX(5px);
+        }
+
+        .reference-number {
+            font-size: 18px;
+            font-weight: bold;
+            color: #007acc;
+            min-width: 50px;
+        }
+
+        .reference-key {
+            font-family: monospace;
+            font-size: 14px;
+            color: #333;
+            flex-grow: 1;
+            margin: 0 15px;
+        }
+
+        .reference-go-btn {
+            background: #007acc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 6px 12px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .reference-go-btn:hover {
+            background: #005a99;
+        }
+
+        .reference-go-btn:active {
+            transform: scale(0.95);
+        }
+
+        .reference-go-btn.clicked {
+            background: #28a745;
+        }
+
+        /* Scrollbar for modal */
+        .modal-body::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        .modal-body::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .modal-body::-webkit-scrollbar-thumb {
+            background: #007acc;
+            border-radius: 10px;
+        }
+
+        .modal-body::-webkit-scrollbar-thumb:hover {
+            background: #005a99;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .gallery-section-headline {
+                font-size: 28px;
+                height: 10vh;
+            }
+
+            .gallery-preview-container {
+                height: 50vh;
+            }
+
+            .thumbnails-section {
+                height: 25vh;
+            }
+
+            .thumbnail {
+                width: 90px;
+                height: 60px;
+            }
+
+            .thumbnails-slider {
+                padding: 10px 50px;
+            }
+
+            .url-instructions {
+                position: relative;
+                top: auto;
+                right: auto;
+                max-width: 100%;
+                margin: 10px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .gallery-section-headline {
+                font-size: 20px;
+            }
+
+            .gallery-btn {
+                width: 48px;
+                height: 48px;
+            }
+
+            .gallery-btn svg {
+                width: 48px;
+                height: 48px;
+            }
+
+            .thumbnail {
+                width: 70px;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section id="gallery">
+        <button class="reference-btn" onclick="openModal()">📋 View Reference</button>
+
+        <!-- Hidden file input -->
+        <input type="file" id="file_input" accept="image/png,image/jpeg,image/jpg,video/mp4" multiple style="display: none;">
+
+        <!-- Drag-drop button -->
+        <button class="drag-drop-btn" id="dragDropBtn" onclick="document.getElementById('file_input').click()">
+            📁 Drop Files Here
+        </button>
+
+        <!-- Navigation Input -->
+        <div class="nav-input-container">
+            <input type="number" class="nav-input" id="navInput" placeholder="Go to #" min="1">
+            <button class="nav-go-btn" id="navGoBtn" onclick="navigateToInput()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </button>
+        </div>
+
+        <div class="url-instructions">
+            <h4>Direct URL Access:</h4>
+            <p>Navigate directly to any image:</p>
+            <ul>
+                <li><code>?1</code> - First image</li>
+                <li><code>?5</code> - Fifth image</li>
+                <li>Or use any dictionary key</li>
+            </ul>
+        </div>
+
+        <div class="gallery-section-headline">Gallery</div>
+
+        <div class="gallery-preview-container">
+            <img class="gallery-preview-image" src="" alt="Gallery Image">
+            <video class="gallery-preview-video" controls loop autoplay muted>
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <button class="gallery-btn prev-btn" aria-label="Previous Image">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+                    <path d="M44 8 L20 32 L44 56" stroke="white" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+
+            <button class="gallery-btn next-btn" aria-label="Next Image">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+                    <path d="M20 8 L44 32 L20 56" stroke="white" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+
+        <div class="thumbnails-section">
+            <div class="thumbnails-container">
+                <div class="thumbnails-slider">
+                    <!-- Thumbnails will be generated here by JavaScript -->
+                </div>
+
+                <button class="thumbnail-nav-btn thumbnail-prev-btn" aria-label="Scroll Thumbnails Left">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1280 1792">
+                        <path fill="#fff" d="M1171 301L640 832l531 531q19 19 19 45t-19 45l-166 166q-19 19-45 19t-45-19L173 877q-19-19-19-45t19-45L915 45q19-19 45-19t45 19l166 166q19 19 19 45t-19 45z" />
+                    </svg>
+                </button>
+
+                <button class="thumbnail-nav-btn thumbnail-next-btn" aria-label="Scroll Thumbnails Right">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1280 1792">
+                        <path fill="#fff" d="M1107 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45L275 45q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reference Modal -->
+    <div id="referenceModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Image Reference Guide</h2>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <ul class="reference-list" id="referenceList">
+                    <!-- Generated by JavaScript -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Gallery Images Dictionary - Replace with your own images and videos
+        // Mix of images and videos - videos will be lazy loaded
+        const gallery_images_dict = {
+            'image1': "https://placehold.co/1080x606/777777/FFF?text=Picture1",
+            'video1': "https://www.dropbox.com/scl/fi/rdnbn2id47786c9enla2o/Shylock.mp4?rlkey=4pluvspopyzuryi75dmsic088&st=jmxk2rqr&raw=1",
+            'image2': "https://placehold.co/1080x606/888888/FFF?text=Picture2",
+            'image3': "https://placehold.co/1080x606/999999/FFF?text=Picture3",
+            'video2': "https://www.dropbox.com/scl/fi/i9096parwwsmkkhedbwc3/Lover-s-Complaint.mp4?rlkey=0nh036q9llk9t1az9v3z71pp8&st=o2mlkawd&raw=1",
+            'image4': "https://placehold.co/1080x606/666666/FFF?text=Picture4",
+            'image5': "https://placehold.co/1080x606/555555/FFF?text=Picture5",
+            'image6': "https://placehold.co/1080x606/444444/FFF?text=Picture6",
+            'image7': "https://placehold.co/1080x606/333333/FFF?text=Picture7"
+        };
+
+        // Convert dictionary to array of objects for easier iteration
+        const gallery_images = Object.entries(gallery_images_dict).map(([key, url]) => ({
+            key: key,
+            url: url,
+            isVideo: isVideoUrl(url)
+        }));
+
+        // DOM Elements
+        let currentIndex = 0;
+        const previewImg = document.querySelector('.gallery-preview-image');
+        const previewVideo = document.querySelector('.gallery-preview-video');
+        const thumbnailsSlider = document.querySelector('.thumbnails-slider');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        const thumbnailPrevBtn = document.querySelector('.thumbnail-prev-btn');
+        const thumbnailNextBtn = document.querySelector('.thumbnail-next-btn');
+
+        // Helper function to detect if URL is a video
+        function isVideoUrl(url) {
+            const videoExtensions = ['.mp4', '.webm', '.ogg', '.mov', '.avi', '.mkv', '.m4v'];
+            const urlLower = url.toLowerCase();
+            return videoExtensions.some(ext => urlLower.includes(ext));
+        }
+
+        // Check URL parameters on page load
+        function checkUrlParameters() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const keys = Array.from(urlParams.keys());
+
+            if (keys.length === 0) return;
+
+            const param = keys[0]; // Get first parameter
+
+            // Check if it's a number (for index-based access)
+            if (/^\d+$/.test(param)) {
+                const index = parseInt(param) - 1; // Convert to 0-based index
+                if (index >= 0 && index < gallery_images.length) {
+                    currentIndex = index;
+                    console.log(`URL parameter "${param}" (number). Setting to index ${index}`);
+                    return;
+                }
+            }
+
+            // Check if it's a direct key match (for backward compatibility)
+            const imageIndex = gallery_images.findIndex(img => img.key === param);
+
+            if (imageIndex !== -1) {
+                currentIndex = imageIndex;
+                console.log(`URL parameter "${param}" found as key. Setting to index ${imageIndex}`);
+            } else {
+                console.log(`URL parameter "${param}" not found in gallery_images_dict. Using default.`);
+            }
+        }
+
+        // Generate Thumbnails
+        function generateThumbnails() {
+            gallery_images.forEach((imgData, index) => {
+                const thumbnail = document.createElement('div');
+                thumbnail.className = 'thumbnail';
+                thumbnail.setAttribute('data-key', imgData.key);
+                if (index === currentIndex) thumbnail.classList.add('active');
+
+                // Create wrapper for the image/video content
+                const wrapper = document.createElement('div');
+                wrapper.className = 'thumbnail-image-wrapper';
+
+                if (imgData.isVideo) {
+                    // For video thumbnails, create a placeholder with video icon
+                    const placeholder = document.createElement('div');
+                    placeholder.style.width = '100%';
+                    placeholder.style.height = '100%';
+                    placeholder.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                    placeholder.style.display = 'flex';
+                    placeholder.style.alignItems = 'center';
+                    placeholder.style.justifyContent = 'center';
+                    placeholder.style.color = 'white';
+                    placeholder.style.fontSize = '24px';
+                    placeholder.innerHTML = '▶️';
+                    wrapper.appendChild(placeholder);
+                } else {
+                    // Create img element for thumbnail
+                    const img = document.createElement('img');
+                    img.src = imgData.url;
+                    img.alt = imgData.key;
+                    wrapper.appendChild(img);
+                }
+
+                thumbnail.appendChild(wrapper);
+
+                // Add caption with number and key name
+                const caption = document.createElement('div');
+                caption.className = 'thumbnail-caption';
+                caption.textContent = `${index + 1}, ${imgData.key}`;
+                thumbnail.appendChild(caption);
+
+                thumbnailsSlider.appendChild(thumbnail);
+
+                thumbnail.addEventListener('click', () => {
+                    changeImage(index);
+                });
+            });
+        }
+
+        // Change Main Image
+        function changeImage(index) {
+            currentIndex = index;
+            const currentMedia = gallery_images[currentIndex].url;
+            const isVideo = gallery_images[currentIndex].isVideo;
+
+            if (isVideo) {
+                // Hide image, show video
+                previewImg.style.display = 'none';
+                previewVideo.style.display = 'block';
+                previewVideo.style.opacity = '0';
+
+                setTimeout(() => {
+                    const source = previewVideo.querySelector('source');
+                    source.src = currentMedia;
+                    previewVideo.load(); // Lazy load the video only when navigating to it
+                    previewVideo.play();
+                    previewVideo.style.opacity = '1';
+                }, 150);
+            } else {
+                // Hide video, show image
+                previewVideo.style.display = 'none';
+                previewVideo.pause(); // Stop any playing video
+                previewImg.style.display = 'block';
+                previewImg.style.opacity = '0';
+
+                setTimeout(() => {
+                    previewImg.src = currentMedia;
+                    previewImg.style.opacity = '1';
+                }, 150);
+            }
+
+            // Update active thumbnail
+            document.querySelectorAll('.thumbnail').forEach((thumb, i) => {
+                thumb.classList.toggle('active', i === currentIndex);
+            });
+
+            // Scroll thumbnail into view
+            scrollThumbnailIntoView(currentIndex);
+
+            // Update URL parameter without reloading page
+            updateUrlParameter(index);
+        }
+
+        // Update URL parameter to reflect current image
+        function updateUrlParameter(index) {
+            const newUrl = `${window.location.pathname}?${index + 1}`;
+            window.history.replaceState({}, '', newUrl);
+        }
+
+        // Scroll thumbnail into view
+        function scrollThumbnailIntoView(index) {
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            if (thumbnails[index]) {
+                const thumbnail = thumbnails[index];
+                const container = thumbnailsSlider.parentElement;
+                const containerWidth = container.offsetWidth;
+                const thumbnailLeft = thumbnail.offsetLeft;
+                const thumbnailWidth = thumbnail.offsetWidth;
+                const currentScroll = thumbnailsSlider.scrollLeft || 0;
+
+                // Calculate if thumbnail is out of view
+                const scrollLeft = thumbnailLeft - (containerWidth / 2) + (thumbnailWidth / 2);
+
+                thumbnailsSlider.style.transform = `translateX(-${Math.max(0, scrollLeft)}px)`;
+            }
+            updateThumbnailNavButtons();
+        }
+
+        // Navigate to Previous Image
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + gallery_images.length) % gallery_images.length;
+            changeImage(currentIndex);
+        }
+
+        // Navigate to Next Image
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % gallery_images.length;
+            changeImage(currentIndex);
+        }
+
+        // Thumbnail Carousel Navigation
+        function scrollThumbnails(direction) {
+            const scrollAmount = 250;
+            const container = thumbnailsSlider.parentElement;
+            const maxScroll = thumbnailsSlider.scrollWidth - container.offsetWidth;
+
+            // Get current transform value
+            const currentTransform = thumbnailsSlider.style.transform || 'translateX(0px)';
+            const currentScroll = parseFloat(currentTransform.match(/-?\d+\.?\d*/)[0]) || 0;
+
+            let newScroll;
+            if (direction === 'prev') {
+                newScroll = Math.max(0, currentScroll - scrollAmount);
+            } else {
+                newScroll = Math.min(maxScroll, currentScroll + scrollAmount);
+            }
+
+            thumbnailsSlider.style.transform = `translateX(-${newScroll}px)`;
+            updateThumbnailNavButtons();
+        }
+
+        // Update thumbnail navigation button states
+        function updateThumbnailNavButtons() {
+            const currentTransform = thumbnailsSlider.style.transform || 'translateX(0px)';
+            const currentScroll = parseFloat(currentTransform.match(/-?\d+\.?\d*/)[0]) || 0;
+            const container = thumbnailsSlider.parentElement;
+            const maxScroll = thumbnailsSlider.scrollWidth - container.offsetWidth;
+
+            // Disable/enable buttons based on scroll position
+            if (currentScroll <= 0) {
+                thumbnailPrevBtn.classList.add('disabled');
+            } else {
+                thumbnailPrevBtn.classList.remove('disabled');
+            }
+
+            if (currentScroll >= maxScroll - 10) { // -10 for tolerance
+                thumbnailNextBtn.classList.add('disabled');
+            } else {
+                thumbnailNextBtn.classList.remove('disabled');
+            }
+        }
+
+        // Event Listeners
+        prevBtn.addEventListener('click', prevImage);
+        nextBtn.addEventListener('click', nextImage);
+        thumbnailPrevBtn.addEventListener('click', () => scrollThumbnails('prev'));
+        thumbnailNextBtn.addEventListener('click', () => scrollThumbnails('next'));
+
+        // ============================================
+        // NUMERIC KEYCODE NAVIGATION (0-9)
+        // ============================================
+
+        let numericBuffer = '';
+        let numericTimeout = null;
+        const NUMERIC_DELAY = 1500; // 1.5 seconds delay
+
+        function handleNumericNavigation(digit) {
+            // Add digit to buffer
+            numericBuffer += digit;
+
+            // Update input field to show what's being typed
+            navInput.value = numericBuffer;
+            navInput.classList.add('typing');
+
+            // Clear previous timeout
+            if (numericTimeout) {
+                clearTimeout(numericTimeout);
+            }
+
+            // Set new timeout
+            numericTimeout = setTimeout(() => {
+                const targetNumber = parseInt(numericBuffer);
+
+                if (!isNaN(targetNumber) && targetNumber >= 1 && targetNumber <= gallery_images.length) {
+                    changeImage(targetNumber - 1); // Convert to 0-based index
+                    navInput.style.borderColor = 'rgba(0, 255, 0, 0.7)';
+                } else {
+                    // Invalid number - show red border
+                    navInput.style.borderColor = 'rgba(255, 0, 0, 0.8)';
+                }
+
+                // Clear buffer and input after short delay
+                setTimeout(() => {
+                    numericBuffer = '';
+                    navInput.value = '';
+                    navInput.classList.remove('typing');
+                    navInput.style.borderColor = 'rgba(255, 255, 255, 0.5)';
+                }, 500);
+            }, NUMERIC_DELAY);
+        }
+
+        // Keyboard Navigation
+        document.addEventListener('keydown', (e) => {
+            // Check if user is typing in an input field
+            const isInputFocused = document.activeElement.tagName === 'INPUT' ||
+                                   document.activeElement.tagName === 'TEXTAREA';
+
+            // Arrow key navigation
+            if (e.key === 'ArrowLeft') {
+                prevImage();
+            } else if (e.key === 'ArrowRight') {
+                nextImage();
+            }
+            // Numeric key navigation (0-9)
+            else if (!isInputFocused && /^[0-9]$/.test(e.key)) {
+                e.preventDefault(); // Prevent default behavior
+                handleNumericNavigation(e.key);
+            }
+        });
+
+        // Initialize Gallery
+        checkUrlParameters(); // Check URL first to set the correct starting index
+        generateThumbnails();
+        changeImage(currentIndex); // This will display the image from URL parameter or default
+        updateThumbnailNavButtons();
+
+        // Update nav buttons on window resize
+        window.addEventListener('resize', updateThumbnailNavButtons);
+
+        // ============================================
+        // DRAG-AND-DROP FILE HANDLING
+        // ============================================
+
+        // Prevent browser from opening dropped files in new tab
+        window.addEventListener('dragover', function(e) {
+            e.preventDefault();
+        }, false);
+
+        window.addEventListener('drop', function(e) {
+            e.preventDefault();
+        }, false);
+
+        const dragDropBtn = document.getElementById('dragDropBtn');
+        const fileInput = document.getElementById('file_input');
+
+        // Prevent default drag behaviors on the button
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dragDropBtn.addEventListener(eventName, preventDefaults, false);
+        });
+
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        // Highlight button when dragging over it
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dragDropBtn.addEventListener(eventName, () => {
+                dragDropBtn.classList.add('drag-over');
+            }, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dragDropBtn.addEventListener(eventName, () => {
+                dragDropBtn.classList.remove('drag-over');
+            }, false);
+        });
+
+        // Handle dropped files
+        dragDropBtn.addEventListener('drop', handleDrop, false);
+
+        function handleDrop(e) {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            handleFiles(files);
+        }
+
+        // Handle files selected via file input
+        fileInput.addEventListener('change', function(e) {
+            const files = e.target.files;
+            handleFiles(files);
+        });
+
+        // Process uploaded files
+        function handleFiles(files) {
+            const filesArray = Array.from(files);
+
+            // Filter for only .png, .jpg, .jpeg and .mp4 files
+            const validFiles = filesArray.filter(file => {
+                const fileName = file.name.toLowerCase();
+                return fileName.endsWith('.png') || fileName.endsWith('.jpg') || fileName.endsWith('.jpeg') || fileName.endsWith('.mp4');
+            });
+
+            if (validFiles.length === 0) {
+                alert('Please upload only .png, .jpg, .jpeg or .mp4 files');
+                return;
+            }
+
+            // Clear existing gallery
+            gallery_images.length = 0;
+            Object.keys(gallery_images_dict).forEach(key => delete gallery_images_dict[key]);
+
+            // Add new files to gallery
+            validFiles.forEach((file, index) => {
+                const objectURL = URL.createObjectURL(file);
+                const fileName = file.name.replace(/\.(png|jpg|jpeg|mp4)$/i, ''); // Remove extension
+                const key = `file${index + 1}_${fileName}`;
+                const isVideo = file.type.startsWith('video/');
+
+                gallery_images_dict[key] = objectURL;
+                gallery_images.push({ key: key, url: objectURL, isVideo: isVideo });
+            });
+
+            // Reset gallery
+            currentIndex = 0;
+
+            // Clear and regenerate thumbnails
+            thumbnailsSlider.innerHTML = '';
+            generateThumbnails();
+
+            // Display first image/video
+            changeImage(currentIndex);
+            updateThumbnailNavButtons();
+
+            // Update button text to show files loaded
+            dragDropBtn.textContent = `✓ ${validFiles.length} Files Loaded`;
+            dragDropBtn.style.background = 'rgba(76, 175, 80, 1)';
+
+            setTimeout(() => {
+                dragDropBtn.textContent = '📁 Drop Files Here';
+                dragDropBtn.style.background = 'rgba(76, 175, 80, 0.9)';
+            }, 2000);
+        }
+
+        // Modal Functions
+        function openModal() {
+            const modal = document.getElementById('referenceModal');
+            const referenceList = document.getElementById('referenceList');
+
+            // Clear existing content
+            referenceList.innerHTML = '';
+
+            // Generate reference list
+            gallery_images.forEach((imgData, index) => {
+                const listItem = document.createElement('li');
+                listItem.className = 'reference-item';
+
+                const number = document.createElement('span');
+                number.className = 'reference-number';
+                number.textContent = `${index + 1}`;
+
+                const key = document.createElement('span');
+                key.className = 'reference-key';
+                key.textContent = imgData.key;
+
+                const goBtn = document.createElement('button');
+                goBtn.className = 'reference-go-btn';
+                goBtn.textContent = 'Go';
+                goBtn.onclick = function(e) {
+                    e.stopPropagation();
+                    goBtn.textContent = '✓';
+                    goBtn.classList.add('clicked');
+                    changeImage(index);
+                    setTimeout(() => {
+                        closeModal();
+                    }, 500);
+                };
+
+                // Click to navigate
+                listItem.onclick = function() {
+                    goBtn.textContent = '✓';
+                    goBtn.classList.add('clicked');
+                    changeImage(index);
+                    setTimeout(() => {
+                        closeModal();
+                    }, 500);
+                };
+                listItem.style.cursor = 'pointer';
+
+                listItem.appendChild(number);
+                listItem.appendChild(key);
+                listItem.appendChild(goBtn);
+                referenceList.appendChild(listItem);
+            });
+
+            modal.classList.add('show');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('referenceModal');
+            modal.classList.remove('show');
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('referenceModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // ============================================
+        // NAVIGATION INPUT FUNCTIONALITY
+        // ============================================
+
+        const navInput = document.getElementById('navInput');
+
+        // Navigate to input number
+        function navigateToInput() {
+            const inputValue = parseInt(navInput.value);
+
+            if (isNaN(inputValue) || inputValue < 1) {
+                navInput.style.borderColor = 'rgba(255, 0, 0, 0.8)';
+                setTimeout(() => {
+                    navInput.style.borderColor = 'rgba(255, 255, 255, 0.5)';
+                }, 500);
+                return;
+            }
+
+            const targetIndex = inputValue - 1; // Convert to 0-based index
+
+            if (targetIndex >= 0 && targetIndex < gallery_images.length) {
+                changeImage(targetIndex);
+                navInput.value = ''; // Clear input after navigation
+                navInput.blur(); // Remove focus
+            } else {
+                // Invalid index
+                navInput.style.borderColor = 'rgba(255, 0, 0, 0.8)';
+                setTimeout(() => {
+                    navInput.style.borderColor = 'rgba(255, 255, 255, 0.5)';
+                }, 500);
+            }
+        }
+
+        // Allow Enter key to navigate
+        navInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                navigateToInput();
+            }
+        });
+
+        // Update max attribute when gallery changes
+        navInput.addEventListener('focus', function() {
+            navInput.setAttribute('max', gallery_images.length);
+        });
+    </script>
+</body>
+</html>
+

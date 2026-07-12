@@ -1,0 +1,2979 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clipboard Text-to-Speech Reader</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 250px;
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem;
+            overflow-y: auto;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar-header {
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #34495e;
+            padding-bottom: 0.5rem;
+        }
+
+        .sidebar h3 {
+            margin: 0 0 0.5rem 0;
+            color: #ecf0f1;
+            font-size: 1.2rem;
+        }
+
+        .sidebar-download-btn {
+            width: 100%;
+            padding: 0.5rem;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .sidebar-download-btn:hover {
+            background-color: #229954;
+            transform: translateY(-1px);
+        }
+
+        .sidebar-download-btn:active {
+            transform: translateY(0);
+        }
+
+        .rename-controls {
+            margin-top: 1rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid #34495e;
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .rename-input {
+            flex: 1;
+            padding: 0.4rem;
+            background-color: #34495e;
+            color: white;
+            border: 1px solid #2c3e50;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        .rename-input::placeholder {
+            color: #95a5a6;
+        }
+
+        .rename-input:focus {
+            outline: none;
+            border-color: #F59E0B;
+        }
+
+        .rename-btn {
+            padding: 0.4rem 0.8rem;
+            background-color: #10B981;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .rename-btn:hover {
+            background-color: #059669;
+            transform: translateY(-1px);
+        }
+
+        .rename-btn:active {
+            transform: translateY(0);
+        }
+
+        .storage-controls {
+            margin-top: 1rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid #34495e;
+        }
+
+        .storage-controls-row {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .storage-select {
+            flex: 1;
+            padding: 0.4rem;
+            background-color: #34495e;
+            color: white;
+            border: 1px solid #2c3e50;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            cursor: pointer;
+        }
+
+        .storage-select:focus {
+            outline: none;
+            border-color: #3B82F6;
+        }
+
+        .storage-btn {
+            flex: 1;
+            padding: 0.4rem;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .storage-save-btn {
+            background-color: #3B82F6;
+        }
+
+        .storage-save-btn:hover {
+            background-color: #2563EB;
+            transform: translateY(-1px);
+        }
+
+        .storage-load-btn {
+            background-color: #8B5CF6;
+        }
+
+        .storage-load-btn:hover {
+            background-color: #7C3AED;
+            transform: translateY(-1px);
+        }
+
+        .storage-btn:active {
+            transform: translateY(0);
+        }
+
+        #sidebarContent {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .sidebar-button {
+            padding: 10px 15px;
+            background-color: #34495e;
+            border: 1px solid #2c3e50;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: left;
+            font-size: 14px;
+            transition: all 0.2s;
+            color: white;
+        }
+
+        .sidebar-button:hover {
+            background-color: #415b76;
+            border-color: #34495e;
+        }
+
+        .sidebar-button.active {
+            background-color: #3B82F6;
+            color: white;
+            border-color: #2563EB;
+        }
+
+        .main-wrapper {
+            flex: 1;
+            overflow-y: auto;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        button {
+            padding: 0.75rem 1.5rem;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.2s;
+        }
+        
+        .primary-button {
+            background-color: #3B82F6;
+        }
+        
+        .primary-button:hover {
+            background-color: #2563EB;
+        }
+        
+        .secondary-button {
+            background-color: #6B7280;
+        }
+        
+        .secondary-button:hover {
+            background-color: #4B5563;
+        }
+        
+        .success-button {
+            background-color: #10B981;
+        }
+        
+        .success-button:hover {
+            background-color: #059669;
+        }
+        
+        .danger-button {
+            background-color: #EF4444;
+        }
+        
+        .danger-button:hover {
+            background-color: #DC2626;
+        }
+        
+        textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 1rem;
+            resize: vertical;
+            margin-bottom: 1.5rem;
+        }
+        
+        .reading-area {
+            background-color: #f8f9fa;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            min-height: 200px;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        
+        .word {
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .word:hover {
+            background-color: #e9ecef;
+        }
+        
+        .word.highlight {
+            background-color: #fff3cd;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        .word.current {
+            background-color: #ffd43b;
+            border-radius: 3px;
+            font-weight: bold;
+            box-shadow: 0 0 5px rgba(255, 212, 59, 0.5);
+        }
+        
+        .controls {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .speed-control {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        select {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 1rem 0;
+            display: none;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background-color: #3B82F6;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        .status {
+            text-align: center;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 6px;
+            margin: 1rem 0;
+            font-weight: 500;
+            display: none;
+        }
+        
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 1000;
+        }
+        
+        .popup-content {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 800px;
+            height: 80%;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .popup-header {
+            padding: 1rem;
+            border-bottom: 1px solid #dee2e6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .popup-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #6B7280;
+            padding: 0.5rem;
+            line-height: 1;
+        }
+        
+        .popup-close:hover {
+            color: #DC2626;
+        }
+        
+        .popup-reading-area {
+            flex: 1;
+            overflow-y: auto;
+            padding: 2rem;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+        }
+        
+        /* Toggle slider styles */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #4CAF50;
+            transition: .4s;
+            border-radius: 24px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+
+        input:checked + .slider {
+            background-color: #ff6b6b;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+        
+        .toggle-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 8px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .sentence-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 1rem 0;
+            padding: 0.5rem;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            position: sticky;
+            top: 10px;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .nav-button {
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            transition: background-color 0.2s;
+        }
+
+        .sentence-nav button:not(.nav-button) {
+            font-size: 0.85rem;
+            padding: 0.4rem 0.6rem;
+        }
+
+        .nav-button:hover {
+            background-color: #5a6268;
+        }
+
+        .nav-button:disabled {
+            background-color: #e9ecef;
+            color: #6c757d;
+            cursor: not-allowed;
+        }
+
+        .sentence-indicator {
+            flex: 1;
+            text-align: center;
+            font-weight: 500;
+            color: #495057;
+            padding: 0.4rem;
+            background-color: white;
+            border-radius: 4px;
+            border: 1px solid #ced4da;
+            min-height: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+        }
+
+        .loop-timer-controls {
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(67, 160, 71, 0.1));
+            border: 1px solid rgba(76, 175, 80, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 1rem 0;
+            text-align: center;
+        }
+
+        .loop-timer-controls h4 {
+            color: #4CAF50;
+            margin: 0 0 10px 0;
+            font-size: 1.1rem;
+        }
+
+        .loop-timer-status {
+            display: none;
+            text-align: center;
+            margin-top: 10px;
+            padding: 10px;
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 8px;
+            color: #4CAF50;
+            font-family: monospace;
+            font-weight: 600;
+        }
+
+        .loop-btn {
+            padding: 8px 16px;
+            background: linear-gradient(45deg, #4CAF50, #45a049);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 0 5px;
+        }
+
+        .loop-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+        }
+
+        .loop-btn.stop {
+            background: linear-gradient(45deg, #f44336, #d32f2f);
+        }
+
+        .loop-btn.loop-25 {
+            background: linear-gradient(45deg, #9C27B0, #7B1FA2);
+        }
+
+        .loop-btn.loop-25:hover {
+            box-shadow: 0 5px 15px rgba(156, 39, 176, 0.4);
+        }
+
+        /* Edit Modal Styles */
+        .edit-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+        }
+
+        .edit-modal-overlay.active {
+            display: flex;
+        }
+
+        .edit-modal-content {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            padding: 2rem;
+            max-width: 600px;
+            width: 90%;
+            margin: 1rem;
+        }
+
+        .edit-modal-header {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .edit-modal-textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 1rem;
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .edit-modal-textarea:focus {
+            outline: none;
+            border-color: #3B82F6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .edit-modal-buttons {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h3>Sections</h3>
+            <button class="sidebar-download-btn" id="downloadSectionsBtn">📥 Download All Sections</button>
+            <button class="sidebar-download-btn" id="clearSidebarBtn" style="background: #e74c3c; margin-top: 5px;">🗑️ Clear Sidebar</button>
+
+            <!-- Rename Controls -->
+            <div class="rename-controls">
+                <input type="text" class="rename-input" id="renameSectionInput" placeholder="Rename active section...">
+                <button class="rename-btn" id="renameSectionBtn">✏️ Rename</button>
+            </div>
+
+            <!-- Storage Controls -->
+            <div class="storage-controls">
+                <div class="storage-controls-row">
+                    <select class="storage-select" id="storageSlotSelect">
+                        <option value="slot1">Slot 1</option>
+                        <option value="slot2">Slot 2</option>
+                        <option value="slot3">Slot 3</option>
+                        <option value="slot4">Slot 4</option>
+                        <option value="slot5">Slot 5</option>
+                    </select>
+                </div>
+                <div class="storage-controls-row">
+                    <button class="storage-btn storage-save-btn" id="saveSectionsBtn">💾 Save</button>
+                    <button class="storage-btn storage-load-btn" id="loadSectionsBtn">📂 Load</button>
+                </div>
+            </div>
+        </div>
+        <div id="sidebarContent">
+            <p style="color: #95a5a6; font-size: 0.9rem;">Paste content with ### delimiters to see sections here, and use function store()</p>
+        </div>
+    </div>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-wrapper">
+    <div class="container">
+        <h1>📋 Clipboard Text-to-Speech Reader</h1>
+        
+        <div class="toggle-container">
+            <span style="font-weight: bold; color: #4CAF50; font-size: 12px;">KEEP #s (Bible Mode)</span>
+            <label class="switch">
+                <input type="checkbox" id="skipNumbersToggle" checked>
+                <span class="slider"></span>
+            </label>
+            <span style="font-weight: bold; color: #ff6b6b; font-size: 12px;">SKIP #s (Bible Mode)</span>
+        </div>
+
+        <div class="toggle-container" style="background-color: #ffe6e6;">
+            <span style="font-weight: bold; font-size: 12px;">📖 Bible Mode</span>
+            <label class="switch">
+                <input type="checkbox" id="youtubeToggle" checked>
+                <span class="slider" style="background-color: #ff6b6b;"></span>
+            </label>
+            <span style="font-weight: bold; font-size: 12px;">🎥 YouTube Mode</span>
+        </div>
+        
+        <div class="button-group">
+            <button class="primary-button" id="pasteButton">📋 Paste from Clipboard(`)</button>
+            <button class="danger-button" id="removeSelectedButton">✂️ Remove Selected</button>
+            <button class="secondary-button" id="clearButton">🗑️ Clear Text</button>
+        </div>
+        
+        <textarea id="textArea" placeholder="Paste your text here or click 'Paste from Clipboard' to automatically get clipboard content..."></textarea>
+
+        <div class="controls">
+            <div class="speed-control">
+                <label for="speedSelect">Speed:</label>
+                <select id="speedSelect">
+                    <option value="0.5">0.5x</option>
+                    <option value="0.7">0.7x</option>
+                    <option value="1">1x</option>
+                    <option value="1.25" selected>1.25x</option>
+                    <option value="1.5">1.5x</option>
+                    <option value="2">2x</option>
+                </select>
+            </div>
+
+            <div class="speed-control">
+                <label for="presetSelect">Load Preset:</label>
+                <select id="presetSelect">
+                    <option value="">Choose preset...</option>
+                </select>
+            </div>
+
+            <button class="secondary-button" id="popupButton" style="display: none;">🔍 Popup</button>
+        </div>
+
+        <!-- Loop Timer Controls -->
+        <div class="loop-timer-controls">
+            <h4>🔄 Loop Reading Timer</h4>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap;">
+                <button id="loopTimer5minBtn" class="loop-btn">▶️ 5 min Loop</button>
+                <button id="loopTimer25minBtn" class="loop-btn loop-25">▶️ 25 min Loop</button>
+                <span style="color: #666; font-size: 0.9rem; font-style: italic;">Automatically restarts from sentence 1/X when finished</span>
+            </div>
+            <div id="loopTimerStatus" class="loop-timer-status">
+                Loop Timer: 00:00 remaining
+            </div>
+        </div>
+
+        <!-- Sentence Navigation Bar with Play Controls -->
+        <div class="sentence-nav">
+            <button class="nav-button" id="prevSentenceButton">◀</button>
+            <span class="sentence-indicator" id="sentenceIndicator">Ready to read...</span>
+            <button class="nav-button" id="nextSentenceButton">▶</button>
+            <button class="success-button" id="playButton" style="margin-left: 0.5rem; min-width: 140px;">▶️ Play (esc/ent)</button>
+            <button class="secondary-button" id="stopButton" disabled style="margin-left: 0.25rem; display: none;">⏹️ Stop</button>
+            <button class="secondary-button" id="resetButton" style="margin-left: 0.25rem;">🔄 Reset</button>
+            <button class="primary-button" id="editButton" style="margin-left: 0.25rem;">✏️ Edit</button>
+            <button class="success-button" id="glossButton" style="margin-left: 0.25rem;">📖 Gloss</button>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        
+        <div class="status" id="statusDisplay">Ready to read text</div>
+        
+        <div class="reading-area" id="readingArea">
+            <p style="text-align: center; color: #666;">Text will appear here for reading with word-by-word highlighting</p>
+        </div>
+    </div>
+    </div>  <!-- End main-wrapper -->
+
+    <!-- Popup Overlay -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3>Reading View</h3>
+                <button class="popup-close" id="popupClose">✕</button>
+            </div>
+            <div class="popup-reading-area" id="popupReadingArea">
+                <p style="text-align: center; color: #666;">Text will appear here for reading with word-by-word highlighting</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div class="edit-modal-overlay" id="editModalOverlay">
+        <div class="edit-modal-content">
+            <h3 class="edit-modal-header" id="editModalHeader">Edit Sentence</h3>
+            <textarea class="edit-modal-textarea" id="editModalTextarea" rows="4" autocomplete="off" spellcheck="false"></textarea>
+            <div class="edit-modal-buttons">
+                <button class="success-button" id="editModalSave">✓ Save</button>
+                <button class="secondary-button" id="editModalCancel">✕ Cancel (Esc)</button>
+                <button class="primary-button" id="editModalAppend">📥 Append Current</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ===== IndexedDB Wrapper Class =====
+        class IndexedDBWrapper {
+            constructor() {
+                this.dbConnections = new Map();
+                this.availableKeys = new Set();
+                this.DB_VERSION = 1;
+                this.STORE_NAME = 'content';
+            }
+
+            async openDatabase(databaseName) {
+                if (this.dbConnections.has(databaseName)) {
+                    return this.dbConnections.get(databaseName);
+                }
+
+                return new Promise((resolve, reject) => {
+                    const request = indexedDB.open(databaseName, this.DB_VERSION);
+
+                    request.onerror = () => reject(new Error(`Failed to open database: ${request.error?.message}`));
+
+                    request.onsuccess = () => {
+                        const db = request.result;
+                        this.dbConnections.set(databaseName, db);
+
+                        db.onclose = () => this.dbConnections.delete(databaseName);
+                        db.onerror = (event) => console.error(`Database error for ${databaseName}:`, event);
+
+                        resolve(db);
+                    };
+
+                    request.onupgradeneeded = (event) => {
+                        const db = event.target.result;
+
+                        if (!db.objectStoreNames.contains(this.STORE_NAME)) {
+                            const store = db.createObjectStore(this.STORE_NAME, { keyPath: 'key' });
+                            store.createIndex('timestamp', 'timestamp', { unique: false });
+                            store.createIndex('dataType', 'dataType', { unique: false });
+                        }
+                    };
+                });
+            }
+
+            async set(databaseName, key, data) {
+                const db = await this.openDatabase(databaseName);
+
+                return new Promise((resolve, reject) => {
+                    const transaction = db.transaction([this.STORE_NAME], 'readwrite');
+                    const store = transaction.objectStore(this.STORE_NAME);
+
+                    const record = {
+                        key,
+                        data,
+                        timestamp: Date.now(),
+                        dataType: typeof data,
+                        lastModified: new Date().toISOString()
+                    };
+
+                    const request = store.put(record);
+                    request.onsuccess = () => {
+                        console.log(`✓ Saved: ${databaseName}/${key}`);
+                        resolve();
+                    };
+                    request.onerror = () => reject(new Error(`Save failed: ${request.error?.message}`));
+                });
+            }
+
+            async get(databaseName, key) {
+                const db = await this.openDatabase(databaseName);
+
+                return new Promise((resolve, reject) => {
+                    const transaction = db.transaction([this.STORE_NAME], 'readonly');
+                    const store = transaction.objectStore(this.STORE_NAME);
+                    const request = store.get(key);
+
+                    request.onsuccess = () => {
+                        const result = request.result;
+
+                        resolve({
+                            exists: () => !!result,
+                            val: () => result ? result.data : null,
+                            key: () => key,
+                            ref: { key }
+                        });
+                    };
+
+                    request.onerror = () => reject(new Error(`Get failed: ${request.error?.message}`));
+                });
+            }
+
+            async delete(databaseName, key) {
+                const db = await this.openDatabase(databaseName);
+
+                return new Promise((resolve, reject) => {
+                    const transaction = db.transaction([this.STORE_NAME], 'readwrite');
+                    const store = transaction.objectStore(this.STORE_NAME);
+                    const request = store.delete(key);
+
+                    request.onsuccess = () => {
+                        console.log(`✓ Deleted: ${databaseName}/${key}`);
+                        resolve();
+                    };
+                    request.onerror = () => reject(new Error(`Delete failed: ${request.error?.message}`));
+                });
+            }
+
+            async getAllKeys(databaseName) {
+                const db = await this.openDatabase(databaseName);
+
+                return new Promise((resolve, reject) => {
+                    const transaction = db.transaction([this.STORE_NAME], 'readonly');
+                    const store = transaction.objectStore(this.STORE_NAME);
+                    const request = store.getAllKeys();
+
+                    request.onsuccess = () => resolve(request.result);
+                    request.onerror = () => reject(new Error(`Get keys failed: ${request.error?.message}`));
+                });
+            }
+        }
+
+        // Information Database
+        const bible_verses_1 = `3 Praise be to the God and Father of our Lord Jesus Christ! In his great mercy he has given us new birth into a living hope through the resurrection of Jesus Christ from the dead, 4 and into an inheritance that can never perish, spoil or fade. This inheritance is kept in heaven for you, 5 who through faith are shielded by God's power until the coming of the salvation that is ready to be revealed in the last time. 6 In all this you greatly rejoice, though now for a little while you may have had to suffer grief in all kinds of trials. 7 These have come so that the proven`;
+
+        const test_info_1 = `genuineness of your faith—of greater worth than gold, which perishes even though refined by fire—may result in praise, glory and honor when Jesus Christ is revealed. 8 Though you have not seen him, you love him; and even though you do not see him now, you believe in him and are filled with an inexpressible and glorious joy, 9 for you are receiving the end result of your faith, the salvation of your souls.`;
+
+        let informationDatabase = {
+            'bible verse 1': bible_verses_1,
+            'test info': test_info_1
+        };
+
+        class ClipboardTextToSpeech {
+            constructor() {
+                this.textArea = document.getElementById('textArea');
+                this.readingArea = document.getElementById('readingArea');
+                this.statusDisplay = document.getElementById('statusDisplay');
+                this.progressFill = document.getElementById('progressFill');
+
+                this.playButton = document.getElementById('playButton');
+                this.stopButton = document.getElementById('stopButton');
+                this.resetButton = document.getElementById('resetButton');
+                this.speedSelect = document.getElementById('speedSelect');
+
+                this.popupOverlay = document.getElementById('popupOverlay');
+                this.popupReadingArea = document.getElementById('popupReadingArea');
+
+                // Navigation elements
+                this.sentenceIndicator = document.getElementById('sentenceIndicator');
+                this.prevSentenceButton = document.getElementById('prevSentenceButton');
+                this.nextSentenceButton = document.getElementById('nextSentenceButton');
+
+                this.words = [];
+                this.currentWordIndex = 0;
+                this.isPlaying = false;
+                this.isPaused = false;
+                this.utterance = null;
+
+                // Timing tracking for accuracy
+                this.sentenceStartTime = null;
+                this.expectedWordTimes = [];
+                this.actualTimingAdjustment = 1.0;
+
+                // Number skipping mode - starts in skip mode (checkbox checked)
+                this.skipNumbersMode = true;
+
+                // YouTube mode - starts in YouTube mode (checkbox checked)
+                this.youtubeMode = true;
+
+                // Loop timer properties
+                this.loopTimerActive = false;
+                this.loopTimerEndTime = null;
+                this.loopTimerInterval = null;
+                this.originalPageTitle = document.title;
+
+                // Sentence number input properties
+                this.sentenceNumberInput = '';
+                this.sentenceInputTimeoutRef = null;
+
+                // Auto-resume timer for arrow key navigation
+                this.arrowKeyResumeTimer = null;
+
+                // Sidebar section database
+                window.tempSectionDatabase = {};
+                this.currentSectionKey = null;
+
+                // Edit modal elements
+                this.editModalOverlay = document.getElementById('editModalOverlay');
+                this.editModalTextarea = document.getElementById('editModalTextarea');
+                this.editModalHeader = document.getElementById('editModalHeader');
+                this.isEditModalOpen = false; // Track modal state with a flag
+
+                // IndexedDB for persistent storage
+                this.indexedDBWrapper = new IndexedDBWrapper();
+                this.DATABASE_NAME = 'clipboardReaderDatabase';
+
+                this.initializeEventListeners();
+                this.populatePresetDropdown();
+            }
+            
+            initializeEventListeners() {
+                // Clipboard paste
+                document.getElementById('pasteButton').addEventListener('click', () => this.pasteFromClipboard());
+                
+                // Remove selected text
+                document.getElementById('removeSelectedButton').addEventListener('click', () => this.removeSelectedText());
+                
+                // Clear text
+                document.getElementById('clearButton').addEventListener('click', () => this.clearText());
+                
+                // Text area changes
+                this.textArea.addEventListener('input', () => this.updateReadingArea());
+                
+                // Playback controls
+                this.playButton.addEventListener('click', () => this.togglePlayPause());
+                this.stopButton.addEventListener('click', () => this.stop());
+                this.resetButton.addEventListener('click', () => this.reset());
+                
+                // Speed changes
+                this.speedSelect.addEventListener('change', () => this.updateSpeed());
+                
+                // Popup controls
+                document.getElementById('popupButton').addEventListener('click', () => this.openPopup());
+                document.getElementById('popupClose').addEventListener('click', () => this.closePopup());
+                this.popupOverlay.addEventListener('click', (e) => {
+                    if (e.target === this.popupOverlay) {
+                        this.closePopup();
+                    }
+                });
+                
+                // Word clicking in main reading area
+                this.readingArea.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('word')) {
+                        const wordIndex = parseInt(e.target.dataset.index);
+                        this.jumpToWord(wordIndex);
+                    }
+                });
+                
+                // Word clicking in popup reading area
+                this.popupReadingArea.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('word')) {
+                        const wordIndex = parseInt(e.target.dataset.index);
+                        this.jumpToWord(wordIndex);
+                    }
+                });
+                
+                // Keyboard shortcuts
+                document.addEventListener('keydown', (e) => {
+                    console.log(`🔑 Key pressed: "${e.key}" | Modal open: ${this.isEditModalOpen} | Target: ${e.target.tagName}`);
+
+                    // Check if modal is open - if so, only allow Escape and backtick
+                    if (this.isEditModalOpen) {
+                        console.log('📝 Modal is open - handling special keys only');
+                        if (e.key === 'Escape') {
+                            console.log('❌ Escape pressed - closing modal');
+                            e.preventDefault();
+                            e.stopPropagation();
+                            this.closeEditModal();
+                        } else if (e.key === '`') {
+                            console.log('📥 Backtick pressed - appending current text');
+                            e.preventDefault();
+                            e.stopPropagation();
+                            this.appendCurrentToModal();
+                        }
+                        return; // Exit early - don't process other keys when modal is open
+                    }
+
+                    // Check if target is an input/textarea (but not our edit modal)
+                    if (['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) {
+                        console.log('⏭️ Skipping - typing in form field');
+                        return; // Don't interfere with typing in form fields
+                    }
+
+                    // Escape key to stop/play
+                    if (e.key === 'Escape') {
+                        console.log('⏹️ Escape - toggle play/stop');
+                        e.preventDefault();
+                        if (this.isPlaying) {
+                            this.stop();
+                        } else {
+                            this.play();
+                        }
+                    }
+                    // Enter key to toggle play/stop
+                    if (e.key === 'Enter') {
+                        console.log('▶️ Enter - toggle play/stop');
+                        e.preventDefault();
+                        if (this.isPlaying) {
+                            this.stop();
+                        } else {
+                            this.play();
+                        }
+                    }
+                    // Backtick key to open edit modal
+                    if (e.key === '`') {
+                        console.log('✏️ Backtick - opening edit modal');
+                        e.preventDefault();
+                        e.stopPropagation();
+                        this.openEditModal();
+                    }
+                    // Left/Right arrow keys for sentence navigation
+                    if (e.key === 'ArrowLeft') {
+                        e.preventDefault();
+                        this.navigateToSentence(-1);
+                    }
+                    if (e.key === 'ArrowRight') {
+                        e.preventDefault();
+                        const wasPlaying = this.isPlaying;
+                        this.navigateToSentence(1);
+
+                        // If it was playing, auto-resume after 500ms
+                        if (wasPlaying) {
+                            // Clear any existing resume timer
+                            if (this.arrowKeyResumeTimer) {
+                                clearTimeout(this.arrowKeyResumeTimer);
+                            }
+                            // Set new timer to resume playback
+                            this.arrowKeyResumeTimer = setTimeout(() => {
+                                this.startReading();
+                            }, 500);
+                        }
+                    }
+                    // Digit keys 0-9 for sentence number input
+                    if (e.key >= '0' && e.key <= '9' && !['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) {
+                        e.preventDefault();
+                        this.handleSentenceNumberInput(e.key);
+                    }
+                });
+                
+                // Number skipping toggle
+                document.getElementById('skipNumbersToggle').addEventListener('change', (e) => {
+                    this.skipNumbersMode = e.target.checked;
+                    console.log('Number skipping mode:', this.skipNumbersMode ? 'SKIP #s' : 'KEEP #s');
+                });
+
+                // YouTube mode toggle
+                document.getElementById('youtubeToggle').addEventListener('change', (e) => {
+                    this.youtubeMode = e.target.checked;
+                    console.log('Reading mode:', this.youtubeMode ? 'YouTube Mode' : 'Bible Mode');
+                });
+
+                // Sentence navigation
+                this.prevSentenceButton.addEventListener('click', () => this.navigateToSentence(-1));
+                this.nextSentenceButton.addEventListener('click', () => {
+                    // Same behavior as right arrow key - preserve playback state
+                    const wasPlaying = this.isPlaying;
+                    this.navigateToSentence(1);
+
+                    // If it was playing, auto-resume after 500ms
+                    if (wasPlaying) {
+                        // Clear any existing resume timer
+                        if (this.arrowKeyResumeTimer) {
+                            clearTimeout(this.arrowKeyResumeTimer);
+                        }
+                        // Set new timer to resume playback
+                        this.arrowKeyResumeTimer = setTimeout(() => {
+                            this.startReading();
+                        }, 500);
+                    }
+                });
+
+                // Loop timer buttons
+                document.getElementById('loopTimer5minBtn').addEventListener('click', () => this.toggleLoopTimer(5));
+                document.getElementById('loopTimer25minBtn').addEventListener('click', () => this.toggleLoopTimer(25));
+
+                // Preset selector
+                document.getElementById('presetSelect').addEventListener('change', (e) => this.loadPreset(e.target.value));
+
+                // Gloss button
+                document.getElementById('glossButton').addEventListener('click', () => this.glossSelectedText());
+
+                // Edit button
+                document.getElementById('editButton').addEventListener('click', () => this.openEditModal());
+
+                // Download sections button
+                document.getElementById('downloadSectionsBtn').addEventListener('click', () => this.downloadAllSections());
+
+                // Clear sidebar button
+                document.getElementById('clearSidebarBtn').addEventListener('click', () => this.clearSidebar());
+
+                // Rename button
+                document.getElementById('renameSectionBtn').addEventListener('click', () => this.renameActiveSection());
+
+                // Storage buttons
+                document.getElementById('saveSectionsBtn').addEventListener('click', () => this.saveSectionsToIndexedDB());
+                document.getElementById('loadSectionsBtn').addEventListener('click', () => this.loadSectionsFromIndexedDB());
+
+                // Edit modal buttons
+                document.getElementById('editModalSave').addEventListener('click', () => this.saveEditModal());
+                document.getElementById('editModalCancel').addEventListener('click', () => this.closeEditModal());
+                document.getElementById('editModalAppend').addEventListener('click', () => this.appendCurrentToModal());
+
+                // Close modal on overlay click
+                this.editModalOverlay.addEventListener('click', (e) => {
+                    if (e.target === this.editModalOverlay) {
+                        this.closeEditModal();
+                    }
+                });
+            }
+
+            populatePresetDropdown() {
+                const presetSelect = document.getElementById('presetSelect');
+
+                // Clear existing options except the first placeholder
+                presetSelect.innerHTML = '<option value="">Choose preset...</option>';
+
+                // Add options from informationDatabase
+                Object.keys(informationDatabase).forEach(key => {
+                    const option = document.createElement('option');
+                    option.value = key;
+                    option.textContent = key;
+                    presetSelect.appendChild(option);
+                });
+            }
+
+            loadPreset(presetKey) {
+                if (!presetKey || !informationDatabase[presetKey]) {
+                    return;
+                }
+
+                // Stop any ongoing speech
+                this.stop();
+
+                // Load the preset text into textarea
+                this.textArea.value = informationDatabase[presetKey];
+
+                // Update the reading area
+                this.updateReadingArea();
+
+                this.updateStatus(`Loaded preset: ${presetKey}`);
+            }
+
+            async glossSelectedText() {
+                // Get the selection from the reading area
+                const selection = window.getSelection();
+                const selectedText = selection.toString().trim();
+
+                if (!selectedText) {
+                    this.updateStatus('Please select text in the reading area first');
+                    return;
+                }
+
+                // Create the gloss prompt
+                const glossPrompt = `Gloss this KJV Bible passage with brief definitions in parentheses after archaic or unclear words: ${selectedText}`;
+
+                try {
+                    // Copy to clipboard
+                    await navigator.clipboard.writeText(glossPrompt);
+                    this.updateStatus(`Gloss prompt copied to clipboard! (${selectedText.length} characters selected)`);
+                } catch (err) {
+                    console.error('Failed to copy to clipboard:', err);
+                    this.updateStatus('Failed to copy to clipboard');
+                }
+            }
+            
+            async pasteFromClipboard() {
+                try {
+                    // Stop any ongoing speech before pasting new content
+                    this.stop();
+
+                    let text = await navigator.clipboard.readText();
+                    const originalLength = text.length;
+
+                    // Check if text contains section delimiters (###\n###\n)
+                    const sectionCount = this.processContentToSidebar(text);
+
+                    if (sectionCount && sectionCount > 0) {
+                        // Content has sections - load the first section automatically
+                        const firstSectionKey = Object.keys(window.tempSectionDatabase)[0];
+                        if (firstSectionKey) {
+                            this.loadSectionContent(firstSectionKey);
+
+                            // Highlight the first button
+                            const firstButton = document.querySelector('.sidebar-button');
+                            this.highlightActiveButton(firstButton);
+                        }
+                        return; // Exit early, section loading handles the rest
+                    }
+
+                    // No sections found, process as regular text
+                    // Remove Kindle citations automatically
+                    text = this.removeKindleCitations(text);
+
+                    // Remove number prefixes if skip numbers mode is enabled
+                    if (this.skipNumbersMode) {
+                        text = this.removeNumberPrefixes(text);
+                    }
+
+                    this.textArea.value = text;
+                    this.updateReadingArea();
+
+                    if (text.length < originalLength) {
+                        this.updateStatus('Text pasted successfully! Kindle citation automatically removed. Ready to read.');
+                    } else {
+                        this.updateStatus('Text pasted from clipboard successfully! Ready to read.');
+                    }
+                } catch (err) {
+                    console.error('Failed to read clipboard:', err);
+                    this.updateStatus('Failed to access clipboard. Please paste manually.');
+                }
+            }
+            
+            removeKindleCitations(text) {
+                // Split text into lines
+                const lines = text.split('\n');
+                
+                // Check if the last line (or second to last if last is empty) contains Kindle citation pattern
+                let lastLineIndex = lines.length - 1;
+                
+                // Skip empty lines at the end
+                while (lastLineIndex >= 0 && lines[lastLineIndex].trim() === '') {
+                    lastLineIndex--;
+                }
+                
+                if (lastLineIndex >= 0) {
+                    const lastLine = lines[lastLineIndex].trim();
+                    
+                    // Pattern to match Kindle citations (publisher, book title, page info, Kindle Edition)
+                    const kindlePatterns = [
+                        /.*\. .+\(p\. \d+\)\. .+\. Kindle Edition\.?$/i,
+                        /.*\. .+\(Function\)\. Kindle Edition\.?$/i,
+                        /.*Kindle Edition\.?$/i,
+                        /.*\(p\. \d+\)\. .+\.$/i,
+                        /.+,\. .+\. Kindle Edition\.?$/i
+                    ];
+                    
+                    const isKindleCitation = kindlePatterns.some(pattern => pattern.test(lastLine));
+                    
+                    if (isKindleCitation) {
+                        // Remove the citation line
+                        lines.splice(lastLineIndex, 1);
+                        
+                        // Remove any trailing empty lines
+                        while (lines.length > 0 && lines[lines.length - 1].trim() === '') {
+                            lines.pop();
+                        }
+                        
+                        return lines.join('\n');
+                    }
+                }
+                
+                return text;
+            }
+            
+            removeNumberPrefixes(text) {
+                // Split text into lines and process each line
+                const lines = text.split('\n');
+
+                const processedLines = lines.map(line => {
+                    // Remove leading numbers followed by space(s) at the beginning of lines
+                    // This handles cases like "1 Computer spent..." or "123 Some text..."
+                    return line.replace(/^\s*\d+\s+/, '');
+                });
+
+                return processedLines.join('\n');
+            }
+
+            improveTextFormatting(text) {
+                // Detect transcript-style text with timestamps (e.g., "0:00", "1:23")
+                const timestampPattern = /\b\d{1,2}:\d{2}\b/g;
+                const timestamps = text.match(timestampPattern);
+                const punctuation = text.match(/[.!?]/g);
+                const punctuationCount = punctuation ? punctuation.length : 0;
+
+                console.log('=== improveTextFormatting Debug ===');
+                console.log('Timestamps found:', timestamps ? timestamps.length : 0);
+                console.log('Punctuation found:', punctuationCount);
+                console.log('Text length:', text.length);
+                console.log('Punctuation ratio:', punctuationCount / text.length);
+
+                // If we have timestamps AND very little punctuation (less than 1 per 100 chars)
+                // then it's likely a transcript that needs sentence breaks added
+                if (timestamps && timestamps.length >= 3 && punctuationCount < text.length / 100) {
+                    console.log('🔧 Applying transcript fix: adding periods before timestamps');
+                    // Add a period before each timestamp (but not if there's already punctuation or it's after a digit)
+                    let processed = text.replace(/([^\.\!\?\s\d])(\s+)(\d{1,2}:\d{2})/g, '$1.$2$3');
+                    console.log('Text after processing:', processed.substring(0, 300) + '...');
+                    text = processed;
+                } else {
+                    console.log('❌ Not applying transcript fix - conditions not met');
+                }
+
+                // Check if text already has good paragraph structure
+                const existingBreaks = (text.match(/\n\s*\n/g) || []).length;
+                const textLength = text.length;
+
+                // If text already has reasonable paragraph breaks (1 break per ~300 chars), leave it alone
+                if (existingBreaks > 0 && textLength / existingBreaks < 800) {
+                    return text;
+                }
+
+                // Split into existing paragraphs first
+                const paragraphs = text.split(/\n\s*\n/);
+
+                const processedParagraphs = paragraphs.map(paragraph => {
+                    const trimmedParagraph = paragraph.trim();
+
+                    // Only process long paragraphs (>500 characters)
+                    if (trimmedParagraph.length < 500) {
+                        return trimmedParagraph;
+                    }
+
+                    // Smart breaking patterns
+                    let processed = trimmedParagraph;
+
+                    // Break at numbered/lettered lists
+                    processed = processed.replace(/(\S)\s+([A-Z]\.\s|[0-9]+\.\s)/g, '$1\n\n$2');
+
+                    // Break at bullet points
+                    processed = processed.replace(/(\S)\s+-\s+/g, '$1\n\n- ');
+
+                    // Break at topic indicators (colon followed by capital letter or "The", "Why", etc.)
+                    processed = processed.replace(/([.!?:])\s+(Why\s|The\s|Strategic\s|Tactical\s|Key\s|Most\s|Analysis\s|Resolution\s|Turning\s)/g, '$1\n\n$2');
+
+                    // Break at section headers (words ending with colon)
+                    processed = processed.replace(/(\S)\s+([A-Z][A-Za-z\s]+:)\s+/g, '$1\n\n$2\n');
+
+                    // Break at "Evaluation shift", "Psychological impact", etc.
+                    processed = processed.replace(/(\S)\s+(Evaluation\s|Psychological\s|Timing\s|Resolution\s)/g, '$1\n\n$2');
+
+                    // Clean up multiple consecutive line breaks
+                    processed = processed.replace(/\n\s*\n\s*\n+/g, '\n\n');
+
+                    return processed;
+                });
+
+                return processedParagraphs.join('\n\n');
+            }
+            
+            openPopup() {
+                // Stop any ongoing reading first
+                this.stop();
+                
+                // Copy current reading area content to popup
+                this.popupReadingArea.innerHTML = this.readingArea.innerHTML;
+                
+                // Reset reading position to beginning (same as paste from clipboard does)
+                this.currentWordIndex = 0;
+                this.currentSentenceIndex = 0;
+                this.updateProgress();
+                
+                // Show popup
+                this.popupOverlay.style.display = 'block';
+                
+                // Prevent body scrolling when popup is open
+                document.body.style.overflow = 'hidden';
+                
+                // Automatically start reading after a short delay
+                setTimeout(() => {
+                    if (this.words.length > 0 && this.popupOverlay.style.display === 'block') {
+                        this.play();
+                    }
+                }, 500);
+            }
+            
+            closePopup() {
+                // Stop reading when closing popup
+                setTimeout(() => {
+                    this.stop();
+                }, 100);
+                
+                // Hide popup
+                this.popupOverlay.style.display = 'none';
+                
+                // Restore body scrolling
+                document.body.style.overflow = 'auto';
+            }
+            
+            clearText() {
+                this.textArea.value = '';
+                this.readingArea.innerHTML = '<p style="text-align: center; color: #666;">Text will appear here for reading with word-by-word highlighting</p>';
+                this.reset();
+                this.updateStatus('Text cleared');
+            }
+            
+            removeSelectedText() {
+                const startPos = this.textArea.selectionStart;
+                const endPos = this.textArea.selectionEnd;
+                
+                if (startPos === endPos) {
+                    this.updateStatus('No text selected. Please highlight text to remove.');
+                    return;
+                }
+                
+                const textValue = this.textArea.value;
+                const selectedText = textValue.substring(startPos, endPos);
+                const newText = textValue.substring(0, startPos) + textValue.substring(endPos);
+                
+                this.textArea.value = newText;
+                this.textArea.setSelectionRange(startPos, startPos);
+                this.updateReadingArea();
+                
+                const removedLength = selectedText.length;
+                const removedWords = selectedText.split(/\s+/).filter(word => word.trim().length > 0).length;
+                this.updateStatus(`Removed ${removedLength} characters (${removedWords} words)`);
+            }
+            
+            updateReadingArea() {
+                // Stop any ongoing reading when updating content
+                if (this.isPlaying) {
+                    this.stop();
+                }
+                
+                let text = this.textArea.value.trim();
+                if (!text) {
+                    this.clearText();
+                    return;
+                }
+                
+                // Apply number prefix removal if enabled (for manually entered text)
+                if (this.skipNumbersMode) {
+                    const processedText = this.removeNumberPrefixes(text);
+                    if (processedText !== text) {
+                        text = processedText;
+                        this.textArea.value = text;
+                    }
+                }
+
+                // Apply intelligent paragraph breaking for better readability
+                text = this.improveTextFormatting(text);
+
+                // First, split the entire text into all sentences, ignoring paragraph boundaries
+                const allRawSentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0);
+
+                console.log('Raw sentences detected:', allRawSentences.length);
+                console.log('First 3 sentences:', allRawSentences.slice(0, 3));
+
+                // Consolidate short sentences across the entire text
+                const consolidatedSentences = [];
+                for (let i = 0; i < allRawSentences.length; i++) {
+                    const currentSentence = allRawSentences[i].trim();
+                    if (!currentSentence) continue;
+
+                    // Use character length (minimum 15 chars) as criteria for better consolidation
+                    const charLength = currentSentence.length;
+
+                    // If sentence is very short (<15 characters), always merge
+                    if (charLength < 15 && consolidatedSentences.length > 0) {
+                        // Merge with previous sentence
+                        const lastIndex = consolidatedSentences.length - 1;
+                        consolidatedSentences[lastIndex] = consolidatedSentences[lastIndex] + '. ' + currentSentence;
+                    } else if (charLength < 15 && i < allRawSentences.length - 1) {
+                        // Merge with next sentence if it exists
+                        const nextSentence = allRawSentences[i + 1].trim();
+                        if (nextSentence) {
+                            consolidatedSentences.push(currentSentence + '. ' + nextSentence);
+                            i++; // Skip the next sentence since we merged it
+                        } else {
+                            consolidatedSentences.push(currentSentence);
+                        }
+                    } else {
+                        consolidatedSentences.push(currentSentence);
+                    }
+                }
+
+                // Now process the consolidated sentences
+                this.words = [];
+                this.sentences = [];
+                let wordIndex = 0;
+                let sentenceIndex = 0;
+
+                // Create HTML with paragraph breaks where natural breaks occur
+                let paragraphsHtml = '';
+                consolidatedSentences.forEach((sentence, index) => {
+                    const trimmedSentence = sentence.trim();
+                    if (!trimmedSentence) return;
+
+                    // Split sentence into words
+                    const wordsInSentence = trimmedSentence.split(/\s+/).filter(word => word.length > 0);
+
+                    // Add words to our main words array
+                    this.words.push(...wordsInSentence);
+
+                    // Store sentence info for TTS
+                    this.sentences.push({
+                        text: trimmedSentence,
+                        startWordIndex: wordIndex,
+                        endWordIndex: wordIndex + wordsInSentence.length - 1
+                    });
+
+                    // Create HTML for this sentence
+                    const sentenceWordsHtml = wordsInSentence.map((word) =>
+                        `<span class="word" data-index="${wordIndex++}" data-sentence="${sentenceIndex}">${this.escapeHtml(word)}</span>`
+                    ).join(' ');
+
+                    // Add paragraph breaks every few sentences for readability
+                    if (index % 3 === 0) {
+                        paragraphsHtml += `<p>${sentenceWordsHtml}. `;
+                    } else {
+                        paragraphsHtml += `${sentenceWordsHtml}. `;
+                    }
+
+                    if ((index + 1) % 3 === 0 || index === consolidatedSentences.length - 1) {
+                        paragraphsHtml += `</p>`;
+                    }
+
+                    sentenceIndex++;
+                });
+
+                console.log('Final consolidated sentences:', consolidatedSentences.length);
+                console.log('Paragraph HTML length:', paragraphsHtml.length);
+                console.log('Paragraph breaks in HTML:', (paragraphsHtml.match(/<p>/g) || []).length);
+
+                this.readingArea.innerHTML = paragraphsHtml;
+                this.currentWordIndex = 0;
+                this.currentSentenceIndex = 0;
+                
+                // Reset timing adjustment for new text
+                this.actualTimingAdjustment = 1.0;
+                
+                // Clear any existing highlighting timers when content changes
+                if (this.wordHighlightTimer) {
+                    clearInterval(this.wordHighlightTimer);
+                    this.wordHighlightTimer = null;
+                }
+                
+                this.updateProgress();
+                this.updateSentenceIndicator();
+                this.updateStatus(`Ready to read ${this.sentences.length} sentences (${this.words.length} words)`);
+            }
+            
+            escapeHtml(text) {
+                const div = document.createElement('div');
+                div.textContent = text;
+                return div.innerHTML;
+            }
+
+            navigateToSentence(direction) {
+                if (!this.sentences || this.sentences.length === 0) return;
+
+                const newSentenceIndex = this.currentSentenceIndex + direction;
+                if (newSentenceIndex >= 0 && newSentenceIndex < this.sentences.length) {
+                    // Stop any ongoing speech
+                    this.stop();
+
+                    // Update sentence position
+                    this.currentSentenceIndex = newSentenceIndex;
+                    this.currentWordIndex = this.sentences[this.currentSentenceIndex].startWordIndex;
+
+                    // Update UI
+                    this.updateProgress();
+                    this.updateSentenceIndicator();
+                    this.clearHighlights();
+
+                    this.updateStatus(`Navigated to sentence ${this.currentSentenceIndex + 1} of ${this.sentences.length}`);
+                }
+            }
+
+            handleSentenceNumberInput(digit) {
+                // Clear existing timeout first
+                if (this.sentenceInputTimeoutRef) {
+                    clearTimeout(this.sentenceInputTimeoutRef);
+                }
+
+                // Update the input string
+                this.sentenceNumberInput += digit;
+                console.log(`Sentence input: "${this.sentenceNumberInput}" (added digit: ${digit})`);
+
+                // Update sentence indicator to show current input
+                const tempIndicator = this.sentenceIndicator.textContent;
+                this.sentenceIndicator.textContent = `Entering sentence #: ${this.sentenceNumberInput} (will jump in 1.5s)`;
+
+                // Set new timeout for 1.5 seconds
+                this.sentenceInputTimeoutRef = setTimeout(() => {
+                    const sentenceNumber = parseInt(this.sentenceNumberInput) - 1; // Decrement by 1
+
+                    if (!this.sentences || this.sentences.length === 0) {
+                        console.warn('No sentences available');
+                        this.sentenceIndicator.textContent = 'No text loaded';
+                        this.sentenceNumberInput = '';
+                        return;
+                    }
+
+                    if (sentenceNumber >= 0 && sentenceNumber < this.sentences.length) {
+                        console.log(`Jumping to sentence ${sentenceNumber}`);
+                        console.log(`Sentence text: "${this.sentences[sentenceNumber].text}"`);
+
+                        // Copy sentence text with gloss prompt to clipboard
+                        const sentenceText = this.sentences[sentenceNumber].text;
+                        const glossPrompt = `Gloss this KJV Bible passage with brief definitions in parentheses after archaic or unclear words: ${sentenceText}`;
+
+                        navigator.clipboard.writeText(glossPrompt).then(() => {
+                            console.log('Gloss prompt copied to clipboard');
+                        }).catch(err => {
+                            console.error('Failed to copy to clipboard:', err);
+                        });
+
+                        // Stop any ongoing speech
+                        this.stop();
+
+                        // Update sentence position
+                        this.currentSentenceIndex = sentenceNumber;
+                        this.currentWordIndex = this.sentences[this.currentSentenceIndex].startWordIndex;
+
+                        // Update UI
+                        this.updateProgress();
+                        this.updateSentenceIndicator();
+                        this.clearHighlights();
+
+                        this.updateStatus(`Jumped to sentence ${sentenceNumber + 1} of ${this.sentences.length}`);
+                    } else {
+                        console.warn(`Invalid sentence number: ${sentenceNumber + 1}. Valid range: 1-${this.sentences.length}`);
+                        this.updateStatus(`Invalid sentence #: ${sentenceNumber + 1}. Valid: 1-${this.sentences.length}`);
+                        this.updateSentenceIndicator();
+                    }
+
+                    // Reset the input after processing
+                    this.sentenceNumberInput = '';
+                }, 1500);
+            }
+
+            updateSentenceIndicator() {
+                if (!this.sentences || this.sentences.length === 0) {
+                    this.sentenceIndicator.textContent = 'Ready to read...';
+                    this.prevSentenceButton.disabled = true;
+                    this.nextSentenceButton.disabled = true;
+                    return;
+                }
+
+                // Ensure currentSentenceIndex is within bounds
+                if (this.currentSentenceIndex >= this.sentences.length) {
+                    this.currentSentenceIndex = this.sentences.length - 1;
+                }
+                if (this.currentSentenceIndex < 0) {
+                    this.currentSentenceIndex = 0;
+                }
+
+                // Get first two words of current sentence
+                const currentSentence = this.sentences[this.currentSentenceIndex];
+                if (!currentSentence) {
+                    this.sentenceIndicator.textContent = 'Ready to read...';
+                    return;
+                }
+
+                const firstFiveWords = currentSentence.text.split(' ').slice(0, 5).join(' ');
+
+                // Show sentence position and first five words
+                this.sentenceIndicator.textContent = `${this.currentSentenceIndex + 1}/${this.sentences.length}: ${firstFiveWords}...`;
+
+                // Update button states
+                this.prevSentenceButton.disabled = this.currentSentenceIndex === 0;
+                this.nextSentenceButton.disabled = this.currentSentenceIndex === this.sentences.length - 1;
+            }
+            
+            cleanTextForSpeech(originalText) {
+                // Remove asterisks
+                let cleanedText = originalText.replace(/\*/g, '');
+
+                if (this.youtubeMode) {
+                    // YouTube mode: Remove timestamps only
+                    cleanedText = this.removeTimestamps(cleanedText);
+                } else if (this.skipNumbersMode) {
+                    // Bible mode: Remove verse numbers
+                    cleanedText = this.removeVerseNumbersAdvanced(cleanedText);
+                }
+
+                return cleanedText;
+            }
+
+            removeTimestamps(text) {
+                // Remove timestamp patterns like "0:00", "1:23", "12:34"
+                return text.replace(/\b\d{1,2}:\d{2}\b/g, '').trim();
+            }
+
+            removeVerseNumbersAdvanced(text) {
+                // Remove verse numbers that appear at the beginning of sentences
+                return text
+                    .replace(/(\s|^)(\d+)([A-Z])/g, '$1$3') // Number directly before capital letter
+                    .replace(/(\s|^)\d+\s+/g, '$1') // Number followed by space(s)
+                    .trim();
+            }
+            
+            togglePlayPause() {
+                if (this.isPlaying) {
+                    // Currently playing, so pause and stop
+                    this.pause();
+                    this.stop();
+                } else {
+                    // Not playing, so start playing
+                    this.play();
+                }
+            }
+
+            play() {
+                if (!this.words.length) {
+                    this.updateStatus('Please enter some text first');
+                    return;
+                }
+
+                // Ensure we have valid sentence data
+                if (!this.sentences || this.sentences.length === 0) {
+                    this.updateStatus('No sentences found to read');
+                    return;
+                }
+
+                if (this.isPaused) {
+                    this.resumeReading();
+                } else {
+                    this.startReading();
+                }
+            }
+            
+            startReading() {
+                // Ensure any previous speech is completely stopped
+                this.stop();
+                
+                // Small delay to ensure cleanup is complete
+                setTimeout(() => {
+                    this.isPlaying = true;
+                    this.isPaused = false;
+                    this.updateButtonStates();
+                    this.speakCurrentWord();
+                }, 100);
+            }
+            
+            resumeReading() {
+                if (window.speechSynthesis.paused) {
+                    window.speechSynthesis.resume();
+                    this.isPaused = false;
+                    this.updateButtonStates();
+                    this.updateStatus('Resumed reading');
+                }
+            }
+            
+            pause() {
+                if (this.isPlaying) {
+                    window.speechSynthesis.pause();
+                    this.isPaused = true;
+                    this.updateButtonStates();
+                    this.updateStatus('Paused');
+                }
+            }
+            
+            stop() {
+                // Cancel any ongoing speech
+                window.speechSynthesis.cancel();
+                
+                // Clear all timers
+                if (this.wordHighlightTimer) {
+                    clearInterval(this.wordHighlightTimer);
+                    this.wordHighlightTimer = null;
+                }
+                
+                // Clear any pending utterance
+                if (this.utterance) {
+                    this.utterance.onend = null;
+                    this.utterance.onerror = null;
+                    this.utterance = null;
+                }
+                
+                // Reset state
+                this.isPlaying = false;
+                this.isPaused = false;
+                this.clearHighlights();
+                this.updateButtonStates();
+                
+                if (arguments.length === 0) { // Only show status if called directly, not from internal methods
+                    this.updateStatus('Stopped');
+                }
+            }
+            
+            async reset() {
+                this.stop();
+
+                // Prompt user for paste or reset
+                const shouldPaste = confirm('Paste new content from clipboard?\n\nYes = Paste from clipboard\nNo = Reset to sentence 1');
+
+                if (shouldPaste) {
+                    // Paste from clipboard
+                    await this.pasteFromClipboard();
+                } else {
+                    // Just reset to beginning
+                    this.currentWordIndex = 0;
+                    this.currentSentenceIndex = 0;
+                    this.updateProgress();
+                    this.updateSentenceIndicator();
+                    this.updateStatus('Reset to beginning');
+                }
+
+                // Scroll to the loop timer controls (top of the page content)
+                const loopTimerControls = document.querySelector('.loop-timer-controls');
+                if (loopTimerControls) {
+                    loopTimerControls.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+            
+            jumpToWord(wordIndex) {
+                if (wordIndex >= 0 && wordIndex < this.words.length) {
+                    // Remember if we were playing before jumping
+                    const wasPlaying = this.isPlaying;
+
+                    this.stop();
+                    this.currentWordIndex = wordIndex;
+
+                    // Find which sentence this word belongs to
+                    for (let i = 0; i < this.sentences.length; i++) {
+                        const sentence = this.sentences[i];
+                        if (wordIndex >= sentence.startWordIndex && wordIndex <= sentence.endWordIndex) {
+                            this.currentSentenceIndex = i;
+                            break;
+                        }
+                    }
+
+                    this.updateProgress();
+                    this.updateSentenceIndicator();
+                    this.updateStatus(`Jumped to word ${wordIndex + 1}`);
+
+                    // Highlight and scroll to the clicked word
+                    this.highlightWord(wordIndex);
+
+                    // If it was playing, auto-resume after 500ms
+                    if (wasPlaying) {
+                        // Clear any existing resume timer
+                        if (this.arrowKeyResumeTimer) {
+                            clearTimeout(this.arrowKeyResumeTimer);
+                        }
+                        // Set new timer to resume playback
+                        this.arrowKeyResumeTimer = setTimeout(() => {
+                            this.startReading();
+                        }, 500);
+                    }
+                }
+            }
+            
+            speakCurrentSentence() {
+                console.log(`🔊 DEBUG speakCurrentSentence: currentSentenceIndex = ${this.currentSentenceIndex}, total sentences = ${this.sentences.length}, loopTimerActive = ${this.loopTimerActive}`);
+
+                if (this.currentSentenceIndex >= this.sentences.length) {
+                    console.log(`🔊 DEBUG: Reached end of sentences, calling onReadingComplete()`);
+                    this.onReadingComplete();
+                    return;
+                }
+
+                const sentence = this.sentences[this.currentSentenceIndex];
+                console.log(`🔊 DEBUG: Speaking sentence #${this.currentSentenceIndex + 1}: "${sentence.text.substring(0, 50)}..."`);
+
+                // Update sentence indicator AFTER checking bounds, not before
+                this.updateSentenceIndicator();
+                this.updateProgress();
+                this.updateStatus(`Reading sentence ${this.currentSentenceIndex + 1} of ${this.sentences.length}`);
+
+                // Track sentence start time for timing analysis
+                this.sentenceStartTime = performance.now();
+                
+                // Start word highlighting timer for this sentence
+                this.startWordHighlighting(sentence);
+
+                // Clean text for speech synthesis (remove asterisks and verse numbers)
+                const cleanedText = this.cleanTextForSpeech(sentence.text);
+
+                // Add sentence number prefix to speech (like workingdialogue.html)
+                const sentenceNumber = this.currentSentenceIndex + 1;
+                const textToSpeak = `${sentenceNumber}. ${cleanedText}`;
+
+                this.utterance = new SpeechSynthesisUtterance(textToSpeak);
+                this.utterance.rate = parseFloat(this.speedSelect.value);
+                this.utterance.pitch = 1;
+                this.utterance.volume = 1;
+                this.utterance.lang = 'en-US';
+                
+                // Simplified voice selection - use default first, then enhance if available
+                const voices = speechSynthesis.getVoices();
+                if (voices.length > 0) {
+                    let englishVoice = voices.find(voice =>
+                        (voice.lang.includes('en-') && voice.name.includes('Enhanced')) ||
+                        (voice.lang.includes('en-') && voice.name.includes('Premium')) ||
+                        (voice.lang.includes('en-') && voice.name.includes('Google'))
+                    );
+
+                    if (!englishVoice) {
+                        englishVoice = voices.find(voice => voice.lang.includes('en-'));
+                    }
+
+                    if (englishVoice) {
+                        this.utterance.voice = englishVoice;
+                    }
+                }
+                
+                this.utterance.onend = () => {
+                    console.log(`🔊 DEBUG onend: Sentence #${this.currentSentenceIndex + 1} finished`);
+
+                    // Analyze timing accuracy for future adjustments
+                    if (this.sentenceStartTime) {
+                        this.analyzeTimingAccuracy(sentence);
+                    }
+
+                    // Clear word highlighting timer when sentence ends
+                    if (this.wordHighlightTimer) {
+                        clearInterval(this.wordHighlightTimer);
+                        this.wordHighlightTimer = null;
+                    }
+
+                    if (this.isPlaying && !this.isPaused) {
+                        this.currentSentenceIndex++;
+                        console.log(`🔊 DEBUG onend: Incremented to sentence #${this.currentSentenceIndex + 1}`);
+
+                        // Small delay between sentences
+                        setTimeout(() => {
+                            if (this.isPlaying && !this.isPaused) {
+                                console.log(`🔊 DEBUG onend: About to call speakCurrentSentence() after delay`);
+                                this.speakCurrentSentence();
+                            }
+                        }, 300);
+                    }
+                };
+                
+                this.utterance.onerror = (event) => {
+                    console.error('Speech synthesis error:', event);
+                    
+                    // Clear word highlighting timer on error
+                    if (this.wordHighlightTimer) {
+                        clearInterval(this.wordHighlightTimer);
+                        this.wordHighlightTimer = null;
+                    }
+                    
+                    this.updateStatus(`Speech error - trying to continue`);
+                    // Try to continue despite the error
+                    if (this.isPlaying && !this.isPaused) {
+                        this.currentSentenceIndex++;
+                        setTimeout(() => {
+                            if (this.isPlaying && !this.isPaused) {
+                                this.speakCurrentSentence();
+                            }
+                        }, 500);
+                    }
+                };
+                
+                // Cancel any existing speech before starting new one
+                speechSynthesis.cancel();
+                
+                // Wait a bit longer to ensure complete cleanup
+                setTimeout(() => {
+                    if (this.isPlaying && !this.isPaused && this.utterance) {
+                        speechSynthesis.speak(this.utterance);
+                    }
+                }, 150);
+            }
+            
+            startWordHighlighting(sentence) {
+                // Clear any existing highlighting timer first
+                if (this.wordHighlightTimer) {
+                    clearInterval(this.wordHighlightTimer);
+                    this.wordHighlightTimer = null;
+                }
+                
+                // More accurate timing based on actual speech synthesis performance
+                // Base rate calibrated from real testing: 176 WPM at 1x speed
+                const baseWordsPerMinute = 176; 
+                const currentRate = parseFloat(this.speedSelect.value);
+                const actualWordsPerMinute = baseWordsPerMinute * currentRate;
+                let millisecondsPerWord = (60 * 1000) / actualWordsPerMinute;
+                
+                // Apply learned timing adjustment from previous sentences
+                millisecondsPerWord *= this.actualTimingAdjustment;
+                
+                // Account for sentence processing delay and initial startup time
+                const sentenceStartupDelay = 150; // Time for TTS to begin speaking
+                const wordProcessingAdjustment = 0.85; // Slight speed up to compensate for cumulative drift
+                const adjustedMillisecondsPerWord = millisecondsPerWord * wordProcessingAdjustment;
+                
+                const wordsInSentence = sentence.endWordIndex - sentence.startWordIndex + 1;
+                let currentWordInSentence = 0;
+                
+                // Start highlighting with initial delay to sync with speech start
+                setTimeout(() => {
+                    if (!this.isPlaying || this.isPaused) return;
+                    
+                    // Highlight first word immediately when speech starts
+                    const globalWordIndex = sentence.startWordIndex + currentWordInSentence;
+                    this.highlightWord(globalWordIndex);
+                    currentWordInSentence++;
+                    
+                    // Continue with remaining words
+                    this.wordHighlightTimer = setInterval(() => {
+                        if (!this.isPlaying || this.isPaused || currentWordInSentence >= wordsInSentence) {
+                            if (this.wordHighlightTimer) {
+                                clearInterval(this.wordHighlightTimer);
+                                this.wordHighlightTimer = null;
+                            }
+                            return;
+                        }
+                        
+                        const globalWordIndex = sentence.startWordIndex + currentWordInSentence;
+                        this.highlightWord(globalWordIndex);
+                        currentWordInSentence++;
+                    }, adjustedMillisecondsPerWord);
+                    
+                }, sentenceStartupDelay);
+            }
+            
+            highlightWord(wordIndex) {
+                this.clearHighlights();
+
+                // Highlight in main reading area
+                const wordElements = this.readingArea.querySelectorAll('.word');
+                if (wordElements[wordIndex]) {
+                    wordElements[wordIndex].classList.add('current');
+                    this.currentWordIndex = wordIndex;
+
+                    // Only autoscroll if the word is not fully visible in viewport
+                    const rect = wordElements[wordIndex].getBoundingClientRect();
+                    const isVisible = (
+                        rect.top >= 0 &&
+                        rect.bottom <= window.innerHeight
+                    );
+
+                    if (!isVisible) {
+                        wordElements[wordIndex].scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'nearest',
+                            inline: 'nearest'
+                        });
+                    }
+                } else {
+                    // If word element doesn't exist, the content may have changed
+                    // Stop highlighting to prevent errors
+                    if (this.wordHighlightTimer) {
+                        clearInterval(this.wordHighlightTimer);
+                        this.wordHighlightTimer = null;
+                    }
+                    return;
+                }
+
+                // Highlight in popup reading area if popup is open
+                if (this.popupOverlay.style.display === 'block') {
+                    const popupWordElements = this.popupReadingArea.querySelectorAll('.word');
+                    if (popupWordElements[wordIndex]) {
+                        popupWordElements[wordIndex].classList.add('current');
+
+                        // Only autoscroll if the word is not fully visible in popup viewport
+                        const popupRect = popupWordElements[wordIndex].getBoundingClientRect();
+                        const popupReadingRect = this.popupReadingArea.getBoundingClientRect();
+                        const isPopupVisible = (
+                            popupRect.top >= popupReadingRect.top &&
+                            popupRect.bottom <= popupReadingRect.bottom
+                        );
+
+                        if (!isPopupVisible) {
+                            popupWordElements[wordIndex].scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'nearest',
+                                inline: 'nearest'
+                            });
+                        }
+                    }
+                }
+            }
+            
+            speakCurrentWord() {
+                // This method is now replaced by speakCurrentSentence
+                this.speakCurrentSentence();
+            }
+            
+            highlightCurrentWord() {
+                this.clearHighlights();
+                const wordElements = this.readingArea.querySelectorAll('.word');
+                if (wordElements[this.currentWordIndex]) {
+                    wordElements[this.currentWordIndex].classList.add('current');
+
+                    // Autoscroll to keep highlighted word in view
+                    wordElements[this.currentWordIndex].scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center',
+                        inline: 'nearest'
+                    });
+                }
+            }
+            
+            clearHighlights() {
+                // Clear highlights in main reading area
+                const wordElements = this.readingArea.querySelectorAll('.word');
+                wordElements.forEach(el => {
+                    el.classList.remove('current', 'highlight');
+                });
+                
+                // Clear highlights in popup reading area
+                const popupWordElements = this.popupReadingArea.querySelectorAll('.word');
+                popupWordElements.forEach(el => {
+                    el.classList.remove('current', 'highlight');
+                });
+            }
+            
+            analyzeTimingAccuracy(sentence) {
+                // Calculate actual speech duration
+                const actualDuration = performance.now() - this.sentenceStartTime;
+                const wordsInSentence = sentence.endWordIndex - sentence.startWordIndex + 1;
+                const actualWPM = (wordsInSentence / (actualDuration / 1000)) * 60;
+                
+                // Calculate expected WPM based on current settings
+                const currentRate = parseFloat(this.speedSelect.value);
+                const expectedWPM = 176 * currentRate; // Base 176 WPM
+                
+                // Calculate adjustment factor (with dampening to prevent overcorrection)
+                const rawAdjustment = expectedWPM / actualWPM;
+                const dampingFactor = 0.3; // Only adjust by 30% of the calculated difference
+                this.actualTimingAdjustment = this.actualTimingAdjustment + (rawAdjustment - this.actualTimingAdjustment) * dampingFactor;
+                
+                // Clamp adjustment to reasonable bounds (0.7x to 1.5x)
+                this.actualTimingAdjustment = Math.max(0.7, Math.min(1.5, this.actualTimingAdjustment));
+                
+                // Debug logging (can be removed in production)
+                console.log(`Timing analysis - Expected: ${expectedWPM.toFixed(1)} WPM, Actual: ${actualWPM.toFixed(1)} WPM, Adjustment: ${this.actualTimingAdjustment.toFixed(3)}`);
+            }
+            
+            updateProgress() {
+                const progress = this.sentences && this.sentences.length > 0 ? (this.currentSentenceIndex / this.sentences.length) * 100 : 0;
+                this.progressFill.style.width = `${progress}%`;
+            }
+            
+            updateSpeed() {
+                // If currently speaking, the speed will apply to the next word
+                this.updateStatus(`Speed changed to ${this.speedSelect.value}x`);
+            }
+            
+            updateButtonStates() {
+                if (this.isPlaying) {
+                    this.playButton.textContent = '⏸️ Pause (esc/ent)';
+                    this.playButton.classList.remove('success-button');
+                    this.playButton.classList.add('secondary-button');
+                } else {
+                    this.playButton.textContent = '▶️ Play (esc/ent)';
+                    this.playButton.classList.remove('secondary-button');
+                    this.playButton.classList.add('success-button');
+                }
+                this.stopButton.disabled = !this.isPlaying;
+            }
+            
+            updateStatus(message) {
+                this.statusDisplay.textContent = message;
+            }
+            
+            onReadingComplete() {
+                console.log(`🔊 DEBUG onReadingComplete: loopTimerActive = ${this.loopTimerActive}, time remaining = ${this.loopTimerEndTime ? (this.loopTimerEndTime - Date.now()) : 'N/A'}ms`);
+
+                // Check if loop timer is active
+                if (this.loopTimerActive && this.loopTimerEndTime && Date.now() < this.loopTimerEndTime) {
+                    console.log(`🔊 DEBUG onReadingComplete: Looping back to beginning...`);
+
+                    // Loop back to the beginning
+                    this.currentSentenceIndex = 0;
+                    this.currentWordIndex = 0;
+                    this.updateProgress();
+                    this.updateSentenceIndicator();
+
+                    // Small delay before restarting
+                    setTimeout(() => {
+                        if (this.loopTimerActive) {
+                            console.log(`🔊 DEBUG onReadingComplete: Calling startReading() to loop`);
+                            this.startReading();
+                        }
+                    }, 500);
+                } else {
+                    console.log(`🔊 DEBUG onReadingComplete: Normal completion (no loop)`);
+
+                    // Normal completion
+                    this.isPlaying = false;
+                    this.isPaused = false;
+                    this.clearHighlights();
+                    this.updateButtonStates();
+                    this.updateProgress();
+                    this.updateStatus('Reading completed!');
+
+                    // If loop timer just ended, stop it
+                    if (this.loopTimerActive) {
+                        this.stopLoopTimer();
+                    }
+                }
+            }
+
+            toggleLoopTimer(durationMinutes) {
+                if (this.loopTimerActive) {
+                    this.stopLoopTimer();
+                } else {
+                    this.startLoopTimer(durationMinutes);
+                }
+            }
+
+            startLoopTimer(durationMinutes) {
+                if (!this.sentences || this.sentences.length === 0) {
+                    this.updateStatus('Please load some text first', 'error');
+                    return;
+                }
+
+                this.loopTimerActive = true;
+                this.loopTimerEndTime = Date.now() + (durationMinutes * 60 * 1000);
+
+                // Reset speed to 1x
+                this.speedSelect.value = '1';
+                console.log('🔊 DEBUG: Speed reset to 1x for loop timer');
+
+                // Update UI
+                const loop5minBtn = document.getElementById('loopTimer5minBtn');
+                const loop25minBtn = document.getElementById('loopTimer25minBtn');
+                const statusDiv = document.getElementById('loopTimerStatus');
+
+                if (durationMinutes === 5) {
+                    loop5minBtn.textContent = '⏹️ Stop Loop';
+                    loop5minBtn.classList.add('stop');
+                } else {
+                    loop25minBtn.textContent = '⏹️ Stop Loop';
+                    loop25minBtn.classList.add('stop');
+                }
+
+                statusDiv.style.display = 'block';
+
+                // Start countdown display
+                this.loopTimerInterval = setInterval(() => this.updateLoopTimerDisplay(), 1000);
+
+                // Start reading from the beginning
+                this.currentSentenceIndex = 0;
+                this.currentWordIndex = 0;
+                this.updateProgress();
+                this.updateSentenceIndicator();
+                this.startReading();
+
+                this.updateStatus(`Loop timer started! Will loop for ${durationMinutes} minutes at 1x speed`, 'success');
+            }
+
+            stopLoopTimer() {
+                this.loopTimerActive = false;
+                this.loopTimerEndTime = null;
+
+                if (this.loopTimerInterval) {
+                    clearInterval(this.loopTimerInterval);
+                    this.loopTimerInterval = null;
+                }
+
+                // Reset UI
+                const loop5minBtn = document.getElementById('loopTimer5minBtn');
+                const loop25minBtn = document.getElementById('loopTimer25minBtn');
+                const statusDiv = document.getElementById('loopTimerStatus');
+
+                loop5minBtn.textContent = '▶️ 5 min Loop';
+                loop5minBtn.classList.remove('stop');
+                loop25minBtn.textContent = '▶️ 25 min Loop';
+                loop25minBtn.classList.remove('stop');
+
+                statusDiv.style.display = 'none';
+
+                // Reset page title
+                document.title = this.originalPageTitle;
+
+                this.updateStatus('Loop timer stopped', 'info');
+            }
+
+            updateLoopTimerDisplay() {
+                if (!this.loopTimerActive) return;
+
+                const statusDiv = document.getElementById('loopTimerStatus');
+                const remainingTime = this.loopTimerEndTime - Date.now();
+
+                if (remainingTime <= 0) {
+                    this.stop();
+                    this.stopLoopTimer();
+                    this.updateStatus('Loop timer completed!', 'success');
+
+                    // Show completion in title
+                    document.title = `✅ Timer Complete! | ${this.originalPageTitle}`;
+                    setTimeout(() => {
+                        document.title = this.originalPageTitle;
+                    }, 3000);
+                    return;
+                }
+
+                const minutes = Math.floor(remainingTime / 60000);
+                const seconds = Math.floor((remainingTime % 60000) / 1000);
+                const timeRemaining = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+                statusDiv.textContent = `Loop Timer: ${timeRemaining} remaining`;
+                document.title = `🔄 ${timeRemaining} | ${this.originalPageTitle}`;
+            }
+
+            // ============================================
+            // EDIT MODAL METHODS
+            // ============================================
+
+            openEditModal() {
+                console.log('🚪 openEditModal called');
+
+                if (!this.sentences || this.sentences.length === 0) {
+                    this.updateStatus('No text loaded to edit');
+                    return;
+                }
+
+                const currentSentence = this.sentences[this.currentSentenceIndex];
+                if (!currentSentence) {
+                    this.updateStatus('No sentence selected');
+                    return;
+                }
+
+                // Stop any ongoing speech
+                this.stop();
+
+                // Set flag BEFORE showing modal
+                this.isEditModalOpen = true;
+                console.log('✅ Modal flag set to TRUE');
+
+                // Set modal header and empty textarea
+                this.editModalHeader.textContent = `Edit Sentence #${this.currentSentenceIndex + 1} / ${this.sentences.length}`;
+                this.editModalTextarea.value = ''; // Start with empty textarea
+                console.log(`📝 Textarea cleared. Value is now: "${this.editModalTextarea.value}" (length: ${this.editModalTextarea.value.length})`);
+
+                // Show modal
+                this.editModalOverlay.classList.add('active');
+                console.log('👁️ Modal is now visible');
+
+                // Focus textarea using requestAnimationFrame for better timing
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        this.editModalTextarea.focus();
+                        console.log('🎯 Textarea focused (via RAF)');
+                        console.log(`Active element: ${document.activeElement.tagName} / ${document.activeElement.id}`);
+                    });
+                });
+            }
+
+            closeEditModal() {
+                console.log('🚪 closeEditModal called');
+                this.isEditModalOpen = false;
+                console.log('❌ Modal flag set to FALSE');
+                this.editModalOverlay.classList.remove('active');
+                this.editModalTextarea.value = '';
+            }
+
+            appendCurrentToModal() {
+                console.log('📥 appendCurrentToModal called');
+
+                if (!this.sentences || this.currentSentenceIndex >= this.sentences.length) {
+                    console.log('⚠️ No sentences available');
+                    return;
+                }
+
+                const currentSentence = this.sentences[this.currentSentenceIndex];
+                if (!currentSentence) {
+                    console.log('⚠️ No current sentence');
+                    return;
+                }
+
+                // Append current sentence text to textarea
+                const currentText = this.editModalTextarea.value;
+                console.log(`Current textarea value: "${currentText}" (length: ${currentText.length})`);
+
+                if (currentText) {
+                    // If there's already text, add a space before appending
+                    this.editModalTextarea.value = currentText + ' ' + currentSentence.text;
+                    console.log('➕ Appended with space');
+                } else {
+                    // If empty, just add the sentence
+                    this.editModalTextarea.value = currentSentence.text;
+                    console.log('➕ Added sentence text');
+                }
+
+                console.log(`New textarea value: "${this.editModalTextarea.value.substring(0, 50)}..." (length: ${this.editModalTextarea.value.length})`);
+
+                // Focus textarea and move cursor to end using requestAnimationFrame
+                requestAnimationFrame(() => {
+                    this.editModalTextarea.focus();
+                    console.log('🎯 Textarea focused after append');
+
+                    // Use another RAF to ensure cursor positioning happens after focus
+                    requestAnimationFrame(() => {
+                        const length = this.editModalTextarea.value.length;
+                        this.editModalTextarea.setSelectionRange(length, length);
+                        console.log(`📍 Cursor moved to position ${length}`);
+                        console.log(`Active element: ${document.activeElement.tagName} / ${document.activeElement.id}`);
+                    });
+                });
+            }
+
+            saveEditModal() {
+                console.log('💾 saveEditModal called');
+
+                if (!this.sentences || this.currentSentenceIndex >= this.sentences.length) {
+                    this.closeEditModal();
+                    return;
+                }
+
+                const newText = this.editModalTextarea.value.trim();
+                if (!newText) {
+                    this.updateStatus('Cannot save empty sentence');
+                    return;
+                }
+
+                // Update the sentence text
+                this.sentences[this.currentSentenceIndex].text = newText;
+                console.log(`✅ Updated sentence ${this.currentSentenceIndex + 1} in memory`);
+
+                // Rebuild the reading area HTML to reflect the change
+                this.rebuildReadingAreaFromSentences();
+
+                // If we're in a sidebar section, save changes back to the section database
+                if (this.currentSectionKey && window.tempSectionDatabase[this.currentSectionKey]) {
+                    const updatedContent = this.getAllSentencesAsText();
+                    window.tempSectionDatabase[this.currentSectionKey].content = updatedContent;
+                    console.log(`💾 Saved changes to sidebar section: ${this.currentSectionKey}`);
+                    console.log(`Updated content length: ${updatedContent.length} characters`);
+                }
+
+                // Close modal
+                this.closeEditModal();
+
+                this.updateStatus(`Sentence ${this.currentSentenceIndex + 1} updated`);
+            }
+
+            getAllSentencesAsText() {
+                // Reconstruct the full text from all sentences
+                return this.sentences.map(s => s.text).join('. ') + '.';
+            }
+
+            rebuildReadingAreaFromSentences() {
+                // Rebuild the HTML from the modified sentences array
+                let paragraphsHtml = '';
+                this.words = [];
+                let wordIndex = 0;
+
+                this.sentences.forEach((sentence, index) => {
+                    const trimmedSentence = sentence.text.trim();
+                    if (!trimmedSentence) return;
+
+                    // Split sentence into words
+                    const wordsInSentence = trimmedSentence.split(/\s+/).filter(word => word.length > 0);
+
+                    // Add words to our main words array
+                    this.words.push(...wordsInSentence);
+
+                    // Update sentence word indices
+                    this.sentences[index].startWordIndex = wordIndex;
+                    this.sentences[index].endWordIndex = wordIndex + wordsInSentence.length - 1;
+
+                    // Create HTML for this sentence
+                    const sentenceWordsHtml = wordsInSentence.map((word) =>
+                        `<span class="word" data-index="${wordIndex++}" data-sentence="${index}">${this.escapeHtml(word)}</span>`
+                    ).join(' ');
+
+                    // Add paragraph breaks every few sentences for readability
+                    if (index % 3 === 0) {
+                        paragraphsHtml += `<p>${sentenceWordsHtml}. `;
+                    } else {
+                        paragraphsHtml += `${sentenceWordsHtml}. `;
+                    }
+
+                    if ((index + 1) % 3 === 0 || index === this.sentences.length - 1) {
+                        paragraphsHtml += `</p>`;
+                    }
+                });
+
+                this.readingArea.innerHTML = paragraphsHtml;
+                this.updateProgress();
+                this.updateSentenceIndicator();
+            }
+
+            // ============================================
+            // SIDEBAR SECTION PROCESSING METHODS
+            // ============================================
+
+            /**
+             * Process content with ###\n### delimiter and populate sidebar
+             * @param {string} content - Raw text content to process
+             */
+            processContentToSidebar(content) {
+                // Split content by the delimiter (newline + ### + newline + ### + newline)
+                const delimiter = '\n###\n###\n';
+                const sections = content.split(delimiter)
+                    .map(section => section.trim())
+                    .filter(section => section.length > 0);
+
+                if (sections.length === 0) {
+                    console.log('No sections found in content - treating as single section');
+                    // No delimiter found, treat entire content as one section
+                    return null;
+                }
+
+                console.log('Found', sections.length, 'sections with ### delimiter');
+
+                // Initialize database if it doesn't exist, otherwise append to existing
+                if (!window.tempSectionDatabase) {
+                    window.tempSectionDatabase = {};
+                }
+
+                // Calculate starting index based on existing sections
+                const existingSectionCount = Object.keys(window.tempSectionDatabase).length;
+                const startingIndex = existingSectionCount;
+
+                console.log(`Appending ${sections.length} new sections to existing ${existingSectionCount} sections`);
+
+                // Process each section
+                sections.forEach((section, index) => {
+                    const lines = section.split('\n');
+                    const absoluteIndex = startingIndex + index; // Use absolute index for unique keys
+                    let sectionKey = `section_${absoluteIndex + 1}`;
+                    let customName = null;
+
+                    // Look for @ symbol in any line to use as section name
+                    for (let line of lines) {
+                        line = line.trim();
+
+                        // Check for custom naming symbol (@)
+                        if (line.startsWith('@')) {
+                            customName = line.substring(1).trim(); // Remove @ and trim
+                            // Generate unique key by appending timestamp if key exists
+                            let baseKey = customName.replace(/[^a-zA-Z0-9_]/g, '_') || `section_${absoluteIndex + 1}`;
+                            sectionKey = window.tempSectionDatabase[baseKey] ? `${baseKey}_${Date.now()}` : baseKey;
+                            break; // Use first @ found
+                        }
+                    }
+
+                    // Fallback: use first line as name if no @ symbol found and first line is short
+                    if (!customName && lines.length > 0 && lines[0].length > 0 && lines[0].length < 50) {
+                        customName = lines[0].trim();
+                        let baseKey = customName.replace(/[^a-zA-Z0-9_]/g, '_') || `section_${absoluteIndex + 1}`;
+                        sectionKey = window.tempSectionDatabase[baseKey] ? `${baseKey}_${Date.now()}` : baseKey;
+                    }
+
+                    // If still no custom name, use numbered section name
+                    if (!customName) {
+                        customName = `Section ${absoluteIndex + 1}`;
+                    }
+
+                    // Store section content in database
+                    window.tempSectionDatabase[sectionKey] = {
+                        content: section,
+                        displayName: customName,
+                        index: absoluteIndex
+                    };
+
+                    console.log(`Created section: "${customName}" (key: ${sectionKey})`);
+                });
+
+                // Populate sidebar with buttons
+                this.populateSidebar();
+
+                const totalSections = Object.keys(window.tempSectionDatabase).length;
+                if (existingSectionCount > 0) {
+                    this.updateStatus(`Added ${sections.length} new sections (Total: ${totalSections})`);
+                } else {
+                    this.updateStatus(`Created ${sections.length} sections`);
+                }
+                return sections.length;
+            }
+
+            /**
+             * Populate sidebar with clickable buttons for each section
+             */
+            populateSidebar() {
+                const sidebarContent = document.getElementById('sidebarContent');
+                if (!sidebarContent) {
+                    console.error('Sidebar element #sidebarContent not found');
+                    return;
+                }
+
+                sidebarContent.innerHTML = ''; // Clear existing content
+
+                // Create a button for each section in the database
+                Object.keys(window.tempSectionDatabase).forEach((key) => {
+                    const sectionData = window.tempSectionDatabase[key];
+                    const button = document.createElement('button');
+
+                    // Use human-readable name
+                    button.textContent = sectionData.displayName;
+                    button.className = 'sidebar-button';
+
+                    // Click handler to load section content
+                    button.onclick = () => {
+                        this.loadSectionContent(key);
+                        this.highlightActiveButton(button);
+                    };
+
+                    sidebarContent.appendChild(button);
+                });
+
+                console.log(`Sidebar populated with ${Object.keys(window.tempSectionDatabase).length} buttons`);
+            }
+
+            /**
+             * Load content for a specific section
+             * @param {string} sectionKey - Key of the section to load
+             */
+            loadSectionContent(sectionKey) {
+                const sectionData = window.tempSectionDatabase[sectionKey];
+
+                if (!sectionData) {
+                    console.error(`Section "${sectionKey}" not found in database`);
+                    return;
+                }
+
+                // Stop any ongoing speech
+                this.stop();
+
+                // Load section content into textarea
+                this.textArea.value = sectionData.content;
+
+                // Update the reading area
+                this.updateReadingArea();
+
+                // Store current section key
+                this.currentSectionKey = sectionKey;
+
+                // Scroll to the loop timer controls (top of the page content)
+                const loopTimerControls = document.querySelector('.loop-timer-controls');
+                if (loopTimerControls) {
+                    loopTimerControls.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+
+                this.updateStatus(`Loaded: ${sectionData.displayName}`);
+                console.log(`Loaded section: ${sectionData.displayName}`);
+            }
+
+            /**
+             * Highlight the active sidebar button
+             * @param {HTMLElement} activeButton - The button to highlight
+             */
+            highlightActiveButton(activeButton) {
+                // Remove highlight from all buttons
+                document.querySelectorAll('.sidebar-button').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+
+                // Add highlight to active button
+                if (activeButton) {
+                    activeButton.classList.add('active');
+                }
+            }
+
+            /**
+             * Download all sidebar sections as a .txt file
+             */
+            downloadAllSections() {
+                console.log('📥 downloadAllSections called');
+
+                if (!window.tempSectionDatabase || Object.keys(window.tempSectionDatabase).length === 0) {
+                    this.updateStatus('No sections to download');
+                    console.log('⚠️ No sections in database');
+                    return;
+                }
+
+                // Build the text file content
+                let fileContent = '';
+                const sectionKeys = Object.keys(window.tempSectionDatabase);
+
+                console.log(`📝 Building file with ${sectionKeys.length} sections`);
+
+                sectionKeys.forEach((key, index) => {
+                    const sectionData = window.tempSectionDatabase[key];
+
+                    // Add section title
+                    fileContent += `=== ${sectionData.displayName} ===\n\n`;
+
+                    // Add section content
+                    fileContent += sectionData.content;
+
+                    // Add separator between sections (but not after the last one)
+                    if (index < sectionKeys.length - 1) {
+                        fileContent += '\n\n###\n###\n\n';
+                    }
+                });
+
+                console.log(`📄 Generated file content: ${fileContent.length} characters`);
+
+                // Create blob and download
+                const blob = new Blob([fileContent], { type: 'text/plain' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+
+                // Generate filename with timestamp
+                const timestamp = new Date().toISOString().slice(0, 19).replace(/:/g, '-');
+                a.download = `sections_${timestamp}.txt`;
+
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+
+                console.log(`✅ Download triggered: ${a.download}`);
+                this.updateStatus(`Downloaded ${sectionKeys.length} sections`);
+            }
+
+            /**
+             * Clear all sections from the sidebar with confirmation
+             */
+            clearSidebar() {
+                console.log('🗑️ clearSidebar called');
+
+                if (!window.tempSectionDatabase || Object.keys(window.tempSectionDatabase).length === 0) {
+                    this.updateStatus('Sidebar is already empty');
+                    console.log('⚠️ No sections to clear');
+                    return;
+                }
+
+                const sectionCount = Object.keys(window.tempSectionDatabase).length;
+
+                // Show confirmation dialog
+                const confirmed = confirm(`Are you sure you want to clear all ${sectionCount} section(s) from the sidebar?\n\nThis action cannot be undone.`);
+
+                if (!confirmed) {
+                    console.log('❌ Clear sidebar cancelled by user');
+                    this.updateStatus('Clear cancelled');
+                    return;
+                }
+
+                // Clear the database
+                window.tempSectionDatabase = {};
+
+                // Clear the sidebar content
+                const sidebarContent = document.getElementById('sidebarContent');
+                if (sidebarContent) {
+                    sidebarContent.innerHTML = '<p style="color: #95a5a6; font-size: 0.9rem;">Paste content with ### delimiters to see sections here, and use function store()</p>';
+                }
+
+                console.log('✅ Sidebar cleared successfully');
+                this.updateStatus(`Cleared ${sectionCount} section(s) from sidebar`);
+            }
+
+            /**
+             * Rename the currently active section
+             */
+            renameActiveSection() {
+                console.log('✏️ renameActiveSection called');
+
+                // Get the new name from the input
+                const renameInput = document.getElementById('renameSectionInput');
+                const newName = renameInput.value.trim();
+
+                if (!newName) {
+                    this.updateStatus('❌ Please enter a new name');
+                    return;
+                }
+
+                // Find the currently active button
+                const activeButton = document.querySelector('.sidebar-button.active');
+                if (!activeButton) {
+                    this.updateStatus('❌ No active section to rename');
+                    return;
+                }
+
+                // Get the section key from the button's onclick function
+                // The onclick is set as: button.onclick = () => { this.loadSectionContent(key); ... }
+                // We need to find which section this button represents
+                let activeSectionKey = null;
+                const sectionKeys = Object.keys(window.tempSectionDatabase);
+
+                // Find the section by comparing button text with displayName
+                for (const key of sectionKeys) {
+                    if (window.tempSectionDatabase[key].displayName === activeButton.textContent) {
+                        activeSectionKey = key;
+                        break;
+                    }
+                }
+
+                if (!activeSectionKey) {
+                    this.updateStatus('❌ Could not find active section');
+                    console.log('⚠️ Could not match active button to section key');
+                    return;
+                }
+
+                // Update the section's display name
+                window.tempSectionDatabase[activeSectionKey].displayName = newName;
+
+                // Update the button text
+                activeButton.textContent = newName;
+
+                // Clear the input
+                renameInput.value = '';
+
+                console.log(`✅ Renamed section ${activeSectionKey} to: ${newName}`);
+                this.updateStatus(`✅ Renamed to: ${newName}`);
+            }
+
+            // ============================================
+            // INDEXEDDB STORAGE METHODS
+            // ============================================
+
+            /**
+             * Save current sidebar sections to IndexedDB
+             */
+            async saveSectionsToIndexedDB() {
+                console.log('💾 saveSectionsToIndexedDB called');
+
+                if (!window.tempSectionDatabase || Object.keys(window.tempSectionDatabase).length === 0) {
+                    this.updateStatus('No sections to save');
+                    console.log('⚠️ No sections in database');
+                    return;
+                }
+
+                // Get the selected slot
+                const selectedSlot = document.getElementById('storageSlotSelect').value;
+                console.log(`💾 Saving to slot: ${selectedSlot}`);
+
+                try {
+                    // Prepare data to save
+                    const dataToSave = {
+                        sectionDatabase: window.tempSectionDatabase,
+                        savedAt: new Date().toISOString(),
+                        sectionCount: Object.keys(window.tempSectionDatabase).length
+                    };
+
+                    // Save to IndexedDB
+                    await this.indexedDBWrapper.set(this.DATABASE_NAME, selectedSlot, dataToSave);
+
+                    this.updateStatus(`✅ Saved ${dataToSave.sectionCount} sections to ${selectedSlot}`);
+                    console.log(`✅ Saved successfully to ${selectedSlot}:`, dataToSave);
+
+                } catch (error) {
+                    console.error('Save error:', error);
+                    this.updateStatus(`❌ Failed to save: ${error.message}`);
+                }
+            }
+
+            /**
+             * Load sidebar sections from IndexedDB
+             */
+            async loadSectionsFromIndexedDB() {
+                console.log('📂 loadSectionsFromIndexedDB called');
+
+                // Get the selected slot
+                const selectedSlot = document.getElementById('storageSlotSelect').value;
+                console.log(`📂 Loading from slot: ${selectedSlot}`);
+
+                try {
+                    // Load from IndexedDB
+                    const snapshot = await this.indexedDBWrapper.get(this.DATABASE_NAME, selectedSlot);
+
+                    if (!snapshot.exists()) {
+                        this.updateStatus(`❌ No data found in ${selectedSlot}`);
+                        console.log(`⚠️ ${selectedSlot} is empty`);
+                        return;
+                    }
+
+                    const savedData = snapshot.val();
+                    console.log(`📂 Loaded data from ${selectedSlot}:`, savedData);
+
+                    // Restore the section database
+                    window.tempSectionDatabase = savedData.sectionDatabase;
+
+                    // Repopulate the sidebar with the loaded sections
+                    this.populateSidebar();
+
+                    // Load the first section automatically if available
+                    const firstSectionKey = Object.keys(window.tempSectionDatabase)[0];
+                    if (firstSectionKey) {
+                        this.loadSectionContent(firstSectionKey);
+
+                        // Highlight the first button
+                        const firstButton = document.querySelector('.sidebar-button');
+                        this.highlightActiveButton(firstButton);
+                    }
+
+                    // Update status with metadata
+                    const savedDate = new Date(savedData.savedAt).toLocaleString();
+                    this.updateStatus(`✅ Loaded ${savedData.sectionCount} sections from ${selectedSlot} (saved: ${savedDate})`);
+
+                } catch (error) {
+                    console.error('Load error:', error);
+                    this.updateStatus(`❌ Failed to load: ${error.message}`);
+                }
+            }
+        }
+
+        // Initialize the application when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize speech synthesis to load voices
+            speechSynthesis.addEventListener('voiceschanged', () => {
+                speechSynthesis.getVoices();
+            });
+            
+            new ClipboardTextToSpeech();
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,379 @@
+# Book Context: history of rome
+# Sources: 7 web pages
+# Compiled: 2026-03-18 20:55
+
+## Sources
+1. Thaddeus the Sixth: Review: The Early History of Rome by Titus Livy
+2. Book Review: The Early History of Rome (books 1-5) by Livy
+3. Manual: summary
+4. History of Rome (Livy)
+5. All Manner of Thing
+6. Manual: review
+7. The History of Rome by Livy
+
+
+================================================================================
+## Source 1: Thaddeus the Sixth: Review: The Early History of Rome by Titus Livy
+URL: https://thaddeusthesixth.blogspot.com/2012/08/review-early-history-of-rome-by-titus.html
+================================================================================
+
+A discussion of classical Roman historians reveals insights into different historical approaches. Livy is frequently referenced in scholarly work alongside other ancient historians like Herodotus and Thucydides. Thucydides is praised for his objective approach, while Herodotus includes more mythological elements described as "fairy stories."
+
+Procopius's Secret History offers an alternative perspective on Roman history, written unofficially despite his role as official historian for a prominent Roman general. The work includes references to demons and spiritual beliefs no longer dominant in Western culture. While providing valuable alternative viewpoints, Procopius is noted for dramatic exaggeration in his accounts. Among the historical figures he covers, only Belisarius emerges with significant credit for his military competence, while most other figures are portrayed quite negatively.
+
+The Secret History required considerable courage to write given its unofficial nature and critical perspective on official Roman narratives. These classical sources provide varied approaches to documenting Roman history, from objective analysis to mythological storytelling to critical alternative accounts.
+
+================================================================================
+## Source 2: Book Review: The Early History of Rome (books 1-5) by Livy
+URL: https://sipech.wordpress.com/2015/08/14/book-review-the-early-history-of-rome-books-1-5-by-livy/
+================================================================================
+
+**Livy's History of Rome - Book Context and Analysis**
+
+This analysis covers the early books of Livy's monumental work on Roman history, focusing on the foundational period from Rome's mythological origins through the early Republic (Book 1-5 of Livy's complete work).
+
+**Foundation Myths and Early Period**
+
+The work opens with Rome's legendary foundation story, featuring Romulus and Remus raised by wolves. Livy presents this material with a mythological rather than strictly historical approach. The narrative quickly moves through the murder of Remus by his brother Romulus, establishing themes of fraternal conflict and violence that would echo throughout Roman history.
+
+The early period depicts Rome under a succession of kings, many characterized as corrupt or incompetent rulers. This portrayal establishes a crucial theme: the Roman resentment of monarchy that would define republican ideology. Livy demonstrates how these negative experiences with kingship created lasting institutional resistance to one-man rule, regardless of subsequent governmental crises.
+
+**Political Structure and Governance**
+
+Livy details the complex political evolution of early Rome, showcasing various governmental models including tribunes, consuls, military tribunes, and the particularly problematic Decemvirs. The constitutional arrangements remain somewhat ambiguous in Livy's account, lacking detailed political theory but providing insight into practical Roman governance.
+
+A significant recurring pattern emerges: during crises, Romans would abandon republican government to appoint a dictator with unchallenged decision-making power. This mechanism reflected the belief that individual leadership proved more efficient than consensus-building during emergencies. Livy's treatment of this practice gains historical resonance knowing that Julius Caesar would eventually exploit this position to become Rome's first emperor, never relinquishing dictatorial power.
+
+**Literary and Cultural Influence**
+
+The most compelling episodes occur in the work's early sections, featuring stories that profoundly influenced later Western culture. Two particularly significant accounts include the rape of Lucretia and the story of Coriolanus. The latter narrative proved so enduring that William Shakespeare later adapted it into one of his Roman tragedies, demonstrating Livy's lasting cultural impact.
+
+**Military Campaigns and External Threats**
+
+Much of the narrative resembles Thucydides' approach in "History of the Peloponnesian War," presenting sequences of battles, deaths, and political maneuvering. The military accounts provide insight into early Roman organizational methods and strategic thinking.
+
+Book 5 concludes with an introduction to the Gauls, whom Livy presents as fundamentally different from previous Roman enemies. This characterization builds dramatic tension, suggesting that Rome faces not merely defeat but potential annihilation - a threat unlike any previously encountered.
+
+**Historical Methodology**
+
+Livy's approach blends historical documentation with mythological elements, particularly in earlier periods where reliable sources were scarce. The work functions as both historical record and cultural narrative, preserving Roman collective memory while attempting to document actual events.
+
+**Accessibility and Audience**
+
+This primary source material demands significant background knowledge and sustained attention. Unlike later historical summaries, Livy's work requires familiarity with Roman political structures and cultural context. The detailed military campaigns and political maneuvering may overwhelm casual readers without substantial interest in ancient history.
+
+**Translation Considerations**
+
+The Penguin Classics edition (translated by Aubrey De Selincourt) occasionally employs anachronistic idioms that seem inconsistent with the work's overall tone, potentially affecting faithful rendering of Livy's original style and meaning.
+
+**Thematic Significance**
+
+Throughout these early books, Livy establishes enduring themes: the tension between effective governance and republican ideals, the corrupting influence of power, and the Roman capacity for both noble sacrifice and brutal pragmatism. These patterns would define Roman political culture for centuries.
+
+The work serves as essential reading for understanding Roman Republican ideology and the historical consciousness that shaped Roman identity, making it invaluable for serious students of ancient history despite its demanding nature.
+
+================================================================================
+## Source 3: Manual: summary
+URL: book_notes.html (local)
+================================================================================
+
+**Livy's Ab Urbe Condita (From the Founding of the City)**
+
+This massive 142-book history of Rome was written between 27 and 9 BC, covering Rome's journey from Aeneas's arrival and the legendary founding by Romulus in 753 BC to the death of Drusus in 9 BC. The work serves as a moral and patriotic narrative intended to inspire contemporary Romans by highlighting the virtues of their ancestors and the glory of the Republic.
+
+**Structure and Survival**
+Only 35 of the original 142 books survive (books 1–10 and 21–45). The remaining books exist only through fragments and summaries (periochae). Livy employed an annalistic approach, narrating events chronologically year by year, relying on earlier annalists and historians while prioritizing moral lessons, dramatic storytelling, and character studies over strict historical accuracy.
+
+**Key Themes**
+
+**Moral Decline:** Livy contrasts the perceived degeneracy of his own Augustan era with the pietas (duty), discipline, and collective virtue of the early Republic.
+
+**Political Evolution:** Traces the shift from monarchy to Republic, establishment of governance structures (consuls, tribunes, dictators), and Rome's expansion.
+
+**Heroic Archetypes:** Figures like Hannibal and Scipio Africanus drive the narrative, with their personal actions serving as catalysts for broader historical shifts.
+
+**Historical Significance**
+Despite criticism for blending myth with fact in early books, Livy's work remains one of the most important literary and historical accounts of Rome. It reflects Augustan-era ideological tensions, as Livy subtly uses past greatness to challenge contemporary political reality, advocating for traditional Republican values while living under autocracy.
+
+================================================================================
+## Source 4: History of Rome (Livy)
+URL: https://en.wikipedia.org/wiki/History_of_Rome_(Livy)
+================================================================================
+
+**The History of Rome by Livy**
+
+Titus Livius (Livy) wrote "The History of Rome" (originally titled "Annales," later known as "Ab Urbe Condita" - From the Founding of the City) between 27 and 9 BC during the reign of Emperor Augustus. This monumental work originally comprised 142 books covering Roman history from the legendary arrival of Aeneas and Trojan refugees through Rome's founding in 753 BC, the expulsion of kings in 509 BC, down to the death of Drusus in 9 BC.
+
+**Surviving Content and Structure**
+
+Only 35 of the original 142 books survive today—approximately one quarter of the complete work. The extant portions include Books 1-10 (covering events to 293 BC) and Books 21-45 (covering 219-166 BC). A fragmentary palimpsest of Book 91 was discovered in the Vatican Library in 1772, containing roughly a thousand words, and several papyrus fragments have been found in Egypt since 1900.
+
+The work's chronological coverage:
+- **Books 1-5**: Legendary founding of Rome, including Aeneas's landing in Italy, Romulus founding the city, the period of kings, and early republic until conquest by Gauls in 390 BC
+- **Books 6-10**: Wars with Aequi, Volsci, Etruscans, and Samnites to 292 BC
+- **Books 11-20**: Period from 292-218 BC, including First Punic War (lost)
+- **Books 21-30**: Second Punic War (218-202 BC)
+- **Books 31-45**: Macedonian and eastern wars (201-167 BC)
+- **Books 46-142**: All lost, covering Social War through Augustus's rule
+
+**Literary Style and Methodology**
+
+Livy organized his narrative using annalistic chronology—a year-by-year scheme with regular announcements of consul elections, prodigies, temple dedications, and triumphs. This approach connected his work to the dominant Roman historical tradition while imbuing it with "an aura of continuity and stability" and "pontifical authority."
+
+The first and third decades demonstrate exceptional literary quality, making Livy essential to Golden Age Latin curricula. However, some scholars argue his writing quality declined in later books, becoming repetitious and wordy. Modern readers view his repetitive prose more favorably, particularly in descriptions of prayers, blessings, and religious rituals.
+
+**Historical Approach and Sources**
+
+Livy acknowledged the challenges of early Roman history, stating in his preface: "So many chronological errors, magistrates appearing differently in different authors... you cannot tell which consuls came after which or what belonged [to] any one year." He recognized that early traditions were "more fitted to adorn the creations of the poet than the authentic records of the historian."
+
+His methodology involved synthesizing existing sources rather than conducting original research. He relied exclusively on earlier histories, particularly following Greek historian Polybius closely for eastern events in Books 31-45. Livy's principle was similar to Herodotus': "tell what he had been told."
+
+**Critical Assessment**
+
+Modern scholarship presents mixed views of Livy's historical accuracy. Critics argue he conducted "no primary research," had poor understanding of sources (relating the same event twice on multiple occasions), and possessed inadequate Greek to properly understand Polybius. His work shows "inaccuracy of battle accounts, vagueness of geography, excessive partiality to heroes, and highly rhetorical nature of speeches and dramatic narrations."
+
+However, Livy's goal differed from modern historical standards. He aimed to preserve memory that "equips the reader with a sense of wrong and right as determined by predecessors' actions" and support "the idea that the Augustan principate was the culmination of Roman history."
+
+**Historical Context and Sources**
+
+Livy worked within the "annalistic tradition" of Roman historiography, following historians like Quintus Fabius Pictor (c. 200 BC), Quintus Ennius, Cato the Censor, and others. First-century BC annalists were "widely believed to have been less scrupulous than second-century predecessors," often inventing stories about the archaic period "from their own imaginations."
+
+Livy did not consult original documents like the libri lintei or annales maximi kept by the pontifex maximus, nor did he "walk around Rome to discover inscriptions or other new documents."
+
+**Notable Content**
+
+Book 9 contains one of history's oldest alternate history scenarios, suggesting Romans would have defeated Alexander the Great had he lived longer and turned west to attack Rome.
+
+The first book serves as a significant source for traditional legends of Romulus and Remus, though Livy demonstrated skepticism by omitting "many stories which seemed rather improbable to him" compared to other accounts like Dionysius of Halicarnassus.
+
+**Manuscript Tradition**
+
+All surviving manuscripts of the first decade derive from a single recension commissioned by consul Quintus Aurelius Symmachus in AD 391. The Nicomachean family of manuscripts includes subscriptions from Tascius Victorianus, who emended the work "by authority of Symmachus."
+
+During the Middle Ages, persistent rumors claimed complete copies existed in Danish or German monasteries, but these proved unsubstantiated.
+
+**Publication History**
+
+The first five books were published between 27-25 BC. Livy continued working on the History throughout his life, releasing material by popular demand in packets of 10 books (decades) or 5 books (pentads). The second pentad didn't appear until 9 BC or later, some 16 years after the first.
+
+**Historical Significance**
+
+Despite criticisms of historical accuracy, Livy's work remains invaluable for understanding Roman historical consciousness and literary achievement. His synthesis of existing sources, while not meeting modern standards of historical research, preserved crucial information about Rome's development and provided a comprehensive narrative that influenced subsequent historical understanding.
+
+The work's literary merit has been consistently recognized, and it continues to serve educational purposes in classical studies. Niccolò Machiavelli's "Discourses on Livy" demonstrates the work's lasting influence on political thought.
+
+**Translation History**
+
+The first complete English translation was Philemon Holland's 1600 version, presented in a grand folio of 1,458 pages dedicated to Queen Elizabeth I. Notable later translations include B.O. Foster's 1919 version for Loeb Classical Library and Aubrey de Sélincourt's partial 1960-1965 Penguin Classics edition.
+
+================================================================================
+## Source 5: All Manner of Thing
+URL: https://cburrell.wordpress.com/2017/05/14/livy-i-the-rise-of-rome/
+================================================================================
+
+**Ab Urbe Condita, Libri I-V: The Rise of Rome by Titus Livius**
+
+The Ab Urbe Condita (From the Foundations of the City) represents one of the epic authorial feats in world history. This monumental history of Rome occupied Livy throughout his life, ultimately consisting of 142 books covering the period from Rome's legendary founding (traditionally dated to 753 BC) down to Livy's own time (9 BC). Although only 35 of these books have survived, they alone require about 2500 pages of text in a modern edition. Pliny the Younger tells us of a young man from Spain "who was so impressed by the name and reputation of Titus Livius that he journeyed from the end of the inhabited world just to see him, looked, turned about and went back home."
+
+**Scope and Historical Reliability**
+
+The first five books cover the mythical foundation of Rome, the history of the seven kings, and the course of republican Rome down to 390 BC, when the city suffered its first major military defeat at the hands of a Gallic army. Livy, who did not pretend to be an original historian and is open about his reliance on pre-existing sources, notes that few written records survived from this period owing to the calamitous burning of the city that accompanied this military defeat. The work represents an admixture of legend and history, with the proportion of legend greater the more distant the past.
+
+**Structure and Approach**
+
+Livy employs an annalistic history approach, narrating events year by year rather than following story arcs chronologically. This methodology provides clear timeline orientation throughout the narrative.
+
+**Rome's Founding Stories**
+
+The work clarifies the relationship between Rome's two founding narratives. Aeneas was the remote founder, establishing what would become Roman stock on Italian soil after fleeing Troy, but the city's formation came many generations later. Romulus and Remus were the proximate founders of the actual city. They argued over which of the seven hills should be the initial foundation—Palatine or Aventine, respectively—and Romulus (or one of his followers) killed Remus, becoming the city's first king. The Romans dated these events to 753 BC.
+
+**Early Political and Religious Foundations**
+
+Romulus established Rome's basic political structure, dividing the people into patricians and plebs, and founding the senate. He formed an army and led it against neighboring peoples, including the famous rape of the Sabine women. The subsequent king, Numa Pompilius, founded the principal religious rites of the Romans. Later centuries saw Romans viewing these first two kings as establishing the Roman character as that of a fighting people who honor the gods—rather than a pious people who fight when necessary, an important difference of emphasis.
+
+**Transition to Republic**
+
+Succession of kingship became increasingly contested, culminating with the seventh king, Lucius Tarquinius Superbus, who took the throne by murdering his predecessor and potential heirs, becoming a genuine tyrant. His overthrow in 509 BC led to Rome's refounding as a republic, with Romans maintaining a horror of kingship thereafter. Notably, the date assigned to republican Rome's founding might represent Romans attempting to upstage the Athenians, who established their democracy in 508 BC.
+
+**Republican Government Structure**
+
+The Romans replaced monarchy with the consulship: two consuls elected by the senate governing for one-year terms. However, plebs protested that consuls, drawn from the patrician class, governed solely for their own interests, leading to establishment of the tribunate—officials elected by plebs and granted specific powers.
+
+**Military Conflicts and Regional Powers**
+
+Two main threads dominate the historical narrative: military and political conflicts with regional powers, and persistent internal conflict between patricians and plebs. Principal regional opponents included the Veii, Volsci, and Aequi. Rome's reach remained remarkably small during this period—their most threatening neighbor, Veii, was located just twelve miles away, making these "wars" essentially local skirmishes.
+
+**Legendary Military Heroes**
+
+Numerous celebrated stories emerge from this military history: Horatius at the bridge, the courage of Mucius, the vengeful fury of Coriolanus, the reckless lust of Appius Claudius, and the splendid civic virtue of Cincinnatus. Farmer-general Cincinnatus led Romans to one of their first great military victories against the Volsci and Aequi around 450 BC.
+
+**Legal and Political Development**
+
+Rome's internal politics featured slow-boiling conflict occasionally erupting into violence. Around the mid-5th century, plebs pushed for written law introduction to reduce vulnerability to consular whim. Rome sent delegations to Athens to study Solon's reforms, ultimately producing ten (later twelve) large public tablets outlining Roman law—the Twelve Tables. To create these, Romans temporarily replaced two consuls with ten-man government called decemvirs, but power abuse led to rapid reversion to the consulship.
+
+Additional offices emerged: the dictator, a temporary position granted during emergencies, and the censor, originally responsible for periodic census-taking but destined to become one of Rome's most powerful government positions.
+
+**The War with Veii**
+
+Book V narrates two crucial episodes. The war with Veii involved long-standing conflicts over land and precious resources like salt. Veii represented a strongly fortified city and formidable opponent. As conflict escalated, patrician Camillus, one of Rome's most honored figures, was named dictator and assumed army command. He directed construction of a secret tunnel burrowing under Veii's walls into its sewer system. Echoing the Trojan Horse story, Roman soldiers surprised Veii's citizens by appearing inside their walls, opening gates for the full army's entry. This decisive victory resulted in survivors being sold as slaves, leaving the city empty.
+
+**The Gallic Catastrophe**
+
+Rome's greatest victory proved short-lived with the Gauls' appearance. These tribes from north of the Alps descended into Italy, proving too strong for most resistance. The exact conflict origins with Rome remain unclear—Livy provides multiple versions—but somehow Romans found Gauls approaching city walls. Despite mustering an army, intimidating Gallic forces caused Roman defenders to buckle and flee. Gates remained unsecured, allowing Gauls to enter, loot, and burn the city. Only the Capitol remained defended during the ensuing siege.
+
+As summer progressed, Gauls fell ill while Romans starved, leading both sides to agree on terms: Romans would pay for Gallic departure. However, as payment was prepared, Gallic contempt so angered Romans that Camillus, rallying weakened troops, ordered a sudden attack driving out the Gauls.
+
+**Rebuilding and Resolution**
+
+Rome suffered such thorough devastation that people planned relocating to empty Veii, abandoning Rome entirely. However, Camillus, in a stirring speech reimagined by Livy, convinced them to stay and rebuild. For this reason, he earned honor as Rome's "second founder." Though they rebuilt, memory of Rome's first sack remained a great horror in Roman imagination, leading to resolution that it should never recur. Indeed, their resolve proved strong—850 years would pass before another enemy force breached the walls.
+
+**Key Insight**
+
+Livy observes: "Whatever activity is rewarded in a state invariably thrives the most" (Book IV, ii), encapsulating a fundamental principle of Roman political philosophy regarding incentive structures in governance.
+
+================================================================================
+## Source 6: Manual: review
+URL: book_notes.html (local)
+================================================================================
+
+# The History of Rome, Books 1-5: The Early History of Rome by Livy
+
+## Book Overview
+
+Livy (c. 59 BC-AD 17) dedicated most of his life to writing some 142 volumes of history, the first five of which comprise The Early History of Rome. With stylistic brilliance, he chronicles nearly 400 years of history, from the founding of Rome (traditionally dated to 757 BC) to the Gallic invasion in 386 BC - an era which witnessed the reign of seven kings, the establishment of the Republic, civil strife and brutal conflict. The Early History is a passionate warning that Rome should learn from its history.
+
+## About the Author
+
+Titus Livius (Patavinus) (64 or 59 BC – AD 17)—known as Livy in English—was a Roman historian who wrote a monumental history of Rome and the Roman people – Ab Urbe Condita Libri (Books from the Foundation of the City) – covering the period from the earliest legends of Rome before the traditional foundation in 753 BC through the reign of Augustus in Livy's own time. He was on familiar terms with the Julio-Claudian dynasty, advising Augustus's grandnephew, the future emperor Claudius, as a young man not long before 14 AD in a letter to take up the writing of history.
+
+## Historical Context and Purpose
+
+Livy's stated aim in writing his history was to escape his degraded present into a glorious past. A thoroughgoing Republican, he mourned the birth of the Empire, though he did see why a strong hand was needed amid the political chaos of recent years. The result is a kind of prose poem, a sequel to Virgil's epic, telling the heroic story of Rome's rise from a small city-state to a world power.
+
+Livy makes his purpose clear: "The study of history is the best medicine for a sick mind; for in history you have a record of the infinite variety of human experience plainly set out for all to see: and in that record you can find for yourself and your country both examples and warnings; fine things to take as models, base things rotten through and through, to avoid." Livy's history is not meant to be purely historical, but is designed to provide examples for the reader to follow or to shun—it is didactic and designed as a response to the author's perception of Rome as being in a state of moral decline.
+
+## Literary Style and Approach
+
+Livy is almost exclusively a dramatic historian; the book often feels quite like a novel. There is little attempt at analysis. Nor is Livy drawn to the vaguer sort of philosophical moralizing that historians sometimes indulge in. He is considered to be one of the great Latin stylists, and is a lucid and engaging writer.
+
+The closest that Livy gets to analysis is in his speeches. As in Thucydides, Livy puts long orations into the mouths of his principle characters, all of which are pure fabrications. For the most part these speeches are dramatic devices, allowing readers to see why the Romans acted in a certain way; but the reader often notes the opinion of Livy himself creeping into these orations—the historian's strong sense of what is right and proper for Romans to do.
+
+## Narrative Structure
+
+Livy has organized his narrative as a montage rather than in epic form. His is the History of the Republic of Rome, different from a Rise of Rome narrative. The origin and life of Romulus, for example, is really a collection of unrelated accounts, but each serves a purpose: the story of Romulus's and Remus's adolescence; their revenge against a wicked king; the foundation of Rome and Remus's death; a comparison between Hercules and Romulus; the abduction of Sabine women; the betrayal of a Roman fort by Tarpeius's daughter; the intervention of Sabine women; and finally Romulus's strange disappearance. The narrative does not aggregate into something larger. Though it progresses with time, each is a story of its own, adjoined only by the coincidence of their Roman association.
+
+## Key Historical Periods Covered
+
+These first five books cover the city's mythical founding by Romulus up to the sacking of the city by the Gauls, in 390 BCE. During this time the monarchy gave way to the republic, which soon found itself embroiled in countless wars, big and small, with Rome's neighbors on the Italian peninsula.
+
+## Major Themes
+
+### Sexual and Fraternal Violence
+There is a strong emphasis on sexual violence as a historical motive force (Romulus and Remus, Lucretia, the rape of the Sabine women, the fall of the Decemvirs), and on fraternal violence (Romulus and Remus, unending struggle between Patricians and plebeians) - a pertinent theme in the days after civil war.
+
+### Religious Observance
+The importance of religious observance is paramount: Rome is strong when the rituals are correctly performed and promises to the gods are honored. Amusingly, their religious practices are all imports - mostly from the Etruscans - literally when they carry off Juno from Veii to Rome. So long as the ritual tent was correctly pitched for the observation of omens prior to elections, life would flow smoothly; if not, as Livy shows, the Capitol would be crawling with hairy Gauls.
+
+### Class Conflict
+More interesting were the conflicts between the patricians and the plebeians—a proto-Marxist story of class conflict. The Plebeians revolt, wander off to another hill and think about starting their own city (fed up after having been obliged to fight, at their own expense, annually against all comers, but not getting any share of the spoils of war, or protection from debt slavery) until they are persuaded to return by a story of how in ancient times, the parts of the body rebelled against the stomach which appeared to do nothing only to find without it that the separate parts withered and died. Convinced by this analogy the Plebeians return, yet it is hard to see any useful function provided by the Patricians to them save for the tax-day loans they give out, ensnaring people into poverty.
+
+## Famous Stories and Characters
+
+The work includes many familiar stories: Romulus and Remus, Horatius and the bridge, Coriolanus, Cincinnatus, the geese who saved Rome, Camillus and the school teacher. Bringing compelling characters to life, Livy re-presents familiar tales including the tragedy of Coriolanus and the story of Romulus and Remus.
+
+### The Kings
+The kings are rather unkinglike, but more similar to the tyrants of the Greek city states - there is no dynasty for instance, they come in offering specific answers to certain problems providing either military leadership or religious guidance. However unlike in the Greek cities soldiers don't seem to own their own arms - although they are divided into five classes for conscription purposes on the basis of armaments, since several times weapons are described as being distributed from stores, so there is no 'hoplite revolution' as in the Greek states, instead the aristocrats dominate as a caste.
+
+## Structural Elements
+
+Structurally Romulus (the child of the rape of a vestal virgin) founds Rome after having been suckled either by a wolf or a prostitute, and this is mirrored at the end by Camillus who gets to re-start Rome after recapturing it from the Gauls. In the middle the Plebeians revolt, and the space between these events are filled by interchangeable battles and campaigns that until the end of the book seem to fail to achieve anything.
+
+## Historical Accuracy and Methodology
+
+As with any ancient historian, Livy falls far short of the accuracy and transparency that is expected of modern historians. And since he is a patriotic writer, this is doubly true. Like Plutarch after him, Livy tries to walk a fine line between acknowledging the importance of the legendary Romulus in Rome's sense of itself, and distancing himself from the more openly mythical accounts of Romulus' life and deeds.
+
+Yet Livy was a meticulous student of history, and any reader who values historical studies that seek to "stick to the facts" is likely to appreciate Livy's dedication to telling the truth about his society. These stories exist outside of history, despite being presented as the historical foundation of the present. For example, Livy mentions sums of money, but it becomes clear later on when he mentions patriotic Senators delivering bars of bronze to the treasury that Rome presumably didn't have any kind of currency or physical coinage at this remote and dreamlike period.
+
+## Cultural and Historical Impact
+
+The cultural influence of these stories, whether from Livy or via Plutarch, includes the idea of the perpetual moral decline of a state, that suicide is an appropriate response to rape, various degrees of double standards - selling women and children into slavery is acceptable, but waging war against them isn't. In this way, Rome is eternal, an empire of the mind. On the positive side, one might think of the Cincinnati which perhaps made the difference between the young republic in North America and its southern cousins, or indeed the strict commitment to constitutionalism, here even to a ridiculous extent when Camillus having got together an army won't march on Rome and attack the Gauls who are occupying Rome without authorization from the Senate who are besieged by the Gauls on the Capitol.
+
+## Critical Reception and Analysis
+
+Critics make two charges against Livy's writing: one worthless, and one worthwhile. The first is that Livy is reliant on myth and miraculous stories. He includes tales that are not possibly true, or have been pilfered from the Greeks. They complain also that Livy is too credulous about fantastic occurrences like talking cows or phenomenal weather. But this charge is frankly stupid—it is preposterous to expect of ancient historians sensibilities that are modern.
+
+There is however a second criticism that must be answered: that Livy's History is flat; it is shaped to read as "And then... And then... And then...", one consul after another, and has no arc or great complication that it builds to. This criticism is partly right, but mostly wrong. The History is arranged in unepic form by design, not by accident. Where one might want to read the Rise of Rome in Polybius, Livy provides the History of the Republic of Rome—they are different concepts requiring different narrative approaches.
+
+## Historical Timeline Context
+
+Livy's life encompassed the massive changes that accompanied Rome's move from republic to empire. When he was born in 59 B.C., Julius Caesar was one of two consuls of a Roman Republic torn by the turbulent years of fighting among power-hungry leaders like Marius and Sulla. Livy lived through the years of the assassination of Julius Caesar, the deaths of arch-assassins Brutus and Cassius, the suicides of Antony and Cleopatra, and the metamorphosis of Caesar's nephew Octavian into the emperor Augustus; and Livy even lived to see Augustus be succeeded as emperor by Tiberius.
+
+## Value as Historical Document
+
+Despite falling short of modern historical standards, this is a tremendously valuable historical document, and a thrilling read. Livy explains Rome's ascent like a true patriot: as the consequences of a particularly Roman virtue, a manly courage and intelligence which saw the Roman people through innumerable obstacles. The annalistic recounting of the elections of tribunes and consuls, the battles fought and won, can get tiresome at times, but Livy's eye turns to wherever there is turmoil; and the final impression is of an endless battle.
+
+The work serves as both historical record and moral instruction, offering readers a window into how Romans understood their own origins and the virtues that they believed led to their greatness, while simultaneously providing a critique of contemporary moral decline through the lens of a glorified past.
+
+================================================================================
+## Source 7: The History of Rome by Livy
+URL: https://www.ebsco.com/research-starters/literature-and-writing/history-rome-livy
+================================================================================
+
+**The History of Rome by Livy: Comprehensive Analysis**
+
+**Overview and Scope**
+"The History of Rome" by Livy is a monumental work chronicling Rome's history from its legendary founding to the early Roman Empire, covering nearly eight centuries. Originally consisting of 142 books, only books 1-10 and 21-45 survive, along with fragments of others. This represents barely a quarter of the original work, yet fills six to thirteen volumes in various English translations.
+
+**Author and Historical Context**
+Titus Livius Patavinus (Livy), born in Padua, was originally a teacher of rhetoric and friend of Emperor Augustus. The emperor likely suggested Livy undertake this historical project as part of his program to glorify Rome. Writing during the Age of Augustus (first published between 27-25 BCE), Livy was contemporary with Vergil's composition of the Aeneid.
+
+**Sources and Methodology**
+Livy drew from limited sources including traditions, official temple annals listing consuls and chief events, and personal records kept by famous families—often exaggerated accounts. His challenge was synthesizing eight centuries of history with incomplete and sometimes conflicting sources. When encountering contradictory accounts, Livy typically chose the more colorful version or included both, allowing readers to judge.
+
+**Literary Approach and Criticisms**
+Livy prioritized dramatic flair over strict historical accuracy, blending fact with legend. Thomas Macaulay criticized him, declaring: "No historian with whom we are acquainted has shown so complete indifference to the truth." However, accuracy was secondary to Livy's goals—he aimed to impress sophisticated Roman readers through dramatic power and stylistic charm while fulfilling patriotic duty.
+
+Livy acknowledged his approach in the preface: he would "neither affirm nor refute" traditions predating Rome's founding, though they were "more suited to the fiction of poetry than to the genuine record of history." His primary aim was acquainting contemporary Romans with ancestral examples during what he perceived as Rome's moral decline—a time "when we can neither endure our vices nor their remedies."
+
+**Books 1-10: Early Roman History**
+The first decade covers 460 years, beginning with legendary foundations. Livy retells the story of Aeneas leading Trojans to Latium, the tale of Romulus and Remus with their wolf nurse, and Rome's founding on April 21, 753 BCE. The narrative includes the kidnapping of Sabine women to populate the city.
+
+Key exemplary figures highlighted include:
+- **Cincinnatus**: Summoned from his plow to drive back the Aequians
+- **Virginius**: Protecting his daughter Virginia from decemvir Appius Claudius
+- **Camillus**: Returning from exile to fight the Gauls
+- **Manlius**: Defending the capitol
+- **Curtius**: Sacrificing himself by riding into a Forum chasm to preserve Rome
+
+The decade concludes with Rome's defeat of the Samnites, establishing Roman mastery over Italy.
+
+**Books 21-30: The Punic Wars**
+Livy declared he was about to relate "the most memorable of all wars that were ever waged, the war which the Carthaginians under Hannibal maintained against the Roman people." He characterized this as a struggle between Indo-Germanic and Semitic races for world dominion, with equally matched opponents possessing mutual hatred as strong as their armies.
+
+**Hannibal's Campaign**: Livy never minimized the exploits of twenty-six-year-old Hannibal, who became the outstanding figure in his narrative. He described Hannibal's crossing of the Alps with ninety thousand infantry, twelve thousand cavalry, and thirty-seven elephants, supplementing missing historical details with imagination.
+
+**Roman Defeats**: Scipio the father's failed attempts to stop Carthaginians in Gaul led to successive Italian defeats at Trebia and Lake Trasimene. Fabius Maximus's delaying tactics temporarily held back invaders, but consul Varro's impatience resulted in the catastrophic Roman defeat at Cannae (216 BCE). Had Hannibal capitalized on this victory, he could have easily captured Rome.
+
+**Syracuse Siege**: Book 25 details another phase where Marcellus besieged Syracuse for three years, held back by seventy-four-year-old mathematician Archimedes. His inventions—catapults and grappling hooks that lifted and sank Roman ships attacking the breakwater—demonstrated defensive ingenuity until Romans found weak spots in the defenses.
+
+**Spanish Campaign**: Scipio Africanus prevented Spain from becoming the Carthaginian European headquarters. Though unable to completely immobilize Hasdrubal or prevent his departure with Italian reinforcements, delays contributed to Carthaginian defeat at Metaurus River.
+
+**Final Victory**: Roman triumph came when Scipio carried war into Africa. Despite Hannibal's recall to defend Carthage, his veterans proved no match for Roman legionaries at Zama (202 BCE), leading to Carthage's complete destruction.
+
+**Books 31-45: Roman Expansion**
+The surviving fifteen books cover Roman expansion in Greece and Asia, ending when Macedonia became a Roman province. Livy noted this period lacked the earlier intensity since soldiers no longer fought for Rome's survival but for personal plunder, reducing reader engagement despite maintaining his superior storytelling ability.
+
+**Historical Preservation and Loss**
+Much of Livy's work survived despite having many enemies. Pope Gregory I ordered available copies burned due to contained superstitions, and other Church fathers contributed to the loss of one hundred books, including those covering Livy's contemporary times. Modern historians often wish they could exchange the surviving early books for Livy's eyewitness accounts of his era.
+
+**Literary Excellence and Influence**
+Despite historical limitations—Livy was no soldier, statesman, or geographer, and lived in an epoch when research was unknown—his work achieved its intended purpose of vividly painting Rome's grandeur. Like an artist, he sometimes changed details for better composition. Whatever his faults as historian, Livy the novelist, dramatist, and orator created unforgettable pages that established him as the greatest prose writer of the Augustan Age.
+
+**Moral and Political Purpose**
+Livy's work served multiple functions: celebrating Roman achievements, providing moral instruction through historical exemplars, and addressing contemporary Roman value decline. His narrative reflects the moral dilemmas of his time while inspiring readers through virtuous historical figures.
+
+**Modern Scholarly Assessment**
+Contemporary scholarship recognizes Livy's work as vital for understanding Roman history and culture, offering insights into identities and ideals shaping ancient civilization. While criticized for historical accuracy, his literary strengths and cultural significance remain undisputed. The work represents a conscious artistic effort comparable to rhetoric of Cicero and poetry of Vergil, demonstrating how historical writing could serve ideological and aesthetic purposes simultaneously.
+
+**Research Applications**
+Modern historians value Livy's account particularly for the Punic Wars narrative, despite preferring his lost contemporary accounts. Comparison with other sources like Polybius demonstrates Livy's superior literary technique, even when historical precision suffered. His work remains essential for understanding Roman cultural identity, moral frameworks, and imperial ideology during the Augustan period.

@@ -1,0 +1,294 @@
+================================================================================
+LYRICS GLOSS PIPELINE — CONTEXT & REFERENCE
+================================================================================
+
+PURPOSE:
+Take song lyrics in any language → generate word-by-word gloss → produce a
+final study CSV with English translation + romanization + word breakdowns.
+
+================================================================================
+FOLDER STRUCTURE
+================================================================================
+
+merging/
+├── claude-context.txt          ← this file
+├── steps.md                    ← Korean pipeline steps (from colorcodedlyrics)
+├── process_to_obtain_final.md  ← detailed process doc
+│
+├── colorcode_to_csv.py         ← parse colorcodedlyrics.com HTML → CSV
+├── make_adjusted.py            ← flatten lyrics CSV → paired txt
+├── generate_gloss.py           ← send verses to OpenAI for word-by-word gloss
+├── merge_glosses.py            ← two-pointer merge: gloss rows + lyric lines
+├── local_merge.py              ← earlier version (local matching + optional GPT)
+├── python_merge.py             ← original OpenAI-only merge script
+├── make_adjusted.py            ← flatten CSV to paired english/romanization lines
+│
+├── project_gem/                ← Chinese song project
+│   ├── steps.md
+│   ├── lyrics.txt              ← input: Chinese + Pinyin alternating lines
+│   ├── lyrics_to_csv.py        ← Step 1: OpenAI translates → 3-col CSV
+│   ├── make_adjusted.py        ← Step 2: flatten to paired lines
+│   ├── generate_gloss.py       ← Step 3: OpenAI word-by-word gloss
+│   ├── merge_glosses.py        ← Step 4: two-pointer merge → final CSV
+│   ├── gem_table.csv
+│   ├── gem_adjusted.txt
+│   ├── gem_preformatted.csv
+│   └── gem_output.csv
+│
+├── project_hebrew/             ← Hebrew song project
+│   ├── steps.md
+│   ├── lyrics.txt              ← input: romanized Hebrew only
+│   ├── lyrics_to_csv.py        ← Step 1: OpenAI → Hebrew script + English
+│   ├── make_adjusted.py        ← Step 2: flatten
+│   ├── generate_gloss.py       ← Step 3: OpenAI gloss
+│   ├── merge_glosses.py        ← Step 4: merge
+│   ├── hebrew_table.csv
+│   └── hebrew_output.csv
+│
+├── project_spanish/            ← Spanish song project (Como la Flor)
+│   ├── lyrics.txt              ← input: Spanish lyrics with [Verso/Coro] headers
+│   ├── lyrics_to_csv.py        ← Step 1: OpenAI → English translation (2-col CSV)
+│   ├── make_adjusted.py        ← Step 2: flatten to paired txt
+│   ├── generate_gloss.py       ← Step 3: OpenAI word-by-word gloss (2-col CSV)
+│   ├── merge_glosses.py        ← Step 4: merge → final output
+│   ├── run.sh                  ← quick-run script for all 4 steps
+│   ├── spanish_table.csv
+│   ├── spanish_adjusted.txt
+│   ├── spanish_preformatted.csv
+│   └── spanish_output.csv
+│
+├── project_cantonese/             ← Cantonese song project (上海灘)
+│   ├── lyrics.txt              ← input: Cantonese + Jyutping + English triplets
+│   ├── lyrics_to_csv.py        ← Step 1: parse triplets → 3-col CSV (no OpenAI)
+│   ├── make_adjusted.py        ← Step 2: flatten to paired lines
+│   ├── generate_gloss.py       ← Step 3: OpenAI word-by-word gloss
+│   ├── merge_glosses.py        ← Step 4: two-pointer merge → final CSV
+│   └── run.sh
+│
+├── project_mandarin_dialogue/  ← Mandarin dialogue project
+│   ├── dialogue.txt            ← input: Speaker / Chinese / Pinyin / English (fixed order, may wrap)
+│   ├── dialogue_to_csv.py      ← Step 1: parse dialogue → 3-col CSV (no OpenAI)
+│   ├── make_adjusted.py        ← Step 2: flatten, speaker labels passed through
+│   ├── generate_gloss.py       ← Step 3: OpenAI gloss, --limit N for debug
+│   ├── merge_glosses.py        ← Step 4: merge, strips trailing punctuation for matching
+│   └── run.sh                  ← ./run.sh [N] — optional N limits turns for debug
+│
+└── (Korean files in root: celebrity.html, korean_table.csv, etc.)
+
+================================================================================
+PIPELINE OVERVIEW (4 STEPS)
+================================================================================
+
+Step 1: LYRICS → CSV
+  Input varies by source:
+    - colorcodedlyrics.com HTML → colorcode_to_csv.py (Korean)
+    - .txt with native + romanization → lyrics_to_csv.py + OpenAI (Chinese)
+    - .txt with romanization only → lyrics_to_csv.py + OpenAI (Hebrew)
+    - .txt with native script only → lyrics_to_csv.py + OpenAI (Spanish)
+  Output: CSV with 3 columns (Native, Romanization, Translation)
+    or 2 columns (Native, Translation) for Latin-script languages.
+  Each row = one verse, lines within verse joined by \n in cells.
+
+Step 2: FLATTEN CSV → PAIRED TXT
+  python make_adjusted.py --input [table].csv --output [adjusted].txt
+  Splits multiline cells, pairs translation + romanization line by line:
+    English line
+    romanization line
+    (blank)
+
+Step 3: GENERATE WORD-BY-WORD GLOSS VIA OPENAI
+  python generate_gloss.py --input [table].csv --output [preformatted].csv
+  Sends each verse to GPT-4o, gets back word/morpheme breakdown.
+  Output: CSV with (Native, Romanization, English meaning) per word.
+
+Step 4: MERGE GLOSSES WITH LYRIC LINES
+  python merge_glosses.py --adjusted [adjusted].txt --gloss [preformatted].csv --output [output].csv
+  Two-pointer walk:
+    - Inserts English + romanization as 2 rows above each gloss group
+    - Matches by checking if the romanization line ENDS WITH the gloss
+      entry's romanization (handles multi-token pinyin like "yīn yuè")
+    - If no match found, 2 lines inserted, CSV pointer stays (no skip)
+    - If OPENAI_API_KEY set, auto-verifies all matches with GPT
+
+================================================================================
+LANGUAGE-SPECIFIC NOTES
+================================================================================
+
+KOREAN (from colorcodedlyrics.com):
+  - Source: HTML with 3 WordPress columns (div.wp-block-column)
+  - colorcode_to_csv.py parses the <p> tags with <br> line breaks
+  - Romanization is single-token per word → last-word exact match works
+  - Section headers: Verse 1, Pre-Chorus, Chorus, Bridge, Outro
+
+CHINESE (from .txt):
+  - lyrics.txt has alternating: Chinese line, Pinyin line, blank between verses
+  - lyrics_to_csv.py sends to OpenAI for English translation
+  - Pinyin is multi-token per word (e.g. "yīn yuè" for 音乐)
+  - merge_glosses.py uses ENDSWITH matching (not exact last-word)
+  - generate_gloss.py asks GPT to break compound words for learners
+
+HEBREW (from .txt):
+  - lyrics.txt has romanization only + [Section] headers
+  - lyrics_to_csv.py gets BOTH Hebrew script AND English from OpenAI
+  - GPT-4o handles well-known songs accurately
+  - For obscure songs, Hebrew script may need manual review
+  - Romanization can have hyphens/apostrophes (ha-lev, me'eleh)
+
+SPANISH (from .txt):
+  - lyrics.txt has Spanish lyrics + [Verso/Coro] section headers
+  - No romanization needed — Spanish already uses Latin script
+  - lyrics_to_csv.py only needs English translation from OpenAI
+  - 2-column CSVs throughout (Spanish, Translation / Spanish, English meaning)
+  - merge_glosses.py uses Spanish text as both native and "romanization" for matching
+  - Section headers use Spanish names: Verso 1, Verso 2, Coro (added to section_headers set)
+
+CANTONESE (from .txt):
+  - lyrics.txt has triplets: Cantonese / Jyutping / (English) — translations already included
+  - lyrics_to_csv.py parses triplets with no OpenAI needed
+  - Title/metadata lines before first [Section] header are skipped automatically
+  - Jyutping is multi-token per word (like Pinyin) → ENDSWITH matching in merge_glosses.py
+  - generate_gloss.py uses Cantonese-specific prompt with Jyutping + grammar notes
+  - "Ending" added to section_headers set
+
+MANDARIN DIALOGUE (from .txt):
+  - dialogue.txt has fixed 4-line groups: Speaker: / Chinese / Pinyin / English
+  - Lines within each field may wrap (continuation lines joined with space)
+  - Transition from Pinyin → English detected by whether previous pinyin line ends with [.?!]
+  - dialogue_to_csv.py outputs speaker labels as section-header rows (Chinese col, Pinyin/Translation empty)
+  - Speaker labels flow through all 4 steps and appear in final output
+  - merge_glosses.py strips trailing punctuation from Pinyin before ENDSWITH matching
+    (dialogue Pinyin ends with . or ? but gloss entries don't — this was the key fix)
+  - generate_gloss.py supports --limit N to gloss only first N turns (debug mode)
+  - run.sh supports: ./run.sh [N] where N limits turns for debugging
+
+================================================================================
+HOW TO REPURPOSE FOR A NEW LANGUAGE / PROJECT
+================================================================================
+
+1. Create project folder:
+   mkdir project_[name]
+
+2. Copy the 4 scripts:
+   cp project_gem/make_adjusted.py project_[name]/
+   cp project_gem/generate_gloss.py project_[name]/
+   cp project_gem/merge_glosses.py project_[name]/
+
+3. Create lyrics_to_csv.py for your input format:
+   - If you have native script + romanization → translate to English (like Chinese)
+   - If you have romanization only → get native script + English (like Hebrew)
+   - If you have an HTML source → parse it (like Korean/colorcodedlyrics)
+   - If language uses Latin script → only need translation, use 2-col CSV (like Spanish)
+
+4. Add language detection to generate_gloss.py:
+   - Add an `elif "yourlang" in header:` block
+   - Write a SYSTEM_PROMPT with language-specific gloss rules
+   - Set json_keys and csv_header
+
+5. Add language detection to merge_glosses.py:
+   - Add an `elif "yourlang" in gloss_header:` block
+   - Set native_col, rom_col, csv_header, verify_lang
+
+6. If romanization has multi-token words (like Chinese pinyin):
+   - merge_glosses.py already uses ENDSWITH matching, so it works
+   - If romanization is single-token per word (like Korean), exact match also works
+   - If language uses Latin script (no romanization), use native text for matching (like Spanish)
+
+7. Run the pipeline:
+   export OPENAI_API_KEY=sk-...
+   python lyrics_to_csv.py --input lyrics.txt --output [name]_table.csv
+   python make_adjusted.py --input [name]_table.csv --output [name]_adjusted.txt
+   python generate_gloss.py --input [name]_table.csv --output [name]_preformatted.csv
+   python merge_glosses.py --adjusted [name]_adjusted.txt --gloss [name]_preformatted.csv --output [name]_output.csv
+
+================================================================================
+KEY DESIGN DECISIONS & GOTCHAS
+================================================================================
+
+BOM ENCODING:
+  All CSVs are written with utf-8-sig (BOM) for Excel compatibility.
+  All reads MUST use encoding="utf-8-sig" to strip the BOM, otherwise
+  the first column header gets a \ufeff prefix and language detection fails.
+
+TWO-POINTER MATCHING:
+  The merge step walks both files top-to-bottom with two pointers.
+  For each lyric pair, it consumes gloss rows until the romanization
+  line ends with the current gloss entry's romanization.
+  "Slicing out" consumed pairs prevents duplicate matches (e.g. repeated chorus).
+
+NO-MATCH BEHAVIOR:
+  If a lyric pair has no matching gloss (e.g. "Oh-oh-oh" or English-only lines),
+  the 2 header rows are still inserted and the gloss pointer stays put.
+  This can produce 4+ lines back-to-back with no glosses between them.
+
+GPT VERIFICATION:
+  Optional but recommended. Set OPENAI_API_KEY and merge_glosses.py
+  will send the full output to GPT to verify each gloss group belongs
+  to the correct lyric line. Catches edge cases like duplicate words
+  (gata, shipeo in Korean) or romanization spelling mismatches.
+
+SECTION HEADERS:
+  The preformatted CSV can optionally contain section headers as rows
+  (e.g. "Verse 1,,"). These are detected and passed through to output.
+  The set of recognized headers: Verse 1, Verse 2, Pre-Chorus, Chorus,
+  Bridge, Outro. Add more to the section_headers set in merge_glosses.py
+  if needed.
+
+================================================================================
+HOW TO REPURPOSE FOR A NEW DIALOGUE / PROJECT
+================================================================================
+
+Dialogue projects differ from lyrics in two ways:
+1. Input has speaker labels (e.g. "小红:") — these are passed through as section-header rows
+2. Pinyin/romanization lines end with terminal punctuation (.?!) — strip before ENDSWITH matching
+
+To add a new dialogue language:
+1. Create project folder, copy the 4 scripts from project_mandarin_dialogue/
+2. Adapt dialogue_to_csv.py for the new input format
+3. Update generate_gloss.py SYSTEM_PROMPT for the target language
+4. merge_glosses.py already strips trailing punctuation — should work as-is
+
+================================================================================
+QUICK REFERENCE COMMANDS
+================================================================================
+
+Korean (from colorcodedlyrics HTML):
+  python colorcode_to_csv.py --input song.html --output song_table.csv
+  python make_adjusted.py --input song_table.csv --output song_adjusted.txt
+  python generate_gloss.py --input song_table.csv --output song_preformatted.csv
+  python merge_glosses.py --adjusted song_adjusted.txt --gloss song_preformatted.csv --output song_output.csv
+
+Chinese (from .txt with Chinese + Pinyin):
+  python lyrics_to_csv.py --input lyrics.txt --output song_table.csv
+  python make_adjusted.py --input song_table.csv --output song_adjusted.txt
+  python generate_gloss.py --input song_table.csv --output song_preformatted.csv
+  python merge_glosses.py --adjusted song_adjusted.txt --gloss song_preformatted.csv --output song_output.csv
+
+Hebrew (from .txt with romanization only):
+  python lyrics_to_csv.py --input lyrics.txt --output song_table.csv
+  python make_adjusted.py --input song_table.csv --output song_adjusted.txt
+  python generate_gloss.py --input song_table.csv --output song_preformatted.csv
+  python merge_glosses.py --adjusted song_adjusted.txt --gloss song_preformatted.csv --output song_output.csv
+
+Spanish (from .txt with Spanish lyrics, Latin script — no romanization):
+  cd project_spanish
+  python lyrics_to_csv.py --input lyrics.txt --output spanish_table.csv
+  python make_adjusted.py --input spanish_table.csv --output spanish_adjusted.txt
+  python generate_gloss.py --input spanish_table.csv --output spanish_preformatted.csv
+  python merge_glosses.py --adjusted spanish_adjusted.txt --gloss spanish_preformatted.csv --output spanish_output.csv
+  # Or just: ./run.sh
+
+Cantonese (from .txt with Cantonese + Jyutping + English triplets):
+  cd project_cantonese
+  python lyrics_to_csv.py --input lyrics.txt --output cantonese_table.csv
+  python make_adjusted.py --input cantonese_table.csv --output cantonese_adjusted.txt
+  python generate_gloss.py --input cantonese_table.csv --output cantonese_preformatted.csv
+  python merge_glosses.py --adjusted cantonese_adjusted.txt --gloss cantonese_preformatted.csv --output cantonese_output.csv
+  # Or just: ./run.sh
+
+Mandarin dialogue (from .txt with Speaker / Chinese / Pinyin / English):
+  cd project_mandarin_dialogue
+  python dialogue_to_csv.py --input dialogue.txt --output mandarin_dialogue_table.csv
+  python make_adjusted.py --input mandarin_dialogue_table.csv --output mandarin_dialogue_adjusted.txt
+  python generate_gloss.py --input mandarin_dialogue_table.csv --output mandarin_dialogue_preformatted.csv [--limit N]
+  python merge_glosses.py --adjusted mandarin_dialogue_adjusted.txt --gloss mandarin_dialogue_preformatted.csv --output mandarin_dialogue_output.csv
+  # Or just: ./run.sh [N]   (N = optional turn limit for debug)

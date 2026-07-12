@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmap-content xmlns="urn:xmind:xmap:xmlns:content:2.0" version="2.0">
+    <sheet id="sheet1" theme="theme1">
+        <topic id="root" structure-class="org.xmind.ui.map">
+            <title>Basketball Fundamentals</title>
+            <children>
+                <topics type="attached">
+                    <topic id="topic1">
+                        <title>Cross Over</title>
+                        <children>
+                            <topics type="attached">
+                                <topic id="topic1-1">
+                                    <title>What sells is the shoulder dip not dribbling back and forth</title>
+                                </topic>
+                            </topics>
+                        </children>
+                    </topic>
+                    <topic id="topic2">
+                        <title>Shooting</title>
+                        <children>
+                            <topics type="attached">
+                                <topic id="topic2-1">
+                                    <title>Reaching for the cookie jar</title>
+                                </topic>
+                                <topic id="topic2-2">
+                                    <title>Soft release is when the ball leaves in a relaxed manner rather than forceful or push</title>
+                                </topic>
+                                <topic id="topic2-3">
+                                    <title>Soft release requires snap of wrist</title>
+                                </topic>
+                                <topic id="topic2-4">
+                                    <title>Backspin, rim forgives the shot</title>
+                                </topic>
+                                <topic id="topic2-5">
+                                    <title>Stay relaxed</title>
+                                </topic>
+                            </topics>
+                        </children>
+                    </topic>
+                    <topic id="topic3">
+                        <title>Best Shots in Basketball</title>
+                        <children>
+                            <topics type="attached">
+                                <topic id="topic3-1">
+                                    <title>Layup</title>
+                                </topic>
+                                <topic id="topic3-2">
+                                    <title>Open, catch and shoot threes</title>
+                                </topic>
+                                <topic id="topic3-3">
+                                    <title>Free throws</title>
+                                </topic>
+                            </topics>
+                        </children>
+                    </topic>
+                    <topic id="topic4">
+                        <title>Zoom Action</title>
+                        <children>
+                            <topics type="attached">
+                                <topic id="topic4-1">
+                                    <title>Perimeter screen</title>
+                                </topic>
+                                <topic id="topic4-2">
+                                    <title>Then gets a dribble handoff</title>
+                                </topic>
+                                <topic id="topic4-3">
+                                    <title>Get layup or open shot</title>
+                                </topic>
+                            </topics>
+                        </children>
+                    </topic>
+                    <topic id="topic5">
+                        <title>High Ball Screens</title>
+                        <children>
+                            <topics type="attached">
+                                <topic id="topic5-1">
+                                    <title>Screener can roll or pop or get a mismatch</title>
+                                </topic>
+                            </topics>
+                        </children>
+                    </topic>
+                    <topic id="topic6">
+                        <title>Hand is Part of the Ball</title>
+                        <children>
+                            <topics type="attached">
+                                <topic id="topic6-1">
+                                    <title>Swipe at arm wrist is not</title>
+                                </topic>
+                            </topics>
+                        </children>
+                    </topic>
+                    <topic id="topic7">
+                        <title>Gather Step</title>
+                        <children>
+                            <topics type="attached">
+                                <topic id="topic7-1">
+                                    <title>Not when it&apos;s last dribble hits the ground, but when they gain control then get two steps after that</title>
+                                </topic>
+                            </topics>
+                        </children>
+                    </topic>
+                </topics>
+            </children>
+        </topic>
+    </sheet>
+</xmap-content>

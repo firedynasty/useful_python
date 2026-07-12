@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brazil Language Wrapper</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a2e;
+            color: #eee;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #00d4aa;
+        }
+
+        .input-container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .input-box {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-box label {
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #00d4aa;
+        }
+
+        textarea {
+            width: 100%;
+            height: 300px;
+            padding: 12px;
+            border: 2px solid #333;
+            border-radius: 8px;
+            background: #16213e;
+            color: #eee;
+            font-size: 14px;
+            line-height: 1.6;
+            resize: vertical;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #00d4aa;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        .make-btn {
+            background: #00d4aa;
+            color: #1a1a2e;
+        }
+
+        .copy-btn {
+            background: #e94560;
+            color: #fff;
+        }
+
+        .clear-btn {
+            background: #555;
+            color: #fff;
+        }
+
+        .output-container {
+            margin-top: 20px;
+        }
+
+        .output-container label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #00d4aa;
+        }
+
+        #output {
+            width: 100%;
+            min-height: 300px;
+            padding: 12px;
+            border: 2px solid #333;
+            border-radius: 8px;
+            background: #0f3460;
+            color: #eee;
+            font-size: 14px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        #status {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 12px 24px;
+            background-color: #00d4aa;
+            color: #1a1a2e;
+            border-radius: 6px;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1000;
+        }
+
+        #status.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Brazil Language Wrapper</h1>
+
+    <div class="input-container">
+        <div class="input-box">
+            <label for="inputLeft">Portuguese (Left)</label>
+            <textarea id="inputLeft" placeholder="Enter Portuguese text here, one line per phrase..."></textarea>
+        </div>
+        <div class="input-box">
+            <label for="inputRight">English (Right)</label>
+            <textarea id="inputRight" placeholder="Enter English translations here, one line per phrase..."></textarea>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button class="make-btn" onclick="makeWithPipes()">Make with |</button>
+        <button class="copy-btn" onclick="copyOutput()">Copy Output</button>
+        <button class="clear-btn" onclick="clearAll()">Clear All</button>
+    </div>
+
+    <div class="output-container">
+        <label for="output">Output</label>
+        <div id="output"></div>
+    </div>
+
+    <div id="status"></div>
+
+    <script>
+        function showStatus(message) {
+            const status = document.getElementById('status');
+            status.textContent = message;
+            status.classList.add('show');
+            setTimeout(() => {
+                status.classList.remove('show');
+            }, 2000);
+        }
+
+        function makeWithPipes() {
+            const leftText = document.getElementById('inputLeft').value;
+            const rightText = document.getElementById('inputRight').value;
+
+            const leftLines = leftText.split('\n');
+            const rightLines = rightText.split('\n');
+
+            const maxLines = Math.max(leftLines.length, rightLines.length);
+            const result = [];
+
+            for (let i = 0; i < maxLines; i++) {
+                const left = (leftLines[i] || '').trim();
+                const right = (rightLines[i] || '').trim();
+
+                // Preserve empty lines (when both are empty, add blank line)
+                if (left || right) {
+                    result.push(left + ' | ' + right);
+                } else {
+                    result.push('');
+                }
+            }
+
+            document.getElementById('output').textContent = result.join('\n');
+            showStatus('Combined ' + result.length + ' lines!');
+        }
+
+        function copyOutput() {
+            const output = document.getElementById('output').textContent;
+            if (!output) {
+                showStatus('Nothing to copy!');
+                return;
+            }
+            navigator.clipboard.writeText(output).then(() => {
+                showStatus('Copied to clipboard!');
+            });
+        }
+
+        function clearAll() {
+            document.getElementById('inputLeft').value = '';
+            document.getElementById('inputRight').value = '';
+            document.getElementById('output').textContent = '';
+            showStatus('Cleared!');
+        }
+    </script>
+</body>
+</html>

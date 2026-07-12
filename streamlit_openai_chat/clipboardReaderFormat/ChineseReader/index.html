@@ -1,0 +1,1069 @@
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Text-to-Speech Reader</title>
+    <style>
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 2rem;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 0.75rem 1.5rem;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.2s;
+        }
+
+        .primary-button {
+            background-color: #3B82F6;
+        }
+
+        .primary-button:hover {
+            background-color: #2563EB;
+        }
+
+        .secondary-button {
+            background-color: #6B7280;
+        }
+
+        .secondary-button:hover {
+            background-color: #4B5563;
+        }
+
+        .success-button {
+            background-color: #10B981;
+        }
+
+        .success-button:hover {
+            background-color: #059669;
+        }
+
+        .danger-button {
+            background-color: #EF4444;
+        }
+
+        .danger-button:hover {
+            background-color: #DC2626;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+            font-size: 1rem;
+            resize: vertical;
+            margin-bottom: 1.5rem;
+        }
+
+        .reading-area {
+            background-color: #f8f9fa;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            min-height: 200px;
+            font-size: 1.5rem;
+            line-height: 2;
+            font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+        }
+
+        .char {
+            cursor: pointer;
+            transition: background-color 0.2s;
+            display: inline-block;
+        }
+
+        .char:hover {
+            background-color: #e9ecef;
+        }
+
+        .char.current {
+            background-color: #ffd43b;
+            border-radius: 3px;
+            font-weight: bold;
+            box-shadow: 0 0 5px rgba(255, 212, 59, 0.5);
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .speed-control {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        select {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 1rem 0;
+            display: block;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: #3B82F6;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .status {
+            text-align: center;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 6px;
+            margin: 1rem 0;
+            font-weight: 500;
+            display: block;
+        }
+
+        .sentence-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem 0;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            position: sticky;
+            top: 10px;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .nav-button {
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: background-color 0.2s;
+        }
+
+        .nav-button:hover {
+            background-color: #5a6268;
+        }
+
+        .nav-button:disabled {
+            background-color: #e9ecef;
+            color: #6c757d;
+            cursor: not-allowed;
+        }
+
+        .sentence-indicator {
+            flex: 1;
+            text-align: center;
+            font-weight: 500;
+            color: #495057;
+            padding: 0.5rem;
+            background-color: white;
+            border-radius: 4px;
+            border: 1px solid #ced4da;
+            min-height: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .radio-group {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .radio-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .radio-label input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📖 中文朗讀器 Chinese Text-to-Speech Reader</h1>
+
+        <!-- Language Selection (Mandarin/Cantonese) -->
+        <div class="radio-group">
+            <label>選擇語言 | Select Language:</label>
+            <label class="radio-label">
+                <input type="radio" name="chineseLanguage" value="zh-CN" id="mandarinRadio" checked>
+                <span>🇨🇳 普通話 Mandarin</span>
+            </label>
+            <label class="radio-label">
+                <input type="radio" name="chineseLanguage" value="zh-HK" id="cantoneseRadio">
+                <span>🇭🇰 粵語 Cantonese</span>
+            </label>
+        </div>
+
+        <div class="button-group">
+            <button class="primary-button" id="pasteButton">📋 貼上文字 Paste (Esc)</button>
+            <button class="secondary-button" id="clearButton">🗑️ 清空 Clear</button>
+        </div>
+
+        <div style="margin: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+            <label for="contextInput" style="font-weight: bold; white-space: nowrap;">書名/章節 Book/Chapter:</label>
+            <input type="text" id="contextInput" placeholder="例如: 紅樓夢 第三回 / e.g., Dream of the Red Chamber Chapter 3" style="flex: 1; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;">
+        </div>
+
+        <textarea id="textArea" placeholder="在此貼上中文文字 / Paste Chinese text here..."></textarea>
+
+        <div class="controls">
+            <div class="speed-control">
+                <label for="speedSelect">速度 Speed:</label>
+                <select id="speedSelect">
+                    <option value="0.5">0.5x</option>
+                    <option value="0.7" selected>0.7x</option>
+                    <option value="1">1x</option>
+                    <option value="1.25">1.25x</option>
+                    <option value="1.5">1.5x</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Sentence Navigation Bar with Play Controls -->
+        <div class="sentence-nav">
+            <button class="nav-button" id="prevSentenceButton">◀</button>
+            <span class="sentence-indicator" id="sentenceIndicator">準備閱讀 Ready to read...</span>
+            <button class="nav-button" id="nextSentenceButton">▶</button>
+            <button class="success-button" id="playButton" style="margin-left: 1rem;">▶️ 播放 Play</button>
+            <button class="secondary-button" id="stopButton" disabled style="margin-left: 0.5rem;">⏹️ 停止 Stop</button>
+            <button class="secondary-button" id="resetButton" style="margin-left: 0.5rem;">🔄 重設 Reset</button>
+            <button class="success-button" id="breakdownButton" style="margin-left: 0.5rem;">📚 分解</button>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <div class="status" id="statusDisplay">準備閱讀中文 Ready to read Chinese text</div>
+
+        <div class="reading-area" id="readingArea">
+            <p style="text-align: center; color: #666;">文字將在此顯示並逐字高亮 / Text will appear here with character-by-character highlighting</p>
+        </div>
+    </div>
+
+    <script>
+        class ChineseTextToSpeech {
+            constructor() {
+                this.textArea = document.getElementById('textArea');
+                this.readingArea = document.getElementById('readingArea');
+                this.statusDisplay = document.getElementById('statusDisplay');
+                this.progressFill = document.getElementById('progressFill');
+
+                this.playButton = document.getElementById('playButton');
+                this.stopButton = document.getElementById('stopButton');
+                this.resetButton = document.getElementById('resetButton');
+                this.speedSelect = document.getElementById('speedSelect');
+
+                this.mandarinRadio = document.getElementById('mandarinRadio');
+                this.cantoneseRadio = document.getElementById('cantoneseRadio');
+
+                this.sentenceIndicator = document.getElementById('sentenceIndicator');
+                this.prevSentenceButton = document.getElementById('prevSentenceButton');
+                this.nextSentenceButton = document.getElementById('nextSentenceButton');
+
+                this.chars = [];
+                this.currentCharIndex = 0;
+                this.isPlaying = false;
+                this.isPaused = false;
+                this.utterance = null;
+
+                this.sentenceStartTime = null;
+                this.actualTimingAdjustment = 1.0;
+
+                // Sentence number input properties
+                this.sentenceNumberInput = '';
+                this.sentenceInputTimeoutRef = null;
+
+                this.initializeEventListeners();
+            }
+
+            initializeEventListeners() {
+                // Clipboard paste
+                document.getElementById('pasteButton').addEventListener('click', () => this.pasteFromClipboard());
+
+                // Clear text
+                document.getElementById('clearButton').addEventListener('click', () => this.clearText());
+
+                // Text area changes
+                this.textArea.addEventListener('input', () => this.updateReadingArea());
+
+                // Playback controls
+                this.playButton.addEventListener('click', () => this.togglePlayPause());
+                this.stopButton.addEventListener('click', () => this.stop());
+                this.resetButton.addEventListener('click', () => this.reset());
+
+                // Speed changes
+                this.speedSelect.addEventListener('change', () => this.updateSpeed());
+
+                // Character clicking in main reading area
+                this.readingArea.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('char')) {
+                        const charIndex = parseInt(e.target.dataset.index);
+                        this.jumpToChar(charIndex);
+                    }
+                });
+
+                // Keyboard shortcuts
+                document.addEventListener('keydown', (e) => {
+                    // Escape key to stop/play
+                    if (e.key === 'Escape') {
+                        e.preventDefault();
+                        if (this.isPlaying) {
+                            this.stop();
+                        } else {
+                            this.play();
+                        }
+                    }
+                    if (e.key === 'Enter' && !['INPUT', 'TEXTAREA'].includes(e.target.tagName)) {
+                        e.preventDefault();
+                        if (this.isPlaying) {
+                            this.stop();
+                        } else {
+                            this.play();
+                        }
+                    }
+                    // '`' key to reset
+                    if (e.key === '`') {
+                        e.preventDefault();
+                        this.reset();
+                    }
+                    // Digit keys 0-9 for sentence number input
+                    if (e.key >= '0' && e.key <= '9' && !['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) {
+                        e.preventDefault();
+                        this.handleSentenceNumberInput(e.key);
+                    }
+                    if (e.key === 'ArrowLeft') {
+                        e.preventDefault();
+                        this.navigateToSentence(-1);
+                    }
+                    if (e.key === 'ArrowRight') {
+                        e.preventDefault();
+                        this.navigateToSentence(1);
+                    }
+                });
+
+                // Sentence navigation
+                this.prevSentenceButton.addEventListener('click', () => this.navigateToSentence(-1));
+                this.nextSentenceButton.addEventListener('click', () => this.navigateToSentence(1));
+
+                // Language radio button changes
+                this.mandarinRadio.addEventListener('change', () => {
+                    if (this.mandarinRadio.checked) {
+                        console.log('🔄 Switched to Mandarin (zh-CN)');
+                        this.updateStatus('切換至普通話 Switched to Mandarin');
+
+                        // If currently playing, restart from current sentence with new voice
+                        if (this.isPlaying) {
+                            this.stop();
+                            setTimeout(() => {
+                                this.play();
+                            }, 100);
+                        }
+                    }
+                });
+
+                this.cantoneseRadio.addEventListener('change', () => {
+                    if (this.cantoneseRadio.checked) {
+                        console.log('🔄 Switched to Cantonese (zh-HK)');
+                        this.updateStatus('切換至粵語 Switched to Cantonese');
+
+                        // If currently playing, restart from current sentence with new voice
+                        if (this.isPlaying) {
+                            this.stop();
+                            setTimeout(() => {
+                                this.play();
+                            }, 100);
+                        }
+                    }
+                });
+
+                // Breakdown button
+                document.getElementById('breakdownButton').addEventListener('click', () => this.breakdownSelectedText());
+            }
+
+            async pasteFromClipboard() {
+                try {
+                    this.stop();
+
+                    let text = await navigator.clipboard.readText();
+                    this.textArea.value = text;
+                    this.updateReadingArea();
+
+                    this.updateStatus('文字已貼上 Text pasted successfully!');
+                } catch (err) {
+                    console.error('Failed to read clipboard:', err);
+                    this.updateStatus('無法讀取剪貼板 Failed to access clipboard');
+                }
+            }
+
+            clearText() {
+                this.textArea.value = '';
+                this.readingArea.innerHTML = '<p style="text-align: center; color: #666;">文字將在此顯示並逐字高亮 / Text will appear here with character-by-character highlighting</p>';
+                this.reset();
+                this.updateStatus('已清空 Text cleared');
+            }
+
+            updateReadingArea() {
+                if (this.isPlaying) {
+                    this.stop();
+                }
+
+                let text = this.textArea.value.trim();
+                if (!text) {
+                    this.clearText();
+                    return;
+                }
+
+                // Split Chinese text into sentences (using Chinese punctuation, numbered items, AND newlines)
+                // Split on: numbered patterns like "1. **", Chinese punctuation, or newlines
+                const allRawSentences = text
+                    .split(/(?=[0-9]+\.\s+\*\*)|[。！？;；]+|\n/)
+                    .filter(sentence => sentence.trim().length > 0);
+
+                // Process sentences
+                this.chars = [];
+                this.sentences = [];
+                let charIndex = 0;
+                let sentenceIndex = 0;
+
+                let paragraphsHtml = '';
+                allRawSentences.forEach((sentence, index) => {
+                    const trimmedSentence = sentence.trim();
+                    if (!trimmedSentence) return;
+
+                    // Split sentence into characters (including spaces and punctuation)
+                    const charsInSentence = trimmedSentence.split('');
+
+                    // Add characters to our main chars array
+                    this.chars.push(...charsInSentence);
+
+                    // Store sentence info for TTS
+                    this.sentences.push({
+                        text: trimmedSentence,
+                        startCharIndex: charIndex,
+                        endCharIndex: charIndex + charsInSentence.length - 1
+                    });
+
+                    // Create HTML for this sentence
+                    const sentenceCharsHtml = charsInSentence.map((char) =>
+                        `<span class="char" data-index="${charIndex++}" data-sentence="${sentenceIndex}">${this.escapeHtml(char)}</span>`
+                    ).join('');
+
+                    // Add paragraph breaks every 2 sentences
+                    if (index % 2 === 0) {
+                        paragraphsHtml += `<p>${sentenceCharsHtml}。 `;
+                    } else {
+                        paragraphsHtml += `${sentenceCharsHtml}。 `;
+                    }
+
+                    if ((index + 1) % 2 === 0 || index === allRawSentences.length - 1) {
+                        paragraphsHtml += `</p>`;
+                    }
+
+                    sentenceIndex++;
+                });
+
+                this.readingArea.innerHTML = paragraphsHtml;
+                this.currentCharIndex = 0;
+                this.currentSentenceIndex = 0;
+
+                // Reset timing adjustment for new text
+                this.actualTimingAdjustment = 1.0;
+
+                // Clear any existing highlighting timers
+                if (this.charHighlightTimer) {
+                    clearInterval(this.charHighlightTimer);
+                    this.charHighlightTimer = null;
+                }
+
+                this.updateProgress();
+                this.updateSentenceIndicator();
+                this.updateStatus(`準備閱讀 ${this.sentences.length} 個句子 (${this.chars.length} 個字) / Ready to read ${this.sentences.length} sentences (${this.chars.length} characters)`);
+            }
+
+            escapeHtml(text) {
+                const div = document.createElement('div');
+                div.textContent = text;
+                return div.innerHTML;
+            }
+
+            navigateToSentence(direction) {
+                if (!this.sentences || this.sentences.length === 0) return;
+
+                const newSentenceIndex = this.currentSentenceIndex + direction;
+                if (newSentenceIndex >= 0 && newSentenceIndex < this.sentences.length) {
+                    this.stop();
+
+                    this.currentSentenceIndex = newSentenceIndex;
+                    this.currentCharIndex = this.sentences[this.currentSentenceIndex].startCharIndex;
+
+                    this.updateProgress();
+                    this.updateSentenceIndicator();
+                    this.clearHighlights();
+
+                    this.updateStatus(`導航至句子 ${this.currentSentenceIndex + 1} / ${this.sentences.length}`);
+                }
+            }
+
+            handleSentenceNumberInput(digit) {
+                // Clear existing timeout first
+                if (this.sentenceInputTimeoutRef) {
+                    clearTimeout(this.sentenceInputTimeoutRef);
+                }
+
+                // Update the input string
+                this.sentenceNumberInput += digit;
+                console.log(`Sentence input: "${this.sentenceNumberInput}" (added digit: ${digit})`);
+
+                // Update sentence indicator to show current input
+                const tempIndicator = this.sentenceIndicator.textContent;
+                this.sentenceIndicator.textContent = `輸入句子號: ${this.sentenceNumberInput} (1.5秒後跳轉 / will jump in 1.5s)`;
+
+                // Set new timeout for 1.5 seconds
+                this.sentenceInputTimeoutRef = setTimeout(() => {
+                    const sentenceNumber = parseInt(this.sentenceNumberInput) - 1; // Decrement by 1
+
+                    if (!this.sentences || this.sentences.length === 0) {
+                        console.warn('No sentences available');
+                        this.sentenceIndicator.textContent = '無文字 No text loaded';
+                        this.sentenceNumberInput = '';
+                        return;
+                    }
+
+                    if (sentenceNumber >= 0 && sentenceNumber < this.sentences.length) {
+                        console.log(`Jumping to sentence ${sentenceNumber}`);
+                        console.log(`Sentence text: "${this.sentences[sentenceNumber].text}"`);
+
+                        // Copy sentence text with gloss prompt to clipboard
+                        const sentenceText = this.sentences[sentenceNumber].text;
+                        const glossPrompt = `Given this Chinese text "${sentenceText}" please show the original Chinese and then provide a detailed breakdown with pinyin and English translations for each word/phrase.`;
+
+                        navigator.clipboard.writeText(glossPrompt).then(() => {
+                            console.log('Gloss prompt copied to clipboard');
+                        }).catch(err => {
+                            console.error('Failed to copy to clipboard:', err);
+                        });
+
+                        // Stop any ongoing speech
+                        this.stop();
+
+                        // Update sentence position
+                        this.currentSentenceIndex = sentenceNumber;
+                        this.currentCharIndex = this.sentences[this.currentSentenceIndex].startCharIndex;
+
+                        // Update UI
+                        this.updateProgress();
+                        this.updateSentenceIndicator();
+                        this.clearHighlights();
+
+                        this.updateStatus(`跳至句子 ${sentenceNumber + 1} / ${this.sentences.length} / Jumped to sentence ${sentenceNumber + 1}`);
+                    } else {
+                        console.warn(`Invalid sentence number: ${sentenceNumber + 1}. Valid range: 1-${this.sentences.length}`);
+                        this.updateStatus(`無效句子號 Invalid sentence #: ${sentenceNumber + 1}. 有效範圍 Valid: 1-${this.sentences.length}`);
+                        this.updateSentenceIndicator();
+                    }
+
+                    // Reset the input after processing
+                    this.sentenceNumberInput = '';
+                }, 1500);
+            }
+
+            updateSentenceIndicator() {
+                if (!this.sentences || this.sentences.length === 0) {
+                    this.sentenceIndicator.textContent = '準備閱讀 Ready to read...';
+                    this.prevSentenceButton.disabled = true;
+                    this.nextSentenceButton.disabled = true;
+                    return;
+                }
+
+                if (this.currentSentenceIndex >= this.sentences.length) {
+                    this.currentSentenceIndex = this.sentences.length - 1;
+                }
+                if (this.currentSentenceIndex < 0) {
+                    this.currentSentenceIndex = 0;
+                }
+
+                const currentSentence = this.sentences[this.currentSentenceIndex];
+                if (!currentSentence) {
+                    this.sentenceIndicator.textContent = '準備閱讀 Ready to read...';
+                    return;
+                }
+
+                const firstChars = currentSentence.text.substring(0, 3);
+
+                this.sentenceIndicator.textContent = `${this.currentSentenceIndex + 1}/${this.sentences.length}: ${firstChars}...`;
+
+                this.prevSentenceButton.disabled = this.currentSentenceIndex === 0;
+                this.nextSentenceButton.disabled = this.currentSentenceIndex === this.sentences.length - 1;
+            }
+
+            togglePlayPause() {
+                if (this.isPlaying) {
+                    this.pause();
+                    this.stop();
+                } else {
+                    this.play();
+                }
+            }
+
+            play() {
+                if (!this.chars.length) {
+                    this.updateStatus('請先輸入文字 Please enter some text first');
+                    return;
+                }
+
+                if (!this.sentences || this.sentences.length === 0) {
+                    this.updateStatus('找不到句子 No sentences found to read');
+                    return;
+                }
+
+                if (this.isPaused) {
+                    this.resumeReading();
+                } else {
+                    this.startReading();
+                }
+            }
+
+            startReading() {
+                this.stop();
+
+                setTimeout(() => {
+                    this.isPlaying = true;
+                    this.isPaused = false;
+                    this.updateButtonStates();
+                    this.speakCurrentSentence();
+                }, 100);
+            }
+
+            resumeReading() {
+                if (window.speechSynthesis.paused) {
+                    window.speechSynthesis.resume();
+                    this.isPaused = false;
+                    this.updateButtonStates();
+                    this.updateStatus('繼續播放 Resumed reading');
+                }
+            }
+
+            pause() {
+                if (this.isPlaying) {
+                    window.speechSynthesis.pause();
+                    this.isPaused = true;
+                    this.updateButtonStates();
+                    this.updateStatus('已暫停 Paused');
+                }
+            }
+
+            stop() {
+                window.speechSynthesis.cancel();
+
+                if (this.charHighlightTimer) {
+                    clearInterval(this.charHighlightTimer);
+                    this.charHighlightTimer = null;
+                }
+
+                if (this.utterance) {
+                    this.utterance.onend = null;
+                    this.utterance.onerror = null;
+                    this.utterance = null;
+                }
+
+                this.isPlaying = false;
+                this.isPaused = false;
+                this.clearHighlights();
+                this.updateButtonStates();
+
+                if (arguments.length === 0) {
+                    this.updateStatus('已停止 Stopped');
+                }
+            }
+
+            async reset() {
+                this.stop();
+
+                const shouldPaste = confirm('從剪貼板貼上新內容？\nPaste new content from clipboard?\n\nYes = Paste from clipboard\nNo = Reset to sentence 1');
+
+                if (shouldPaste) {
+                    await this.pasteFromClipboard();
+                } else {
+                    this.currentCharIndex = 0;
+                    this.currentSentenceIndex = 0;
+                    this.updateProgress();
+                    this.updateSentenceIndicator();
+                    this.updateStatus('已重設至開頭 Reset to beginning');
+                }
+            }
+
+            async breakdownSelectedText() {
+                // Get the selection from the reading area
+                const selection = window.getSelection();
+                const selectedText = selection.toString().trim();
+
+                if (!selectedText) {
+                    this.updateStatus('請先選擇文字 Please select text in the reading area first');
+                    return;
+                }
+
+                // Get current value from input field
+                const contextInput = document.getElementById('contextInput');
+                const currentValue = contextInput.value.trim();
+
+                // Prompt user for additional instructions (book/chapter or extra context like "give jyutping")
+                const userInstructions = prompt('額外說明 | Additional instructions (e.g., book/chapter, "give jyutping", etc.):', currentValue || '');
+
+                // If user cancels the prompt, don't proceed
+                if (userInstructions === null) {
+                    this.updateStatus('分解已取消 Breakdown cancelled');
+                    return;
+                }
+
+                // Update the input field with the new value
+                if (userInstructions !== currentValue) {
+                    contextInput.value = userInstructions;
+                }
+
+                // Create the gloss and translate prompt
+                const breakdownPrompt = `Please gloss over this and translate:\n\n${userInstructions}\n\n${selectedText}`;
+
+                try {
+                    // Copy to clipboard
+                    await navigator.clipboard.writeText(breakdownPrompt);
+                    this.updateStatus(`分解提示已複製到剪貼板！ Breakdown prompt copied to clipboard! (${selectedText.length} characters selected)`);
+                } catch (err) {
+                    console.error('Failed to copy to clipboard:', err);
+                    this.updateStatus('無法複製到剪貼板 Failed to copy to clipboard');
+                }
+            }
+
+            jumpToChar(charIndex) {
+                if (charIndex >= 0 && charIndex < this.chars.length) {
+                    this.stop();
+                    this.currentCharIndex = charIndex;
+
+                    // Find which sentence this char belongs to
+                    for (let i = 0; i < this.sentences.length; i++) {
+                        const sentence = this.sentences[i];
+                        if (charIndex >= sentence.startCharIndex && charIndex <= sentence.endCharIndex) {
+                            this.currentSentenceIndex = i;
+                            break;
+                        }
+                    }
+
+                    this.updateProgress();
+                    this.updateSentenceIndicator();
+                    this.updateStatus(`跳至字符 ${charIndex + 1} / Jumped to character ${charIndex + 1}`);
+                }
+            }
+
+            speakCurrentSentence() {
+                if (this.currentSentenceIndex >= this.sentences.length) {
+                    this.onReadingComplete();
+                    return;
+                }
+
+                const sentence = this.sentences[this.currentSentenceIndex];
+
+                this.updateSentenceIndicator();
+                this.updateProgress();
+                this.updateStatus(`閱讀句子 ${this.currentSentenceIndex + 1} / ${this.sentences.length}`);
+
+                this.sentenceStartTime = performance.now();
+
+                // Start character highlighting
+                this.startCharHighlighting(sentence);
+
+                // Filter sentence text to only include Chinese characters and punctuation
+                // Keep only Chinese characters (Unicode range \u4e00-\u9fff) and Chinese punctuation
+                const chineseOnlyText = sentence.text.replace(/[^\u4e00-\u9fff\u3000-\u303f\uff00-\uffef]/g, '').trim();
+
+                console.log('📝 Original text:', sentence.text);
+                console.log('🇨🇳 Filtered Chinese only:', chineseOnlyText);
+
+                this.utterance = new SpeechSynthesisUtterance(chineseOnlyText);
+                this.utterance.rate = parseFloat(this.speedSelect.value);
+                this.utterance.pitch = 1;
+                this.utterance.volume = 1;
+
+                // Get selected language (Mandarin or Cantonese)
+                const selectedLang = this.mandarinRadio.checked ? 'zh-CN' : 'zh-HK';
+                this.utterance.lang = selectedLang;
+
+                console.log('🎤 Selected language:', selectedLang);
+                console.log('📻 Radio buttons - Mandarin:', this.mandarinRadio.checked, 'Cantonese:', this.cantoneseRadio.checked);
+
+                // Voice selection for Chinese - prioritize Google voices
+                const voices = speechSynthesis.getVoices();
+                console.log('🔊 Total voices available:', voices.length);
+
+                // Debug: Show all Chinese voices
+                const allChineseVoices = voices.filter(v => v.lang.startsWith('zh'));
+                console.log('🇨🇳 All Chinese voices:', allChineseVoices.map(v => `${v.name} (${v.lang})`));
+
+                if (voices.length > 0) {
+                    // Try to find Google voices first - EXACT match
+                    let chineseVoice = voices.find(voice =>
+                        voice.lang === selectedLang && voice.name.includes('Google')
+                    );
+                    console.log('🔍 Google voice search for', selectedLang, ':', chineseVoice ? chineseVoice.name : 'NOT FOUND');
+
+                    // If no exact Google voice, try Enhanced/Premium voices - EXACT match
+                    if (!chineseVoice) {
+                        chineseVoice = voices.find(voice =>
+                            voice.lang === selectedLang &&
+                            (voice.name.includes('Enhanced') || voice.name.includes('Premium'))
+                        );
+                        console.log('🔍 Enhanced/Premium voice search:', chineseVoice ? chineseVoice.name : 'NOT FOUND');
+                    }
+
+                    // Fall back to any voice with EXACT language match
+                    if (!chineseVoice) {
+                        chineseVoice = voices.find(voice => voice.lang === selectedLang);
+                        console.log('🔍 Any exact match voice search:', chineseVoice ? chineseVoice.name : 'NOT FOUND');
+                    }
+
+                    // Last resort: startsWith match (for variations like zh-CN-Liaoning)
+                    if (!chineseVoice) {
+                        chineseVoice = voices.find(voice => voice.lang.startsWith(selectedLang));
+                        console.log('🔍 StartsWith match voice search:', chineseVoice ? chineseVoice.name : 'NOT FOUND');
+                    }
+
+                    if (chineseVoice) {
+                        this.utterance.voice = chineseVoice;
+                        console.log('✅ Using voice:', chineseVoice.name, chineseVoice.lang);
+                    } else {
+                        console.log('❌ No Chinese voice found, using default');
+                    }
+                }
+
+                this.utterance.onend = () => {
+                    if (this.charHighlightTimer) {
+                        clearInterval(this.charHighlightTimer);
+                        this.charHighlightTimer = null;
+                    }
+
+                    if (this.isPlaying && !this.isPaused) {
+                        this.currentSentenceIndex++;
+
+                        setTimeout(() => {
+                            if (this.isPlaying && !this.isPaused) {
+                                this.speakCurrentSentence();
+                            }
+                        }, 300);
+                    }
+                };
+
+                this.utterance.onerror = (event) => {
+                    console.error('Speech synthesis error:', event);
+
+                    if (this.charHighlightTimer) {
+                        clearInterval(this.charHighlightTimer);
+                        this.charHighlightTimer = null;
+                    }
+
+                    this.updateStatus(`語音錯誤 Speech error - trying to continue`);
+                    if (this.isPlaying && !this.isPaused) {
+                        this.currentSentenceIndex++;
+                        setTimeout(() => {
+                            if (this.isPlaying && !this.isPaused) {
+                                this.speakCurrentSentence();
+                            }
+                        }, 500);
+                    }
+                };
+
+                speechSynthesis.cancel();
+
+                setTimeout(() => {
+                    if (this.isPlaying && !this.isPaused && this.utterance) {
+                        speechSynthesis.speak(this.utterance);
+                    }
+                }, 150);
+            }
+
+            startCharHighlighting(sentence) {
+                if (this.charHighlightTimer) {
+                    clearInterval(this.charHighlightTimer);
+                    this.charHighlightTimer = null;
+                }
+
+                // Chinese characters per minute at 1x speed
+                const baseCharsPerMinute = 250;
+                const currentRate = parseFloat(this.speedSelect.value);
+                const actualCharsPerMinute = baseCharsPerMinute * currentRate;
+                let millisecondsPerChar = (60 * 1000) / actualCharsPerMinute;
+
+                millisecondsPerChar *= this.actualTimingAdjustment;
+
+                const sentenceStartupDelay = 150;
+                const charProcessingAdjustment = 0.85;
+                const adjustedMillisecondsPerChar = millisecondsPerChar * charProcessingAdjustment;
+
+                const charsInSentence = sentence.endCharIndex - sentence.startCharIndex + 1;
+                let currentCharInSentence = 0;
+
+                setTimeout(() => {
+                    if (!this.isPlaying || this.isPaused) return;
+
+                    const globalCharIndex = sentence.startCharIndex + currentCharInSentence;
+                    this.highlightChar(globalCharIndex);
+                    currentCharInSentence++;
+
+                    this.charHighlightTimer = setInterval(() => {
+                        if (!this.isPlaying || this.isPaused || currentCharInSentence >= charsInSentence) {
+                            if (this.charHighlightTimer) {
+                                clearInterval(this.charHighlightTimer);
+                                this.charHighlightTimer = null;
+                            }
+                            return;
+                        }
+
+                        const globalCharIndex = sentence.startCharIndex + currentCharInSentence;
+                        this.highlightChar(globalCharIndex);
+                        currentCharInSentence++;
+                    }, adjustedMillisecondsPerChar);
+
+                }, sentenceStartupDelay);
+            }
+
+            highlightChar(charIndex) {
+                this.clearHighlights();
+
+                const charElements = this.readingArea.querySelectorAll('.char');
+                if (charElements[charIndex]) {
+                    charElements[charIndex].classList.add('current');
+                    this.currentCharIndex = charIndex;
+
+                    // Auto-scroll to keep current character visible
+                    charElements[charIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    if (this.charHighlightTimer) {
+                        clearInterval(this.charHighlightTimer);
+                        this.charHighlightTimer = null;
+                    }
+                    return;
+                }
+            }
+
+            clearHighlights() {
+                const charElements = this.readingArea.querySelectorAll('.char');
+                charElements.forEach(el => {
+                    el.classList.remove('current');
+                });
+            }
+
+            updateProgress() {
+                const progress = this.sentences && this.sentences.length > 0 ? (this.currentSentenceIndex / this.sentences.length) * 100 : 0;
+                this.progressFill.style.width = `${progress}%`;
+            }
+
+            updateSpeed() {
+                this.updateStatus(`速度已改為 ${this.speedSelect.value}x / Speed changed to ${this.speedSelect.value}x`);
+            }
+
+            updateButtonStates() {
+                if (this.isPlaying) {
+                    this.playButton.textContent = '⏸️ 暫停 Pause';
+                    this.playButton.classList.remove('success-button');
+                    this.playButton.classList.add('secondary-button');
+                } else {
+                    this.playButton.textContent = '▶️ 播放 Play';
+                    this.playButton.classList.remove('secondary-button');
+                    this.playButton.classList.add('success-button');
+                }
+                this.stopButton.disabled = !this.isPlaying;
+            }
+
+            updateStatus(message) {
+                this.statusDisplay.textContent = message;
+            }
+
+            onReadingComplete() {
+                this.isPlaying = false;
+                this.isPaused = false;
+                this.clearHighlights();
+                this.updateButtonStates();
+                this.updateProgress();
+                this.updateStatus('閱讀完成！ Reading completed!');
+            }
+        }
+
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', () => {
+            speechSynthesis.addEventListener('voiceschanged', () => {
+                speechSynthesis.getVoices();
+            });
+
+            new ChineseTextToSpeech();
+        });
+    </script>
+</body>
+</html>

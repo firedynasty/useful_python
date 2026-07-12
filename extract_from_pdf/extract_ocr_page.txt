@@ -1,0 +1,6 @@
+ Done. Uses Claude Vision instead of OCR — much better for scanned pages.
+
+  python grab_text_from_pdf.py "French, Teach Yourself Everyday (Wilson).pdf" -p
+   35
+                                                                                
+  Text gets copied straight to clipboard. Requires ANTHROPIC_API_KEY set.

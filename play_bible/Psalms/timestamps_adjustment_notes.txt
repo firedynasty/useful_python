@@ -1,0 +1,39 @@
+Psalms Timestamps Adjustment Notes
+===================================
+
+Issue:
+------
+The original timestamp calculation showed Psalm 4 starting at 3:25, but in the
+concatenated file it actually starts at ~3:27. Over 150 files, this discrepancy
+grew to about 1 minute by the end.
+
+Cause:
+------
+The original script used integer truncation to convert durations:
+
+    int_secs=${duration%.*}
+
+This drops the decimal portion of each file's duration. For example:
+    - Psalms01.mp3: 56.090750s → truncated to 56s (lost 0.09s)
+    - Psalms02.mp3: 85.112750s → truncated to 85s (lost 0.11s)
+    - Psalms03.mp3: 64.815750s → truncated to 64s (lost 0.82s)
+
+Over 150 files, losing ~0.5 seconds per file adds up to ~75 seconds total.
+
+Solution:
+---------
+Changed to use floating-point arithmetic with 'bc' calculator:
+
+    total_secs=$(echo "$total_secs + $duration" | bc)
+
+This accumulates the precise duration before converting to display format.
+
+Result:
+-------
+Before adjustment: Psalms03 = 3:25, Psalms150 = 5:11:04
+After adjustment:  Psalms03 = 3:26, Psalms150 = 5:12:20
+
+Note:
+-----
+There may still be ~1 second variance between these timestamps and the actual
+concatenated file due to MP3 frame alignment padding added during concatenation.

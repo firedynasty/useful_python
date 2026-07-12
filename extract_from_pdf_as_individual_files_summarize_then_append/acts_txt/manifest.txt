@@ -1,0 +1,32 @@
+# MHC Extraction Manifest
+# Use this to track summarization progress
+
+Acts Ch.0: ./acts_txt/44_Acts/ch000.txt
+Acts Ch.1: ./acts_txt/44_Acts/ch001.txt
+Acts Ch.2: ./acts_txt/44_Acts/ch002.txt
+Acts Ch.3: ./acts_txt/44_Acts/ch003.txt
+Acts Ch.4: ./acts_txt/44_Acts/ch004.txt
+Acts Ch.5: ./acts_txt/44_Acts/ch005.txt
+Acts Ch.6: ./acts_txt/44_Acts/ch006.txt
+Acts Ch.7: ./acts_txt/44_Acts/ch007.txt
+Acts Ch.8: ./acts_txt/44_Acts/ch008.txt
+Acts Ch.9: ./acts_txt/44_Acts/ch009.txt
+Acts Ch.10: ./acts_txt/44_Acts/ch010.txt
+Acts Ch.11: ./acts_txt/44_Acts/ch011.txt
+Acts Ch.12: ./acts_txt/44_Acts/ch012.txt
+Acts Ch.13: ./acts_txt/44_Acts/ch013.txt
+Acts Ch.14: ./acts_txt/44_Acts/ch014.txt
+Acts Ch.15: ./acts_txt/44_Acts/ch015.txt
+Acts Ch.16: ./acts_txt/44_Acts/ch016.txt
+Acts Ch.17: ./acts_txt/44_Acts/ch017.txt
+Acts Ch.18: ./acts_txt/44_Acts/ch018.txt
+Acts Ch.19: ./acts_txt/44_Acts/ch019.txt
+Acts Ch.20: ./acts_txt/44_Acts/ch020.txt
+Acts Ch.21: ./acts_txt/44_Acts/ch021.txt
+Acts Ch.22: ./acts_txt/44_Acts/ch022.txt
+Acts Ch.23: ./acts_txt/44_Acts/ch023.txt
+Acts Ch.24: ./acts_txt/44_Acts/ch024.txt
+Acts Ch.25: ./acts_txt/44_Acts/ch025.txt
+Acts Ch.26: ./acts_txt/44_Acts/ch026.txt
+Acts Ch.27: ./acts_txt/44_Acts/ch027.txt
+Acts Ch.28: ./acts_txt/44_Acts/ch028.txt

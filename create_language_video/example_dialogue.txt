@@ -1,0 +1,25 @@
+[Scene 1]
+A: Ate, ano po ang ulam ngayon?
+B: Ate, what are the dishes today?
+
+A: Meron tayong adobo, sinigang, at pinakbet.
+B: We have adobo, sinigang, and pinakbet.
+
+A: Magkano po ang adobo?
+B: How much is the adobo?
+
+A: Sisenta pesos lang po.
+B: Just sixty pesos.
+
+[Scene 2]
+A: Sige po, pabili ng isang adobo tapos dalawang kanin.
+B: Okay, I'll have one adobo and two rice.
+
+A: May gusto ka pa bang iba?
+B: Do you want anything else?
+
+A: Meron po bang sabaw?
+B: Do you have soup?
+
+A: Oo naman, libre ang sabaw.
+B: Of course, the soup is free.

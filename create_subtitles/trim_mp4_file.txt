@@ -1,0 +1,5 @@
+ffmpeg -i output_subtitled.mp4 -t 300 -c:v libx264 -b:v 350k -c:a aac -b:a 64k trimmed_video.mp4
+
+document.querySelector('ytd-watch-metadata yt-formatted-string.ytd-watch-metadata').style.marginTop = '200px';  
+
+

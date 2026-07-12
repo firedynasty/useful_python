@@ -1,0 +1,68 @@
+Write a natural Chinese conversation between two people meeting for the first
+  time at a café.                                                               
+   
+  Vocabulary constraint — this is strict:                                       
+  You MUST use all 20 of these words:   ┌─────┬──────┬─────────┬───────────────────────────┐                          
+  │  #  │ Word │ Pinyin  │          Meaning          │                          
+  ├─────┼──────┼─────────┼───────────────────────────┤                          
+  │ 41  │ 可以 │ kěyǐ    │ can; may                  │                          
+  ├─────┼──────┼─────────┼───────────────────────────┤                          
+  │ 42  │ 大   │ dà      │ big; large                │                          
+  ├─────┼──────┼─────────┼───────────────────────────┤
+  │ 43  │ 下   │ xià     │ down; below               │                          
+  ├─────┼──────┼─────────┼───────────────────────────┤                          
+  │ 44  │ 里   │ lǐ      │ inside; in                │                          
+  ├─────┼──────┼─────────┼───────────────────────────┤                          
+  │ 45  │ 真   │ zhēn    │ really; truly             │                          
+  ├─────┼──────┼─────────┼───────────────────────────┤                          
+  │ 46  │ 现在 │ xiànzài │ now                       │                          
+  ├─────┼──────┼─────────┼───────────────────────────┤                          
+  │ 47  │ 年   │ nián    │ year                      │                          
+  ├─────┼──────┼─────────┼───────────────────────────┤                          
+  │ 48  │ 多   │ duō     │ many; much                │                          
+  ├─────┼──────┼─────────┼───────────────────────────┤                          
+  │ 49  │ 两   │ liǎng   │ two (of something)        │                          
+  ├─────┼──────┼─────────┼───────────────────────────┤                          
+  │ 50  │ 吗   │ ma      │ question particle         │                          
+  ├─────┼──────┼─────────┼───────────────────────────┤                          
+  │ 51  │ 天   │ tiān    │ day; sky                  │                        
+  ├─────┼──────┼─────────┼───────────────────────────┤                          
+  │ 52  │ 太   │ tài     │ too (excessive)           │
+  ├─────┼──────┼─────────┼───────────────────────────┤                          
+  │ 53  │ 再   │ zài     │ again                     │                        
+  ├─────┼──────┼─────────┼───────────────────────────┤                          
+  │ 54  │ 呢   │ ne      │ "what about...?" particle │
+  ├─────┼──────┼─────────┼───────────────────────────┤                          
+  │ 55  │ 只   │ zhǐ     │ only                      │                        
+  ├─────┼──────┼─────────┼───────────────────────────┤                        
+  │ 56  │ 小   │ xiǎo    │ small                     │
+  ├─────┼──────┼─────────┼───────────────────────────┤                          
+  │ 57  │ 知道 │ zhīdào  │ to know                   │  
+  ├─────┼──────┼─────────┼───────────────────────────┤                          
+  │ 58  │ 时候 │ shíhou  │ time; moment              │                        
+  ├─────┼──────┼─────────┼───────────────────────────┤                          
+  │ 59  │ 问题 │ wèntí   │ question; problem         │        
+  ├─────┼──────┼─────────┼───────────────────────────┤                          
+  │ 60  │ 工作 │ gōngzuò │ to work; job              │         
+                                                                                                                                   
+                                                                                
+  Format: A: is always the Chinese line, P: is the pinyin, B: is always the     
+  English translation.                                                        
+  Each A line is immediately followed by its P pinyin, then its B translation.  
+                  
+  Example:                                                                    
+  [Scene 1]
+  A: 你好！
+  P: Nǐ hǎo!                                                                    
+  B: Hello!
+                                                                                
+  Rules:          
+  - A: is ALWAYS Chinese characters, P: is ALWAYS the pinyin of the A line, B:
+  is ALWAYS the English translation                                             
+  - Natural spoken Mandarin Chinese
+  - Group into [Scene 1], [Scene 2], etc.                                       
+  - 15-20 exchanges total                
+  - Keep lines short and conversational                                       
+  - Pinyin must use tone marks (e.g. māmá, not mama)
+  - Every word from the 20-word vocabulary list must appear at least once
+  - Strictly NO vocabulary outside the two allowed groups    

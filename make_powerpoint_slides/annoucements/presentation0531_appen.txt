@@ -1,0 +1,11 @@
+sampple.txt
+
+
+the text is **bolded font**
+
+then there is a bullet point
+
+then run by python make_annoucement.py -i file.md -o presentation0531.pptx
+
+
+then, adjust the font in .pptx 

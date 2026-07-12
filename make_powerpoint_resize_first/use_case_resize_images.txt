@@ -1,0 +1,67 @@
+
+
+⏺ Yes, resize_images.py **batch processes an entire folder of images**. Here's how
+
+ it works:                                   
+
+​                                         
+
+ **What it does (2-step pipeline)**                         
+
+​                                         
+
+1. **Crops** the top 120px from each image (removes a presentation toolbar/bar)  
+2. **Resizes** to fit within **1920x1080**, maintaining aspect ratio, centered on a  
+
+ black canvas                                  
+
+​                                         
+
+ JPG/JPEG inputs are converted to PNG for better quality.            
+
+​          
+
+ **Usage**                                     
+
+​          
+
+ python resize_images.py <input_folder> <output_folder> [crop_pixels]     
+
+
+
+ **Examples:**                                   
+
+ \# Default: crop 120px from top, then resize to 1920x1080
+
+ python resize_images.py ./nov1 ./nov1_resized                 
+
+​                        
+
+ \# Custom crop: only crop 40px from top                     
+
+ python resize_images.py ./nov1 ./nov1_resized 40
+
+​                                         
+
+ \# No crop (0px) 
+
+ python resize_images.py ./nov1 ./nov1_resized 0                
+
+ 
+
+ **Key details**                                  
+
+​          
+
+ \- **Supported formats**: .png, .jpg, .jpeg, .gif, .bmp, .tiff, .webp        
+
+ \- **Output folder** is created automatically if it doesn't exist
+
+ \- **Input and output folders must be different** (won't overwrite originals)    
+
+ \- **Requires**: pip install Pillow (the PIL library)
+
+​                             
+
+
+

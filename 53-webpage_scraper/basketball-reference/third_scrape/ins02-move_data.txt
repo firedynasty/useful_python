@@ -1,0 +1,5 @@
+then go to the data folder and move schedule over
+
+then, use python 03-script, nba_schedule.csv
+
+will create nba_schedule_1.csv

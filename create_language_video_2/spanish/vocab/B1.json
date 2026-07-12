@@ -1,0 +1,4202 @@
+[
+  {
+    "spanish": "boca",
+    "english": "mouth",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 54512
+  },
+  {
+    "spanish": "dejó",
+    "english": "left; allowed",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 54435
+  },
+  {
+    "spanish": "error",
+    "english": "mistake; error",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 54414
+  },
+  {
+    "spanish": "jamás",
+    "english": "never; ever",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 54158
+  },
+  {
+    "spanish": "largo",
+    "english": "long",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 53833
+  },
+  {
+    "spanish": "pena",
+    "english": "sorrow; pity",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 53618
+  },
+  {
+    "spanish": "voz",
+    "english": "voice",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 53574
+  },
+  {
+    "spanish": "futuro",
+    "english": "future",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 53557
+  },
+  {
+    "spanish": "siente",
+    "english": "feels",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 53518
+  },
+  {
+    "spanish": "secreto",
+    "english": "secret",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 53504
+  },
+  {
+    "spanish": "baño",
+    "english": "bathroom; bath",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 53455
+  },
+  {
+    "spanish": "mil",
+    "english": "thousand",
+    "pos": "determiner",
+    "gender": null,
+    "frequency": 53364
+  },
+  {
+    "spanish": "decirte",
+    "english": "to tell you",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 53207
+  },
+  {
+    "spanish": "sam",
+    "english": "Sam",
+    "pos": "noun",
+    "gender": null,
+    "frequency": 53082
+  },
+  {
+    "spanish": "pensaba",
+    "english": "thought",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 53018
+  },
+  {
+    "spanish": "novia",
+    "english": "girlfriend; bride",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 52984
+  },
+  {
+    "spanish": "propia",
+    "english": "own",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 52973
+  },
+  {
+    "spanish": "sueño",
+    "english": "dream; sleep",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 52956
+  },
+  {
+    "spanish": "haz",
+    "english": "do; make",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 52344
+  },
+  {
+    "spanish": "fuerza",
+    "english": "strength; force",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 52316
+  },
+  {
+    "spanish": "deben",
+    "english": "must; should",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 52297
+  },
+  {
+    "spanish": "supone",
+    "english": "supposes; assumes",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 52250
+  },
+  {
+    "spanish": "estábamos",
+    "english": "we were",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 52003
+  },
+  {
+    "spanish": "ambos",
+    "english": "both",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 51916
+  },
+  {
+    "spanish": "ay",
+    "english": "oh; alas",
+    "pos": "interjection",
+    "gender": null,
+    "frequency": 51890
+  },
+  {
+    "spanish": "estuve",
+    "english": "I was",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 51592
+  },
+  {
+    "spanish": "encontré",
+    "english": "found",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 51507
+  },
+  {
+    "spanish": "vuelto",
+    "english": "returned",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 51505
+  },
+  {
+    "spanish": "dolor",
+    "english": "pain; ache",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 51283
+  },
+  {
+    "spanish": "dile",
+    "english": "tell him; tell her",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 51271
+  },
+  {
+    "spanish": "encanta",
+    "english": "loves; delights",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 51240
+  },
+  {
+    "spanish": "edad",
+    "english": "age",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 51163
+  },
+  {
+    "spanish": "darle",
+    "english": "to give him; to give her",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 51120
+  },
+  {
+    "spanish": "pie",
+    "english": "foot",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 51066
+  },
+  {
+    "spanish": "negro",
+    "english": "black",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 50987
+  },
+  {
+    "spanish": "ganar",
+    "english": "to win; to earn",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 50970
+  },
+  {
+    "spanish": "york",
+    "english": "York",
+    "pos": "noun",
+    "gender": null,
+    "frequency": 50964
+  },
+  {
+    "spanish": "aire",
+    "english": "air",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 50788
+  },
+  {
+    "spanish": "lamento",
+    "english": "regret; lament",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 50766
+  },
+  {
+    "spanish": "verlo",
+    "english": "to see him; to see it",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 50765
+  },
+  {
+    "spanish": "asesinato",
+    "english": "murder; assassination",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 50759
+  },
+  {
+    "spanish": "vio",
+    "english": "saw",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 50756
+  },
+  {
+    "spanish": "adónde",
+    "english": "where to",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 50674
+  },
+  {
+    "spanish": "llegado",
+    "english": "arrived",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 50534
+  },
+  {
+    "spanish": "disculpe",
+    "english": "excuse me; sorry",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 50520
+  },
+  {
+    "spanish": "cita",
+    "english": "appointment; date",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 50399
+  },
+  {
+    "spanish": "estaría",
+    "english": "would be",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 50270
+  },
+  {
+    "spanish": "fuiste",
+    "english": "you were; you went",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 50201
+  },
+  {
+    "spanish": "sistema",
+    "english": "system",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 50050
+  },
+  {
+    "spanish": "gusto",
+    "english": "taste; pleasure",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 50039
+  },
+  {
+    "spanish": "pobre",
+    "english": "poor",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 50019
+  },
+  {
+    "spanish": "negocio",
+    "english": "business; deal",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 49896
+  },
+  {
+    "spanish": "mente",
+    "english": "mind",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 49842
+  },
+  {
+    "spanish": "tuyo",
+    "english": "yours",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 49799
+  },
+  {
+    "spanish": "campo",
+    "english": "field; countryside",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 49614
+  },
+  {
+    "spanish": "mire",
+    "english": "look",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 49575
+  },
+  {
+    "spanish": "situación",
+    "english": "situation",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 49426
+  },
+  {
+    "spanish": "tras",
+    "english": "after; behind",
+    "pos": "preposition",
+    "gender": null,
+    "frequency": 49345
+  },
+  {
+    "spanish": "hotel",
+    "english": "hotel",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 49177
+  },
+  {
+    "spanish": "vosotros",
+    "english": "you all",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 49111
+  },
+  {
+    "spanish": "funciona",
+    "english": "works; functions",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 48956
+  },
+  {
+    "spanish": "foto",
+    "english": "photo",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 48915
+  },
+  {
+    "spanish": "abogado",
+    "english": "lawyer",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 48914
+  },
+  {
+    "spanish": "loca",
+    "english": "crazy",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 48859
+  },
+  {
+    "spanish": "propio",
+    "english": "own",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 48844
+  },
+  {
+    "spanish": "alrededor",
+    "english": "around",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 48767
+  },
+  {
+    "spanish": "próxima",
+    "english": "next",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 48701
+  },
+  {
+    "spanish": "terminado",
+    "english": "finished",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 48673
+  },
+  {
+    "spanish": "hablas",
+    "english": "you speak",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 48652
+  },
+  {
+    "spanish": "pagar",
+    "english": "to pay",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 48636
+  },
+  {
+    "spanish": "mató",
+    "english": "killed",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 48583
+  },
+  {
+    "spanish": "llamo",
+    "english": "I call",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 48473
+  },
+  {
+    "spanish": "personal",
+    "english": "personal",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 48419
+  },
+  {
+    "spanish": "sientes",
+    "english": "you feel",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 48410
+  },
+  {
+    "spanish": "ocurre",
+    "english": "happens",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 48364
+  },
+  {
+    "spanish": "ésta",
+    "english": "this",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 48338
+  },
+  {
+    "spanish": "recuerda",
+    "english": "remembers",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 48335
+  },
+  {
+    "spanish": "mitad",
+    "english": "half",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 48317
+  },
+  {
+    "spanish": "quiera",
+    "english": "wants",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 48299
+  },
+  {
+    "spanish": "pelo",
+    "english": "hair",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 48293
+  },
+  {
+    "spanish": "tenías",
+    "english": "you had",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 48183
+  },
+  {
+    "spanish": "viste",
+    "english": "you saw",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 47962
+  },
+  {
+    "spanish": "oficial",
+    "english": "official",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 47960
+  },
+  {
+    "spanish": "llegó",
+    "english": "arrived",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 47852
+  },
+  {
+    "spanish": "compañía",
+    "english": "company",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 47842
+  },
+  {
+    "spanish": "relación",
+    "english": "relationship",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 47824
+  },
+  {
+    "spanish": "conoce",
+    "english": "knows",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 47688
+  },
+  {
+    "spanish": "pase",
+    "english": "pass",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 47622
+  },
+  {
+    "spanish": "montón",
+    "english": "pile; lot",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 47610
+  },
+  {
+    "spanish": "mejores",
+    "english": "better; best",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 47509
+  },
+  {
+    "spanish": "creí",
+    "english": "I believed",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 47494
+  },
+  {
+    "spanish": "cena",
+    "english": "dinner",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 47357
+  },
+  {
+    "spanish": "sentir",
+    "english": "to feel",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 47337
+  },
+  {
+    "spanish": "través",
+    "english": "through",
+    "pos": "preposition",
+    "gender": null,
+    "frequency": 47295
+  },
+  {
+    "spanish": "accidente",
+    "english": "accident",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 47117
+  },
+  {
+    "spanish": "ellas",
+    "english": "they",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 46892
+  },
+  {
+    "spanish": "caja",
+    "english": "box",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 46635
+  },
+  {
+    "spanish": "tranquilo",
+    "english": "calm; quiet",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 46587
+  },
+  {
+    "spanish": "bonito",
+    "english": "pretty; nice",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 46554
+  },
+  {
+    "spanish": "eras",
+    "english": "you were",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 46544
+  },
+  {
+    "spanish": "asi",
+    "english": "like this; so",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 46535
+  },
+  {
+    "spanish": "pudo",
+    "english": "could",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 46533
+  },
+  {
+    "spanish": "vive",
+    "english": "lives",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 46462
+  },
+  {
+    "spanish": "vista",
+    "english": "view; sight",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 46461
+  },
+  {
+    "spanish": "estúpido",
+    "english": "stupid",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 46441
+  },
+  {
+    "spanish": "línea",
+    "english": "line",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 46341
+  },
+  {
+    "spanish": "caballeros",
+    "english": "gentlemen",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 46158
+  },
+  {
+    "spanish": "haremos",
+    "english": "we will do; we will make",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 46119
+  },
+  {
+    "spanish": "dan",
+    "english": "they give",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 46063
+  },
+  {
+    "spanish": "quédate",
+    "english": "stay",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 46054
+  },
+  {
+    "spanish": "tienda",
+    "english": "store; shop",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 45913
+  },
+  {
+    "spanish": "comprar",
+    "english": "to buy",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 45899
+  },
+  {
+    "spanish": "entendido",
+    "english": "understood",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 45877
+  },
+  {
+    "spanish": "centro",
+    "english": "center",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 45864
+  },
+  {
+    "spanish": "salvo",
+    "english": "except; safe",
+    "pos": "preposition",
+    "gender": null,
+    "frequency": 45755
+  },
+  {
+    "spanish": "mes",
+    "english": "month",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 45648
+  },
+  {
+    "spanish": "joe",
+    "english": "Joe",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 45615
+  },
+  {
+    "spanish": "sol",
+    "english": "sun",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 45567
+  },
+  {
+    "spanish": "tonto",
+    "english": "foolish; silly",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 45479
+  },
+  {
+    "spanish": "hambre",
+    "english": "hunger",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 45455
+  },
+  {
+    "spanish": "michael",
+    "english": "Michael",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 45411
+  },
+  {
+    "spanish": "mesa",
+    "english": "table",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 45409
+  },
+  {
+    "spanish": "respuesta",
+    "english": "answer; response",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 45345
+  },
+  {
+    "spanish": "completamente",
+    "english": "completely",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 45342
+  },
+  {
+    "spanish": "david",
+    "english": "David",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 45220
+  },
+  {
+    "spanish": "carta",
+    "english": "letter; menu",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 45152
+  },
+  {
+    "spanish": "totalmente",
+    "english": "totally",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 45016
+  },
+  {
+    "spanish": "imposible",
+    "english": "impossible",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 44898
+  },
+  {
+    "spanish": "pruebas",
+    "english": "tests; proofs",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 44861
+  },
+  {
+    "spanish": "novio",
+    "english": "boyfriend",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 44832
+  },
+  {
+    "spanish": "normal",
+    "english": "normal",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 44793
+  },
+  {
+    "spanish": "gustan",
+    "english": "they like",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 44761
+  },
+  {
+    "spanish": "frank",
+    "english": "Frank",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 44615
+  },
+  {
+    "spanish": "pude",
+    "english": "I could",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 44614
+  },
+  {
+    "spanish": "charlie",
+    "english": "Charlie",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 44589
+  },
+  {
+    "spanish": "traje",
+    "english": "suit",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 44234
+  },
+  {
+    "spanish": "dirección",
+    "english": "address; direction",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 44229
+  },
+  {
+    "spanish": "siete",
+    "english": "seven",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 44169
+  },
+  {
+    "spanish": "dijeron",
+    "english": "they said",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 44151
+  },
+  {
+    "spanish": "placer",
+    "english": "pleasure",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 44038
+  },
+  {
+    "spanish": "sean",
+    "english": "Sean",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 43979
+  },
+  {
+    "spanish": "tendrá",
+    "english": "will have",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 43656
+  },
+  {
+    "spanish": "barco",
+    "english": "boat; ship",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 43597
+  },
+  {
+    "spanish": "blanco",
+    "english": "white",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 43530
+  },
+  {
+    "spanish": "tom",
+    "english": "Tom",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 43467
+  },
+  {
+    "spanish": "profesor",
+    "english": "teacher; professor",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 43370
+  },
+  {
+    "spanish": "servicio",
+    "english": "service",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 43358
+  },
+  {
+    "spanish": "muchacho",
+    "english": "boy",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 43295
+  },
+  {
+    "spanish": "reunión",
+    "english": "meeting",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 43217
+  },
+  {
+    "spanish": "dejado",
+    "english": "left",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 43162
+  },
+  {
+    "spanish": "ley",
+    "english": "law",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 43043
+  },
+  {
+    "spanish": "quisiera",
+    "english": "would like",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 42974
+  },
+  {
+    "spanish": "hubo",
+    "english": "there was; there were",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 42830
+  },
+  {
+    "spanish": "george",
+    "english": "George",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 42765
+  },
+  {
+    "spanish": "programa",
+    "english": "program",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 42763
+  },
+  {
+    "spanish": "carrera",
+    "english": "career; race",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 42759
+  },
+  {
+    "spanish": "cumpleaños",
+    "english": "birthday",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 42596
+  },
+  {
+    "spanish": "muchachos",
+    "english": "boys; guys",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 42571
+  },
+  {
+    "spanish": "culo",
+    "english": "butt; ass",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 42470
+  },
+  {
+    "spanish": "canción",
+    "english": "song",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 42468
+  },
+  {
+    "spanish": "hermosa",
+    "english": "beautiful",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 42438
+  },
+  {
+    "spanish": "universidad",
+    "english": "university",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 42412
+  },
+  {
+    "spanish": "boda",
+    "english": "wedding",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 42403
+  },
+  {
+    "spanish": "decirme",
+    "english": "tell me",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 42378
+  },
+  {
+    "spanish": "cualquiera",
+    "english": "anyone; anybody",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 42369
+  },
+  {
+    "spanish": "tengas",
+    "english": "you have",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 42271
+  },
+  {
+    "spanish": "hacía",
+    "english": "used to do; made",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 42256
+  },
+  {
+    "spanish": "estés",
+    "english": "you are",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 42240
+  },
+  {
+    "spanish": "sala",
+    "english": "room; living room",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 42122
+  },
+  {
+    "spanish": "llevo",
+    "english": "I carry; I wear",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 42084
+  },
+  {
+    "spanish": "decisión",
+    "english": "decision",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 42011
+  },
+  {
+    "spanish": "espere",
+    "english": "wait",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 42008
+  },
+  {
+    "spanish": "don",
+    "english": "Mr.; gift",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 41978
+  },
+  {
+    "spanish": "necesario",
+    "english": "necessary",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 41752
+  },
+  {
+    "spanish": "sal",
+    "english": "salt; get out",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 41725
+  },
+  {
+    "spanish": "entra",
+    "english": "enter",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 41706
+  },
+  {
+    "spanish": "prisa",
+    "english": "hurry",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 41706
+  },
+  {
+    "spanish": "carajo",
+    "english": "damn; hell",
+    "pos": "interjection",
+    "gender": null,
+    "frequency": 41656
+  },
+  {
+    "spanish": "embargo",
+    "english": "seizure; embargo",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 41642
+  },
+  {
+    "spanish": "interesante",
+    "english": "interesting",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 41640
+  },
+  {
+    "spanish": "tendrás",
+    "english": "you will have",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 41583
+  },
+  {
+    "spanish": "escuchar",
+    "english": "to listen",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 41472
+  },
+  {
+    "spanish": "abuela",
+    "english": "grandmother",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 41377
+  },
+  {
+    "spanish": "hicieron",
+    "english": "they did; they made",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 41321
+  },
+  {
+    "spanish": "detective",
+    "english": "detective",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 41299
+  },
+  {
+    "spanish": "horrible",
+    "english": "horrible",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 41259
+  },
+  {
+    "spanish": "suelo",
+    "english": "floor; ground",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 41247
+  },
+  {
+    "spanish": "fotos",
+    "english": "photos",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 41245
+  },
+  {
+    "spanish": "cárcel",
+    "english": "prison; jail",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 41152
+  },
+  {
+    "spanish": "acá",
+    "english": "here",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 41151
+  },
+  {
+    "spanish": "io",
+    "english": "Io",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 41134
+  },
+  {
+    "spanish": "mike",
+    "english": "Mike",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 41066
+  },
+  {
+    "spanish": "siéntate",
+    "english": "sit down",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 40993
+  },
+  {
+    "spanish": "decía",
+    "english": "used to say; said",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 40982
+  },
+  {
+    "spanish": "intentando",
+    "english": "trying",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 40706
+  },
+  {
+    "spanish": "vámonos",
+    "english": "let's go",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 40700
+  },
+  {
+    "spanish": "maldición",
+    "english": "curse; damn",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 40681
+  },
+  {
+    "spanish": "silencio",
+    "english": "silence",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 40675
+  },
+  {
+    "spanish": "muerta",
+    "english": "dead",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 40660
+  },
+  {
+    "spanish": "capaz",
+    "english": "capable",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 40541
+  },
+  {
+    "spanish": "salió",
+    "english": "went out; left",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 40377
+  },
+  {
+    "spanish": "club",
+    "english": "club",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 40360
+  },
+  {
+    "spanish": "terminar",
+    "english": "to finish; to end",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 40338
+  },
+  {
+    "spanish": "temo",
+    "english": "I fear",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 40288
+  },
+  {
+    "spanish": "broma",
+    "english": "joke; prank",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 40281
+  },
+  {
+    "spanish": "gobierno",
+    "english": "government",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 40236
+  },
+  {
+    "spanish": "prometo",
+    "english": "I promise",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 40224
+  },
+  {
+    "spanish": "cámara",
+    "english": "camera; chamber",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 40045
+  },
+  {
+    "spanish": "media",
+    "english": "half; sock",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 39998
+  },
+  {
+    "spanish": "terrible",
+    "english": "terrible; awful",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 39993
+  },
+  {
+    "spanish": "llamó",
+    "english": "called",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 39922
+  },
+  {
+    "spanish": "regalo",
+    "english": "gift; present",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 39903
+  },
+  {
+    "spanish": "amable",
+    "english": "kind; friendly",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 39841
+  },
+  {
+    "spanish": "dulce",
+    "english": "sweet; candy",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 39818
+  },
+  {
+    "spanish": "muertos",
+    "english": "dead",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 39809
+  },
+  {
+    "spanish": "querías",
+    "english": "you wanted",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 39797
+  },
+  {
+    "spanish": "ataque",
+    "english": "attack",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 39782
+  },
+  {
+    "spanish": "das",
+    "english": "you give",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 39589
+  },
+  {
+    "spanish": "navidad",
+    "english": "Christmas",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 39589
+  },
+  {
+    "spanish": "negocios",
+    "english": "business",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 39553
+  },
+  {
+    "spanish": "pudiera",
+    "english": "could",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 39528
+  },
+  {
+    "spanish": "ocho",
+    "english": "eight",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 39524
+  },
+  {
+    "spanish": "avión",
+    "english": "plane; airplane",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 39484
+  },
+  {
+    "spanish": "investigación",
+    "english": "research; investigation",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 39465
+  },
+  {
+    "spanish": "acabó",
+    "english": "finished; ended",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 39429
+  },
+  {
+    "spanish": "juro",
+    "english": "I swear",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 39329
+  },
+  {
+    "spanish": "mantener",
+    "english": "to maintain; to keep",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 39327
+  },
+  {
+    "spanish": "ejército",
+    "english": "army",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 39290
+  },
+  {
+    "spanish": "papel",
+    "english": "paper; role",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 39262
+  },
+  {
+    "spanish": "partes",
+    "english": "parts",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 39255
+  },
+  {
+    "spanish": "ten",
+    "english": "have",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 39243
+  },
+  {
+    "spanish": "gracioso",
+    "english": "funny; amusing",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 39166
+  },
+  {
+    "spanish": "diría",
+    "english": "would say",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 39163
+  },
+  {
+    "spanish": "principio",
+    "english": "beginning; principle",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 39155
+  },
+  {
+    "spanish": "delante",
+    "english": "in front; ahead",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 38898
+  },
+  {
+    "spanish": "teniente",
+    "english": "lieutenant",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 38628
+  },
+  {
+    "spanish": "deseo",
+    "english": "wish; desire",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 38627
+  },
+  {
+    "spanish": "vayas",
+    "english": "you go",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 38593
+  },
+  {
+    "spanish": "nave",
+    "english": "ship; vessel",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 38459
+  },
+  {
+    "spanish": "sale",
+    "english": "leaves; goes out",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 38407
+  },
+  {
+    "spanish": "basura",
+    "english": "trash; garbage",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 38280
+  },
+  {
+    "spanish": "vine",
+    "english": "I came",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 38168
+  },
+  {
+    "spanish": "contacto",
+    "english": "contact",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 38028
+  },
+  {
+    "spanish": "esposo",
+    "english": "husband",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 38011
+  },
+  {
+    "spanish": "tren",
+    "english": "train",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 37976
+  },
+  {
+    "spanish": "encontramos",
+    "english": "we find; we found",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 37952
+  },
+  {
+    "spanish": "dale",
+    "english": "give him/her",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 37876
+  },
+  {
+    "spanish": "verdadero",
+    "english": "true; real",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 37844
+  },
+  {
+    "spanish": "tuya",
+    "english": "yours",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 37837
+  },
+  {
+    "spanish": "alma",
+    "english": "soul",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 37824
+  },
+  {
+    "spanish": "hazlo",
+    "english": "do it",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 37804
+  },
+  {
+    "spanish": "disculpa",
+    "english": "sorry; excuse",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 37801
+  },
+  {
+    "spanish": "junto",
+    "english": "together; next to",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 37794
+  },
+  {
+    "spanish": "anda",
+    "english": "go; walk",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 37779
+  },
+  {
+    "spanish": "tendré",
+    "english": "I will have",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 37662
+  },
+  {
+    "spanish": "matrimonio",
+    "english": "marriage; wedding",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 37656
+  },
+  {
+    "spanish": "saberlo",
+    "english": "to know it",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 37540
+  },
+  {
+    "spanish": "locura",
+    "english": "madness; insanity",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 37525
+  },
+  {
+    "spanish": "oro",
+    "english": "gold",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 37500
+  },
+  {
+    "spanish": "permiso",
+    "english": "permission; permit",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 37465
+  },
+  {
+    "spanish": "director",
+    "english": "director; manager",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 37428
+  },
+  {
+    "spanish": "peligro",
+    "english": "danger; risk",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 37415
+  },
+  {
+    "spanish": "libertad",
+    "english": "freedom; liberty",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 37412
+  },
+  {
+    "spanish": "alegro",
+    "english": "I am glad",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 37403
+  },
+  {
+    "spanish": "baja",
+    "english": "low; short",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 37298
+  },
+  {
+    "spanish": "tendremos",
+    "english": "we will have",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 37262
+  },
+  {
+    "spanish": "derecha",
+    "english": "right",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 37262
+  },
+  {
+    "spanish": "encuentra",
+    "english": "finds",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 37241
+  },
+  {
+    "spanish": "pies",
+    "english": "feet",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 37222
+  },
+  {
+    "spanish": "segunda",
+    "english": "second",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 37192
+  },
+  {
+    "spanish": "maravilloso",
+    "english": "wonderful; marvelous",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 37115
+  },
+  {
+    "spanish": "espacio",
+    "english": "space; room",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 37114
+  },
+  {
+    "spanish": "rato",
+    "english": "while; moment",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 37101
+  },
+  {
+    "spanish": "abuelo",
+    "english": "grandfather",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 37062
+  },
+  {
+    "spanish": "esperaba",
+    "english": "was waiting; expected",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 37031
+  },
+  {
+    "spanish": "mirando",
+    "english": "looking",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 37030
+  },
+  {
+    "spanish": "salud",
+    "english": "health; cheers",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 37016
+  },
+  {
+    "spanish": "sorpresa",
+    "english": "surprise",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 37012
+  },
+  {
+    "spanish": "ninguno",
+    "english": "none; no",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 37007
+  },
+  {
+    "spanish": "miren",
+    "english": "look",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 37000
+  },
+  {
+    "spanish": "triste",
+    "english": "sad",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 36968
+  },
+  {
+    "spanish": "aun",
+    "english": "even; still",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 36908
+  },
+  {
+    "spanish": "pensado",
+    "english": "thought",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 36904
+  },
+  {
+    "spanish": "maestro",
+    "english": "teacher; master",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 36887
+  },
+  {
+    "spanish": "según",
+    "english": "according to",
+    "pos": "preposition",
+    "gender": null,
+    "frequency": 36882
+  },
+  {
+    "spanish": "infierno",
+    "english": "hell",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 36835
+  },
+  {
+    "spanish": "podrían",
+    "english": "they could",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 36824
+  },
+  {
+    "spanish": "tipos",
+    "english": "types; guys",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 36703
+  },
+  {
+    "spanish": "tía",
+    "english": "aunt",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 36607
+  },
+  {
+    "spanish": "crimen",
+    "english": "crime",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 36579
+  },
+  {
+    "spanish": "conocido",
+    "english": "known; acquaintance",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 36564
+  },
+  {
+    "spanish": "consejo",
+    "english": "advice; council",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 36446
+  },
+  {
+    "spanish": "ante",
+    "english": "before; in front of",
+    "pos": "preposition",
+    "gender": null,
+    "frequency": 36426
+  },
+  {
+    "spanish": "iglesia",
+    "english": "church",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 36300
+  },
+  {
+    "spanish": "intento",
+    "english": "attempt; try",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 36197
+  },
+  {
+    "spanish": "mayoría",
+    "english": "majority",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 36167
+  },
+  {
+    "spanish": "doy",
+    "english": "I give",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 36153
+  },
+  {
+    "spanish": "peter",
+    "english": "Peter",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 36107
+  },
+  {
+    "spanish": "hicimos",
+    "english": "we did; we made",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 36096
+  },
+  {
+    "spanish": "escena",
+    "english": "scene",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 36065
+  },
+  {
+    "spanish": "piso",
+    "english": "floor; apartment",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 36054
+  },
+  {
+    "spanish": "señal",
+    "english": "signal; sign",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 36012
+  },
+  {
+    "spanish": "honor",
+    "english": "honor",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 35990
+  },
+  {
+    "spanish": "llamas",
+    "english": "flames",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 35985
+  },
+  {
+    "spanish": "abre",
+    "english": "opens",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 35915
+  },
+  {
+    "spanish": "cerebro",
+    "english": "brain",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 35820
+  },
+  {
+    "spanish": "veras",
+    "english": "you will see",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 35817
+  },
+  {
+    "spanish": "viendo",
+    "english": "seeing",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 35814
+  },
+  {
+    "spanish": "pone",
+    "english": "puts",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 35812
+  },
+  {
+    "spanish": "pregunto",
+    "english": "I ask",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 35802
+  },
+  {
+    "spanish": "cocina",
+    "english": "kitchen; cooking",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 35715
+  },
+  {
+    "spanish": "vestido",
+    "english": "dress",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 35669
+  },
+  {
+    "spanish": "inteligente",
+    "english": "intelligent; smart",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 35632
+  },
+  {
+    "spanish": "vieja",
+    "english": "old",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 35616
+  },
+  {
+    "spanish": "caballo",
+    "english": "horse",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 35585
+  },
+  {
+    "spanish": "vienen",
+    "english": "they come",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 35533
+  },
+  {
+    "spanish": "vidas",
+    "english": "lives",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 35477
+  },
+  {
+    "spanish": "bar",
+    "english": "bar",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 35461
+  },
+  {
+    "spanish": "corte",
+    "english": "court; cut",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 35435
+  },
+  {
+    "spanish": "sucedió",
+    "english": "happened",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 35426
+  },
+  {
+    "spanish": "adentro",
+    "english": "inside",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 35406
+  },
+  {
+    "spanish": "drogas",
+    "english": "drugs",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 35396
+  },
+  {
+    "spanish": "enseguida",
+    "english": "right away",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 35331
+  },
+  {
+    "spanish": "busca",
+    "english": "looks for",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 35289
+  },
+  {
+    "spanish": "agradable",
+    "english": "pleasant; nice",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 35267
+  },
+  {
+    "spanish": "carne",
+    "english": "meat",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 35253
+  },
+  {
+    "spanish": "parecía",
+    "english": "seemed",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 35223
+  },
+  {
+    "spanish": "departamento",
+    "english": "department; apartment",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 35214
+  },
+  {
+    "spanish": "lindo",
+    "english": "cute; pretty",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 35195
+  },
+  {
+    "spanish": "mar",
+    "english": "sea",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 35149
+  },
+  {
+    "spanish": "duda",
+    "english": "doubt",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 35145
+  },
+  {
+    "spanish": "edificio",
+    "english": "building",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 35098
+  },
+  {
+    "spanish": "conocer",
+    "english": "to know; to meet",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 35058
+  },
+  {
+    "spanish": "cargo",
+    "english": "charge; position",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 35050
+  },
+  {
+    "spanish": "víctima",
+    "english": "victim",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 35048
+  },
+  {
+    "spanish": "luna",
+    "english": "moon",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 34997
+  },
+  {
+    "spanish": "energía",
+    "english": "energy",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 34997
+  },
+  {
+    "spanish": "frío",
+    "english": "cold",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 34936
+  },
+  {
+    "spanish": "hablo",
+    "english": "I speak",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 34863
+  },
+  {
+    "spanish": "baile",
+    "english": "dance",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 34771
+  },
+  {
+    "spanish": "trabaja",
+    "english": "works",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 34740
+  },
+  {
+    "spanish": "misión",
+    "english": "mission",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 34729
+  },
+  {
+    "spanish": "listos",
+    "english": "ready",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 34703
+  },
+  {
+    "spanish": "ayudarte",
+    "english": "to help you",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 34637
+  },
+  {
+    "spanish": "izquierda",
+    "english": "left",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 34629
+  },
+  {
+    "spanish": "paul",
+    "english": "Paul",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 34600
+  },
+  {
+    "spanish": "beber",
+    "english": "to drink",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 34576
+  },
+  {
+    "spanish": "deje",
+    "english": "I leave; let",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 34568
+  },
+  {
+    "spanish": "finalmente",
+    "english": "finally",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 34516
+  },
+  {
+    "spanish": "simple",
+    "english": "simple",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 34511
+  },
+  {
+    "spanish": "daré",
+    "english": "I will give",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 34496
+  },
+  {
+    "spanish": "sabías",
+    "english": "you knew",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 34453
+  },
+  {
+    "spanish": "puedas",
+    "english": "you can",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 34446
+  },
+  {
+    "spanish": "puso",
+    "english": "he/she put",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 34438
+  },
+  {
+    "spanish": "creía",
+    "english": "he/she believed",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 34319
+  },
+  {
+    "spanish": "regresar",
+    "english": "to return; to come back",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 34314
+  },
+  {
+    "spanish": "llega",
+    "english": "he/she arrives",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 34263
+  },
+  {
+    "spanish": "entender",
+    "english": "to understand",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 34253
+  },
+  {
+    "spanish": "mirar",
+    "english": "to look; to watch",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 34206
+  },
+  {
+    "spanish": "sacar",
+    "english": "to take out; to remove",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 34188
+  },
+  {
+    "spanish": "cambiado",
+    "english": "changed",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 34095
+  },
+  {
+    "spanish": "trae",
+    "english": "he/she brings",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 34072
+  },
+  {
+    "spanish": "hermoso",
+    "english": "beautiful; handsome",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 34066
+  },
+  {
+    "spanish": "opinión",
+    "english": "opinion",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 34009
+  },
+  {
+    "spanish": "verás",
+    "english": "you will see",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 34007
+  },
+  {
+    "spanish": "linda",
+    "english": "pretty; cute",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 34005
+  },
+  {
+    "spanish": "apenas",
+    "english": "barely; hardly",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 33969
+  },
+  {
+    "spanish": "segundos",
+    "english": "seconds",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 33905
+  },
+  {
+    "spanish": "cerveza",
+    "english": "beer",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 33902
+  },
+  {
+    "spanish": "harás",
+    "english": "you will do",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 33809
+  },
+  {
+    "spanish": "estuviera",
+    "english": "I/he/she were",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 33794
+  },
+  {
+    "spanish": "creen",
+    "english": "they believe",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 33728
+  },
+  {
+    "spanish": "oír",
+    "english": "to hear",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 33646
+  },
+  {
+    "spanish": "tendría",
+    "english": "I/he/she would have",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 33574
+  },
+  {
+    "spanish": "cuántos",
+    "english": "how many",
+    "pos": "determiner",
+    "gender": null,
+    "frequency": 33572
+  },
+  {
+    "spanish": "hablado",
+    "english": "spoken",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 33561
+  },
+  {
+    "spanish": "hablamos",
+    "english": "we speak; we spoke",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 33532
+  },
+  {
+    "spanish": "reina",
+    "english": "queen",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 33477
+  },
+  {
+    "spanish": "temprano",
+    "english": "early",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 33465
+  },
+  {
+    "spanish": "tema",
+    "english": "topic; theme",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 33446
+  },
+  {
+    "spanish": "prisión",
+    "english": "prison",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 33396
+  },
+  {
+    "spanish": "porqué",
+    "english": "reason",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 33393
+  },
+  {
+    "spanish": "vuelva",
+    "english": "he/she returns",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 33350
+  },
+  {
+    "spanish": "público",
+    "english": "public",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 33347
+  },
+  {
+    "spanish": "ocurrió",
+    "english": "it happened",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 33319
+  },
+  {
+    "spanish": "veré",
+    "english": "I will see",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 33305
+  },
+  {
+    "spanish": "salvar",
+    "english": "to save",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 33301
+  },
+  {
+    "spanish": "partido",
+    "english": "match; party",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 33291
+  },
+  {
+    "spanish": "bonita",
+    "english": "pretty; beautiful",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 33286
+  },
+  {
+    "spanish": "joder",
+    "english": "to screw; to mess up",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 33283
+  },
+  {
+    "spanish": "causa",
+    "english": "cause; reason",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 33279
+  },
+  {
+    "spanish": "caliente",
+    "english": "hot; warm",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 33249
+  },
+  {
+    "spanish": "sargento",
+    "english": "sergeant",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 33179
+  },
+  {
+    "spanish": "cenar",
+    "english": "to have dinner",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 33146
+  },
+  {
+    "spanish": "compañero",
+    "english": "companion; partner",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 32947
+  },
+  {
+    "spanish": "llevó",
+    "english": "he/she took",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 32910
+  },
+  {
+    "spanish": "banco",
+    "english": "bank; bench",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 32880
+  },
+  {
+    "spanish": "existe",
+    "english": "he/she/it exists",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 32874
+  },
+  {
+    "spanish": "ben",
+    "english": "Ben",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 32858
+  },
+  {
+    "spanish": "zona",
+    "english": "zone; area",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 32787
+  },
+  {
+    "spanish": "destino",
+    "english": "destination; fate",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 32785
+  },
+  {
+    "spanish": "base",
+    "english": "base; foundation",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 32757
+  },
+  {
+    "spanish": "solía",
+    "english": "used to",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 32665
+  },
+  {
+    "spanish": "cliente",
+    "english": "client; customer",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 32665
+  },
+  {
+    "spanish": "irse",
+    "english": "to leave; to go away",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 32623
+  },
+  {
+    "spanish": "perra",
+    "english": "bitch; female dog",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 32592
+  },
+  {
+    "spanish": "james",
+    "english": "James",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 32572
+  },
+  {
+    "spanish": "encuentro",
+    "english": "meeting; encounter",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 32557
+  },
+  {
+    "spanish": "encontró",
+    "english": "found",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 32539
+  },
+  {
+    "spanish": "pelea",
+    "english": "fight; quarrel",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 32497
+  },
+  {
+    "spanish": "san",
+    "english": "saint",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 32450
+  },
+  {
+    "spanish": "norte",
+    "english": "north",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 32319
+  },
+  {
+    "spanish": "quise",
+    "english": "wanted",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 32250
+  },
+  {
+    "spanish": "coronel",
+    "english": "colonel",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 32219
+  },
+  {
+    "spanish": "apuesto",
+    "english": "handsome; dashing",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 32213
+  },
+  {
+    "spanish": "peligroso",
+    "english": "dangerous",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 32210
+  },
+  {
+    "spanish": "viva",
+    "english": "alive; long live",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 32204
+  },
+  {
+    "spanish": "max",
+    "english": "Max",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 32182
+  },
+  {
+    "spanish": "vienes",
+    "english": "you come",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 32150
+  },
+  {
+    "spanish": "necesitan",
+    "english": "they need",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 32121
+  },
+  {
+    "spanish": "té",
+    "english": "tea",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 32049
+  },
+  {
+    "spanish": "excepto",
+    "english": "except",
+    "pos": "preposition",
+    "gender": null,
+    "frequency": 32005
+  },
+  {
+    "spanish": "juicio",
+    "english": "judgment; trial",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 31961
+  },
+  {
+    "spanish": "podamos",
+    "english": "we can",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 31904
+  },
+  {
+    "spanish": "llave",
+    "english": "key; wrench",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 31899
+  },
+  {
+    "spanish": "equivocado",
+    "english": "wrong; mistaken",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 31851
+  },
+  {
+    "spanish": "posición",
+    "english": "position; stance",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 31835
+  },
+  {
+    "spanish": "trasero",
+    "english": "rear; back",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 31796
+  },
+  {
+    "spanish": "irnos",
+    "english": "to leave",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 31731
+  },
+  {
+    "spanish": "espalda",
+    "english": "back",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 31618
+  },
+  {
+    "spanish": "excelente",
+    "english": "excellent",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 31576
+  },
+  {
+    "spanish": "éxito",
+    "english": "success",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 31546
+  },
+  {
+    "spanish": "modos",
+    "english": "ways; manners",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 31533
+  },
+  {
+    "spanish": "ventana",
+    "english": "window",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 31521
+  },
+  {
+    "spanish": "veamos",
+    "english": "let's see",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 31449
+  },
+  {
+    "spanish": "especie",
+    "english": "species; kind",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 31439
+  },
+  {
+    "spanish": "teníamos",
+    "english": "we had",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 31438
+  },
+  {
+    "spanish": "diferencia",
+    "english": "difference",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 31428
+  },
+  {
+    "spanish": "formas",
+    "english": "forms; shapes",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 31423
+  },
+  {
+    "spanish": "pedir",
+    "english": "to ask for; to request",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 31418
+  },
+  {
+    "spanish": "últimos",
+    "english": "last; final",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 31416
+  },
+  {
+    "spanish": "escúchame",
+    "english": "listen to me",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 31386
+  },
+  {
+    "spanish": "ejemplo",
+    "english": "example",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 31354
+  },
+  {
+    "spanish": "ése",
+    "english": "that one",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 31352
+  },
+  {
+    "spanish": "radio",
+    "english": "radio",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 31316
+  },
+  {
+    "spanish": "lee",
+    "english": "reads",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 31272
+  },
+  {
+    "spanish": "calma",
+    "english": "calm; tranquility",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 31202
+  },
+  {
+    "spanish": "hogar",
+    "english": "home; hearth",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 31190
+  },
+  {
+    "spanish": "volveré",
+    "english": "I will return",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 31148
+  },
+  {
+    "spanish": "fondo",
+    "english": "bottom; background",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 31017
+  },
+  {
+    "spanish": "humano",
+    "english": "human",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 30936
+  },
+  {
+    "spanish": "henry",
+    "english": "henry",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 30924
+  },
+  {
+    "spanish": "tí",
+    "english": "you",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 30876
+  },
+  {
+    "spanish": "iremos",
+    "english": "we will go",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 30871
+  },
+  {
+    "spanish": "unidos",
+    "english": "united",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 30863
+  },
+  {
+    "spanish": "habían",
+    "english": "they had",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 30746
+  },
+  {
+    "spanish": "jesús",
+    "english": "jesus",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 30720
+  },
+  {
+    "spanish": "planeta",
+    "english": "planet",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 30672
+  },
+  {
+    "spanish": "verme",
+    "english": "to see me",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 30657
+  },
+  {
+    "spanish": "respecto",
+    "english": "regard; respect",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 30525
+  },
+  {
+    "spanish": "regreso",
+    "english": "return",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 30519
+  },
+  {
+    "spanish": "debido",
+    "english": "due; owed",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 30518
+  },
+  {
+    "spanish": "seré",
+    "english": "I will be",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 30505
+  },
+  {
+    "spanish": "tenían",
+    "english": "they had",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 30390
+  },
+  {
+    "spanish": "leer",
+    "english": "to read",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 30383
+  },
+  {
+    "spanish": "parar",
+    "english": "to stop",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 30341
+  },
+  {
+    "spanish": "lleno",
+    "english": "full",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 30333
+  },
+  {
+    "spanish": "dejé",
+    "english": "I left",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 30321
+  },
+  {
+    "spanish": "respeto",
+    "english": "respect",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 30274
+  },
+  {
+    "spanish": "debajo",
+    "english": "under; below",
+    "pos": "preposition",
+    "gender": null,
+    "frequency": 30209
+  },
+  {
+    "spanish": "harry",
+    "english": "harry",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 30134
+  },
+  {
+    "spanish": "escribir",
+    "english": "to write",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 30111
+  },
+  {
+    "spanish": "estación",
+    "english": "station; season",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 30100
+  },
+  {
+    "spanish": "pidió",
+    "english": "he/she asked",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 30100
+  },
+  {
+    "spanish": "alta",
+    "english": "tall; high",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 30046
+  },
+  {
+    "spanish": "pista",
+    "english": "track; clue",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 30000
+  },
+  {
+    "spanish": "estrella",
+    "english": "star",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 29938
+  },
+  {
+    "spanish": "enfermo",
+    "english": "sick; ill",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 29931
+  },
+  {
+    "spanish": "duele",
+    "english": "it hurts",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 29808
+  },
+  {
+    "spanish": "sueños",
+    "english": "dreams",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 29807
+  },
+  {
+    "spanish": "veremos",
+    "english": "we will see",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 29783
+  },
+  {
+    "spanish": "miles",
+    "english": "thousands",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 29772
+  },
+  {
+    "spanish": "darme",
+    "english": "to give me",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 29767
+  },
+  {
+    "spanish": "órdenes",
+    "english": "orders",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 29746
+  },
+  {
+    "spanish": "ocupado",
+    "english": "busy; occupied",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 29600
+  },
+  {
+    "spanish": "sigues",
+    "english": "you continue",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 29572
+  },
+  {
+    "spanish": "corre",
+    "english": "he/she runs",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 29570
+  },
+  {
+    "spanish": "podido",
+    "english": "been able",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 29555
+  },
+  {
+    "spanish": "dejes",
+    "english": "you leave",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 29536
+  },
+  {
+    "spanish": "nivel",
+    "english": "level",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 29519
+  },
+  {
+    "spanish": "habéis",
+    "english": "you have",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 29518
+  },
+  {
+    "spanish": "experiencia",
+    "english": "experience",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 29510
+  },
+  {
+    "spanish": "darte",
+    "english": "to give you",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 29480
+  },
+  {
+    "spanish": "salida",
+    "english": "exit; departure",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 29479
+  },
+  {
+    "spanish": "decirlo",
+    "english": "to say it",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 29456
+  },
+  {
+    "spanish": "confiar",
+    "english": "to trust",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 29427
+  },
+  {
+    "spanish": "hacerte",
+    "english": "to make you",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 29424
+  },
+  {
+    "spanish": "necesitaba",
+    "english": "I/he/she needed",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 29377
+  },
+  {
+    "spanish": "hermanos",
+    "english": "brothers; siblings",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 29333
+  },
+  {
+    "spanish": "zapatos",
+    "english": "shoes",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 29332
+  },
+  {
+    "spanish": "color",
+    "english": "color",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 29320
+  },
+  {
+    "spanish": "vistazo",
+    "english": "glance; look",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 29316
+  },
+  {
+    "spanish": "nena",
+    "english": "girl; baby",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 29309
+  },
+  {
+    "spanish": "tratar",
+    "english": "to try; to treat",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 29257
+  },
+  {
+    "spanish": "parecer",
+    "english": "to seem; to appear",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 29249
+  },
+  {
+    "spanish": "juez",
+    "english": "judge",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 29177
+  },
+  {
+    "spanish": "próximo",
+    "english": "next; upcoming",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 29134
+  },
+  {
+    "spanish": "paciente",
+    "english": "patient",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 29118
+  },
+  {
+    "spanish": "hayas",
+    "english": "you have",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 29081
+  },
+  {
+    "spanish": "bolsa",
+    "english": "bag; purse",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 29042
+  },
+  {
+    "spanish": "arte",
+    "english": "art",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 29011
+  },
+  {
+    "spanish": "mary",
+    "english": "Mary",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 28973
+  },
+  {
+    "spanish": "jugando",
+    "english": "playing",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28967
+  },
+  {
+    "spanish": "llevas",
+    "english": "you carry; you wear",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28896
+  },
+  {
+    "spanish": "alegra",
+    "english": "cheers up; gladdens",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28887
+  },
+  {
+    "spanish": "bailar",
+    "english": "to dance",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28886
+  },
+  {
+    "spanish": "diablo",
+    "english": "devil",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 28865
+  },
+  {
+    "spanish": "oí",
+    "english": "I heard",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28863
+  },
+  {
+    "spanish": "sepa",
+    "english": "I know; he/she knows",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28810
+  },
+  {
+    "spanish": "estarás",
+    "english": "you will be",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28804
+  },
+  {
+    "spanish": "sur",
+    "english": "south",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 28775
+  },
+  {
+    "spanish": "banda",
+    "english": "band; group",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 28768
+  },
+  {
+    "spanish": "aprender",
+    "english": "to learn",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28760
+  },
+  {
+    "spanish": "precio",
+    "english": "price; cost",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 28723
+  },
+  {
+    "spanish": "completo",
+    "english": "complete; full",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 28715
+  },
+  {
+    "spanish": "santo",
+    "english": "saint; holy",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 28659
+  },
+  {
+    "spanish": "culpable",
+    "english": "guilty",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 28654
+  },
+  {
+    "spanish": "ganas",
+    "english": "desire; urge",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 28649
+  },
+  {
+    "spanish": "tuvimos",
+    "english": "we had",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28633
+  },
+  {
+    "spanish": "you",
+    "english": "you",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 28617
+  },
+  {
+    "spanish": "verla",
+    "english": "to see her",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28616
+  },
+  {
+    "spanish": "volvió",
+    "english": "he/she returned",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28609
+  },
+  {
+    "spanish": "libros",
+    "english": "books",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 28603
+  },
+  {
+    "spanish": "ojo",
+    "english": "eye",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 28589
+  },
+  {
+    "spanish": "serán",
+    "english": "they will be",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28588
+  },
+  {
+    "spanish": "cielos",
+    "english": "skies; heavens",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 28554
+  },
+  {
+    "spanish": "matado",
+    "english": "killed",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28480
+  },
+  {
+    "spanish": "azul",
+    "english": "blue",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 28477
+  },
+  {
+    "spanish": "diferentes",
+    "english": "different",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 28472
+  },
+  {
+    "spanish": "irte",
+    "english": "to leave",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28442
+  },
+  {
+    "spanish": "ia",
+    "english": "AI",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 28426
+  },
+  {
+    "spanish": "comandante",
+    "english": "commander",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 28382
+  },
+  {
+    "spanish": "acción",
+    "english": "action",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 28381
+  },
+  {
+    "spanish": "reglas",
+    "english": "rules",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 28301
+  },
+  {
+    "spanish": "obra",
+    "english": "work; play",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 28275
+  },
+  {
+    "spanish": "esperanza",
+    "english": "hope",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 28234
+  },
+  {
+    "spanish": "cuestión",
+    "english": "question; issue",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 28230
+  },
+  {
+    "spanish": "molesta",
+    "english": "annoys; bothers",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28230
+  },
+  {
+    "spanish": "teniendo",
+    "english": "having",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28223
+  },
+  {
+    "spanish": "bill",
+    "english": "Bill",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 28210
+  },
+  {
+    "spanish": "informe",
+    "english": "report",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 28207
+  },
+  {
+    "spanish": "jimmy",
+    "english": "jimmy",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 28145
+  },
+  {
+    "spanish": "río",
+    "english": "river",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 28133
+  },
+  {
+    "spanish": "bienvenido",
+    "english": "welcome",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 28108
+  },
+  {
+    "spanish": "abrir",
+    "english": "to open",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28090
+  },
+  {
+    "spanish": "tocar",
+    "english": "to touch; to play",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28076
+  },
+  {
+    "spanish": "bob",
+    "english": "bob",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 28053
+  },
+  {
+    "spanish": "contar",
+    "english": "to count; to tell",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28052
+  },
+  {
+    "spanish": "sigo",
+    "english": "I follow; I continue",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28033
+  },
+  {
+    "spanish": "interior",
+    "english": "interior; inside",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 27979
+  },
+  {
+    "spanish": "apartamento",
+    "english": "apartment",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 27936
+  },
+  {
+    "spanish": "vea",
+    "english": "see",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 27885
+  },
+  {
+    "spanish": "estados",
+    "english": "states",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 27876
+  },
+  {
+    "spanish": "estáis",
+    "english": "you are",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 27855
+  },
+  {
+    "spanish": "preocupa",
+    "english": "worries",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 27847
+  },
+  {
+    "spanish": "tomó",
+    "english": "took",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 27846
+  },
+  {
+    "spanish": "principal",
+    "english": "main; principal",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 27776
+  },
+  {
+    "spanish": "empieza",
+    "english": "begins; starts",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 27717
+  },
+  {
+    "spanish": "londres",
+    "english": "london",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 27684
+  },
+  {
+    "spanish": "empezó",
+    "english": "began; started",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 27667
+  },
+  {
+    "spanish": "vayan",
+    "english": "go",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 27643
+  },
+  {
+    "spanish": "jim",
+    "english": "jim",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 27640
+  },
+  {
+    "spanish": "llaman",
+    "english": "they call",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 27639
+  },
+  {
+    "spanish": "ojalá",
+    "english": "hopefully",
+    "pos": "interjection",
+    "gender": null,
+    "frequency": 27609
+  },
+  {
+    "spanish": "perdona",
+    "english": "forgive; excuse",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 27596
+  },
+  {
+    "spanish": "vuelvo",
+    "english": "I return",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 27583
+  },
+  {
+    "spanish": "golpe",
+    "english": "blow; hit",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 27552
+  },
+  {
+    "spanish": "quedarme",
+    "english": "to stay",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 27529
+  },
+  {
+    "spanish": "llamaré",
+    "english": "I will call",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 27497
+  },
+  {
+    "spanish": "acabado",
+    "english": "finished; completed",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 27494
+  },
+  {
+    "spanish": "estilo",
+    "english": "style",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 27487
+  },
+  {
+    "spanish": "nueve",
+    "english": "nine",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 27477
+  },
+  {
+    "spanish": "definitivamente",
+    "english": "definitely",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 27474
+  },
+  {
+    "spanish": "quedar",
+    "english": "to stay; to remain",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 27451
+  },
+  {
+    "spanish": "cartas",
+    "english": "letters; cards",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 27437
+  },
+  {
+    "spanish": "bomba",
+    "english": "bomb",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 27431
+  },
+  {
+    "spanish": "guardia",
+    "english": "guard",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 27405
+  },
+  {
+    "spanish": "pistola",
+    "english": "gun; pistol",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 27403
+  },
+  {
+    "spanish": "probar",
+    "english": "to try; to test",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 27381
+  },
+  {
+    "spanish": "majestad",
+    "english": "majesty",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 27352
+  },
+  {
+    "spanish": "traer",
+    "english": "to bring",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 27310
+  },
+  {
+    "spanish": "marcha",
+    "english": "march; walk",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 27262
+  },
+  {
+    "spanish": "pareces",
+    "english": "you seem",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 27231
+  },
+  {
+    "spanish": "común",
+    "english": "common",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 27165
+  },
+  {
+    "spanish": "aquel",
+    "english": "that",
+    "pos": "determiner",
+    "gender": null,
+    "frequency": 27160
+  },
+  {
+    "spanish": "hacerle",
+    "english": "to do to him/her",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 27153
+  },
+  {
+    "spanish": "vuelo",
+    "english": "flight",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 27150
+  },
+  {
+    "spanish": "nota",
+    "english": "note; grade",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 27132
+  },
+  {
+    "spanish": "danny",
+    "english": "danny",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 27097
+  },
+  {
+    "spanish": "humanos",
+    "english": "humans",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 27056
+  }
+]

@@ -1,0 +1,6 @@
+cd /Users/stanleytan/Downloads && \
+ffmpeg -f lavfi -i color=c=black:size=1920x1080:rate=25 \
+  -i audioStream_trimmed.mp3 \
+  -filter_complex "[0:v]subtitles=chinese.srt:force_style='FontSize=28\,PrimaryColour=&H00FFFF\,Alignment=8'[v1];[v1]subtitles=english.srt:force_style='FontSize=28\,PrimaryColour=&HFFFFFF\,Alignment=2'[v2]" \
+  -map "[v2]" -map 1:a \
+  -shortest output.mp4

@@ -1,0 +1,296 @@
+summarize this from:
+
+URL: https://seekingalpha.com/article/4775680-palantir-this-ai-train-is-gaining-speed-quickly-again
+Title: Palantir: This AI Train Is Gaining Speed Quickly Again (NASDAQ:PLTR) | Seeking Alpha
+
+[](/#source=source%3Asite_navigation "Home")
+# Palantir: This AI Train Is Gaining Speed Quickly Again
+Apr. 16, 2025 4:04 PM ET[Palantir Technologies Inc. (PLTR) Stock](/symbol/PLTR#source=section%3Amain_content%7Csection_asset%3Ameta%7Cfirst_level_url%3Aarticle%7Csymbol%3APLTR), [PLTR:CA](/symbol/PLTR:CA#source=section%3Amain_content%7Csection_asset%3Ameta%7Cfirst_level_url%3Aarticle%7Csymbol%3APLTR%3ACA)[IGV](/symbol/IGV#source=section%3Amain_content%7Csection_asset%3Ameta%7Cfirst_level_url%3Aarticle%7Csymbol%3AIGV), [PLTR:CA](/symbol/PLTR:CA#source=section%3Amain_content%7Csection_asset%3Ameta%7Cfirst_level_url%3Aarticle%7Csymbol%3APLTR%3ACA), [PLTR](/symbol/PLTR#source=section%3Amain_content%7Csection_asset%3Ameta%7Cfirst_level_url%3Aarticle%7Csymbol%3APLTR)
+[JR Research](/author/jr-research#source=url_first_level%3Aarticle%7Csection%3Aauthor_brief%3Ajr-research%7Csection_asset%3Aauthor_brief%7Cauthor_name)
+[Investing Group Leader](/checkout/mp_1392#source=url_first_level%3Aarticle%7Csection%3Aauthor_brief%3Ajr-research%7Csection_asset%3Aauthor_brief%7Cinvesting_group_badge)
+Follow
+  * 5
+Share
+  * Save
+  * (8min)
+  * [Comments(12)](/article/4775680-palantir-this-ai-train-is-gaining-speed-quickly-again#scroll_comments)
+
+#### About this article
+Ticker
+[PLTR](/symbol/PLTR)
+Analyst rating
+Buy
+Price at publication
+-
+Last price
+$93.78
+Change since publication
+-
+S&P 500 change since publication
+-
+Days since publication
+2
+## Summary
+  * Palantir Technologies Inc. stock's stellar recovery has outperformed the market and its software peers, underscoring the market's confidence.
+  * Palantir is well-positioned to benefit from the reallocation of defense spending toward AI defense contractors.
+  * The recent NATO contract win validates its progress toward the transatlantic alliance, broadening its opportunities.
+  * While PLTR's valuation is undoubtedly expensive and is susceptible to volatility, sharp pullbacks could prove to be immense opportunities to double down.
+  * I argue why the stock has likely bottomed last week, with the AI rocket ship paving the way to revisit its 2025 highs.
+  * I am JR research, an opportunistic investor who identifies attractive risk/reward opportunities supported by robust price action to potentially generate alpha well above the S&P 500. I run the investing group [Ultimate Growth Investing](/checkout?service_id=mp_1392&source=content_type%3Areact%7Curl_first_level%3Aarticle%7Csection%3Aauthor_bullets%3A51630113%7Csection_asset%3Aauthor_bullets%3A-ultimate-growth-investing).
+
+Michael Vi
+## Palantir: AI Rocket Ship Demonstrates Resilience
+I must say I'm enthralled by the incredible recovery of Palantir Technologies Inc. (NASDAQ:[PLTR](https://seekingalpha.com/symbol/PLTR#hasComeFromMpArticle=true#source=section%3Amain_content%7Cbutton%3Abody_link "Palantir Technologies Inc.")), outperforming not just the market, but also its software peers. As a result, what seemed like a massive drawdown From the highs about two months ago met with highly resilient dip buying momentum, despite trading at what seems like an astronomical earnings multiple that some pessimists might contend as unsustainable.
+In my [previous article on PLTR,](https://seekingalpha.com/article/4767760-palantir-finally-time-to-buy-before-the-market-rebounds-upgrade#hasComeFromMpArticle=true#source=section%3Amain_content%7Cbutton%3Abody_link) I had already noted that the stock fell into a bear market after notching stupendous gains to begin 2025. While President Trump’s Liberation Day tariffs did cause market mayhem that led to a broad decline across tech and growth stocks, PLTR’s bottom last week coupled with this week’s early recovery appears to have retaken much of its March losses, browbeating against the bearish prognosticators, although [short-sellers appear few](https://www.wsj.com/market-data/quotes/pltr) and far between with a short interest ratio of just under 2.5% as of end March 2025.
+In other words, I believe PLTR’s market outperformance suggests that the market has confidence that:
+  * Palantir seems more insulated against the tariffs-induced shock that has inundated its semiconductor and hardware peers. And since Palantir explicitly doesn’t sell its programs and services to China, we shouldn’t expect significant repercussions from the tit-for-tat trade conflict between Donald Trump and Xi Jinping. Yet, we must also not misconceive that there could be blowback from the trade war with global ramifications on enterprise spending, as it remains a crucial growth vertical for Palantir while seeking to diversify its reliance on DoD contracts to justify its expensive growth valuations.
+  * The market also seems assured that the [earnings profile for application software vendors](https://yardeni.com/charts/application-software/) like Palantir is generally not as badly impacted as the general market. Earnings estimates for the application software industry have remained resilient in April, as compared to the [negative revisions for the S&P 500](https://yardeni.com/charts/sp-500-nrri-neri/) ([SPX](https://seekingalpha.com/symbol/SPX#hasComeFromMpArticle=true#source=section%3Amain_content%7Cbutton%3Abody_link "S&P 500 Index"), [SP500](https://seekingalpha.com/symbol/SP500#hasComeFromMpArticle=true#source=section%3Amain_content%7Cbutton%3Abody_link)). Hence, it corroborates my opinion that software stocks should continue to outperform even if the trade war were to worsen. The sustained outperformance of PLTR and its software peers ([IGV](https://seekingalpha.com/symbol/IGV#hasComeFromMpArticle=true#source=section%3Amain_content%7Cbutton%3Abody_link "iShares Expanded Tech-Software Sector ETF")) over the semiconductor industry ([SMH](https://seekingalpha.com/symbol/SMH#hasComeFromMpArticle=true#source=section%3Amain_content%7Cbutton%3Abody_link "VanEck Semiconductor ETF")) since June 2024 underpins my belief that the market has renewed its focus on the second-order derivative, as AI software platforms or providers become increasingly valuable in the AI supply chain, as they capitalize on their network effect to drive growth and operating leverage, as seen with the surge in valuations and [active user base for OpenAI](https://www.theinformation.com/articles/chatgpt-revenue-surges-30-just-three-months?rc=3e6wgn) recently.
+  * [Palantir’s recent NATO contract win](https://seekingalpha.com/news/4430897-palantirs-nato-deal-places-it-in-prime-position-for-ai-in-defense-wedbush#hasComeFromMpArticle=true#source=section%3Amain_content%7Cbutton%3Abody_link) marks pivotal progress and validation of the strength of its underlying tech as the transatlantic steps up its defense spending. In addition, it could also open up more opportunities for Palantir in the EU, as Europe seeks to adopt best-in-class AI tech, although trade tensions may escalate, tempering the region’s enthusiasm to work with American tech partners in the near term.
+
+And if that’s not all, consider that [Palantir is the best-in-class](https://blog.palantir.com/palantir-joins-forces-with-u-s-army-for-project-convergence-capstone-19c79f3c748a) AI platform for the defense department, and is expected to feature even more prominently in America’s bid to make sure China doesn’t catch up with its AI leadership, while modernizing the defense infrastructure with [budget reallocation toward AI imperatives. ](https://blog.palantir.com/palantirs-recommendations-to-the-white-house-ostp-on-developing-an-ai-action-plan-80d2f1821e8b)
+President Trump’s recent executive order to [revive America’s shipbuilding industry](https://www.bloomberg.com/news/articles/2025-04-11/anduril-saronic-saildrone-aim-to-bring-drones-to-the-ocean) has already driven a surge in collaborations with AI defense providers, suggesting that the opportunities to benefit from the [massive defense budget](https://www.politico.com/news/2025/04/07/hegseth-trump-1-trillion-defense-budget-00007147) (which could reach a record $1T) cannot be downplayed. Hence, I believe it indicates that even if we were to meet cyclical headwinds due to a slowdown in enterprise spending in 2026, it might not be detrimental to Palantir's growth cadence if the defense component could pick up the slack.
+## Palantir: Defense Business Provides Robust Support Amid Turbulence
+[](https://static.seekingalpha.com/uploads/2025/4/16/saupload_188cf62d4da9209fa1b46233ccda3fc8.jpeg)
+Palantir revenue segments (FinChat)
+The silver lining is that government revenue accounts for almost 55% of its revenue base over the past twelve months. While commercial revenue has gained traction as enterprise companies reacted positively to its modular go-to-market approach through its AIP boot camps, it seems like Palantir’s government business remains its bread and butter, notwithstanding its more lumpy contractual volatility.
+Given a more dangerous geopolitical climate and the U.S. government’s focus on raising defense spending and also restructuring the allocation to AI, I believe PLTR’s ability to benefit must be emphasized. As I enunciated in my previous article, the superiority, and advantages emanating from its AI platform can be entrenched, given how effective its ontology has proved to its defense partners.
+Hence, even if there were to be a deceleration in enterprise spending, I believe it might amount to a pause, but not cancellation, suggesting any delays shouldn’t be construed as perpetual. And, it’s critical to point out that Wall Street remains highly [confident in Palantir’s earnings](https://seekingalpha.com/symbol/PLTR/earnings/revisions#hasComeFromMpArticle=true#source=section%3Amain_content%7Cbutton%3Abody_link) resilience. Hence, the company could be well-poised to continue dominating and gain share against the legacy contractors as they struggle with the restructuring while fending off [challenges from other AI companies](https://seekingalpha.com/news/4430235-openai-ceo-sam-altman-leaves-door-open-to-pentagon-but-is-cautious#hasComeFromMpArticle=true#source=section%3Amain_content%7Cbutton%3Abody_link) keen on carving out their market share amid the AI transformation and modernization journey.
+## Buy Or Sell PLTR Stock?
+[](https://static.seekingalpha.com/uploads/2025/4/16/saupload_f8bb39dd900613cc7ac0986f861b30a3.png)
+PLTR price chart (weekly, medium-term) (TradingView)
+With that in mind, I believe it shouldn’t have surprised you that PLTR’s bottom in April just above the $65 level attracted dip buyers with conviction about the company’s ability to weather the macroeconomic headwinds while relying on its core defense spending prowess and potential resilient enterprise base as we get through the recessionary calls by macro forecasters and strategists.
+PLTR’s price action strongly implies that unless the April lows are rejected, the ongoing recovery isn’t expected to falter, notwithstanding near-term volatility in the broad market. Given [PLTR's relatively high beta](https://www.barrons.com/articles/palantir-stock-price-pentagon-77a69882?mod=md_stockoverview_news), investors are encouraged to add progressively on pullbacks and not chase FOMO surges or price spikes to improve their risk/reward profile.
+Nevertheless, I must also highlight that with a forward EBITDA multiple of almost 140x, it isn’t for the faint of heart. If a recession were to occur, it could torpedo its valuations multiples as compared to much less expensive peers with a software median of just over 15x. In other words, the weight is on Palantir to substantiate its growth thesis, while providing clarity that its enterprise and government spending can be maintained, notwithstanding the consequences of the trade restructuring between America and its trading partners.
+Yet, a sustained bottom also provides the driving force for buying momentum to improve further, as investors reallocate to solid outperformers like PLTR, paving the way to revisit its 2025 highs and augmenting a plausible breakout thesis subsequently.
+Rating: Maintain Buy.
+Did you find JR Research's analysis compelling?
+Vote to see results
+YesNo
+This article was written by
+[JR Research](/author/jr-research#source=url_first_level%3Aarticle%7Csection%3Aauthor_root%3Ajr-research%7Csection_asset%3Aauthor_root%7Cauthor_name)
+41.32K Followers
+Follow
+JR Research is an opportunistic investor who identifies attractive risk/reward opportunities supported by robust price action to potentially generate alpha well above the S&P 500. He tends to avoid overhyped and overvalued stocks while capitalizing on battered stocks with significant upside recovery possibilities. He runs the investing group [Ultimate Growth Investing](/checkout?service_id=mp_1392&source=content_type%3Areact%7Curl_first_level%3Aarticle%7Csection%3Aauthor_root%3A51630113%7Csection_asset%3Aauthor_root%3A-ultimate-growth-investing), which specializes in identifying high-potential opportunities across various sectors. The group is designed for aggressive investors seeking to capitalize on high-growth opportunities, and investors looking for growth opportunities at a reasonable price. [Learn more.](/checkout?service_id=mp_1392&source=content_type%3Areact%7Curl_first_level%3Asa-source-first-level-url%7Csection%3Aauthor_root%3A51630113%7Csection_asset%3Aauthor_root%3A-ultimate-growth-investing) Take advantage of my expertise and join the [Ultimate Growth Investing](/checkout?service_id=mp_1392&source=content_type%3Areact%7Curl_first_level%3Asa-source-first-level-url%7Csection%3Aauthor_root%3A51630113%7Csection_asset%3Aauthor_root%3A-ultimate-growth-investing) community today. Benefit from my market insights, investment recommendations, and in-depth analyses to enhance your portfolio and navigate the investing landscape with confidence. [Learn more](/checkout?service_id=mp_1392&source=content_type%3Areact%7Curl_first_level%3Asa-source-first-level-url%7Csection%3Aauthor_root%3A51630113%7Csection_asset%3Aauthor_root%3A-ultimate-growth-investing) about how Ultimate Growth Investing can help you today.
+Analyst’s Disclosure: I/we have a beneficial long position in the shares of IGV either through stock ownership, options, or other derivatives. I wrote this article myself, and it expresses my own opinions. I am not receiving compensation for it (other than from Seeking Alpha). I have no business relationship with any company whose stock is mentioned in this article. 
+Seeking Alpha's Disclosure: Past performance is no guarantee of future results. No recommendation or advice is being given as to whether any investment is suitable for a particular investor. Any views or opinions expressed above may not reflect those of Seeking Alpha as a whole. Seeking Alpha is not a licensed securities dealer, broker or US investment adviser or investment bank. Our analysts are third party authors that include both professional investors and individual investors who may not be licensed or certified by any institute or regulatory body.
+  * 5
+Share
+  * Save
+  * Print
+  * [Comments(12)](/article/4775680-palantir-this-ai-train-is-gaining-speed-quickly-again#scroll_comments)
+
+## Recommended For You
+### [Keep Calm And Carry On: Top 5 AI Stocks For April 2025](/article/4773806-keep-calm-and-carry-on-top-5-ai-stocks-for-april-2025#source=section%3Arecommended_for_you%7Csection_asset%3Aintegrated%7Cfirst_level_url%3Aarticle%7Cvariation_group%3Avariation_b%7Cline%3A1)
+Steven Cress, Quant Team
+### [Alphabet May Become The Largest Company In The World, Here's How](/article/4774867-alphabet-may-become-the-largest-company-in-the-world-here-is-how#source=section%3Arecommended_for_you%7Csection_asset%3Aintegrated%7Cfirst_level_url%3Aarticle%7Cvariation_group%3Avariation_b%7Cline%3A2)
+David H. Lerner
+### [Nvidia's Biggest Headache Comes In 30 Days](/article/4775249-nvidia-biggest-headache-comes-in-30-days#source=section%3Arecommended_for_you%7Csection_asset%3Aintegrated%7Cfirst_level_url%3Aarticle%7Cvariation_group%3Avariation_b%7Cline%3A3)
+Uttam Dey
+### [Nvidia: Told You To Buy At $100, Next Stop Could Be $300 (Technical Analysis)](/article/4775033-nvidia-told-you-to-buy-at-100-next-stop-could-be-300-technical-analysis#source=section%3Arecommended_for_you%7Csection_asset%3Aintegrated%7Cfirst_level_url%3Aarticle%7Cvariation_group%3Avariation_b%7Cline%3A4)
+James Foord
+### [Nvidia: A Generational Investment With Asymmetric Upside](/article/4774755-nvidia-a-generational-investment-with-asymmetric-upside#source=section%3Arecommended_for_you%7Csection_asset%3Aintegrated%7Cfirst_level_url%3Aarticle%7Cvariation_group%3Avariation_b%7Cline%3A5)
+Christopher Kirincic
+## Comments (12)
+Newest
+Share your comment:
+Publish
+J
+[JWesson](/user/50512296)
+Today, 2:36 PM
+[Premium](/checkout/proresearch#source=first_level_url%3Anews%7Csection%3Acomments%7Csection_asset%3Abadge%7Cbutton%3APremium)
+[Comments (324)](/user/50512296)
+|
+\+ Follow
+🇺🇸🇺🇸PLTR🇺🇸🇺🇸
+Reply
+Like
+C
+[Charliedon'tsurf](/user/48417134)
+Today, 12:44 PM
+[Premium](/checkout/proresearch#source=first_level_url%3Anews%7Csection%3Acomments%7Csection_asset%3Abadge%7Cbutton%3APremium)[Investing Group](/checkout/mp_1006#source=first_level_url%3Anews%7Csection%3Acomments%7Csection_asset%3Abadge%7Cbutton%3AInvesting%20Group)
+[Comments (3.11K)](/user/48417134)
+|
+\+ Follow
+This is a long-term investment. Some can and want to trade. That's great. But this company will be doing significant, yea, vital things long into the future.
+Reply
+Like(1)
+G
+[Geetch](/user/59414196)
+Today, 8:22 AM
+[Premium](/checkout/proresearch#source=first_level_url%3Anews%7Csection%3Acomments%7Csection_asset%3Abadge%7Cbutton%3APremium)[Investing Group](/checkout/mp_1006#source=first_level_url%3Anews%7Csection%3Acomments%7Csection_asset%3Abadge%7Cbutton%3AInvesting%20Group)
+[Comments (69)](/user/59414196)
+|
+\+ Follow
+The more a stock is talked about the less I want to buy it. And this one has been overanalyzed to death,
+Reply
+Like
+[High Sharpe](/author/high-sharpe)
+Today, 6:52 AM
+[Analyst](/account/become_a_contributor#source=first_level_url%3Anews%7Csection%3Acomments%7Csection_asset%3Abadge%7Cbutton%3AContributor)[Premium](/checkout/proresearch#source=first_level_url%3Anews%7Csection%3Acomments%7Csection_asset%3Abadge%7Cbutton%3APremium)[Investing Group](/alpha-picks#source=first_level_url%3Anews%7Csection%3Acomments%7Csection_asset%3Abadge%7Cbutton%3AInvesting%20Group)
+[Comments (1.1K)](/author/high-sharpe)
+|
+\+ Follow
+buying high growth at high growth multiples in the face of uncertainty is not a good trade in general. in a panic different story. global spending on ai looks to be chillier than last year this time. while the aip looks very promising and the commercial growth is very impressive buying the equity here at this stage is a real gamble. i dont think you lose anything by sitting on sidelines for six months with this, buy something else my opinion. lets say they revenue by 30% this year. does the stock factor that in right now? does it go to 120 if they hit that? i hear people complain about the stock issuance and yea its alot, but its 20% of salesforce. still though salesforce stock compensation was only 25% of operating cash flow while palantir is 70% of operating cash flow and sales force had 3 billion in stock compensation......its market cap is 240 bil. and it has 12 times the operating cash flow of palantir....so yea upside palantir here?? ill sit on sideline for six months with this name.
+Reply
+Like
+C
+[Colorado Oilman](/user/826334)
+Today, 3:10 AM
+[Premium](/checkout/proresearch#source=first_level_url%3Anews%7Csection%3Acomments%7Csection_asset%3Abadge%7Cbutton%3APremium)
+[Comments (2.2K)](/user/826334)
+|
+\+ Follow
+Makes around 10 cents a quarter   
+Retail has priced in next 10 years of earnings  
+Good stock at 25  
+Nonsensical at 90
+Reply
+Like(2)
+C
+[Ca_Oz](/user/57199618)
+Today, 4:49 AM
+[Premium](/checkout/proresearch#source=first_level_url%3Anews%7Csection%3Acomments%7Csection_asset%3Abadge%7Cbutton%3APremium)
+[Comments (122)](/user/57199618)
+|
+\+ Follow
+[@Colorado Oilman](/user/826334) and stocks with low pe multiples keep staying low.
+Reply
+Like(3)
+[thx4thehelp](/user/20714431)
+Yesterday, 9:32 PM
+[Premium](/checkout/proresearch#source=first_level_url%3Anews%7Csection%3Acomments%7Csection_asset%3Abadge%7Cbutton%3APremium)
+[Comments (162)](/user/20714431)
+|
+\+ Follow
+Where did the shorts go. They should write Mr Karp and get a private chat with Mr Karp who has talked about how much he thinks of shorts. As for me I will be here as long as Mr Karp is running things. Long long long. And thanks to all Palantir employees.
+Reply
+Like(5)
+[Saries](/user/34052695)
+Yesterday, 8:51 PM
+[Premium](/checkout/proresearch#source=first_level_url%3Anews%7Csection%3Acomments%7Csection_asset%3Abadge%7Cbutton%3APremium)
+[Comments (4.08K)](/user/34052695)
+|
+\+ Follow
+Not a large holder of this stock but I’m seriously considering buying more. Price is getting too low in my opinion and too many people can’t seem to handle the forward PE. In my view, just like Nvdia, no one knows what the actual pe will be until they stop growing. I don’t see that happening in the near future, regardless of China and the tariffs threats.
+Reply
+Like(2)
+s
+[sunk1putt](/user/47599057)
+Yesterday, 6:23 PM
+[Premium](/checkout/proresearch#source=first_level_url%3Anews%7Csection%3Acomments%7Csection_asset%3Abadge%7Cbutton%3APremium)
+[Comments (606)](/user/47599057)
+|
+\+ Follow
+Thanks for your post and overview, JR! No matter how you slice it, PLTR is a horse and a winner!
+Reply
+Like(4)
+Liked By Analyst
+[JR Research](/author/jr-research)
+Yesterday, 7:17 PM
+[Investing Group Leader](/checkout/mp_1392#source=first_level_url%3Anews%7Csection%3Acomments%7Csection_asset%3Abadge%7Cbutton%3AInvesting%20Group%20Leader)[Premium](/checkout/proresearch#source=first_level_url%3Anews%7Csection%3Acomments%7Csection_asset%3Abadge%7Cbutton%3APremium)
+[Comments (11.55K)](/author/jr-research)
+|
+\+ Follow
+[@sunk1putt](/user/47599057) Haha! You are welcome! I agree that it's hard to take anything away from this incredible company.
+Reply
+Like(2)
+M
+[MattButlerUSA](/user/59139778)
+Yesterday, 4:17 PM
+[Premium](/checkout/proresearch#source=first_level_url%3Anews%7Csection%3Acomments%7Csection_asset%3Abadge%7Cbutton%3APremium)[Investing Group](/alpha-picks#source=first_level_url%3Anews%7Csection%3Acomments%7Csection_asset%3Abadge%7Cbutton%3AInvesting%20Group)
+[Comments (23)](/user/59139778)
+|
+\+ Follow
+A 140x is not “for the faint of heart.” It’s cardiac arrest in need of a quadruple by-pass.
+Reply
+Like(5)
+Liked By Analyst
+[JR Research](/author/jr-research)
+Yesterday, 7:17 PM
+[Investing Group Leader](/checkout/mp_1392#source=first_level_url%3Anews%7Csection%3Acomments%7Csection_asset%3Abadge%7Cbutton%3AInvesting%20Group%20Leader)[Premium](/checkout/proresearch#source=first_level_url%3Anews%7Csection%3Acomments%7Csection_asset%3Abadge%7Cbutton%3APremium)
+[Comments (11.55K)](/author/jr-research)
+|
+\+ Follow
+[@MattButlerUSA](/user/59139778) Lol!.
+Reply
+Like(1)
+Add A Comment
+Disagree with this article? [Submit your own](/submission). To report a factual error in this article, click here. Your feedback matters to us!
+## About This Article
+?
+Stock Covered
+[PLTR](/symbol/PLTR#source=first_level_url%3Aarticle%7Csection%3Aright_rail%7Csection_asset%3Aabout_article%7Csymbol%3APLTR)
+Analyst's rating at publication
+[Buy](/symbol/PLTR/ratings/author-ratings#source=first_level_url%3Aarticle%7Csection%3Aright_rail%7Csection_asset%3Aabout_article%7Csymbol%3APLTR)
+Analyst's rating history
+Created with Highcharts 11.2.0Nov '24Jan '25Feb '25Mar '25050100150
+[Analyst's full rating history »](/author/jr-research/analysis?ticker=pltr)
+## About PLTR Stock
+Symbol| Last Price| % Chg  
+---|---|---  
+[PLTR](/symbol/PLTR#source=first_level_url%3Aarticle%7Csection%3Aright_rail%7Csection_asset%3Aabout%7Cline%3A1%7Csymbol%3APLTR)Palantir Technologies Inc.| 93.78| 1.15%  
+Post| 93.70| -0.09%  
+  * 1D
+  * 5D
+  * 1M
+  * 6M
+  * 1Y
+  * 5Y
+  * 10Y
+  * [](/symbol/PLTR/charting#source=first_level_url%3Aarticle%7Csection%3Aright_rail%7Csection_asset%3Achart_expand)
+
+Created with Highcharts 11.2.0Apr 14Apr 15Apr 16Apr 179010080
+Market Cap
+$217.44B
+PE (FWD)
+167.26
+Yield 
+-
+Rev Growth (YoY)
+28.79%
+Short Interest
+2.32%
+Prev. Close
+$92.71
+Analyze With AI
+New
+[Compare to Peers](/comparison/new/MCUyQ3BsdHI=#source=first_level_url%3Aarticle%7Csection%3Aright_rail%7Csection_asset%3Aabout%7Cbutton%3Acompare)
+## PLTR Ratings
+Source| Rating| Score  
+---|---|---  
+[SA Analysts](/symbol/PLTR/ratings/author-ratings#source=first_level_url%3Anews%7Csection%3Aratings%7Csymbol%3APLTR%7Csection_asset%3Asa_author_rating)| [Hold](/symbol/PLTR/ratings/author-ratings#source=first_level_url%3Anews%7Csection%3Aratings%7Csymbol%3APLTR%7Csection_asset%3Asa_author_rating)| [Rating: Hold3.17](/symbol/PLTR/ratings/author-ratings#source=first_level_url%3Anews%7Csection%3Aratings%7Csymbol%3APLTR%7Csection_asset%3Asa_author_rating)  
+[Wall Street](/symbol/PLTR/ratings/sell-side-ratings#source=first_level_url%3Anews%7Csection%3Aratings%7Csymbol%3APLTR%7Csection_asset%3Awall_street_score)| [Hold](/symbol/PLTR/ratings/sell-side-ratings#source=first_level_url%3Anews%7Csection%3Aratings%7Csymbol%3APLTR%7Csection_asset%3Awall_street_score)| [Rating: Hold2.92](/symbol/PLTR/ratings/sell-side-ratings#source=first_level_url%3Anews%7Csection%3Aratings%7Csymbol%3APLTR%7Csection_asset%3Awall_street_score)  
+[Quant](/symbol/PLTR/ratings/quant-ratings#source=first_level_url%3Anews%7Csection%3Aratings%7Csymbol%3APLTR%7Csection_asset%3Aquant_score)| [Hold](/symbol/PLTR/ratings/quant-ratings#source=first_level_url%3Anews%7Csection%3Aratings%7Csymbol%3APLTR%7Csection_asset%3Aquant_score)| [Rating: Hold3.49](/symbol/PLTR/ratings/quant-ratings#source=first_level_url%3Anews%7Csection%3Aratings%7Csymbol%3APLTR%7Csection_asset%3Aquant_score)  
+## Quant Ranking
+?
+Sector
+[Information Technology](/screeners/9679329f-Top-Technology-Stocks#source=first_level_url%3Asymbol%7Csection%3AQuant_Ranking%7Csection_asset%3AQuant_Ranking%7Cbutton%3Asector)
+Industry
+[Application Software](/screeners/9409aed041-Top-Application-Software-Stocks#source=first_level_url%3Asymbol%7Csection%3AQuant_Ranking%7Csection_asset%3AQuant_Ranking%7Cbutton%3Aindustry)
+Ranked Overall
+[632 out of 4344](/screeners/95b9990b-Top-Stocks-by-Quant#source=first_level_url%3Asymbol%7Csection%3AQuant_Ranking%7Csection_asset%3AQuant_Ranking%7Cbutton%3Aoverall_rank)
+Ranked in Sector
+[92 out of 538](/screeners/9679329f-Top-Technology-Stocks#source=first_level_url%3Asymbol%7Csection%3AQuant_Ranking%7Csection_asset%3AQuant_Ranking%7Cbutton%3Asector_rank)
+Ranked in Industry
+[35 out of 190](/screeners/9409aed041-Top-Application-Software-Stocks#source=first_level_url%3Asymbol%7Csection%3AQuant_Ranking%7Csection_asset%3AQuant_Ranking%7Cbutton%3Aindustry_rank)
+[Quant Ratings Beat The Market »](/performance/quant#source=first_level_url%3Asymbol%7Csection%3AQuant_Ranking%7Csection_asset%3AQuant_Ranking%7Cbutton%3Abeat_market)
+## More on PLTR
+### [Palantir Stock: The Breakthrough That Changes Everything](/article/4775982-palantir-stock-the-breakthrough-that-changes-everything#source=section_asset%3Amore-on%7Csection%3Aright_rail%7Cfirst_level_url%3Aarticle%7Cline%3A1%7Cpos%3Aundefined)
+[Rick Orford](/author/rick-orford#source=section_asset%3Amore-on%7Csection%3Aright_rail%7Cfirst_level_url%3Aarticle%7Cline%3A1%7Cpos%3Aundefined)
+### [SA analyst upgrades: AMD, PLTR, VKTX, HUBS, MO, USB, SFIX, VERV](/news/4432297-sa-analyst-upgrades-amd-pltr-vktx-hubs-mo-usb-sfix-verv#source=section_asset%3Amore-on%7Csection%3Aright_rail%7Cfirst_level_url%3Aarticle%7Cline%3A2%7Cpos%3Aundefined)
+### [Could A Recession Accelerate AI Adoption And Turn Palantir To A Defensive Play?](/article/4775896-could-recession-accelerate-ai-adoption-turn-palantir-to-defensive-play#source=section_asset%3Amore-on%7Csection%3Aright_rail%7Cfirst_level_url%3Aarticle%7Cline%3A3%7Cpos%3Aundefined)
+[Geneva Investor](/author/geneva-investor#source=section_asset%3Amore-on%7Csection%3Aright_rail%7Cfirst_level_url%3Aarticle%7Cline%3A3%7Cpos%3Aundefined)
+### [SpaceX, Palantir, Anduril emerge as frontrunners for Trump’s “Golden Dome” project - report](/news/4432025-spacex-palantir-anduril-emerge-as-frontrunners-for-trumps-golden-dome-project---report#source=section_asset%3Amore-on%7Csection%3Aright_rail%7Cfirst_level_url%3Aarticle%7Cline%3A4%7Cpos%3Aundefined)
+## Portfolio 1
+\+ AddLink PortfolioEdit Portfolio
+SymbolSort by Symbol in descending order| Price| % Chg  
+---|---|---  
+[BMEZ](/symbol/BMEZ#source=first_level_url%3Aarticle%7Csection%3Aportfolio%7Csection_asset%3Aprices%7Csymbol%3ABMEZ%7Cline%3A1)| 13.66| -2.36%  
+[JAAA](/symbol/JAAA#source=first_level_url%3Aarticle%7Csection%3Aportfolio%7Csection_asset%3Aprices%7Csymbol%3AJAAA%7Cline%3A2)| 50.30| 0.12%  
+[NBXG](/symbol/NBXG#source=first_level_url%3Aarticle%7Csection%3Aportfolio%7Csection_asset%3Aprices%7Csymbol%3ANBXG%7Cline%3A3)| 11.44| 0.26%  
+[PFO](/symbol/PFO#source=first_level_url%3Aarticle%7Csection%3Aportfolio%7Csection_asset%3Aprices%7Csymbol%3APFO%7Cline%3A4)| 8.71| 0.81%  
+[XFLT](/symbol/XFLT#source=first_level_url%3Aarticle%7Csection%3Aportfolio%7Csection_asset%3Aprices%7Csymbol%3AXFLT%7Cline%3A5)| 5.50| 0.73%  
+[Expand Portfolio](/account/portfolio/summary#source=first_level_url%3Aarticle%7Csection%3Aportfolio%7Cbutton%3Aexpand_portfolio)
+## Looking For The Perfect Gift?
+You can now buy 1 year of Seeking Alpha Premium for whomever you like.
+[Gift Premium](/gift-checkout/proresearch)

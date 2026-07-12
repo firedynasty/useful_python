@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Transcript Extractor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .controls {
+            text-align: center;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 12px 30px;
+            font-size: 16px;
+            background-color: #FF0000;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #CC0000;
+        }
+
+        .copy-button {
+            background-color: #2196F3;
+        }
+
+        .copy-button:hover {
+            background-color: #1976D2;
+        }
+
+        .clear-button {
+            background-color: #757575;
+        }
+
+        .clear-button:hover {
+            background-color: #616161;
+        }
+
+        .text-areas {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .textarea-container {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .textarea-label {
+            display: block;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 500px;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            resize: vertical;
+            background-color: #fafafa;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #FF0000;
+            background-color: white;
+        }
+
+        #status {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 12px 24px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1000;
+        }
+
+        #status.show {
+            opacity: 1;
+        }
+
+        .instructions {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .instructions h2 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .instructions ul {
+            color: #666;
+            font-size: 14px;
+            margin-left: 20px;
+        }
+
+        .instructions li {
+            margin-bottom: 5px;
+        }
+
+        .options {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        /* Toggle slider styles */
+        .toggle-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 16px;
+            background-color: #e6f3ff;
+            border-radius: 8px;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 24px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+
+        input:checked + .slider {
+            background-color: #4CAF50;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        .toggle-label {
+            font-weight: bold;
+            font-size: 12px;
+            color: #333;
+        }
+
+        .options label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .options input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .video-info {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 15px;
+            display: none;
+        }
+
+        .video-info.show {
+            display: block;
+        }
+
+        .video-info h3 {
+            color: #856404;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .video-info p {
+            color: #856404;
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>YouTube Transcript Extractor</h1>
+            <p>Extract clean transcript text from YouTube page content</p>
+        </div>
+
+        <div class="instructions">
+            <h2>How to use:</h2>
+            <ul>
+                <li>On YouTube, click "Show transcript" below the video description</li>
+                <li>Select all the page content (Cmd+A) and copy (Cmd+C)</li>
+                <li>Paste the content into the Input area below</li>
+                <li>Click "Extract Transcript" - the clean transcript will appear in Output</li>
+                <li>Output is automatically copied to your clipboard</li>
+            </ul>
+        </div>
+
+        <div class="options">
+            <!-- Timestamp Toggle Slider -->
+            <div class="toggle-container">
+                <span class="toggle-label">No Timestamps</span>
+                <label class="switch">
+                    <input type="checkbox" id="includeTimestamps" checked>
+                    <span class="slider"></span>
+                </label>
+                <span class="toggle-label">With Timestamps</span>
+            </div>
+
+            <label>
+                <input type="checkbox" id="includeTitle" checked>
+                Include video title
+            </label>
+            <label>
+                <input type="checkbox" id="includeChannel">
+                Include channel name
+            </label>
+        </div>
+
+        <div class="controls">
+            <button onclick="extractTranscript()">Extract Transcript</button>
+            <button onclick="copyOutputToClipboard()" class="copy-button">Copy Output to Clipboard</button>
+            <button onclick="clearAll()" class="clear-button">Clear All</button>
+        </div>
+
+        <div class="text-areas">
+            <div class="textarea-container">
+                <span class="textarea-label">Input (paste YouTube page content here):</span>
+                <div id="videoInfo" class="video-info">
+                    <h3>Detected Video Info:</h3>
+                    <p id="detectedTitle"></p>
+                    <p id="detectedChannel"></p>
+                </div>
+                <textarea id="inputText" placeholder="Paste the entire YouTube page content here (use Cmd+A then Cmd+C on the YouTube page)..."></textarea>
+            </div>
+            <div class="textarea-container">
+                <span class="textarea-label">Output (extracted transcript):</span>
+                <textarea id="outputText" readonly placeholder="Your clean transcript will appear here..."></textarea>
+            </div>
+        </div>
+
+        <div id="status"></div>
+    </div>
+
+    <script>
+        function showStatus(message) {
+            const status = document.getElementById('status');
+            status.textContent = message;
+            status.classList.add('show');
+            setTimeout(() => {
+                status.classList.remove('show');
+            }, 2000);
+        }
+
+        function extractVideoInfo(text) {
+            const lines = text.split('\n').map(line => line.trim()).filter(line => line.length > 0);
+
+            let title = '';
+            let channel = '';
+
+            // Look for the video title - it's usually one of the first substantial lines
+            // after "Skip navigation" and before subscriber count
+            let foundSkipNav = false;
+            for (let i = 0; i < Math.min(lines.length, 30); i++) {
+                const line = lines[i];
+
+                if (line === 'Skip navigation') {
+                    foundSkipNav = true;
+                    continue;
+                }
+
+                // Skip short lines and common UI elements
+                if (line.length < 10) continue;
+                if (line === 'Search' || line === 'Create') continue;
+                if (line.startsWith('Avatar')) continue;
+
+                // The title is usually a longer line that comes before subscriber info
+                if (foundSkipNav && !title && line.length > 15 && !line.includes('subscribers') && !line.match(/^\d+(\.\d+)?[KMB]?\s*subscribers?/i)) {
+                    title = line;
+                    continue;
+                }
+
+                // Channel name comes right after title, before subscriber count
+                if (title && !channel) {
+                    // Check if next line has subscriber count
+                    const nextLine = lines[i + 1] || '';
+                    if (nextLine.match(/^\d+(\.\d+)?[KMB]?\s*subscribers?/i) || nextLine.includes('subscribers')) {
+                        channel = line;
+                        break;
+                    }
+                }
+            }
+
+            return { title, channel };
+        }
+
+        function extractTranscript() {
+            try {
+                const input = document.getElementById('inputText').value;
+                const includeTimestamps = document.getElementById('includeTimestamps').checked;
+                const includeTitle = document.getElementById('includeTitle').checked;
+                const includeChannel = document.getElementById('includeChannel').checked;
+
+                if (!input.trim()) {
+                    showStatus('Please paste YouTube content first!');
+                    return;
+                }
+
+                // Extract video info
+                const videoInfo = extractVideoInfo(input);
+
+                // Display detected info
+                const infoDiv = document.getElementById('videoInfo');
+                if (videoInfo.title || videoInfo.channel) {
+                    document.getElementById('detectedTitle').textContent = 'Title: ' + (videoInfo.title || 'Not detected');
+                    document.getElementById('detectedChannel').textContent = 'Channel: ' + (videoInfo.channel || 'Not detected');
+                    infoDiv.classList.add('show');
+                } else {
+                    infoDiv.classList.remove('show');
+                }
+
+                // Find the transcript section
+                // The transcript typically starts after "Transcript" and has timestamp patterns
+                const lines = input.split('\n');
+
+                // Find where transcript starts (look for "Transcript" header or timestamp patterns)
+                let transcriptStartIndex = -1;
+
+                for (let i = 0; i < lines.length; i++) {
+                    const line = lines[i].trim();
+                    if (line === 'Transcript') {
+                        transcriptStartIndex = i + 1;
+                        break;
+                    }
+                }
+
+                if (transcriptStartIndex === -1) {
+                    // Try to find transcript by looking for timestamp patterns
+                    for (let i = 0; i < lines.length; i++) {
+                        const line = lines[i].trim();
+                        // Look for timestamp at start like "0:00" or "1:23:45"
+                        if (line.match(/^\d{1,2}:\d{2}(:\d{2})?$/)) {
+                            transcriptStartIndex = i;
+                            break;
+                        }
+                    }
+                }
+
+                if (transcriptStartIndex === -1) {
+                    showStatus('Could not find transcript in the pasted content!');
+                    return;
+                }
+
+                // Extract transcript entries
+                const transcriptEntries = [];
+                let currentTimestamp = '';
+                let currentText = [];
+
+                // Timestamp pattern: "0:00", "1:23", "12:34", "1:23:45"
+                const timestampPattern = /^\d{1,2}:\d{2}(:\d{2})?$/;
+
+                for (let i = transcriptStartIndex; i < lines.length; i++) {
+                    const line = lines[i].trim();
+
+                    // Skip empty lines
+                    if (!line) continue;
+
+                    // Check if this is a timestamp
+                    if (timestampPattern.test(line)) {
+                        // Save previous entry if exists
+                        if (currentTimestamp && currentText.length > 0) {
+                            transcriptEntries.push({
+                                timestamp: currentTimestamp,
+                                text: currentText.join(' ')
+                            });
+                        }
+                        currentTimestamp = line;
+                        currentText = [];
+                    } else {
+                        // Check if we've hit the end of transcript
+                        // Common end markers: "All", "For you", "LIVE", video recommendations
+                        if (line === 'All' ||
+                            line === 'For you' ||
+                            line === 'Politics News' ||
+                            line === 'Recently uploaded' ||
+                            line === 'Watched' ||
+                            line.startsWith('LIVE') ||
+                            line.match(/^\d+(\.\d+)?[KMB]?\s*(views|watching)/i) ||
+                            line.match(/•\s*\d+\s*(hour|day|week|month|year)s?\s*ago/i)) {
+                            // Save last entry and stop
+                            if (currentTimestamp && currentText.length > 0) {
+                                transcriptEntries.push({
+                                    timestamp: currentTimestamp,
+                                    text: currentText.join(' ')
+                                });
+                            }
+                            break;
+                        }
+
+                        // Add text to current entry
+                        if (currentTimestamp) {
+                            currentText.push(line);
+                        }
+                    }
+                }
+
+                // Don't forget the last entry if we didn't hit an end marker
+                if (currentTimestamp && currentText.length > 0) {
+                    const lastEntry = transcriptEntries[transcriptEntries.length - 1];
+                    if (!lastEntry || lastEntry.timestamp !== currentTimestamp) {
+                        transcriptEntries.push({
+                            timestamp: currentTimestamp,
+                            text: currentText.join(' ')
+                        });
+                    }
+                }
+
+                if (transcriptEntries.length === 0) {
+                    showStatus('No transcript entries found!');
+                    return;
+                }
+
+                // Build output
+                let output = '';
+
+                if (includeTitle && videoInfo.title) {
+                    output += videoInfo.title + '\n';
+                }
+
+                if (includeChannel && videoInfo.channel) {
+                    output += 'by ' + videoInfo.channel + '\n';
+                }
+
+                if ((includeTitle && videoInfo.title) || (includeChannel && videoInfo.channel)) {
+                    output += '\n---\n\n';
+                }
+
+                if (includeTimestamps) {
+                    transcriptEntries.forEach(entry => {
+                        output += `[${entry.timestamp}] ${entry.text}\n`;
+                    });
+                } else {
+                    // Join all text as continuous prose
+                    output += transcriptEntries.map(entry => entry.text).join(' ');
+                }
+
+                // Display the output
+                document.getElementById('outputText').value = output.trim();
+
+                // Copy to clipboard
+                navigator.clipboard.writeText(output.trim()).then(() => {
+                    showStatus(`Extracted ${transcriptEntries.length} transcript entries and copied to clipboard!`);
+                }).catch(() => {
+                    showStatus(`Extracted ${transcriptEntries.length} entries (clipboard copy failed)`);
+                });
+
+            } catch (err) {
+                console.error('Extraction error:', err);
+                showStatus('Failed to extract transcript!');
+            }
+        }
+
+        async function copyOutputToClipboard() {
+            try {
+                const output = document.getElementById('outputText').value;
+
+                if (!output.trim()) {
+                    showStatus('Nothing to copy! Extract a transcript first.');
+                    return;
+                }
+
+                await navigator.clipboard.writeText(output);
+                showStatus('Copied to clipboard!');
+            } catch (err) {
+                console.error('Copy error:', err);
+                showStatus('Failed to copy to clipboard!');
+            }
+        }
+
+        function clearAll() {
+            document.getElementById('inputText').value = '';
+            document.getElementById('outputText').value = '';
+            document.getElementById('videoInfo').classList.remove('show');
+            showStatus('Cleared!');
+        }
+
+        // Keyboard shortcut: Ctrl+Enter to extract
+        document.getElementById('inputText').addEventListener('keydown', function(event) {
+            if (event.ctrlKey && event.key === 'Enter') {
+                extractTranscript();
+            }
+        });
+    </script>
+</body>
+</html>

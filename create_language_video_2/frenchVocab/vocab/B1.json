@@ -1,0 +1,4202 @@
+[
+  {
+    "french": "aviez",
+    "english": "had",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 36607
+  },
+  {
+    "french": "appel",
+    "english": "call",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 36462
+  },
+  {
+    "french": "manque",
+    "english": "lack; miss",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 36432
+  },
+  {
+    "french": "envoyé",
+    "english": "sent",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 36334
+  },
+  {
+    "french": "début",
+    "english": "start; beginning",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 36194
+  },
+  {
+    "french": "sam",
+    "english": "Sam",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 36188
+  },
+  {
+    "french": "puisse",
+    "english": "may; can",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 36184
+  },
+  {
+    "french": "écoutez",
+    "english": "listen",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 36099
+  },
+  {
+    "french": "laissez-moi",
+    "english": "let me",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 36081
+  },
+  {
+    "french": "bonsoir",
+    "english": "good evening",
+    "pos": "interjection",
+    "gender": null,
+    "frequency": 35996
+  },
+  {
+    "french": "content",
+    "english": "happy; content",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 35995
+  },
+  {
+    "french": "secret",
+    "english": "secret",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 35927
+  },
+  {
+    "french": "venue",
+    "english": "arrival",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 35831
+  },
+  {
+    "french": "cher",
+    "english": "dear; expensive",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 35798
+  },
+  {
+    "french": "dis-moi",
+    "english": "tell me",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 35752
+  },
+  {
+    "french": "effet",
+    "english": "effect",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 35720
+  },
+  {
+    "french": "voyons",
+    "english": "let's see",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 35712
+  },
+  {
+    "french": "sac",
+    "english": "bag",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 35663
+  },
+  {
+    "french": "continue",
+    "english": "continue",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 35623
+  },
+  {
+    "french": "acheter",
+    "english": "to buy",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 35367
+  },
+  {
+    "french": "voix",
+    "english": "voice",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 35335
+  },
+  {
+    "french": "certains",
+    "english": "some; certain",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 35311
+  },
+  {
+    "french": "occuper",
+    "english": "to occupy; to take care of",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 35303
+  },
+  {
+    "french": "noël",
+    "english": "Christmas",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 35247
+  },
+  {
+    "french": "gagner",
+    "english": "to win; to earn",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 35232
+  },
+  {
+    "french": "grâce",
+    "english": "grace; thanks",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 35130
+  },
+  {
+    "french": "maître",
+    "english": "master; teacher",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 35027
+  },
+  {
+    "french": "prix",
+    "english": "price; prize",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 35016
+  },
+  {
+    "french": "mauvaise",
+    "english": "bad",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 34877
+  },
+  {
+    "french": "général",
+    "english": "general",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 34861
+  },
+  {
+    "french": "âge",
+    "english": "age",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 34813
+  },
+  {
+    "french": "long",
+    "english": "long",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 34770
+  },
+  {
+    "french": "rue",
+    "english": "street",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 34669
+  },
+  {
+    "french": "tirer",
+    "english": "to pull; to shoot",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 34659
+  },
+  {
+    "french": "apprendre",
+    "english": "to learn; to teach",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 34657
+  },
+  {
+    "french": "cheveux",
+    "english": "hair",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 34619
+  },
+  {
+    "french": "noir",
+    "english": "black",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 34578
+  },
+  {
+    "french": "promis",
+    "english": "promised",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 34465
+  },
+  {
+    "french": "avaient",
+    "english": "had",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 34446
+  },
+  {
+    "french": "patron",
+    "english": "boss; pattern",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 34391
+  },
+  {
+    "french": "avocat",
+    "english": "lawyer; avocado",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 34342
+  },
+  {
+    "french": "force",
+    "english": "force; strength",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 34289
+  },
+  {
+    "french": "accident",
+    "english": "accident",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 34178
+  },
+  {
+    "french": "dix",
+    "english": "ten",
+    "pos": "noun",
+    "gender": null,
+    "frequency": 34151
+  },
+  {
+    "french": "probablement",
+    "english": "probably",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 34122
+  },
+  {
+    "french": "laissez",
+    "english": "let; leave",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 34008
+  },
+  {
+    "french": "bout",
+    "english": "end; tip",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 33935
+  },
+  {
+    "french": "ordre",
+    "english": "order",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 33869
+  },
+  {
+    "french": "armes",
+    "english": "weapons; arms",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 33850
+  },
+  {
+    "french": "cru",
+    "english": "believed; raw",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 33759
+  },
+  {
+    "french": "déteste",
+    "english": "hate",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 33715
+  },
+  {
+    "french": "retrouver",
+    "english": "to find; to meet",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 33686
+  },
+  {
+    "french": "millions",
+    "english": "millions",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 33596
+  },
+  {
+    "french": "incroyable",
+    "english": "incredible; unbelievable",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 33500
+  },
+  {
+    "french": "voyage",
+    "english": "trip; journey",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 33467
+  },
+  {
+    "french": "ailleurs",
+    "english": "elsewhere",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 33452
+  },
+  {
+    "french": "oublie",
+    "english": "forget",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 33375
+  },
+  {
+    "french": "ressemble",
+    "english": "resemble; look like",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 33348
+  },
+  {
+    "french": "bienvenue",
+    "english": "welcome",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 33329
+  },
+  {
+    "french": "disparu",
+    "english": "disappeared; missing",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 33306
+  },
+  {
+    "french": "protéger",
+    "english": "to protect",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 33233
+  },
+  {
+    "french": "utiliser",
+    "english": "to use",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 33138
+  },
+  {
+    "french": "situation",
+    "english": "situation",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 33091
+  },
+  {
+    "french": "petits",
+    "english": "small; little",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 33083
+  },
+  {
+    "french": "aurai",
+    "english": "will have",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 33057
+  },
+  {
+    "french": "veux-tu",
+    "english": "do you want",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 32911
+  },
+  {
+    "french": "connaissez",
+    "english": "know",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 32816
+  },
+  {
+    "french": "simplement",
+    "english": "simply",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 32775
+  },
+  {
+    "french": "scène",
+    "english": "scene; stage",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 32705
+  },
+  {
+    "french": "sœur",
+    "english": "sister",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 32449
+  },
+  {
+    "french": "prête",
+    "english": "ready",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 32407
+  },
+  {
+    "french": "oncle",
+    "english": "uncle",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 32390
+  },
+  {
+    "french": "devriez",
+    "english": "should",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 32217
+  },
+  {
+    "french": "liste",
+    "english": "list",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 32199
+  },
+  {
+    "french": "soeur",
+    "english": "sister",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 32041
+  },
+  {
+    "french": "complètement",
+    "english": "completely",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 32034
+  },
+  {
+    "french": "dos",
+    "english": "back",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 31944
+  },
+  {
+    "french": "armée",
+    "english": "army",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 31939
+  },
+  {
+    "french": "paix",
+    "english": "peace",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 31914
+  },
+  {
+    "french": "battre",
+    "english": "to beat; to fight",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 31889
+  },
+  {
+    "french": "york",
+    "english": "York",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 31805
+  },
+  {
+    "french": "crime",
+    "english": "crime",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 31784
+  },
+  {
+    "french": "anniversaire",
+    "english": "birthday; anniversary",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 31734
+  },
+  {
+    "french": "finir",
+    "english": "to finish; to end",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 31715
+  },
+  {
+    "french": "réussi",
+    "english": "successful",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 31714
+  },
+  {
+    "french": "agit",
+    "english": "acts",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 31654
+  },
+  {
+    "french": "retourner",
+    "english": "to return; to go back",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 31576
+  },
+  {
+    "french": "sale",
+    "english": "dirty",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 31573
+  },
+  {
+    "french": "libre",
+    "english": "free",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 31568
+  },
+  {
+    "french": "bouge",
+    "english": "move",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 31554
+  },
+  {
+    "french": "contrôle",
+    "english": "control",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 31553
+  },
+  {
+    "french": "rappelle",
+    "english": "remind; recall",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 31538
+  },
+  {
+    "french": "arrêté",
+    "english": "stopped; arrested",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 31461
+  },
+  {
+    "french": "hôtel",
+    "english": "hotel",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 31438
+  },
+  {
+    "french": "idiot",
+    "english": "idiot; foolish",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 31388
+  },
+  {
+    "french": "okay",
+    "english": "okay",
+    "pos": "interjection",
+    "gender": null,
+    "frequency": 31277
+  },
+  {
+    "french": "rencontré",
+    "english": "met",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 31211
+  },
+  {
+    "french": "restez",
+    "english": "stay",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 31133
+  },
+  {
+    "french": "absolument",
+    "english": "absolutely",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 31103
+  },
+  {
+    "french": "mots",
+    "english": "words",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 31001
+  },
+  {
+    "french": "victime",
+    "english": "victim",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 30971
+  },
+  {
+    "french": "impression",
+    "english": "impression; print",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 30923
+  },
+  {
+    "french": "décidé",
+    "english": "decided",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 30860
+  },
+  {
+    "french": "sympa",
+    "english": "nice; friendly",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 30825
+  },
+  {
+    "french": "pars",
+    "english": "leave; go",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 30795
+  },
+  {
+    "french": "fasse",
+    "english": "do; make",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 30781
+  },
+  {
+    "french": "avion",
+    "english": "plane; aircraft",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 30751
+  },
+  {
+    "french": "bordel",
+    "english": "mess; brothel",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 30717
+  },
+  {
+    "french": "habitude",
+    "english": "habit; custom",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 30681
+  },
+  {
+    "french": "table",
+    "english": "table",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 30663
+  },
+  {
+    "french": "rouge",
+    "english": "red",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 30645
+  },
+  {
+    "french": "système",
+    "english": "system",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 30622
+  },
+  {
+    "french": "photos",
+    "english": "photos; pictures",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 30548
+  },
+  {
+    "french": "médecin",
+    "english": "doctor",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 30511
+  },
+  {
+    "french": "seras",
+    "english": "will be",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 30451
+  },
+  {
+    "french": "bateau",
+    "english": "boat; ship",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 30393
+  },
+  {
+    "french": "stupide",
+    "english": "stupid; silly",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 30383
+  },
+  {
+    "french": "faim",
+    "english": "hunger",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 30350
+  },
+  {
+    "french": "autour",
+    "english": "around",
+    "pos": "preposition",
+    "gender": null,
+    "frequency": 30343
+  },
+  {
+    "french": "fond",
+    "english": "bottom; background",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 30337
+  },
+  {
+    "french": "surprise",
+    "english": "surprise",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 30330
+  },
+  {
+    "french": "croyez",
+    "english": "believe",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 30274
+  },
+  {
+    "french": "devais",
+    "english": "had to; must",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 30216
+  },
+  {
+    "french": "ligne",
+    "english": "line; row",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 29986
+  },
+  {
+    "french": "porter",
+    "english": "to carry; to wear",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 29973
+  },
+  {
+    "french": "imagine",
+    "english": "imagine",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 29930
+  },
+  {
+    "french": "colère",
+    "english": "anger; rage",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 29833
+  },
+  {
+    "french": "clair",
+    "english": "clear; light",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 29823
+  },
+  {
+    "french": "seront",
+    "english": "will be",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 29823
+  },
+  {
+    "french": "savait",
+    "english": "knew",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 29819
+  },
+  {
+    "french": "balle",
+    "english": "ball; bullet",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 29671
+  },
+  {
+    "french": "gagné",
+    "english": "won; earned",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 29628
+  },
+  {
+    "french": "or",
+    "english": "gold",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 29615
+  },
+  {
+    "french": "hors",
+    "english": "outside; except",
+    "pos": "preposition",
+    "gender": null,
+    "frequency": 29603
+  },
+  {
+    "french": "magnifique",
+    "english": "magnificent; beautiful",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 29550
+  },
+  {
+    "french": "risque",
+    "english": "risk; danger",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 29451
+  },
+  {
+    "french": "terminé",
+    "english": "finished; completed",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 29401
+  },
+  {
+    "french": "su",
+    "english": "known",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 29297
+  },
+  {
+    "french": "heureuse",
+    "english": "happy; glad",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 29291
+  },
+  {
+    "french": "mission",
+    "english": "mission; task",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 29188
+  },
+  {
+    "french": "jolie",
+    "english": "pretty; nice",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 29170
+  },
+  {
+    "french": "parlez",
+    "english": "speak; talk",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 29154
+  },
+  {
+    "french": "présent",
+    "english": "present; current",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 29154
+  },
+  {
+    "french": "sorti",
+    "english": "gone out; released",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 29142
+  },
+  {
+    "french": "cadeau",
+    "english": "gift; present",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 29135
+  },
+  {
+    "french": "expliquer",
+    "english": "to explain",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 29117
+  },
+  {
+    "french": "volé",
+    "english": "stolen; flew",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 29042
+  },
+  {
+    "french": "plusieurs",
+    "english": "several; many",
+    "pos": "determiner",
+    "gender": null,
+    "frequency": 29005
+  },
+  {
+    "french": "gauche",
+    "english": "left; awkward",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 29001
+  },
+  {
+    "french": "ferait",
+    "english": "would do; would make",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 29000
+  },
+  {
+    "french": "neuf",
+    "english": "new; nine",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 28997
+  },
+  {
+    "french": "passe-t-il",
+    "english": "does he pass",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28932
+  },
+  {
+    "french": "ouvre",
+    "english": "opens",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28901
+  },
+  {
+    "french": "disais",
+    "english": "was saying; used to say",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28816
+  },
+  {
+    "french": "dedans",
+    "english": "inside",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 28714
+  },
+  {
+    "french": "disent",
+    "english": "say",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28687
+  },
+  {
+    "french": "pouvons",
+    "english": "can; are able",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28614
+  },
+  {
+    "french": "allez-y",
+    "english": "go ahead",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28516
+  },
+  {
+    "french": "suivre",
+    "english": "to follow",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28472
+  },
+  {
+    "french": "pourra",
+    "english": "will be able",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28408
+  },
+  {
+    "french": "inspecteur",
+    "english": "inspector",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 28401
+  },
+  {
+    "french": "réponse",
+    "english": "answer; response",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 28389
+  },
+  {
+    "french": "lumière",
+    "english": "light",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 28373
+  },
+  {
+    "french": "pieds",
+    "english": "feet",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 28360
+  },
+  {
+    "french": "pote",
+    "english": "buddy; mate",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 28346
+  },
+  {
+    "french": "montre",
+    "english": "watch; shows",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 28345
+  },
+  {
+    "french": "pied",
+    "english": "foot",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 28324
+  },
+  {
+    "french": "marcher",
+    "english": "to walk",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28292
+  },
+  {
+    "french": "charlie",
+    "english": "Charlie",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 28209
+  },
+  {
+    "french": "auras",
+    "english": "will have",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28194
+  },
+  {
+    "french": "envoyer",
+    "english": "to send",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28172
+  },
+  {
+    "french": "vraie",
+    "english": "true; real",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 28134
+  },
+  {
+    "french": "espèce",
+    "english": "species; kind",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 28096
+  },
+  {
+    "french": "doivent",
+    "english": "must; have to",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 28094
+  },
+  {
+    "french": "allô",
+    "english": "hello",
+    "pos": "interjection",
+    "gender": null,
+    "frequency": 27992
+  },
+  {
+    "french": "pareil",
+    "english": "same; similar",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 27908
+  },
+  {
+    "french": "vas-tu",
+    "english": "are you going",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 27844
+  },
+  {
+    "french": "soleil",
+    "english": "sun",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 27823
+  },
+  {
+    "french": "camp",
+    "english": "camp",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 27788
+  },
+  {
+    "french": "fallait",
+    "english": "was necessary",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 27763
+  },
+  {
+    "french": "coin",
+    "english": "corner",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 27733
+  },
+  {
+    "french": "ignore",
+    "english": "ignores",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 27730
+  },
+  {
+    "french": "moitié",
+    "english": "half",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 27718
+  },
+  {
+    "french": "you",
+    "english": "you",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 27696
+  },
+  {
+    "french": "selon",
+    "english": "according to",
+    "pos": "preposition",
+    "gender": null,
+    "frequency": 27696
+  },
+  {
+    "french": "tenir",
+    "english": "to hold",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 27689
+  },
+  {
+    "french": "grosse",
+    "english": "big; fat",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 27629
+  },
+  {
+    "french": "vouloir",
+    "english": "to want",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 27622
+  },
+  {
+    "french": "michael",
+    "english": "Michael",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 27613
+  },
+  {
+    "french": "vieille",
+    "english": "old",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 27589
+  },
+  {
+    "french": "devenu",
+    "english": "become",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 27587
+  },
+  {
+    "french": "continuer",
+    "english": "to continue",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 27438
+  },
+  {
+    "french": "rend",
+    "english": "returns; makes",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 27333
+  },
+  {
+    "french": "sortie",
+    "english": "exit; outing",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 27301
+  },
+  {
+    "french": "recherche",
+    "english": "search; research",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 27273
+  },
+  {
+    "french": "arrière",
+    "english": "back; rear",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 27266
+  },
+  {
+    "french": "lire",
+    "english": "to read",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 27246
+  },
+  {
+    "french": "doucement",
+    "english": "gently; slowly",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 27137
+  },
+  {
+    "french": "joli",
+    "english": "pretty; nice",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 27123
+  },
+  {
+    "french": "avance",
+    "english": "advance; progress",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 27109
+  },
+  {
+    "french": "exact",
+    "english": "exact",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 27037
+  },
+  {
+    "french": "disait",
+    "english": "was saying; said",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 26948
+  },
+  {
+    "french": "club",
+    "english": "club",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 26946
+  },
+  {
+    "french": "arrivée",
+    "english": "arrival",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 26902
+  },
+  {
+    "french": "tue",
+    "english": "kills",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 26853
+  },
+  {
+    "french": "laquelle",
+    "english": "which one",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 26841
+  },
+  {
+    "french": "poser",
+    "english": "to put; to place",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 26762
+  },
+  {
+    "french": "chaud",
+    "english": "hot; warm",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 26762
+  },
+  {
+    "french": "aimé",
+    "english": "loved",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 26712
+  },
+  {
+    "french": "david",
+    "english": "David",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 26710
+  },
+  {
+    "french": "fais-tu",
+    "english": "do you do",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 26655
+  },
+  {
+    "french": "tom",
+    "english": "Tom",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 26651
+  },
+  {
+    "french": "professeur",
+    "english": "teacher; professor",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 26619
+  },
+  {
+    "french": "quitter",
+    "english": "to leave; to quit",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 26615
+  },
+  {
+    "french": "loi",
+    "english": "law",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 26556
+  },
+  {
+    "french": "tueur",
+    "english": "killer",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 26498
+  },
+  {
+    "french": "donne-moi",
+    "english": "give me",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 26466
+  },
+  {
+    "french": "flics",
+    "english": "cops",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 26459
+  },
+  {
+    "french": "connaître",
+    "english": "to know",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 26455
+  },
+  {
+    "french": "lettre",
+    "english": "letter",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 26437
+  },
+  {
+    "french": "forme",
+    "english": "shape; form",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 26420
+  },
+  {
+    "french": "connaît",
+    "english": "knows",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 26384
+  },
+  {
+    "french": "conseil",
+    "english": "advice; council",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 26321
+  },
+  {
+    "french": "bar",
+    "english": "bar",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 26306
+  },
+  {
+    "french": "normal",
+    "english": "normal",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 26242
+  },
+  {
+    "french": "danger",
+    "english": "danger",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 26235
+  },
+  {
+    "french": "dangereux",
+    "english": "dangerous",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 26231
+  },
+  {
+    "french": "folle",
+    "english": "crazy; mad",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 26212
+  },
+  {
+    "french": "jure",
+    "english": "swears",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 26199
+  },
+  {
+    "french": "tiré",
+    "english": "pulled; drawn",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 26123
+  },
+  {
+    "french": "essaye",
+    "english": "tries",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 26116
+  },
+  {
+    "french": "bonnes",
+    "english": "good",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 26100
+  },
+  {
+    "french": "offre",
+    "english": "offer",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 26091
+  },
+  {
+    "french": "but",
+    "english": "goal; purpose",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 26086
+  },
+  {
+    "french": "froid",
+    "english": "cold",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 26033
+  },
+  {
+    "french": "allez-vous",
+    "english": "are you going",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 25927
+  },
+  {
+    "french": "prêts",
+    "english": "ready",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 25866
+  },
+  {
+    "french": "tranquille",
+    "english": "calm; quiet",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 25861
+  },
+  {
+    "french": "gamin",
+    "english": "kid",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 25847
+  },
+  {
+    "french": "joe",
+    "english": "Joe",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 25803
+  },
+  {
+    "french": "classe",
+    "english": "class",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 25755
+  },
+  {
+    "french": "joué",
+    "english": "played",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 25739
+  },
+  {
+    "french": "poste",
+    "english": "post; position",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 25731
+  },
+  {
+    "french": "con",
+    "english": "idiot; jerk",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 25665
+  },
+  {
+    "french": "mike",
+    "english": "Mike",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 25589
+  },
+  {
+    "french": "attaque",
+    "english": "attack",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 25543
+  },
+  {
+    "french": "boîte",
+    "english": "box; nightclub",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 25539
+  },
+  {
+    "french": "enquête",
+    "english": "investigation; inquiry",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 25412
+  },
+  {
+    "french": "visite",
+    "english": "visit",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 25391
+  },
+  {
+    "french": "juge",
+    "english": "judge",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 25363
+  },
+  {
+    "french": "moi-même",
+    "english": "myself",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 25359
+  },
+  {
+    "french": "bord",
+    "english": "edge; side",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 25332
+  },
+  {
+    "french": "debout",
+    "english": "standing; upright",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 25323
+  },
+  {
+    "french": "envoie",
+    "english": "send",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 25278
+  },
+  {
+    "french": "preuve",
+    "english": "proof; evidence",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 25213
+  },
+  {
+    "french": "oublier",
+    "english": "to forget",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 25166
+  },
+  {
+    "french": "bons",
+    "english": "good",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 25071
+  },
+  {
+    "french": "vivant",
+    "english": "alive; living",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 25069
+  },
+  {
+    "french": "ciel",
+    "english": "sky; heaven",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 25050
+  },
+  {
+    "french": "lu",
+    "english": "read",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 25036
+  },
+  {
+    "french": "touche",
+    "english": "touch; key",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 25003
+  },
+  {
+    "french": "aimer",
+    "english": "to love; to like",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 24969
+  },
+  {
+    "french": "faites-vous",
+    "english": "do you",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 24953
+  },
+  {
+    "french": "télé",
+    "english": "TV",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 24925
+  },
+  {
+    "french": "met",
+    "english": "puts",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 24924
+  },
+  {
+    "french": "écouter",
+    "english": "to listen",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 24919
+  },
+  {
+    "french": "serez",
+    "english": "will be",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 24918
+  },
+  {
+    "french": "ll",
+    "english": "ll",
+    "pos": "particle",
+    "gender": null,
+    "frequency": 24887
+  },
+  {
+    "french": "pourtant",
+    "english": "however; yet",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 24861
+  },
+  {
+    "french": "change",
+    "english": "change",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 24860
+  },
+  {
+    "french": "triste",
+    "english": "sad",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 24857
+  },
+  {
+    "french": "droite",
+    "english": "right; straight",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 24856
+  },
+  {
+    "french": "gueule",
+    "english": "mouth; mug",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 24853
+  },
+  {
+    "french": "tombe",
+    "english": "falls; grave",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 24823
+  },
+  {
+    "french": "sentir",
+    "english": "to feel; to smell",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 24811
+  },
+  {
+    "french": "ouvrir",
+    "english": "to open",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 24803
+  },
+  {
+    "french": "travers",
+    "english": "across; through",
+    "pos": "preposition",
+    "gender": null,
+    "frequency": 24799
+  },
+  {
+    "french": "santé",
+    "english": "health",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 24796
+  },
+  {
+    "french": "dossier",
+    "english": "file; folder",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 24767
+  },
+  {
+    "french": "ie",
+    "english": "i.e.",
+    "pos": "particle",
+    "gender": null,
+    "frequency": 24760
+  },
+  {
+    "french": "jeunes",
+    "english": "young people",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 24715
+  },
+  {
+    "french": "frank",
+    "english": "frank",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 24680
+  },
+  {
+    "french": "coucher",
+    "english": "to lie down; to sleep",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 24676
+  },
+  {
+    "french": "cuisine",
+    "english": "kitchen; cooking",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 24649
+  },
+  {
+    "french": "monte",
+    "english": "climbs; rises",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 24567
+  },
+  {
+    "french": "pouvez-vous",
+    "english": "can you",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 24549
+  },
+  {
+    "french": "signifie",
+    "english": "means",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 24512
+  },
+  {
+    "french": "entrez",
+    "english": "enter",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 24501
+  },
+  {
+    "french": "relation",
+    "english": "relationship",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 24501
+  },
+  {
+    "french": "centre",
+    "english": "center",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 24480
+  },
+  {
+    "french": "dame",
+    "english": "lady",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 24475
+  },
+  {
+    "french": "chacun",
+    "english": "each; everyone",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 24467
+  },
+  {
+    "french": "chanson",
+    "english": "song",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 24452
+  },
+  {
+    "french": "foutre",
+    "english": "to do; to give a damn",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 24434
+  },
+  {
+    "french": "voler",
+    "english": "to fly; to steal",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 24427
+  },
+  {
+    "french": "blanc",
+    "english": "white",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 24420
+  },
+  {
+    "french": "george",
+    "english": "George",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 24408
+  },
+  {
+    "french": "certain",
+    "english": "certain; sure",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 24340
+  },
+  {
+    "french": "don",
+    "english": "gift; donation",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 24313
+  },
+  {
+    "french": "âme",
+    "english": "soul",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 24204
+  },
+  {
+    "french": "manière",
+    "english": "way; manner",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 24165
+  },
+  {
+    "french": "flic",
+    "english": "cop; police officer",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 24138
+  },
+  {
+    "french": "décision",
+    "english": "decision",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 24039
+  },
+  {
+    "french": "mange",
+    "english": "eat",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 24014
+  },
+  {
+    "french": "vit",
+    "english": "lives",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 23971
+  },
+  {
+    "french": "compagnie",
+    "english": "company",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 23968
+  },
+  {
+    "french": "déjeuner",
+    "english": "lunch; to have lunch",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 23862
+  },
+  {
+    "french": "différent",
+    "english": "different",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 23859
+  },
+  {
+    "french": "tire",
+    "english": "pull; shoot",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 23821
+  },
+  {
+    "french": "ordres",
+    "english": "orders",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 23785
+  },
+  {
+    "french": "clé",
+    "english": "key",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 23784
+  },
+  {
+    "french": "vaisseau",
+    "english": "vessel; ship",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 23775
+  },
+  {
+    "french": "secondes",
+    "english": "seconds",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 23770
+  },
+  {
+    "french": "enfer",
+    "english": "hell",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 23720
+  },
+  {
+    "french": "sortez",
+    "english": "go out; exit",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 23674
+  },
+  {
+    "french": "vendre",
+    "english": "to sell",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 23619
+  },
+  {
+    "french": "faisais",
+    "english": "was doing; used to do",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 23540
+  },
+  {
+    "french": "responsable",
+    "english": "responsible",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 23530
+  },
+  {
+    "french": "mecs",
+    "english": "guys; dudes",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 23501
+  },
+  {
+    "french": "nulle",
+    "english": "none; worthless",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 23482
+  },
+  {
+    "french": "signe",
+    "english": "sign; signal",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 23446
+  },
+  {
+    "french": "lieutenant",
+    "english": "lieutenant",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 23433
+  },
+  {
+    "french": "aille",
+    "english": "go",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 23431
+  },
+  {
+    "french": "acheté",
+    "english": "bought",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 23393
+  },
+  {
+    "french": "étrange",
+    "english": "strange; odd",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 23391
+  },
+  {
+    "french": "diable",
+    "english": "devil",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 23391
+  },
+  {
+    "french": "viennent",
+    "english": "come",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 23391
+  },
+  {
+    "french": "monter",
+    "english": "to climb; to go up",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 23296
+  },
+  {
+    "french": "là-dedans",
+    "english": "in there",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 23243
+  },
+  {
+    "french": "capable",
+    "english": "capable; able",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 23171
+  },
+  {
+    "french": "emmener",
+    "english": "to take; to bring",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 23169
+  },
+  {
+    "french": "écrire",
+    "english": "to write",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 23152
+  },
+  {
+    "french": "honte",
+    "english": "shame",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 23146
+  },
+  {
+    "french": "bouche",
+    "english": "mouth",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 23143
+  },
+  {
+    "french": "préfère",
+    "english": "prefer",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 23099
+  },
+  {
+    "french": "coupable",
+    "english": "guilty",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 23084
+  },
+  {
+    "french": "rire",
+    "english": "to laugh; laughter",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 23042
+  },
+  {
+    "french": "payé",
+    "english": "paid",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 22996
+  },
+  {
+    "french": "soin",
+    "english": "care",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 22983
+  },
+  {
+    "french": "milieu",
+    "english": "middle; environment",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 22979
+  },
+  {
+    "french": "appartement",
+    "english": "apartment",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 22865
+  },
+  {
+    "french": "prochain",
+    "english": "next",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 22858
+  },
+  {
+    "french": "cerveau",
+    "english": "brain",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 22839
+  },
+  {
+    "french": "paris",
+    "english": "Paris",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 22815
+  },
+  {
+    "french": "blague",
+    "english": "joke",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 22769
+  },
+  {
+    "french": "choisi",
+    "english": "chosen",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 22760
+  },
+  {
+    "french": "époque",
+    "english": "era; time",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 22746
+  },
+  {
+    "french": "aurez",
+    "english": "will have",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 22702
+  },
+  {
+    "french": "voie",
+    "english": "way; track",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 22636
+  },
+  {
+    "french": "réunion",
+    "english": "meeting; reunion",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 22601
+  },
+  {
+    "french": "connu",
+    "english": "known; famous",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 22593
+  },
+  {
+    "french": "allée",
+    "english": "alley; path",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 22556
+  },
+  {
+    "french": "intérêt",
+    "english": "interest",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 22538
+  },
+  {
+    "french": "cheval",
+    "english": "horse",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 22524
+  },
+  {
+    "french": "combat",
+    "english": "fight; battle",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 22516
+  },
+  {
+    "french": "silence",
+    "english": "silence",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 22487
+  },
+  {
+    "french": "coups",
+    "english": "blows; hits",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 22485
+  },
+  {
+    "french": "existe",
+    "english": "exists",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 22455
+  },
+  {
+    "french": "ia",
+    "english": "AI; artificial intelligence",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 22453
+  },
+  {
+    "french": "retourne",
+    "english": "returns; goes back",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 22426
+  },
+  {
+    "french": "tel",
+    "english": "such; like",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 22393
+  },
+  {
+    "french": "trou",
+    "english": "hole",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 22363
+  },
+  {
+    "french": "public",
+    "english": "public; audience",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 22293
+  },
+  {
+    "french": "peter",
+    "english": "to burst; to pop",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 22251
+  },
+  {
+    "french": "oeil",
+    "english": "eye",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 22186
+  },
+  {
+    "french": "pleine",
+    "english": "full",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 22153
+  },
+  {
+    "french": "cacher",
+    "english": "to hide",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 22151
+  },
+  {
+    "french": "amoureux",
+    "english": "in love; lover",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 22137
+  },
+  {
+    "french": "drogue",
+    "english": "drug",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 22119
+  },
+  {
+    "french": "commandant",
+    "english": "commander",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 22118
+  },
+  {
+    "french": "garçons",
+    "english": "boys",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 22071
+  },
+  {
+    "french": "faisons",
+    "english": "let's do; let's make",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 22048
+  },
+  {
+    "french": "paul",
+    "english": "Paul",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 21991
+  },
+  {
+    "french": "tient",
+    "english": "holds; keeps",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 21944
+  },
+  {
+    "french": "est-elle",
+    "english": "is she; is it",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 21883
+  },
+  {
+    "french": "prise",
+    "english": "taken; grip",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 21880
+  },
+  {
+    "french": "gouvernement",
+    "english": "government",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 21860
+  },
+  {
+    "french": "dirai",
+    "english": "will say",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 21844
+  },
+  {
+    "french": "client",
+    "english": "client; customer",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 21828
+  },
+  {
+    "french": "adresse",
+    "english": "address",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 21825
+  },
+  {
+    "french": "journal",
+    "english": "newspaper; journal",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 21815
+  },
+  {
+    "french": "contact",
+    "english": "contact",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 21797
+  },
+  {
+    "french": "dingue",
+    "english": "crazy; mad",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 21787
+  },
+  {
+    "french": "sent",
+    "english": "feels; smells",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 21757
+  },
+  {
+    "french": "récupérer",
+    "english": "to recover; to retrieve",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 21729
+  },
+  {
+    "french": "base",
+    "english": "base; basis",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 21713
+  },
+  {
+    "french": "preuves",
+    "english": "proofs; evidence",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 21712
+  },
+  {
+    "french": "présente",
+    "english": "presents; introduces",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 21683
+  },
+  {
+    "french": "peau",
+    "english": "skin",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 21661
+  },
+  {
+    "french": "servir",
+    "english": "to serve",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 21656
+  },
+  {
+    "french": "peuple",
+    "english": "people; nation",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 21655
+  },
+  {
+    "french": "exemple",
+    "english": "example",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 21652
+  },
+  {
+    "french": "fiche",
+    "english": "sheet; card",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 21652
+  },
+  {
+    "french": "max",
+    "english": "Max",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 21608
+  },
+  {
+    "french": "promets",
+    "english": "promise",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 21565
+  },
+  {
+    "french": "lequel",
+    "english": "which; who",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 21558
+  },
+  {
+    "french": "blessé",
+    "english": "injured; wounded",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 21552
+  },
+  {
+    "french": "société",
+    "english": "society; company",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 21526
+  },
+  {
+    "french": "tort",
+    "english": "wrong; fault",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 21494
+  },
+  {
+    "french": "sept",
+    "english": "seven",
+    "pos": "noun",
+    "gender": null,
+    "frequency": 21493
+  },
+  {
+    "french": "pourriez",
+    "english": "could",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 21456
+  },
+  {
+    "french": "savent",
+    "english": "know",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 21437
+  },
+  {
+    "french": "ouvert",
+    "english": "open",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 21418
+  },
+  {
+    "french": "héros",
+    "english": "hero",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 21415
+  },
+  {
+    "french": "menti",
+    "english": "lied",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 21357
+  },
+  {
+    "french": "mer",
+    "english": "sea",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 21299
+  },
+  {
+    "french": "contente",
+    "english": "happy; content",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 21297
+  },
+  {
+    "french": "quitté",
+    "english": "left",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 21209
+  },
+  {
+    "french": "jeter",
+    "english": "to throw",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 21209
+  },
+  {
+    "french": "sauvé",
+    "english": "saved",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 21184
+  },
+  {
+    "french": "bière",
+    "english": "beer",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 21153
+  },
+  {
+    "french": "assis",
+    "english": "seated; sitting",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 21149
+  },
+  {
+    "french": "robe",
+    "english": "dress",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 21141
+  },
+  {
+    "french": "ecoutez",
+    "english": "listen",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 21141
+  },
+  {
+    "french": "devient",
+    "english": "becomes",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 21122
+  },
+  {
+    "french": "félicitations",
+    "english": "congratulations",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 21101
+  },
+  {
+    "french": "opération",
+    "english": "operation",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 21099
+  },
+  {
+    "french": "prévu",
+    "english": "planned; expected",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 21029
+  },
+  {
+    "french": "fut",
+    "english": "was",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 21012
+  },
+  {
+    "french": "tenez",
+    "english": "hold; here",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 20998
+  },
+  {
+    "french": "livres",
+    "english": "books",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 20995
+  },
+  {
+    "french": "répondre",
+    "english": "to answer; to reply",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 20990
+  },
+  {
+    "french": "seuls",
+    "english": "alone; only",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 20989
+  },
+  {
+    "french": "pute",
+    "english": "whore",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 20985
+  },
+  {
+    "french": "entrée",
+    "english": "entrance; entry",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 20964
+  },
+  {
+    "french": "vol",
+    "english": "flight; theft",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 20952
+  },
+  {
+    "french": "horrible",
+    "english": "horrible; awful",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 20910
+  },
+  {
+    "french": "vin",
+    "english": "wine",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 20883
+  },
+  {
+    "french": "dommage",
+    "english": "pity; damage",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 20879
+  },
+  {
+    "french": "dites-moi",
+    "english": "tell me",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 20865
+  },
+  {
+    "french": "auriez",
+    "english": "would have",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 20842
+  },
+  {
+    "french": "colonel",
+    "english": "colonel",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 20840
+  },
+  {
+    "french": "ramener",
+    "english": "to bring back",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 20818
+  },
+  {
+    "french": "règles",
+    "english": "rules; periods",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 20817
+  },
+  {
+    "french": "nez",
+    "english": "nose",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 20807
+  },
+  {
+    "french": "justice",
+    "english": "justice",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 20765
+  },
+  {
+    "french": "fbi",
+    "english": "FBI",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 20727
+  },
+  {
+    "french": "découvert",
+    "english": "discovered",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 20726
+  },
+  {
+    "french": "départ",
+    "english": "departure",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 20689
+  },
+  {
+    "french": "bruit",
+    "english": "noise",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 20665
+  },
+  {
+    "french": "secours",
+    "english": "help; rescue",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 20663
+  },
+  {
+    "french": "vérifier",
+    "english": "to check; to verify",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 20657
+  },
+  {
+    "french": "enceinte",
+    "english": "pregnant",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 20595
+  },
+  {
+    "french": "mise",
+    "english": "bet; stake",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 20571
+  },
+  {
+    "french": "témoin",
+    "english": "witness",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 20543
+  },
+  {
+    "french": "dirais",
+    "english": "would say",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 20539
+  },
+  {
+    "french": "directeur",
+    "english": "director; manager",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 20517
+  },
+  {
+    "french": "intéressant",
+    "english": "interesting",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 20484
+  },
+  {
+    "french": "excuse",
+    "english": "excuse; apology",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 20473
+  },
+  {
+    "french": "environ",
+    "english": "about; approximately",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 20468
+  },
+  {
+    "french": "inutile",
+    "english": "useless; unnecessary",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 20414
+  },
+  {
+    "french": "terrible",
+    "english": "terrible; awful",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 20402
+  },
+  {
+    "french": "danse",
+    "english": "dance",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 20395
+  },
+  {
+    "french": "position",
+    "english": "position; stance",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 20385
+  },
+  {
+    "french": "humain",
+    "english": "human",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 20379
+  },
+  {
+    "french": "apparemment",
+    "english": "apparently; seemingly",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 20336
+  },
+  {
+    "french": "avenir",
+    "english": "future",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 20307
+  },
+  {
+    "french": "rêves",
+    "english": "dreams",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 20260
+  },
+  {
+    "french": "œil",
+    "english": "eye",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 20209
+  },
+  {
+    "french": "bête",
+    "english": "beast; animal",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 20196
+  },
+  {
+    "french": "sérieusement",
+    "english": "seriously",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 20120
+  },
+  {
+    "french": "bravo",
+    "english": "bravo; well done",
+    "pos": "interjection",
+    "gender": null,
+    "frequency": 20115
+  },
+  {
+    "french": "approche",
+    "english": "approach",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 20087
+  },
+  {
+    "french": "nourriture",
+    "english": "food",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 20052
+  },
+  {
+    "french": "fric",
+    "english": "money; cash",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 20041
+  },
+  {
+    "french": "plupart",
+    "english": "most; majority",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 20040
+  },
+  {
+    "french": "lycée",
+    "english": "high school",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 20038
+  },
+  {
+    "french": "tas",
+    "english": "pile; heap",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 20038
+  },
+  {
+    "french": "empêcher",
+    "english": "to prevent; to stop",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 20006
+  },
+  {
+    "french": "longue",
+    "english": "long",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 20004
+  },
+  {
+    "french": "sexe",
+    "english": "sex; gender",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 19997
+  },
+  {
+    "french": "niveau",
+    "english": "level; standard",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 19994
+  },
+  {
+    "french": "banque",
+    "english": "bank",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 19988
+  },
+  {
+    "french": "éviter",
+    "english": "to avoid; to prevent",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 19974
+  },
+  {
+    "french": "étions",
+    "english": "were",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 19964
+  },
+  {
+    "french": "lune",
+    "english": "moon",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 19957
+  },
+  {
+    "french": "pitié",
+    "english": "pity; mercy",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 19942
+  },
+  {
+    "french": "liberté",
+    "english": "freedom; liberty",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 19931
+  },
+  {
+    "french": "expérience",
+    "english": "experience",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 19918
+  },
+  {
+    "french": "procès",
+    "english": "trial; lawsuit",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 19903
+  },
+  {
+    "french": "radio",
+    "english": "radio",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 19903
+  },
+  {
+    "french": "hum",
+    "english": "hmm",
+    "pos": "interjection",
+    "gender": null,
+    "frequency": 19890
+  },
+  {
+    "french": "verra",
+    "english": "will see",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 19883
+  },
+  {
+    "french": "thé",
+    "english": "tea",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 19875
+  },
+  {
+    "french": "partez",
+    "english": "leave; go",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 19853
+  },
+  {
+    "french": "utilisé",
+    "english": "used",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 19845
+  },
+  {
+    "french": "mur",
+    "english": "wall",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 19838
+  },
+  {
+    "french": "pose",
+    "english": "pose; position",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 19824
+  },
+  {
+    "french": "revenu",
+    "english": "income; revenue",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 19814
+  },
+  {
+    "french": "deuxième",
+    "english": "second",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 19810
+  },
+  {
+    "french": "bande",
+    "english": "band; strip",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 19808
+  },
+  {
+    "french": "asseyez-vous",
+    "english": "sit down",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 19778
+  },
+  {
+    "french": "certaines",
+    "english": "some; certain",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 19769
+  },
+  {
+    "french": "ridicule",
+    "english": "ridiculous; absurd",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 19756
+  },
+  {
+    "french": "nord",
+    "english": "north",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 19732
+  },
+  {
+    "french": "appelez",
+    "english": "call",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 19711
+  },
+  {
+    "french": "copine",
+    "english": "girlfriend; friend",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 19703
+  },
+  {
+    "french": "baiser",
+    "english": "kiss; to kiss",
+    "pos": "noun/verb",
+    "gender": "m",
+    "frequency": 19692
+  },
+  {
+    "french": "anglais",
+    "english": "English",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 19687
+  },
+  {
+    "french": "henry",
+    "english": "Henry",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 19636
+  },
+  {
+    "french": "toilettes",
+    "english": "toilets; restroom",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 19610
+  },
+  {
+    "french": "portes",
+    "english": "doors",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 19599
+  },
+  {
+    "french": "faudra",
+    "english": "will need; will have to",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 19593
+  },
+  {
+    "french": "occupé",
+    "english": "busy; occupied",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 19592
+  },
+  {
+    "french": "grands",
+    "english": "big; tall; great",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 19559
+  },
+  {
+    "french": "and",
+    "english": "and",
+    "pos": "conjunction",
+    "gender": null,
+    "frequency": 19529
+  },
+  {
+    "french": "dérange",
+    "english": "disturbs; bothers",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 19450
+  },
+  {
+    "french": "rôle",
+    "english": "role; part",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 19448
+  },
+  {
+    "french": "censé",
+    "english": "supposed; meant",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 19369
+  },
+  {
+    "french": "savez-vous",
+    "english": "do you know",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 19361
+  },
+  {
+    "french": "james",
+    "english": "James",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 19347
+  },
+  {
+    "french": "reine",
+    "english": "queen",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 19286
+  },
+  {
+    "french": "croit",
+    "english": "believes; thinks",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 19276
+  },
+  {
+    "french": "cour",
+    "english": "court; yard",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 19270
+  },
+  {
+    "french": "église",
+    "english": "church",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 19259
+  },
+  {
+    "french": "vide",
+    "english": "empty; void",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 19247
+  },
+  {
+    "french": "obtenir",
+    "english": "to obtain; to get",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 19233
+  },
+  {
+    "french": "conneries",
+    "english": "nonsense; bullshit",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 19232
+  },
+  {
+    "french": "ennuis",
+    "english": "troubles; problems",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 19229
+  },
+  {
+    "french": "personnel",
+    "english": "staff; personnel",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 19199
+  },
+  {
+    "french": "conduire",
+    "english": "to drive; to lead",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 19187
+  },
+  {
+    "french": "tombé",
+    "english": "fallen; dropped",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 19165
+  },
+  {
+    "french": "sol",
+    "english": "floor; ground",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 19160
+  },
+  {
+    "french": "code",
+    "english": "code; cipher",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 19148
+  },
+  {
+    "french": "huit",
+    "english": "eight",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 19144
+  },
+  {
+    "french": "avions",
+    "english": "planes; aircraft",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 19144
+  },
+  {
+    "french": "espoir",
+    "english": "hope",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 19132
+  },
+  {
+    "french": "comprenez",
+    "english": "understand",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 19110
+  },
+  {
+    "french": "spécial",
+    "english": "special; unique",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 19110
+  },
+  {
+    "french": "vidéo",
+    "english": "video",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 19093
+  },
+  {
+    "french": "vêtements",
+    "english": "clothes; clothing",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 19070
+  },
+  {
+    "french": "défense",
+    "english": "defense; prohibition",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 19067
+  },
+  {
+    "french": "alex",
+    "english": "Alex",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 19035
+  },
+  {
+    "french": "sud",
+    "english": "south",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 19019
+  },
+  {
+    "french": "grand-mère",
+    "english": "grandmother",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 18994
+  },
+  {
+    "french": "match",
+    "english": "match; game",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 18970
+  },
+  {
+    "french": "bombe",
+    "english": "bomb",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 18920
+  },
+  {
+    "french": "intéresse",
+    "english": "interests; concerns",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 18888
+  },
+  {
+    "french": "zone",
+    "english": "zone; area",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 18882
+  },
+  {
+    "french": "tante",
+    "english": "aunt",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 18869
+  },
+  {
+    "french": "paraît",
+    "english": "seems; appears",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 18868
+  },
+  {
+    "french": "excuser",
+    "english": "to excuse; to forgive",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 18825
+  },
+  {
+    "french": "magasin",
+    "english": "store; shop",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 18790
+  },
+  {
+    "french": "marier",
+    "english": "to marry; to wed",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 18782
+  },
+  {
+    "french": "chère",
+    "english": "dear; expensive",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 18776
+  },
+  {
+    "french": "aie",
+    "english": "have; ow",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 18755
+  },
+  {
+    "french": "souvenir",
+    "english": "memory; souvenir",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 18730
+  },
+  {
+    "french": "proche",
+    "english": "close; near",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 18698
+  },
+  {
+    "french": "revient",
+    "english": "returns; comes back",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 18664
+  },
+  {
+    "french": "danny",
+    "english": "Danny",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 18641
+  },
+  {
+    "french": "douleur",
+    "english": "pain; ache",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 18633
+  },
+  {
+    "french": "arrivera",
+    "english": "will arrive",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 18624
+  },
+  {
+    "french": "presse",
+    "english": "press; media",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 18614
+  },
+  {
+    "french": "merveilleux",
+    "english": "wonderful; marvelous",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 18609
+  },
+  {
+    "french": "asseoir",
+    "english": "to sit",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 18573
+  },
+  {
+    "french": "ravi",
+    "english": "delighted; pleased",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 18561
+  },
+  {
+    "french": "aimais",
+    "english": "loved; liked",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 18539
+  },
+  {
+    "french": "h.",
+    "english": "hour",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 18519
+  },
+  {
+    "french": "amérique",
+    "english": "America",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 18514
+  },
+  {
+    "french": "fenêtre",
+    "english": "window",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 18461
+  },
+  {
+    "french": "mien",
+    "english": "mine",
+    "pos": "pronoun",
+    "gender": null,
+    "frequency": 18458
+  },
+  {
+    "french": "terrain",
+    "english": "ground; field",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 18458
+  },
+  {
+    "french": "sergent",
+    "english": "sergeant",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 18438
+  },
+  {
+    "french": "peux-tu",
+    "english": "can you",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 18386
+  },
+  {
+    "french": "projet",
+    "english": "project; plan",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 18376
+  },
+  {
+    "french": "quartier",
+    "english": "district; neighborhood",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 18371
+  },
+  {
+    "french": "planète",
+    "english": "planet",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 18365
+  },
+  {
+    "french": "certainement",
+    "english": "certainly; definitely",
+    "pos": "adverb",
+    "gender": null,
+    "frequency": 18354
+  },
+  {
+    "french": "rapide",
+    "english": "fast; quick",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 18343
+  },
+  {
+    "french": "lorsque",
+    "english": "when",
+    "pos": "conjunction",
+    "gender": null,
+    "frequency": 18327
+  },
+  {
+    "french": "assurer",
+    "english": "to assure; to ensure",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 18311
+  },
+  {
+    "french": "rendu",
+    "english": "rendered; returned",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 18264
+  },
+  {
+    "french": "mignon",
+    "english": "cute; sweet",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 18262
+  },
+  {
+    "french": "tourne",
+    "english": "turns; spins",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 18249
+  },
+  {
+    "french": "danser",
+    "english": "to dance",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 18238
+  },
+  {
+    "french": "bob",
+    "english": "Bob",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 18238
+  },
+  {
+    "french": "clients",
+    "english": "clients; customers",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 18233
+  },
+  {
+    "french": "petites",
+    "english": "small; little",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 18226
+  },
+  {
+    "french": "aimez",
+    "english": "love; like",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 18200
+  },
+  {
+    "french": "présenter",
+    "english": "to present; to introduce",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 18198
+  },
+  {
+    "french": "importance",
+    "english": "importance; significance",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 18188
+  },
+  {
+    "french": "venus",
+    "english": "Venus",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 18185
+  },
+  {
+    "french": "jimmy",
+    "english": "Jimmy",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 18170
+  },
+  {
+    "french": "sache",
+    "english": "know",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 18159
+  },
+  {
+    "french": "mérite",
+    "english": "merit; worth",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 18141
+  },
+  {
+    "french": "machine",
+    "english": "machine",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 18119
+  },
+  {
+    "french": "derniers",
+    "english": "last; latest",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 18093
+  },
+  {
+    "french": "programme",
+    "english": "program; schedule",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 18092
+  },
+  {
+    "french": "mesdames",
+    "english": "ladies",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 18055
+  },
+  {
+    "french": "meilleurs",
+    "english": "best",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 18045
+  },
+  {
+    "french": "honnête",
+    "english": "honest; fair",
+    "pos": "adjective",
+    "gender": null,
+    "frequency": 18036
+  },
+  {
+    "french": "essayez",
+    "english": "try",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 18017
+  },
+  {
+    "french": "irai",
+    "english": "will go",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 17992
+  },
+  {
+    "french": "connard",
+    "english": "jerk; bastard",
+    "pos": "noun",
+    "gender": "m",
+    "frequency": 17990
+  },
+  {
+    "french": "occasion",
+    "english": "opportunity; occasion",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 17985
+  },
+  {
+    "french": "prouver",
+    "english": "to prove",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 17969
+  },
+  {
+    "french": "travaillé",
+    "english": "worked",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 17956
+  },
+  {
+    "french": "glace",
+    "english": "ice; mirror",
+    "pos": "noun",
+    "gender": "f",
+    "frequency": 17947
+  },
+  {
+    "french": "ayez",
+    "english": "have",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 17946
+  },
+  {
+    "french": "parie",
+    "english": "bet; wager",
+    "pos": "verb",
+    "gender": null,
+    "frequency": 17942
+  }
+]

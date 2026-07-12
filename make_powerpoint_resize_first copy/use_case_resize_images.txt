@@ -1,0 +1,3 @@
+python resize_images.py ./nov1 ./nov1_resized
+
+python resize_images.py ./new ./output

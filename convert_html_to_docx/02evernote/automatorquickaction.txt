@@ -1,0 +1,32 @@
+Automator Quick Action: Extract Note to Markdown
+=================================================
+
+1. Open Automator → File → New → Quick Action
+
+2. At the top:
+   - "Workflow receives current" → files or folders
+   - "in" → Finder
+
+3. Drag "Run AppleScript" into the workflow
+
+4. Paste this AppleScript:
+
+on run {input, parameters}
+    if (count of input) > 0 then
+        set shellScript to ""
+        repeat with selectedFile in input
+            set filePath to POSIX path of selectedFile
+            set shellScript to shellScript & "/usr/bin/python3 ~/scripts/evernote_to_md.py " & quoted form of filePath & " " & quoted form of ((text 1 thru -6 of filePath) & ".md") & ";" & linefeed
+        end repeat
+        tell application "Terminal"
+            activate
+            do script shellScript
+        end tell
+    else
+        display dialog "No files were selected." buttons {"OK"} default button "OK"
+    end if
+end run
+
+5. File → Save → name it "Extract Note to Markdown"
+
+Done. Right-click any .html file in Finder → Quick Actions → Extract Note to Markdown.

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmap-content xmlns="urn:xmind:xmap:xmlns:content:2.0" version="2.0">
+  <sheet id="sheet1" theme="theme1">
+    <topic id="root" structure-class="org.xmind.ui.map">
+      <title>Career Path Discussion - Bio Background to Future Opportunities</title>
+      <children>
+        <topics type="attached">
+          <topic id="topic1">
+            <title>Current Situation</title>
+            <children>
+              <topics type="attached">
+                <topic id="topic1-1">
+                  <title>Bio background lab experience</title>
+                </topic>
+                <topic id="topic1-2">
+                  <title>Looking for job opportunities</title>
+                </topic>
+                <topic id="topic1-3">
+                  <title>Health considerations - need flexible break schedule</title>
+                </topic>
+                <topic id="topic1-4">
+                  <title>Yearning to relearn biology/chemistry skills</title>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+          <topic id="topic2">
+            <title>Initial Plan Considerations</title>
+            <children>
+              <topics type="attached">
+                <topic id="topic2-1">
+                  <title>BTEC class at City College</title>
+                </topic>
+                <topic id="topic2-2">
+                  <title>Part-time admin job search</title>
+                </topic>
+                <topic id="topic2-3">
+                  <title>Test lab work interest through coursework</title>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+          <topic id="topic3">
+            <title>Science Communication Discovery</title>
+            <children>
+              <topics type="attached">
+                <topic id="topic3-1">
+                  <title>Science writing for magazines &amp; websites</title>
+                </topic>
+                <topic id="topic3-2">
+                  <title>Research institution communications</title>
+                </topic>
+                <topic id="topic3-3">
+                  <title>Science education &amp; outreach</title>
+                </topic>
+                <topic id="topic3-4">
+                  <title>Technical writing</title>
+                </topic>
+                <topic id="topic3-5">
+                  <title>Grant writing</title>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+          <topic id="topic4">
+            <title>Biotech Industry Insights</title>
+            <children>
+              <topics type="attached">
+                <topic id="topic4-1">
+                  <title>Manufacturing concerns - Genentech-style not appealing</title>
+                </topic>
+                <topic id="topic4-2">
+                  <title>Alternative biotech paths</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="topic4-2-1">
+                        <title>Small research-focused companies</title>
+                      </topic>
+                      <topic id="topic4-2-2">
+                        <title>Drug discovery work</title>
+                      </topic>
+                      <topic id="topic4-2-3">
+                        <title>Biotech startups</title>
+                      </topic>
+                      <topic id="topic4-2-4">
+                        <title>Peripheral roles (regulatory, clinical research)</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+          <topic id="topic5">
+            <title>Preferred Work Environment</title>
+            <children>
+              <topics type="attached">
+                <topic id="topic5-1">
+                  <title>Flexible break schedule needed</title>
+                </topic>
+                <topic id="topic5-2">
+                  <title>Project-based vs. production schedule preference</title>
+                </topic>
+                <topic id="topic5-3">
+                  <title>Autonomy and independence valued</title>
+                </topic>
+                <topic id="topic5-4">
+                  <title>Labs well-stocked for quick transitions</title>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+          <topic id="topic6">
+            <title>Advanced Career Path - Bench + Computer Analysis</title>
+            <children>
+              <topics type="attached">
+                <topic id="topic6-1">
+                  <title>Higher education requirements</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="topic6-1-1">
+                        <title>Bioinformatics training</title>
+                      </topic>
+                      <topic id="topic6-1-2">
+                        <title>Statistical analysis skills (R, Python)</title>
+                      </topic>
+                      <topic id="topic6-1-3">
+                        <title>Data visualization</title>
+                      </topic>
+                      <topic id="topic6-1-4">
+                        <title>Genomics/proteomics analysis</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="topic6-2">
+                  <title>Benefits of hybrid roles</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="topic6-2-1">
+                        <title>More autonomy &amp; flexibility</title>
+                      </topic>
+                      <topic id="topic6-2-2">
+                        <title>Bridge wet lab &amp; computational work</title>
+                      </topic>
+                      <topic id="topic6-2-3">
+                        <title>High value to employers</title>
+                      </topic>
+                    </topics>
+                  </children>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+          <topic id="topic7">
+            <title>Personal Management Strategies</title>
+            <children>
+              <topics type="attached">
+                <topic id="topic7-1">
+                  <title>Fasting schedule for alertness</title>
+                </topic>
+                <topic id="topic7-2">
+                  <title>Confidence in managing lab work physically</title>
+                </topic>
+                <topic id="topic7-3">
+                  <title>Natural stopping points in protocols</title>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+          <topic id="topic8">
+            <title>Next Steps Decision</title>
+            <children>
+              <topics type="attached">
+                <topic id="topic8-1">
+                  <title>City College lab class as test</title>
+                </topic>
+                <topic id="topic8-2">
+                  <title>Rediscover enjoyment of lab work</title>
+                </topic>
+                <topic id="topic8-3">
+                  <title>Build foundation for future specialization</title>
+                </topic>
+                <topic id="topic8-4">
+                  <title>No rush - incremental skill building</title>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+        </topics>
+      </children>
+    </topic>
+  </sheet>
+</xmap-content>

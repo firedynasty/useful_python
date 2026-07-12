@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmap-content xmlns="urn:xmind:xmap:xmlns:content:2.0" version="2.0">
+    <sheet id="sheet1" theme="theme1">
+        <topic id="root" structure-class="org.xmind.ui.map">
+            <title>Moses Timeline (c. 1391-1271 BCE)</title>
+            <children>
+                <topics type="attached">
+                    <topic id="early-life">
+                        <title>Early Life (c. 1391-1311 BCE)</title>
+                        <children>
+                            <topics type="attached">
+                                <topic id="birth-infancy">
+                                    <title>Birth &amp; Infancy</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="birth-parents">
+                                                <title>Born to Hebrew parents (Amram &amp; Jochebed)</title>
+                                            </topic>
+                                            <topic id="pharaoh-order">
+                                                <title>Pharaoh orders Hebrew male babies killed</title>
+                                            </topic>
+                                            <topic id="basket-nile">
+                                                <title>Hidden 3 months, then placed in basket on Nile</title>
+                                            </topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="early-infancy">
+                                    <title>Cultural Imprinting (Ages 0-2)</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="adoption">
+                                                <title>Found &amp; adopted by Pharaoh&apos;s daughter</title>
+                                            </topic>
+                                            <topic id="nursing">
+                                                <title>Nursed by biological mother Jochebed</title>
+                                            </topic>
+                                            <topic id="hebrew-conditioning">
+                                                <title>Hebrew Conditioning Theory</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="language-exposure">
+                                                            <title>Exposed to Hebrew language &amp; songs</title>
+                                                        </topic>
+                                                        <topic id="cultural-rhythms">
+                                                            <title>Absorbed Hebrew cultural rhythms</title>
+                                                        </topic>
+                                                        <topic id="phonetic-patterns">
+                                                            <title>Hebrew phonetic patterns imprinted</title>
+                                                        </topic>
+                                                        <topic id="emotional-bonding">
+                                                            <title>Emotional bonding creating implicit memories</title>
+                                                        </topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="palace-life">
+                                    <title>Egyptian Palace Life (Ages 2-40)</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="egyptian-education">
+                                                <title>Egyptian education &amp; military training</title>
+                                            </topic>
+                                            <topic id="royal-upbringing">
+                                                <title>Lives as Egyptian royalty</title>
+                                            </topic>
+                                            <topic id="internal-conflict">
+                                                <title>Internal Conflict Theory</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="subconscious-hebrew">
+                                                            <title>Subconscious Hebrew imprinting</title>
+                                                        </topic>
+                                                        <topic id="conscious-egyptian">
+                                                            <title>Conscious Egyptian identity</title>
+                                                        </topic>
+                                                        <topic id="unexplained-feelings">
+                                                            <title>Unexplained feelings toward Hebrew culture</title>
+                                                        </topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                            </topics>
+                        </children>
+                    </topic>
+                    <topic id="exile-period">
+                        <title>Exile Period (c. 1351-1311 BCE)</title>
+                        <children>
+                            <topics type="attached">
+                                <topic id="flight-midian">
+                                    <title>Flight to Midian (Age 40)</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="kills-taskmaster">
+                                                <title>Kills Egyptian taskmaster beating Hebrew slave</title>
+                                            </topic>
+                                            <topic id="recognition-trigger">
+                                                <title>Recognition Trigger Theory</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="kinship-instinct">
+                                                            <title>Immediate kinship/protective instinct</title>
+                                                        </topic>
+                                                        <topic id="language-recognition">
+                                                            <title>Subconscious Hebrew language recognition</title>
+                                                        </topic>
+                                                        <topic id="cultural-familiarity">
+                                                            <title>Cultural familiarity activated response</title>
+                                                        </topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="flees-egypt">
+                                                <title>Flees Egypt when discovered</title>
+                                            </topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="midian-life">
+                                    <title>Life in Midian</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="marries-zipporah">
+                                                <title>Marries Zipporah (Jethro&apos;s daughter)</title>
+                                            </topic>
+                                            <topic id="shepherd-40-years">
+                                                <title>Works as shepherd for 40 years</title>
+                                            </topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                            </topics>
+                        </children>
+                    </topic>
+                    <topic id="leadership-israel">
+                        <title>Leadership of Israel (c. 1311-1271 BCE)</title>
+                        <children>
+                            <topics type="attached">
+                                <topic id="the-calling">
+                                    <title>The Calling (Age 80)</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="burning-bush">
+                                                <title>Encounters burning bush on Mount Horeb</title>
+                                            </topic>
+                                            <topic id="god-calls">
+                                                <title>God calls him to lead Israelites out of Egypt</title>
+                                            </topic>
+                                            <topic id="returns-egypt">
+                                                <title>Returns to Egypt with brother Aaron</title>
+                                            </topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="the-exodus">
+                                    <title>The Exodus (Age 80-81)</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="ten-plagues">
+                                                <title>Confronts Pharaoh with ten plagues</title>
+                                            </topic>
+                                            <topic id="leads-exodus">
+                                                <title>Leads Israelites out of Egypt</title>
+                                            </topic>
+                                            <topic id="parts-red-sea">
+                                                <title>Parts the Red Sea</title>
+                                            </topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="wilderness-wandering">
+                                    <title>Wilderness Wandering (Ages 81-120)</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="ten-commandments">
+                                                <title>Receives Ten Commandments &amp; Torah at Mount Sinai</title>
+                                            </topic>
+                                            <topic id="40-years-wilderness">
+                                                <title>Leads Israel through 40 years in wilderness</title>
+                                            </topic>
+                                            <topic id="establishes-systems">
+                                                <title>Establishes laws, religious practices &amp; government</title>
+                                            </topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="death">
+                                    <title>Death (Age 120)</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="mount-nebo">
+                                                <title>Dies on Mount Nebo</title>
+                                            </topic>
+                                            <topic id="overlooks-promised-land">
+                                                <title>Overlooks Promised Land but never enters</title>
+                                            </topic>
+                                            <topic id="sees-canaan">
+                                                <title>Sees Canaan from afar</title>
+                                            </topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                            </topics>
+                        </children>
+                    </topic>
+                    <topic id="development-theory">
+                        <title>Childhood Development Theory</title>
+                        <children>
+                            <topics type="attached">
+                                <topic id="early-imprinting">
+                                    <title>Early Imprinting Hypothesis</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="critical-period">
+                                                <title>Critical period conditioning (ages 0-3)</title>
+                                            </topic>
+                                            <topic id="lasting-connections">
+                                                <title>Creates lasting subconscious connections</title>
+                                            </topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="developmental-science">
+                                    <title>Supporting Evidence from Science</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="language-retention">
+                                                <title>Language Recognition: Neural pathways retained</title>
+                                            </topic>
+                                            <topic id="cultural-memory">
+                                                <title>Cultural Memory: Songs &amp; rhythms persist as implicit memories</title>
+                                            </topic>
+                                            <topic id="identity-formation">
+                                                <title>Identity Formation: Connections to early cultural elements</title>
+                                            </topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="moses-application">
+                                    <title>Application to Moses</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="hebrew-phonetics">
+                                                <title>Subconscious Hebrew phonetic recognition</title>
+                                            </topic>
+                                            <topic id="emotional-familiarity">
+                                                <title>Emotional familiarity with Hebrew sounds</title>
+                                            </topic>
+                                            <topic id="sense-belonging">
+                                                <title>Unexplained sense of belonging</title>
+                                            </topic>
+                                            <topic id="protective-instincts">
+                                                <title>Protective instincts triggered by cultural markers</title>
+                                            </topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                            </topics>
+                        </children>
+                    </topic>
+                </topics>
+            </children>
+        </topic>
+    </sheet>
+</xmap-content>

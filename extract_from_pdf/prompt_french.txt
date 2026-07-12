@@ -1,0 +1,24 @@
+  Look at this textbook content. Extract all French vocabulary and phrases with 
+  their English translations.                               
+
+  Output ONLY flashcard pairs in this exact format — one French line, one
+  English line, then a blank line between each pair:
+
+  bonjour
+  hello
+
+  merci
+  thank you
+
+  Rules:
+  - French on the first line, English on the second line
+  - One blank line between each pair
+  - No numbering, no extra text, no headers
+  - Include all vocabulary, phrases, and example sentences you can find
+  - If there is no French/English content, output nothing
+
+  Content:
+  {paste your text here}
+
+
+  

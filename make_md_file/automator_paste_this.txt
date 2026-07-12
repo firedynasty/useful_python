@@ -1,0 +1,40 @@
+-- AUTOMATOR SETUP:
+-- 1. Open Automator > File > New > Quick Action
+-- 2. Set "Workflow receives current" to "image files" in "Finder"
+-- 3. Add action: "Run AppleScript"
+-- 4. Paste everything below into the script box:
+
+on run {input, parameters}
+	if (count of input) = 0 then
+		display dialog "No files were selected." buttons {"OK"} default button "OK"
+		return
+	end if
+
+	-- Get the folder from the first file
+	set firstFile to POSIX path of (item 1 of input)
+	set dir to do shell script "dirname " & quoted form of firstFile
+
+	-- Prompt for md filename
+	set mdName to text returned of (display dialog "Name for the .md file:" default answer "images")
+	if mdName is "" then return
+
+	set mdFile to dir & "/" & mdName & ".md"
+
+	-- Build the md content with relative paths
+	set mdContent to ""
+	repeat with selectedFile in input
+		set filePath to POSIX path of selectedFile
+		set fileName to do shell script "basename " & quoted form of filePath
+		set nameNoExt to do shell script "echo " & quoted form of fileName & " | sed 's/\\.[^.]*$//'"
+		set mdContent to mdContent & "![" & nameNoExt & "](" & fileName & ")" & linefeed & linefeed
+	end repeat
+
+	-- Write the md file
+	do shell script "echo " & quoted form of mdContent & " > " & quoted form of mdFile
+
+	-- Notify
+	set fileCount to (count of input) as string
+	display notification fileCount & " image(s) → " & mdName & ".md" with title "Done"
+
+	return input
+end run

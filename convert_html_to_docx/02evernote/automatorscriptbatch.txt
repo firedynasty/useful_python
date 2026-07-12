@@ -1,0 +1,22 @@
+on run {input, parameters}
+    if (count of input) > 0 then
+        set shellScript to ""
+        set pyScript to "/Users/stanleytan/Documents/technical/python/convert_html_to_docx/02evernote/evernoteHtmlToMd.py"
+
+        repeat with selectedFile in input
+            set filePath to POSIX path of selectedFile
+
+            -- Swap .html extension for .md
+            set outputPath to do shell script "echo " & quoted form of filePath & " | sed 's/\\.html$/.md/'"
+
+            set shellScript to shellScript & "python3 " & quoted form of pyScript & " " & quoted form of filePath & " " & quoted form of outputPath & ";" & linefeed
+        end repeat
+
+        tell application "Terminal"
+            activate
+            do script shellScript in front window
+        end tell
+    else
+        display dialog "No files were selected." buttons {"OK"} default button "OK"
+    end if
+end run

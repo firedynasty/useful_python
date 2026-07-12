@@ -1,0 +1,12 @@
+# MHC Extraction Manifest
+# Use this to track summarization progress
+
+Song of Solomon Ch.0: ./solomon_txt/22_Song_of_Solomon/ch000.txt
+Song of Solomon Ch.1: ./solomon_txt/22_Song_of_Solomon/ch001.txt
+Song of Solomon Ch.2: ./solomon_txt/22_Song_of_Solomon/ch002.txt
+Song of Solomon Ch.3: ./solomon_txt/22_Song_of_Solomon/ch003.txt
+Song of Solomon Ch.4: ./solomon_txt/22_Song_of_Solomon/ch004.txt
+Song of Solomon Ch.5: ./solomon_txt/22_Song_of_Solomon/ch005.txt
+Song of Solomon Ch.6: ./solomon_txt/22_Song_of_Solomon/ch006.txt
+Song of Solomon Ch.7: ./solomon_txt/22_Song_of_Solomon/ch007.txt
+Song of Solomon Ch.8: ./solomon_txt/22_Song_of_Solomon/ch008.txt

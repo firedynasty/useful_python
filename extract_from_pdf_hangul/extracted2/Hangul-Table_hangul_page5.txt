@@ -1,0 +1,39 @@
+Hangul Table
+Changes in Pronunciation
+Type	Rules
+If a batchim other than ㅎ is followed by ㅇ, the consonant of batchim will be combined with the
+vowel following.
+Ex：먹어 (eat) →[머거]、이것은 (This is ) →[이거슨]
+If ㅇ follows after double consonants, both consonats are pronunced.
+Ex：젊어요(young)→[절머요]、앉아(sit)→［안자]
+Soft
+Consonants
+If ㄷ, ㅌ, ㄾ are followed by 이, they will be pronunced as ㅈ,ㅊ,ㄹㅊ, respectively.
+Ex：굳이 (dare) →[구지]、같이 (together) →[가치]、핥이다 (lick) →[할치다]
+If ㅎ batchim is followed by  ㅇ, ㅎ will not be pronunced.
+Ex：좋아 (like→[조아]、싫어 (dislike) →[시러]
+If the consonants ㄱ,ㄷ,ㅂ,ㅅ,ㅈ come after ㄱ,ㄷ,ㅂ batchims, their pronunciation will become
+Nasalization	double consonants like ㄲ,ㄸ,ㅃ,ㅆ,ㅉ, respectively.
+Ex：없고 (without) →[업꼬]、책상 (desk) →[책쌍]、꽃밭 (flower field) →[꼳빧]
+If the consonants ㄱ,ㄷ,ㅂ,ㅈ come before or after the batchim ㅎ, their pronunciation will
+become strong consonants like ㅋ,ㅌ,ㅍ,ㅊ.
+Aspirated	Ex：축하해(congratulations)→[추카해]、입학 (enrollment) →[이팍]、맞히다(hit)→[마치다]
+Consonant
+Phenomenon	If the 4 consonants  above mentioned (ㄱ,ㄷ,ㅂ,ㅈ) come after ㄶ or ㅀ, their pronunciation
+becomes strong consonants as well.
+Ex：많다 (many) →[만타]、잃지 않다(not lose) →[일치 안타]
+If ㄱ,ㄷ,ㅂ batchim is followed by the consonants ㄴ or ㅁ, the batchim is pronunced ㅇ,ㄴ or
+ㅁ, respectively.
+Ex：박물관 (museum) →[방물관]、감사합니다 (Thank you) →[감사함니다]
+Nasalization	If ㅁ or ㅇ batchim is followed by the consonant ㄹ, ㄹ becomes ㄴ.
+Ex：심리학 (psychology) →[심니학]、종류 (type) →[종뉴]
+If ㄱ or ㅂ batchim is followed by the consonant ㄹ, the batchim becomes ㅇ or ㅁ respectively,
+and ㄹ becomes ㄴ.
+Ex：학력 (educational background) →[항녁]、합리적 (rational) →[함니적]
+If ㄴ batchim is followed by the consonant ㄹ, or ㄹ batchim is followed by the consonant ㄴ,
+ㄴ becomes ㄹ.
+Fortis	Ex：관리 (management) →[괄리]、잃는 (lose) →[일른]
+Phenomenon	However in some cases, the batchim does not become ㄹ and instead the following consonant
+becomes ㄴ (often in words originating from Chinese characters).
+Ex：결단력(decisiveness)→[결딴녁]、횡단로(cross road)→[횡단노]
+5

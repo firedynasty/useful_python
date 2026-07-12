@@ -1,0 +1,3 @@
+I can see this is a table of contents page from what appears to be a French language textbook. However, this page only contains lesson titles and page numbers in English, with some French names mentioned (like Corneille, Racine, Molière, Montaigne, Ronsard, Rabelais, Mme. de Sévigné, La Fontaine). 
+
+Since this is just a contents page without actual French vocabulary paired with English translations, and following the rule that if a page has no French/English content to output nothing, I will not provide any flashcard pairs from this page.

@@ -1,0 +1,44 @@
+# MHC Extraction Manifest
+# Use this to track summarization progress
+
+Exodus Ch.0: ./exodus_chapters/02_Exodus/ch000.txt
+Exodus Ch.1: ./exodus_chapters/02_Exodus/ch001.txt
+Exodus Ch.2: ./exodus_chapters/02_Exodus/ch002.txt
+Exodus Ch.3: ./exodus_chapters/02_Exodus/ch003.txt
+Exodus Ch.4: ./exodus_chapters/02_Exodus/ch004.txt
+Exodus Ch.5: ./exodus_chapters/02_Exodus/ch005.txt
+Exodus Ch.6: ./exodus_chapters/02_Exodus/ch006.txt
+Exodus Ch.7: ./exodus_chapters/02_Exodus/ch007.txt
+Exodus Ch.8: ./exodus_chapters/02_Exodus/ch008.txt
+Exodus Ch.9: ./exodus_chapters/02_Exodus/ch009.txt
+Exodus Ch.10: ./exodus_chapters/02_Exodus/ch010.txt
+Exodus Ch.11: ./exodus_chapters/02_Exodus/ch011.txt
+Exodus Ch.12: ./exodus_chapters/02_Exodus/ch012.txt
+Exodus Ch.13: ./exodus_chapters/02_Exodus/ch013.txt
+Exodus Ch.14: ./exodus_chapters/02_Exodus/ch014.txt
+Exodus Ch.15: ./exodus_chapters/02_Exodus/ch015.txt
+Exodus Ch.16: ./exodus_chapters/02_Exodus/ch016.txt
+Exodus Ch.17: ./exodus_chapters/02_Exodus/ch017.txt
+Exodus Ch.18: ./exodus_chapters/02_Exodus/ch018.txt
+Exodus Ch.19: ./exodus_chapters/02_Exodus/ch019.txt
+Exodus Ch.20: ./exodus_chapters/02_Exodus/ch020.txt
+Exodus Ch.21: ./exodus_chapters/02_Exodus/ch021.txt
+Exodus Ch.22: ./exodus_chapters/02_Exodus/ch022.txt
+Exodus Ch.23: ./exodus_chapters/02_Exodus/ch023.txt
+Exodus Ch.24: ./exodus_chapters/02_Exodus/ch024.txt
+Exodus Ch.25: ./exodus_chapters/02_Exodus/ch025.txt
+Exodus Ch.26: ./exodus_chapters/02_Exodus/ch026.txt
+Exodus Ch.27: ./exodus_chapters/02_Exodus/ch027.txt
+Exodus Ch.28: ./exodus_chapters/02_Exodus/ch028.txt
+Exodus Ch.29: ./exodus_chapters/02_Exodus/ch029.txt
+Exodus Ch.30: ./exodus_chapters/02_Exodus/ch030.txt
+Exodus Ch.31: ./exodus_chapters/02_Exodus/ch031.txt
+Exodus Ch.32: ./exodus_chapters/02_Exodus/ch032.txt
+Exodus Ch.33: ./exodus_chapters/02_Exodus/ch033.txt
+Exodus Ch.34: ./exodus_chapters/02_Exodus/ch034.txt
+Exodus Ch.35: ./exodus_chapters/02_Exodus/ch035.txt
+Exodus Ch.36: ./exodus_chapters/02_Exodus/ch036.txt
+Exodus Ch.37: ./exodus_chapters/02_Exodus/ch037.txt
+Exodus Ch.38: ./exodus_chapters/02_Exodus/ch038.txt
+Exodus Ch.39: ./exodus_chapters/02_Exodus/ch039.txt
+Exodus Ch.40: ./exodus_chapters/02_Exodus/ch040.txt

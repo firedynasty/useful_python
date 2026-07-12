@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://cdn.flashtalking.com/220364/5365571/Andrea_970x250_30sec.html -->
+<html><!-- Stand 01.04.2025--><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><script src="chrome-extension://fgddmllnllkalaagkghckoinaemmogpe/src/scripts/content/location-spoofing.js"></script>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="ad.size" content="width=970,height=250">
+        <meta name="author" content="Digitale Mediengruppe">
+        <style>
+            *{position:absolute;}
+            #hg{
+                background:url("images/abb1.jpg"); background-size:cover; overflow:hidden;
+            }
+            #CTAc, #wh{
+                left:697px; top:172px; width:237px; height:45px;
+            }
+            #logoS{
+                width:100%;
+            }
+        </style>
+    <title>970x250</title></head>
+    <body style="overflow:hidden;margin:0;padding:0;cursor:pointer;">
+        <div id="hg" style="width: 970px; height: 250px;">
+            <div id="CTA" style="top: 20px; width: 100%; height: 100%; opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, -20px);">
+            <svg id="CTAc">
+                <lineargradient id="PSgrad_0" x2="90%" y2="50%">
+                    <stop offset="0%" stop-color="rgb(0,253,187)" stop-opacity="1"></stop>
+                    <stop offset="100%" stop-color="rgb(0,230,220)" stop-opacity="1"></stop>
+                </lineargradient>
+                <path fill="url(#PSgrad_0)" d="M-0.008,-0.005 L237.008,-0.005 L237.008,45.012 L-0.008,45.012 L-0.008,-0.005 Z"></path>
+                <rect id="wh" fill="rgb(240,240,240)" opacity="0" style="opacity: 0;"></rect>
+                </svg>
+                <img src="./CTA.png" style="width:100%">
+            </div>
+            <img id="logoS" src="./logoS.png">
+        <img src="./txt1.png" id="txt1" style="height: 100%; top: 5px; opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, -5px);"><img src="./txt2.png" id="txt2" style="height: 100%; top: 5px; opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, -5px);"><img src="./txt3.png" id="txt3" style="height: 100%; top: 5px; opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, -5px);"><img src="./txt4.png" id="txt4" style="height: 100%; top: 5px; opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, -5px);"></div>
+        <script src="./gsap_3.11.5_min.js"></script>
+        <script>
+            var tl = gsap.timeline({repeat:-1}),
+                ma = document.querySelector('meta[name="ad.size"]').getAttribute("content").match(/width=(\d+),height=(\d+)/),
+                tx = [4, 2, 2],
+                teX = [],
+                loop = 0;
+
+            for (i = 1; i < tx[0]+1; i++) 
+            {
+                teX[i] = document.createElement("img");
+                teX[i].src = "images/txt"+i+".png";
+                teX[i].id = "txt"+[i];
+                teX[i].style.cssText = "height:100%; top:5px; opacity:0;";
+                hg.appendChild(teX[i]);
+            }
+            hg.style.cssText = "width:"+ma[1]+"px; height:"+ma[2]+"px;";
+            document.title = ma[1]+"x"+ma[2];
+            
+            init();
+            
+            function init(){
+                tl.add(function() {
+                    for (t1 = 1; t1 <= tx[1]; t1++){
+                        tl.to("#txt"+t1, 0.5, {y:-5, opacity:1, ease:"power2.easeInOut"}, 0.2 + 0.15*t1)
+                        tl.to("#txt"+t1, 0.5, {opacity:0, ease:"none"}, 9.5)
+                        }
+                    for (t2 = tx[1]+1; t2 <= tx[2]+tx[1]; t2++){
+                        tl.to("#txt"+t2, 0.5, {y:-5, opacity:1, ease:"power2.easeInOut"}, 1.5 + 0.15*(t2-tx[1]))
+                        tl.to("#txt"+t2, 0.5, {opacity:0, ease:"none"}, 9.5)
+                    }
+                  })
+                
+                  .to("#CTA", 0.5, {y:-20, opacity:1, ease:"power2.easeInOut"}, 2)
+                
+                  .to("#wh", 0.25, {opacity:0.7, yoyo:true, repeat:1, repeatDelay:0.75, ease:"none"}, 5)
+                  
+                  .add(()=>{loop++; if(loop==3){tl.kill()}})
+                  .to("#deepBlue, #CTA", 0.5, {opacity:0, ease:"none"}, 9.5);
+            }
+        </script>
+    
+
+
+</body></html>

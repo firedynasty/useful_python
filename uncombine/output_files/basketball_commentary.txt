@@ -1,0 +1,53 @@
+"One stop!" Coach yells as the defense sets up.
+"Come on Miles!" The crowd encourages as he brings the ball up court.
+"Do it again, atta boy!" Teammates cheer after a perfect pick and roll.
+"No threes!" The defensive call echoes as they protect their lead.
+"Crash the boards!" Veterans remind as the shot goes up.
+"Hands up!" Assistant coaches gesture from the sideline.
+"Switch!" Players communicate through the defensive screen.
+"Get big!" The center establishes position in the paint.
+"Run the floor!" Transition offense begins after the rebound.
+"Find a body!" Rebounding fundamentals take priority.
+"Move your feet!" Defensive discipline remains essential.
+
+
+Here's how you could organize a basketball fundamentals folder structure with links and images:
+
+## Folder Structure
+
+**📁 DRIBBLING**
+- Images: Hand positions, ball control drills, crossover sequences
+- Videos: Ball handling routines, cone drills, stationary vs moving dribbles
+- Links: YouTube tutorials, drill progressions, common mistakes
+
+**📁 SHOOTING**
+- Images: Proper form breakdown (feet, knees, elbow, follow-through), shot arc diagrams
+- Videos: Shooting mechanics, free throw routine, different shot types
+- Links: Form shooting drills, percentage tracking apps, shooting coach resources
+
+**📁 PASSING**
+- Images: Chest pass, bounce pass, overhead pass form, target zones
+- Videos: Passing drills, decision-making scenarios, no-look passes
+- Links: Passing drill libraries, court vision training, passing accuracy tips
+
+**📁 REBOUNDING**
+- Images: Boxing out technique, positioning diagrams, hands placement
+- Videos: Rebounding drills, timing jumps, outlet passes
+- Links: Rebounding fundamentals, stat tracking, strength training for rebounds
+
+**📁 DEFENSE**
+- Images: Defensive stance, hand positioning, help defense rotations
+- Videos: 1-on-1 defense, team defensive concepts, closeout techniques
+- Links: Defensive drills, communication tips, advanced defensive schemes
+
+**📁 FOOTWORK**
+- Images: Pivot foot diagrams, cutting patterns, triple threat position
+- Videos: Agility ladder drills, pivot moves, explosive first steps
+- Links: Footwork exercises, balance training, quickness development
+
+**📁 SCREENING**
+- Images: Screen angles, pick and roll diagrams, legal vs illegal screens
+- Videos: Screen setting technique, using screens effectively, timing
+- Links: Screen plays, practice drills, reading defenses
+
+Each folder could have subfolders like "Beginner," "Intermediate," and "Advanced" to organize content by skill level.

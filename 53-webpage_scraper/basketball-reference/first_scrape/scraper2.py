@@ -1,0 +1,485 @@
+import os
+import time
+import pandas as pd
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+from bs4 import BeautifulSoup
+
+def connect_to_existing_chrome():
+    """Connect to an already running Chrome instance with remote debugging"""
+    options = Options()
+    options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
+    
+    try:
+        # Try to use the existing driver if available
+        driver = webdriver.Chrome(options=options)
+        return driver
+    except Exception as e:
+        print(f"Error connecting to Chrome: {e}")
+        print("Make sure Chrome is running with --remote-debugging-port=9222")
+        return None
+
+def extract_schedule_data(url):
+    """Extract NBA schedule data from the given URL"""
+    try:
+        print(f"Connecting to Chrome and navigating to {url}...")
+        browser = connect_to_existing_chrome()
+        
+        if not browser:
+            print("Failed to connect to Chrome.")
+            return None
+            
+        # Navigate to the schedule page
+        browser.get(url)
+        print(f"Loaded page: {browser.title}")
+        
+        # Wait for the page to fully load
+        time.sleep(2)
+        
+        # Get the page HTML
+        html = browser.page_source
+        soup = BeautifulSoup(html, "html.parser")
+        
+        # Find the schedule table
+        schedule_table = soup.find('table', {'id': 'schedule'})
+        
+        if not schedule_table:
+            print("Schedule table not found")
+            return None
+            
+        print("Found schedule table")
+        games_data = extract_games_data(schedule_table)
+        
+        return games_data
+        
+    except Exception as e:
+        print(f"Error extracting schedule: {e}")
+        import traceback
+        traceback.print_exc()
+        return None
+    finally:
+        if 'browser' in locals() and browser:
+            browser.quit()
+
+def extract_games_data(table):
+    """Extract data from schedule table into a DataFrame"""
+    # Find all game rows (skip header rows)
+    rows = table.find_all('tr', {'data-row': True})
+    
+    data = []
+    for row in rows:
+        # Extract date
+        date_cell = row.find('th', {'data-stat': 'date_game'})
+        date = date_cell.find('a').text if date_cell and date_cell.find('a') else ""
+        
+        # Extract game time
+        time_cell = row.find('td', {'data-stat': 'game_start_time'})
+        game_time = time_cell.text if time_cell else ""
+        
+        # Extract visitor team
+        visitor_cell = row.find('td', {'data-stat': 'visitor_team_name'})
+        visitor_team = visitor_cell.find('a').text if visitor_cell and visitor_cell.find('a') else ""
+        
+        # Extract visitor points
+        visitor_pts_cell = row.find('td', {'data-stat': 'visitor_pts'})
+        visitor_pts = visitor_pts_cell.text if visitor_pts_cell else ""
+        
+        # Extract home team
+        home_cell = row.find('td', {'data-stat': 'home_team_name'})
+        home_team = home_cell.find('a').text if home_cell and home_cell.find('a') else ""
+        
+        # Extract home points
+        home_pts_cell = row.find('td', {'data-stat': 'home_pts'})
+        home_pts = home_pts_cell.text if home_pts_cell else ""
+        
+        # Extract box score link
+        box_score_cell = row.find('td', {'data-stat': 'box_score_text'})
+        box_score_link = box_score_cell.find('a')['href'] if box_score_cell and box_score_cell.find('a') else ""
+        
+        # Extract overtime info
+        overtime_cell = row.find('td', {'data-stat': 'overtimes'})
+        overtime = overtime_cell.text if overtime_cell else ""
+        
+        # Extract attendance
+        attendance_cell = row.find('td', {'data-stat': 'attendance'})
+        attendance = attendance_cell.text if attendance_cell else ""
+        
+        # Extract game duration
+        duration_cell = row.find('td', {'data-stat': 'game_duration'})
+        duration = duration_cell.text if duration_cell else ""
+        
+        # Extract arena
+        arena_cell = row.find('td', {'data-stat': 'arena_name'})
+        arena = arena_cell.text if arena_cell else ""
+        
+        # Extract notes/remarks
+        notes_cell = row.find('td', {'data-stat': 'game_remarks'})
+        notes = notes_cell.text if notes_cell else ""
+        
+        # Get the full box score URL
+        box_score_url = ""
+        if box_score_link:
+            box_score_url = f"https://www.basketball-reference.com{box_score_link}"
+        
+        data.append({
+            'Date': date,
+            'Time': game_time,
+            'Visitor_Team': visitor_team,
+            'Visitor_Points': visitor_pts,
+            'Home_Team': home_team,
+            'Home_Points': home_pts,
+            'Box_Score_URL': box_score_url,
+            'Overtime': overtime,
+            'Attendance': attendance,
+            'Game_Duration': duration,
+            'Arena': arena,
+            'Notes': notes
+        })
+    
+    return pd.DataFrame(data)
+
+def save_dataframe_to_csv(df, output_dir='data'):
+    """Save the extracted DataFrame to CSV file"""
+    # Create the output directory if it doesn't exist
+    os.makedirs(output_dir, exist_ok=True)
+    
+    # Generate filename with timestamp
+    timestamp = time.strftime("%Y%m%d_%H%M%S")
+    filename = f"{output_dir}/nba_2025_schedule_{timestamp}.csv"
+    
+    # Save the DataFrame
+    df.to_csv(filename, index=False)
+    print(f"Saved schedule data to {filename}")
+    
+    return filename
+
+def scrape_box_scores(schedule_df, output_dir='data'):
+    """Scrape individual box scores for each game in the schedule"""
+    if schedule_df is None or schedule_df.empty:
+        print("No schedule data to scrape box scores")
+        return
+    
+    # Create subdirectory for box scores
+    box_scores_dir = f"{output_dir}/box_scores"
+    os.makedirs(box_scores_dir, exist_ok=True)
+    
+    # Count games with available box scores
+    games_with_box_scores = schedule_df[schedule_df['Box_Score_URL'].str.strip() != '']
+    total_games = len(games_with_box_scores)
+    
+    print(f"\nFound {total_games} games with box score links")
+    
+    # Ask user if they want to scrape all box scores
+    all_games = input(f"Do you want to scrape all {total_games} box scores? (y/n, default=n): ")
+    
+    if all_games.lower() != 'y':
+        # Ask for specific date range
+        from_date = input("Enter start date (e.g. Oct 22, 2024) or leave empty for all: ")
+        to_date = input("Enter end date (e.g. Oct 31, 2024) or leave empty for all: ")
+        
+        if from_date and to_date:
+            # Filter by date range if provided
+            # Convert string dates to datetime for comparison
+            schedule_df['Date_Obj'] = pd.to_datetime(schedule_df['Date'], format='%a, %b %d, %Y')
+            from_date_obj = pd.to_datetime(from_date)
+            to_date_obj = pd.to_datetime(to_date)
+            
+            games_with_box_scores = games_with_box_scores[
+                (games_with_box_scores['Date_Obj'] >= from_date_obj) & 
+                (games_with_box_scores['Date_Obj'] <= to_date_obj)
+            ]
+            
+            total_games = len(games_with_box_scores)
+            print(f"Filtered to {total_games} games between {from_date} and {to_date}")
+    
+    # Connect to Chrome
+    browser = connect_to_existing_chrome()
+    if not browser:
+        print("Failed to connect to Chrome for box score scraping.")
+        return
+    
+    try:
+        # Process each game
+        for i, (_, game) in enumerate(games_with_box_scores.iterrows(), 1):
+            box_score_url = game['Box_Score_URL']
+            if not box_score_url:
+                continue
+                
+            print(f"\nScraping box score {i}/{total_games}: {game['Visitor_Team']} @ {game['Home_Team']} ({game['Date']})")
+            
+            # Generate a filename based on the game info
+            game_date = game['Date'].split(',')[1].strip().replace(' ', '_')
+            visitor_abbr = ''.join([c for c in game['Visitor_Team'] if c.isupper()])
+            home_abbr = ''.join([c for c in game['Home_Team'] if c.isupper()])
+            filename = f"{box_scores_dir}/{game_date}_{visitor_abbr}_at_{home_abbr}.csv"
+            
+            # Check if already scraped
+            if os.path.exists(filename):
+                print(f"Box score already exists at {filename}, skipping...")
+                continue
+            
+            # Navigate to box score page
+            browser.get(box_score_url)
+            print(f"Loading: {box_score_url}")
+            time.sleep(2)  # Wait for page to load
+            
+            # Extract box score data
+            box_score_data = extract_box_score(browser.page_source, game)
+            
+            if box_score_data:
+                # Save to CSV
+                box_score_data.to_csv(filename, index=False)
+                print(f"Saved box score to {filename}")
+            else:
+                print(f"Failed to extract box score for {visitor_abbr} @ {home_abbr}")
+                
+            # Add a small delay between requests to avoid rate limiting
+            time.sleep(1)
+            
+    except Exception as e:
+        print(f"Error while scraping box scores: {e}")
+        import traceback
+        traceback.print_exc()
+    finally:
+        if browser:
+            browser.quit()
+
+def extract_box_score(html, game_info):
+    """Extract box score data from the box score page HTML"""
+    soup = BeautifulSoup(html, "html.parser")
+    
+    # Create a dictionary to store all box score data
+    box_score_data = {
+        'Game_Date': game_info['Date'],
+        'Visitor_Team': game_info['Visitor_Team'],
+        'Home_Team': game_info['Home_Team'],
+        'Visitor_Points': game_info['Visitor_Points'],
+        'Home_Points': game_info['Home_Points'],
+        'Overtime': game_info['Overtime'],
+        'Attendance': game_info['Attendance'],
+        'Arena': game_info['Arena']
+    }
+    
+    # Find basic game info table
+    game_info_div = soup.find('div', {'class': 'scorebox'})
+    if game_info_div:
+        # Additional game metadata could be extracted here
+        pass
+    
+    # Extract team stats tables
+    visitor_stats = extract_team_stats(soup, is_visitor=True)
+    home_stats = extract_team_stats(soup, is_visitor=False)
+    
+    # Extract line scores (quarter by quarter)
+    line_score = extract_line_score(soup)
+    
+    # Combine all data into a single DataFrame
+    all_data = []
+    
+    # Add team stats if available
+    if visitor_stats is not None:
+        for _, player in visitor_stats.iterrows():
+            row = box_score_data.copy()
+            row.update({
+                'Team': game_info['Visitor_Team'],
+                'Is_Home_Team': False,
+                'Player': player.get('Player', ''),
+                'MP': player.get('MP', ''),
+                'FG': player.get('FG', ''),
+                'FGA': player.get('FGA', ''),
+                'FG_PCT': player.get('FG%', ''),
+                'TP': player.get('3P', ''),
+                'TPA': player.get('3PA', ''),
+                'TP_PCT': player.get('3P%', ''),
+                'FT': player.get('FT', ''),
+                'FTA': player.get('FTA', ''),
+                'FT_PCT': player.get('FT%', ''),
+                'ORB': player.get('ORB', ''),
+                'DRB': player.get('DRB', ''),
+                'TRB': player.get('TRB', ''),
+                'AST': player.get('AST', ''),
+                'STL': player.get('STL', ''),
+                'BLK': player.get('BLK', ''),
+                'TOV': player.get('TOV', ''),
+                'PF': player.get('PF', ''),
+                'PTS': player.get('PTS', ''),
+                'PLUS_MINUS': player.get('+/-', '')
+            })
+            all_data.append(row)
+    
+    if home_stats is not None:
+        for _, player in home_stats.iterrows():
+            row = box_score_data.copy()
+            row.update({
+                'Team': game_info['Home_Team'],
+                'Is_Home_Team': True,
+                'Player': player.get('Player', ''),
+                'MP': player.get('MP', ''),
+                'FG': player.get('FG', ''),
+                'FGA': player.get('FGA', ''),
+                'FG_PCT': player.get('FG%', ''),
+                'TP': player.get('3P', ''),
+                'TPA': player.get('3PA', ''),
+                'TP_PCT': player.get('3P%', ''),
+                'FT': player.get('FT', ''),
+                'FTA': player.get('FTA', ''),
+                'FT_PCT': player.get('FT%', ''),
+                'ORB': player.get('ORB', ''),
+                'DRB': player.get('DRB', ''),
+                'TRB': player.get('TRB', ''),
+                'AST': player.get('AST', ''),
+                'STL': player.get('STL', ''),
+                'BLK': player.get('BLK', ''),
+                'TOV': player.get('TOV', ''),
+                'PF': player.get('PF', ''),
+                'PTS': player.get('PTS', ''),
+                'PLUS_MINUS': player.get('+/-', '')
+            })
+            all_data.append(row)
+    
+    # Add line score if available
+    if line_score is not None:
+        # Could add line score data to the result here
+        pass
+    
+    # Convert to DataFrame
+    if all_data:
+        return pd.DataFrame(all_data)
+    else:
+        return None
+
+def extract_team_stats(soup, is_visitor=True):
+    """Extract player statistics for a team from the box score page"""
+    # Find the appropriate stats table
+    # The first table is for the visitor team, the second is for the home team
+    index = 0 if is_visitor else 1
+    
+    # Find all box score tables
+    box_tables = soup.find_all('table', {'class': 'sortable stats_table'})
+    
+    if not box_tables or len(box_tables) <= index:
+        return None
+    
+    # Get the right box score table
+    table = box_tables[index]
+    
+    # Get column headers
+    headers = []
+    header_row = table.find('thead').find('tr')
+    for th in header_row.find_all('th'):
+        # Get header text or stat abbreviation
+        header = th.get_text(strip=True)
+        if not header and 'data-stat' in th.attrs:
+            header = th['data-stat']
+        headers.append(header)
+    
+    # Process player data rows
+    rows = []
+    for tr in table.find('tbody').find_all('tr'):
+        # Skip header rows and separators
+        if 'class' in tr.attrs and ('thead' in tr['class'] or 'divider' in tr['class']):
+            continue
+            
+        # Extract player data
+        player_data = {}
+        for i, td in enumerate(tr.find_all(['th', 'td'])):
+            if i < len(headers):
+                # For player names which are typically in th elements
+                if td.name == 'th' and td.find('a'):
+                    player_data[headers[i]] = td.find('a').get_text(strip=True)
+                else:
+                    player_data[headers[i]] = td.get_text(strip=True)
+                    
+        if player_data:
+            rows.append(player_data)
+    
+    return pd.DataFrame(rows)
+
+def extract_line_score(soup):
+    """Extract quarter-by-quarter scores from the box score page"""
+    # Find the line score table
+    line_score_table = soup.find('table', {'class': 'nav_table stats_table'})
+    
+    if not line_score_table:
+        return None
+    
+    # Get column headers
+    headers = []
+    header_row = line_score_table.find('thead').find_all('tr')[-1]  # Get the last header row
+    for th in header_row.find_all('th'):
+        header = th.get_text(strip=True)
+        if header:
+            headers.append(header)
+    
+    # Process team scores by quarter
+    rows = []
+    for tr in line_score_table.find('tbody').find_all('tr'):
+        team_data = {}
+        team_name = ""
+        
+        for i, td in enumerate(tr.find_all(['th', 'td'])):
+            if i == 0 and td.find('a'):
+                team_name = td.find('a').get_text(strip=True)
+                team_data['Team'] = team_name
+            elif i < len(headers):
+                team_data[headers[i]] = td.get_text(strip=True)
+                
+        if team_data:
+            rows.append(team_data)
+    
+    return pd.DataFrame(rows)
+
+def main():
+    """Main function to scrape NBA schedule and box scores"""
+    print("\n" + "="*80)
+    print("NBA SCHEDULE AND BOX SCORE SCRAPER")
+    print("="*80)
+    print("This script scrapes NBA schedule and box scores from Basketball Reference.")
+    print("\nBefore using this script, you need to start Chrome with remote debugging enabled.")
+    print("\nOn macOS/Linux, run:")
+    print("  google-chrome --remote-debugging-port=9222")
+    print("\nOn Windows, run (adjust path as needed):")
+    print("  \"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --remote-debugging-port=9222")
+    print("="*80 + "\n")
+    
+    # Ask if user is ready
+    proceed = input("Have you already started Chrome with debugging enabled? (y/n): ")
+    if proceed.lower() != 'y':
+        print("Please start Chrome with debugging enabled first.")
+        return
+    
+    # Default URL for NBA schedule
+    default_url = "https://www.basketball-reference.com/leagues/NBA_2025_games.html"
+    
+    # Allow custom URL
+    custom_url = input(f"Enter schedule URL (or press Enter for default: {default_url}): ")
+    if not custom_url.strip():
+        url = default_url
+    else:
+        url = custom_url
+        
+    # Allow custom output directory
+    output_dir = input("Enter output directory (or press Enter for default 'data'): ").strip()
+    if not output_dir:
+        output_dir = "data"
+    
+    # Scrape schedule data
+    print(f"\nScraping NBA schedule from {url}...")
+    schedule_data = extract_schedule_data(url)
+    
+    if schedule_data is not None and not schedule_data.empty:
+        # Save schedule data
+        csv_file = save_dataframe_to_csv(schedule_data, output_dir)
+        print(f"\nScraping completed successfully!")
+        print(f"- Schedule saved to: {csv_file}")
+        
+        # Ask if user wants to scrape box scores
+        scrape_scores = input("\nDo you want to scrape individual box scores? (y/n): ")
+        if scrape_scores.lower() == 'y':
+            scrape_box_scores(schedule_data, output_dir)
+    else:
+        print("Failed to extract schedule data.")
+
+if __name__ == "__main__":
+    main()

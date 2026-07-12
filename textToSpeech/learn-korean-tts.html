@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Korean Lyrics Reader</title>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, 'Inter', sans-serif;
+    background: #f9f9f7;
+    min-height: 100vh;
+    color: #1a1a1a;
+  }
+  .container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 24px 20px;
+  }
+  h1 { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+  .subtitle { font-size: 12px; color: #888; margin-bottom: 16px; }
+
+  /* ── SETUP SECTION ── */
+  .setup-section {
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background: white;
+    overflow: hidden;
+  }
+  .setup-section.collapsed .setup-body { display: none; }
+  .setup-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 10px 16px; background: #f5f5f5; cursor: pointer; user-select: none;
+  }
+  .setup-header span { font-size: 13px; font-weight: 600; color: #555; }
+  .setup-header .toggle-arrow { font-size: 12px; color: #999; }
+  .setup-body { padding: 12px 16px; }
+  .setup-row { display: flex; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; align-items: center; }
+  .setup-row label { font-size: 13px; font-weight: 600; color: #555; min-width: 50px; }
+  .setup-row select, .setup-row input[type="text"] {
+    flex: 1; padding: 8px 12px; border: 1px solid #ddd; border-radius: 6px;
+    font-size: 13px; font-family: inherit; min-width: 120px;
+  }
+  .setup-row select:disabled { opacity: 0.5; }
+
+  .btn {
+    border: none; border-radius: 6px; padding: 8px 16px;
+    font-weight: 600; font-size: 13px; cursor: pointer; transition: opacity 0.15s;
+  }
+  .btn:hover { opacity: 0.85; }
+  .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+  .btn.primary { background: #2563eb; color: white; }
+  .btn.google { background: #4285f4; color: white; }
+  .btn.outline { background: none; border: 1px solid #ccc; color: #555; }
+
+  .status { font-size: 12px; color: #888; min-height: 18px; margin-top: 6px; }
+  .hint { font-size: 11px; color: #aaa; margin-top: 4px; line-height: 1.4; }
+
+  /* ── API KEY ── */
+  .api-key-row {
+    display: flex; gap: 8px; align-items: center; margin-bottom: 10px;
+  }
+  .api-key-row input {
+    flex: 1; padding: 8px 12px; border: 1px solid #ddd; border-radius: 6px;
+    font-size: 13px; font-family: monospace;
+  }
+  .api-key-status {
+    font-size: 11px; padding: 4px 10px; border-radius: 12px;
+    font-weight: 600;
+  }
+  .api-key-status.saved { background: #dcfce7; color: #16a34a; }
+  .api-key-status.missing { background: #fef3c7; color: #d97706; }
+
+  /* ── TTS ENGINE TOGGLE ── */
+  .tts-toggle {
+    display: flex; gap: 4px; margin-bottom: 10px;
+  }
+  .tts-toggle button {
+    padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600;
+    cursor: pointer; border: 1px solid #ddd; background: white; color: #555;
+    transition: all 0.15s;
+  }
+  .tts-toggle button.active { background: #2563eb; color: white; border-color: #2563eb; }
+
+  /* ── LYRICS AREA ── */
+  .lyrics-area { display: none; }
+  .lyrics-area.active { display: block; }
+
+  .lyrics-info {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 14px; flex-wrap: wrap; gap: 8px;
+  }
+  .lyrics-info .lesson-tag {
+    font-size: 11px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; color: #2563eb;
+  }
+  .lyrics-info .count { font-size: 12px; color: #888; }
+
+  /* ── LYRIC LINES ── */
+  .lyric-line {
+    display: flex; flex-wrap: wrap; gap: 4px;
+    padding: 10px 14px; margin-bottom: 6px;
+    background: white; border: 1px solid #e8e8e8; border-radius: 10px;
+    cursor: pointer; transition: all 0.15s;
+    align-items: baseline;
+  }
+  .lyric-line:hover { background: #f0f4ff; border-color: #bfdbfe; }
+  .lyric-line.speaking { background: #dbeafe; border-color: #93c5fd; }
+  .lyric-line .line-num {
+    font-size: 11px; font-weight: 700; color: #aaa;
+    min-width: 28px; padding-top: 2px;
+  }
+
+  /* ── WORD TOKENS ── */
+  .word-token {
+    position: relative;
+    display: inline-block;
+    padding: 4px 6px;
+    border-radius: 6px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .word-token:hover { background: #e0e7ff; }
+  .word-token.playing { background: #bfdbfe; }
+
+  /* ── TOOLTIP ── */
+  .word-tooltip {
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1a1a1a;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    white-space: nowrap;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    pointer-events: none;
+  }
+  .word-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: #1a1a1a;
+  }
+  .word-tooltip .tip-korean { font-size: 16px; font-weight: 600; }
+  .word-tooltip .tip-rom { font-size: 11px; color: #aaa; font-style: italic; }
+  .word-tooltip .tip-eng { font-size: 13px; color: #86efac; margin-top: 2px; }
+  .word-token:hover .word-tooltip { display: block; }
+
+  /* ── FULL LINE MEANING ── */
+  .line-meaning {
+    display: none;
+    padding: 8px 14px 8px 42px;
+    margin-top: -4px; margin-bottom: 6px;
+    font-size: 14px; color: #15803d;
+    background: #f0fdf4; border: 1px solid #bbf7d0;
+    border-radius: 0 0 10px 10px;
+    border-top: none;
+  }
+  .line-meaning.visible { display: block; }
+
+  /* ── STICKY BAR ── */
+  .sticky-bar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 150;
+    display: none; align-items: center; justify-content: center;
+    gap: 8px; flex-wrap: wrap;
+    padding: 8px 12px;
+    background: #f0f0f0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  }
+  .sticky-bar.active { display: flex; }
+  .sticky-bar.auto-on { background: #e6ffe6; }
+  .sticky-bar select {
+    font-size: 12px; font-family: inherit;
+    padding: 3px 6px; border: 1px solid #ccc; border-radius: 5px;
+  }
+  .sticky-bar .sep { width: 1px; height: 18px; background: #ccc; margin: 0 2px; }
+  .lyrics-area.active { padding-top: 50px; }
+
+  .auto-label {
+    font-weight: 700; font-size: 12px; color: #666;
+    cursor: pointer; padding: 4px 8px; border-radius: 4px;
+  }
+  .switch-wrap {
+    position: relative; display: inline-block; width: 50px; height: 24px; cursor: pointer;
+  }
+  .switch-wrap input { opacity: 0; width: 0; height: 0; }
+  .switch-track {
+    position: absolute; inset: 0;
+    background-color: #ddd; transition: .4s; border-radius: 24px;
+  }
+  .switch-track.on { background-color: #4CAF50; }
+  .switch-knob {
+    position: absolute; height: 18px; width: 18px;
+    bottom: 3px; left: 3px;
+    background-color: white; transition: .4s; border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  }
+  .switch-knob.on { left: 29px; }
+
+  /* ── TOGGLE CHIPS ── */
+  .toggle-row {
+    display: flex; gap: 8px; align-items: center; margin-bottom: 14px; flex-wrap: wrap;
+  }
+  .toggle-chip {
+    padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600;
+    cursor: pointer; border: 1px solid #ddd; background: white; color: #555;
+    user-select: none; transition: all 0.15s;
+  }
+  .toggle-chip.on { background: #2563eb; color: white; border-color: #2563eb; }
+
+  /* ── LOADING SPINNER ── */
+  .loading-dot {
+    display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+    background: #2563eb; margin: 0 2px;
+    animation: bounce 1.4s infinite ease-in-out both;
+  }
+  .loading-dot:nth-child(1) { animation-delay: -0.32s; }
+  .loading-dot:nth-child(2) { animation-delay: -0.16s; }
+  @keyframes bounce {
+    0%, 80%, 100% { transform: scale(0); }
+    40% { transform: scale(1); }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Korean Lyrics Reader</h1>
+  <div class="subtitle">Hover words for meaning, click to hear pronunciation via ElevenLabs</div>
+
+  <!-- Setup Section -->
+  <div class="setup-section" id="setupSection">
+    <div class="setup-header" onclick="toggleSetup()">
+      <span>Setup</span>
+      <span class="toggle-arrow" id="setupArrow">&#9660;</span>
+    </div>
+    <div class="setup-body">
+
+      <!-- ElevenLabs API Key -->
+      <div style="font-size:12px;font-weight:600;color:#555;margin-bottom:6px;">ElevenLabs API Key</div>
+      <div class="api-key-row">
+        <input type="password" id="apiKeyInput" placeholder="Paste your ElevenLabs API key..."
+               onchange="saveApiKey()" onkeyup="saveApiKey()">
+        <span class="api-key-status missing" id="apiKeyStatus">not set</span>
+      </div>
+
+      <!-- TTS Engine Toggle -->
+      <div style="font-size:12px;font-weight:600;color:#555;margin-bottom:6px;">Voice Engine</div>
+      <div class="tts-toggle">
+        <button id="ttsToggleBrowser" class="active" onclick="setTtsEngine('browser')">Browser TTS (free)</button>
+        <button id="ttsToggleEleven" onclick="setTtsEngine('elevenlabs')">ElevenLabs (natural)</button>
+      </div>
+
+      <!-- ElevenLabs Voice Picker -->
+      <div class="setup-row" id="elevenVoiceRow" style="display:none;">
+        <label>Voice</label>
+        <select id="elevenVoiceSelect">
+          <option value="pNInz6obpgDQGcFmaJgB">Adam (deep, warm)</option>
+          <option value="ErXwobaYiN019PkySvjV">Antoni (calm)</option>
+          <option value="VR6AewLTigWG4xSOukaG">Arnold (strong)</option>
+          <option value="EXAVITQu4vr4xnSDxMaL">Bella (warm female)</option>
+          <option value="jBpfuIE2acCO8z3wKNLl">Gigi (youthful female)</option>
+          <option value="onwK4e9ZLuTAKqWW03F9">Daniel (British male)</option>
+        </select>
+      </div>
+
+      <hr style="border:none;border-top:1px solid #eee;margin:12px 0;">
+
+      <!-- Google Sheets -->
+      <div style="font-size:12px;font-weight:600;color:#555;margin-bottom:6px;">Google Sheets</div>
+      <div class="setup-row">
+        <button class="btn google" id="authBtn" onclick="gdriveSignIn()">Sign In</button>
+        <input type="text" id="searchInput" placeholder="Spreadsheet name..." value="korean">
+        <button class="btn primary" id="searchBtn" onclick="gdriveSearch()" disabled>Load</button>
+      </div>
+      <div class="setup-row">
+        <label>Sheet</label>
+        <select id="sheetSelect" disabled onchange="onSheetSelect()">
+          <option value="">Sign in first</option>
+        </select>
+      </div>
+      <div class="setup-row">
+        <label>Lesson</label>
+        <select id="lessonSelect" disabled onchange="onLessonSelect()">
+          <option value="">Select sheet first</option>
+        </select>
+      </div>
+      <div class="status" id="status"></div>
+      <div class="hint">Sheet format: Lesson | # | Korean | Romanization | English (5 columns, header row)</div>
+    </div>
+  </div>
+
+  <!-- Lyrics Area -->
+  <div class="lyrics-area" id="lyricsArea">
+    <div class="lyrics-info">
+      <span class="lesson-tag" id="lessonTag"></span>
+      <span class="count" id="countLabel"></span>
+    </div>
+
+    <!-- Toggle chips -->
+    <div class="toggle-row">
+      <span class="toggle-chip on" id="toggleTooltips" onclick="toggleSetting('tooltips')">Tooltips</span>
+      <span class="toggle-chip" id="toggleMeaning" onclick="toggleSetting('meanings')">Line Meanings</span>
+      <span class="toggle-chip on" id="toggleKorean" onclick="toggleSetting('korean')">Korean</span>
+      <span class="toggle-chip" id="toggleRomanization" onclick="toggleSetting('romanization')">Romanization</span>
+    </div>
+
+    <!-- Sticky control bar -->
+    <div class="sticky-bar" id="stickyBar">
+      <select id="speechRateSelect" onchange="ttsRate = parseFloat(this.value)" title="Speed">
+        <option value="0.5">0.5x</option>
+        <option value="0.7">0.7x</option>
+        <option value="1" selected>1x</option>
+        <option value="1.25">1.25x</option>
+        <option value="1.5">1.5x</option>
+      </select>
+      <div class="sep"></div>
+      <span class="auto-label" id="stopLabel" onmouseenter="setAutoAdvance(false)" style="background:#ffcdd2;">Stop</span>
+      <label class="switch-wrap">
+        <input type="checkbox" id="autoAdvanceCheckbox" onchange="setAutoAdvance(this.checked)">
+        <span class="switch-track" id="switchTrack"><span class="switch-knob" id="switchKnob"></span></span>
+      </label>
+      <span class="auto-label" id="autoLabel" onmouseenter="setAutoAdvance(true)">Auto</span>
+    </div>
+
+    <!-- Lines container -->
+    <div id="linesContainer"></div>
+  </div>
+</div>
+
+<script>
+// ── STATE ──
+const GDRIVE_CLIENT_ID = '1095683227908-7ro25k16mprkf408i3lf583gti8v759b.apps.googleusercontent.com';
+const GDRIVE_SCOPES = 'https://www.googleapis.com/auth/drive.readonly https://www.googleapis.com/auth/spreadsheets.readonly';
+
+let gdriveAccessToken = null;
+let gdriveTokenClient = null;
+let gdriveWorkbook = null;
+
+let allRows = [];
+let filteredRows = [];
+let ttsEngine = 'browser'; // 'browser' or 'elevenlabs'
+let ttsRate = 1;
+let autoAdvance = false;
+let currentSpeakingIndex = -1;
+let currentAudio = null; // for ElevenLabs playback
+
+let showTooltips = true;
+let showMeanings = false;
+let showKorean = true;
+let showRomanization = false;
+
+// ── API KEY (localStorage) ──
+function saveApiKey() {
+  var key = document.getElementById('apiKeyInput').value.trim();
+  if (key) {
+    localStorage.setItem('elevenlabs_api_key', key);
+    document.getElementById('apiKeyStatus').textContent = 'saved';
+    document.getElementById('apiKeyStatus').className = 'api-key-status saved';
+  } else {
+    localStorage.removeItem('elevenlabs_api_key');
+    document.getElementById('apiKeyStatus').textContent = 'not set';
+    document.getElementById('apiKeyStatus').className = 'api-key-status missing';
+  }
+}
+
+function loadApiKey() {
+  var key = localStorage.getItem('elevenlabs_api_key');
+  if (key) {
+    document.getElementById('apiKeyInput').value = key;
+    document.getElementById('apiKeyStatus').textContent = 'saved';
+    document.getElementById('apiKeyStatus').className = 'api-key-status saved';
+  }
+}
+
+function getApiKey() {
+  return localStorage.getItem('elevenlabs_api_key') || '';
+}
+
+// ── TTS ENGINE ──
+function setTtsEngine(engine) {
+  ttsEngine = engine;
+  document.getElementById('ttsToggleBrowser').className = engine === 'browser' ? 'active' : '';
+  document.getElementById('ttsToggleEleven').className = engine === 'elevenlabs' ? 'active' : '';
+  document.getElementById('elevenVoiceRow').style.display = engine === 'elevenlabs' ? 'flex' : 'none';
+
+  if (engine === 'elevenlabs' && !getApiKey()) {
+    setStatus('Enter your ElevenLabs API key above');
+  }
+}
+
+// ── SPEAK (unified) ──
+function speakText(text, onEnd) {
+  stopSpeaking();
+
+  if (ttsEngine === 'elevenlabs') {
+    speakElevenLabs(text, onEnd);
+  } else {
+    speakBrowser(text, onEnd);
+  }
+}
+
+function speakBrowser(text, onEnd) {
+  var utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = 'ko-KR';
+  utterance.rate = ttsRate;
+  utterance.onend = function() { if (onEnd) onEnd(); };
+  speechSynthesis.speak(utterance);
+}
+
+async function speakElevenLabs(text, onEnd) {
+  var apiKey = getApiKey();
+  if (!apiKey) {
+    setStatus('ElevenLabs API key not set — using browser TTS');
+    speakBrowser(text, onEnd);
+    return;
+  }
+
+  var voiceId = document.getElementById('elevenVoiceSelect').value;
+  try {
+    var resp = await fetch('https://api.elevenlabs.io/v1/text-to-speech/' + voiceId, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'xi-api-key': apiKey
+      },
+      body: JSON.stringify({
+        text: text,
+        model_id: 'eleven_multilingual_v2',
+        voice_settings: {
+          stability: 0.5,
+          similarity_boost: 0.75,
+          style: 0.4
+        }
+      })
+    });
+
+    if (!resp.ok) {
+      var errText = await resp.text();
+      console.error('ElevenLabs error:', resp.status, errText);
+      setStatus('ElevenLabs error ' + resp.status + ' — falling back to browser TTS');
+      speakBrowser(text, onEnd);
+      return;
+    }
+
+    var blob = await resp.blob();
+    var url = URL.createObjectURL(blob);
+    currentAudio = new Audio(url);
+    currentAudio.playbackRate = ttsRate;
+    currentAudio.onended = function() {
+      URL.revokeObjectURL(url);
+      currentAudio = null;
+      if (onEnd) onEnd();
+    };
+    currentAudio.play();
+  } catch (err) {
+    console.error('ElevenLabs fetch error:', err);
+    setStatus('Network error — falling back to browser TTS');
+    speakBrowser(text, onEnd);
+  }
+}
+
+function stopSpeaking() {
+  speechSynthesis.cancel();
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio = null;
+  }
+}
+
+// ── SPEAK LINE (click on line) ──
+function speakLine(index) {
+  stopSpeaking();
+  if (index < 0 || index >= filteredRows.length) {
+    clearHighlight();
+    currentSpeakingIndex = -1;
+    return;
+  }
+
+  currentSpeakingIndex = index;
+  highlightLine(index);
+
+  var row = filteredRows[index];
+  speakText(row.korean, function() {
+    if (autoAdvance && currentSpeakingIndex === index) {
+      speakLine(index + 1);
+    } else {
+      clearHighlight();
+      currentSpeakingIndex = -1;
+    }
+  });
+}
+
+// ── SPEAK SINGLE WORD (click on word token) ──
+function speakWord(text, tokenEl, event) {
+  event.stopPropagation(); // don't trigger line click
+
+  // Remove previous playing state
+  document.querySelectorAll('.word-token.playing').forEach(function(el) {
+    el.classList.remove('playing');
+  });
+  tokenEl.classList.add('playing');
+
+  speakText(text, function() {
+    tokenEl.classList.remove('playing');
+  });
+}
+
+function highlightLine(index) {
+  clearHighlight();
+  var lines = document.querySelectorAll('.lyric-line');
+  if (lines[index]) {
+    lines[index].classList.add('speaking');
+    lines[index].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+}
+
+function clearHighlight() {
+  document.querySelectorAll('.lyric-line.speaking').forEach(function(el) {
+    el.classList.remove('speaking');
+  });
+}
+
+// ── TOGGLE SETTINGS ──
+function toggleSetting(key) {
+  if (key === 'tooltips') showTooltips = !showTooltips;
+  if (key === 'meanings') showMeanings = !showMeanings;
+  if (key === 'korean') showKorean = !showKorean;
+  if (key === 'romanization') showRomanization = !showRomanization;
+  renderLyrics();
+}
+
+// ── AUTO ADVANCE ──
+function setAutoAdvance(val) {
+  autoAdvance = val;
+  document.getElementById('autoAdvanceCheckbox').checked = val;
+  var bar = document.getElementById('stickyBar');
+  var track = document.getElementById('switchTrack');
+  var knob = document.getElementById('switchKnob');
+  var stopLabel = document.getElementById('stopLabel');
+  var autoLabel = document.getElementById('autoLabel');
+
+  if (val) {
+    bar.classList.add('auto-on');
+    track.classList.add('on');
+    knob.classList.add('on');
+  } else {
+    bar.classList.remove('auto-on');
+    track.classList.remove('on');
+    knob.classList.remove('on');
+    stopSpeaking();
+    clearHighlight();
+    currentSpeakingIndex = -1;
+  }
+  stopLabel.style.background = val ? 'transparent' : '#ffcdd2';
+  stopLabel.style.color = val ? '#666' : '#666';
+  autoLabel.style.color = val ? '#4CAF50' : '#666';
+  autoLabel.style.backgroundColor = val ? '#c8e6c9' : 'transparent';
+}
+
+// ── RENDER LYRICS ──
+function renderLyrics() {
+  var area = document.getElementById('lyricsArea');
+  if (filteredRows.length === 0) {
+    area.classList.remove('active');
+    return;
+  }
+  area.classList.add('active');
+  document.getElementById('stickyBar').classList.add('active');
+
+  var lesson = document.getElementById('lessonSelect').value || 'All Lessons';
+  document.getElementById('lessonTag').textContent = lesson;
+  document.getElementById('countLabel').textContent = filteredRows.length + ' lines';
+
+  // Update toggle chips
+  document.getElementById('toggleTooltips').className = 'toggle-chip' + (showTooltips ? ' on' : '');
+  document.getElementById('toggleMeaning').className = 'toggle-chip' + (showMeanings ? ' on' : '');
+  document.getElementById('toggleKorean').className = 'toggle-chip' + (showKorean ? ' on' : '');
+  document.getElementById('toggleRomanization').className = 'toggle-chip' + (showRomanization ? ' on' : '');
+
+  var container = document.getElementById('linesContainer');
+  container.innerHTML = '';
+
+  filteredRows.forEach(function(row, i) {
+    // Line wrapper
+    var line = document.createElement('div');
+    line.className = 'lyric-line';
+    line.onclick = function() { speakLine(i); };
+
+    // Line number
+    var num = document.createElement('span');
+    num.className = 'line-num';
+    num.textContent = row.num || (i + 1);
+    line.appendChild(num);
+
+    if (showKorean) {
+      // Split Korean into word tokens
+      var words = row.korean.split(/\s+/);
+      words.forEach(function(word) {
+        var token = document.createElement('span');
+        token.className = 'word-token';
+        token.textContent = word;
+        token.onclick = function(e) { speakWord(word, token, e); };
+
+        // Tooltip
+        if (showTooltips) {
+          var tooltip = document.createElement('div');
+          tooltip.className = 'word-tooltip';
+
+          var tipKr = document.createElement('div');
+          tipKr.className = 'tip-korean';
+          tipKr.textContent = word;
+          tooltip.appendChild(tipKr);
+
+          if (row.romanization) {
+            var tipRom = document.createElement('div');
+            tipRom.className = 'tip-rom';
+            tipRom.textContent = row.romanization;
+            tooltip.appendChild(tipRom);
+          }
+
+          if (row.english) {
+            var tipEng = document.createElement('div');
+            tipEng.className = 'tip-eng';
+            tipEng.textContent = row.english;
+            tooltip.appendChild(tipEng);
+          }
+
+          token.appendChild(tooltip);
+        }
+
+        line.appendChild(token);
+      });
+    }
+
+    // Show romanization inline if toggled
+    if (showRomanization && row.romanization) {
+      var romSpan = document.createElement('span');
+      romSpan.style.cssText = 'font-size:13px;color:#888;font-style:italic;margin-left:8px;';
+      romSpan.textContent = '(' + row.romanization + ')';
+      line.appendChild(romSpan);
+    }
+
+    container.appendChild(line);
+
+    // Line meaning (below the line)
+    if (showMeanings && row.english) {
+      var meaning = document.createElement('div');
+      meaning.className = 'line-meaning visible';
+      meaning.textContent = row.english;
+      container.appendChild(meaning);
+    }
+  });
+}
+
+// ── GOOGLE SHEETS (same pattern as learn-korean.html) ──
+function setStatus(msg) { document.getElementById('status').textContent = msg; }
+
+function toggleSetup() {
+  var section = document.getElementById('setupSection');
+  var arrow = document.getElementById('setupArrow');
+  section.classList.toggle('collapsed');
+  arrow.textContent = section.classList.contains('collapsed') ? '\u25ba' : '\u25bc';
+}
+
+function gdriveInitClient() {
+  if (window.google && window.google.accounts) {
+    gdriveTokenClient = window.google.accounts.oauth2.initTokenClient({
+      client_id: GDRIVE_CLIENT_ID,
+      scope: GDRIVE_SCOPES,
+      callback: function(response) {
+        if (response.access_token) {
+          gdriveAccessToken = response.access_token;
+          document.getElementById('authBtn').textContent = 'Sign Out';
+          document.getElementById('searchBtn').disabled = false;
+          setStatus('Signed in. Click Load to fetch spreadsheet.');
+        }
+      },
+    });
+  }
+}
+
+var checkGoogle = setInterval(function() {
+  if (window.google && window.google.accounts) {
+    clearInterval(checkGoogle);
+    gdriveInitClient();
+  }
+}, 200);
+
+function gdriveSignIn() {
+  if (gdriveAccessToken) {
+    gdriveAccessToken = null;
+    gdriveWorkbook = null;
+    document.getElementById('authBtn').textContent = 'Sign In';
+    document.getElementById('searchBtn').disabled = true;
+    document.getElementById('sheetSelect').innerHTML = '<option value="">Sign in first</option>';
+    document.getElementById('sheetSelect').disabled = true;
+    document.getElementById('lessonSelect').innerHTML = '<option value="">Select sheet first</option>';
+    document.getElementById('lessonSelect').disabled = true;
+    document.getElementById('lyricsArea').classList.remove('active');
+    document.getElementById('stickyBar').classList.remove('active');
+    allRows = [];
+    filteredRows = [];
+    setStatus('Signed out');
+    return;
+  }
+  if (gdriveTokenClient) {
+    gdriveTokenClient.requestAccessToken();
+  } else {
+    setStatus('Google API not loaded yet. Try again.');
+  }
+}
+
+async function gdriveSearch() {
+  var searchTerm = document.getElementById('searchInput').value.trim();
+  if (!searchTerm) { setStatus('Enter a spreadsheet name'); return; }
+  try {
+    setStatus('Searching...');
+    var query = encodeURIComponent("name contains '" + searchTerm + "' and trashed=false and mimeType='application/vnd.google-apps.spreadsheet'");
+    var resp = await fetch('https://www.googleapis.com/drive/v3/files?q=' + query + '&fields=files(id,name)&orderBy=name', {
+      headers: { Authorization: 'Bearer ' + gdriveAccessToken }
+    });
+    if (!resp.ok) throw new Error('Search failed');
+    var data = await resp.json();
+    if (!data.files || data.files.length === 0) {
+      setStatus('No spreadsheet matching "' + searchTerm + '"');
+      return;
+    }
+    var file = data.files[0];
+    setStatus('Loading "' + file.name + '"...');
+    await loadSpreadsheet(file.id, file.name);
+  } catch (err) {
+    setStatus('Error: ' + err.message);
+  }
+}
+
+async function loadSpreadsheet(fileId, fileName) {
+  try {
+    var exportMime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+    var resp = await fetch('https://www.googleapis.com/drive/v3/files/' + fileId + '/export?mimeType=' + encodeURIComponent(exportMime), {
+      headers: { Authorization: 'Bearer ' + gdriveAccessToken }
+    });
+    if (!resp.ok) throw new Error('Export failed');
+    var arrayBuffer = await resp.arrayBuffer();
+    gdriveWorkbook = XLSX.read(new Uint8Array(arrayBuffer), { type: 'array' });
+
+    var sel = document.getElementById('sheetSelect');
+    sel.innerHTML = '<option value="">-- select sheet --</option>';
+    gdriveWorkbook.SheetNames.forEach(function(name) {
+      var opt = document.createElement('option');
+      opt.value = name; opt.textContent = name;
+      sel.appendChild(opt);
+    });
+    sel.disabled = false;
+    if (gdriveWorkbook.SheetNames.length === 1) {
+      sel.value = gdriveWorkbook.SheetNames[0];
+      onSheetSelect();
+    }
+    setStatus('Loaded "' + fileName + '" — ' + gdriveWorkbook.SheetNames.length + ' sheet(s)');
+  } catch (err) {
+    setStatus('Error: ' + err.message);
+  }
+}
+
+function parseCsv(text) {
+  var result = [];
+  var current = '', cells = [], inQuotes = false;
+  for (var i = 0; i < text.length; i++) {
+    var ch = text[i];
+    if (inQuotes) {
+      if (ch === '"' && text[i+1] === '"') { current += '"'; i++; }
+      else if (ch === '"') { inQuotes = false; }
+      else { current += ch; }
+    } else {
+      if (ch === '"') { inQuotes = true; }
+      else if (ch === ',') { cells.push(current); current = ''; }
+      else if (ch === '\n' || (ch === '\r' && text[i+1] === '\n')) {
+        cells.push(current); result.push(cells);
+        cells = []; current = '';
+        if (ch === '\r') i++;
+      } else { current += ch; }
+    }
+  }
+  cells.push(current);
+  if (cells.length > 0) result.push(cells);
+  return result;
+}
+
+function onSheetSelect() {
+  var sheetName = document.getElementById('sheetSelect').value;
+  if (!sheetName || !gdriveWorkbook) return;
+
+  var sheet = gdriveWorkbook.Sheets[sheetName];
+  var csv = XLSX.utils.sheet_to_csv(sheet);
+  var rows = parseCsv(csv);
+
+  if (rows.length < 2) { setStatus('Sheet is empty'); return; }
+
+  // Lesson | # | Korean | Romanization | English
+  allRows = [];
+  for (var i = 1; i < rows.length; i++) {
+    var r = rows[i];
+    if (!r[0] && !r[2]) continue;
+    allRows.push({
+      lesson: (r[0] || '').trim(),
+      num: (r[1] || '').trim(),
+      korean: (r[2] || '').trim(),
+      romanization: (r[3] || '').trim(),
+      english: (r[4] || '').trim(),
+    });
+  }
+
+  var lessons = [], seen = {};
+  allRows.forEach(function(row) {
+    if (row.lesson && !seen[row.lesson]) { seen[row.lesson] = true; lessons.push(row.lesson); }
+  });
+
+  var lessonSel = document.getElementById('lessonSelect');
+  lessonSel.innerHTML = '<option value="">-- all lessons --</option>';
+  lessons.forEach(function(l) {
+    var opt = document.createElement('option');
+    opt.value = l;
+    opt.textContent = l + ' (' + allRows.filter(function(r) { return r.lesson === l; }).length + ')';
+    lessonSel.appendChild(opt);
+  });
+  lessonSel.disabled = false;
+  setStatus(allRows.length + ' lines, ' + lessons.length + ' lesson(s)');
+  onLessonSelect();
+}
+
+function onLessonSelect() {
+  var lesson = document.getElementById('lessonSelect').value;
+  filteredRows = lesson ? allRows.filter(function(r) { return r.lesson === lesson; }) : allRows.slice();
+  renderLyrics();
+}
+
+// ── INIT ──
+loadApiKey();
+</script>
+</body>
+</html>

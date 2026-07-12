@@ -1,0 +1,1721 @@
+##  Transcript
+## Introduction to Sports Performance Research
+0:00 
+What makes someone so much better at jumping? Similar body weight athlete with a similar back squat. Is it just
+0:06 
+the speed of their nervous system? Is it powerlifters usually they can't really
+0:12 
+jump? Why can someone else with lower peak force isometrically jump higher and
+0:18 
+express more? What are some good ways to analyze ability for someone to actually move and
+0:24 
+run quickly? And then what are those tests showing us that individuals could work on inside the the weight room?
+0:30 
+The the two different uh sort of phases of running, right? The acceleration phase and a max velocity phase. So we're
+0:37 
+going to go into cuttingedge sports performance research. And we're going to start right now. So we're doing a
+0:44 
+podcast with Jacob Gunn, one of the best premier sports performance researchers on the planet. And we're going to go
+0:50 
+through all the different things around research and then how we can take research as coaches and even as
+0:56 
+self-motivated athletes and apply this research to the strength game. So let's
+1:03 
+start. All right. We are here with Dr. Jacob Gooden, sports scientist, professor of chinesiology at PointLoma
+1:10 
+Nazarene. And we are going to dive deep into a whole bunch of different topics around things like testing
+1:16 
+explosiveness, speed, endurance, strength. So, welcome to the podcast, Dr. Jacob Gooden. Thanks for being here.
+1:23 
+Well, thanks, Coach Miller. I'm happy to be here. Been looking forward to it. Um, and uh, I will say that it's an honor to
+1:29 
+be on this podcast. I started following you guys early on and uh, you've really blown up and for good reason, too. So, I
+1:36 
+appreciate I appreciate that. I I was just thinking I I feel like we've known each other sort of for multiple years. I don't know
+1:43 
+the first time that we like messaged. Um, but then meeting you last year, that was it. It's It's just cool to to take
+1:51 
+like the internet world into person and actually be like, "Oh, shoot. You're a
+1:56 
+human being." Yeah. Yeah. You're you're bigger in person even than on on the camera.
+2:04 
+No, it was cool when we presented together and I was like I was like telling my wife I was like I'm going to try not to fang girl right now, but but
+2:11 
+I'm pretty pumped. So that was fun. And what's funny is that I presented at that on endurance and dude I was thinking
+2:16 
+back because they had messaged me about another uh another presentation and I presented on endurance and I'm like
+2:24 
+you should have been the one on endurance and I feel like I should have been doing something on like explosiveness or strength. So I think
+2:30 
+it's funny like there there and actually I will even say this this is a good segue is in that presentation
+2:38 
+I really struggled myself on linking you know the physiology and the things of
+2:44 
+the adaptations that occur with the ad with the actions over here and it's like
+2:51 
+learning this trying to learn the the science behind how like certain types of
+2:56 
+training can create these adaptations and how to test for those uh possible
+3:01 
+deficits and then at the same time I was trying to teach it in an applied way and
+3:07 
+I I I did feel like I struggled with that. So I I maybe that's a good uh a good segue is like how do you you know
+## Testing and Analysis in Sports Science
+3:15 
+what are some good tests or whatever or yeah good tests that you might be looking at in the realm of endurance or
+3:20 
+explosiveness and strength and and speed and then how do you you know how do well
+3:26 
+let's just go into that first part around around the test. Yeah for sure. So you know in sports science it's it we differentiate it from
+3:34 
+exercise science first of all because in exercise science we're looking at how
+3:39 
+does exercise influence physiology and biology and and what are the outcomes on
+3:44 
+things like health and and in sport science instead we're leveraging all of the sciences in order to drive forward
+3:51 
+performance. And so when we think about testing from a sport science sense, I think a lot of times people have in
+3:56 
+their mind like V2 max with a mask on and all of these intensive lab procedures, but really um it's a lot
+4:04 
+more applied than that. And and we often lean toward field-based testing when we
+4:10 
+can as much as possible and and and so avoiding the use of technology if we
+4:16 
+don't have to use it. So simple is is often better. When we're thinking about what to test, that's more around looking
+4:22 
+at the physiological qualities, uh the key performance indicators, not as far
+4:28 
+as sport performance goes, but uh physical preparedness. Right now, of
+4:33 
+course, there's a sport scientist can operate in both realms. They can dialogue with the sport coach and and
+4:39 
+ask the sport coach, how can I support you in in your needs? And maybe there are some very sports specific things to be testing and monitoring like player
+4:46 
+load or um you know total uh total distance covered or or total sprint speed or something through GPS. But when
+4:53 
+you know in in in from a strength and conditioning perspective, we're looking at measuring physical fitness
+5:00 
+characteristics or fitness qualities. And and we do that a number of different ways. You can be very general about it
+5:06 
+or very sports specific. Uh but it's really a gray line or sort of a gray area between what is considered general.
+5:12 
+Is a is a no hands counter movement vertical jump on a force plate general or is it specific because you jump in a
+5:18 
+lot of sports but it's also just a very general human movement. Okay. And so
+5:23 
+when we're looking at that we have to first start with a needs analysis of the sport itself. What are the key limit
+5:29 
+limiters of the sport? Uh what are the movement characteristics and qualities? What are the metabolic factors
+5:36 
+associated with it? Right? which which of the energy systems is predominant work to rest ratios. And then
+5:43 
+extrapolating from that, we also then go to the athlete. What's the athletes injury history or or perhaps the team?
+5:48 
+What's their level of preparedness currently, their level of competition? Um uh what have we previously identified
+5:55 
+as something that we need to work on? And then of course, you know, what resources do we have available? And so
+6:00 
+I'm being very general and it's that that type of answer of it depends. But uh you know when we're looking at how to
+6:07 
+test quickly and efficiently, we have to choose tests that we that have a high um
+6:13 
+face uh validity, right? So they the athlete understands what we're trying to
+6:19 
+test them for and we can explain that to them. And often times we do use some sophisticated technology which is
+6:24 
+becoming more ubiquitous like force plates, like velocity based training. And so, you know, for me, when I'm
+6:30 
+testing athletes, whether they're endurance, whether they're power, strength, power, you know, repeat, uh, sort of speed, endurance, like team
+6:36 
+sport athletes, we're actually typically testing them in in a very similar way. Uh, because the general physical fitness
+6:43 
+qualities, all athletes need them. It's just different doses or different uh, magnitudes, right? And so, an endurance
+6:50 
+athlete still, we still want to know their strength and power. We still want to know how explosive they are. What uh
+6:55 
+what's the health and status of their stretch shortening cycle just like we would in a soccer athlete just like we
+7:01 
+would with an Olympic weightlifter. Now the specific test selection might vary slightly. So when I was at ETSU st
+7:08 
+studying under Dr. Stone working with the weightlifters, we often did counter
+7:14 
+movement jumps and loaded counter movement jumps up to, you know, upwards of 50 60% of their back squat 1RM,
+7:21 
+right? Because that's uh so highly specific and valuable to understand the
+7:27 
+function of the stretch shortening cycle under load for those weightlifterss. I probably wouldn't do that when I'm testing a runner. Instead, I'd probably
+7:33 
+do like a no hands countermovement jump and then maybe like a repeat five or 10 uh jump test, like a re jump rebound
+7:40 
+test on force platforms. And so the methodology is very similar. The specific tests that we do, we can tweak
+7:47 
+a little bit to be sports specific. And then, you know, the real nuance is is diving into the variables because that's
+7:52 
+where that's where a lot of folks and myself included, we get buried under a hundred variables and we're and we're
+7:58 
+just we just have, you know, uh paralysis by analysis where we just get stuck in the spreadsheet and we can
+8:04 
+never actually uh operationalize on that data. And so and so I have a a framework and a lot of
+8:10 
+people have similar frameworks with different uh acronyms, but it's MEO. So measure, evaluate, operationalize. And
+8:16 
+if you forget the O, then you're doing it wrong. So, I don't know if that that fully got
+8:21 
+to the question, but Yeah. Yeah. Yeah. It's a good place to start. Yeah. And it's like one of those things
+8:26 
+where as soon as you said that, my my first response, my first I have a couple things like the magnitude of the needs.
+8:32 
+Like the test a lot of the tests will be similar, but it's the magnitude of how much a distance runner might need
+8:37 
+specific strength versus the the test of a football player in a strength setting.
+8:44 
+Now the the test might be the same but the magnitude or the the the deficit
+8:51 
+potentially that you would be looking for would be relative to a comparison to
+8:56 
+their sports. So it's still it's still it makes sense. It it makes sense. Now the question I had was
+## Understanding Jump Performance and Fatigue Monitoring []
+9:03 
+right away I wanted you know the counter movement stuff and and the the test the
+9:08 
+weighted test with the jumps for a weightlifter. How why were you doing those I guess is
+9:14 
+like what was the purpose? Was it like a readiness? Was it a session readiness? Was it just to see what they were
+9:20 
+capable of doing? Yeah. So in that case it was more testing and less monitoring. So we do
+9:26 
+use jump monitoring. And you can use loaded jumps for fatigue monitoring like a daily or weekly type of jump. But
+9:32 
+typically people would do that at least what I've seen and what's been published in the literature. Typically it's an
+9:37 
+unweighted uh vertical jump uh counter movement vertical jump. And for the
+9:42 
+weightlifters specifically because as you know snatch and the clean and jerk have such a reliance on the uh strength
+9:51 
+speed side of the power equation uh with stretch shortening cycle underload. Uh
+9:58 
+the idea was to see where the athletes had the largest decrements or the largest falloff in jump height and
+10:04 
+takeoff velocity and counter movement time. you know, time to take off uh as
+10:10 
+the load approached higher and higher percentages of their squat. And so, you
+10:15 
+know, theoretically, an athlete who is able to have a more gradual fall-off,
+10:20 
+well, they have better power production at a higher percentage of 1 RM. And so, maybe we need to drive up strength. If
+10:26 
+an athlete has a rapid fall-off, well, they have uh they don't have the ability as much to to um uh express force
+10:35 
+dynamically under that much load. Okay? And so maybe we need to work on more the mid-range on those powers, expressing
+10:41 
+power uh when they're, you know, fairly heavily loaded. And so there was there was nuances around that. And you know,
+10:47 
+at the time I was more of the uh you know, I was more of the technician and the grad student under the coaches who
+10:54 
+were operating their program. So, I don't know all the nuances, but we, you know, there's similar concepts around like team sport athletes, right? We
+11:00 
+might get them on on the force plates and we're not just looking at jump height, right? Because jump height is a fairly stable metric and uh there are
+11:08 
+different jump strategies that athletes can use to achieve the same jump height. So for instance with uh you know you
+11:14 
+mentioned um readiness monitoring and so with some of our teams here at PLNU we do daily or weekly jump testing and and
+11:22 
+we might see that by and large throughout the season most athletes are jumping within one standard deviation of
+11:28 
+their baseline. You know may you know maybe occasionally they they stray outside of that. Um and so if if we set
+11:34 
+up a trend analysis just graph it you know easy graph. It sounds fancy when you say trend analysis and and you know
+11:39 
+I'm wearing glasses. Does that include tariffs? Tariff, it doesn't include tariffs. No, it's less confusing than tariffs. Um,
+11:47 
+I'll say that much. I know enough to know that. And, uh, and so when you when you graph it, uh, and you're looking
+11:53 
+outside of the standard deviations, you can start to say, okay, uh, maybe, you know, maybe they are not as ready,
+11:59 
+they're fatigued because the jump height is low, but the thing is it's very stable. And so some other metrics, some jump strategy metrics like uh reactive
+12:07 
+strength index or the modified reactive strength index or um countermovement
+12:12 
+depth um or rate of force development. Those are more sensitive to fatigue because what happens is you know let's
+12:18 
+say a basketball player goes and plays a game full game and they come into the weight room the next day or two days
+12:24 
+later whenever their session is and they get on the force plates or the jump mat. Although you can't really measure those
+12:29 
+things on a jump mat or play mat. I I think some of them can do uh RSI from a depth jump, but let's say they get on
+12:35 
+force plates and they jump and they hit, you know, maybe their their typical is like 30 inches and they hit 29 and
+12:41 
+you're like, "Okay, great. You know, they're a little maybe a little tired, but they're fine." But their their jump strategy might tell a different story.
+12:47 
+Let's say typically they're very elastic, very springy. Um, and then postgame when they jump, they actually,
+12:54 
+you notice because you're a good coach and you're watching the athlete, not the iPad in front of you, you see them dip
+13:00 
+down twice as far as they typically do, and they're really loading up that jump, right? Like gathering it up the way a
+13:05 
+little kid jumps. You know, you ask your little kid, "Hey, jump as high as you can." You know, they squat down all the way and they think that the more time
+13:11 
+they spend down there, they're like gathering up force somehow uh to go like Super Saiyan and jump as high as they
+13:16 
+can. But, uh, you see the athlete taking a longer time. And so what they're doing, they don't realize it probably,
+13:21 
+but what they're doing um is they are accumulating uh all of that uh impulse,
+13:27 
+right? The the area under the force time curve to achieve the same takeoff velocity, but they're doing it in a
+13:34 
+longer period of time because their stretch shortening cycle ability is somewhat reduced. Their elastic uh
+13:40 
+qualities uh even their contractile um ability within the muscle. And so it's a
+13:46 
+different jump strategy with the same jump height. And so and so that's, you know, one one way that we can get a little bit more sophisticated with it.
+13:53 
+How would you test a RSI without equipment? Yeah. So RSI is actually very easy to do
+13:59 
+now um uh on an app. Uh there's an app called uh My Jump Lab. There's a couple others as well, but My Jump Lab is the
+14:05 
+best uh put out by um I'm going to butcher his last name. He's from Spain. Uh Balabre, I think it is. and and he
+14:14 
+makes phenomenal apps that he then validates and publishes the validation studies in the literature. And so RSI is
+14:21 
+is a couple different ways to measure it, but um the most uh basic way is just jump height uh divided by time to take
+14:27 
+off or ground contact time depending on if you get it from a from a um depth jump or from a counter movement jump.
+14:34 
+Okay? So it's the amount of time the athlete takes in their counter movement um and it's a ratio of that to how high
+14:40 
+they actually jump. So if you have two athletes jumping again, let's say 30 inches and one takes half as long to do
+14:49 
+the actual jumping portion of it, they will have a much higher RSI. And therefore, visually if you saw them
+14:54 
+jump, you'd be like, "Whoa, dang. That dude's twitchy. That dude's elastic. He's got ups, right? And the other guy
+15:00 
+might be more of like a force driven athlete. Okay. So he has to gather it up and concentrically produce that force.
+## Defining "Elastic" in Jumping and Quadrant Reports []
+15:07 
+Okay. Can you This is So I've asked Kristoff Kip this. This is a term that a
+15:12 
+lot of triple jumpers will triple jump coaches especially will use this. They'll use the term elastic. Is there a
+15:21 
+is there like a a scient a scientific timeline? Because when you're saying
+15:28 
+he's elastic, I see like that the we've got a seven foot high jumper here and
+15:33 
+when he jumps it's just like I see it right. I see the it looks like a rabbit
+15:38 
+or or a deer going across the field. How is there an actual timeline
+15:45 
+on on a counter movement or on a jump that elasticity is tied to and say in that
+15:52 
+descriptive or is it still more of like an abstract term? Do you follow what I'm saying? Do
+15:59 
+you mean like is there a cut off of time to take off or of of um
+16:05 
+elastic versus he's more of a forcebased jumper like this is that that split?
+16:11 
+So, so, okay. So, here's here's um here's a concept. I don't know if it directly is like a timeline, but there's
+16:17 
+this um type of report uh called a quadrant report. And I believe so, the two two of the major force plate
+16:23 
+manufacturers uh VA and Hawin Dynamics uh both of which are are great. I
+16:29 
+believe they both can do this. Um a quadrant report essentially maps two different variables against each other
+16:36 
+and then plots all your athletes in a quadrant. And so let's say that you mapped a more force uh concentrically
+16:43 
+driven muscle dominant variable against a more elastic sort of twitchy, you
+16:50 
+know, uh um tendon driven variable and you and you map those two, right? And so
+16:56 
+uh it could be something like time to takeoff, which again the shorter amount of time spent gathering up all that
+17:03 
+force and generating it means, you know, we would call them more elastic. Uh so time to take off versus something like
+17:09 
+um uh peak concentric power. Okay. And it could be scaled or it could be absolute uh depending on you know the
+17:15 
+type of athlete. Maybe it's a weight class athlete. Maybe their their body mass doesn't matter. So it's more absolute. Who knows? And so you just you
+17:22 
+graph those on a quadrant, right? And there and so there's a positive side and a negative side. You can either do and
+17:27 
+typically what people do is they'll calculate zcores. We're getting too, you know, statsy. We're going to lose the
+17:32 
+audience. But we get a standardized score. So you can go you can go like positive or negative on each of these
+17:37 
+and and zero is going to be average. And so imagine gosh let me just you know can I draw it? Is that going to come across for the for
+17:44 
+the audio listeners? You know just imagine like a a a big plus sign a quadrant and a graph and then you have
+17:50 
+dots along that quadrant and then within that uh you plot all your athletes. And so the athletes who
+17:56 
+are on the right side maybe they have a really uh really short really brief contact time. Okay. So they're very
+18:02 
+elastic and maybe the athletes at on the left side they have a long contact time
+18:09 
+so they're less elastic on the top on the top part of the quadrant uh maybe those athletes have
+18:14 
+very high power output okay so they are more muscular those on the lower end of the quadrant are uh you know less strong
+18:22 
+less power and so they're you know they're weak and so we might then label the quadrants just going to label them
+18:28 
+right here before I show the camera Um, I should have an overhead rig and Yeah, that'd be cool.
+18:36 
+So, let's Oh, focus, focus, focus. There we go. There we go. Is that coming across? Yeah. Yeah. Yeah.
+18:42 
+Right. And so, you know, we're looking at I didn't label my axes, but we're looking at um the top being power. Okay.
+18:48 
+And the what did I have to look at it? Uh, and the right side being a short
+18:53 
+ground talk ground contact time, right? And so you can imagine that depending on which quadrant the athletes
+19:00 
+fall into, we can then bucket them into sort of different uh maybe training buckets where you know these athletes
+19:06 
+are they have high power output and really short um you know brief contact
+19:12 
+time and so they're just you know they're just absolute studs just those would be like lineback or running back type guys that are heavier but also
+19:19 
+twitchy. Yeah. Yeah. And then if you're in the lower in the lower left those athletes are weak and they're not twi twitchy,
+19:25 
+right? Um and then in the other two it's like well okay you're either strong and you got to work on pio or you know
+19:33 
+yeah exactly or you're not strong yet and you're just naturally very sort of
+19:39 
+twitchy and elastic powerlifters up here or you have the the high school football player that runs and just like he's so
+19:47 
+he's so explosive but so weak that he is incapable of controlling his his body
+19:53 
+like absolutely no breaks. the think about the we have a kid that comes in and I always yell at him. He's the most
+20:00 
+unathletic athletic kid and it's like you can see as he's gaining stability
+20:06 
+from strength that he'll trend up towards that top right quadrant as you described. So, so this is where to maybe
+20:13 
+save the audience here is based off of your your test the the analysis that you
+## Application of Test Results to Training []
+20:19 
+just provided and and I would lump this in my my brain. I I I
+20:26 
+have these categories. I actually have four quadrants of training. I think there's really only four things you can
+20:31 
+do in the gym. A and I would I would label this as explosive based training.
+20:37 
+Do you do you see from test results trends like, okay, the bottom right
+20:44 
+versus the top right versus the top left, blah blah blah. Those results also
+20:50 
+correlate to specific movement patterns that we would associate with explosiveness
+20:56 
+like jumping and sprinting. Well, so the way or like or lift I mean do you want me to tell you what I
+21:02 
+would what I like the way I do it is is I would look at it like I would consider
+21:07 
+a clean to be explosive uh a broad jump a vertical jump
+21:14 
+you know if they're doing a power snatch you might you might be also able to look at like a make like like a counter
+21:20 
+movement loaded counter movement like a trap bar jump or something I would look at those movements
+21:26 
+and see the results of those exercises and then where that would place people
+21:32 
+on the quadrant. That's how I'm trying I'm trying to get
+21:37 
+this into an applied world really is what I'm trying to do. And so and so yeah and for and and so for those without force plays like how
+21:43 
+do we group our athletes into these? And I think that's absolutely a great approach. Um and and my clarification question was I was yeah I was wondering
+21:50 
+did you mean exercises or more like sports specific movements you know on the field but but yeah definitely now
+21:56 
+now one thing for me is since I'm a professor and then I also run our sports science and monitoring program I'm not
+22:01 
+in charge of the SNC and so I don't always get to see that. Um I I do get to
+22:06 
+see some sessions and I and I walk down there all the time to chat but also you know we we have a new uh strength and
+22:13 
+conditioning staff and they're great. They're awesome. actually the head coach was one of our grad students, you know, and um he comes more from a tactical
+22:20 
+strength and conditioning background though and so the Olympic lifts are not yet a huge component of of training. Uh
+22:26 
+although I'm hoping just with you know nurturing and influence and and sort of
+22:32 
+education around those uh to that they'll become a bigger part of it. But of course it's not my realm and he's got
+22:38 
+a super good handle on that. Um but yeah, definitely more, you know, we see a lot with the trap bar deadlifts and
+22:44 
+with their um uh you know, acceleration versus max max velocity type stuff, uh
+22:50 
+the effects of those quadrants play out. But if you don't have the force plates, then yeah, like if you if you have your
+22:55 
+benchmark lifts, pick an explosive lift, uh, you know, a low load explosive lift,
+23:00 
+pick a high load explosive lift, pick a strength lift, um, and and plot the
+23:06 
+athletes, you know, uh, I guess those are three lifts, but you could just, you know, put it in a table. You could even
+23:12 
+just make a little bar graph and just very easily, okay, this dude's high on strength, but low in these other two.
+23:17 
+This guy can express a lot of force in the loaded sort of power movement, but you know, he's got to work on his
+23:23 
+unloaded power production because because we that we would expect his jump to be higher based on his clean or
+23:28 
+whatever it is. What's up, guys? Our podcast and our channel are sponsored by our own strength training app, Peak
+23:34 
+Strength. The entire focus of Peak Strength is to provide you guys with the absolute best sports performance app
+23:42 
+that you could ever imagine. We build out the programs on the back end. We take in all of these different decisions
+23:48 
+that we learned here on site at Garage Strength so that we can then apply it to you so you can improve your training. So
+23:54 
+if you guys want to improve your overall sports performance, head over to peakstrength.app, the Google Play Store,
+24:00 
+or the Apple iOS store. Download Peakstrength. You'll go to free week of training and then you can start getting on those gains, get those reps done so
+24:06 
+that you can become a champion. Now let's get back to the video. Peace. This is a big question that I get staying on
+## Factors Affecting Vertical Jump Performance []
+24:12 
+the explosive discussion is like what makes someone so much better at jumping.
+24:18 
+Let's say if like you have a similar body weight athlete with a similar back squat with a you know all these things
+24:24 
+are pretty similar. Is it is it just the speed of their nervous system? Is it
+24:30 
+is like what is it that makes them capable of recruiting so much faster?
+24:36 
+And is it all related to that? And what what is what have you seen through testing with things like where you might
+24:41 
+look at somebody be like on the surface these two individuals are are pretty equal but why is one better than the
+24:48 
+other at jumping at something so fast. Yeah. I mean I mean that's that's an amazing question and and it it it makes
+24:54 
+me think like the the the you know meta analysis to sort of tackle that or or rather the narrative review
+25:01 
+probably to tackle that would be titled factors affecting vertical jump performance in a range of athletes. Right. And so there's going to be so
+25:07 
+many that are involved uh you know down from from muscle architecture to like you said the function of their nervous
+25:13 
+system and the trained state of their nervous system um the neural factors that affect um uh you know like rate
+25:20 
+coding or or or motor unit recruitment and selective recruitment of high threshold motor units and we can't see
+25:25 
+that. We can only test for the proxy of that. We can't directly measure that in
+25:30 
+our athletes not yet anyways and and and not cost effectively. uh we can measure things like muscle size and and muscle
+25:38 
+strength directly like isometric strength um and we can look at how much of their strength capacity can they use
+25:44 
+dynamically. So this idea of um the dynamic strength index where you have them do an isometric mid thigh pull or
+25:51 
+or any other isometric full body strength movement and then given that peak force that they produce you look at
+25:57 
+them in a similar movement pattern similar joint angles what they can express dynamically and so let's say
+26:04 
+that you hit you know 5,000 newtons of force on on a midpole which is I don't
+26:09 
+know probably going to be like five or or six times body weight or something like that. Um maybe four times body
+26:15 
+weight at a very, you know, high joint angle. So, a really advantageous position like the top of a clean
+26:21 
+and and then in the uh vertical jump, maybe you're producing only, you know, I don't know, something really low like
+26:27 
+like uh 1,800 newtons or something. You're going to have a a very low dynamic strength index. Uh which is
+26:34 
+saying like, hey, you you're really strong, you just can't express it. And so, I guess your question comes down to why can't they express it? And why can
+26:40 
+someone else with lower peak force isometrically jump higher and express
+26:45 
+more? And again, there's just going to be so many factors. I mean, a big part of it even is is going to be technique.
+26:51 
+Like powerlifters, they can't usually they can't really jump, right? Unless
+26:56 
+they come from a ste a team sport background, but you know, why is that? Can they not inherently jump? Or is it,
+27:01 
+you know, a chicken or the egg problem where they just don't jump ever in training? They just express force. stay
+27:07 
+in hip flexion so much constantly that it's like it's hard for them to feel
+27:12 
+that with if they're not doing it in in their programming. Yeah. No, absolutely. Absolutely.
+27:18 
+They're they're never, you know, triple extending to use an overused uh you know, SNC buzzword. Um but yeah, the
+27:25 
+sequencing isn't there. The motor programming isn't there. Um and then we know that there's there are velocity specific adaptations to training. So you
+27:33 
+if you train to express force through high velocities versus through low velocities, you'll be more adapted to
+## Velocity-Specific Adaptations in Training []
+27:38 
+doing that. I think that's one thing that I've always struggled with is like you under
+27:44 
+like a lot of people like there's a lot of evidence around velocity specific adaptations and it's like
+27:50 
+that actually brings up a whole another question is like when when do you think that that becomes an important part of
+27:58 
+of training of of actually factoring that into development of an athlete? at
+28:03 
+what what stages is it like hey we need to do more velocity specific work or is it
+28:10 
+something that doesn't matter you know what are what what's your take on stuff like that well and and here we're
+28:17 
+getting into you know the the nuances and sophistication around training theory and then the fact that training
+28:24 
+is so simple right and and a lot of us sort of uh you know nerdy lab code guys
+28:32 
+uh professor types. Of course, we love to geek out on all of the sophisticated side and the science and the
+28:38 
+underpinnings and and that's really important, right? To drive the field forward and to provide education and to provide rationale for training. But what
+28:46 
+we just keep coming back to over and over again is yes there's something like a velocity specific adaptation and also
+28:54 
+there's general adaptation um across a range of velocities and a range of forces to just high output high intent
+29:01 
+heavy weight training right and so if you're asking about like when should we start to introduce you know maybe some
+29:07 
+some very high velocity lifting and or sprinting or over speed training or what have you uh well actually with the
+29:14 
+exception of oversp speed training all of those qualities from a very early age because we know that mileelination of
+29:20 
+the nervous system is happening you know at before adolescence. And so if we're
+29:26 
+missing out on those qualities then we're potentially missing out on some key windows of adaptation for those
+29:32 
+athletes for you know long-term athlete development. So, if you have a kid who, you know, they're playing video games
+29:37 
+all day until they're 12 or 13 and then they finally get into sports, well, you know, I would say first of all, don't if
+29:43 
+as a parent, don't worry about it because kids are super plastic and adaptable and like they're going to be fine. But how much better is it for the
+29:50 
+kid to be playing tag, you know, uh responding to to external cues, to change direction, to have this gamified
+29:57 
+approach to training, to be sometimes picking up heavy stuff, to be uh also taught either uh movement within a high
+30:04 
+degree of freedom sort of situation like in a parkour class or gymnastics where they they just have to get around the
+30:10 
+obstacle course, however possible. and with uh you know very few degrees of fe freedom very constrained in let's say a
+30:17 
+bench press or a back squat where they have to focus on technique and they have to have that sort of uh not grindiness
+30:24 
+because I probably wouldn't have a kid grind out too many reps before you know the age of 10 or 11 uh but at least
+30:31 
+producing force in that constrained movement pattern both are very very good for for kids um and so yeah training is
+30:39 
+simple you you you sprint and you sprint often You lift and you lift heavy. You
+30:44 
+lift explosively. You do it all with good technique. You progress it um effectively and and I don't want to say
+30:52 
+cautiously because you know some people are way too cautious with training um but intelligently. You progress it
+30:57 
+intelligently not just with load but with um intentional exercise selection,
+31:04 
+exercise progression, frequency, duration, you know, all all the typical like SNC meat and potatoes things like
+31:10 
+that stuff works. And sports science is is mostly just finding out and fine-tuning, tweaking those little
+31:16 
+ingredients to hyper specific populations so that we can do it even better. But, you know, people get fast
+31:22 
+with like in third world countries with no internet connection and and and they just do the things uh that make
+31:30 
+intuitive sense. And yeah, sometimes like we get things totally wrong, but like humanity got pretty darn close to I
+31:38 
+don't want to use the O word, optimal. Um they got we got pretty darn close to effective training
+31:45 
+before the whole field of sports science and really like really what a sports scientist does is we keep the roster
+31:51 
+available for the head coach. We keep people injuryfree, keep them on that path. So uh you know it's more about
+31:58 
+fine-tuning. Okay. I want to you said something that I want to swing back to but first I
+## Endurance Field Tests and Zone Training []
+32:03 
+wanted to ask you um endurance field tests. What can somebody do who's out
+32:10 
+and your wife is an absolute savage marathon runner? She is. Yes.
+32:17 
+It's uh I mean gosh like when you marry up a humbling thing half marathon
+32:24 
+115\. And so, so yeah, she she it's so cool because kind of later in her
+32:29 
+adulthood, you know, after we had our three kids and, you know, she like started her own photography business to
+32:36 
+put me through grad school while we were in Tennessee. And and after all that, uh, she's like, you know, I think I want
+32:41 
+to compete again. And so, yeah, she's crushing it. She's training right now. I can say this because she did make it public on Straa. She's training right
+32:48 
+now for an Olympic trials qualifier, an OTQ for the marathon. I think it's
+32:53 
+within her grasp. That would be she would have to run I think it's about a 235 marathon. She did a 115 half 11540
+33:01 
+last year and um and yeah I she's a stud. So so your question though a
+33:07 
+field-based test for endurance right. So, so my question with that is
+33:12 
+like how how are you testing like anything specifically related to so I
+33:18 
+I'll I'll just put like heart rate recovery after a specific interval or um
+33:23 
+how long you could hold a certain pace or you know like how are how are you how
+33:29 
+could somebody learn with simple tests and simple tech uh to be able to set up
+33:35 
+their training as as efficiently as just like the O word I don't want to say that as effectively as possible.
+33:42 
+Yeah, definitely. And are we talking team sport athlete or an endurance athlete? Let's say a true endurance athlete.
+33:48 
+Okay. Well, that makes it really easy because true endurance and and any track of track and field event as you know
+33:54 
+very well the actual sport is like practicing the sport is a measurement of
+33:59 
+the quality that you're training often, right? and and it may differ a little
+34:05 
+bit in something like throws where in the weight room your training is is not
+34:10 
+always just light implements, right? It's it's also heavy stuff as well. Um but especially in endurance training and
+34:17 
+and sprinting when you go practice and you have a session, a quality session, uh you have you have a test right there,
+34:25 
+right? You go you like um uh last yeah
+34:31 
+earlier last week. So, so Lisa had a um uh a a session. It was supposed to be a
+34:37 
+threshold interval type session uh out on the roads. So, it was something that I forget exactly, but it it was
+34:43 
+something around uh 3x 10 minutes at threshold pace with about a 2minut uh
+34:50 
+just steady run in between. 2 or 3 minute steady run in between something to that effect. And you know,
+34:57 
+I didn't I don't actually have a current race time for her. So, I don't know her like like I usually use a V dot chart
+35:02 
+from uh Jack Daniels training method. You know, pretty old school, but like it's never done me wrong. And so, it's a
+35:09 
+it's a way of estimating sort of fitness across different paces. Um if you Google VOTE charts, like you can find it. It's
+35:15 
+it's sort of correlated to V2 max, but it's more correlated to velocity at V2
+35:21 
+max. And so, you know, not everyone can get on a treadmill and get their velocity at V2 max in the lab. Nor should they. It's probably a waste of
+35:27 
+time and money. But, um, instead, you could do, you know, very easy, uh, test
+35:33 
+like, uh, go run a mile all out. You could go do run a 5K, like any max effort, um, effort across any distance.
+35:41 
+You can just put it in a calculator online in these V dot charts, and it will give you um, an estimation of
+35:47 
+things like V2 max. It'll give you your estimated best time across different distances if you were to train for those
+35:53 
+distances. And so that's honestly what I use typically. We don't, you know, we'll sometimes do a time trial, but the time
+35:58 
+trial is a race. The other test that interval interval at threshold pace. How
+36:04 
+would you define threshold pace? Okay. Yeah. So, so in a lot of training
+36:10 
+methodologies for endurance runners and most endurance athletes, there is sort of this five zone or sometimes a
+36:17 
+threezone model. And so in the five zone model, it's it can be based off a number of things. Heart rate, uh, lactate, uh,
+36:25 
+usually a combination of heart rate and lactate and output as well. And so zone one is is a and all of these assume
+36:33 
+steady intensity, a steady work rate. So zone one is a rate at which you're
+36:39 
+exercising that there is no accumulation in lactate at all. Uh heart rate is
+36:45 
+going to be fairly low. I don't remember the percentages off the top of my head but you know probably I don't know I'm
+36:51 
+just going to throw this out but maybe I'm wrong. Like 50 to 60% a max. Zone two is going to be below the first sort
+36:58 
+of lactate inflection point. And so for the, you know, for people who are just listening, if you just Google lactate
+37:04 
+threshold curve, you'll see these curves that uh stay uh fairly stable and then
+37:09 
+they start to they have typically two defined inflection points. Sometimes it's a little bit hard to kind of sus
+37:16 
+out where those are, but the first inflection point is is right above 2 millm moles of lactate, uh like 2 to
+37:23 
+2.5ish, and the second one is is typically around four as defined in the literature. Uh but then any given
+37:29 
+athlete could be, you know, plus or minus.5. And so, uh that zone two is going to be
+37:37 
+before the first of those little turn points. And then zone three, um is within that part of the inflection curve
+37:45 
+before it really goes uh hyperbolic, you know, before it really goes to the moon. And that would be threshold or tempo
+37:53 
+training. Now I define in my working definition threshold training as trying to run right at the threshold right at
+37:58 
+the very edge and it's very difficult and so typically so where two meets three. Yeah. Uh
+38:05 
+yes. Well no more like the top end of three. I was I was thinking yeah right at four millles of lactate.
+38:11 
+Okay. Um and so there are heart rates that correspond with this but they're going to be variable for different people.
+38:16 
+Like my wife's t her heart rate tends to be really high. When I was an endurance athlete in college I was a mileer. Uh, I
+38:22 
+hated threshold sessions, although now they're one of my the biggest tools in my arsenal uh for for training athletes.
+38:28 
+Uh, but my heart rate also tended to be no, it tended to be very low. It was so hard for me to get my heart rate higher.
+38:34 
+So, I ended up running too fast when I was going just based on on heart rate. And so, you can feel it out too. You can
+38:39 
+use the talk test where if you're running at a pace where it is uh you can still talk but in like one or two words
+38:46 
+at a time and anything else you don't want to do because it's too pressing of a pace. that you're roughly at threshold
+38:53 
+pace. Um, and then sub threshold paces like tempo paces are great as well. You can extend the duration, you know,
+38:58 
+beyond 20 minutes of those. Um, and so yeah, that that's kind of getting away from from, you know, testing. Uh, but
+39:06 
+zone training is is a model where if you go do a time trial, then you can kind of set up an estimation of where your zones
+39:12 
+are. And I really like to coach based on um outputs. So, so based on uh running
+39:18 
+pace, not as much heart rate. So, more pace and RP. Um, but you could, you
+39:23 
+know, triangulate it a number of different ways. Pace um and heart rate. You could go heart rate and RP.
+39:31 
+Unfortunately, we don't have anything like a continuous lactate monitor yet. Although, I I have been working with a
+39:37 
+company that I can't say too much, but but uh you know, the technology is definitely here. It's just not
+39:43 
+commercially available yet. Uh, so that, you know, that could be really cool. Um,
+39:48 
+yeah. I forget if we talked about this when we met, but I remember uh some of the
+39:54 
+cyclists like some of the endurance cyclists. It would be so cool if you could be if you
+40:01 
+could have a continuous when you're watching like the race and they're in, you know, they're in the Pelaton or whatever and someone breaks out and you
+40:08 
+could see the heart rate monitor on the screen and then you could see a continuous lactate monitor because you
+40:14 
+could You could actually make calculations then strategically. They might have
+40:19 
+people in the pit as they're driving. You know, this guy just make a made a break and this is what's happening with
+40:24 
+his heart rate and with his uh lactate currently. He's got about we know what his watch per kilo is. Um and we could
+40:33 
+estimate a a breakoff, you know, him degrading by this point. So you got guys
+40:40 
+running math calculations all based off of when to push people because you could in theory
+40:46 
+have these reads on people ahead of time. I just think it'd be a really
+40:51 
+interesting way to make the the sport really uh it's it's similar to
+40:56 
+like watching Formula 1 sometimes. I was just going to say it it turns it into Formula 1 and and then the fan engagement level so cool too because you
+41:03 
+could see you know with cycling or with running or what have you like someone makes a break you see their heart rate
+41:09 
+spike you you might even see an anticipatory spike right as they're thinking about it that could be cool like is that fatigue or are they like
+41:15 
+preparing to move um I was telling my grad students the other day um we were talking about what makes an effective
+41:22 
+kick and how do you train for a kick in in running and I really like what uh
+41:27 
+Steve Magnus says about it. He, you know, he was is still an endurance coach, I believe, but he's gotten more
+41:33 
+into like authoring books and things, but his really good high school runner, though. Like
+41:38 
+Oh, yeah. Phenomenal. Like for flat or then worked with Nike for a while and,
+41:43 
+you know, then then transitioned out of that and and coaching at the collegiate level. But his podcast is phenomenal on
+41:49 
+coaching with John Marcus as well. And uh I just really like the way that they break down conceptually and and and
+41:56 
+physiologically training, but they make it super understandable because their audience are coaches. And so when we
+42:02 
+think about what makes a kick in an endurance runner, uh well at the end, let's say imagine Olympic finals and
+42:08 
+maybe you've seen, you've been there at the Olympics, right? Watching the 10K, I think you said, right? Watching and yeah, the 10K Cole Hawk
+42:15 
+will throw in on the last 200 meters in the 15. That was a 15, dude. But that was Yeah, the 10,000 was the first night.
+42:22 
+That was I mean the the 10,000 on the first night was it was awesome. That's where chapter guy
+42:27 
+was in like basically in like 10th place for the entire race and then like the last 800 meters was just like okay I'm going to
+42:34 
+throttle. Yeah. Just see you. And so you know let's talk about Chep guy. He you know
+42:39 
+he's in 10th place. He's cruising. And so what's happening physiologically? So he probably if if we had a continuous
+42:46 
+lactate monitor, we may have seen his lactate levels were lower than the other guys who were there with him in the
+42:52 
+pack. And so he could sustain that pace with a lower lactate level. And
+42:58 
+potentially when he dropped the hammer and everyone tried to stay with him, everyone's lactate went up. But
+43:04 
+potentially his ability to um to generate and then sustain output with
+43:11 
+high lactate. So to generate high amounts of lactate so anorobic glycolysis lactate is a byproduct of
+43:18 
+that and lactate is not really what causes fatigue. In parallel we have hydrogen ions and and other metabolites
+43:24 
+that are accumulating during the production of lactate. So lactate is is actually good. It's used for fuel but uh
+43:30 
+we use it as a proxy for the buildup of those other things that cause fatigue. So let's say that he starts lower than
+43:36 
+everyone else and then they start kicking from 800 meters out which is epic and legendary and his lactate goes
+43:43 
+through the roof and it's able to go much higher than everyone else. And so that means the differential of what he
+43:48 
+had available to give metabolically was just massively you know outweighed what
+43:53 
+anyone else could give. So the lactate differential and then the second part would be uh the motor unit recruitment
+43:58 
+uh differential. So, you know, as you're running in any endurance sport, you have motor unit cycling and and and motor
+44:04 
+units fatigue and then uh other ones kick in and something like running where it's step by step, you may have
+44:11 
+different slightly different pools of motor units that are recruited and as you fatigue, it's more and more the
+44:17 
+higher threshold motor units. Well, if through strength training and power training, you have more of those available, right? you've the activation
+44:24 
+threshold for those, you've either uh lowered them or or or your um nervous system can hit the threshold, whatever
+44:31 
+it is, you have access to those um and because you're so efficient, you use
+44:36 
+fewer of them. You fatigue fewer of of them during the race. Now, your differential for power production is
+44:42 
+much greater as well. So, we're looking at it from a metabolic standpoint, energy system development, and from a
+44:48 
+power production standpoint. So you have to have access to those motor units to produce the speed in the first place,
+44:54 
+right? You can't develop a kick just with long slow distance training and with no speed training. You may it may
+45:01 
+look like you can kick, but you can't actually increase your speed if you don't have speed to begin with, right?
+45:06 
+Um and so that's one thing that's that's one reason why I'm super passionate about like, you know, trying to spread
+45:12 
+education and awareness to runners uh around like, hey, you should be in the weight room. You should be doing cleans
+45:18 
+and snatches. you should be squatting heavy. Yeah. Maybe not five days a week, maybe not for huge volumes. Um but it's
+45:26 
+going to benefit your running running economy, kick development, etc. Yeah. And and enough to to have an
+45:33 
+impact on on whatever you need on that last two to 800 meters. Yeah, for sure. And and you know, who
+45:39 
+knows if if uh chep guy is in the weight room cranking out heavy power gains. Probably probably not. Maybe. Uh but
+45:45 
+they have other ways of of generating power, right? hill training, dragon attire, and then obviously hill stuff, but I've
+45:52 
+also seen those guys uh doing squats and lunges and stuff on a regular basis at at the comps like at worlds at the
+45:59 
+Olympics. Um it can be pretty basic. I mean, even like if you go, I think on Netflix or YouTube, no, on YouTube, um uh uh
+46:06 
+Clayton uh Clayton Murphy, is that his name? Yeah, the marathoner. Yeah, he's posting more on Yep.
+46:12 
+Yeah. Yeah. they show his weight room sessions over at BYU with the strength coach there and you know they're
+46:18 
+excellent as well. Uh I wanted to ask you some stuff about speed work because I've always found it
+## Speed Work and Acceleration vs. Max Velocity []
+46:24 
+interesting like one field test or or how you look at like general uh speed
+46:29 
+stuff. So you know anywhere from a 10 to you know two or 400 meters. But then also uh I
+46:36 
+did have some questions on if you're breaking down someone's uh well maybe
+46:42 
+let's just go into that first like what are what are some good ways to analyze uh ability for someone to actually move
+46:49 
+and run quickly and then what are those what are those tests showing us that individuals could work on inside the the
+46:56 
+weight room or and we're still talking about endurance athletes. Now let's talk switch gears into like
+47:01 
+generally Yeah. generally speed a sprinter but also could be a football
+47:07 
+player, soccer player. Yeah. Yeah. So I'm I'm probably um of all the
+47:12 
+physical qualities uh and development of them, I'm probably the least uh
+47:18 
+experienced with true speed development and things like that. But going back to
+47:24 
+sort of basic principles of testing and also sort of knowing the needs analysis
+47:29 
+of of a sprinter and then the phases of of a sprint. Well, now I'm thinking 100 meters, but you said team sport athlete.
+47:35 
+Um, you know, so at the very least I would be testing the
+47:42 
+the two different uh sort of phases of running, right? The acceleration phase and a max velocity phase. So, uh, here
+47:49 
+at Pointlommo, we do a 30 or 40 meter sprint and in that we're getting 10 and 20 as well. So, setting up, you know,
+47:56 
+two or three pairs of timing gates. Uh, and then not all athletes are going to hit max velocity in that 30 m. And so,
+48:03 
+we don't currently do this, but it's more of a time efficiency thing, but if if I could, I would also be testing 10-
+48:10 
+m flies in the context of a training program that had them sprinting frequently enough that that wouldn't be
+48:15 
+a risk for the athletes. Um, another thing that we do with our women's soccer team is we get their in-game top speed
+48:22 
+achieved with GPS. So, you know, GPS and load monitoring is is super valuable
+48:27 
+because you get so many metrics in a in a sort of a painless way, right? All they have to do is wear the, you know,
+48:34 
+little vest and have the pod in and then they just do their thing. They practice. They they play their game and then you
+48:39 
+can get those metrics without additional fatigue of testing and without additional, you know, anxiety and time
+48:44 
+and all that kind of stuff. And so that's another thing that we do and we set up um you know the the the
+48:50 
+thresholds for what we might consider high speeded running for those soccer athletes. And then as far as speed
+48:55 
+development though uh goes um or did you say speed development or testing the
+49:01 
+qualities of speed? I forget which one you said. I said the both or both because I was like, okay, if we're
+49:06 
+testing and if we're breaking down their tests here and then we come back and we see, you know, how you just you laid it
+49:13 
+out really well where it was like, okay, we can look at acceleration, we can look at max velocity, and then essentially
+49:19 
+what would that tell you? Now, you're the sports scientist, you're interpreting this, and then take that
+49:25 
+and give it to uh Dr. Jacob Gooden who's now the strength coach, speed coach. How
+49:31 
+do you interpret that into application? Yeah, absolutely. So, so that the result of those tests are defin if you really
+49:39 
+want to train speed, um I would also want to look at the video, right? Slow motion video of the athletes. And so
+49:45 
+look at, you know, why was their acceleration slower versus let's say max velocity. Well, you know, maybe the
+49:50 
+angles are off, the shin angles are wrong, the the projection off the start, probably a two-point start, maybe three
+49:56 
+point for the athletes, uh low ankle stiffness, right? Right. So, we're trying to identify potentially the
+50:03 
+qualitative uh sort of movement signature that we see and and how that's
+50:09 
+impacting the results that we got. And so, when we're when we're looking at a at a bunch of of test results, it
+50:16 
+doesn't automatically mean like if they have uh poor acceleration and they have high max V, it doesn't automatically
+50:21 
+mean we have to go do broad jumps or, you know, dead stop squats or deadlifts or trap bar things. Maybe that's not it.
+50:28 
+maybe it's a it's a technique thing. And so, you know, sitting down with those videos and with the test results is
+50:33 
+going to be really important. And from there, uh, kind of like we talked about before with sort of bucketing athletes.
+50:40 
+It's hard to give, you know, 25 or 30 athletes on a team, hyperindividualized programs and and you need a lot of
+50:47 
+people to be able to coach those. And so having your whatever program methodology or philosophy you have hopefully you're
+50:54 
+doing pio lifting heavy lifting explosively and and with somewhat of a
+50:59 
+variety of movement patterns with high outputs mostly barbells. If that's if that's the scheme that you're under,
+51:06 
+then you can very easily tweak some of those exercise selections, tweaks tweak
+51:11 
+the components of the warm-up or the uh sort of, you know, I don't know, prep
+51:16 
+sessions like before the session, you know, like let's say the let's say the day the session for that day is is we're
+51:22 
+hitting, I don't know, like we're doing power cleans and then push press and
+51:28 
+then uh back squats to finish off. But the content of the warm-up can that
+51:33 
+prepares them for that. If you're warming up for 15 minutes, that's a lot of time to sneak in like uh run specific
+51:40 
+ISOs like um what's the guy's name? Uh he's from Australia. I think he works a
+51:46 
+lot with Yeah. You know, what's his name? I said run specific and I thought of him.
+51:52 
+Nera Alex. Yes. Nera. He has his whole thing with run specific isos. I really
+51:57 
+like those dude. Um you don't need force plates to do them. you just get the outputs right so single leg isometric
+52:03 
+overcoming um also you know long duration as well um I if it's an angle
+52:09 
+stiffness thing so so to get back to like more conceptual and less nuts and bolts you you look at the acceleration
+52:16 
+you look at the maxv you have the video as well between those three things hopefully you're triangulating some uh
+52:22 
+where the deficiencies lie and then in training you just address those like you would anything else right um uh if it's
+52:30 
+something like shin angle, right? That's maybe that's a technique thing, but it's probably also just their horizontal
+52:36 
+propulsion ability. Although in in the acceleration phase and they're, you know, hopefully if they're staying low,
+52:42 
+that's still kind of vertical because they're just angled towards the ground. So again, to me, that's like, okay,
+52:47 
+still do more vertical force production stuff in the weight room. And then and then as far as transfer of training
+52:52 
+goes, you know, we're doing broad jumps, we're doing bounding, we're doing uh uh you know, standing triple jumps, those
+52:58 
+types of things to start to link those more acceleration specific um adaptations. And then also like contrast
+53:04 
+sprinting could be really important as well because if they're not projecting out and their shin angles aren't, you
+53:10 
+know, what they should be, then doing something that artificially puts them in that that position so they feel it. uh
+53:17 
+and then having and then contrasting that immediately with an acceleration could be a great tool, right? So it's
+53:23 
+it's like the difference between u you know the analogy of the elephant writer. Uh the elephant writer can like try to
+53:30 
+tell the elephant to go a direction, but the elephant's not going to go unless there's a path clearly laid out. Then
+53:36 
+the elephant's just going to walk down the path. And so for exercise selection, oftentimes I'm trying to think, what do I want this athlete to do? I could tell
+53:43 
+them to do that or I could just set this exercise up in a way that they have to do that, right? And so, um, you know,
+53:50 
+contrast sprinting or or or resisted sprints are one way of achieving. Can you define sprinting?
+53:56 
+Oh, yeah. So, I I don't know if that's exactly the correct term, but uh you know, having if you have like a 1080 um
+54:03 
+and it's a resisted sprint followed by an unresisted sprint and and maybe some
+54:08 
+people do like oversp speed and then un unassisted after that. But I I more
+54:14 
+often see it and and do it with resisted and then unresisted. Or you could do,
+54:20 
+you know, you like have a mid ball and what was that? Could you do a hill sprint here
+54:25 
+and then walk down then do a flat sprint? That's Yeah, that's great as well. Do a hill sprint first and then a flat
+54:30 
+sprint. Um I really like hill sprints too for distance runners. Uh going back to like motor unit recruitment and high
+54:36 
+specificity. Um yeah, so good. My one of my mentors at in grad school was uh Dr.
+54:43 
+Brad Dwise, speed coach and and you know coached to several Olympic athletes and
+54:48 
+he always talked about how hills bring the ground up to the athlete and how in that early phase especially so important
+54:54 
+to do that so you can extend the acceleration phase and so you don't have to have maximal force production to
+55:01 
+achieve the same angles to the ground. Right? You can do it a little bit submaximally to work more on technique
+55:07 
+because the hill provides the lean for you instead of having to provide force and so much force so that you can stay
+55:13 
+horizontal and low. Right. Right. It's less fatiguing in theory than the than running at an
+55:20 
+accelerative accelerative phase consistently. Like if I would go out and
+55:25 
+if I wanted to focus my all of my training on acceleration work, I would have to be running really fast on flat
+55:32 
+ground versus a hill. It's less It's less um CNS and tissue
+55:40 
+like tissue quality fatiguing. It's more metabolically fatiguing from a a muscle
+55:46 
+contraction standpoint. Right. So, it's easier on the on the tendons
+55:52 
+and and the muscle tissue and the CNS because uh well, because the ground's
+55:57 
+coming up to you and you have to use more concentric muscle action versus on the flat at those speeds, higher CNS
+56:04 
+outputs and there's I think more tendon stiffness involved and elastic return
+56:10 
+and um and yeah, so so more wear and tear on the body. Okay. I wanted to go into some of the
+## Critiques and Improvements for the CSCS Certification []
+56:16 
+stuff a lot of people might know you from is the CSCS stuff that you put out on YouTube. And a lot of the information
+56:26 
+that that you put out is to help people pass the CSCS so that they can it makes it easier for them to to be successful
+56:34 
+in their test so that they're not taking five tests. They're just going to take one. Yes. They took your course. They took they
+56:40 
+they've listened to you on YouTube. I wanted to go into some of that because some of the videos are really really
+56:46 
+freaking good and a lot of them are really good, but I also wanted to go into
+56:51 
+one as a sports scientist maybe what do you wish they did better
+56:57 
+with the CSCS and then two,
+57:03 
+how could people who are learning from you, you know, learning sort of like the the
+57:09 
+educational side and And I don't I don't necessarily want to like it's yeah
+57:15 
+taking that knowledge and then applying it into a hands-on uh situation and do
+57:20 
+you feel like the CSCS helps them do that as well? Like is it a good jumping
+57:26 
+off point? So um I wanted to see if we could talk about that from from your
+57:31 
+perspective because you do have a lot of really good freaking videos that lay out a lot of stuff on the actual test.
+57:39 
+I appreciate it. Well, thank you. And and yeah, definitely. That's, you know, it's funny during co uh when we were
+57:44 
+told with a week's notice, hey, by the way, you're not coming back from spring break. We're going to go totally
+57:51 
+virtual. And then and then a week later finding out, oh, and it's for the rest of the semester. And it ended up being
+57:57 
+for however long it was after that. That was really the impetus to say, well, you
+58:03 
+know, I'm teaching this course and I don't want to teach over Zoom. like I don't want to teach these CSCS
+58:10 
+principles, these training principles over Zoom where everyone's gonna have their camera off and it's like who am I even talking to? So I I decided at that
+58:17 
+point I'm going to record all these and and maybe they're going to help some people and they ended up like helping a lot of people and I just, you know, kept
+58:24 
+tweaking and refining and so there's like definitely some older videos where I'm like I why did I have background
+58:30 
+music in that video? I get in the comments. So, you know, whatever. But it but super blessed to be able to have a
+58:37 
+part in the in the progress and growth and mentorship even maybe of of a lot of
+58:42 
+people which has been really cool. Um and so yeah to your question like what maybe first to start of like what can
+58:50 
+the CSS do better as a certification? Um okay now there the book is old dude.
+58:57 
+It's like It's like over 10 years old. Out of out of date. Actually, hold on. I
+59:03 
+have it right here. Um, what's the uh publication date on this? This is the
+59:08 
+fourth edition. And so, this was put out in
+59:14 
+Oh, okay. I guess they revised it in 2016, but like I don't know. Still, there's a lot of concepts like it still
+59:19 
+considers kettle bells like a novel uh sort of alternative mode of almost 10 years.
+59:25 
+Yeah. Yeah. So, it's pretty old, but I do know that they're actually revising it right now and working on the fifth
+59:30 
+edition, and so that's going to come out in the next couple years. Um, and so hope hopefully some of the things will
+59:35 
+be taken care of. I do think though that the NSA for all of its amazing just like
+59:41 
+opportunities it provides for strength and conditioning coaches, for the conferences, for the opportunities for research and mentorship, and uh like it
+59:49 
+has been great, don't get me wrong. Uh but uh on the education side, I think it
+59:55 
+could do a lot better. I think that's why my YouTube channel like uh for what it is has done so well. I think because
+1:00:01 
+it's lacking on that side. And now again, I'll say that there has been some turnover. Um and and I get to talk to
+1:00:08 
+the folks in the education sort of department and certification department a lot. Um, and and there's some new
+1:00:13 
+ideas coming up and there's some like really great people in that organization who are making some things work but
+1:00:18 
+they're big and they can't be agile like like big companies are not as agile as individual entrepreneurs, right? And so
+1:00:24 
+that's where I think the education needs to improve, man. I had the I had the absolute pleasure of hosting an on-site
+1:00:32 
+CSCS prep course through the NCAA at our PointLoma campus a few weeks ago with my
+1:00:38 
+colleague um Dr. who's a legend by the way. You should have him on the podcast to talk about
+1:00:44 
+velocity based training. I would love that. Um and uh it was a joy, dude. It was so
+1:00:50 
+fun. Um and and they've enhanced a lot about those courses, but um you know, no
+1:00:56 
+knock against the students who were there, but a lot of them were very green. So, even after two days of eight
+1:01:02 
+hours of lecture per day, they were walking out the door and I thought, they've learned a lot and they've put a
+1:01:08 
+ton of effort in while they've been here and I'm proud of them, but they've got a long way to go before I would hire any
+1:01:14 
+of them as an assistant strength coach, right? Um, yeah, there were some for sure who were more advanced. Um, so
+1:01:21 
+that's where there's a new change coming. uh by 2030 I think this is going
+1:01:26 
+to be a very big change and a lot of people will have a big problem with it but I think it's going to help the
+1:01:32 
+industry and it's where in order to have your CSCS you have to have gotten a 4-year degree from an accredited
+1:01:39 
+institution okay and so we just went through accreditation with the NSEA for this and
+1:01:45 
+it was very rigorous like we had to prove internship sites and uh you know prove that there were certified coaches
+1:01:51 
+at these sites and prove um you know that all of our coursework uh taught not
+1:01:57 
+just the science and the concepts but had actual application of like do they coach a squat, do they coach a warm-up,
+1:02:03 
+do they understand the Olympic lily and integration of those? Uh where in your course sequence do they talk about
+1:02:09 
+testing and where do you talk about uh how to analyze data? Where do you talk about you know uh safety of how to set
+1:02:16 
+up a weight room? And it was a very rigorous process. So myself and and Dr.
+1:02:21 
+brand Alvar, you know, basically overhauled both our undergraduate and our graduate programs for that. And I
+1:02:27 
+think that's going to be a really good thing because part part of the issue with the industry
+1:02:33 
+is that, you know, you get people who probably shouldn't be a coach anyways
+1:02:38 
+and they and there's there's no gateway. There's no gatekeeper into it. You could
+1:02:44 
+just put wacky stuff on Instagram and call yourself a coach. I mean, to be honest, you can even get a credential.
+1:02:50 
+you can get the CSES, you can get a PhD. So, um there's still problems with that,
+1:02:55 
+but I think it will clean it up a lot when there is a an accredited pathway to
+1:03:02 
+certification. Um and and that's coming by 2030. So, for those of you who don't have your CSS, but you do need it, not
+1:03:08 
+everyone needs it, but if you do need it, if you're operating in the collegiate space, if your professional organization uh is requiring it, then
+1:03:14 
+get it before 2030, dude. like because uh well unless you have an exercise science degree then you're fine.
+1:03:21 
+It's going to make it way more professional. It's going to increase the value of the the degree.
+1:03:27 
+Oh 100%. It's like you know it's like the um the Flexner report that that came out before the uh sort of modern
+1:03:34 
+educational pathway for modern medicine. And you know back in the day man like to become a medical doctor you just had to
+1:03:41 
+um you just had to be mentored under a current medical practitioner. You didn't have to go to school. You didn't have to
+1:03:47 
+prove your credentials. You didn't go to residency. You you just apprenticed. And
+1:03:52 
+and then when you know, I forget all the actual details, but I'm sure you could just look up Flexner report and its
+1:03:58 
+ramifications. That's when we started to get this robust medical training that
+1:04:04 
+the MDs that we trust, although I know as a society we've lost a bit of trust in in the health profession. Um any
+1:04:12 
+anyways though, the you know the actual training those doctors. What was that?
+1:04:17 
+I said your lesson is still holds true. Yes. Yeah. It doesn't change what I'm saying though. Um and so as
+1:04:24 
+standardization and and third party accreditation, I think that's going to do uh do the industry well. I I think
+1:04:30 
+we're going to see higher salaries. Uh you know, we're going to see the fact that like you can't just like, you know,
+1:04:36 
+an ad can't just go hire any random person and pay them uh you know, an unlivable wage. Um, so I I think there
+1:04:44 
+will be good things to come soon. That would be those would be my biggest critiques of the of like the CSCS and
+1:04:49 
+the NSEA. Um, but I see improvement there. What do you think are the hardest like the let's say like the two absolute
+1:04:56 
+hardest things that people struggle with in in the course and in even in your
+1:05:01 
+teaching? Yeah, it well it depends because there's two like I could I could
+## Challenges for Aspiring Coaches and the Importance of Lived Experience
+1:05:06 
+very roughly group wannabe coaches and I mean wannabe in the kindest sense like in the future they want to be a coach uh
+1:05:13 
+into two groups and one group is is that group like they were athletes dude and they and they uh were in the weight room
+1:05:20 
+they were coached up on the lifts hopefully by a good coach um and so they've been coached they've been in
+1:05:26 
+that culture they understand just intuitively almost they they learned it
+1:05:31 
+over lots of reps. Uh, but it's almost an intuitive understanding of the training process and of the the dials
+1:05:39 
+and the knobs you can tweak and the switches you can you can hit on the dashboard to drive the training program
+1:05:46 
+that then they've they've like experienced the adaptations of those and they've and they've uh troubleshooted
+1:05:51 
+troubleshoot troubleshooted I don't know the correct uh you know um uh verb there
+1:05:57 
+but they've they've encountered plateaus and potentially injuries and and you know lifts that they didn't know before
+1:06:03 
+and they've seen how their friend squats versus how they squat with, you know, different leverages, all of that stuff.
+1:06:08 
+Um, but you know, maybe they were a business major and maybe they didn't exactly pay a ton of attention in
+1:06:14 
+college. And so for them, the science part is super hard. Super hard. But I
+1:06:20 
+think at the end of the day, those people are going to become a better coach to be honest. on on the other side
+1:06:25 
+of things and and I get these students too in my in my grad program who they
+1:06:30 
+come in and like so well-intentioned but they never played sports which I I I
+1:06:36 
+don't hold against them because not everyone had the opportunity to or was genetically gifted enough but they also
+1:06:41 
+just don't train and I'm like dude or you know do that if I never grasp that
+1:06:48 
+like we had a strength with the track team at Penn State that came in and to
+1:06:54 
+relate to this. We'd be sitting there like, "Yo, dude's name was Josh. Was
+1:07:00 
+right a program. Maybe could bench like 135." It's like, he doesn't even work
+1:07:06 
+out and he wasn't an athlete. Why is he doing this job? How did he get in here?
+1:07:11 
+It's totally It's like um Okay, I I I heard this. This is my first time trying
+1:07:18 
+this uh analogy out, so hopefully it lands. Um I I was listening the other day to to this uh old pastor that I I
+1:07:26 
+used to listen to back in the day and he just it was just this clip that came up was suggest who it was it was well this is kind of like
+1:07:33 
+don't uh don't assume anything about my theology based on uh the fact that John
+1:07:39 
+Piper was was recommended. I love a lot of his stuff but I also you know you know what I'm saying. But um super
+1:07:45 
+passionate guy, dude. And so he he was saying in the in his closing statement, he was like, "You know what I did? I
+1:07:51 
+like I had chat GPT, I had AI write me a prayer." And so I'm going to read the closing prayer today from AI. And he
+1:07:58 
+read it and I was like, "Oh, that's a beautiful prayer." Like that was really good. And so he then he said, "Amen." And then he turned to the audience at
+1:08:05 
+the congregation, I guess, and he said, "Now, now what was that prayer like an
+1:08:12 
+acceptable prayer uh to God, right?" And and everyone was silent and he let it
+1:08:18 
+sit and then he just went off. He was like, "No, like that is there like that
+1:08:24 
+is the the minations of code. There is no soul behind it. Those are words."
+1:08:29 
+Then he started, you know, citing scripture like you honor me with your lips but with your heart, etc. And so the point is, the point I'm trying to
+1:08:35 
+get at is I think somebody who just sits and takes the test, who's textbook
+1:08:41 
+smart, but never lifts themsself, they may even be able to write a good program.
+1:08:47 
+But it's the same as if you just go and get AI to write that thing, but AI is going to do a better job. Like there's
+1:08:52 
+no soul behind the program because there's no understanding. There's no heartfelt like I've been under the bar.
+1:08:59 
+I've experienced a training block. I've overcome injury. Uh I've applied
+1:09:04 
+this to performance. I've felt sore for weeks on end. Maybe I've eaten appropriately to support like
+1:09:11 
+none of that is a lived experience. Okay. And and so I'm not saying like I
+1:09:16 
+mean you know you said before we got on the call um that my arms looked a little bigger and I said thank you. Best
+1:09:22 
+compliment ever. Like I'm not the biggest guy ever. I'm pretty small. I'm pretty, you know, I come from an
+1:09:27 
+endurance background, so I'm pretty thin. Um, and so you don't have to be the biggest and the strongest, but if
+1:09:33 
+you're goal oriented with your training, if you're tracking it, if you're writing it down, if you're following other coaches uh, programs, if you are
+1:09:41 
+consistently over time sticking to the program and making gains and testing
+1:09:46 
+like your 1RM, your your your rep maxes, your speed, your jump, like if you're
+1:09:51 
+doing that, that's a a far better education than what than what you're going to find in any textbook.
+1:09:58 
+That's, you know, that's that's what I think. But the thing is, but the thing is you could also go like way out into
+1:10:04 
+left field on that. You might end up on the, you know, what are those those people the fictional pattern guys? You might end up thinking that looks really
+1:10:10 
+cool and and getting sucked into a cult. And and so that's where you know having
+1:10:15 
+a framework and having evidence-based sort of methodology and to go back to the literature and the consensus of
+1:10:23 
+experience and evidence supported training uh methodologies you know that's where it becomes very very
+1:10:29 
+important to have that 100%. I I love that. I I think it I I
+1:10:35 
+really liked the you got you had I really just liked it's and the soul
+1:10:42 
+behind just doing the work is one of the best ways to get trust from an athlete
+1:10:48 
+and I think the trust between a coach and an athlete has to be
+1:10:54 
+paramount for them to have success. Like there's people who coach good athletes
+1:10:59 
+and then more people come in and the more people come in and the reason why it can continue is because they trust
+1:11:04 
+the person who is running everything. And if they don't trust the person like I we used to sit there and be like why am I listening to this guy like I dude
+1:11:11 
+dude would give us cues and we'd be like no like dude you couldn't even pick you can barely spot us when we're benching
+1:11:17 
+315 like what get out of here. Um, now I have I have a question I wanted to ask
+1:11:23 
+you because this sort of goes off of this as somebody who who would be listening
+1:11:30 
+and and as a coach is there I like to think applied. I like to think learn
+1:11:38 
+educational. I want to just have like a lot of people will hit me up like what are the top five books in the field that
+## Recommended Books and Podcasts for Coaches []
+1:11:44 
+you think can help um understand sort of both both areas of the field.
+1:11:51 
+Yeah, good good question. So
+1:11:57 
+well I do think the essentials book is good. Essentials of strength training and conditioning. Um, another one that was impactful for
+1:12:05 
+me was um, uh, practice and principles of string training uh, by Stone Stone
+1:12:10 
+and Sands. Dr. Stone um, was my uh, one of my PhD mentors and and and master's
+1:12:17 
+mentors and then and then his wife Meg Stone a huge mentor um, and just
+1:12:22 
+obviously an icon in in the sport world and coaching world. Um, and so so that
+1:12:29 
+was really good. You know, maybe it's a little outdated. But I don't know when the last time they published an update was on that. Um, honestly, the the book
+1:12:36 
+by Israel and um, uh, uh, Wesley Smith,
+1:12:43 
+Chad Wesley Smith, uh, around I forget what it's called, scientific principles of strength training maybe. Um,
+1:12:50 
+the reason I liked that one, a the reason I liked it was because it laid
+1:12:56 
+out training theory, applied training concepts so logically, like it it cut
+1:13:03 
+out any gray area and was like, here is the formula. And I and I don't think that formulaic coaching is the best
+1:13:10 
+coaching, but I do think that a formula or a formulaic way of laying out training is a really good starting
+1:13:16 
+point. And it helps you understand the underlying principles. It really
+1:13:22 
+simplified sort of uh periodization from a just very basic, you know, no one had
+1:13:28 
+to argue about which Russian guy did what. It was just like you you make a muscle bigger,
+1:13:33 
+you teach that bigger muscle to be stronger because it has more capacity for strength.
+1:13:39 
+You use that increased strength and force production to now improve and train power. That's like it's as simple
+1:13:46 
+as that. And now of course you get into like well should you do it uh all at once or should you do it sequentially in
+1:13:53 
+a block style and that's you know that's all the nuance but but at at the very root it just simplified it so well and I
+1:13:59 
+think a lot of people they see all this wacky stuff on Instagram and some of it's really good and and some of it's
+1:14:05 
+not and some of it takes too long to read and you don't know how to decipher it and so a book like that
+1:14:11 
+reduces it it cuts away all the noise and gives you the signal only and and it
+1:14:16 
+was very like the reading level, you know, not a knock on them, but the reading level was low enough that I
+1:14:21 
+think, you know, anyone can understand. Yeah, exactly. Um those ones, um from an endurance side
+1:14:27 
+of things, um uh it's not a book. Uh Steve Magnus, the
+1:14:32 
+coach, does have a book, uh that's out. It was kind of like I think it was like his master's thesis that he turned into
+1:14:37 
+a book. And so that was good for review for me and and for someone without a background in the fizz, uh it might
+1:14:43 
+maybe be a great book, but more so just his podcast and hearing him speak on these topics and principles and
+1:14:49 
+connecting the the disperate topics is so helpful. And so I'd recommend that. Um you know, of course, like I I don't
+1:14:57 
+know how long ago I tried to read Super Training. I've been thinking about revisiting it and uh maybe even like
+1:15:02 
+doing a series on it. Um what else? Oh, Joel Smith, uh Joel Smith's book is uh
+1:15:10 
+which one did I forget which one it is. It's is back there somewhere. Um he has two that I
+1:15:18 
+really Oh, I think it's called Speed Strength. Um guy, right?
+1:15:23 
+Uh Joel Smith just Fly Performance podcast. Yeah, track and field
+1:15:28 
+background. Um pretty diverse content on his podcast. I really like his podcast as well. Um so you know what I recommend
+1:15:35 
+to my students is I typically recommend them podcasts and YouTube channels uh these days as well as of course like the
+1:15:43 
+the research that we have embedded in our in our courses and then the textbooks that are assigned. Um so so
+1:15:50 
+podcast the reason I like podcast is because you hear it from the horse's mouth right you you hear the coach behind
+1:15:56 
+the method and you hear conflicting things as well. You hear people tackling the same problem in different ways and
+1:16:02 
+and like I have a lot of students who come in and and I'll ask them what they're doing for continuing ed and they'll say, "Oh, like, well, I'm going
+1:16:09 
+to get my CSCS, then I'm going to get this certification, then I'm going to get the corrective exercise, then the then you know, USAW." And I'm like, "But
+1:16:16 
+dude, are you training and are you talking to coaches?" And they're like, "Oh, well, no." Like, "Yeah, I'm I'm
+1:16:22 
+working out." And and you know, then you talk to them, you realize they're they're occasionally exercising. And so we try we clear that up and then and
+1:16:29 
+then you realize they're not dialoguing with any actual practitioners until they get to their internship. We do that
+1:16:35 
+really well. But um so then I just give them a bunch of podcasts and I say catch up on all these podcasts like go back
+1:16:42 
+start from a year ago and catch up to the present. That's what I did, dude. When I was because when I was learning
+1:16:47 
+all this stuff, I had just graduated undergrad from an endurance background. And our coach was an amazing is an
+1:16:53 
+amazing man, an amazing coach, and one of my, you know, biggest life mentors. But he didn't have a background in the
+1:16:59 
+weight room. So, we didn't lift and I didn't know anything about it. And here I was wanting to get into the field. I
+1:17:04 
+was like those people who don't train. Now, of course, I I trained a lot from an endurance side. Yeah. But just not in the weight room.
+1:17:10 
+So, aside from my internship and aside from from like being there as often as I
+1:17:16 
+could, um, you know, until they kicked me out, basically, aside from those two things, I read every article on Teen
+1:17:22 
+Nation that existed to that point because that was the only way. There was like Teen Nation and Bret Contraras's
+1:17:27 
+blog and Eric Cresy's blog and uh, uh, Perform Better, you know, with um,
+1:17:34 
+what's his name? Who's the perform better guy? I should know. Uh, well, I think there was a
+1:17:40 
+couple performed better. Rob Lassorso was a guy in the throws that used to publish, but he wouldn't be the like the
+1:17:46 
+super. No, it was the it was the main dude. The dude who who never back squatted his athletes after a certain point and did
+1:17:51 
+front squats and and I don't know. Oh, Mike Bole, that's who it was. Oh, okay. Yeah. Yeah.
+1:17:59 
+Yeah. Yeah. Um, you know, those those were my sources of information. And so I
+1:18:05 
+read every like just to learn the terms to learn like the different ways to set things up. So anyways, I don't know if
+1:18:11 
+that fully answered your question, but you know, if if a young coach is not hungry for that information, I I
+1:18:17 
+question to their face and I say like, do you really want this? Um because this is your craft a lot, though. I I I think
+1:18:24 
+it's it's it's surprising that
+1:18:30 
+I don't it's surprising in the sense of like like and how many times like here's
+1:18:36 
+here's a great example. You listen to those so so you read a book and it's like okay sets of two to
+1:18:44 
+six reps is strength. Sets of six to 12 reps is hypertrophy work. Sets of 12 to
+1:18:50 
+15 is is endurance. And you shouldn't do anything more than that, right? And then Yeah. And then you're you're
+1:18:56 
+like, "Okay, so when you you know, when John Meadows was out and and and putting
+1:19:03 
+stuff up, I'd be like, Meadows is doing like sets of 30." And then you then I get into bodybuilding stuff and I'm
+1:19:09 
+like, "Okay, well, these bodybuilding guys, they're doing like sets of five,
+1:19:15 
+but then they would do sets of 25 to 30." And we'll have guys interns come in
+1:19:20 
+and they'll be like, I don't know why you would do sets of 17. Like that that's just endurance based. They're not going to get any stronger. And I'm like,
+1:19:27 
+first of all, these kids are like 12 to 18 years old. Anything will get them stronger. Second of all, like it's not
+1:19:34 
+that cut and dry, right? If you aren't looking for other
+1:19:39 
+resources and other perspectives, you're never going to actually
+1:19:45 
+expand those things. So, like the fact that you're like listening to a jumps guys podcast and you're listening to an
+1:19:51 
+endurance guys podcast and the people they're also talking to, you have an immediately you have an immediate
+1:19:57 
+connection to their to their circle. Yeah. And that's for learning.
+1:20:02 
+It's huge, man. Yeah. Yeah. No, that that's a good point. and the the framework is important, the
+1:20:07 
+concepts are important and the the sort of scientific rationale is important but
+1:20:14 
+we can't like we can't lead with those things because I always say the science is trailing at least 10 years behind the
+1:20:21 
+innovating coaches and now of course there most coaches like is 8020 like
+1:20:26 
+there's probably 20% of what we're doing that's like that doesn't make the athlete any better and then maybe some small percent makes them worse um But
+1:20:35 
+you know the the science like with the reps of the sets of 30 like you're saying like you know recently there's been a ton of literature published
+1:20:41 
+saying sets of 30 are effective for hypertrophy and the body the bodybuilders knew it first.
+1:20:47 
+The bro science like I I've you know I got back on Instagram a couple months ago mostly so I could launch my CSCS
+1:20:54 
+accelerator sort of mentorship course and kind of reach more people that way. Um, so I've been trying to figure out
+1:20:59 
+what hits on Instagram. And so I was I was trying the whole meme thing for a little bit. And uh, you know, you see
+1:21:06 
+the whole science-based versus uh, non-science-based coaching. And there's a lot of coaches on there who like to
+1:21:12 
+say who like to just label people they don't like or they are too nerdy and maybe maybe over dramatize the science
+1:21:19 
+of it. They label them as science-based as a sort of pjorative. And, you know,
+1:21:25 
+that's fine. Whatever. I I take a little offense at that because it's almost like saying, well, like so you're gonna be
+1:21:31 
+unscientifically based, you know? And so I prefer the term based just like
+1:21:37 
+not science-based, but just based like be based stick like go back to what is true and like no matter whose feelings
+1:21:43 
+it hurts and say like hey sets of 17 got these guys freakishly strong and they're stronger than you and you haven't tried
+1:21:50 
+it. So, um, and there's a bunch of gray area in the science. Like, we know like those p values and those effect size and
+1:21:56 
+the samples, like they're probably underpowered. So, this is a guide and so is experience. So, you know, uh, don't
+1:22:04 
+knock it until you try it. That's more, you know, a more based response. Um, yeah. I don't know. I don't know where
+1:22:09 
+it's going with that. Well, okay. So, off of that, let everybody know where they can find your
+1:22:15 
+CSCS accelerator. Yeah. No, thank you. Um, so I'm in the thick of cohort number one right now.
+1:22:21 
+It's sold out. Actually, I had because I I was learning the whole like, you know, um, landing page thing. I didn't close
+1:22:28 
+my landing page on time, so we're like 10 people over the over what I had allotted for. So, um, the it's going to
+1:22:34 
+launch the second cohort is going to launch in September, first week of September. Um right now once this once
+1:22:42 
+this podcast is published you can go to my Instagram and either you know link in bio or uh I'll have posts about it and
+1:22:49 
+as well as uh direct links from all my YouTube videos CSS YouTube videos are going to point to that course for uh the
+1:22:57 
+waiting list or depending on when this is published the you know the actual link to buy. Um, the thing with a
+1:23:03 
+course, uh, that I I think I like the way I'm doing this is every every person
+1:23:09 
+who purchases gets lifetime access to the recordings. They may not be able to be there live in the recordings because
+1:23:15 
+I do two or three times a week long long sessions like this where it's a few
+1:23:21 
+people online. They get to ask questions, but we just go through and I give context and like you said, the soul
+1:23:27 
+behind the program, the hearing from people. Um, so we go through the concepts and how to pass the test, but
+1:23:32 
+then I'm also giving like my experience and anecdotes and and things that I've also heard other coaches say. And so
+1:23:37 
+giving you so much context um and drilling down, but once you uh once you sign up for the course, you have lifetime access. So maybe you're not
+1:23:44 
+ready to take it yet, but maybe after two cohorts like you're you're also seeing the improvements to
+1:23:49 
+the course as I just continue to add every time. Um, and so yeah, next cohort launching in September. Um and uh
+1:23:56 
+YouTube or Instagram are probably the the easiest ways. If you I think it also comes up pretty uh you know high in the
+1:24:02 
+search results if you just Google uh Dr. Gooden CSCS accelerator. I think it pops right up there too.
+1:24:08 
+It'll be the first thing. Well, I hope so. Even the even looking at like chat GBT
+1:24:14 
+or deepseek uh the the reference point for learning is like one of your links
+1:24:19 
+is like the top three. Yes. So you're doing a great job. Appreciate not only not just from
+1:24:25 
+actually doing a great job with the presentation, but also from the business side. So, yeah. No, I appreciate it. I know
+1:24:30 
+nothing about the SEO. So, that's you know, you asked me about books. I I can name probably like a hundred business
+1:24:37 
+books I've been listening to the last year or so. Okay, give me two because a lot of people ask that too. A lot of people
+1:24:42 
+will ask about Yeah. Okay. So, um well, I mean recently for like financials, I read profit
+1:24:48 
+first. Um that was the latest one, but that's more how to set up your banking system. That's not exciting. Um, uh,
+1:24:55 
+Hormosy's books are really good. Every, I mean, anyone in the space probably knows who Alex Hormosi is, um, because
+1:25:01 
+he's everywhere. But honestly, man, his his podcast recently has been putting out him just workshopping businesses
+1:25:08 
+with small business owners and medium-sized business owners. So helpful. It's like listening to a coach
+1:25:14 
+just, you know, go through a program and break it down. Very, very helpful. And so he has a couple different books in a
+1:25:20 
+third. He's publishing hund00 million offers and and hundred million dollar leads. Those have been really good. Um,
+1:25:27 
+uh, Pat B. David's book, uh, PBT is is
+1:25:33 
+really good about entrepreneurialship. Um, the E-Myth Revisited, really good. I
+1:25:39 
+forget the author though. Um, uh, who's there's another lady who who puts out
+1:25:45 
+some stuff around making courses, but that's very specific to my niche. Um, yeah, those are a few just off the top
+1:25:51 
+of my head. That's great. Profit first to me. To me, a lot of the stuff with Mallowitz is
+1:25:57 
+like learning pieces here, getting these tools,
+1:26:03 
+and then Horoszi's like the big system aspect of like, okay, piece this in
+1:26:09 
+here. Okay, piece this in here. and and he has his own frameworks that makes it a little bit easier to piece those tools
+1:26:14 
+in. So, it's dude, all this stuff's it's similar to just training. It's the same. It's it's training content, you know?
+1:26:21 
+It's it's um it's tweaking it for for outcomes, measuring them. What I like about Hermosi stuff is the way he says
+1:26:27 
+it makes me feel like a big wuss just for like not starting something or like thinking it's complex. He's like, "No,
+1:26:34 
+just do it. Just do more. just do like and you know the hustle culture stuff like there's some you know not that I
+1:26:40 
+want to go like just hustle 18 hours a day I have a family and want to do things with free time but but it's
+1:26:46 
+around the idea of we think a lot of things are very hard till we just try it like and like you said it's same with
+1:26:52 
+the weight room like people think the Olympic lifts are hard like just go do them for 6 weeks you know like do them
+1:26:57 
+film your lift and critique it and and like watch uh you know watch Garage
+1:27:03 
+Strength and and the other Good one would be Catalyst Athletics on YouTube with uh what's his face?
+1:27:08 
+Greg Everett. Everett. Yeah, Everett's the boss. Dude, I I learned so much from you. If you're listening, Greg, you're probably maybe
+1:27:14 
+you are. Uh while I was sitting in the back of one of my classes, if I got bored, I would just throw on Catalyst
+1:27:21 
+Athletics and put on subtitles and listen and like listen to him coach at the same time because I at the time I
+1:27:26 
+thought I was a good multitasker. Now I'm not at all. Yeah, that's funny.
+1:27:32 
+All right, Dr. Jacob Goden. Check him out. Go to his YouTube channel. Type in CSCS Dr. Jacob Goden. It's going to come
+1:27:40 
+up. Sign up for his cohort in September. Thanks for being on the podcast. Hey, thanks for having me, Dane. It's uh
+1:27:46 
+it's been great chatting with you. Looking forward to the next time we can talk shop. Absolutely. Peace.
+1:27:52 
+Peace. [Music]
+1:27:58 
+Nelly [Music]
+1:28:11 
+clean. [Music]
+No results found
+TAP TO RETRY
+English (auto-generated)
+English (auto-generated) 

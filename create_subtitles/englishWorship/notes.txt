@@ -1,0 +1,66 @@
+English Worship Subtitle Pipeline - How We Got Here
+=====================================================
+
+ORIGIN
+------
+Adapted from new0429c/korean_subtitle.sh (Korean drama subtitle pipeline).
+Stripped out Korean-specific steps (romanization, dual subtitle tracks).
+
+WHAT WORKS (TESTED)
+--------------------
+- english_subtitle.sh processes a single segment:
+  bash english_subtitle.sh "<file>.mp4" 1
+
+  Pipeline: extract 10-min segment -> extract audio -> Whisper API (English) -> burn subtitles
+
+- Whisper API: using OpenAI whisper-1, language="en", NO prompt parameter.
+  The prompt parameter caused Whisper to echo the prompt text back instead of
+  transcribing. Removing it fixed the issue.
+
+- Timestamp shifting: removed entirely. Whisper's original timing was accurate
+  for this content. The Korean pipeline had +1s shift and +1s extend which we
+  initially carried over, then removed.
+
+- Subtitle styling: white text, black outline, 140px black pad at bottom,
+  FontSize=10, Arial Unicode MS font.
+
+- Tested on: "Nothing Holding Me Back + One Thing Remains + Spontaneous | Upperroom Sets [bPfA0edhwIE].mp4"
+  Segment 1 output looks good.
+
+WHAT'S UNTESTED
+----------------
+- run.sh was rewritten to do the FULL pipeline for a single MP4:
+  bash run.sh "<file>.mp4"
+
+  It auto-detects segment count from video duration, runs english_subtitle.sh
+  for each segment, merges all segment SRTs into one english.srt (with timestamp
+  offsets), then burns onto the full original video -> *_subtitled.mp4
+
+- The merge logic (Python inside run.sh) and ffprobe duration detection have
+  NOT been tested yet. ~85% confidence it works first try. Most likely failure
+  point is SRT merge parsing.
+
+- NOTE: run.sh no longer accepts a segment number. To process a single segment
+  use english_subtitle.sh directly:
+  bash english_subtitle.sh "<file>.mp4" 1
+
+FILES
+-----
+englishworship/
+  english_subtitle.sh  - single segment processing (tested, works)
+  run.sh               - full pipeline: all segments + merge + burn (untested)
+  notes.txt            - this file
+
+REQUIREMENTS
+------------
+- ffmpeg, ffprobe
+- OPENAI_API_KEY environment variable
+- python3
+
+COMMANDS
+--------
+# Single segment (tested):
+bash english_subtitle.sh "Nothing Holding Me Back + One Thing Remains + Spontaneous ｜ Upperroom Sets [bPfA0edhwIE].mp4" 1
+
+# Full pipeline (untested):
+bash run.sh "Nothing Holding Me Back + One Thing Remains + Spontaneous ｜ Upperroom Sets [bPfA0edhwIE].mp4"

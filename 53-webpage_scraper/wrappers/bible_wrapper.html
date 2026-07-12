@@ -1,0 +1,234 @@
+<html>
+<head>
+    <style>
+        .container {
+            margin: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .controls {
+            margin-bottom: 15px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .text-areas {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        select {
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        textarea {
+            width: 100%;
+            min-height: 400px;
+            padding: 12px;
+            font-family: monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 14px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .paste-button {
+            background-color: #673AB7;
+        }
+        .paste-button:hover {
+            background-color: #5E35B1;
+        }
+        .add-symbol-button {
+            background-color: #2196F3;
+        }
+        .add-symbol-button:hover {
+            background-color: #1976D2;
+        }
+        .split-button {
+            background-color: #FF9800;
+        }
+        .split-button:hover {
+            background-color: #F57C00;
+        }
+        .convert-json-button {
+            background-color: #00BCD4;
+        }
+        .convert-json-button:hover {
+            background-color: #0097A7;
+        }
+        #status {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 4px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        #status.show {
+            opacity: 1;
+        }
+        .textarea-label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="controls">
+            <label for="numberSelect">Select number:</label>
+            <select id="numberSelect">
+                <script>
+                    for(let i = 1; i <= 40; i++) {
+                        document.write(`<option value="${i}">${i}</option>`);
+                    }
+                </script>
+            </select>
+            <button onclick="copyFromClipboard()" class="paste-button">Copy from Clipboard</button>
+            <button onclick="addAtSymbols()" class="add-symbol-button">Add @ Symbols</button>
+            <button onclick="splitAndFormat()" class="split-button">Split & Format</button>
+            <button onclick="convertToJson()" class="convert-json-button">Convert to JSON</button>
+        </div>
+        
+        <div class="text-areas">
+            <div>
+                <span class="textarea-label">Input:</span>
+                <textarea id="inputText" placeholder="Paste your text here..."></textarea>
+            </div>
+            <div>
+                <span class="textarea-label">Output:</span>
+                <textarea id="outputText" readonly></textarea>
+            </div>
+        </div>
+
+        <div id="status"></div>
+    </div>
+
+    <script>
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                copyFromClipboard();
+            }
+        });
+
+        function showStatus(message) {
+            const status = document.getElementById('status');
+            status.textContent = message;
+            status.classList.add('show');
+            setTimeout(() => {
+                status.classList.remove('show');
+            }, 2000);
+        }
+
+        async function copyFromClipboard() {
+            try {
+                const textarea = document.getElementById('inputText');
+                const clipboardText = await navigator.clipboard.readText();
+                textarea.value = clipboardText;
+                showStatus('Copied from clipboard!');
+            } catch (err) {
+                console.error('Clipboard error:', err);
+                showStatus('Failed to read clipboard!');
+            }
+        }
+        
+        function addAtSymbols() {
+            const input = document.getElementById('inputText').value;
+            const lines = input.split('\n');
+            let processedText = '';
+            
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i].trim();
+                if (line === '') {
+                    processedText += '\n';
+                    continue;
+                }
+                
+                // Check for chapter number pattern (e.g., "1:1", "2:1", etc.)
+                if (line.match(/^\d+:1\s/)) {
+                    if (processedText !== '') {
+                        processedText += '@\n';
+                    }
+                }
+                
+                processedText += line + '\n';
+            }
+            
+            document.getElementById('outputText').value = processedText;
+            showStatus('@ symbols added successfully!');
+        }
+
+        async function splitAndFormat() {
+            const input = document.getElementById('outputText').value;
+            const selectedNumber = parseInt(document.getElementById('numberSelect').value);
+            const parts = input.split('@');
+            
+            let output = '';
+            parts.forEach((part, index) => {
+                if (part.trim()) {
+                    const number = selectedNumber + index;
+                    output += `logical_chess_${number} = \`${part.trim()}\`` +
+                             (index < parts.length - 1 ? '\n\n' : '\n');
+                }
+            });
+            
+            document.getElementById('outputText').value = output;
+
+            try {
+                await navigator.clipboard.writeText(output);
+                showStatus('Formatted and copied to clipboard!');
+            } catch (err) {
+                console.error('Clipboard error:', err);
+                showStatus('Failed to copy to clipboard!');
+            }
+        }
+
+        function convertToJson() {
+            try {
+                const input = document.getElementById('inputText').value;
+                const lines = input.trim().split('\n');
+                const result = lines.map(line => {
+                    const [level, chinese, description] = line.split(',');
+                    if (!description) return null; // Skip invalid lines
+                    
+                    return {
+                        level: parseInt(level),
+                        chinese,
+                        description: description.trim()
+                    };
+                }).filter(item => item !== null); // Remove any null entries
+                
+                const output = JSON.stringify(result, null, 2);
+                document.getElementById('outputText').value = output;
+                
+                // Copy to clipboard
+                navigator.clipboard.writeText(output);
+                showStatus('Converted to JSON and copied to clipboard!');
+            } catch (err) {
+                console.error('Conversion error:', err);
+                showStatus('Failed to convert to JSON!');
+            }
+        }
+    </script>
+</body>
+</html>

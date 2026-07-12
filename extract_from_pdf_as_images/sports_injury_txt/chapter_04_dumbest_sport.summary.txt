@@ -1,0 +1,63 @@
+# Chapter 4: Dumbest Sport - Summary
+
+## Main Concepts
+
+**Boyd Epley's Weight Training Revolution**
+- Nebraska's 1969 victory over Oklahoma killed the myth that weight training makes players "muscle-bound"
+- Epley pioneered strength training in football, became "godfather of American strength coaches"
+- Combined powerlifting (heavy weights), bodybuilding, and Olympic lifting (explosive moves)
+- Founded what became the National Strength and Conditioning Association (NSCA), now 60,000+ members
+- Key insight: eliminated long-distance running from football training (a 5-second play followed by 50-second rest has no aerobic component)
+
+**The Problem with Traditional Strength Training**
+- NSCA culture refroze around "big muscles" after Epley's breakthrough
+- Getting stronger can make you WORSE at sports:
+  - Multi-segmental tasks (hitting, throwing) require coordination, not just strength
+  - Extra weight makes direction changes harder, beats up joints
+  - Overdeveloped muscles can lose mobility
+  - Training to move slowly programs the nervous system to be slow
+
+**Rotation: The Missing Element**
+- Baseball is a rotational sport - barely considered by traditional strength training
+- Mystery: Some 95 mph pitchers are huge and strong; others are small but score exceptionally on lateral skater tests
+- The small pitchers have superior nervous system coordination - carrying force from ground through twisting torso to arm
+- All elite baseball players started before age 12 (unlike basketball) because rotation must be automated early
+
+**Flush Runs Debunked**
+- Baseball tradition: long "flush runs" to clear lactic acid from pitchers
+- Reality: A pitch is a one-meter sprint. Bodies don't generate much lactic acid at that distance
+- Lactic acid clears quickly anyway - gone by the time pitchers lace up running shoes
+- Worse: endurance training actively harms explosion capacity - "not just not helpful, it's interruptive... harmful"
+
+## Marcus's Baseball Experience
+
+**Winter Meetings Speech**
+- Audience: "big necks, square shoulders, bald heads... more testosterone than is good for them"
+- The best players in the most rotational sport were being trained by men who couldn't turn their necks
+- Marcus challenged flush runs, was met with hostility
+- One coach: "You might be fucking smart, but I fucking hate you"
+
+**Seattle Mariners (2010-2013)**
+- First-ever "Director of Sports Science and Performance" in MLB's 141-year history
+- First action: removed almost all equipment from gym to create space for movement
+- "They had three different calf raise machines... SPORT IS MOVEMENT!"
+- Added: rotational exercises, plyometrics, lateral movements, overhead weights, Keiser cable machines
+
+**The Stretch-Shortening Cycle**
+- The "false step" (moving backward before forward) actually gets athletes to destinations faster
+- Soviet "shock method" / plyometrics: training opposite-direction movements into one snappy event
+- NSCA said athletes need to squat 1.5x body weight before plyometrics - but "kids are doing plyometrics all the time. Jumping out of trees!"
+
+**Failure and Exit**
+- Ken Griffey Jr. refused to change workouts; missed 129 games that season
+- Conflict over pitcher Erik Bédard: overdeveloped chest/biceps from bench press causing shoulder/elbow stress
+- Strength coach resisted; player told Marcus "I don't like people who try to figure things out"
+- Marcus couldn't remove the strength coach, finished contract, concluded: "Baseball is definitely the dumbest sport"
+
+## Key Takeaways
+
+1. **Movement trumps muscle** - rotational power requires nervous system coordination, not just strength
+2. **Early specialization matters for rotational sports** - movement patterns must be automated in childhood
+3. **Traditional training can be harmful** - flush runs, excessive bench press, training slowly
+4. **Cultural resistance is fierce** - threatened professionals react with hostility to innovation
+5. **Organizational politics limit change** - even with evidence, entrenched staff can block progress

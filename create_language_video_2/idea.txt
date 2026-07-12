@@ -1,0 +1,53 @@
+transcribe_mp3.py — Transcribe MP3 using OpenAI Whisper API
+
+Usage:
+
+  export OPENAI_API_KEY=sk-...
+
+  # Transcribe (auto-detect language)
+  python transcribe_mp3.py -i audio.mp3
+
+  # Transcribe with explicit language (e.g. Tagalog)
+  python transcribe_mp3.py -i audio.mp3 --language tl
+
+  # Translate any language → English
+  python transcribe_mp3.py -i audio.mp3 --translate
+
+  # Custom output names
+  python transcribe_mp3.py -i audio.mp3 --srt my_subs.srt --txt my_text.txt
+
+What it does:
+  - Files under 24MB → sent directly to Whisper API
+  - Files over 24MB → split into 10-min chunks via ffmpeg, each sent separately, timestamps offset and merged
+  - Outputs two files: transcript.srt (with timestamps) and transcript.txt (plain text, one line per entry)
+
+Workflow for a YouTube video without subtitles:
+  1. Download the video / extract the MP3
+  2. Run transcribe_mp3.py to get the transcript
+  3. Use that transcript as input for the next step below
+
+Next step — Generate a dialogue.txt from the transcript:
+  From the transcript, use a prompt (like the one in /Users/stanleytan/Documents/technical/python/create_language_video/prompt.txt)
+  to generate a new dialogue.txt. The prompt would take the raw transcript content and
+  reformat it into the A:/B: paired dialogue format.
+
+  This would allow generating dialogue.txt in both Cantonese and Mandarin, for example:
+
+  Cantonese version:
+    A: (Cantonese line)
+    B: (English translation)
+
+  Mandarin version:
+    A: (Mandarin line)
+    B: (English translation)
+
+  From there, the dialogue.txt feeds into the create_language_video pipeline
+  (step1_tts.py → step2_video.sh → step3_gloss.py) to produce the final lesson video
+  with dual subtitles and word-by-word gloss.
+
+Full pipeline vision:
+  MP3 (from YouTube) → transcribe_mp3.py → transcript.txt
+    → prompt + GPT → dialogue.txt (Cantonese or Mandarin + English)
+      → step1_tts.py → audio + SRTs
+        → step2_video.sh → lesson.mp4
+          → step3_gloss.py → gloss_output.csv

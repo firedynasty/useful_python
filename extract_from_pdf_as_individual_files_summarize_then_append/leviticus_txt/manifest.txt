@@ -1,0 +1,31 @@
+# MHC Extraction Manifest
+# Use this to track summarization progress
+
+Leviticus Ch.0: ./leviticus_txt/03_Leviticus/ch000.txt
+Leviticus Ch.1: ./leviticus_txt/03_Leviticus/ch001.txt
+Leviticus Ch.2: ./leviticus_txt/03_Leviticus/ch002.txt
+Leviticus Ch.3: ./leviticus_txt/03_Leviticus/ch003.txt
+Leviticus Ch.4: ./leviticus_txt/03_Leviticus/ch004.txt
+Leviticus Ch.5: ./leviticus_txt/03_Leviticus/ch005.txt
+Leviticus Ch.6: ./leviticus_txt/03_Leviticus/ch006.txt
+Leviticus Ch.7: ./leviticus_txt/03_Leviticus/ch007.txt
+Leviticus Ch.8: ./leviticus_txt/03_Leviticus/ch008.txt
+Leviticus Ch.9: ./leviticus_txt/03_Leviticus/ch009.txt
+Leviticus Ch.10: ./leviticus_txt/03_Leviticus/ch010.txt
+Leviticus Ch.11: ./leviticus_txt/03_Leviticus/ch011.txt
+Leviticus Ch.12: ./leviticus_txt/03_Leviticus/ch012.txt
+Leviticus Ch.13: ./leviticus_txt/03_Leviticus/ch013.txt
+Leviticus Ch.14: ./leviticus_txt/03_Leviticus/ch014.txt
+Leviticus Ch.15: ./leviticus_txt/03_Leviticus/ch015.txt
+Leviticus Ch.16: ./leviticus_txt/03_Leviticus/ch016.txt
+Leviticus Ch.17: ./leviticus_txt/03_Leviticus/ch017.txt
+Leviticus Ch.18: ./leviticus_txt/03_Leviticus/ch018.txt
+Leviticus Ch.19: ./leviticus_txt/03_Leviticus/ch019.txt
+Leviticus Ch.20: ./leviticus_txt/03_Leviticus/ch020.txt
+Leviticus Ch.21: ./leviticus_txt/03_Leviticus/ch021.txt
+Leviticus Ch.22: ./leviticus_txt/03_Leviticus/ch022.txt
+Leviticus Ch.23: ./leviticus_txt/03_Leviticus/ch023.txt
+Leviticus Ch.24: ./leviticus_txt/03_Leviticus/ch024.txt
+Leviticus Ch.25: ./leviticus_txt/03_Leviticus/ch025.txt
+Leviticus Ch.26: ./leviticus_txt/03_Leviticus/ch026.txt
+Leviticus Ch.27: ./leviticus_txt/03_Leviticus/ch027.txt

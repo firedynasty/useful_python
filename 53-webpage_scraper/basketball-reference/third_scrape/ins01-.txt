@@ -1,0 +1,5 @@
+  1. To scrape new data and automatically clean it while saving:
+  python ins01-scraper2_combined.py --scrape
+
+  2. To clean an existing schedule file (like the one you mentioned):
+  python ins01-scraper2_combined.py --clean /Users/stanleytan/Documents/53-webpage_scraper/basketball-reference/third_scrape/nba_2025_schedule_april.csv

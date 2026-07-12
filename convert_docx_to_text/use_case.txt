@@ -1,0 +1,8 @@
+  # Basic usage - creates input_name.txt
+  python docx_to_txt.py input.docx
+
+  # Specify output file
+  python docx_to_txt.py input.docx -o output.txt
+
+  # Specify encoding
+  python docx_to_txt.py input.docx -e utf-8

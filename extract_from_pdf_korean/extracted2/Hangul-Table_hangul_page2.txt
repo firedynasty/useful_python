@@ -1,0 +1,33 @@
+Hangul Table
+★ Diphthongs (Combined Vowels)
+Vowels→	ㅐ	ㅒ	ㅔ	ㅖ	ㅘ	ㅙ	ㅚ	ㅝ	ㅞ	ㅟ	ㅢ
+Consonants↓ ae	yae	e	ye	wa	wae	oe	wo	we	wi	ui
+ㄱ	개	걔	게	계	과	괘	괴	궈	궤	귀	긔
+k/g	kae	kyae	ke	kye	kwa	kwae	koe	kwo	kwe	kwi	kui
+ㄴ	내	냬	네	녜	놔	놰	뇌	눠	눼	뉘	늬
+n	nae	nyae	ne	nye	nwa	nwae	noe	nwo	nwe	nwi	nui
+ㄷ	대	댸	데	뎨	돠	돼	되	둬	뒈	뒤	듸
+t/d	tae	tyae	te	tye	twa	twae	toe	two	twe	twi	tui
+ㄹ	래	럐	레	례	롸	뢔	뢰	뤄	뤠	뤼	릐
+r	rae	ryae	re	rye	rwa	rwae	roe	rwo	rwe	rwi	rui
+ㅁ	매	먜	메	몌	뫄	뫠	뫼	뭐	뭬	뮈	믜
+m	mae myae	me	mye mwa mwae moe mwo mwe mwi	mui
+ㅂ	배	뱨	베	볘	봐	봬	뵈	붜	붸	뷔	븨
+p/b	pae	pyae	pe	pye	pwa	pwae	poe	pwo	pwe	pwi	pui
+ㅅ	새	섀	세	셰	솨	쇄	쇠	숴	쉐	쉬	싀
+s	sae	syae	se	sye	swa	swae	soe	swo	swe	swi	sui
+ㅇ	애	얘	에	예	와	왜	외	워	웨	위	의
+ng/null	ae	yae	e	ye	wa	wae	oe	wo	we	wi	ui
+ㅈ	재	쟤	제	졔	좌	좨	죄	줘	줴	쥐	즤
+ch/j	chae	chyae	che	chye	chwa	chwae	choe	chwo	chwe	chwi	chui
+ㅊ	채	챼	체	쳬	촤	쵀	최	춰	췌	취	츼
+ch	chae	chyae	che	chye	chwa	chwae	choe	chwo	chwe	chwi	chui
+ㅋ	캐	컈	케	켸	콰	쾌	쾨	쿼	퀘	퀴	킈
+k	kae	kyae	ke	kye	kwa	kwae	koe	kwo	kwe	kwi	kui
+ㅌ	태	턔	테	톄	톼	퇘	퇴	퉈	퉤	튀	틔
+t	tae	tyae	te	tye	twa	twae	toe	two	twe	twi	tui
+ㅍ	패	퍠	페	폐	퐈	퐤	푀	풔	풰	퓌	픠
+p	pae	pyae	pe	pye	pwa	pwae	poe	pwo	pwe	pwi	pui
+ㅎ	해	햬	헤	혜	화	홰	회	훠	훼	휘	희
+h	hae	hyae	he	hye	hwa	hwae	hoe	hwo	hwe	hwi	hui
+2

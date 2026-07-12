@@ -1,0 +1,76 @@
+Test file for syntax highlighting functionality
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>flashcards_with_firebase</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <button id="convertTextAreaFrColumns" class="express1">Convert TextArea (from columns/Google Sheets)</button>
+  <button id="makeTableFromSemicolon">Make Table</button>
+</body>
+</html>
+```
+
+```javascript
+function greet(name) {
+  console.log(`Hello, ${name}!`);
+  return `Welcome to the basketball app, ${name}`;
+}
+
+const players = ['LeBron', 'Curry', 'Durant'];
+players.forEach(player => greet(player));
+```
+
+```css
+.highlight {
+  background-color: yellow;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.code-block {
+  font-family: 'Monaco', 'Consolas', monospace;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+}
+```
+
+```python
+def calculate_shooting_percentage(made_shots, total_shots):
+    if total_shots == 0:
+        return 0
+    return (made_shots / total_shots) * 100
+
+# Example usage
+percentage = calculate_shooting_percentage(8, 10)
+print(f"Shooting percentage: {percentage}%")
+```
+
+This is regular text that should not be highlighted.
+
+concatenate mp4 files
+```bash
+# Create the file list correctly
+ls -v *.mp4 | sed "s/.*/'&'/" | sed "s/^/file /" > filelist.txt
+
+# Check what the file list looks like
+cat filelist.txt
+
+# Then concatenate
+ffmpeg -f concat -safe 0 -i filelist.txt -c:v libx264 -c:a aac -preset fast concatenated.mp4
+
+# Clean up
+rm filelist.txt
+
+```
+or convert mov to mp4
+
+```bash
+
+for file in *.mov; do HandBrakeCLI -i "$file" -o "${file%.*}.mp4" --preset="Fast 1080p30"; done
+```

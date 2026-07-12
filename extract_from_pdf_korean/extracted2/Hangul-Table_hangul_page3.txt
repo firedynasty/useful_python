@@ -1,0 +1,28 @@
+Hangul Table
+★Tense sounds (basic vowels)
+Vowels→	ㅏ	ㅑ	ㅓ	ㅕ	ㅗ	ㅛ	ㅜ	ㅠ	ㅡ	ㅣ
+Consonants↓	a	ya	eo	yeo	o	yo	u	yu	eu	i
+ㄲ	까	꺄	꺼	껴	꼬	꾜	꾸	뀨	끄	끼
+kk	kka	kkya	kkeo	kkyeo	kko	kkyo	kku	kkyu	kkeu	kki
+ㄸ	따	땨	떠	뗘	또	뚀	뚜	뜌	뜨	띠
+tt	tta	ttya	tteo	ttyeo	tto	ttyo	ttu	ttyu	tteu	tti
+ㅃ	빠	뺘	뻐	뼈	뽀	뾰	뿌	쀼	쁘	삐
+pp	ppa	ppya	ppeo	ppyeo	ppo	ppyo	ppu	ppyu	ppeu	ppi
+ㅆ	싸	쌰	써	쎠	쏘	쑈	쑤	쓔	쓰	씨
+ss	ssa	ssya	sseo	ssyeo	sso	ssyo	ssu	ssyu	sseu	ssi
+ㅉ	짜	쨔	쩌	쪄	쪼	쬬	쭈	쮸	쯔	찌
+jj	jja	jjya	jjeo	jjyeo	jjo	jjyo	jju	jjyu	jjeu	jji
+★Tense sounds (diphthongs)
+Vowels→	ㅐ	ㅒ	ㅔ	ㅖ	ㅘ	ㅙ	ㅚ	ㅝ	ㅞ	ㅟ	ㅢ
+Consonants↓ ae	yae	e	ye	wa	wae	oe	wo	we	wi	ui
+ㄲ	깨	꺠	께	꼐	꽈	꽤	꾀	꿔	꿰	뀌	끠
+kk	kkae	kkyae	kke	kkye	kkwa kkwae	kkoe	kkwo	kkwe	kkwi	kkui
+ㄸ	때	떄	떼	뗴	똬	뙈	뙤	뚸	뛔	뛰	띄
+tt	ttae	ttyae	tte	ttye	ttwa	ttwae	ttoe	ttwo	ttwe	ttwi	ttui
+ㅃ	빼	뺴	뻬	뼤	뽜	뽸	뾔	뿨	쀄	쀠	쁴
+pp	ppae	ppyae	ppe	ppye	ppwa ppwae	ppoe	ppwo	ppwe	ppwi	ppui
+ㅆ	쌔	썌	쎄	쎼	쏴	쐐	쐬	쒀	쒜	쒸	씌
+ss	ssae	ssyae	sse	ssye	sswa	sswae	ssoe	sswo	sswe	sswi	ssui
+ㅉ	째	쨰	쩨	쪠	쫘	쫴	쬐	쭤	쮀	쮜	쯰
+jj	jjae	jjyae	jje	jjye	jjwa	jjwae	jjoe	jjwo	jjwe	jjwi	jjui
+3

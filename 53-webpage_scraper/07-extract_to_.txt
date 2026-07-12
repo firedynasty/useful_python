@@ -1,0 +1,30 @@
+Created. Usage:
+
+  # Single folder (e.g. first two chapters)
+  python 07-extract_images_from_folder.py ./kindle_ch1_ch2 --title "Book Title"
+
+  # Multiple folders processed separately
+  python 07-extract_images_from_folder.py ./chapter1 ./chapter2 --title "Book Title"
+
+What it does:
+- Naturally sorts images (1, 2, 10... not 1, 10, 2)
+- Sends each screenshot to Claude vision to extract the text
+- Groups pages by folder, each becoming one "Source" section
+- Saves to ./scraped_from_websites/book_context_<title>_<timestamp>.txt
+- Copies to clipboard (same as 06)
+
+The output format is identical to 06-book_context_scraper.py, so you could
+paste both outputs together or run them separately and combine the files.
+
+--title "Book Title"
+  Replace "Book Title" with the actual name of the book, e.g.:
+  python 07-extract_images_from_folder.py ./kindle_ch1_ch2 --title "Thinking Fast and Slow"
+
+  Used for the output filename and the header inside the file:
+    book_context_Thinking_Fast_and_Slow_20260327_143000.txt
+
+  If you skip --title, the script will prompt you to type it interactively.
+
+
+ python 07-extract_images_from_folder.py ./kindleScreenshots --title "Deeper Love"
+

@@ -1,0 +1,28 @@
+# MHC Extraction Manifest
+# Use this to track summarization progress
+
+Joshua Ch.0: ./joshua_txt/06_Joshua/ch000.txt
+Joshua Ch.1: ./joshua_txt/06_Joshua/ch001.txt
+Joshua Ch.2: ./joshua_txt/06_Joshua/ch002.txt
+Joshua Ch.3: ./joshua_txt/06_Joshua/ch003.txt
+Joshua Ch.4: ./joshua_txt/06_Joshua/ch004.txt
+Joshua Ch.5: ./joshua_txt/06_Joshua/ch005.txt
+Joshua Ch.6: ./joshua_txt/06_Joshua/ch006.txt
+Joshua Ch.7: ./joshua_txt/06_Joshua/ch007.txt
+Joshua Ch.8: ./joshua_txt/06_Joshua/ch008.txt
+Joshua Ch.9: ./joshua_txt/06_Joshua/ch009.txt
+Joshua Ch.10: ./joshua_txt/06_Joshua/ch010.txt
+Joshua Ch.11: ./joshua_txt/06_Joshua/ch011.txt
+Joshua Ch.12: ./joshua_txt/06_Joshua/ch012.txt
+Joshua Ch.13: ./joshua_txt/06_Joshua/ch013.txt
+Joshua Ch.14: ./joshua_txt/06_Joshua/ch014.txt
+Joshua Ch.15: ./joshua_txt/06_Joshua/ch015.txt
+Joshua Ch.16: ./joshua_txt/06_Joshua/ch016.txt
+Joshua Ch.17: ./joshua_txt/06_Joshua/ch017.txt
+Joshua Ch.18: ./joshua_txt/06_Joshua/ch018.txt
+Joshua Ch.19: ./joshua_txt/06_Joshua/ch019.txt
+Joshua Ch.20: ./joshua_txt/06_Joshua/ch020.txt
+Joshua Ch.21: ./joshua_txt/06_Joshua/ch021.txt
+Joshua Ch.22: ./joshua_txt/06_Joshua/ch022.txt
+Joshua Ch.23: ./joshua_txt/06_Joshua/ch023.txt
+Joshua Ch.24: ./joshua_txt/06_Joshua/ch024.txt

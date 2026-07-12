@@ -1,0 +1,25 @@
+How to create subtitled highlight clips
+=======================================
+
+1. Download the video (if you only have the .m4a):
+
+   yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]" "https://youtube.com/watch?v=VIDEO_ID" --merge-output-format mp4
+
+2. Edit add_titles.md with your notes (one per line):
+
+   M:SS, your comment
+   e.g.
+   1:17, need to pass at an angle
+   1:39, here can get the slip angle
+
+3. Run the script:
+
+   bash add_titles.sh "Understanding Princeton Offense： Systems, Entries & Variations [uzZKtYbhHq0].mp4"
+
+4. Output: *_subtitled.mp4 (a highlights reel of just the noted moments with captions)
+
+Notes
+-----
+- Each clip shows 3 seconds before the note, then holds the caption for 10 seconds
+- The caption displays the original timestamp and your comment (e.g. "1:17, need to pass at an angle")
+- Requires: ffmpeg, python3

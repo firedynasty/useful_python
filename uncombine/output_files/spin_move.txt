@@ -1,0 +1,10 @@
+ometimes called the "zero step" or "gather step")
+3. Second step
+
+If the player takes a third step before shooting or passing, it's a traveling violation. This rule was formally adopted by the NBA in 2009 to match what was already being called on the court, and FIBA adopted similar rules to standardize interpretation globally.
+
+The key to understanding this rule is recognizing when the gather actually occurs. A common misconception is counting steps from when the player's last dribble hits the ground, but it's really from when they gain full control of the ball.
+
+so key is to spin and gather with the opposite hand
+
+![spin move](videos/spin_move/spin_move.mp4)

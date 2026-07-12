@@ -1,0 +1,35 @@
+# MHC Extraction Manifest
+# Use this to track summarization progress
+
+Proverbs Ch.0: ./proverbs_txt/20_Proverbs/ch000.txt
+Proverbs Ch.1: ./proverbs_txt/20_Proverbs/ch001.txt
+Proverbs Ch.2: ./proverbs_txt/20_Proverbs/ch002.txt
+Proverbs Ch.3: ./proverbs_txt/20_Proverbs/ch003.txt
+Proverbs Ch.4: ./proverbs_txt/20_Proverbs/ch004.txt
+Proverbs Ch.5: ./proverbs_txt/20_Proverbs/ch005.txt
+Proverbs Ch.6: ./proverbs_txt/20_Proverbs/ch006.txt
+Proverbs Ch.7: ./proverbs_txt/20_Proverbs/ch007.txt
+Proverbs Ch.8: ./proverbs_txt/20_Proverbs/ch008.txt
+Proverbs Ch.9: ./proverbs_txt/20_Proverbs/ch009.txt
+Proverbs Ch.10: ./proverbs_txt/20_Proverbs/ch010.txt
+Proverbs Ch.11: ./proverbs_txt/20_Proverbs/ch011.txt
+Proverbs Ch.12: ./proverbs_txt/20_Proverbs/ch012.txt
+Proverbs Ch.13: ./proverbs_txt/20_Proverbs/ch013.txt
+Proverbs Ch.14: ./proverbs_txt/20_Proverbs/ch014.txt
+Proverbs Ch.15: ./proverbs_txt/20_Proverbs/ch015.txt
+Proverbs Ch.16: ./proverbs_txt/20_Proverbs/ch016.txt
+Proverbs Ch.17: ./proverbs_txt/20_Proverbs/ch017.txt
+Proverbs Ch.18: ./proverbs_txt/20_Proverbs/ch018.txt
+Proverbs Ch.19: ./proverbs_txt/20_Proverbs/ch019.txt
+Proverbs Ch.20: ./proverbs_txt/20_Proverbs/ch020.txt
+Proverbs Ch.21: ./proverbs_txt/20_Proverbs/ch021.txt
+Proverbs Ch.22: ./proverbs_txt/20_Proverbs/ch022.txt
+Proverbs Ch.23: ./proverbs_txt/20_Proverbs/ch023.txt
+Proverbs Ch.24: ./proverbs_txt/20_Proverbs/ch024.txt
+Proverbs Ch.25: ./proverbs_txt/20_Proverbs/ch025.txt
+Proverbs Ch.26: ./proverbs_txt/20_Proverbs/ch026.txt
+Proverbs Ch.27: ./proverbs_txt/20_Proverbs/ch027.txt
+Proverbs Ch.28: ./proverbs_txt/20_Proverbs/ch028.txt
+Proverbs Ch.29: ./proverbs_txt/20_Proverbs/ch029.txt
+Proverbs Ch.30: ./proverbs_txt/20_Proverbs/ch030.txt
+Proverbs Ch.31: ./proverbs_txt/20_Proverbs/ch031.txt

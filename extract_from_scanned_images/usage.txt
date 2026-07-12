@@ -1,0 +1,30 @@
+
+
+Claude version:                                                               
+  export ANTHROPIC_API_KEY="sk-ant-..."
+  python extract_images_claude.py ./folder_of_images                            
+                                                                                
+  OpenAI version:                                                               
+  export OPENAI_API_KEY="sk-..."                                                
+  python extract_images_openai.py ./folder_of_images                            
+                                                                              
+  Both output to ~/downloads/extracted_YYYY-MM-DD_HHMMSS.txt. GPT-4o-mini will  
+  be significantly cheaper per image — good choice for bulk OCR where you don't 
+  need the highest accuracy. 
+
+* added pdf 
+
+
+⏺ Done. The script now auto-detects whether you pass a PDF or a folder of
+  images:                                                                      
+                 
+  # PDF
+  python extract_images_claude.py ./document.pdf                                
+                                                                                
+  # Images (same as before)                                                     
+  python extract_images_claude.py ./folder_of_images                            
+                                                                                
+  It sends the PDF directly to Claude's API as a document (no conversion to     
+  images needed). Output goes to ~/downloads/extracted_YYYY-MM-DD_HHMMSS.txt    
+  same as before.                                                               
+                           

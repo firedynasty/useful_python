@@ -1,0 +1,1 @@
+I am creating this because I need a way to extract transcript from a video that does not have an embedded track along with it 

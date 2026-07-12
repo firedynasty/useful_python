@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorize - Line Range Reader</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Courier New', monospace;
+            background: #1a1a2e;
+            color: #eee;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            margin-top: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #00d9ff;
+            border: 2px solid #00d9ff;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #888;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        .section {
+            background: #16213e;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .btn-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 12px 20px;
+            font-family: inherit;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        .btn:hover { opacity: 0.9; }
+        .btn-primary {
+            background: #00d9ff;
+            color: #000;
+        }
+        .btn-secondary {
+            background: #333;
+            color: #fff;
+        }
+        .btn-success {
+            background: #27ae60;
+            color: #fff;
+        }
+        .btn-warning {
+            background: #ff9f43;
+            color: #000;
+        }
+        .btn-danger {
+            background: #c0392b;
+            color: #fff;
+        }
+        .info-bar {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 15px;
+            background: #0f3460;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .input-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        input[type="text"] {
+            padding: 10px 15px;
+            font-size: 16px;
+            font-family: inherit;
+            background: #0a0a15;
+            border: 2px solid #333;
+            color: #fff;
+            border-radius: 5px;
+            width: 150px;
+        }
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #00d9ff;
+        }
+        .content-display {
+            background: #0f3460;
+            border-radius: 5px;
+            padding: 15px;
+            max-height: 300px;
+            overflow-y: auto;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .content-display.full {
+            max-height: 500px;
+        }
+        .line {
+            display: flex;
+            padding: 3px 0;
+        }
+        .line-num {
+            color: #666;
+            min-width: 40px;
+            text-align: right;
+            margin-right: 15px;
+            user-select: none;
+        }
+        .line-text {
+            flex: 1;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+        .line.highlighted {
+            background: #1e3a5f;
+            border-left: 3px solid #00d9ff;
+            padding-left: 10px;
+            margin-left: -10px;
+        }
+        .selected-text {
+            background: #1e3a5f;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 15px;
+            font-size: 18px;
+            line-height: 1.8;
+            min-height: 100px;
+        }
+        .selected-text .line {
+            padding: 5px 0;
+        }
+        .commands {
+            background: #0a0a15;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-size: 12px;
+            color: #888;
+        }
+        .commands code {
+            color: #00d9ff;
+            background: #16213e;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        .hidden { display: none; }
+
+        /* Toggle slider styles */
+        .toggle-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 26px;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #4CAF50;
+            transition: .4s;
+            border-radius: 26px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        input:checked + .slider {
+            background-color: #ff6b6b;
+        }
+        input:checked + .slider:before {
+            transform: translateX(24px);
+        }
+        .toggle-label {
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        /* Speed control */
+        .speed-control {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .speed-control label {
+            color: #888;
+            font-size: 14px;
+        }
+        select {
+            padding: 8px 12px;
+            font-family: inherit;
+            font-size: 14px;
+            background: #0a0a15;
+            border: 2px solid #333;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        select:focus {
+            outline: none;
+            border-color: #00d9ff;
+        }
+
+        .status {
+            text-align: center;
+            padding: 10px;
+            background: #0f3460;
+            border-radius: 5px;
+            margin-top: 10px;
+            color: #00d9ff;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MEMORIZE</h1>
+        <div class="subtitle">Line Range Reader with Text-to-Speech</div>
+
+        <div class="section">
+            <!-- Clipboard and controls -->
+            <div class="btn-row">
+                <button class="btn btn-primary" onclick="pasteFromClipboard()">Paste from Clipboard</button>
+                <button class="btn btn-secondary" onclick="clearContent()">Clear (clr)</button>
+                <button class="btn btn-warning" onclick="showAllLines()">Show All (catn)</button>
+                <button class="btn btn-secondary" id="toggleDisplayBtn" onclick="toggleContentDisplay()">Hide Lines</button>
+            </div>
+
+            <!-- Info bar -->
+            <div class="info-bar">
+                <span>Total lines: <strong id="totalLines">0</strong></span>
+                <div class="toggle-group">
+                    <label class="switch">
+                        <input type="checkbox" id="ttsToggle" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <span class="toggle-label" id="ttsLabel">TTS ON</span>
+                </div>
+                <div class="speed-control">
+                    <label>Speed:</label>
+                    <select id="speedSelect">
+                        <option value="0.5">0.5x</option>
+                        <option value="0.75">0.75x</option>
+                        <option value="1" selected>1x</option>
+                        <option value="1.25">1.25x</option>
+                        <option value="1.5">1.5x</option>
+                        <option value="2">2x</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Commands help -->
+            <div class="commands">
+                Commands: <code>1-4</code> read lines 1-4 | <code>5</code> read line 5 |
+                <code>r</code> repeat last | <code>catn</code> show all | <code>clr</code> clear
+            </div>
+
+            <!-- Range input -->
+            <div class="input-group">
+                <input type="text" id="rangeInput" placeholder="Enter range: 1-4 or 5">
+                <button class="btn btn-success" onclick="readRange()">Read (Enter)</button>
+                <button class="btn btn-secondary" onclick="repeatLast()">Repeat (r)</button>
+                <button class="btn btn-danger" onclick="stopSpeaking()">Stop</button>
+            </div>
+
+            <!-- Content display - shows all lines with numbers -->
+            <div id="contentDisplay" class="content-display hidden"></div>
+
+            <!-- Selected text display -->
+            <div id="selectedText" class="selected-text hidden"></div>
+
+            <!-- Status -->
+            <div id="status" class="status hidden"></div>
+        </div>
+    </div>
+
+    <script>
+        // State
+        let lines = [];
+        let lastStart = null;
+        let lastEnd = null;
+        let isSpeaking = false;
+        let utterance = null;
+
+        // Initialize TTS
+        if ('speechSynthesis' in window) {
+            speechSynthesis.addEventListener('voiceschanged', () => {
+                speechSynthesis.getVoices();
+            });
+        }
+
+        // TTS Toggle
+        const ttsToggle = document.getElementById('ttsToggle');
+        const ttsLabel = document.getElementById('ttsLabel');
+
+        ttsToggle.addEventListener('change', function() {
+            if (this.checked) {
+                ttsLabel.textContent = 'TTS ON';
+            } else {
+                ttsLabel.textContent = 'TTS OFF';
+                stopSpeaking();
+            }
+        });
+
+        // Paste from clipboard
+        async function pasteFromClipboard() {
+            try {
+                const text = await navigator.clipboard.readText();
+                if (!text.trim()) {
+                    showStatus('Clipboard is empty');
+                    return;
+                }
+
+                lines = text.split('\n');
+                document.getElementById('totalLines').textContent = lines.length;
+
+                renderContent(null, null, true);  // forceShow on paste
+                document.getElementById('toggleDisplayBtn').textContent = 'Hide Lines';
+                showStatus(`Loaded ${lines.length} lines from clipboard`);
+            } catch (err) {
+                showStatus('Failed to read clipboard. Please allow clipboard access.');
+                console.error('Clipboard error:', err);
+            }
+        }
+
+        // Render content with line numbers
+        function renderContent(highlightStart = null, highlightEnd = null, forceShow = false) {
+            const display = document.getElementById('contentDisplay');
+            const wasHidden = display.classList.contains('hidden');
+
+            if (lines.length === 0) {
+                display.classList.add('hidden');
+                return;
+            }
+
+            let html = '';
+            lines.forEach((line, index) => {
+                const lineNum = index + 1;
+                const isHighlighted = highlightStart !== null &&
+                    lineNum >= highlightStart && lineNum <= highlightEnd;
+
+                html += `<div class="line ${isHighlighted ? 'highlighted' : ''}">
+                    <span class="line-num">${lineNum}</span>
+                    <span class="line-text">${escapeHtml(line)}</span>
+                </div>`;
+            });
+
+            display.innerHTML = html;
+
+            // Only show if it wasn't manually hidden (or if forceShow is true)
+            if (forceShow || !wasHidden) {
+                display.classList.remove('hidden');
+            }
+        }
+
+        // Show all lines
+        function showAllLines() {
+            const display = document.getElementById('contentDisplay');
+            display.classList.toggle('full');
+            display.classList.remove('hidden');  // Always show when clicking "Show All"
+            document.getElementById('toggleDisplayBtn').textContent = 'Hide Lines';
+            renderContent(null, null, true);
+        }
+
+        // Toggle content display visibility
+        function toggleContentDisplay() {
+            const display = document.getElementById('contentDisplay');
+            const btn = document.getElementById('toggleDisplayBtn');
+
+            if (display.classList.contains('hidden')) {
+                display.classList.remove('hidden');
+                btn.textContent = 'Hide Lines';
+            } else {
+                display.classList.add('hidden');
+                btn.textContent = 'Show Lines';
+            }
+        }
+
+        // Clear content
+        function clearContent() {
+            lines = [];
+            lastStart = null;
+            lastEnd = null;
+            document.getElementById('totalLines').textContent = '0';
+            document.getElementById('contentDisplay').classList.add('hidden');
+            document.getElementById('selectedText').classList.add('hidden');
+            document.getElementById('rangeInput').value = '';
+            stopSpeaking();
+            showStatus('Cleared');
+        }
+
+        // Read range
+        function readRange() {
+            const input = document.getElementById('rangeInput').value.trim();
+
+            if (!input) {
+                showStatus('Enter a range (e.g., 1-4 or 5)');
+                return;
+            }
+
+            // Handle special commands
+            if (input.toLowerCase() === 'r') {
+                repeatLast();
+                return;
+            }
+            if (input.toLowerCase() === 'catn') {
+                showAllLines();
+                return;
+            }
+            if (input.toLowerCase() === 'clr' || input.toLowerCase() === 'clear') {
+                clearContent();
+                return;
+            }
+
+            // Parse range
+            let start, end;
+            if (input.includes('-')) {
+                const parts = input.split('-');
+                start = parseInt(parts[0]);
+                end = parseInt(parts[1]);
+            } else {
+                start = parseInt(input);
+                end = start;
+            }
+
+            // Validate
+            if (isNaN(start) || isNaN(end)) {
+                showStatus('Invalid format. Use: 3-4 or 5');
+                return;
+            }
+
+            if (start < 1 || end > lines.length || start > end) {
+                showStatus(`Invalid range. Lines available: 1-${lines.length}`);
+                return;
+            }
+
+            // Save for repeat
+            lastStart = start;
+            lastEnd = end;
+
+            // Display and speak
+            displaySelectedLines(start, end);
+        }
+
+        // Repeat last range
+        function repeatLast() {
+            if (lastStart === null) {
+                showStatus('No previous range to repeat');
+                return;
+            }
+            displaySelectedLines(lastStart, lastEnd);
+        }
+
+        // Display selected lines
+        function displaySelectedLines(start, end) {
+            const selectedText = document.getElementById('selectedText');
+            const selectedLines = lines.slice(start - 1, end);
+
+            let html = '';
+            selectedLines.forEach((line, index) => {
+                const lineNum = start + index;
+                html += `<div class="line">
+                    <span class="line-num">${lineNum}</span>
+                    <span class="line-text">${escapeHtml(line)}</span>
+                </div>`;
+            });
+
+            selectedText.innerHTML = html;
+            selectedText.classList.remove('hidden');
+
+            // Highlight in main display
+            renderContent(start, end);
+
+            // Speak if TTS is on
+            if (ttsToggle.checked) {
+                speakText(selectedLines.join('\n'));
+            }
+
+            showStatus(`Reading lines ${start}-${end}`);
+        }
+
+        // Text-to-Speech
+        function speakText(text) {
+            if (!('speechSynthesis' in window)) {
+                showStatus('Text-to-Speech not supported in this browser');
+                return;
+            }
+
+            // Stop any current speech
+            stopSpeaking();
+
+            utterance = new SpeechSynthesisUtterance(text);
+            utterance.rate = parseFloat(document.getElementById('speedSelect').value);
+            utterance.pitch = 1;
+            utterance.volume = 1;
+            utterance.lang = 'en-US';
+
+            // Try to get a good voice
+            const voices = speechSynthesis.getVoices();
+            if (voices.length > 0) {
+                const englishVoice = voices.find(voice =>
+                    (voice.lang.includes('en-') && voice.name.includes('Enhanced')) ||
+                    (voice.lang.includes('en-') && voice.name.includes('Premium')) ||
+                    voice.lang.includes('en-')
+                );
+                if (englishVoice) {
+                    utterance.voice = englishVoice;
+                }
+            }
+
+            utterance.onstart = () => {
+                isSpeaking = true;
+            };
+
+            utterance.onend = () => {
+                isSpeaking = false;
+                showStatus('Finished reading');
+            };
+
+            utterance.onerror = (event) => {
+                isSpeaking = false;
+                if (event.error !== 'interrupted') {
+                    showStatus('Speech error: ' + event.error);
+                }
+            };
+
+            // Small delay to ensure clean start
+            setTimeout(() => {
+                speechSynthesis.speak(utterance);
+            }, 100);
+        }
+
+        // Stop speaking
+        function stopSpeaking() {
+            if ('speechSynthesis' in window) {
+                speechSynthesis.cancel();
+            }
+            isSpeaking = false;
+        }
+
+        // Show status message
+        function showStatus(message) {
+            const status = document.getElementById('status');
+            status.textContent = message;
+            status.classList.remove('hidden');
+
+            setTimeout(() => {
+                status.classList.add('hidden');
+            }, 3000);
+        }
+
+        // Escape HTML
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Keyboard shortcuts
+        document.getElementById('rangeInput').addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                readRange();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            // Only handle if not typing in input
+            if (document.activeElement.tagName === 'INPUT') return;
+
+            if (e.key.toLowerCase() === 'r') {
+                repeatLast();
+            } else if (e.key === 'Escape') {
+                stopSpeaking();
+            }
+        });
+
+        // Focus input on load
+        document.getElementById('rangeInput').focus();
+    </script>
+</body>
+</html>

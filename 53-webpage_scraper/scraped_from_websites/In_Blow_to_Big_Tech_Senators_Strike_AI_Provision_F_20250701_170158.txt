@@ -1,0 +1,39 @@
+summarize this from:
+
+URL: https://www.businessinsider.com/senators-strike-ai-provision-from-big-beautiful-bill-2025-7
+Title: In Blow to Big Tech, Senators Strike AI Provision From Trump's Megabill - Business Insider
+Published: Jul 1, 2025, 9:52 AM PT
+
+# In a blow to Big Tech, senators strike AI provision from Trump's 'Big Beautiful Bill'
+By  [Bryan Metzger](https://www.businessinsider.com/author/bryan-metzger)
+Sen. Ted Cruz and OpenAI CEO Sam Altman had both backed the provision, which would discourage states from regulating AI. Chip Somodevilla/Getty Images 
+Jul 1, 2025, 9:52 AM PT
+Share
+Facebook [ Email ](mailto:?subject=In a blow to Big Tech, senators strike AI provision from Trump's 'Big Beautiful Bill'&body=In%20a%20blow%20to%20Big%20Tech%2C%20senators%20strike%20AI%20provision%20from%20Trump's%20'Big%20Beautiful%20Bill'%0D%0A%0D%0Ahttps%3A%2F%2Fwww.businessinsider.com%2Fsenators-strike-ai-provision-from-big-beautiful-bill-2025-7& "Email") X LinkedIn Copy link lighning bolt icon An icon in the shape of a lightning bolt. Impact Link
+Save Saved [ Read in app  ](https://insider-app.onelink.me/4cpG/?af_js_web=true&af_ss_ver=2_3_0&af_dp=insider%3A%2F%2Fbi%2Fpost%2Fsenators-strike-ai-provision-from-big-beautiful-bill-2025-7&af_force_deeplink=true&is_retargeting=true&deep_link_value=https%3A%2F%2Fwww.businessinsider.com%2Fsenators-strike-ai-provision-from-big-beautiful-bill-2025-7&pid=businessinsider&c=post_page_share_bar_v2_smart_4.13.23 "Download the app")
+This story is available exclusively to Business Insider subscribers. [Become an Insider](/subscription) and start reading now. Have an account? Log in.
+  * Senators voted on Tuesday to strike a controversial AI provision from the "Big Beautiful Bill."
+  * The provision would have discouraged states from regulating AI for 10 years.
+  * It was supported by many in the tech industry.
+
+Big Tech has one less reason to like President [Donald Trump's](https://www.businessinsider.com/donald-trump) ["Big Beautiful Bill."](https://www.businessinsider.com/trump-big-beautiful-bill-medicaid-taxes-maga-accounts-2025-5)
+Early Tuesday morning, senators voted 99-1 to strike a section in the bill aimed at [preventing states from regulating AI.](https://www.businessinsider.com/trump-big-beautiful-bill-ai-regulation-ban-tech-2025-6)
+That provision, championed by Republican Sen. Ted Cruz of Texas, had drawn criticism from Democrats and fellow Republicans.
+The proposal had already been tweaked multiple times. Initially, it would've been an all-out ban on state-level AI regulation for 10 years. Then, it was changed so that states _could_ regulate AI, but they'd lose out on federal funding for AI deployment. And then on Sunday, Republican Sen. Marsha Blackburn of Tennessee had struck an agreement to [shorten it to five years](https://www.businessinsider.com/ai-moratorium-changes-trump-big-beautiful-bill-2025-6) and add some carveouts, including for child safety.
+That agreement apparently fell apart just a day later.
+"While I appreciate Chairman Cruz's efforts to find acceptable language that allows states to protect their citizens from the abuses of AI, the current language is not acceptable to those who need these protections the most," Blackburn said in a statement on Monday night. "This provision could allow Big Tech to continue to exploit kids, creators, and conservatives."
+The Tennessee senator later introduced an amendment to strip the language from the bill, and with other Republicans opposed to the provision, it became clear the bill could not pass if it remained.
+At about 4:30am on Tuesday, senators voted near-unanimously to remove it.
+"Federalism is preserved and humans are safe for now," Rep. Marjorie Taylor Greene of Georgia, a GOP opponent of the original provision, wrote on X on Tuesday morning.
+Later on Tuesday, the Senate narrowly passed Trump's megabill by a 50-50 vote, with Vice President [JD Vance](https://www.businessinsider.com/signal-group-chat-houthis-hegseth-vance-war-personalities-explained-2025-03) breaking the tie. The House is set to vote on the bill later this week in the hopes of sending it to Trump's desk by July 4.
+##  Related stories 
+###  Business Insider tells the innovative stories you want to know
+###  Business Insider tells the innovative stories you want to know
+## Tech leaders were pushing for the provision
+While Republicans and Democrats alike saw the AI regulation moratorium as a threat to states' rights and a giveaway to the tech industry, the provision did have its proponents.
+In general, they argued that it was important not to hamper the AI industry at a time when competition with China is heating up. Many of the biggest proponents were in the tech industry itself.
+At a Senate hearing in May, OpenAI CEO [Sam Altman](https://www.businessinsider.com/sam-altman-chatgpt-openai-ceo-career-net-worth-ycombinator-prepper-2023-1) said that it would be "quite bad" to have a "patchwork regulatory framework" in which multiple states are passing different AI laws.
+"That will slow us down at a time where I don't think it's in anyone's interest for us to slow down," Altman said, saying he'd prefer "one federal framework, that is light touch, that we can understand and that lets us move with the speed that this moment calls for."
+Palmer Luckey, a cofounder of Anduril Technologies, had [said](https://x.com/PalmerLuckey/status/1937782321220141470) the provision was "absolutely critical for the economic, educational, military, and cultural future of America."
+And Joe Lonsdale, a venture capitalist who cofounded Palantir Technologies, wrote a blog post in support of the provision.
+"It is not that we have total faith in the wisdom of Congress; it is that we see the huge problems of a state-by-state system for new technology, and don't want to see innovation sabotaged," Lonsdale wrote.

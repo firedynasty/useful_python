@@ -1,0 +1,25 @@
+#!/bin/bash
+# run_hsk.sh
+#
+# Generate HSK lesson videos. Each HSK level is split into 10 lessons
+# sorted by word frequency (most common words first).
+#
+# Usage:
+#   ./run_hsk.sh <level>              # all 10 lessons for that HSK level
+#   ./run_hsk.sh <level> <lesson>     # single lesson within that level
+#
+# Examples:
+#   ./run_hsk.sh 1          # HSK 1, all 10 lessons (294 words / 10 ≈ 30 words each)
+#   ./run_hsk.sh 3 5        # HSK 3, lesson 5 only
+#
+# Output: output/hsk_<level>/lesson_<NN>/
+#
+# Requires: OPENAI_API_KEY, python3, ffmpeg
+#
+# HSK Levels:
+#   1: 294 words  (~30/lesson)    5: 1547 words (~155/lesson)
+#   2: 197 words  (~20/lesson)    6: 1684 words (~168/lesson)
+#   3: 487 words  (~49/lesson)    7: 4876 words (~488/lesson)
+#   4: 972 words  (~97/lesson)
+
+

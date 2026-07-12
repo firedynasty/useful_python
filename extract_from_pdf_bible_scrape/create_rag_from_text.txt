@@ -1,0 +1,8 @@
+⏺ Bash(python create_rag_from_text.py don_quixote.txt -o rag_don_quixote 2>&1)
+
+
+so I can have two parts
+
+to Don Quixote
+
+

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Link Redirector (Local File)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .container {
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .status {
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 4px;
+    }
+    .success {
+      background-color: #d4edda;
+      color: #155724;
+    }
+    .error {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+    .warning {
+      background-color: #fff3cd;
+      color: #856404;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .loading {
+      text-align: center;
+      margin: 20px 0;
+      font-style: italic;
+      color: #666;
+    }
+    .file-upload {
+      margin: 20px 0;
+      padding: 10px;
+      border: 1px dashed #ccc;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Link Redirector (Local File)</h1>
+    
+    <!-- Configuration Panel -->
+    <div id="config-panel">
+      <h2>Load Redirects File</h2>
+      <div class="file-upload">
+        <p>Select a CSV or TXT file with your redirects:</p>
+        <p><small>Format: Each line should be "key,URL" or "key URL"</small></p>
+        <input type="file" id="redirects-file" accept=".csv,.txt">
+        <button id="load-file-btn">Load File</button>
+      </div>
+      
+      <h2>Add New Redirect</h2>
+      <form id="redirect-form">
+        <div>
+          <label for="key">Key/ID:</label>
+          <input type="text" id="key" required>
+        </div>
+        <div style="margin-top: 10px;">
+          <label for="url">Destination URL:</label>
+          <input type="url" id="url" style="width: 80%;" required>
+        </div>
+        <div style="margin-top: 10px;">
+          <button type="submit">Add Redirect</button>
+        </div>
+      </form>
+      
+      <div style="margin-top: 20px;">
+        <button id="save-file-btn">Save to File</button>
+      </div>
+      
+      <div id="status" class="status" style="display: none;"></div>
+      
+      <h2>Current Redirects</h2>
+      <div id="loading-indicator" class="loading">No redirects loaded yet. Please load a file or add redirects manually.</div>
+      <table id="redirects-table">
+        <thead>
+          <tr>
+            <th>Key/ID</th>
+            <th>Destination URL</th>
+            <th>Test Link</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="redirects-body">
+          <!-- Redirects will be populated here -->
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- Redirect Logic -->
+    <div id="redirect-panel" style="display: none;">
+      <h2>Opening Link...</h2>
+      <p>Link has been opened in a new window. You will be redirected back to homepage in a moment.</p>
+      <p>If the link didn't open automatically, <a id="manual-redirect" href="#" target="_blank">click here</a>.</p>
+    </div>
+  </div>
+  
+  <script>
+    // Store redirects in memory
+    let redirects = {};
+    
+    // Load redirects from server API
+    async function loadRedirectsFromServer() {
+      try {
+        const response = await fetch('/api/redirects');
+        if (!response.ok) {
+          throw new Error('Failed to fetch redirects from server');
+        }
+        redirects = await response.json();
+        renderRedirectsTable();
+        showStatus('Redirects loaded from server', 'success');
+      } catch (error) {
+        console.error('Error loading redirects from server:', error);
+        // Fall back to localStorage if server fetch fails
+        const savedRedirects = localStorage.getItem('local_redirects');
+        if (savedRedirects) {
+          try {
+            redirects = JSON.parse(savedRedirects);
+            renderRedirectsTable();
+          } catch (error) {
+            console.error("Error loading from localStorage:", error);
+          }
+        }
+      }
+    }
+    
+    // Function to show status messages
+    function showStatus(message, type) {
+      const statusDiv = document.getElementById('status');
+      statusDiv.textContent = message;
+      statusDiv.style.display = 'block';
+      statusDiv.className = `status ${type}`;
+      
+      // Auto-hide after 3 seconds
+      setTimeout(() => {
+        statusDiv.style.display = 'none';
+      }, 3000);
+    }
+    
+    // Parse file content (CSV or TXT)
+    function parseFileContent(content) {
+      const lines = content.split('\n');
+      const parsedRedirects = {};
+      
+      lines.forEach((line, index) => {
+        // Skip empty lines
+        if (line.trim() === '') return;
+        
+        let key, url;
+        
+        // Try CSV format first (comma-separated)
+        if (line.includes(',')) {
+          [key, url] = line.split(',', 2);
+        } 
+        // Then try space-separated format
+        else {
+          const parts = line.trim().split(/\s+/, 2);
+          if (parts.length >= 2) {
+            [key, url] = parts;
+          } else {
+            showStatus(`Error in line ${index+1}: ${line}`, 'error');
+            return;
+          }
+        }
+        
+        // Clean up key and URL
+        key = key.trim();
+        url = url.trim();
+        
+        // Validate URL format
+        if (!url.startsWith('http://') && !url.startsWith('https://')) {
+          url = 'https://' + url;
+        }
+        
+        parsedRedirects[key] = url;
+      });
+      
+      return parsedRedirects;
+    }
+    
+    // Load file handler
+    document.getElementById('load-file-btn').addEventListener('click', () => {
+      const fileInput = document.getElementById('redirects-file');
+      const file = fileInput.files[0];
+      
+      if (!file) {
+        showStatus('Please select a file first', 'error');
+        return;
+      }
+      
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try {
+          const content = e.target.result;
+          redirects = parseFileContent(content);
+          renderRedirectsTable();
+          showStatus('Redirects loaded successfully', 'success');
+        } catch (error) {
+          console.error('Error parsing file:', error);
+          showStatus('Error parsing file. Please check format.', 'error');
+        }
+      };
+      
+      reader.onerror = () => {
+        showStatus('Error reading file', 'error');
+      };
+      
+      reader.readAsText(file);
+    });
+    
+    // Save to file handler
+    document.getElementById('save-file-btn').addEventListener('click', () => {
+      // Convert redirects object to CSV format
+      let csvContent = '';
+      Object.entries(redirects).forEach(([key, url]) => {
+        csvContent += `${key},${url}\n`;
+      });
+      
+      // Create a blob and download link
+      const blob = new Blob([csvContent], { type: 'text/csv' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'redirects.csv';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      
+      showStatus('Redirects saved to file', 'success');
+    });
+    
+    // Function to render the redirects table
+    function renderRedirectsTable() {
+      const loadingIndicator = document.getElementById('loading-indicator');
+      const tableBody = document.getElementById('redirects-body');
+      tableBody.innerHTML = '';
+      
+      const redirectCount = Object.keys(redirects).length;
+      
+      if (redirectCount === 0) {
+        loadingIndicator.textContent = 'No redirects loaded yet. Please load a file or add redirects manually.';
+        loadingIndicator.style.display = 'block';
+        return;
+      } else {
+        loadingIndicator.style.display = 'none';
+      }
+      
+      Object.entries(redirects).forEach(([key, url]) => {
+        const row = document.createElement('tr');
+        
+        // Key/ID cell
+        const keyCell = document.createElement('td');
+        keyCell.textContent = key;
+        row.appendChild(keyCell);
+        
+        // URL cell
+        const urlCell = document.createElement('td');
+        urlCell.textContent = url;
+        row.appendChild(urlCell);
+        
+        // Test link cell
+        const testCell = document.createElement('td');
+        const testLink = document.createElement('a');
+        testLink.href = `${window.location.origin}${window.location.pathname}#${key}`;
+        testLink.textContent = 'Test';
+        testLink.target = '_blank';
+        testCell.appendChild(testLink);
+        row.appendChild(testCell);
+        
+        // Delete button cell
+        const actionCell = document.createElement('td');
+        const deleteBtn = document.createElement('button');
+        deleteBtn.textContent = 'Delete';
+        deleteBtn.onclick = () => {
+          deleteRedirect(key);
+        };
+        actionCell.appendChild(deleteBtn);
+        row.appendChild(actionCell);
+        
+        tableBody.appendChild(row);
+      });
+    }
+    
+    // Function to add a new redirect
+    function addRedirect(key, url) {
+      if (redirects[key]) {
+        showStatus(`Key "${key}" already exists. Overwriting.`, 'warning');
+      }
+      
+      redirects[key] = url;
+      renderRedirectsTable();
+      
+      showStatus(`Redirect added successfully for key "${key}"`, 'success');
+      
+      // Clear the form
+      document.getElementById('key').value = '';
+      document.getElementById('url').value = '';
+    }
+    
+    // Function to delete a redirect
+    function deleteRedirect(key) {
+      if (redirects[key]) {
+        delete redirects[key];
+        renderRedirectsTable();
+        showStatus(`Redirect for key "${key}" deleted.`, 'success');
+      }
+    }
+    
+    // Helper function to check a specific redirect key
+    function checkRedirectKey(key) {
+      if (!key) return;
+      
+      const targetUrl = redirects[key];
+      
+      if (targetUrl) {
+        // Show the redirect panel
+        document.getElementById('config-panel').style.display = 'none';
+        document.getElementById('redirect-panel').style.display = 'block';
+        
+        // Set the manual redirect link
+        document.getElementById('manual-redirect').href = targetUrl;
+        
+        // Open target URL in a new window
+        window.open(targetUrl, '_blank');
+        
+        // Redirect the current window back to homepage after a short delay
+        setTimeout(() => {
+          const baseUrl = window.location.href.split('#')[0];
+          window.location.href = baseUrl;
+        }, 1500);
+      } else {
+        showStatus(`No redirect found for key "${key}"`, 'error');
+      }
+    }
+    
+    // Function to check if we need to redirect
+    function checkForRedirect() {
+      // Get the hash to determine the redirect key
+      const hash = window.location.hash.substring(1);
+      
+      // Get the path to determine the redirect key
+      const path = window.location.pathname;
+      const pathMatch = path.match(/\/(\w+)$/);
+      
+      let redirectKey = null;
+      
+      // Check if we have a hash-based key (#1, #2, etc.)
+      if (hash) {
+        redirectKey = hash;
+      } 
+      // Check if we have a path-based key (/1, /2, etc.)
+      else if (pathMatch && pathMatch[1]) {
+        redirectKey = pathMatch[1];
+      }
+      
+      if (redirectKey) {
+        checkRedirectKey(redirectKey);
+      }
+    }
+    
+    // Initialize the page
+    document.addEventListener('DOMContentLoaded', () => {
+      // Set up the form submission
+      document.getElementById('redirect-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const key = document.getElementById('key').value;
+        const url = document.getElementById('url').value;
+        addRedirect(key, url);
+      });
+      
+      // Load redirects from server API
+      loadRedirectsFromServer();
+      
+      // Check if we need to redirect
+      checkForRedirect();
+      
+      // Set up periodic reload of redirects from server (every 5 seconds)
+      setInterval(loadRedirectsFromServer, 5000);
+    });
+    
+    // Add event listener for beforeunload to save to localStorage
+    window.addEventListener('beforeunload', () => {
+      localStorage.setItem('local_redirects', JSON.stringify(redirects));
+    });
+    
+    // Listen for hash changes (for testing without page reload)
+    window.addEventListener('hashchange', checkForRedirect);
+  </script>
+</body>
+</html>

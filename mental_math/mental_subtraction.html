@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Subtraction Practice</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Courier New', monospace;
+            background: #1a1a2e;
+            color: #eee;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            color: #00d9ff;
+            border: 2px solid #00d9ff;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #888;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        .menu, .practice, .demo {
+            background: #16213e;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .menu-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            background: #0f3460;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 16px;
+            text-align: left;
+        }
+        .menu-btn:hover {
+            background: #1a4980;
+        }
+        .problem {
+            font-size: 32px;
+            text-align: right;
+            padding: 20px;
+            background: #0f3460;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-family: 'Courier New', monospace;
+        }
+        .problem .num1 { color: #fff; }
+        .problem .operator { color: #ff6b6b; margin-right: 10px; }
+        .problem .num2 { color: #fff; }
+        .problem .line {
+            border-top: 3px solid #fff;
+            margin-top: 10px;
+            padding-top: 5px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            font-size: 24px;
+            font-family: inherit;
+            background: #0a0a15;
+            border: 2px solid #333;
+            color: #fff;
+            border-radius: 5px;
+            text-align: right;
+        }
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #00d9ff;
+        }
+        .btn-row {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .btn {
+            flex: 1;
+            padding: 12px;
+            font-family: inherit;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background: #00d9ff;
+            color: #000;
+        }
+        .btn-secondary {
+            background: #333;
+            color: #fff;
+        }
+        .btn-hint {
+            background: #ff9f43;
+            color: #000;
+        }
+        .btn:hover { opacity: 0.9; }
+        .btn-next {
+            background: #27ae60;
+            color: #fff;
+            font-size: 18px;
+            padding: 15px;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(39, 174, 96, 0.4); }
+            50% { box-shadow: 0 0 0 10px rgba(39, 174, 96, 0); }
+        }
+        .feedback {
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-size: 18px;
+        }
+        .correct {
+            background: #27ae60;
+            color: #fff;
+        }
+        .incorrect {
+            background: #c0392b;
+            color: #fff;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 15px;
+            background: #0f3460;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .technique {
+            background: #1e3a5f;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        .technique h3 {
+            color: #00d9ff;
+            margin-top: 0;
+        }
+        .step {
+            margin: 8px 0;
+            padding-left: 15px;
+            border-left: 2px solid #00d9ff;
+        }
+        .running-total {
+            color: #ff9f43;
+        }
+        .final-answer {
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .hidden { display: none; }
+        .progress {
+            text-align: center;
+            color: #888;
+            margin-bottom: 10px;
+        }
+        .results {
+            text-align: center;
+            padding: 30px;
+        }
+        .results h2 {
+            color: #00d9ff;
+        }
+        .results .score {
+            font-size: 48px;
+            color: #27ae60;
+            margin: 20px 0;
+        }
+        .tip {
+            font-size: 12px;
+            color: #666;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MENTAL SUBTRACTION</h1>
+        <div class="subtitle">Based on Arthur Benjamin's "Secrets of Mental Math"</div>
+
+        <!-- Menu -->
+        <div id="menu" class="menu">
+            <button class="menu-btn" onclick="startPractice(1)">
+                1. 3-digit minus 3-digit (e.g., 567 - 284)
+            </button>
+            <button class="menu-btn" onclick="startPractice(2)">
+                2. 4-digit minus 3-digit (e.g., 4523 - 876)
+            </button>
+            <button class="menu-btn" onclick="showDemo()">
+                3. Learn the technique (demonstration)
+            </button>
+            <div class="tip">Tip: Write your working, last number is your answer: 806-83,726-3 723</div>
+        </div>
+
+        <!-- Practice Area -->
+        <div id="practice" class="practice hidden">
+            <div class="stats">
+                <span>Score: <span id="score">0</span>/<span id="total">0</span></span>
+                <span>Time: <span id="timer">0.0</span>s</span>
+            </div>
+            <div class="progress">Problem <span id="current">1</span> of <span id="numProblems">10</span></div>
+
+            <div class="problem">
+                <div class="num1" id="num1">567</div>
+                <div><span class="operator">-</span><span class="num2" id="num2">284</span></div>
+                <div class="line"></div>
+            </div>
+
+            <input type="text" id="answer" placeholder="Your answer" autocomplete="off">
+
+            <div class="btn-row" id="submitRow">
+                <button class="btn btn-primary" onclick="submitAnswer()">Submit (Enter)</button>
+                <button class="btn btn-hint" onclick="showHint()">Hint (H)</button>
+                <button class="btn btn-secondary" onclick="backToMenu()">Quit (Q)</button>
+            </div>
+
+            <div id="feedback" class="feedback hidden"></div>
+            <div id="technique" class="technique hidden"></div>
+
+            <div class="btn-row hidden" id="nextRow">
+                <button class="btn btn-next" onclick="nextProblem()">Click for Next Problem (or press Enter)</button>
+                <button class="btn btn-secondary" onclick="backToMenu()">Quit</button>
+            </div>
+        </div>
+
+        <!-- Demo Area -->
+        <div id="demo" class="demo hidden">
+            <h3 style="color: #00d9ff; margin-top: 0;">Left-to-Right Technique</h3>
+            <div id="demoContent"></div>
+            <div class="btn-row">
+                <button class="btn btn-secondary" onclick="backToMenu()">Back to Menu</button>
+            </div>
+        </div>
+
+        <!-- Results -->
+        <div id="results" class="results hidden">
+            <h2>Session Complete!</h2>
+            <div class="score"><span id="finalScore">0</span>%</div>
+            <p><span id="correctCount">0</span> correct out of <span id="totalCount">0</span></p>
+            <p>Average time: <span id="avgTime">0</span> seconds</p>
+            <div class="btn-row">
+                <button class="btn btn-primary" onclick="backToMenu()">Back to Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // State
+        let mode = 1;
+        let num1 = 0, num2 = 0, correctAnswer = 0;
+        let score = 0, total = 0, problemNum = 0, numProblems = 10;
+        let startTime = 0, totalTime = 0;
+        let timerInterval = null;
+        let waitingForNext = false;
+
+        // Generate problem
+        function generateProblem(mode) {
+            let n1, n2;
+            if (mode === 1) {
+                n1 = Math.floor(Math.random() * 900) + 100;
+                n2 = Math.floor(Math.random() * 900) + 100;
+            } else {
+                n1 = Math.floor(Math.random() * 9000) + 1000;
+                n2 = Math.floor(Math.random() * 900) + 100;
+            }
+            if (n1 < n2) [n1, n2] = [n2, n1];
+            if (mode === 2 && n1 < 1000) {
+                n1 = Math.floor(Math.random() * 9000) + 1000;
+            }
+            return [n1, n2];
+        }
+
+        // Extract answer from input (uses last number in the input)
+        function extractAnswer(input) {
+            // Find all numbers (including negative) in the input
+            const matches = input.match(/-?\d+/g);
+            if (matches && matches.length > 0) {
+                // Return the last number found
+                return parseInt(matches[matches.length - 1]);
+            }
+            return null;
+        }
+
+        // Generate technique explanation
+        function generateTechnique(n1, n2) {
+            const str1 = n1.toString();
+            const str2 = n2.toString().padStart(str1.length, '0');
+
+            let html = `<h3>Arthur Benjamin's Left-to-Right Technique</h3>`;
+            html += `<p>Problem: ${n1} - ${n2}</p>`;
+
+            let runningTotal = 0;
+            const placeNames = {1: 'ones', 10: 'tens', 100: 'hundreds', 1000: 'thousands', 10000: 'ten-thousands'};
+
+            for (let i = 0; i < str1.length; i++) {
+                const d1 = parseInt(str1[i]);
+                const d2 = parseInt(str2[i]);
+                const place = Math.pow(10, str1.length - 1 - i);
+                const diff = (d1 - d2) * place;
+                runningTotal += diff;
+
+                const placeName = placeNames[place] || place + 's';
+                const sign = diff >= 0 ? '+' : '';
+
+                html += `<div class="step">`;
+                html += `${placeName}: ${d1} - ${d2} = ${d1 - d2} → <strong>${sign}${diff}</strong><br>`;
+                html += `<span class="running-total">Running total: ${runningTotal}</span>`;
+                html += `</div>`;
+            }
+
+            html += `<div class="final-answer">Final answer: ${runningTotal}</div>`;
+            return html;
+        }
+
+        // Start practice session
+        function startPractice(m) {
+            mode = m;
+            const input = prompt('How many problems? (default: 10)');
+            numProblems = parseInt(input) || 10;
+
+            score = 0;
+            total = 0;
+            problemNum = 0;
+            totalTime = 0;
+
+            document.getElementById('menu').classList.add('hidden');
+            document.getElementById('practice').classList.remove('hidden');
+            document.getElementById('numProblems').textContent = numProblems;
+            document.getElementById('score').textContent = '0';
+            document.getElementById('total').textContent = '0';
+
+            nextProblem();
+        }
+
+        // Next problem
+        function nextProblem() {
+            if (problemNum >= numProblems) {
+                showResults();
+                return;
+            }
+
+            problemNum++;
+            [num1, num2] = generateProblem(mode);
+            correctAnswer = num1 - num2;
+            waitingForNext = false;
+
+            document.getElementById('num1').textContent = num1;
+            document.getElementById('num2').textContent = num2;
+            document.getElementById('current').textContent = problemNum;
+            document.getElementById('answer').value = '';
+            document.getElementById('answer').disabled = false;
+            document.getElementById('feedback').classList.add('hidden');
+            document.getElementById('technique').classList.add('hidden');
+            document.getElementById('submitRow').classList.remove('hidden');
+            document.getElementById('nextRow').classList.add('hidden');
+            document.getElementById('answer').focus();
+
+            startTime = Date.now();
+            updateTimer();
+            timerInterval = setInterval(updateTimer, 100);
+        }
+
+        // Update timer display
+        function updateTimer() {
+            const elapsed = (Date.now() - startTime) / 1000;
+            document.getElementById('timer').textContent = elapsed.toFixed(1);
+        }
+
+        // Submit answer
+        function submitAnswer() {
+            if (waitingForNext) return;
+
+            clearInterval(timerInterval);
+            const elapsed = (Date.now() - startTime) / 1000;
+            totalTime += elapsed;
+
+            const input = document.getElementById('answer').value;
+            const userAnswer = extractAnswer(input);
+
+            total++;
+            const feedback = document.getElementById('feedback');
+            const technique = document.getElementById('technique');
+
+            if (userAnswer === correctAnswer) {
+                score++;
+                feedback.className = 'feedback correct';
+                feedback.textContent = `✓ Correct! (${elapsed.toFixed(1)}s)`;
+                technique.classList.add('hidden');
+            } else {
+                feedback.className = 'feedback incorrect';
+                feedback.textContent = `✗ Incorrect. The answer is ${correctAnswer}`;
+                technique.innerHTML = generateTechnique(num1, num2);
+                technique.classList.remove('hidden');
+                // Scroll to show the technique
+                setTimeout(() => technique.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+            }
+
+            feedback.classList.remove('hidden');
+            document.getElementById('score').textContent = score;
+            document.getElementById('total').textContent = total;
+
+            // Disable input and show Next button
+            document.getElementById('answer').disabled = true;
+            document.getElementById('submitRow').classList.add('hidden');
+            document.getElementById('nextRow').classList.remove('hidden');
+            document.querySelector('#nextRow .btn-next').focus();
+            waitingForNext = true;
+        }
+
+        // Show hint
+        function showHint() {
+            const technique = document.getElementById('technique');
+            technique.innerHTML = generateTechnique(num1, num2);
+            technique.classList.remove('hidden');
+        }
+
+        // Show results
+        function showResults() {
+            clearInterval(timerInterval);
+            document.getElementById('practice').classList.add('hidden');
+            document.getElementById('results').classList.remove('hidden');
+
+            const pct = total > 0 ? Math.round(100 * score / total) : 0;
+            const avg = total > 0 ? (totalTime / total).toFixed(1) : 0;
+
+            document.getElementById('finalScore').textContent = pct;
+            document.getElementById('correctCount').textContent = score;
+            document.getElementById('totalCount').textContent = total;
+            document.getElementById('avgTime').textContent = avg;
+        }
+
+        // Show demonstration
+        function showDemo() {
+            document.getElementById('menu').classList.add('hidden');
+            document.getElementById('demo').classList.remove('hidden');
+
+            let html = '';
+            html += '<div style="margin-bottom: 20px;">' + generateTechnique(567, 284) + '</div>';
+            html += '<hr style="border-color: #333; margin: 20px 0;">';
+            html += '<div>' + generateTechnique(4523, 876) + '</div>';
+
+            document.getElementById('demoContent').innerHTML = html;
+        }
+
+        // Back to menu
+        function backToMenu() {
+            clearInterval(timerInterval);
+            waitingForNext = false;
+            document.getElementById('menu').classList.remove('hidden');
+            document.getElementById('practice').classList.add('hidden');
+            document.getElementById('demo').classList.add('hidden');
+            document.getElementById('results').classList.add('hidden');
+        }
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (document.getElementById('practice').classList.contains('hidden')) return;
+
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                if (waitingForNext) {
+                    nextProblem();
+                } else {
+                    submitAnswer();
+                }
+            } else if (e.key.toLowerCase() === 'h' && document.activeElement.tagName !== 'INPUT') {
+                showHint();
+            } else if (e.key.toLowerCase() === 'q' && document.activeElement.tagName !== 'INPUT') {
+                backToMenu();
+            }
+        });
+
+        // Handle Enter in input field
+        document.getElementById('answer').addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                e.stopPropagation(); // Prevent document handler from also firing
+                if (waitingForNext) {
+                    nextProblem();
+                } else {
+                    submitAnswer();
+                }
+            }
+        });
+    </script>
+</body>
+</html>

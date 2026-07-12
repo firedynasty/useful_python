@@ -1,0 +1,415 @@
+# Smart Archive Config
+# Keywords route files to specific subfolders
+# ⏺ Done. Now you can paste subjects at root level without indenting:   
+
+
+archive_root: ~/Archive
+
+subjects:
+
+  JobSearch:
+    path: /Users/stanleytan/OneDrive/documents/job_search
+    # keyword → subfolder mapping
+    routes:
+      resume-versions:
+        - resume
+        - cv
+        - curriculum vitae
+      cover-letters:
+        - cover letter
+        - cover_letter
+      applications:
+        - application
+        - apply
+        - applied
+      interview-prep:
+        - interview
+        - behavioral
+        - technical interview
+      general:  # default subfolder if no specific match
+        - job
+        - career
+        - linkedin
+        - hiring
+        - recruiter
+        - salary
+        - portfolio
+
+
+JobSearchGeneral:
+  path: /Users/stanleytan/OneDrive/documents/job_search/general
+  routes:
+    networking:
+      - networking
+      - linkedin
+      - connections
+      - contacts
+    references:
+      - reference
+      - references
+      - recommendation
+    research:
+      - job
+      - job_board
+      - job_boards
+      - job_listings
+      - salary
+      - data analyst
+      - market research
+    company-info:
+      - company
+      - organization
+      - employer
+    strategy:
+      - career
+      - strategy
+      - notes
+      - planning
+    personal-prep:
+      - qualities
+      - values
+      - self_assessment
+      - personal_branding
+    communication:
+      - presentation
+      - communication_tips
+      - email_templates
+      - tips
+
+
+Bible:
+  path: ~/Archive/Bible-Study
+  routes:
+    commentary:
+      - commentary
+      - matthew henry
+      - mhc
+    devotionals:
+      - devotional
+      - daily
+      - quiet time
+    sermons:
+      - sermon
+      - preaching
+      - message
+    study-notes:
+      - bible
+      - scripture
+      - verse
+      - chapter
+    theology:
+      - theology
+      - doctrine
+      - systematic
+
+Code:
+  path: ~/Archive/Code-Projects
+  routes:
+    python:
+      - .py
+      - python
+    javascript:
+      - .js
+      - .ts
+      - javascript
+      - node
+    web:
+      - .html
+      - .css
+      - website
+    data:
+      - .json
+      - .csv
+      - .xml
+      - pandas
+      - dataframe
+    general:
+      - github
+      - repository
+      - api
+      - algorithm
+
+Education:
+  path: ~/Archive/Education
+  routes:
+    data-science:
+      - data science
+      - machine learning
+      - statistics
+      - msds
+    courses:
+      - course
+      - lecture
+      - syllabus
+    assignments:
+      - assignment
+      - homework
+      - project
+      - submission
+    notes:
+      - notes
+      - study
+      - class
+
+Literature:
+  path: ~/Archive/Literature-Reading
+  routes:
+    ebooks:
+      - .epub
+      - .mobi
+      - kindle
+    classics:
+      - classic
+      - don quixote
+      - shakespeare
+    notes:
+      - book notes
+      - summary
+      - review
+
+Health:
+  path: ~/Archive/Health-Nutrition
+  routes:
+    recipes:
+      - recipe
+      - cooking
+      - meal
+    fitness:
+      - workout
+      - exercise
+      - gym
+      - fitness
+    nutrition:
+      - nutrition
+      - vitamin
+      - supplement
+      - diet
+    medical:
+      - medical
+      - doctor
+      - prescription
+      - health
+
+Misc:
+  path: ~/Archive/Miscellaneous
+  routes:
+    general: []
+
+Iran:
+  path: /Users/stanleytan/Downloads/iran
+  routes:
+    iran-war:
+      - iran_war
+      - iranwar
+      - iran_war_framing
+      - iran_war_objectives
+    scorecards:
+      - scorecard
+      - day_
+    doctrine:
+      - keenan_doctrine
+      - kennan_doctrine
+    israel:
+      - israel
+      - israels_
+    nuclear:
+      - nuclear
+      - bomb
+    strategy:
+      - strategy
+      - objectives
+    geopolitics:
+      - geopolitics
+      - south_korea
+    propaganda:
+      - propaganda
+    misc: []
+
+Basketball:
+  path: /Users/stanleytan/documents/notes/hobbies/02-basketball_b
+  routes:
+    skills_shooting:
+      - shooting
+      - shooter
+      - jumper
+      - jump_shot
+      - jumpshot
+      - shot
+      - pull_up
+      - pull up
+      - step_back
+      - step back
+      - stepback
+      - fade
+      - fadeaway
+      - 3 spot shooting
+      - 3-point
+      - three
+      - backboard
+      - clark_step
+      - caitlin
+    skills_dribbling:
+      - dribbl
+      - handle
+      - crossover
+      - cross-over
+      - between the legs
+      - underdrag
+      - ball handling
+      - ballhandling
+      - hesi
+      - hesitation
+      - jab
+      - drag_and
+      - change_pace
+      - change_level
+      - moves
+      - spin_move
+      - spin move
+    skills_driving:
+      - drive
+      - driving
+      - finish
+      - finishing
+      - contact
+      - veer
+      - bump
+      - layup
+      - gather
+      - floater
+      - acuff
+      - thompson
+      - prohop
+      - pro hop
+    skills_defense:
+      - defense
+      - defensive
+      - steal
+      - block
+      - boxing_out
+      - trapping
+      - lane_violation
+      - grab_a_steal
+      - look_at_hips
+      - foul
+    skills_post-play:
+      - pivot
+      - post
+      - postup
+      - spin seal
+      - drop stance
+      - drop_step
+      - randolph
+      - tim_duncan
+      - portis
+      - hip_swivel
+      - hip_flip
+    skills_passing:
+      - pass
+      - passing
+      - receive_pass
+      - stockton
+    team-concepts_plays:
+      - play
+      - BLOB
+      - sideline
+      - out of bounds
+      - zone offense
+      - blocker mover
+      - horns
+      - 4_out
+      - 5-on-5
+      - five_motion
+      - get_action
+      - doublescreen
+    team-concepts_cutting:
+      - cut
+      - cutting
+      - off ball
+      - off-ball
+      - off_ball
+      - screen
+      - relocation
+      - curl
+      - transition
+    workouts_drills:
+      - drill
+      - workout
+      - training
+      - warm
+      - decelerat
+      - kettlebell
+      - squat
+      - plymetric
+      - skater
+      - lateral
+      - windmill
+      - windmil
+      - cossack
+      - yard_work
+      - split_and_drop
+    game-film_breakdowns:
+      - highlight
+      - HBD
+      - PTS
+      - AST
+      - REB
+      - acuff
+      - commentary
+      - game_notes
+      - turnovers
+      - brown_and_tatum
+      - kobe
+      - rozier
+      - curry
+      - tatum
+      - big_3_game
+      - lecture
+    game-notes:
+      - notes-after
+      - watching
+      - love_passing
+      - playing_one
+      - notes0204
+    reference:
+      - chatgpt
+      - article
+      - soccer
+      - howSmall
+      - Mugsy
+      - instagram
+      - instagramTips
+      - coaching_five
+      - Breakthrough
+      - seeMikeDunn
+      - methodology
+      - proprioception
+      - achilles
+      - question
+      - explain what
+      - analytics
+    rules:
+      - rule
+      - travel
+      - notravel
+      - pivot_foot
+      - jump_stop
+      - shake_and_bake
+      - contact_sport
+    web-project:
+      - index.html
+      - index.php
+      - .js
+      - .py
+      - .json
+      - galleries
+      - mainlinks
+      - bluehost
+      - content_config
+      - content_data
+      - cache_bust
+      - generate_video
+      - batch_convert
+      - indexeddb
+      - combined_texts
+    misc: []

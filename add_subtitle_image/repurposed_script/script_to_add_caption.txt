@@ -1,0 +1,6 @@
+python caption_image.py "image.png" "Text I would like to make it a caption underneath"
+
+
+--output or -o: Specify a custom output filename
+--font-size or -s: Change the caption text size
+--strip-height or -h: Manually set the height of the caption area

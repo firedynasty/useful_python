@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Google Docs to IndexedDB Storage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .level1-container, .level2-container, .content-container, .status-container {
+      border: 2px solid #ccc;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+
+    .save-section, .load-section {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+
+    .save-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 8px 16px;
+      margin-left: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .load-btn {
+      background-color: #2196F3;
+      color: white;
+      padding: 8px 16px;
+      margin-left: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .copy-btn {
+      background-color: #FF9800;
+      color: white;
+      padding: 8px 16px;
+      margin-left: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .delete-btn {
+      background-color: #f44336;
+      color: white;
+      padding: 8px 16px;
+      margin-left: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .clear-btn {
+      background-color: #9E9E9E;
+      color: white;
+      padding: 8px 16px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    .success { color: #4CAF50; font-weight: bold; }
+    .error { color: #f44336; font-weight: bold; }
+    .info { color: #2196F3; font-weight: normal; }
+
+    #statusMessage {
+      font-weight: bold;
+      color: #333;
+    }
+
+    #keyCount {
+      color: #666;
+      font-style: italic;
+    }
+
+    #contentTextArea {
+      width: 100%;
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+      line-height: 1.4;
+      box-sizing: border-box;
+    }
+    
+    select, input[type="text"] {
+      padding: 5px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>🏀 Google Docs → IndexedDB Storage System</h2>
+
+<!-- Level 1: Database Selection -->
+<div class="level1-container">
+  <h3>Level 1: Database Selection</h3>
+  <select id="databaseSelect">
+    <option value="basketballStorage" selected>Basketball Storage</option>
+    <option value="vocabChinese">Vocab Chinese</option>
+    <option value="flashcardsDB">Flashcards DB</option>
+    <option value="googleDocsContent">Google Docs Content</option>
+  </select>
+  <button id="refreshKeys">Refresh Keys</button>
+</div>
+
+<br>
+
+<!-- Content Area -->
+<div class="content-container">
+  <h3>Content Area (Paste from Google Docs)</h3>
+  <textarea id="contentTextArea" rows="12" cols="120" placeholder="Paste your Google Docs content here..."></textarea>
+  <button id="clearTextArea" class="clear-btn">🗑️ Clear Textarea</button>
+</div>
+
+<br>
+
+<!-- Level 2: Key Management -->
+<div class="level2-container">
+  <h3>Level 2: Key Management</h3>
+  
+  <!-- Save New Key -->
+  <div class="save-section">
+    <input type="text" id="keyNameInput" placeholder="Enter key name to save content" style="width: 300px;">
+    <button id="saveToKey" class="save-btn">💾 Save to Key</button>
+  </div>
+  
+  <br>
+  
+  <!-- Load Existing Key -->
+  <div class="load-section">
+    <select id="existingKeysDropdown" style="width: 300px;">
+      <option value="">Select existing key to load...</option>
+    </select>
+    <button id="loadFromKey" class="load-btn">📂 Load from Key</button>
+    <button id="copyToClipboard" class="copy-btn">📋 Copy to Clipboard</button>
+    <button id="deleteKey" class="delete-btn">🗑️ Delete Key</button>
+  </div>
+</div>
+
+<br>
+
+<!-- Status Display -->
+<div class="status-container">
+  <p id="statusMessage">Ready to save/load content</p>
+  <p id="keyCount">Keys in current database: 0</p>
+</div>
+
+<script>
+// ===== IndexedDB Wrapper Class =====
+class IndexedDBWrapper {
+    constructor() {
+        this.dbConnections = new Map();
+        this.availableKeys = new Set();
+        this.DB_VERSION = 1;
+        this.STORE_NAME = 'content';
+    }
+
+    async openDatabase(databaseName) {
+        if (this.dbConnections.has(databaseName)) {
+            return this.dbConnections.get(databaseName);
+        }
+
+        return new Promise((resolve, reject) => {
+            const request = indexedDB.open(databaseName, this.DB_VERSION);
+
+            request.onerror = () => reject(new Error(`Failed to open database: ${request.error?.message}`));
+
+            request.onsuccess = () => {
+                const db = request.result;
+                this.dbConnections.set(databaseName, db);
+                
+                db.onclose = () => this.dbConnections.delete(databaseName);
+                db.onerror = (event) => console.error(`Database error for ${databaseName}:`, event);
+                
+                resolve(db);
+            };
+
+            request.onupgradeneeded = (event) => {
+                const db = event.target.result;
+                
+                if (!db.objectStoreNames.contains(this.STORE_NAME)) {
+                    const store = db.createObjectStore(this.STORE_NAME, { keyPath: 'key' });
+                    store.createIndex('timestamp', 'timestamp', { unique: false });
+                    store.createIndex('dataType', 'dataType', { unique: false });
+                }
+            };
+        });
+    }
+
+    async set(databaseName, key, data) {
+        const db = await this.openDatabase(databaseName);
+        
+        return new Promise((resolve, reject) => {
+            const transaction = db.transaction([this.STORE_NAME], 'readwrite');
+            const store = transaction.objectStore(this.STORE_NAME);
+
+            const record = {
+                key,
+                data,
+                timestamp: Date.now(),
+                dataType: typeof data,
+                lastModified: new Date().toISOString()
+            };
+
+            const request = store.put(record);
+            request.onsuccess = () => {
+                console.log(`✓ Saved: ${databaseName}/${key}`);
+                resolve();
+            };
+            request.onerror = () => reject(new Error(`Save failed: ${request.error?.message}`));
+        });
+    }
+
+    async get(databaseName, key) {
+        const db = await this.openDatabase(databaseName);
+
+        return new Promise((resolve, reject) => {
+            const transaction = db.transaction([this.STORE_NAME], 'readonly');
+            const store = transaction.objectStore(this.STORE_NAME);
+            const request = store.get(key);
+
+            request.onsuccess = () => {
+                const result = request.result;
+                
+                resolve({
+                    exists: () => !!result,
+                    val: () => result ? result.data : null,
+                    key: () => key,
+                    ref: { key }
+                });
+            };
+
+            request.onerror = () => reject(new Error(`Get failed: ${request.error?.message}`));
+        });
+    }
+
+    async delete(databaseName, key) {
+        const db = await this.openDatabase(databaseName);
+
+        return new Promise((resolve, reject) => {
+            const transaction = db.transaction([this.STORE_NAME], 'readwrite');
+            const store = transaction.objectStore(this.STORE_NAME);
+            const request = store.delete(key);
+
+            request.onsuccess = () => {
+                console.log(`✓ Deleted: ${databaseName}/${key}`);
+                resolve();
+            };
+            request.onerror = () => reject(new Error(`Delete failed: ${request.error?.message}`));
+        });
+    }
+
+    async getAllKeys(databaseName) {
+        const db = await this.openDatabase(databaseName);
+
+        return new Promise((resolve, reject) => {
+            const transaction = db.transaction([this.STORE_NAME], 'readonly');
+            const store = transaction.objectStore(this.STORE_NAME);
+            const request = store.getAllKeys();
+
+            request.onsuccess = () => resolve(request.result);
+            request.onerror = () => reject(new Error(`Get keys failed: ${request.error?.message}`));
+        });
+    }
+}
+
+// ===== Main Google Docs IndexedDB Manager =====
+class GoogleDocsIndexedDB {
+    constructor() {
+        this.currentDatabase = 'basketballStorage';
+        this.indexedDBWrapper = new IndexedDBWrapper();
+        console.log('🚀 Google Docs IndexedDB Manager starting...');
+        this.initializeEventListeners();
+        this.loadInitialKeys();
+    }
+
+    initializeEventListeners() {
+        // Database selection
+        document.getElementById('databaseSelect').addEventListener('change', (e) => {
+            this.currentDatabase = e.target.value;
+            this.updateStatus(`Switched to database: ${this.currentDatabase}`);
+            this.loadKeysFromDatabase();
+        });
+
+        // Refresh keys button
+        document.getElementById('refreshKeys').addEventListener('click', () => {
+            this.loadKeysFromDatabase();
+        });
+
+        // Save to key
+        document.getElementById('saveToKey').addEventListener('click', () => {
+            this.saveContentToKey();
+        });
+
+        // Load from key
+        document.getElementById('loadFromKey').addEventListener('click', () => {
+            this.loadContentFromKey();
+        });
+
+        // Copy to clipboard
+        document.getElementById('copyToClipboard').addEventListener('click', () => {
+            this.copyContentToClipboard();
+        });
+
+        // Delete key
+        document.getElementById('deleteKey').addEventListener('click', () => {
+            this.deleteSelectedKey();
+        });
+
+        // Clear textarea
+        document.getElementById('clearTextArea').addEventListener('click', () => {
+            this.clearTextArea();
+        });
+
+        // Auto-load when dropdown selection changes
+        document.getElementById('existingKeysDropdown').addEventListener('change', (e) => {
+            if (e.target.value) {
+                this.loadContentFromKey(e.target.value);
+            }
+        });
+
+        // Enter key to save
+        document.getElementById('keyNameInput').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                this.saveContentToKey();
+            }
+        });
+    }
+
+    async saveContentToKey() {
+        const keyName = document.getElementById('keyNameInput').value.trim();
+        const content = document.getElementById('contentTextArea').value;
+
+        if (!keyName) {
+            this.updateStatus('❌ Please enter a key name', 'error');
+            return;
+        }
+
+        if (!content.trim()) {
+            this.updateStatus('❌ Please enter content to save', 'error');
+            return;
+        }
+
+        try {
+            // Check if key already exists
+            const existingSnapshot = await this.indexedDBWrapper.get(this.currentDatabase, keyName);
+            
+            if (existingSnapshot.exists() && !confirm(`Key "${keyName}" already exists. Overwrite?`)) {
+                return;
+            }
+
+            // Save content with metadata
+            const dataToSave = {
+                content: content,
+                savedAt: new Date().toISOString(),
+                savedFrom: 'GoogleDocs',
+                contentLength: content.length,
+                wordCount: content.split(/\s+/).filter(word => word.length > 0).length
+            };
+
+            await this.indexedDBWrapper.set(this.currentDatabase, keyName, dataToSave);
+            
+            this.updateStatus(`✅ Saved "${keyName}" to ${this.currentDatabase}`, 'success');
+            document.getElementById('keyNameInput').value = '';
+            
+            // Refresh the dropdown
+            setTimeout(() => this.loadKeysFromDatabase(), 500);
+
+        } catch (error) {
+            console.error('Save error:', error);
+            this.updateStatus(`❌ Failed to save: ${error.message}`, 'error');
+        }
+    }
+
+    async loadContentFromKey(specificKey = null) {
+        const keyToLoad = specificKey || document.getElementById('existingKeysDropdown').value;
+        
+        console.log('🔍 Loading key:', keyToLoad, 'from database:', this.currentDatabase);
+        
+        if (!keyToLoad) {
+            this.updateStatus('❌ Please select a key to load', 'error');
+            return;
+        }
+
+        try {
+            console.log('🔄 Calling indexedDBWrapper.get...');
+            const snapshot = await this.indexedDBWrapper.get(this.currentDatabase, keyToLoad);
+            console.log('📦 Snapshot received:', snapshot);
+            
+            if (!snapshot.exists()) {
+                console.log('❌ Key does not exist in database');
+                this.updateStatus(`❌ Key "${keyToLoad}" not found`, 'error');
+                return;
+            }
+
+            const savedData = snapshot.val();
+            console.log('💾 Saved data:', savedData);
+            
+            // Extract content (handle both old string format and new object format)
+            const content = typeof savedData === 'object' ? savedData.content : savedData;
+            
+            document.getElementById('contentTextArea').value = content;
+            
+            // Update status with metadata if available
+            if (typeof savedData === 'object' && savedData.savedAt) {
+                const savedDate = new Date(savedData.savedAt).toLocaleString();
+                const wordCount = savedData.wordCount || 'unknown';
+                this.updateStatus(`✅ Loaded "${keyToLoad}" (${wordCount} words, saved: ${savedDate})`, 'success');
+            } else {
+                this.updateStatus(`✅ Loaded "${keyToLoad}" from ${this.currentDatabase}`, 'success');
+            }
+
+        } catch (error) {
+            console.error('Load error:', error);
+            this.updateStatus(`❌ Failed to load: ${error.message}`, 'error');
+        }
+    }
+
+    async copyContentToClipboard() {
+        const content = document.getElementById('contentTextArea').value;
+        
+        if (!content.trim()) {
+            this.updateStatus('❌ No content to copy', 'error');
+            return;
+        }
+
+        try {
+            await navigator.clipboard.writeText(content);
+            this.updateStatus('📋 Content copied to clipboard!', 'success');
+        } catch (error) {
+            // Fallback for older browsers
+            this.fallbackCopyToClipboard(content);
+        }
+    }
+
+    fallbackCopyToClipboard(text) {
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        textArea.style.position = 'fixed';
+        textArea.style.left = '-999999px';
+        textArea.style.top = '-999999px';
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        
+        try {
+            document.execCommand('copy');
+            this.updateStatus('📋 Content copied to clipboard!', 'success');
+        } catch (err) {
+            this.updateStatus('❌ Failed to copy to clipboard', 'error');
+        }
+        
+        document.body.removeChild(textArea);
+    }
+
+    async deleteSelectedKey() {
+        const keyToDelete = document.getElementById('existingKeysDropdown').value;
+        
+        if (!keyToDelete) {
+            this.updateStatus('❌ Please select a key to delete', 'error');
+            return;
+        }
+
+        if (!confirm(`Are you sure you want to delete "${keyToDelete}"?`)) {
+            return;
+        }
+
+        try {
+            await this.indexedDBWrapper.delete(this.currentDatabase, keyToDelete);
+            this.updateStatus(`✅ Deleted "${keyToDelete}"`, 'success');
+            
+            // Clear textarea if it was showing the deleted content
+            document.getElementById('contentTextArea').value = '';
+            
+            // Refresh dropdown
+            setTimeout(() => this.loadKeysFromDatabase(), 500);
+
+        } catch (error) {
+            console.error('Delete error:', error);
+            this.updateStatus(`❌ Failed to delete: ${error.message}`, 'error');
+        }
+    }
+
+    async loadKeysFromDatabase() {
+        try {
+            const allKeys = await this.indexedDBWrapper.getAllKeys(this.currentDatabase);
+            const dropdown = document.getElementById('existingKeysDropdown');
+            
+            // Clear existing options except the first placeholder
+            dropdown.innerHTML = '<option value="">Select existing key to load...</option>';
+            
+            if (allKeys && allKeys.length > 0) {
+                allKeys.sort().forEach(key => {
+                    const option = document.createElement('option');
+                    option.value = key;
+                    option.textContent = key;
+                    dropdown.appendChild(option);
+                });
+                
+                this.updateKeyCount(allKeys.length);
+                this.updateStatus(`📂 Loaded ${allKeys.length} keys from ${this.currentDatabase}`, 'info');
+            } else {
+                this.updateKeyCount(0);
+                this.updateStatus(`📂 No keys found in ${this.currentDatabase}`, 'info');
+            }
+
+        } catch (error) {
+            console.error('Load keys error:', error);
+            this.updateStatus(`❌ Failed to load keys: ${error.message}`, 'error');
+            this.updateKeyCount(0);
+        }
+    }
+
+    async loadInitialKeys() {
+        // Wait for IndexedDB wrapper to be ready
+        setTimeout(() => {
+            this.loadKeysFromDatabase();
+        }, 1000);
+    }
+
+    updateStatus(message, type = 'info') {
+        const statusElement = document.getElementById('statusMessage');
+        if (statusElement) {
+            statusElement.textContent = message;
+            
+            // Add visual styling based on type
+            statusElement.className = type;
+            
+            // Auto-clear success/error messages after 5 seconds
+            if (type === 'success' || type === 'error') {
+                setTimeout(() => {
+                    if (statusElement) {
+                        statusElement.textContent = 'Ready to save/load content';
+                        statusElement.className = '';
+                    }
+                }, 5000);
+            }
+        } else {
+            console.log(`Status: ${message} (${type})`);
+        }
+    }
+
+    updateKeyCount(count) {
+        const statusElement = document.getElementById('keyCount');
+        if (statusElement) {
+            statusElement.textContent = `Keys in ${this.currentDatabase}: ${count}`;
+        }
+    }
+
+    clearTextArea() {
+        const textarea = document.getElementById('contentTextArea');
+        if (textarea.value.trim()) {
+            if (confirm('Are you sure you want to clear the textarea?')) {
+                textarea.value = '';
+                this.updateStatus('🗑️ Textarea cleared', 'info');
+            }
+        } else {
+            this.updateStatus('Textarea is already empty', 'info');
+        }
+    }
+}
+
+// ===== Initialize the System =====
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('🚀 Initializing Google Docs IndexedDB Manager...');
+    document.title = 'IndexedDB Storage System';
+    new GoogleDocsIndexedDB();
+});
+
+// Also initialize immediately if already loaded
+if (document.readyState !== 'loading') {
+    console.log('🚀 Initializing Google Docs IndexedDB Manager (immediate)...');
+    document.title = 'IndexedDB Storage System';
+    new GoogleDocsIndexedDB();
+}
+</script>
+
+</body>
+</html>

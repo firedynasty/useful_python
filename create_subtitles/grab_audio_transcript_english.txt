@@ -1,0 +1,10 @@
+export OPENAI_API_KEY="sk-..."
+
+curl https://api.openai.com/v1/audio/translations \
+  -H "Authorization: Bearer $OPENAI_API_KEY" \
+  -H "Content-Type: multipart/form-data" \
+  -F file="@/Users/stanleytan/Downloads/audioStream_trimmed.mp3" \
+  -F model="whisper-1" \
+  -F response_format="srt" \
+  -F prompt="Translate the following Chinese audio to English." \
+  -o /Users/stanleytan/Downloads/english.srt

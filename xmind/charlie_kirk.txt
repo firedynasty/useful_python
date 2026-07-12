@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmap-content xmlns="urn:xmind:xmap:xmlns:content:2.0" version="2.0">
+    <sheet id="sheet1" theme="theme1">
+        <topic id="root" structure-class="org.xmind.ui.map">
+            <title>My Notes</title>
+            <children>
+                <topics type="attached"><topic id="topic1">
+                        <title>Charlie Kirk</title>
+                        <children>
+                            <topics type="attached"><topic id="topic2">
+                        <title>Dialogue</title>
+                    </topic><topic id="topic3">
+                        <title>Loved God</title>
+                    </topic><topic id="topic4">
+                        <title>Supported Israel</title>
+                    </topic>
+                            </topics>
+                        </children>
+                    </topic><topic id="topic5">
+                        <title>Israel</title>
+                        <children>
+                            <topics type="attached"><topic id="topic6">
+                        <title>At the end he was turning against the government</title>
+                    </topic>
+                            </topics>
+                        </children>
+                    </topic><topic id="topic7">
+                        <title>Conspiarcy theories</title>
+                        <children>
+                            <topics type="attached"><topic id="topic8">
+                        <title>That he was afraid Israel would kill him for turning against them</title>
+                    </topic>
+                            </topics>
+                        </children>
+                    </topic><topic id="topic9">
+                        <title>The killer is still at large</title>
+                    </topic>
+                </topics>
+            </children>
+        </topic>
+    </sheet>
+</xmap-content>

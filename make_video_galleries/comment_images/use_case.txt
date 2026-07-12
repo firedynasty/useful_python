@@ -1,0 +1,10 @@
+python comment_images.py image1.png output.png $'I had a great time walking here today\ntoday was a happy day'
+
+the $ is for two lines
+
+python comment_images.py 20251109_132920.jpg 20251109_132920o.jpg $'I never knew there was a library here'
+
+
+python comment_images.py 20251109_133932 20251109_131806o.jpg $'It is okay to observe other fit people from afar\n for a brief moment'
+
+

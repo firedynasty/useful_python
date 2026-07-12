@@ -1,0 +1,50 @@
+                                                                                
+  What topic do you want Claude to become an expert on?                         
+                                                                                
+  Once you tell me the subject, we can figure out:                              
+  1. What kind of sources to grab (articles, Reddit threads, research, etc.)    
+  2. Whether to copy/paste manually or use one of your automated scrapers       
+  3. How to compile it all into a good context document                         
+                                                                                
+  What's the topic?
+                                                                                
+❯ "how to free people from pornography addiction"                               
+                                                                                
+⏺ Good topic. Here's the simplest path to get started:                          
+                                                                                
+  Step 1 — Make a folder                                                        
+                                                                                
+  mkdir ./pornFree                                                              
+                                                                                
+  Step 2 — Gather content                                                       
+                                                                                
+  Open your browser and find good sources — things like:                        
+  - Research articles on porn addiction recovery
+  - Reddit threads (r/pornfree, r/NoFap — the serious recovery posts)           
+  - Therapy/counseling approaches (CBT, 12-step, etc.)               
+  - Expert articles (Fight the New Drug, Your Brain on Porn, etc.)              
+  - Book summaries or reviews                                                   
+                                                                                
+  For each one, just select all, copy, paste into a text file in Sublime Text,  
+  save to ./pornFree/. Name them something descriptive like:                    
+  - reddit_recovery_strategies.txt                                            
+  - cbt_approach_article.txt                                                    
+  - your_brain_on_porn_summary.txt
+                                                                              
+  Don't worry about cleaning up the text — that's what the script does.         
+   
+  Step 3 — Run it                                                               
+                  
+  export ANTHROPIC_API_KEY=sk-ant-your-key-here                                 
+  python 08-scrape_saved_text_from_websites.py --folder ./pornFree --title
+  "Freedom From Pornography Addiction"                                          
+   
+  Step 4 — Feed the output into Claude chat                                     
+                  
+  Paste the compiled document into a new conversation and say something like:   
+  "Use this as your knowledge base. You are an expert counselor helping people 
+  overcome pornography addiction."                                              
+                  
+  ---                                                                         
+  Want to start gathering sources? Or would you rather automate the scraping
+  with URLs instead of copy/pasting?  

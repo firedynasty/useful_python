@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)https://my.businessinsider.com/cross-domain/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="chrome-extension://fgddmllnllkalaagkghckoinaemmogpe/src/scripts/content/location-spoofing.js"></script>
+    <meta name="robots" content="noindex">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="My Insider">
+    <link rel="manifest" href="https://my.businessinsider.com/manifest.json">
+    <title>My Insider</title>
+
+    <script>
+      'use strict';
+
+      function _toConsumableArray(arr) {
+        if (Array.isArray(arr)) {
+          for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) {
+            arr2[i] = arr[i];
+          }
+          return arr2;
+        } else {
+          return Array.from(arr);
+        }
+      }
+
+      var validDomains = ['businessinsider.com', 'markets.insider.com'];
+
+      var getRandomSymbol = function getRandomSymbol(symbol) {
+        var array = void 0;
+
+        if (symbol === 'y') {
+          array = ['8', '9', 'a', 'b'];
+          return array[Math.floor(Math.random() * array.length)];
+        }
+
+        array = new Uint8Array(1);
+        window.crypto.getRandomValues(array);
+        return (array[0] % 16).toString(16);
+      };
+
+      var generateRandom = function generateRandom() {
+        var length = arguments.length <= 0 || arguments[0] === undefined ? 8 : arguments[0];
+
+        var chars = '0123456789abcdefghijklmnopqrstuvwxyz';
+        var randomString = '';
+        [].concat(_toConsumableArray(Array(length).keys())).forEach(function () {
+          var rnum = Math.floor(Math.random() * chars.length);
+          randomString += chars.substring(rnum, rnum + 1);
+        });
+        return Date.now() + randomString;
+      };
+
+      var uuid = function uuid() {
+        if (window.crypto && window.crypto.randomUUID) {
+          return window.crypto.randomUUID();
+        }
+        if (window.crypto && window.crypto.getRandomValues) {
+          return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, getRandomSymbol);
+        }
+        return generateRandom();
+      };
+
+      if (location.host.includes('localhost')) {
+        validDomains.push('localhost');
+      }
+
+      var getCookie = function getCookie(name) {
+        var nameEQ = name + '=';
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') {
+            c = c.substring(1, c.length);
+          }
+          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+      };
+
+      var setCookie = function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+        var expires = 'expires=' + d.toUTCString();
+        document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
+      };
+
+      var getDomain = function getDomain(url) {
+        var urlParts = new URL(url).hostname.split('.');
+        return urlParts
+          .slice(0)
+          .slice(-(urlParts.length === 4 ? 3 : 2))
+          .join('.');
+      };
+
+      var processMessage = function processMessage(event) {
+        if (!validDomains.includes(getDomain(event.origin))) return;
+        var _event$data = event.data;
+        var eventType = _event$data.type;
+        var profile = _event$data.profile;
+        var authEnv = _event$data.authEnv;
+        var anonymousId = _event$data.anonymousId;
+        var universalId = _event$data.universalId;
+        var resourceName = _event$data.resourceName;
+        // Be careful with these event names -
+        // they need to match the names in fenrir
+        switch (eventType) {
+          case 'logout':
+            localStorage.removeItem('profile');
+            localStorage.removeItem('enterpriseId');
+            sessionStorage.clear();
+
+            // clean zustand stores
+            localStorage.removeItem('user');
+            localStorage.removeItem('subscription');
+            localStorage.removeItem('plans');
+            localStorage.removeItem('purchase');
+
+            window.parent.postMessage({ type: 'logout_complete' }, '*');
+            break;
+
+          case 'login':
+            if (profile) {
+              localStorage.setItem('profile', profile);
+              localStorage.setItem('universal_id', universalId);
+              localStorage.setItem('forseti_config_environment', authEnv);
+              window.parent.postMessage({ type: 'login_complete' }, '*');
+            }
+          default:
+        }
+
+        if (anonymousId && resourceName) {
+          localStorage.setItem(resourceName + '-anonymous-id', anonymousId);
+        }
+      };
+
+      (function () {
+        if (window.addEventListener) {
+          window.addEventListener('message', processMessage, false);
+        } else {
+          window.attachEvent('onmessage', processMessage);
+        }
+        var anonymousId = getCookie('anonymous_id') || localStorage.getItem('anonymous_id');
+        if (!anonymousId) {
+          anonymousId = uuid();
+          setCookie('anonymous_id', anonymousId, 90);
+          setCookie('myinsider-anonymous-id', anonymousId, 365);
+          localStorage.setItem('anonymous_id', anonymousId);
+        }
+        window.parent.postMessage({ type: 'anonymous-sync' }, '*');
+      })();
+    </script>
+  </head>
+
+  <body>
+
+</body></html>

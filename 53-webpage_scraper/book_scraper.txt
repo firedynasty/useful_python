@@ -1,0 +1,87 @@
+Book Context Scraper - Instructions
+====================================
+
+1. START CHROME WITH REMOTE DEBUGGING
+--------------------------------------
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222 --user-data-dir=/tmp/chrome_debug_profile
+
+
+2. SET ANTHROPIC API KEY (optional - enables Claude to clean scraped content)
+-----------------------------------------------------------------------------
+export ANTHROPIC_API_KEY=sk-ant-your-key-here
+
+
+3. SEARCH GOOGLE
+-----------------
+In the Chrome debug instance, open tabs with Google searches about your book:
+
+  The Best Place to Work Ron Friedman book summary
+
+The Best Place to Work Ron Friedman book review
+
+The Best Place to Work Ron Friedman key takeaways
+
+The Best Place to Work Ron Friedman interview
+
+The Best Place to Work Ron Friedman concepts
+
+The Best Place to Work Ron Friedman book notes
+
+The Best Place to Work Ron Friedman good reads
+
+
+Or get suggested searches:
+  python 06-book_context_scraper.py --suggest "The Best Place to Work Ron Friedman"
+
+
+4. (OPTIONAL) PASTE MANUAL NOTES
+----------------------------------
+Open the Book Notes Collector in the same Chrome debug instance:
+  https://cdpn.io/pen/debug/OPRVojj
+
+Paste content you find into the textarea, click Append.
+The scraper will pick up these notes automatically alongside the Google results.
+
+
+5. RUN THE SCRAPER
+--------------------
+python 06-book_context_scraper.py --title "The Best Place to Work"  (this will save the file accordingly, that's what the title flag does)
+
+The script will:
+  a) Find your Google search tabs and extract result links
+  b) Find your Book Notes Collector tab and extract pasted notes
+  c) Show you the list of URLs and ask to confirm
+  d) Visit each link and scrape the content
+  e) Use Claude API to clean the content (if ANTHROPIC_API_KEY is set)
+  f) Compile into a single file under 150,000 characters
+  g) Save to ./scraped_from_websites/ and copy to clipboard
+
+
+FLAGS
+------
+--title "..."         Book title for the output filename
+--char-limit 150000   Max characters in output (default: 150,000)
+--max-results 5       Max links to follow per Google search tab (default: 5)
+--tabs                Scrape whatever tabs are open directly (skip Google link extraction)
+--urls urls.txt       Scrape URLs listed in a file (one per line)
+--no-claude           Skip Claude API cleaning even if API key is set
+--no-clipboard        Skip copying to clipboard
+--suggest "..."       Print suggested search queries (no scraping)
+
+
+EXAMPLES
+---------
+# Full auto: search tabs + notes + Claude cleaning
+python 06-book_context_scraper.py --title "The Best Place to Work"
+
+# More links per search
+python 06-book_context_scraper.py --title "The Best Place to Work" --max-results 10
+
+# Scrape open tabs directly (no Google link extraction)
+python 06-book_context_scraper.py --title "The Best Place to Work" --tabs
+
+# Skip Claude, just compile raw scraped text
+python 06-book_context_scraper.py --title "The Best Place to Work" --no-claude
+
+# Smaller output
+python 06-book_context_scraper.py --title "The Best Place to Work" --char-limit 100000

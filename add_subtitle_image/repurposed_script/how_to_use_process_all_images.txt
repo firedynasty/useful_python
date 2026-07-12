@@ -1,0 +1,10 @@
+ This means:
+  - python process_all_images.py captions.txt -f ./images → Outputs to ./images
+  - python process_all_images.py captions.txt -f ./images -o ./output → Outputs to
+  ./output
+
+
+as long as captions has 
+
+image1: the text you want to add
+image2: other text you would like to wish to add

@@ -1,0 +1,49 @@
+08-scrape_saved_text_from_websites.py
+
+Builds a book context document from text files you've already saved locally —
+no Chrome, no live scraping. Files can be anything: website content you copied
+and pasted (reviews, Reddit threads, Goodreads listings, summaries) OR actual
+book content (chapters, passages, notes you typed). Claude figures out which
+is which and cleans each one appropriately.
+
+Companion to 07-extract_images_from_folder.py, which handles Kindle screenshots.
+Use both together when you have a mix of image-based and text-based content.
+
+
+HOW TO USE
+
+1. Copy and paste content into plain text files using Sublime Text (or any editor)
+      - From websites: paste the whole page, nav junk and all — Claude strips it
+      - From the book: paste chapter text or your own notes directly
+
+2. Save all files into one folder, e.g. ./loveBook
+
+3. Run:
+      python 08-scrape_saved_text_from_websites.py --folder ./loveBook --title "Book Title"
+
+4. Output saves to ./scraped_from_websites/ and copies to clipboard
+
+
+OPTIONS
+
+   --folder ./loveBook        folder containing your saved text files (required)
+   --title "Book Title"       book title for the output filename and Claude prompts
+   --char-limit 100000        change the max character count (default: 150000)
+   --no-claude                skip Claude cleaning, compile raw text only
+   --no-clipboard             skip copying to clipboard
+
+
+REQUIRES
+
+   export ANTHROPIC_API_KEY=sk-ant-your-key-here
+
+
+WORKFLOW WITH 07
+
+   07-extract_images_from_folder.py  →  for Kindle screenshots / image pages
+   08-scrape_saved_text_from_websites.py  →  for copy-pasted text files and chapters
+
+   Run both, then combine the outputs manually or feed both into a final Claude prompt.
+
+
+python 08-scrape_saved_text_from_websites.py --folder ./loveBook --title "Deeper Love"

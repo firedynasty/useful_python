@@ -1,0 +1,84 @@
+summarize this from:
+
+URL: https://darkreader.org/help/en/
+Title: Help – Dark Reader
+
+# Help — Dark Reader
+Dear Reader, we've put a lot of love and effort into creating this app, making it efficient and easy to use. Your [payment](https://darkreader.org/support-us) helps us continue enhancing it with new features and improvements. 
+  * Quick Guide & FAQ
+  * [Terms of Use](../../terms/)
+  * [Privacy Policy](../../privacy/)
+  * Contacts
+
+## Toolbar Icon
+If the Dark Reader icon is hidden after installation, click the Extensions button next to the address bar and then another button next to Dark Reader.
+## Quick Video Guides
+  * [1-Minute Video Guide](https://www.youtube.com/watch?v=849mznBKmIQ)
+  * [30-Seconds Video Guide (mobile app)](https://www.youtube.com/shorts/9nQjBBe8K44)
+
+## Top Section
+  * Toggle site button adds the current site into the ignore list (or removes it from there).
+  * On/Off switch enables or disables the extension.
+  * Click on the links under the buttons to modify the hotkeys for the extension.
+  * Note: If the toggle button is greyed-out, it means that browser restricts injecting scripts into the current page.
+
+## Filter Settings
+Adjust the mode, brightness, contrast, sepia, and saturation ("grayscale") settings. This can be used to better suit your screen parameters and the lighting in the room.
+## Custom Site Settings
+The Only for button determines whether the above filter settings should only be applied to the current website.
+To use, first click the button (which will become highlighted), then adjust the settings as desired for the current website. Click the button again to cancel.
+## Site List
+  * Use Invert listed only if you wish Dark Reader to work only on listed websites.
+  * Not invert listed will prevent the extension from working on listed websites.
+  * Possible patterns for values are `google.com, mail.google.com, google.*, google.com/maps` etc.
+  * Regular expressions are supported. They should start and end with `/`, like `/www\.google\..*/`.
+  * Clicking the Toggle button (in Top section) adds the current site into this list.
+
+## More Tab
+  * Pick a font from the list (or enter font name on Firefox), click the checkbox.
+  * Adjust the text stroke.
+  * Select a theme generation mode.
+
+## Theme Generation Modes
+Filter+ vs. Static vs. Dynamic mode
+  * Dynamic deeply analyzes website style sheets, background images, and vector graphics. Requires some resources on initial page load, but produces _the best_ visual results.
+  * Filter mode is based on CSS filters. It _inverts the whole page_ and _reverts some parts_ back. Requires GPU resources. It is _fast_ and powerful, but has several issues: it disables text sub-pixel rendering, inverts already dark parts into light, causes lags on large pages, and fails to render some pages in Firefox.
+  * Filter+ is the same as Filter, but is based on custom SVG filters and _handles colors better_ making images less dull. Works poorly in Firefox.
+  * Static rapidly generates a basic stylesheet.
+
+## Bottom Section
+  * Read our privacy policy , follow us on Twitter , view source and contribute on Github , read the Help documentation on this page.
+  * Donate – if you like the extension, please consider supporting the active development of Dark Reader.
+  * News – notifies about release notes and important events.
+  * Developer tools – opens a config editor for the current theme mode.
+
+## Using the Developer Tools
+If you are familiar with CSS selectors, you can help by suggesting a fix for filtering a website. Read how to use the developer tools [here](https://github.com/darkreader/darkreader#how-to-contribute).
+## Tips for Advanced Users
+Do you want to learn more? Please visit our [Tips & Tricks](../../tips/) website section.
+## Frequently Asked Questions
+#### How to support Dark Reader
+  1. [Pay for using Dark Reader](https://darkreader.org/support-us).
+  2. Install our [iOS/macOS app](https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180).
+  3. Suggest to friends and colleagues.
+
+#### The extension asks for permissions to read website data
+The extension needs these permissions to be able to analyze and modify website's appearance and apply site-specific settings. We do not insert ads and do not collect any data or send it anywhere.
+#### The extensions store page and settings pages remain white
+The extension has no access to these pages.
+#### New tab page and browser theme remain white
+Select a dark theme in your browser settings.
+#### Screen flashes white when opening a new tab or navigating to a website
+Before loading a website, the browser shows a theme background color by default. Select a dark theme in your browser settings.
+#### The extension doesn't work at all
+Update your browser. Click Dark Reader icon, check if the top-right button is set to On and that Toggle site is not excluding the current site. Open Site list tab, check that Not invert listed is selected. If nothing helps, something terrible has happened, e-mail us.
+#### The website is displayed incorrectly or works slowly
+Please send the address of the website, a screenshot, your OS and browser versions to our e-mail. We will try to investigate the reason, at least for a popular website. Try using Filter mode or Light mode for a specific website. Check that the website is not listed under Site list tab.
+#### The extension doesn't work in Incognito mode
+Open chrome://extensions page, find Dark Reader , click Allow in incognito.
+#### The extension doesn't work for local files
+Open chrome://extensions page, find Dark Reader , click Allow access to file URLs.
+## More
+See [Tips for Advanced Users](../../tips/) for more information.
+## Contacts
+For any questions e-mail to [support@darkreader.org](mailto:support@darkreader.org)

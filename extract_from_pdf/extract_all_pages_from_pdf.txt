@@ -1,0 +1,2 @@
+python extract_pdf_to_one_txt_file.py -i Pilgrims-Progress-Study-Guide.pdf -o ./
+Processing: Pilgrims-Progress-Study-Guide.pdf

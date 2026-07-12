@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subtitle Editor & SRT Converter</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #444;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: "";
+            width: 4px;
+            height: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .btn-green {
+            background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        }
+
+        .btn-green:hover {
+            box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+        }
+
+        .textarea-container {
+            position: relative;
+            border: 2px solid #e0e6ed;
+            border-radius: 10px;
+            background: #f8f9fa;
+            transition: border-color 0.3s ease;
+            overflow: hidden;
+            display: flex;
+        }
+
+        .textarea-container:focus-within {
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .line-numbers {
+            width: 50px;
+            background: #e9ecef;
+            border-right: 1px solid #dee2e6;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 21px;
+            text-align: right;
+            padding: 15px 8px 15px 5px;
+            color: #6c757d;
+            user-select: none;
+            white-space: pre;
+            overflow: hidden;
+            box-sizing: border-box;
+            flex-shrink: 0;
+        }
+
+        .textarea-wrapper {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 200px;
+            padding: 15px;
+            border: none;
+            border-radius: 0;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 21px;
+            resize: vertical;
+            background: transparent;
+            outline: none;
+            box-sizing: border-box;
+            overflow-x: auto;
+            white-space: nowrap;
+            word-wrap: normal;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .input-group label {
+            font-weight: 600;
+            color: #555;
+            font-size: 0.9em;
+        }
+
+        .input-group input {
+            width: 80px;
+            padding: 8px 12px;
+            border: 2px solid #e0e6ed;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            transition: border-color 0.3s ease;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .info {
+            background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .info-text {
+            color: #444;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+
+        .result {
+            background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            border-left: 4px solid #4caf50;
+        }
+
+        .error {
+            background: linear-gradient(135deg, #ffebee 0%, #fce4ec 100%);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            border-left: 4px solid #f44336;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+            }
+
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Subtitle Editor & SRT Converter</h1>
+
+        <!-- Step 1: Paste raw transcript -->
+        <div class="section">
+            <div class="section-title">Step 1: Paste Raw Transcript</div>
+            <div class="controls">
+                <button onclick="pasteFromClipboard('rawInput')">Paste from Clipboard</button>
+                <button onclick="formatTimestamps()">Format into Lines</button>
+            </div>
+            <div style="margin-top: 15px;">
+                <textarea id="rawInput" style="width:100%; min-height:150px; padding:15px; border:2px solid #e0e6ed; border-radius:10px; font-family:'Courier New',monospace; font-size:14px; line-height:21px; resize:vertical; background:#f8f9fa;" placeholder="Paste the raw transcript here (e.g. 0:00[Music]0:055 secondsEloh.0:1010 seconds[Music]...)"></textarea>
+            </div>
+            <div class="info">
+                <div class="info-text">
+                    Paste the raw YouTube transcript text. Click "Format into Lines" to split each timestamp onto its own line and remove duration labels.
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2: Edit formatted subtitles -->
+        <div class="section">
+            <div class="section-title">Step 2: Edit Subtitles</div>
+            <div class="textarea-container">
+                <div class="line-numbers" id="lineNumbers">1</div>
+                <div class="textarea-wrapper">
+                    <textarea id="content" placeholder="Formatted subtitles will appear here. Edit them as needed..."></textarea>
+                </div>
+            </div>
+            <div class="controls">
+                <button onclick="copyToClipboard('content')">Copy to Clipboard</button>
+            </div>
+            <div class="info">
+                <div class="info-text">
+                    Edit the subtitles here. Each line should be: <code>M:SS subtitle text</code>. Remove lines like [Music] or [Applause] if you don't want them. Fix any transcription errors.
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3: Convert to SRT -->
+        <div class="section">
+            <div class="section-title">Step 3: Convert to SRT</div>
+            <div class="controls">
+                <button class="btn-green" onclick="convertToSRT()">Convert to SRT</button>
+                <button onclick="copyToClipboard('srtOutput')">Copy SRT</button>
+                <button onclick="downloadSRT()">Download .srt</button>
+            </div>
+            <div class="textarea-container" style="margin-top: 15px;">
+                <div class="line-numbers" id="srtLineNumbers">1</div>
+                <div class="textarea-wrapper">
+                    <textarea id="srtOutput" placeholder="SRT output will appear here..." readonly></textarea>
+                </div>
+            </div>
+            <div id="resultInfo" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script>
+        // Format raw transcript: split at timestamps onto new lines, remove duration labels
+        function formatTimestamps() {
+            const raw = document.getElementById('rawInput').value;
+            if (!raw.trim()) {
+                showResult('Please paste some content first.', 'error');
+                return;
+            }
+
+            // Insert a newline before each timestamp pattern (M:SS or H:MM:SS)
+            // Matches patterns like "0:00", "1:10", "12:34", "1:02:03"
+            let formatted = raw.replace(/(\d{1,2}:\d{2}(?::\d{2})?)/g, '\n$1');
+
+            // Split into lines
+            let lines = formatted.split('\n').filter(l => l.trim() !== '');
+
+            // Remove duration labels like "5 seconds", "1 minute, 10 seconds", "2 minutes"
+            // These appear right after the timestamp
+            lines = lines.map(line => {
+                // Match: timestamp, then optional duration text, then the actual content
+                // Duration patterns: "5 seconds", "1 minute, 10 seconds", "2 minutes", "1 minute"
+                return line.replace(
+                    /^(\d{1,2}:\d{2}(?::\d{2})?)\s*(?:\d{1,2}\s+minutes?(?:,\s*\d{1,2}\s+seconds?)?\s*|(?:\d{1,2}\s+seconds?\s*))/i,
+                    '$1 '
+                ).trim();
+            });
+
+            document.getElementById('content').value = lines.join('\n');
+            updateLineNumbers('content', 'lineNumbers');
+            showResult('Formatted successfully. Edit the subtitles as needed.', 'result');
+        }
+
+        // Convert edited subtitles to SRT format
+        function convertToSRT() {
+            const content = document.getElementById('content').value;
+            if (!content.trim()) {
+                showResult('No subtitle content to convert.', 'error');
+                return;
+            }
+
+            const lines = content.split('\n').filter(l => l.trim() !== '');
+            const entries = [];
+
+            // Parse each line: "M:SS text" or "H:MM:SS text"
+            for (const line of lines) {
+                const match = line.match(/^(\d{1,2}:\d{2}(?::\d{2})?)\s*(.*)/);
+                if (match) {
+                    entries.push({
+                        time: match[1],
+                        text: match[2].trim()
+                    });
+                }
+            }
+
+            if (entries.length === 0) {
+                showResult('No valid timestamp lines found. Expected format: M:SS text', 'error');
+                return;
+            }
+
+            // Build SRT
+            let srt = '';
+            for (let i = 0; i < entries.length; i++) {
+                const startSec = parseTimestamp(entries[i].time);
+                const endSec = (i + 1 < entries.length) ? parseTimestamp(entries[i + 1].time) : startSec + 5;
+
+                srt += (i + 1) + '\n';
+                srt += formatSRTTime(startSec) + ' --> ' + formatSRTTime(endSec) + '\n';
+                srt += entries[i].text + '\n';
+                srt += '\n';
+            }
+
+            document.getElementById('srtOutput').value = srt;
+            updateLineNumbers('srtOutput', 'srtLineNumbers');
+            showResult('Converted to SRT (' + entries.length + ' entries).', 'result');
+        }
+
+        function parseTimestamp(ts) {
+            const parts = ts.split(':').map(Number);
+            if (parts.length === 3) {
+                return parts[0] * 3600 + parts[1] * 60 + parts[2];
+            }
+            return parts[0] * 60 + parts[1];
+        }
+
+        function formatSRTTime(totalSeconds) {
+            const h = Math.floor(totalSeconds / 3600);
+            const m = Math.floor((totalSeconds % 3600) / 60);
+            const s = Math.floor(totalSeconds % 60);
+            const ms = Math.round((totalSeconds % 1) * 1000);
+            return String(h).padStart(2, '0') + ':' +
+                   String(m).padStart(2, '0') + ':' +
+                   String(s).padStart(2, '0') + ',' +
+                   String(ms).padStart(3, '0');
+        }
+
+        function downloadSRT() {
+            const srt = document.getElementById('srtOutput').value;
+            if (!srt.trim()) {
+                showResult('No SRT content to download.', 'error');
+                return;
+            }
+            const blob = new Blob([srt], { type: 'text/plain' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'subtitles.srt';
+            a.click();
+            URL.revokeObjectURL(a.href);
+        }
+
+        async function pasteFromClipboard(targetId) {
+            try {
+                const text = await navigator.clipboard.readText();
+                document.getElementById(targetId).value = text;
+                if (targetId === 'content') updateLineNumbers('content', 'lineNumbers');
+                showResult('Pasted from clipboard.', 'result');
+            } catch (err) {
+                showResult('Unable to read clipboard. Please paste manually (Ctrl+V).', 'error');
+            }
+        }
+
+        async function copyToClipboard(sourceId) {
+            const text = document.getElementById(sourceId).value;
+            if (!text.trim()) {
+                showResult('Nothing to copy.', 'error');
+                return;
+            }
+            try {
+                await navigator.clipboard.writeText(text);
+                showResult('Copied to clipboard.', 'result');
+            } catch (err) {
+                showResult('Failed to copy. Please select and copy manually.', 'error');
+            }
+        }
+
+        function updateLineNumbers(textareaId, lineNumbersId) {
+            const textarea = document.getElementById(textareaId);
+            const lineNumbers = document.getElementById(lineNumbersId);
+            const lines = textarea.value.split('\n');
+            let numbers = '';
+            for (let i = 1; i <= lines.length; i++) {
+                numbers += i + '\n';
+            }
+            lineNumbers.textContent = numbers.slice(0, -1);
+            lineNumbers.scrollTop = textarea.scrollTop;
+        }
+
+        function showResult(message, type) {
+            const resultDiv = document.getElementById('resultInfo');
+            resultDiv.className = type;
+            resultDiv.innerHTML = '<div class="info-text">' + message + '</div>';
+            resultDiv.style.display = 'block';
+            setTimeout(() => { resultDiv.style.display = 'none'; }, 5000);
+        }
+
+        // Wire up events
+        document.getElementById('content').addEventListener('input', () => updateLineNumbers('content', 'lineNumbers'));
+        document.getElementById('content').addEventListener('scroll', () => updateLineNumbers('content', 'lineNumbers'));
+        document.getElementById('srtOutput').addEventListener('scroll', () => updateLineNumbers('srtOutput', 'srtLineNumbers'));
+    </script>
+</body>
+</html>
