@@ -87,6 +87,16 @@ def main():
     print("-" * 50)
     print("Copied to clipboard.")
 
+    # Also append to front TextEdit document if one is open
+    applescript = """
+tell application "TextEdit"
+    if (count of documents) > 0 then
+        set text of document 1 to (text of document 1) & " " & (the clipboard)
+    end if
+end tell
+"""
+    subprocess.run(["osascript", "-e", applescript], check=False)
+
 
 if __name__ == "__main__":
     main()
