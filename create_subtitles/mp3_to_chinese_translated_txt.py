@@ -58,6 +58,9 @@ def parse_srt_text(srt_text):
 
 def transcribe_segment(client, mp3_path, offset_ms=0):
     """Transcribe one MP3 segment; offset_ms shifts all timestamps."""
+    if os.path.getsize(mp3_path) < 1000:
+        print(f"    Skipping {os.path.basename(mp3_path)} — empty segment")
+        return []
     with open(mp3_path, "rb") as f:
         response = client.audio.transcriptions.create(
             model="whisper-1",
@@ -70,23 +73,51 @@ def transcribe_segment(client, mp3_path, offset_ms=0):
     return [(start + offset_ms, text) for start, text in entries]
 
 
+def get_duration(mp3_path):
+    """Return audio duration in seconds using ffprobe."""
+    result = subprocess.run(
+        [
+            "ffprobe", "-v", "error",
+            "-show_entries", "format=duration",
+            "-of", "default=noprint_wrappers=1:nokey=1",
+            mp3_path,
+        ],
+        capture_output=True,
+        text=True,
+        check=True,
+    )
+    return float(result.stdout.strip())
+
+
 def split_audio(mp3_path, tmp_dir):
     """Split MP3 into 10-minute segments using ffmpeg. Returns list of (path, offset_ms)."""
-    pattern = os.path.join(tmp_dir, "segment_%03d.mp3")
-    subprocess.run(
-        [
-            "ffmpeg", "-i", mp3_path,
-            "-f", "segment",
-            "-segment_time", str(SEGMENT_DURATION),
-            "-c", "copy",
-            pattern,
-        ],
-        check=True,
-        stdout=subprocess.DEVNULL,
-        stderr=subprocess.DEVNULL,
-    )
-    segments = sorted(Path(tmp_dir).glob("segment_*.mp3"))
-    return [(str(seg), i * SEGMENT_DURATION * 1000) for i, seg in enumerate(segments)]
+    total = get_duration(mp3_path)
+    segments = []
+    start = 0
+    i = 0
+    while start < total:
+        seg_path = os.path.join(tmp_dir, f"segment_{i:03d}.mp3")
+        duration = min(SEGMENT_DURATION, total - start)
+        subprocess.run(
+            [
+                "ffmpeg", "-y",
+                "-i", mp3_path,
+                "-ss", str(start),
+                "-t", str(duration),
+                "-c:a", "libmp3lame",
+                "-q:a", "2",
+                seg_path,
+            ],
+            check=True,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
+        size_mb = os.path.getsize(seg_path) / (1024 * 1024)
+        print(f"    segment_{i:03d}.mp3: {size_mb:.2f} MB ({duration:.0f}s)")
+        segments.append((seg_path, int(start * 1000)))
+        start += SEGMENT_DURATION
+        i += 1
+    return segments
 
 
 def translate_batch(client, texts):
