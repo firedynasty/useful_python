@@ -3,7 +3,6 @@ import os
 import subprocess
 import tempfile
 import shutil
-from datetime import datetime
 
 FFMPEG = "/opt/homebrew/bin/ffmpeg"
 
@@ -21,9 +20,7 @@ def parse_time(t):
 
 def calc_duration(start_raw, end_raw):
     if ":" in end_raw:
-        t1 = datetime.strptime(start_raw.strip(), "%M:%S")
-        t2 = datetime.strptime(end_raw.strip(), "%M:%S")
-        return (t2 - t1).total_seconds()
+        return parse_time(end_raw) - parse_time(start_raw)
     return float(end_raw)
 
 
