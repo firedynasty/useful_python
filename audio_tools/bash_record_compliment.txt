@@ -1,0 +1,73 @@
+record() {
+    if ! command -v python3 &> /dev/null; then
+        echo "Error: python3 is not installed."
+        return 1
+    fi
+
+    local output_dir="$(pwd)"
+    local times="${1:-}"
+    local tmpfile
+    tmpfile=$(mktemp)
+
+    echo "Recording... output will be saved to: $output_dir"
+
+    /Users/stanleytan/anaconda3/bin/python3 -u \
+        "$HOME/Documents/technical/python/py-audio-capture/source.py" \
+        "$output_dir" "$tmpfile"
+
+    local saved_file
+    saved_file=$(cat "$tmpfile" 2>/dev/null)
+    rm -f "$tmpfile"
+
+    if [[ -z "$saved_file" ]]; then
+        echo "❌ Recording failed or no data was captured"
+        return 1
+    fi
+
+    echo "✅ Recording saved: $saved_file"
+
+    if [[ -n "$times" ]]; then
+        echo "Looping ${times}x..."
+        /Users/stanleytan/anaconda3/bin/python3 \
+            "$HOME/Documents/technical/python/audio_tools/loop_mp3.py" \
+            "$saved_file" "$times"
+        if [[ $? -eq 0 ]]; then
+            echo "✅ Loop done!"
+        else
+            echo "❌ Looping failed"
+            return 1
+        fi
+    fi
+}
+
+
+loop() {
+    if [[ $# -lt 2 ]]; then
+        echo "Usage: loop <file.mp3> <times>"
+        echo "Example: loop song.mp3 3"
+        return 1
+    fi
+
+    local input_file="$1"
+    local times="$2"
+
+    if [[ "$input_file" != /* ]]; then
+        input_file="$(pwd)/$input_file"
+    fi
+
+    if [[ ! -f "$input_file" ]]; then
+        echo "Error: File '$input_file' not found"
+        return 1
+    fi
+
+    /Users/stanleytan/anaconda3/bin/python3 \
+        "$HOME/Documents/technical/python/audio_tools/loop_mp3.py" \
+        "$input_file" "$times"
+
+    if [[ $? -eq 0 ]]; then
+        echo "✅ Done!"
+    else
+        echo "❌ Looping failed"
+        return 1
+    fi
+}
