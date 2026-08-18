@@ -1,0 +1,30 @@
+on run {input, parameters}
+    if (count of input) is 0 then
+        display dialog "No files were selected." buttons {"OK"} default button "OK"
+        return
+    end if
+
+    -- Ask whether to use gloss mode
+    set modeChoice to display dialog "Choose output mode:" buttons {"Cancel", "Default (triplet .txt)", "Gloss -g (CSV)"} default button "Gloss -g (CSV)"
+    if button returned of modeChoice is "Cancel" then return
+
+    set useGloss to (button returned of modeChoice) is "Gloss -g (CSV)"
+    set pyScript to "/Users/stanleytan/Documents/technical/python/create_subtitles/mp3_to_chinese_from_text.py"
+    set shellScript to ""
+
+    repeat with selectedFile in input
+        set filePath to POSIX path of selectedFile
+
+        set glossFlag to ""
+        if useGloss then set glossFlag to " -g"
+
+        set shellScript to shellScript & "echo '=== Converting: " & filePath & " ===' && "
+        set shellScript to shellScript & "/Users/stanleytan/anaconda3/bin/python3 " & quoted form of pyScript & " -i " & quoted form of filePath & glossFlag & ¬
+            " && echo '✅ Done' || echo '❌ Conversion failed' ; "
+    end repeat
+
+    tell application "Terminal"
+        activate
+        do script shellScript in front window
+    end tell
+end run
