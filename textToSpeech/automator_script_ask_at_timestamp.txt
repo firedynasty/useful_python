@@ -1,0 +1,43 @@
+-- Automator Quick Action: Ask At Timestamp
+-- Setup: New Quick Action → receives "files or folders" in "Finder"
+-- Add action: Run AppleScript → paste script below
+-- Save as "Ask At Timestamp" — will appear when right-clicking .json transcript files
+
+on run {input, parameters}
+    if (count of input) is 0 then
+        display dialog "No file was selected." buttons {"OK"} default button "OK"
+        return
+    end if
+
+    set selectedFile to item 1 of input
+    set filePath to POSIX path of selectedFile
+
+    -- Prompt for timestamp
+    set tsDialog to display dialog "Enter timestamp (e.g. 3:00 or 1:45):" default answer "0:00" with title "Ask At Timestamp" buttons {"Cancel", "Next"} default button "Next"
+    if button returned of tsDialog is "Cancel" then return
+    set tsValue to text returned of tsDialog
+
+    -- Prompt for question
+    set qDialog to display dialog "Your question:" default answer "" with title "Ask At Timestamp" buttons {"Cancel", "Copy Context"} default button "Copy Context"
+    if button returned of qDialog is "Cancel" then return
+    set questionText to text returned of qDialog
+
+    -- Build shell command
+    set pythonPath to "/Users/stanleytan/anaconda3/bin/python3"
+    set scriptPath to "/Users/stanleytan/Documents/technical/python/textToSpeech/ask_at.py"
+
+    if questionText is "" then
+        set shellCmd to pythonPath & " " & scriptPath & " " & quoted form of tsValue & " " & quoted form of filePath
+    else
+        set shellCmd to pythonPath & " " & scriptPath & " " & quoted form of tsValue & " " & quoted form of filePath & " -q " & quoted form of questionText
+    end if
+
+    set scriptOutput to do shell script shellCmd & " 2>&1"
+
+    if scriptOutput contains "Error" then
+        display notification scriptOutput with title "Ask At Timestamp — Error"
+    else
+        display notification "Copied to clipboard — paste into Claude chat." with title "Ask At Timestamp ✓"
+    end if
+
+end run
