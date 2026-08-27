@@ -80,19 +80,53 @@ def process_pdf_file_single(pdf_path, output_folder):
         print(f"  Error processing {filename}: {str(e)}")
 
 def main():
-    # Set up command line arguments
     parser = argparse.ArgumentParser(description='Extract all pages from PDF files into single text files')
-    parser.add_argument('-i', '--input', default='.', 
+    parser.add_argument('-i', '--input', default='.',
                       help='Input PDF file or folder containing PDF files (default: current directory)')
-    parser.add_argument('-o', '--output', default='./extracted_txt_from_pdf', 
+    parser.add_argument('-o', '--output', default='./extracted_txt_from_pdf',
                       help='Output folder for text files (default: ./extracted_txt_from_pdf)')
-    
-    # Parse arguments
+    parser.add_argument('-f', '--output-file',
+                      help='Write all extracted text to this specific file path (overrides -o)')
+
     args = parser.parse_args()
-    
-    # Process PDF files
-    extract_pdf_to_single_file(args.input, args.output)
-    
+
+    if args.output_file:
+        output_path = os.path.expanduser(args.output_file)
+        output_dir = os.path.dirname(output_path)
+        if output_dir and not os.path.exists(output_dir):
+            os.makedirs(output_dir)
+
+        # Collect all text then write to the single specified file
+        all_text = []
+        input_path = args.input
+        if os.path.isfile(input_path):
+            pdfs = [input_path] if input_path.lower().endswith('.pdf') else []
+        else:
+            pdfs = [os.path.join(input_path, f) for f in os.listdir(input_path) if f.lower().endswith('.pdf')]
+
+        for pdf_path in pdfs:
+            print(f"Processing: {os.path.basename(pdf_path)}")
+            try:
+                pages = list(extract_pages(pdf_path))
+                print(f"  Found {len(pages)} pages")
+                for page_num, page_layout in enumerate(pages):
+                    if all_text or page_num > 0:
+                        all_text.append(f"\n{'='*50}\nPAGE {page_num + 1}\n{'='*50}\n")
+                    page_text = ""
+                    for element in page_layout:
+                        if isinstance(element, LTTextContainer):
+                            page_text += element.get_text()
+                    all_text.append(page_text)
+                    print(f"  Processed page {page_num+1}")
+            except Exception as e:
+                print(f"  Error processing {os.path.basename(pdf_path)}: {str(e)}")
+
+        with open(output_path, 'w', encoding='utf-8') as f:
+            f.write("\n".join(all_text))
+        print(f"Saved to: {output_path}")
+    else:
+        extract_pdf_to_single_file(args.input, args.output)
+
     print("Processing complete.")
 
 if __name__ == "__main__":
