@@ -35,25 +35,12 @@ def create_folder_structure(output_dir: str) -> None:
 def write_config_file(output_dir: str, table_name: str) -> None:
     """Write the rag_config.toml file."""
     config_content = f'''[embeddings]
-# Device for computation: "cuda", "cpu", "mps" (Apple Silicon)
-device = "cpu"
-
-# Similarity function
-metric = "cosine"
-
-# Let LanceDB handle embeddings (required for hybrid search)
-emb_manual = false
-
 model_provider = "sentence-transformers"
-# Pretrained model for semantic search
 model_name = "multi-qa-MiniLM-L6-cos-v1"
 n_dim_vec = 384
 
-# Token limits (model trained on up to 250 word pieces)
-n_token_max = 250
-
 # Chunk settings
-n_char_max = 1500  # Larger chunks for narrative content
+n_char_max = 1500
 overlap = 150
 
 [knowledge_base]
@@ -61,15 +48,12 @@ uri = "databases/lancedb"
 table_name = "{table_name}"
 
 [retriever]
-# Number of text chunks to retrieve after reranking
+# Number of text chunks to retrieve
 n_retrieve = 10
 # Number of top sections to return
 n_titles = 5
 # Enrich first result with surrounding context
 enrich_first = true
-# Cross-encoder reranker
-reranker.device = "cpu"
-reranker.model_name = "cross-encoder/ms-marco-MiniLM-L-2-v2"
 '''
     with open(os.path.join(output_dir, "rag_config.toml"), "w") as f:
         f.write(config_content)
@@ -114,87 +98,70 @@ def write_retrieval_file(output_dir: str) -> None:
     retrieval_content = '''from typing import Any
 
 import lancedb
-import numpy as np
 import pandas as pd
 from lancedb.db import DBConnection
 from lancedb.table import Table
-from sentence_transformers import SentenceTransformer, CrossEncoder
+from lancedb.rerankers import RRFReranker
+from sentence_transformers import SentenceTransformer
 
 from src.constants import LANCEDB_URI, get_rag_config
 
-# Cache models at module level
+# Cache model at module level
 _embedding_model = None
-_reranker_model = None
+_reranker = None
 
 
-def get_embedding_model():
-    """Get or create the embedding model."""
+def get_embedding_model() -> SentenceTransformer:
     global _embedding_model
     if _embedding_model is None:
-        config = get_rag_config()
-        model_name = config["embeddings"]["model_name"]
+        model_name = get_rag_config()["embeddings"]["model_name"]
         _embedding_model = SentenceTransformer(model_name)
     return _embedding_model
 
 
-def get_reranker_model(model_name: str):
-    """Get or create the reranker model."""
-    global _reranker_model
-    if _reranker_model is None:
-        _reranker_model = CrossEncoder(model_name)
-    return _reranker_model
-
-
-def connect_to_lancedb_table(uri: str, table_name: str) -> Table:
-    """Connect to a LanceDB table."""
-    db: DBConnection = lancedb.connect(uri=uri)
-    return db.open_table(table_name)
+def get_reranker() -> RRFReranker:
+    global _reranker
+    if _reranker is None:
+        _reranker = RRFReranker()
+    return _reranker
 
 
 def get_knowledge_base(table_name: str | None = None) -> Table:
-    """Get the knowledge base table."""
     db: DBConnection = lancedb.connect(uri=LANCEDB_URI)
     _table_name: str = table_name or get_rag_config()["knowledge_base"]["table_name"]
     return db.open_table(_table_name)
 
 
-def retrieve_context(
-    k_base: Table,
-    query_text: str,
-    reranker: dict,
-    n_retrieve: int = 10,
-) -> list[dict]:
-    """Retrieve most relevant text chunks using vector search and reranking."""
+def retrieve_context(k_base: Table, query_text: str, n_retrieve: int = 10) -> list[dict]:
+    """Retrieve most relevant chunks using hybrid search (vector + FTS) with RRF reranking."""
     embedding_model = get_embedding_model()
-    query_vector = embedding_model.encode(query_text)
+    query_vector = embedding_model.encode(query_text).tolist()
 
     n_candidates = min(n_retrieve * 3, 50)
 
-    results = (
-        k_base.search(query_vector)
-        .limit(n_candidates)
-        .to_list()
-    )
+    try:
+        results = (
+            k_base.search(query_text, query_type="hybrid")
+            .rerank(reranker=get_reranker())
+            .limit(n_candidates)
+            .to_list()
+        )
+    except Exception:
+        # Fallback to pure vector search if FTS index not available
+        results = (
+            k_base.search(query_vector, query_type="vector")
+            .limit(n_candidates)
+            .to_list()
+        )
 
-    if not results:
-        return []
-
-    rr_model_name: str = reranker["model_name"]
-    reranker_model = get_reranker_model(rr_model_name)
-
-    pairs = [(query_text, r["text"]) for r in results]
-    scores = reranker_model.predict(pairs)
-
-    for r, score in zip(results, scores):
-        r["_relevance_score"] = float(score)
-
-    results.sort(key=lambda x: x["_relevance_score"], reverse=True)
+    for i, r in enumerate(results):
+        r["_relevance_score"] = float(r.get("_relevance_score", n_candidates - i))
 
     return results[:n_retrieve]
 
 
 def group_chunks_by_section(resp: list[dict], n_sections: int = 5) -> list[dict]:
-    """Group retrieved text chunks by section."""
+    """Group retrieved chunks by section, ranked by total relevance score."""
     if not resp:
         return []
 
@@ -218,12 +185,12 @@ def group_chunks_by_section(resp: list[dict], n_sections: int = 5) -> list[dict]
 
 
 def format_context(resp: list[dict]) -> str:
-    """Format the context into a readable string."""
+    """Format grouped sections into a readable string, stitching overlapping chunks."""
     if not resp:
         return "No context found."
 
-    output_lines: list[str] = []
     overlap: int = get_rag_config()["embeddings"]["overlap"]
+    output_lines: list[str] = []
 
     for i, row in enumerate(resp):
         section: str = row.get("section", "Unknown")
@@ -247,7 +214,7 @@ def format_context(resp: list[dict]) -> str:
 
 
 def enrich_text_chunks(k_base: Table, chunks_of_section: dict[str, Any], window_size: int = 1) -> dict[str, Any]:
-    """Fetch surrounding chunks for context."""
+    """Fetch neighboring chunks to add surrounding context to the top result."""
     original_ranks: list[int] = chunks_of_section["rank_abs"]
     section: str = chunks_of_section["section"]
 
@@ -261,12 +228,15 @@ def enrich_text_chunks(k_base: Table, chunks_of_section: dict[str, Any], window_
     if not new_ranks:
         return chunks_of_section
 
-    new_ranks_str: str = ",".join(map(str, sorted(new_ranks)))
-    query_text: str = f"section = \\'{section}\\' AND rank_abs IN ({new_ranks_str})"
-
+    new_ranks_list = sorted(new_ranks)
     fields: list[str] = ["rank_abs", "text", "n_docs"]
     try:
-        new_chunks: pd.DataFrame = k_base.search().where(query_text).to_pandas()[fields]
+        new_chunks: pd.DataFrame = (
+            k_base.search()
+            .where(f"section = \\'{section}\\' AND rank_abs IN ({','.join(map(str, new_ranks_list))})")
+            .select(fields)
+            .to_pandas()
+        )
     except Exception:
         return chunks_of_section
 
@@ -276,13 +246,12 @@ def enrich_text_chunks(k_base: Table, chunks_of_section: dict[str, Any], window_
     text_dict: dict[int, str] = dict(zip(original_ranks, chunks_of_section["chunks"]))
     text_dict.update({c["rank_abs"]: c["text"] for c in new_chunks.to_dict("records")})
 
-    enriched: dict[str, Any] = chunks_of_section.copy()
-    updated_ranks: list[int] = sorted(text_dict)
+    enriched = chunks_of_section.copy()
+    updated_ranks = sorted(text_dict)
     enriched["rank_abs"] = updated_ranks
     enriched["chunks"] = [text_dict[r] for r in updated_ranks]
     enriched["enriched"] = True
-    if "n_chunks" in enriched:
-        enriched["n_chunks"] = len(updated_ranks)
+    enriched["n_chunks"] = len(updated_ranks)
 
     return enriched
 
@@ -293,14 +262,11 @@ def get_context(
     n_titles: int = 5,
     n_retrieve: int = 10,
     enrich_first: bool = False,
-    **kwargs
+    **kwargs,
 ) -> str:
-    """Retrieve and format context based on query."""
-    cxt_raw: list[dict] = retrieve_context(
-        k_base=k_base, query_text=query_text, n_retrieve=n_retrieve, **kwargs
-    )
-
-    cxt_grouped: list[dict] = group_chunks_by_section(cxt_raw, n_sections=n_titles)
+    """Main entry point: retrieve, group, optionally enrich, and format context."""
+    cxt_raw = retrieve_context(k_base=k_base, query_text=query_text, n_retrieve=n_retrieve)
+    cxt_grouped = group_chunks_by_section(cxt_raw, n_sections=n_titles)
 
     if enrich_first and cxt_grouped:
         cxt_grouped[0] = enrich_text_chunks(k_base=k_base, chunks_of_section=cxt_grouped[0])
@@ -315,11 +281,10 @@ def get_context(
 def write_requirements_file(output_dir: str) -> None:
     """Write the requirements.txt file."""
     requirements_content = '''# Core dependencies for RAG system
-lancedb>=0.4.0
-sentence-transformers>=2.2.0
+lancedb>=0.37.0
+sentence-transformers>=6.0.0
 pandas>=2.0.0
-numpy>=1.24.0
-tantivy
+numpy>=2.0.0
 '''
     with open(os.path.join(output_dir, "requirements.txt"), "w") as f:
         f.write(requirements_content)
@@ -344,6 +309,35 @@ def parse_sections(text: str, book_name: str) -> list[dict]:
     text = re.sub(r'PAGE \d+ - [^\n]+\n={10,}\n', '\n', text)
     text = re.sub(r'={10,}\n', '\n', text)
     text = re.sub(r'STUDY GUIDE:[^\n]+\n', '\n', text)
+
+    # Strategy 0: "Chapter: <arbitrary label>" — used when combining multi-file notes
+    labeled_pattern = r'\n\nChapter:\s+([^\n]+)\n'
+    labeled_matches = list(re.finditer(labeled_pattern, text))
+
+    if len(labeled_matches) >= 2:
+        print(f"  Detected labeled chapter format: {len(labeled_matches)} sections")
+
+        if labeled_matches[0].start() > 100:
+            intro = text[:labeled_matches[0].start()].strip()
+            if intro and len(intro) > 50:
+                sections.append({"section": "Introduction", "section_num": 0, "content": intro})
+
+        for i, match in enumerate(labeled_matches):
+            raw_label = match.group(1).strip()
+            # Clean up filename-style labels: "01-the_crime.md" → "The Crime"
+            section_name = re.sub(r'^\d+[-_]', '', raw_label)   # strip leading number
+            section_name = re.sub(r'\.[a-z]+$', '', section_name)  # strip extension
+            section_name = section_name.replace('_', ' ').replace('-', ' ').title()
+
+            start = match.end()
+            end = labeled_matches[i + 1].start() if i + 1 < len(labeled_matches) else len(text)
+            content = text[start:end].strip()
+
+            if content and len(content) > 30:
+                sections.append({"section": section_name, "section_num": i + 1, "content": content})
+
+        if sections:
+            return sections
 
     # Strategy 1: Study guide format "Part X, Chapter Y Summary" or "Part X, Prologue Summary"
     study_guide_pattern = r'(Part\s+(\d+),\s*(Prologue|Chapter\s+(\d+)|Chapters?\s+[\d\-]+))\s*(Summary|Analysis)?'
@@ -760,9 +754,10 @@ def ingest_to_lancedb(documents: list[dict], output_dir: str, table_name: str) -
     print(f"Creating table '{table_name}' with {len(documents)} chunks...")
     table = db.create_table(table_name, data=documents)
 
-    print("Creating full-text search index...")
+    print("Creating full-text search index (native)...")
     try:
-        table.create_fts_index("text", replace=True)
+        from lancedb.index import FTS
+        table.create_index("text", config=FTS(), replace=True)
         print("FTS index created successfully")
     except Exception as e:
         print(f"Warning: Could not create FTS index: {e}")
@@ -779,23 +774,29 @@ Examples:
   python create_rag_from_text.py don_quixote.txt
   python create_rag_from_text.py don_quixote.txt -o rag_don_quixote
   python create_rag_from_text.py notes.pdf.txt -o rag_notes --name "Study Notes"
+  python create_rag_from_text.py -c  (read from clipboard, prompts for -o and --name)
 
-After creation, copy the folder to your anthropic_chat_cli.py location:
+After creation, copy the folder to your chat CLI location:
   cp -r rag_don_quixote /path/to/streamlit_apps/
-  python anthropic_chat_cli.py --rag rag_don_quixote
         """
     )
     parser.add_argument(
         "input_file",
-        help="Path to the text file to process"
+        nargs="?",
+        help="Path to the text file to process (omit when using -c)"
+    )
+    parser.add_argument(
+        "-c", "--clipboard",
+        action="store_true",
+        help="Read input text from clipboard instead of a file"
     )
     parser.add_argument(
         "-o", "--output",
-        help="Output folder name (default: rag_<filename>)"
+        help="Output folder name (default: rag_<name>)"
     )
     parser.add_argument(
         "--name",
-        help="Display name for the knowledge base (default: filename)"
+        help="Display name for the knowledge base"
     )
     parser.add_argument(
         "--dry-run",
@@ -804,21 +805,66 @@ After creation, copy the folder to your anthropic_chat_cli.py location:
     )
     args = parser.parse_args()
 
-    # Check input file
-    if not os.path.exists(args.input_file):
-        print(f"Error: File not found: {args.input_file}")
-        sys.exit(1)
+    # Read text from clipboard or file
+    if args.clipboard:
+        import subprocess, platform
+        system = platform.system()
+        try:
+            if system == "Darwin":
+                text = subprocess.run(["pbpaste"], capture_output=True, text=True).stdout
+            elif system == "Linux":
+                text = subprocess.run(["xclip", "-selection", "clipboard", "-o"], capture_output=True, text=True).stdout
+            elif system == "Windows":
+                text = subprocess.run(["powershell", "-command", "Get-Clipboard"], capture_output=True, text=True).stdout
+            else:
+                print("Error: clipboard not supported on this platform")
+                sys.exit(1)
+        except Exception as e:
+            print(f"Error reading clipboard: {e}")
+            sys.exit(1)
 
-    # Determine output folder name
-    input_path = Path(args.input_file)
-    base_name = input_path.stem.lower().replace(" ", "_").replace("-", "_")
-    output_dir = args.output or f"rag_{base_name}"
+        if not text.strip():
+            print("Error: clipboard is empty")
+            sys.exit(1)
 
-    # Determine table name
-    table_name = base_name.replace(".", "_")
+        print(f"Read {len(text):,} characters from clipboard")
 
-    # Display name
-    display_name = args.name or input_path.stem
+        # Prompt for name and output if not provided
+        display_name = args.name
+        if not display_name:
+            display_name = input("Knowledge base name (e.g. 'Lindsay Clancy Case'): ").strip()
+            if not display_name:
+                print("Error: name is required")
+                sys.exit(1)
+
+        base_name = display_name.lower().replace(" ", "_").replace("-", "_")
+        output_dir = args.output
+        if not output_dir:
+            default_output = f"rag_{base_name}"
+            entered = input(f"Output folder (default: {default_output}): ").strip()
+            output_dir = entered or default_output
+
+        table_name = re.sub(r'[^a-zA-Z0-9_\-]', '_', base_name)
+
+    else:
+        if not args.input_file:
+            print("Error: provide an input file or use -c to read from clipboard")
+            sys.exit(1)
+
+        if not os.path.exists(args.input_file):
+            print(f"Error: File not found: {args.input_file}")
+            sys.exit(1)
+
+        input_path = Path(args.input_file)
+        base_name = input_path.stem.lower().replace(" ", "_").replace("-", "_")
+        output_dir = args.output or f"rag_{base_name}"
+        table_name = re.sub(r'[^a-zA-Z0-9_\-]', '_', base_name)
+        display_name = args.name or input_path.stem
+
+        print(f"Reading {args.input_file}...")
+        with open(args.input_file, 'r', encoding='utf-8', errors='replace') as f:
+            text = f.read()
+        print(f"  Read {len(text):,} characters")
 
     if args.dry_run:
         print(f"=" * 60)
@@ -828,7 +874,6 @@ After creation, copy the folder to your anthropic_chat_cli.py location:
         print(f"=" * 60)
         print(f"  Creating RAG: {display_name}")
         print(f"=" * 60)
-        print(f"Input: {args.input_file}")
         print(f"Output: {output_dir}/")
     print()
 
@@ -844,12 +889,6 @@ After creation, copy the folder to your anthropic_chat_cli.py location:
         write_constants_file(output_dir)
         write_retrieval_file(output_dir)
         write_requirements_file(output_dir)
-
-    # Read and parse text
-    print(f"Reading {args.input_file}...")
-    with open(args.input_file, 'r', encoding='utf-8', errors='replace') as f:
-        text = f.read()
-    print(f"  Read {len(text):,} characters")
 
     # Parse into sections
     print("\nParsing sections...")
@@ -870,7 +909,10 @@ After creation, copy the folder to your anthropic_chat_cli.py location:
         print("=" * 60)
         print()
         print("To create the RAG, run without --dry-run:")
-        print(f"  python create_rag_from_text.py {args.input_file} -o {output_dir}")
+        if args.clipboard:
+            print(f"  python create_rag_from_text.py -c -o {output_dir} --name \"{display_name}\"")
+        else:
+            print(f"  python create_rag_from_text.py {args.input_file} -o {output_dir}")
         return
 
     # Step 5: Create document chunks
