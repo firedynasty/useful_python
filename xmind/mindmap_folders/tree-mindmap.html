@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Folder Mind Map → Path</title>
+<script src="https://unpkg.com/gojs/release/go.js"></script>
+<style>
+  :root{
+    --bg: #0d1117;
+    --panel: #11161d;
+    --border: #232b36;
+    --text: #c9d1d9;
+    --dim: #6e7681;
+    --accent: #39d353;
+    --accent-dim: #1d6b34;
+    --mono: "SF Mono", "Menlo", "Consolas", ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0; height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--mono);
+  }
+  #app { display: flex; flex-direction: column; height: 100vh; }
+
+  #titlebar {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--border);
+    background: var(--panel);
+    flex-shrink: 0;
+  }
+  #titlebar .dot { width: 10px; height: 10px; border-radius: 50%; }
+  #titlebar .dot.r { background: #ff5f56; }
+  #titlebar .dot.y { background: #ffbd2e; }
+  #titlebar .dot.g { background: #27c93f; }
+  #titlebar h1 {
+    font-size: 13px; font-weight: 600; color: var(--dim);
+    margin: 0 0 0 8px; letter-spacing: 0.02em;
+  }
+
+  #controls {
+    display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+    padding: 10px 16px;
+    background: var(--panel);
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+  #controls label { font-size: 12px; color: var(--dim); }
+  #basePath {
+    flex: 1 1 320px; min-width: 220px;
+    background: #0a0e13; color: var(--accent);
+    border: 1px solid var(--border); border-radius: 4px;
+    padding: 6px 8px; font-family: var(--mono); font-size: 12.5px;
+  }
+  button {
+    background: #161c25; color: var(--text);
+    border: 1px solid var(--border); border-radius: 4px;
+    padding: 6px 12px; font-family: var(--mono); font-size: 12px;
+    cursor: pointer;
+  }
+  button:hover { border-color: var(--accent-dim); color: var(--accent); }
+  button.primary { border-color: var(--accent-dim); color: var(--accent); }
+
+  #main { display: flex; flex: 1; min-height: 0; }
+
+  #pasteWrap {
+    width: 340px; flex-shrink: 0;
+    display: flex; flex-direction: column;
+    border-right: 1px solid var(--border);
+    background: var(--panel);
+  }
+  #pasteWrap .hint {
+    font-size: 11px; color: var(--dim); padding: 10px 12px 0 12px; line-height: 1.5;
+  }
+  #treeInput {
+    flex: 1; margin: 10px 12px 0 12px;
+    background: #0a0e13; color: var(--text);
+    border: 1px solid var(--border); border-radius: 4px;
+    padding: 8px; font-family: var(--mono); font-size: 11.5px;
+    resize: none;
+  }
+  #pasteWrap .row { display: flex; gap: 8px; padding: 10px 12px; }
+
+  #myDiagramDiv { flex: 1; background: var(--bg); }
+
+  #pathBar {
+    display: flex; gap: 10px; align-items: center;
+    padding: 12px 16px;
+    background: var(--panel);
+    border-top: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+  #pathBar label { font-size: 12px; color: var(--dim); white-space: nowrap; }
+  #pathOutput {
+    flex: 1; background: #0a0e13; color: var(--accent);
+    border: 1px solid var(--border); border-radius: 4px;
+    padding: 8px 10px; font-family: var(--mono); font-size: 13px;
+  }
+  #copyStatus { font-size: 12px; color: var(--dim); min-width: 130px; }
+  #copyStatus.ok { color: var(--accent); }
+</style>
+</head>
+<body>
+<div id="app">
+
+  <div id="titlebar">
+    <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+    <h1>notes/news — folder mind map</h1>
+  </div>
+
+  <div id="controls">
+    <label for="basePath">Base path</label>
+    <input id="basePath" value="/Users/stanleytan/Documents/notes/news" spellcheck="false">
+    <button id="rebuildBtn" class="primary">Rebuild map from pasted tree ▸</button>
+    <button id="layoutBtn">Re-layout</button>
+    <label style="display:flex;align-items:center;gap:6px;">
+      <input type="checkbox" id="appendMode" style="accent-color:#39d353;">
+      Append to clipboard (don't overwrite)
+    </label>
+  </div>
+
+  <div id="main">
+    <div id="pasteWrap">
+      <div class="hint">
+        Paste the output of <b>tree -d -L 2</b> (or any depth) below,
+        then click "Rebuild map". Click any node in the map to
+        build its full path and copy it to your clipboard.
+      </div>
+      <textarea id="treeInput" spellcheck="false"></textarea>
+      <div class="row">
+        <button id="loadExampleBtn">Load your example</button>
+      </div>
+    </div>
+
+    <div id="myDiagramDiv"></div>
+  </div>
+
+  <div id="pathBar">
+    <label>Path:</label>
+    <input id="pathOutput" readonly value="(click a node above)">
+    <button id="copyBtn">Copy</button>
+    <span id="copyStatus"></span>
+  </div>
+
+</div>
+
+<script>
+const EXAMPLE_TREE = `.
+├── economy
+├── finance
+│   ├── AI files
+│   └── money files
+├── images
+├── iran
+│   ├── doctrine
+│   ├── geopolitics
+│   ├── iran-war
+│   ├── israel
+│   ├── misc
+│   ├── nuclear
+│   ├── propaganda
+│   ├── scorecards
+│   └── strategy
+├── israel-hamas
+├── lifestyle
+│   ├── chat_interface
+│   ├── instrumentals
+│   ├── lyrics_polished
+│   ├── lyrics_unpolished
+│   └── podcasts
+├── linsay_clancy
+│   └── resources
+├── news
+├── social
+│   └── typora
+├── stocks
+│   ├── From person files
+│   ├── SeekingAlpha investment groups files
+│   └── Untitled files
+├── technology
+└── topicsInDepth
+    ├── economy
+    ├── history
+    ├── images
+    ├── literature
+    ├── Shortform books _notes
+    ├── sports_and_praise
+    ├── sports_current
+    ├── trauma
+    ├── typora_markdown_version
+    ├── videos
+    ├── women
+    ├── work
+    └── working_out`;
+
+const PALETTE = ["#4C9F70","#3B82C4","#C4783B","#B23A48","#8A4FBF","#D4A017",
+                 "#2C9AA1","#6B7280","#E07A5F","#C43B6E","#3B6EC4","#4F8A5B",
+                 "#9C6F3B","#5B7FBF","#A24B6B","#3F9E6E"];
+
+// Parses standard `tree` command output (with ├── │ └── markers) into
+// {depth, name} entries, in document order.
+function parseTreeText(text) {
+  const lines = text.split("\n");
+  const markerRe = /^((?:(?:\u2502   )|(?:    ))*)(\u251c\u2500\u2500 |\u2514\u2500\u2500 )(.*)$/;
+  const entries = [];
+  for (const raw of lines) {
+    // Some `tree` builds emit non-breaking spaces (\u00a0) in the │ prefix
+    // columns — normalize them so depth detection works for any build.
+    const line = raw.replace(/\r$/, "").replace(/\u00a0/g, " ");
+    const m = line.match(markerRe);
+    if (!m) continue; // skips the leading "." line and any trailing summary line
+    const depth = m[1].length / 4;
+    const name = m[3].trim();
+    if (name) entries.push({ depth, name });
+  }
+  return entries;
+}
+
+// Turns parsed {depth, name} entries into a GoJS TreeModel nodeDataArray.
+// node.key is the FULL relative path (e.g. "finance/AI files"), which is
+// exactly what we need to build the absolute path on click.
+function buildNodeDataArray(entries) {
+  // Use the last segment of the base path as the root label so clicking it is meaningful
+  const baseFolderName = document.getElementById("basePath").value.replace(/\/+$/, "").split("/").pop() || "/";
+  const nodeDataArray = [{ key: "", text: "/ " + baseFolderName, brush: "#8b949e", dir: "right", loc: "0 0" }];
+  const stack = [""]; // stack[depth] = key of the ancestor at that depth
+  const branchMeta = {}; // top-level segment -> {dir, brush}
+  let colorIdx = 0;
+  let sideToggle = 0;
+
+  for (const { depth, name } of entries) {
+    const parentKey = stack[depth] !== undefined ? stack[depth] : "";
+    const key = parentKey ? parentKey + "/" + name : name;
+    stack[depth + 1] = key;
+
+    let dir, brush;
+    if (depth === 0) {
+      dir = sideToggle % 2 === 0 ? "right" : "left";
+      sideToggle++;
+      brush = PALETTE[colorIdx % PALETTE.length];
+      colorIdx++;
+      branchMeta[key] = { dir, brush };
+    } else {
+      const topKey = key.split("/")[0];
+      const meta = branchMeta[topKey] || { dir: "right", brush: "#888" };
+      dir = meta.dir;
+      brush = meta.brush;
+    }
+
+    nodeDataArray.push({ key, parent: parentKey, text: name, dir, brush, loc: "0 0" });
+  }
+  return nodeDataArray;
+}
+
+let myDiagram;
+
+function spotConverter(dir, from) {
+  if (dir === "left") return from ? go.Spot.Left : go.Spot.Right;
+  return from ? go.Spot.Right : go.Spot.Left;
+}
+
+function init() {
+  const $ = go.GraphObject.make;
+
+  myDiagram = new go.Diagram("myDiagramDiv", {
+    "undoManager.isEnabled": false,
+    initialAutoScale: go.Diagram.Uniform,
+    "toolManager.hoverDelay": 100
+  });
+
+  myDiagram.nodeTemplate = $(go.Node, "Vertical",
+    { selectionObjectName: "TEXT", cursor: "pointer" },
+    $(go.TextBlock,
+      { name: "TEXT", margin: 2, font: "12px 'SF Mono', Menlo, monospace", stroke: "#c9d1d9" },
+      new go.Binding("text", "text")),
+    $(go.Shape, "LineH", {
+        stretch: go.GraphObject.Horizontal, strokeWidth: 3, height: 3,
+        portId: "", fromSpot: go.Spot.LeftRightSides, toSpot: go.Spot.LeftRightSides
+      },
+      new go.Binding("stroke", "brush"),
+      new go.Binding("fromSpot", "dir", d => spotConverter(d, true)),
+      new go.Binding("toSpot", "dir", d => spotConverter(d, false))),
+    new go.Binding("location", "loc", go.Point.parse).makeTwoWay(go.Point.stringify),
+    new go.Binding("locationSpot", "dir", d => spotConverter(d, false))
+  );
+
+  myDiagram.linkTemplate = $(go.Link,
+    { curve: go.Link.Bezier, fromShortLength: -2, toShortLength: -2, selectable: false },
+    $(go.Shape, { strokeWidth: 3 },
+      new go.Binding("stroke", "toNode", n => (n.data.brush ? n.data.brush : "#555")).ofObject())
+  );
+
+  myDiagram.addDiagramListener("ObjectSingleClicked", e => {
+    const part = e.subject.part;
+    if (part instanceof go.Node) showPathForKey(part.data.key);
+  });
+
+  rebuild(parseTreeText(document.getElementById("treeInput").value));
+  // Show base path in the path bar immediately on load
+  showPathForKey("");
+}
+
+function layoutAngle(parts, angle) {
+  const layout = go.GraphObject.make(go.TreeLayout, {
+    angle, arrangement: go.TreeLayout.ArrangementFixedRoots,
+    nodeSpacing: 6, layerSpacing: 26,
+    setsPortSpot: false, setsChildPortSpot: false
+  });
+  layout.doLayout(parts);
+}
+
+function layoutAll() {
+  const root = myDiagram.findNodeForKey("");
+  if (!root) return;
+  myDiagram.startTransaction("Layout");
+  const rightward = new go.Set();
+  const leftward = new go.Set();
+  root.findLinksConnected().each(link => {
+    const child = link.toNode;
+    const set = child.data.dir === "left" ? leftward : rightward;
+    set.add(root);
+    set.add(link);
+    set.addAll(child.findTreeParts());
+  });
+  layoutAngle(rightward, 0);
+  layoutAngle(leftward, 180);
+  myDiagram.commitTransaction("Layout");
+}
+
+function rebuild(entries) {
+  const nodeDataArray = buildNodeDataArray(entries);
+  myDiagram.model = new go.TreeModel(nodeDataArray);
+  layoutAll();
+}
+
+function showPathForKey(key) {
+  const base = document.getElementById("basePath").value.replace(/\/+$/, "");
+  const full = key ? base + "/" + key : base;
+  const out = document.getElementById("pathOutput");
+  out.value = full;
+  out.focus();
+  out.select();
+  copyToClipboard(full);
+}
+
+async function copyToClipboard(text) {
+  const status = document.getElementById("copyStatus");
+  const append = document.getElementById("appendMode").checked;
+  try {
+    let toWrite = text;
+    if (append && navigator.clipboard.readText) {
+      try {
+        const current = await navigator.clipboard.readText();
+        if (current && current.trim().length > 0) toWrite = current + "\n" + text;
+      } catch (readErr) {
+        // reading clipboard may be blocked by permissions; fall back to overwrite
+      }
+    }
+    await navigator.clipboard.writeText(toWrite);
+    status.textContent = "Copied to clipboard";
+    status.className = "ok";
+  } catch (err) {
+    status.textContent = "Press ⌘/Ctrl+C — path is selected";
+    status.className = "";
+  }
+  setTimeout(() => { status.textContent = ""; status.className = ""; }, 2500);
+}
+
+document.getElementById("loadExampleBtn").addEventListener("click", () => {
+  document.getElementById("treeInput").value = EXAMPLE_TREE;
+  rebuild(parseTreeText(EXAMPLE_TREE));
+});
+document.getElementById("rebuildBtn").addEventListener("click", () => {
+  rebuild(parseTreeText(document.getElementById("treeInput").value));
+});
+document.getElementById("layoutBtn").addEventListener("click", layoutAll);
+document.getElementById("copyBtn").addEventListener("click", () => {
+  copyToClipboard(document.getElementById("pathOutput").value);
+});
+
+document.getElementById("treeInput").value = EXAMPLE_TREE;
+window.addEventListener("DOMContentLoaded", init);
+</script>
+</body>
+</html>
