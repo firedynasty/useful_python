@@ -124,7 +124,7 @@ def translate_batch(client, texts):
     """Translate a batch of Chinese lines to English in one API call."""
     numbered = "\n".join(f"{i+1}. {t}" for i, t in enumerate(texts))
     response = client.chat.completions.create(
-        model="gpt-4o-mini",
+        model="gpt-4.1-mini",
         messages=[
             {
                 "role": "system",
@@ -138,15 +138,17 @@ def translate_batch(client, texts):
         ],
     )
     raw = response.choices[0].message.content.strip()
-    translations = []
+    # Parse by actual number so a skipped/extra line in the response doesn't
+    # cause an off-by-one shift in all subsequent translations.
+    translations_map = {}
     for line in raw.split("\n"):
         line = line.strip()
         if not line:
             continue
-        match = re.match(r"^\d+\.\s*(.+)", line)
+        match = re.match(r"^(\d+)\.\s*(.+)", line)
         if match:
-            translations.append(match.group(1).strip())
-    return translations
+            translations_map[int(match.group(1))] = match.group(2).strip()
+    return [translations_map.get(i + 1, "") for i in range(len(texts))]
 
 
 def main():
