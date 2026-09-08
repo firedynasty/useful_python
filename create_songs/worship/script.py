@@ -1,3 +1,4 @@
+import random
 import requests
 import time
 import os
@@ -19,9 +20,29 @@ headers = {
     "Content-Type": "application/json"
 }
 
+genres = ["Christian worship", "contemporary Christian worship", "modern hymn"]
+instruments = [
+    "acoustic guitar, atmospheric worship pad",
+    "piano-led, soft strings, ambient pad",
+    "acoustic guitar, subtle percussion, warm synth pad",
+]
+vocals = [
+    "male vocalist, warm and encouraging tone",
+    "male vocalist, tender and intimate tone",
+    "male vocalist, powerful and soaring tone",
+]
+dynamics = [
+    "soaring sung melody, gentle build, congregational feel",
+    "slow build, intimate verses, anthemic chorus",
+    "steady build, worshipful and reflective",
+]
+
+style = f"{random.choice(genres)}, {random.choice(instruments)}, {random.choice(vocals)}, {random.choice(dynamics)}"
+print(f"Style: {style}")
+
 payload = {
     "prompt": lyrics,
-    "style": "Christian worship, acoustic guitar, atmospheric worship pad, male vocalist, warm and encouraging tone, soaring sung melody, gentle build, congregational feel",
+    "style": style,
     "title": "The Planted Tree",
     "custom_mode": True,
     "instrumental": False,

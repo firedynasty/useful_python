@@ -1,3 +1,4 @@
+import random
 import requests
 import time
 import os
@@ -19,9 +20,29 @@ headers = {
     "Content-Type": "application/json"
 }
 
+genres = ["Christian rap", "Christian hip-hop", "gospel rap"]
+beats = [
+    "uptempo boom bap beat, 95-100 BPM, driving energy",
+    "trap-influenced beat, 90-95 BPM, hard-hitting drums, dark undertone",
+    "boom bap beat, 100-105 BPM, punchy snares, soulful sample",
+]
+vocals = [
+    "spoken-word ad-libs, male vocalist",
+    "confident male vocalist, layered ad-libs",
+    "male vocalist, rhythmic double-time flow, ad-libs",
+]
+dynamics = [
+    "uplifting, anthemic hook",
+    "uplifting, gritty verses, triumphant hook",
+    "reflective verses, energetic hook, big finish",
+]
+
+style = f"{random.choice(genres)}, {random.choice(beats)}, {random.choice(dynamics)}, {random.choice(vocals)}"
+print(f"Style: {style}")
+
 payload = {
     "prompt": lyrics,
-    "style": "Christian rap, uptempo boom bap beat, 95-100 BPM, driving energy, uplifting, spoken-word ad-libs, male vocalist",
+    "style": style,
     "title": "The Planted Tree",
     "custom_mode": True,
     "instrumental": False,
